@@ -1,0 +1,51 @@
+---
+layout: nil
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Pixelnest Studio - A little french apps & games making company.</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Pixelnest Studio</h1>
+        <p>A little apps & games making company</p>
+        <p>We are two developers crafting small projects with our skills and love. We're currently creating the company while working on two first game projects.</p>
+        <p>Feel free to contact us using the following links, we will be happy to discuss or to help you if we can!</p>
+        <p><small>Follow our updates and discover our new projects:</small></p>
+        <ul>
+          <li><a href="https://twitter.com/pixelnest"><strong>Twitter</strong></a></li>
+          <li><a href="https://www.facebook.com/pixelneststudio"><strong>Facebook</strong></a></li>
+          <li><a href="mailto:hi[at]pixelnest.io"><strong>Mail</strong></a></li>
+        </ul>
+      </header>
+      <section>
+		{% for post in paginator.posts %}
+		<article>
+			<p id="article-header">
+		  		<h2>{{ post.title }}</h2>
+			</p>
+		    <div id="article-content">
+    			{{ post.content }}
+  			</div>
+		</article>
+	  {% endfor %}
+    </section>
+      <footer>
+        <p>Pixelnest Studio is french company based at Rennes.</p>
+        <p><em>Copyright Pixelnest Studio 2013 - 2099</em></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
