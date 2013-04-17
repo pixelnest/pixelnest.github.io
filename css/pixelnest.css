@@ -54,6 +54,27 @@ a:hover {
   padding: 0;
 }
 
+/* follow */
+
+.follow {
+  height: 21px;
+  padding: 10px 0 10px 50px;
+}
+
+.follow.twitter {
+  background: url("../images/twitter.png") no-repeat;
+}
+
+.follow.facebook {
+  background: url("../images/facebook.png") no-repeat;
+}
+
+.follow.mail {
+  background: url("../images/mail.png") no-repeat;
+}
+
+/* founder */
+
 .founder
   .founder__twitter {
   margin-left: 5px;
