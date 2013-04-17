@@ -1,0 +1,112 @@
+/************************************************************************
+ * Pixelnest.io CSS
+ *
+ * BEM syntax :
+ * .block {}             component
+ * .block__element  {}   descendent
+ * .block--modifier {}   different state 
+ *
+ * More on BEM : 
+ * http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+ *
+ * Order :
+ * 
+ ************************************************************************/
+ 
+body {
+  background: #ededed;
+  
+  margin: 0;
+  padding: 20px;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  color: #222222;
+  
+  font-size: 120%;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, sans-serif;
+}
+
+a {
+  color: #c14539;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #c14539;
+  color: white;
+}
+ 
+/***************************************
+ * Header                              *
+ ***************************************/
+ 
+.main {
+  font-size: 3.5em;
+}
+
+.follow-list,
+.founder-list {
+  list-style: none;
+  padding: 0;
+}
+
+.founder
+  .founder__twitter {
+  margin-left: 5px;
+  font-size: 0.7em;    
+}
+
+.founder
+  .founder__twitter 
+    a {
+  color: #c1807e;
+}
+
+.founder
+  .founder__twitter
+    a:hover {
+  color: white;      
+}
+
+.about {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/***************************************
+ * Content                              *
+ ***************************************/
+ 
+.app__title {
+  font-size: 2em;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+/***************************************
+ * Footer                              *
+ ***************************************/
+ 
+.page-footer {
+  margin-top: 100px;
+  
+  font-size: 0.8em;
+  color: #6a6a6a;
+}
+
+/***************************************
+ * Components                          *
+ ***************************************/
+ 
+.title 
+  .title__catchphrase {  
+  color: #2e56b8;
+  
+  font-size: 0.5em;
+  font-weight: normal;
+  font-variant: normal;
+}
