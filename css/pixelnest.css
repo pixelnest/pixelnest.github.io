@@ -57,20 +57,23 @@ a:hover {
 /* follow */
 
 .follow {
-  height: 21px;
+  height: 20px;
   padding: 10px 0 10px 50px;
 }
 
 .follow.twitter {
   background: url("../images/twitter.png") no-repeat;
+  background-size: 40px;
 }
 
 .follow.facebook {
   background: url("../images/facebook.png") no-repeat;
+  background-size: 40px;
 }
 
 .follow.mail {
   background: url("../images/mail.png") no-repeat;
+  background-size: 40px;
 }
 
 /* founder */
