@@ -14,7 +14,7 @@
  ************************************************************************/
  
 body {
-  background: #ededed;
+  background: #f5f5f5;
   
   margin: 0;
   padding: 20px;
@@ -45,66 +45,8 @@ a:hover {
  ***************************************/
  
 .main {
+  margin-top: 0;
   font-size: 3.0em;
-}
-
-.follow-list,
-.founder-list {
-  list-style: none;
-  padding: 0;
-}
-
-/* follow */
-
-.follow {
-  height: 20px;
-  padding: 10px 0 10px 50px;
-}
-
-.follow.twitter {
-  background: url("../images/twitter.png") no-repeat;
-  background-size: 40px;
-}
-
-.follow.facebook {
-  background: url("../images/facebook.png") no-repeat;
-  background-size: 40px;
-}
-
-.follow.mail {
-  background: url("../images/mail.png") no-repeat;
-  background-size: 40px;
-}
-
-/* founder */
-
-.founder
-  .founder__twitter {
-  margin-left: 5px;
-  font-size: 0.7em;    
-}
-
-.founder
-  .founder__twitter 
-    a {
-  color: #c1807e;
-}
-
-.founder
-  .founder__twitter
-    a:hover {
-  color: white;      
-}
-
-.about {
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-@media screen and (min-width: 640px) {
-  .main {
-    font-size: 3.5em;
-  }
 }
 
 /***************************************
@@ -115,6 +57,27 @@ a:hover {
   font-size: 2em;
   margin-top: 50px;
   margin-bottom: 10px;
+}
+
+.thumbs {
+  text-align: center;
+}
+
+.thumbs__element:hover {
+  background: none;
+}
+
+.thumbs__element:hover
+  img {
+  border-color: #c4c2c6;
+}
+
+.thumbs__element
+  img {
+  margin: 5px 20px;
+  border: 10px solid #dfdee0;
+  width: 200px;
+  height: 200px;    
 }
 
 /***************************************
@@ -132,11 +95,117 @@ a:hover {
  * Components                          *
  ***************************************/
  
+/************************
+ * Follow/founder list
+ ***********************/
+ 
+.follow-list,
+.founder-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* follow */
+
+.follow {
+  height: 20px;
+  padding: 10px 0 10px 50px;
+}
+
+.follow.twitter {
+  background: url("../images/site/twitter.png") no-repeat;
+  background-size: 40px;
+}
+
+.follow.facebook {
+  background: url("../images/site/facebook.png") no-repeat;
+  background-size: 40px;
+}
+
+.follow.mail {
+  background: url("../images/site/mail.png") no-repeat;
+  background-size: 40px;
+}
+
+/* founder */
+
+.founder {
+  height: 36px;
+  margin: 10px 0;
+  padding: 17px 0px;
+  padding-left: 82px;
+}
+
+.founder
+  .founder__twitter {
+  display: block;
+  margin-left: 5px;
+  font-size: 0.7em;    
+}
+
+.founder
+  .founder__twitter 
+    a {
+  color: #c1807e;
+}
+
+.founder
+  .founder__twitter
+    a:hover {
+  color: white;      
+}
+
+.founder.dmayance {
+  background: url("http://www.gravatar.com/avatar/545f7c7f0ed11d6ef21722a7e6c47acf?s=200") no-repeat;
+  background-size: 70px; 
+}
+
+.founder.moger {
+  background: url("../images/us/moger.jpg") no-repeat;
+  background-size: 70px; 
+}
+
+.about {
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 640px) {
+  .main {
+    font-size: 3.5em;
+  }
+  
+  .follow-list.header {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  
+  .follow-list.header
+    .follow {
+    display: inline;
+    margin: 0 20px;
+  }
+}
+
+/************************
+ * Titles
+ ***********************/
+ 
 .title 
-  .title__catchphrase {  
+  .title__catchphrase {
+  display: block;
+  
   color: #2e56b8;
   
   font-size: 0.5em;
   font-weight: normal;
   font-variant: normal;
+}
+
+@media screen and (min-width: 1100px) {
+  .title
+    .title__catchphrase {
+      display: inline;
+    }
+  }
 }
