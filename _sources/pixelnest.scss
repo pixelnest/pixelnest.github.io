@@ -1,0 +1,88 @@
+@charset "utf-8";
+/**
+ * Pixelnest Studio
+ *
+ * -------------------------
+ * link: pixelnest.io
+ * twitter: @pixelnest
+ * contact: site@pixelnest.io
+ * -------------------------
+ *
+ * The rules must follow a strict order :
+ * - display
+ * - position
+ * - margin/padding
+ * - width/height
+ * - background/border
+ * - color/font/text/letter
+ * - transition
+ * - media queries
+ */
+
+// -------------------------------------------------------
+// Mixins
+// -------------------------------------------------------
+
+@mixin transition ($transition, $duration, $function: ease) {
+  // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+  -webkit-transition: $transition $duration $function;
+  -moz-transition: $transition $duration $function;
+  -ms-transition: $transition $duration $function;
+  -o-transition: $transition $duration $function;
+  transition: $transition $duration $function;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &.placeholder { @content }
+}
+
+// ---------------------
+// Constants
+// ---------------------
+
+// -------------------------------------------------------
+// Global
+// -------------------------------------------------------
+
+
+// ---------------------
+// Colors
+// ---------------------
+
+$brand1-color: #00A9E0; // blue
+$brand2-color: #98C73D; // green
+$brand3-color: #3B3B3D; // grey
+$text-color:   #353535; // almost black
+
+// ---------------------
+// Root
+// ---------------------
+
+// Basic typography and background
+body {
+  margin: 0;
+  padding: 0;
+
+  color: $text-color;
+  font-family: 'Poly', serif;
+  font-size: 150%;
+}
+
+// Change the selection to white on green
+.page *::-moz-selection {
+  background: $brand1-color;
+  color: white;
+}
+
+// Change the selection to white on green
+.page *::selection {
+  background: $brand1-color;
+  color: white;
+}
+
+// -------------------------------------------------------
+// Components
+// -------------------------------------------------------

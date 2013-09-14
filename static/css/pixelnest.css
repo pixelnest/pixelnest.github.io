@@ -1,0 +1,34 @@
+@charset "utf-8";
+/**
+ * Pixelnest Studio
+ *
+ * -------------------------
+ * link: pixelnest.io
+ * twitter: @pixelnest
+ * contact: site@pixelnest.io
+ * -------------------------
+ *
+ * The rules must follow a strict order :
+ * - display
+ * - position
+ * - margin/padding
+ * - width/height
+ * - background/border
+ * - color/font/text/letter
+ * - transition
+ * - media queries
+ */
+body {
+  margin: 0;
+  padding: 0;
+  color: #353535;
+  font-family: 'Poly', serif;
+  font-size: 150%; }
+
+.page *::-moz-selection {
+  background: #00a9e0;
+  color: white; }
+
+.page *::selection {
+  background: #00a9e0;
+  color: white; }
