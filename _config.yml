@@ -1,4 +1,18 @@
-safe: true  
-auto: true
+name: Pixelnest Studio
+
+# Code
 pygments: true
-markdown: kramdown
+exclude: ['_sources', '_raws']
+
+# Publishing
+show_drafts: nil
+
+# Permalink format (without day)
+permalink: /:categories/:year/:month/:title
+
+# Pagination
+paginate_path: 'page-:num'
+paginate: 1
+
+# Markdown formatter
+markdown: redcarpet

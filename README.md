@@ -1,3 +1,3 @@
 # Pixelnest Studio
 
-Company website.
+Website.

@@ -1,11 +1,22 @@
+############
+## Windows
+############
+
 # Windows image file caches
 Thumbs.db
 
 # Folder config file
 Desktop.ini
 
-# Mac crap
+############
+## Mac
+############
+
+# Crap
 .DS_Store
 
-_site/
+############
+## Jekyll
+############
 
+_site
