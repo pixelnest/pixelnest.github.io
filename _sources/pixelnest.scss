@@ -43,6 +43,8 @@
 // Constants
 // ---------------------
 
+$MAX: 800px;
+
 // -------------------------------------------------------
 // Global
 // -------------------------------------------------------
@@ -61,14 +63,22 @@ $text-color:   #353535; // almost black
 // Root
 // ---------------------
 
-// Basic typography and background
-body {
+html, body {
   margin: 0;
   padding: 0;
+}
+
+// Basic typography and background
+body {
+  background: $brand3-color;
 
   color: $text-color;
   font-family: 'Poly', serif;
   font-size: 150%;
+}
+
+.page {
+  background: #fbfbfb;
 }
 
 // Change the selection to white on green
@@ -86,3 +96,59 @@ body {
 // -------------------------------------------------------
 // Components
 // -------------------------------------------------------
+
+.navbar {
+  margin: 0;
+  padding: 30px;
+
+  background: $brand1-color;
+
+  list-style-type: none;
+
+  text-align: center;
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 0 20px;
+
+  color: white;
+  font-size: 1.2em;
+}
+
+.page-content {
+  min-height: 500px;
+}
+
+/// Footer
+
+.page-footer {
+  padding: 20px;
+  min-height: 200px;
+  background: $brand3-color;
+  color: white;
+}
+
+.credits__title,
+.founders__title,
+.followlinks__title {
+  font-size: 0.8em;
+}
+
+.credits__description {
+  font-size: 0.8em;
+}
+
+.followlinks__list,
+.founders__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.founders a {
+  color: blue;
+
+  &.hover {
+    color: white;
+  }
+}

@@ -18,12 +18,18 @@
  * - transition
  * - media queries
  */
-body {
+html, body {
   margin: 0;
-  padding: 0;
+  padding: 0; }
+
+body {
+  background: #3b3b3d;
   color: #353535;
   font-family: 'Poly', serif;
   font-size: 150%; }
+
+.page {
+  background: #fbfbfb; }
 
 .page *::-moz-selection {
   background: #00a9e0;
@@ -32,3 +38,43 @@ body {
 .page *::selection {
   background: #00a9e0;
   color: white; }
+
+.navbar {
+  margin: 0;
+  padding: 30px;
+  background: #00a9e0;
+  list-style-type: none;
+  text-align: center; }
+
+.navbar__link {
+  display: inline-block;
+  padding: 0 20px;
+  color: white;
+  font-size: 1.2em; }
+
+.page-content {
+  min-height: 500px; }
+
+.page-footer {
+  padding: 20px;
+  min-height: 200px;
+  background: #3b3b3d;
+  color: white; }
+
+.credits__title,
+.founders__title,
+.followlinks__title {
+  font-size: 0.8em; }
+
+.credits__description {
+  font-size: 0.8em; }
+
+.followlinks__list,
+.founders__list {
+  padding: 0;
+  list-style-type: none; }
+
+.founders a {
+  color: white; }
+  .founders a.hover {
+    color: white; }
