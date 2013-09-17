@@ -41,7 +41,7 @@ body {
 
 .navbar {
   margin: 0;
-  padding: 30px;
+  padding: 10px;
   background: #00a9e0;
   list-style-type: none;
   text-align: center; }
@@ -49,32 +49,48 @@ body {
 .navbar__link {
   display: inline-block;
   padding: 0 20px;
-  color: white;
-  font-size: 1.2em; }
+  font-size: 0.9em; }
+  .navbar__link a {
+    color: white;
+    text-decoration: none; }
+  .navbar__link a:hover {
+    color: #ddd; }
+
+.imagebar {
+  border-top: 10px solid #444;
+  border-bottom: 10px solid #444;
+  background-image: url("/static/images/assets/bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%; }
+
+.page-title {
+  padding: 0 20px; }
 
 .page-content {
-  min-height: 500px; }
+  padding: 0 20px; }
 
 .page-footer {
+  position: relative;
   padding: 20px;
-  min-height: 200px;
   background: #3b3b3d;
   color: white; }
 
-.credits__title,
-.founders__title,
-.followlinks__title {
-  font-size: 0.8em; }
+.credits p, .follow-list {
+  margin: 0; }
 
-.credits__description {
-  font-size: 0.8em; }
-
-.followlinks__list,
-.founders__list {
+.follow-list {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   padding: 0;
-  list-style-type: none; }
+  list-style: none; }
 
-.founders a {
-  color: white; }
-  .founders a.hover {
-    color: white; }
+.follow-list__el {
+  display: inline-block; }
+  .follow-list__el a {
+    color: white;
+    text-decoration: none; }
+  .follow-list__el a:hover {
+    color: #ddd; }

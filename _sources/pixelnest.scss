@@ -97,12 +97,12 @@ body {
 // Components
 // -------------------------------------------------------
 
+/// Header
+
 .navbar {
   margin: 0;
-  padding: 30px;
-
+  padding: 10px;
   background: $brand1-color;
-
   list-style-type: none;
 
   text-align: center;
@@ -111,44 +111,56 @@ body {
 .navbar__link {
   display: inline-block;
   padding: 0 20px;
+  font-size: 0.9em;
 
-  color: white;
-  font-size: 1.2em;
+  a { color: white; text-decoration: none; }
+  a:hover { color: #ddd; }
 }
 
+.imagebar {
+  border-top: 10px solid #444;
+  border-bottom: 10px solid #444;
+  background-image: url("/static/images/assets/bg.png");
+  background-size: cover;
+  background-position: center;
+
+  height: 500px;
+  width: 100%;
+}
+
+.page-title {
+  padding: 0 20px;
+}
+
+/// Body
+
 .page-content {
-  min-height: 500px;
+  padding: 0 20px;
 }
 
 /// Footer
 
 .page-footer {
+  position: relative;
   padding: 20px;
-  min-height: 200px;
   background: $brand3-color;
   color: white;
 }
 
-.credits__title,
-.founders__title,
-.followlinks__title {
-  font-size: 0.8em;
+.credits p, .follow-list {
+  margin: 0;
 }
 
-.credits__description {
-  font-size: 0.8em;
-}
-
-.followlinks__list,
-.founders__list {
+.follow-list {
+  position: absolute;
+  top: 20px; right: 20px;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
-.founders a {
-  color: white;
+.follow-list__el {
+  display: inline-block;
 
-  &.hover {
-    color: white;
-  }
+  a { color: white; text-decoration: none; }
+  a:hover { color: #ddd; }
 }
