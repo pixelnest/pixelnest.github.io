@@ -1,5 +1,14 @@
 <header>
-  <ul class="navbar">
+  <section class="imagebar">
+    <a class="logo" href="/">
+      <img class="logo__img" src="/static/images/assets/pixelnest@2x.png" />
+      <p class="logo__title">Pixelnest<br />Studio</p>
+    </a>
+  </section>
+
+  <h1 class="page-title">{{ page.title }}</h1>
+
+   <ul class="navbar">
     <li class="navbar__link">
       <a href="/about">about</a>
     </li>
@@ -14,8 +23,5 @@
     </li>
   </ul>
 
-  <section class="imagebar">
-  </section>
-
-  <h1 class="page-title">{{ page.title }}</h1>
+  <hr class="page-start" />
 </header>
