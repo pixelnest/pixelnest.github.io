@@ -96,6 +96,17 @@ body {
   font-size: 3em;
   text-align: center; }
 
+.page-subtitle {
+  position: relative;
+  top: -20px;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: center; }
+
+.page-subtitle strong {
+  color: #00a9e0;
+  font-style: italic; }
+
 .page-start {
   margin: 0 auto;
   margin-top: 30px;
@@ -112,17 +123,18 @@ body {
 .page-footer {
   position: relative;
   margin-top: 200px;
-  padding: 20px;
+  padding: 10px;
   background: #3b3b3d;
-  color: white; }
+  color: white;
+  font-size: 0.7em; }
 
 .credits p, .follow-list {
   margin: 0; }
 
 .follow-list {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   padding: 0;
   list-style: none; }
 
