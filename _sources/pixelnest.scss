@@ -39,6 +39,12 @@
   &.placeholder { @content }
 }
 
+%clearfix {
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+
 // ---------------------
 // Constants
 // ---------------------
@@ -105,7 +111,6 @@ body {
   padding: 10px;
   background: rgba($brand3-color, 0.7);
   border-radius: 8px;
-  //background: rgba(255, 255, 255, 0.3);
   text-decoration: none;
 }
 
@@ -146,12 +151,24 @@ body {
 
 .imagebar {
   border-bottom: 1px solid #888;
-  background-image: url("/static/images/assets/bg2.png");
+  background-image: url("/static/images/background.png");
   background-size: cover;
   background-position: center;
 
-  height: 500px;
+  height: 400px;
   width: 100%;
+
+  @media only screen and (max-width: 1000px) {
+    height: 350px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    height: 300px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .page-title {
@@ -169,11 +186,11 @@ body {
   font-size: 1.2em;
   font-weight: normal;
   text-align: center;
-}
 
-.page-subtitle strong {
-  color: $brand1-color;
-  font-style: italic;
+  strong {
+    color: $brand1-color;
+    font-style: italic;
+  }
 }
 
 .page-start {
@@ -198,41 +215,65 @@ body {
 .page-footer {
   position: relative;
   margin-top: 200px;
-  padding: 10px;
+  padding: 20px;
   background: $brand3-color;
   color: white;
-  font-size: 0.7em;
 }
 
-.credits p, .follow-list {
-  margin: 0;
+.credits {
+  display: table;
+  width: 100%;
+
+  p, ul {
+    display: table-cell;
+    margin: 0;
+  }
 }
 
-.follow-list {
-  position: absolute;
-  top: 10px; right: 10px;
+.credits__desc {
+  strong {
+    font-style: italic;
+    font-weight: normal;
+  }
+}
+
+.credits__follows {
   padding: 0;
   list-style: none;
-}
+  text-align: right;
 
-.follow-list__el {
-  display: inline-block;
+  li {
+    display: inline-block;
 
-  a { color: white; text-decoration: none; }
-  a:hover { color: #ddd; }
+    a { color: white; text-decoration: none; }
+    a:hover { color: #ddd; }
+
+    &.twitter {
+      padding: 0 40px;
+      background-image: url("/static/images/icon-twitter-white.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 30px;
+    }
+
+    &.facebook {
+      padding-left: 35px;
+      background-image: url("/static/images/icon-facebook-white.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 30px;
+    }
+  }
 }
 
 /// Cards
 
 .card {
-  clear: both;
+  @extend %clearfix;
+
   margin-bottom: 90px;
   padding-bottom: 40px;
   border-bottom: 1px solid #eee;
-}
-
-.card, .card__body {
-  overflow:hidden; _overflow:visible; zoom:1;
 }
 
 .card__title {
@@ -247,6 +288,8 @@ body {
 }
 
 .card__body {
+  @extend %clearfix;
+
   :first-child {
     margin-top: 0;
   }

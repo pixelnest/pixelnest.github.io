@@ -18,6 +18,11 @@
  * - transition
  * - media queries
  */
+.card, .card__body {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -82,11 +87,20 @@ body {
 
 .imagebar {
   border-bottom: 1px solid #888;
-  background-image: url("/static/images/assets/bg2.png");
+  background-image: url("/static/images/background.png");
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 400px;
   width: 100%; }
+  @media only screen and (max-width: 1000px) {
+    .imagebar {
+      height: 350px; } }
+  @media only screen and (max-width: 800px) {
+    .imagebar {
+      height: 300px; } }
+  @media only screen and (max-width: 600px) {
+    .imagebar {
+      display: none; } }
 
 .page-title {
   margin: 0;
@@ -102,10 +116,9 @@ body {
   font-size: 1.2em;
   font-weight: normal;
   text-align: center; }
-
-.page-subtitle strong {
-  color: #00a9e0;
-  font-style: italic; }
+  .page-subtitle strong {
+    color: #00a9e0;
+    font-style: italic; }
 
 .page-start {
   margin: 0 auto;
@@ -123,39 +136,49 @@ body {
 .page-footer {
   position: relative;
   margin-top: 200px;
-  padding: 10px;
+  padding: 20px;
   background: #3b3b3d;
-  color: white;
-  font-size: 0.7em; }
+  color: white; }
 
-.credits p, .follow-list {
-  margin: 0; }
+.credits {
+  display: table;
+  width: 100%; }
+  .credits p, .credits ul {
+    display: table-cell;
+    margin: 0; }
 
-.follow-list {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.credits__desc strong {
+  font-style: italic;
+  font-weight: normal; }
+
+.credits__follows {
   padding: 0;
-  list-style: none; }
-
-.follow-list__el {
-  display: inline-block; }
-  .follow-list__el a {
-    color: white;
-    text-decoration: none; }
-  .follow-list__el a:hover {
-    color: #ddd; }
+  list-style: none;
+  text-align: right; }
+  .credits__follows li {
+    display: inline-block; }
+    .credits__follows li a {
+      color: white;
+      text-decoration: none; }
+    .credits__follows li a:hover {
+      color: #ddd; }
+    .credits__follows li.twitter {
+      padding: 0 40px;
+      background-image: url("/static/images/icon-twitter-white.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 30px; }
+    .credits__follows li.facebook {
+      padding-left: 35px;
+      background-image: url("/static/images/icon-facebook-white.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 30px; }
 
 .card {
-  clear: both;
   margin-bottom: 90px;
   padding-bottom: 40px;
   border-bottom: 1px solid #eee; }
-
-.card, .card__body {
-  overflow: hidden;
-  _overflow: visible;
-  zoom: 1; }
 
 .card__title {
   margin: 0;
