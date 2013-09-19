@@ -145,3 +145,26 @@ body {
     text-decoration: none; }
   .follow-list__el a:hover {
     color: #ddd; }
+
+.card {
+  clear: both;
+  margin-bottom: 90px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee; }
+
+.card, .card__body {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1; }
+
+.card__title {
+  margin: 0;
+  margin-bottom: 20px; }
+
+.card__cover {
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #ddd; }
+
+.card__body :first-child {
+  margin-top: 0; }
