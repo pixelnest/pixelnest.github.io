@@ -12,7 +12,7 @@ permalink: /:categories/:year/:month/:title
 
 # Pagination
 paginate_path: 'page-:num'
-paginate: 1
+paginate: 5
 
 # Markdown formatter
 markdown: redcarpet
