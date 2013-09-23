@@ -19,6 +19,15 @@
  * - media queries
  */
 
+// ---------------------
+// Colors
+// ---------------------
+
+$brand1-color: #00A9E0; // blue
+$brand2-color: #98C73D; // green
+$brand3-color: #3B3B3D; // grey
+$text-color:   #353535; // almost black
+
 // -------------------------------------------------------
 // Mixins
 // -------------------------------------------------------
@@ -45,6 +54,15 @@
   zoom:1;
 }
 
+%link {
+  color: $brand1-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // ---------------------
 // Constants
 // ---------------------
@@ -54,16 +72,6 @@ $MAX: 800px;
 // -------------------------------------------------------
 // Global
 // -------------------------------------------------------
-
-
-// ---------------------
-// Colors
-// ---------------------
-
-$brand1-color: #00A9E0; // blue
-$brand2-color: #98C73D; // green
-$brand3-color: #3B3B3D; // grey
-$text-color:   #353535; // almost black
 
 // ---------------------
 // Root
@@ -151,9 +159,10 @@ body {
 
 .imagebar {
   border-bottom: 1px solid #888;
-  background-image: url("/static/images/background.png");
+  background-image: url("/static/images/background02.png");
   background-size: cover;
   background-position: center;
+  background-color: rgb(243, 133, 57);
 
   height: 400px;
   width: 100%;
@@ -245,23 +254,26 @@ body {
   li {
     display: inline-block;
 
-    a { color: white; text-decoration: none; }
-    a:hover { color: #ddd; }
-
-    &.twitter {
-      padding: 0 40px;
-      background-image: url("/static/images/icon-twitter-white.png");
+    a {
       background-repeat: no-repeat;
       background-position: left top;
       background-size: 30px;
+
+      color: white;
+      text-decoration: none;
     }
 
-    &.facebook {
+    a:hover { color: #ddd; }
+
+    &.twitter a {
+      padding: 0 40px;
+      background-image: url("/static/images/icon-twitter-white.png");
+
+    }
+
+    &.facebook a {
       padding-left: 35px;
       background-image: url("/static/images/icon-facebook-white.png");
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: 30px;
     }
   }
 }
@@ -292,5 +304,49 @@ body {
 
   :first-child {
     margin-top: 0;
+  }
+}
+
+/// Founders
+
+.founders {
+  display: table;
+  margin: 0 auto;
+  padding: 60px 0;
+  width: 800px;
+}
+
+.founder {
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+}
+
+.founder__title {
+  margin: 40px 0 0px 0;
+  font-size: 1.5em;
+}
+
+.founder__links {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.founder__links li {
+  padding: 5px 0;
+
+  a {
+    padding-left: 35px;
+    background-size: 28px;
+    background-repeat: no-repeat;
+  }
+
+  &.blog a {
+    background-image: url("/static/images/icon-site.png");
+  }
+
+  &.twitter a {
+    background-image: url("/static/images/icon-twitter-black.png");
   }
 }

@@ -87,9 +87,10 @@ body {
 
 .imagebar {
   border-bottom: 1px solid #888;
-  background-image: url("/static/images/background.png");
+  background-image: url("/static/images/background02.png");
   background-size: cover;
   background-position: center;
+  background-color: #f38539;
   height: 400px;
   width: 100%; }
   @media only screen and (max-width: 1000px) {
@@ -158,22 +159,19 @@ body {
   .credits__follows li {
     display: inline-block; }
     .credits__follows li a {
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 30px;
       color: white;
       text-decoration: none; }
     .credits__follows li a:hover {
       color: #ddd; }
-    .credits__follows li.twitter {
+    .credits__follows li.twitter a {
       padding: 0 40px;
-      background-image: url("/static/images/icon-twitter-white.png");
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: 30px; }
-    .credits__follows li.facebook {
+      background-image: url("/static/images/icon-twitter-white.png"); }
+    .credits__follows li.facebook a {
       padding-left: 35px;
-      background-image: url("/static/images/icon-facebook-white.png");
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: 30px; }
+      background-image: url("/static/images/icon-facebook-white.png"); }
 
 .card {
   margin-bottom: 90px;
@@ -191,3 +189,34 @@ body {
 
 .card__body :first-child {
   margin-top: 0; }
+
+.founders {
+  display: table;
+  margin: 0 auto;
+  padding: 60px 0;
+  width: 800px; }
+
+.founder {
+  display: table-cell;
+  width: 50%;
+  text-align: center; }
+
+.founder__title {
+  margin: 40px 0 0px 0;
+  font-size: 1.5em; }
+
+.founder__links {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none; }
+
+.founder__links li {
+  padding: 5px 0; }
+  .founder__links li a {
+    padding-left: 35px;
+    background-size: 28px;
+    background-repeat: no-repeat; }
+  .founder__links li.blog a {
+    background-image: url("/static/images/icon-site.png"); }
+  .founder__links li.twitter a {
+    background-image: url("/static/images/icon-twitter-black.png"); }
