@@ -9,3 +9,23 @@ subtitle: we craft <strong>games</strong> and <strong>apps</strong>
     We are two developers crafting small projects with our skills and love. We're currently founding the company while working on our two first game projects.
   </p>
 </article>
+
+<section>
+  <h2>Our projects :</h2>
+
+  <ul>
+    {% for post in site.categories.projects %}
+    <li>{{ post.title }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>From the journal :</h2>
+
+  <ul>
+    {% for post in site.posts offset: 0 limit: 8 %}
+    <li>{{ post.title }}</li>
+    {% endfor %}
+  </ul>
+</section>
