@@ -201,9 +201,13 @@ body {
   width: 50%;
   text-align: center; }
 
+.founder__cover {
+  width: 160px;
+  height: 160px; }
+
 .founder__title {
   margin: 40px 0 0px 0;
-  font-size: 1.5em; }
+  font-size: 1.4em; }
 
 .founder__links {
   margin: 10px 0;
@@ -215,8 +219,32 @@ body {
   .founder__links li a {
     padding-left: 35px;
     background-size: 28px;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    color: #00a9e0;
+    text-decoration: none; }
+    .founder__links li a:hover {
+      text-decoration: underline; }
   .founder__links li.blog a {
     background-image: url("/static/images/icon-site-black.png"); }
   .founder__links li.twitter a {
     background-image: url("/static/images/icon-twitter-black.png"); }
+
+.contacts {
+  padding-left: 10px;
+  list-style: none; }
+  .contacts li {
+    padding: 4px 0; }
+    .contacts li a {
+      padding-left: 40px;
+      background-size: 28px;
+      background-repeat: no-repeat;
+      color: #00a9e0;
+      text-decoration: none; }
+      .contacts li a:hover {
+        text-decoration: underline; }
+    .contacts li.twitter a {
+      background-image: url("/static/images/icon-twitter-black.png"); }
+    .contacts li.facebook a {
+      background-image: url("/static/images/icon-facebook-black.png"); }
+    .contacts li.mail a {
+      background-image: url("/static/images/icon-mail-black.png"); }

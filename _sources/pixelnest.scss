@@ -322,9 +322,14 @@ body {
   text-align: center;
 }
 
+.founder__cover {
+  width: 160px;
+  height: 160px;
+}
+
 .founder__title {
   margin: 40px 0 0px 0;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 .founder__links {
@@ -340,6 +345,13 @@ body {
     padding-left: 35px;
     background-size: 28px;
     background-repeat: no-repeat;
+
+    color: $brand1-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &.blog a {
@@ -348,5 +360,41 @@ body {
 
   &.twitter a {
     background-image: url("/static/images/icon-twitter-black.png");
+  }
+}
+
+/// Contacts
+
+.contacts {
+  padding-left: 10px;
+  list-style: none;
+
+  li {
+    padding: 4px 0;
+
+    a {
+      padding-left: 40px;
+      background-size: 28px;
+      background-repeat: no-repeat;
+
+      color: $brand1-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.twitter a {
+      background-image: url("/static/images/icon-twitter-black.png");
+    }
+
+    &.facebook a {
+      background-image: url("/static/images/icon-facebook-black.png");
+    }
+
+    &.mail a {
+      background-image: url("/static/images/icon-mail-black.png");
+    }
   }
 }
