@@ -36,6 +36,6 @@
   color: #87878a;
   font-size: 1.1em; }
 .entry__content blockquote {
-  color: #828282;
+  padding-left: 30px;
   border-left: 1px solid #ccc;
-  padding-left: 30px; }
+  color: #828282; }

@@ -51,7 +51,6 @@
 
   h2 {
     margin: 40px 0 -10px 0;
-
     font-size: 1.4em;
   }
 
@@ -62,8 +61,8 @@
   }
 
   blockquote {
-    color: lighten($text-color, 30%);
-    border-left: 1px solid #ccc;
     padding-left: 30px;
+    border-left: 1px solid #ccc;
+    color: lighten($text-color, 30%);
   }
 }
