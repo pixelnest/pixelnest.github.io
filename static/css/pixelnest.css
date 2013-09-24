@@ -227,6 +227,31 @@ body {
   .home__aside li a {
     font-size: 0.9em; }
 
+.entry {
+  position: relative;
+  margin-bottom: 120px;
+  min-height: 180px; }
+
+.entry__metadata {
+  position: absolute;
+  left: -160px;
+  width: 150px;
+  text-align: center; }
+
+.entry__author img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px; }
+.entry__author p {
+  margin: 5px;
+  font-size: 0.8em; }
+
+.entry__infos {
+  color: #bbb;
+  font-size: 0.7em; }
+  .entry__infos p {
+    margin: 0; }
+
 .contacts {
   padding-left: 10px;
   list-style: none; }

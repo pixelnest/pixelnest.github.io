@@ -1,0 +1,36 @@
+// ---------------------
+// Journal
+// ---------------------
+
+.entry {
+  position: relative;
+  margin-bottom: 120px;
+  min-height: 180px;
+}
+
+.entry__metadata {
+  position: absolute;
+  left: -160px;
+  width: 150px;
+  text-align: center;
+}
+
+.entry__author {
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+  }
+
+  p {
+    margin: 5px;
+    font-size: 0.8em;
+  }
+}
+
+.entry__infos {
+  color: #bbb;
+  font-size: 0.7em;
+
+  p { margin: 0; }
+}

@@ -1,5 +1,27 @@
 ---
 layout: default
 title: Journal
-subtitle:
 ---
+
+{% for post in site.posts offset: 0 limit: 5 %}
+<article class="entry">
+  <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+
+  <aside class="entry__metadata">
+    <section class="entry__author">
+      <img src="/static/images/us/moger.jpg" />
+      <p>Matthieu</p>
+    </section>
+
+    <section class="entry__infos">
+      <p>
+        {{ post.date | date: "%d %b. %Y" | downcase }}
+      </p>
+    </section>
+  </aside>
+
+  <section class="entry__content">
+    {{ post.content }}
+  </section>
+</article>
+{% endfor %}
