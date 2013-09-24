@@ -6,8 +6,10 @@ subtitle: <strong>games</strong> and <strong>apps</strong>
 
 {% for post in site.categories.projects %}
 
-<article class="card game">
-  <h1 class="card__title">{{ post.title }}</h1>
+<article class="card project">
+  <h1 class="card__title">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h1>
 
   <section class="card__images">
     <img class="card__cover" src="{{ post.cover }}" width="200" height="200" />

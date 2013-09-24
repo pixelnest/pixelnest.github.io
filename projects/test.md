@@ -1,5 +1,0 @@
----
-layout: project
----
-
-42

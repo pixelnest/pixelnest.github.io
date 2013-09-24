@@ -188,6 +188,9 @@ body {
   padding-bottom: 40px;
   border-bottom: 1px solid #eee; }
 
+.card.alone {
+  border-bottom: none; }
+
 .card__title {
   margin: 0;
   margin-bottom: 20px; }
