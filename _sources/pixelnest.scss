@@ -58,9 +58,9 @@ $text-color:   #353535; // almost black
   color: $brand1-color;
   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+  &:hover  { text-decoration: underline; }
+  &:active { color: $brand2-color; }
+  &:focus  { color: $brand2-color; }
 }
 
 // ---------------------
@@ -106,6 +106,9 @@ body {
   background: $brand1-color;
   color: white;
 }
+
+// Change all the links in the page-content
+.page-content p a { @extend %link }
 
 // -------------------------------------------------------
 // Components
@@ -344,16 +347,10 @@ body {
   padding: 5px 0;
 
   a {
+    @extend %link;
     padding-left: 35px;
     background-size: 28px;
     background-repeat: no-repeat;
-
-    color: $brand1-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   &.blog a {
@@ -375,16 +372,10 @@ body {
     padding: 4px 0;
 
     a {
+      @extend %link;
       padding-left: 40px;
       background-size: 28px;
       background-repeat: no-repeat;
-
-      color: $brand1-color;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
 
     &.twitter a {
