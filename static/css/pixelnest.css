@@ -23,14 +23,14 @@
   _overflow: visible;
   zoom: 1; }
 
-.page-content p a, .card__title a, .home__aside li a, .contacts li a, .founder__links li a {
+.page-content p a, .card__title a, .home__aside li a, .entry__title a, .contacts li a, .founder__links li a {
   color: #00a9e0;
   text-decoration: none; }
-  .page-content p a:hover, .card__title a:hover, .home__aside li a:hover, .contacts li a:hover, .founder__links li a:hover {
+  .page-content p a:hover, .card__title a:hover, .home__aside li a:hover, .entry__title a:hover, .contacts li a:hover, .founder__links li a:hover {
     text-decoration: underline; }
-  .page-content p a:active, .card__title a:active, .home__aside li a:active, .contacts li a:active, .founder__links li a:active {
+  .page-content p a:active, .card__title a:active, .home__aside li a:active, .entry__title a:active, .contacts li a:active, .founder__links li a:active {
     color: #98c73d; }
-  .page-content p a:focus, .card__title a:focus, .home__aside li a:focus, .contacts li a:focus, .founder__links li a:focus {
+  .page-content p a:focus, .card__title a:focus, .home__aside li a:focus, .entry__title a:focus, .contacts li a:focus, .founder__links li a:focus {
     color: #98c73d; }
 
 html, body {
@@ -251,6 +251,23 @@ body {
   font-size: 0.7em; }
   .entry__infos p {
     margin: 0; }
+
+.entry__content h1 {
+  margin: 50px 0 0 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5em; }
+.entry__content h2 {
+  margin: 40px 0 -10px 0;
+  font-size: 1.4em; }
+.entry__content h3 {
+  margin: 40px 0 -20px 0;
+  color: #87878a;
+  font-size: 1.1em; }
+.entry__content blockquote {
+  color: #828282;
+  border-left: 1px solid #ccc;
+  padding-left: 30px; }
 
 .contacts {
   padding-left: 10px;

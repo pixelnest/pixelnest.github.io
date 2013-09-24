@@ -22,3 +22,20 @@
   font-size: 0.7em; }
   .entry__infos p {
     margin: 0; }
+
+.entry__content h1 {
+  margin: 50px 0 0 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5em; }
+.entry__content h2 {
+  margin: 40px 0 -10px 0;
+  font-size: 1.4em; }
+.entry__content h3 {
+  margin: 40px 0 -20px 0;
+  color: #87878a;
+  font-size: 1.1em; }
+.entry__content blockquote {
+  color: #828282;
+  border-left: 1px solid #ccc;
+  padding-left: 30px; }

@@ -1,3 +1,5 @@
+@import "variables";
+
 // ---------------------
 // Journal
 // ---------------------
@@ -6,6 +8,10 @@
   position: relative;
   margin-bottom: 120px;
   min-height: 180px;
+}
+
+.entry__title {
+  a { @extend %link; }
 }
 
 .entry__metadata {
@@ -33,4 +39,31 @@
   font-size: 0.7em;
 
   p { margin: 0; }
+}
+
+.entry__content {
+  h1 {
+    margin: 50px 0 0 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    margin: 40px 0 -10px 0;
+
+    font-size: 1.4em;
+  }
+
+  h3 {
+    margin: 40px 0 -20px 0;
+    color: lighten($brand3-color, 30%);
+    font-size: 1.1em;
+  }
+
+  blockquote {
+    color: lighten($text-color, 30%);
+    border-left: 1px solid #ccc;
+    padding-left: 30px;
+  }
 }

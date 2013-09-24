@@ -3,14 +3,18 @@ layout: default
 title: Journal
 ---
 
-{% for post in site.posts offset: 0 limit: 5 %}
+{% for post in site.posts %}
 <article class="entry">
-  <h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+  <h2 class="entry__title">
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </h2>
 
   <aside class="entry__metadata">
     <section class="entry__author">
       <img src="/static/images/us/moger.jpg" />
-      <p>Matthieu</p>
+      <p>
+        <a href="/about/#matthieu">Matthieu</a>
+      </p>
     </section>
 
     <section class="entry__infos">
