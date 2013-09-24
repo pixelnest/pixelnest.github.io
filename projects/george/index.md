@@ -2,7 +2,6 @@
 layout: project
 title: George the Pirate
 cover: /static/images/projects/thumb_g1.png
-permalink: /projects/george
 ---
 
 **[Watch the Stunfest 2013 trailer](http://www.youtube.com/watch?v=xBU0OXjJko4)**
@@ -14,5 +13,3 @@ So he bought a small boat and decided to now search for lost treasures on island
 He must find as many treasures as possible the day, and come back home before the night. But on the way back, the more gold he found the more jealous pirates he will encounter!
 
 **George** was a little game initially made for the Stunfest 2013 (event at Rennes, France). We are now working on an improved version of the game.
-
-

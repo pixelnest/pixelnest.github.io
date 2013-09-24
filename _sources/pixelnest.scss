@@ -200,7 +200,6 @@ body {
   text-align: center;
 
   strong {
-    color: $brand1-color;
     font-style: italic;
   }
 }
@@ -298,6 +297,10 @@ body {
 .card__title {
   margin: 0;
   margin-bottom: 20px;
+}
+
+.card__title a {
+  @extend %link;
 }
 
 .card__cover {
