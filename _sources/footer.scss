@@ -1,0 +1,60 @@
+// ---------------------
+// Footer
+// ---------------------
+
+.page-footer {
+  position: relative;
+  margin-top: 200px;
+  padding: 20px;
+  background: $brand3-color;
+  color: white;
+}
+
+.credits {
+  display: table;
+  width: 100%;
+
+  p, ul {
+    display: table-cell;
+    margin: 0;
+  }
+}
+
+.credits__desc {
+  strong {
+    font-style: italic;
+    font-weight: normal;
+  }
+}
+
+.credits__follows {
+  padding: 0;
+  list-style: none;
+  text-align: right;
+
+  li {
+    display: inline-block;
+
+    a {
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 30px;
+
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover { color: #ddd; }
+
+    &.twitter a {
+      padding: 0 40px;
+      background-image: url("/static/images/icon-twitter-white.png");
+
+    }
+
+    &.facebook a {
+      padding-left: 35px;
+      background-image: url("/static/images/icon-facebook-white.png");
+    }
+  }
+}

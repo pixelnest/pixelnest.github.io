@@ -4,28 +4,33 @@ title: Pixelnest Studio
 subtitle: we craft <strong>games</strong> and <strong>apps</strong>
 ---
 
-<article>
-  <p>
-    We are two developers crafting small projects with our skills and love. We're currently founding the company while working on our two first game projects.
-  </p>
-</article>
+<div class="home">
+  <section class="home__desc">
+    <p>
+      We are two developers crafting small projects with our skills and love. We're currently founding the company while working on our two first game projects.
+    </p>
+  </section>
 
-<section>
-  <h2>Our projects :</h2>
+  <aside class="home__aside">
+    <section class="home__projects">
+      <h2>our projects</h2>
 
-  <ul>
-    {% for post in site.categories.projects %}
-    <li>{{ post.title }}</li>
-    {% endfor %}
-  </ul>
-</section>
+      <ul>
+        <li><a href="/projects/george/">George</a></li>
+        <li><a href="/projects/unknown">Unknown</a></li>
+      </ul>
+    </section>
 
-<section>
-  <h2>From the journal :</h2>
+    <section class="home__journal">
+      <h2>from the journal</h2>
 
-  <ul>
-    {% for post in site.posts offset: 0 limit: 8 %}
-    <li>{{ post.title }}</li>
-    {% endfor %}
-  </ul>
-</section>
+      <ul>
+        {% for post in site.posts offset: 0 limit: 5 %}
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
+</div>

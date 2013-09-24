@@ -23,14 +23,14 @@
   _overflow: visible;
   zoom: 1; }
 
-.page-content p a, .card__title a, .founder__links li a, .contacts li a {
+.page-content p a, .card__title a, .home__aside li a, .contacts li a, .founder__links li a {
   color: #00a9e0;
   text-decoration: none; }
-  .page-content p a:hover, .card__title a:hover, .founder__links li a:hover, .contacts li a:hover {
+  .page-content p a:hover, .card__title a:hover, .home__aside li a:hover, .contacts li a:hover, .founder__links li a:hover {
     text-decoration: underline; }
-  .page-content p a:active, .card__title a:active, .founder__links li a:active, .contacts li a:active {
+  .page-content p a:active, .card__title a:active, .home__aside li a:active, .contacts li a:active, .founder__links li a:active {
     color: #98c73d; }
-  .page-content p a:focus, .card__title a:focus, .founder__links li a:focus, .contacts li a:focus {
+  .page-content p a:focus, .card__title a:focus, .home__aside li a:focus, .contacts li a:focus, .founder__links li a:focus {
     color: #98c73d; }
 
 html, body {
@@ -53,6 +53,11 @@ body {
 .page *::selection {
   background: #00a9e0;
   color: white; }
+
+.page-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 800px; }
 
 .logo {
   display: table;
@@ -78,6 +83,26 @@ body {
   text-decoration: none;
   text-shadow: 0 0 6px #333;
   vertical-align: middle; }
+
+.card {
+  margin-bottom: 90px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee; }
+
+.card.alone {
+  border-bottom: none; }
+
+.card__title {
+  margin: 0;
+  margin-bottom: 20px; }
+
+.card__cover {
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #ddd; }
+
+.card__body :first-child {
+  margin-top: 0; }
 
 .navbar {
   margin: 0;
@@ -138,11 +163,6 @@ body {
   border-top: 0px;
   border-bottom: 1px solid #DDD; }
 
-.page-content {
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 800px; }
-
 .page-footer {
   position: relative;
   margin-top: 200px;
@@ -182,25 +202,46 @@ body {
       padding-left: 35px;
       background-image: url("/static/images/icon-facebook-white.png"); }
 
-.card {
-  margin-bottom: 90px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #eee; }
+.home {
+  display: table;
+  width: 100%; }
 
-.card.alone {
-  border-bottom: none; }
+.home__desc {
+  display: table-cell;
+  width: 60%; }
 
-.card__title {
-  margin: 0;
-  margin-bottom: 20px; }
+.home__aside {
+  display: table-cell;
+  padding-left: 40px;
+  width: 40%; }
+  .home__aside h2 {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; }
+  .home__aside ul {
+    list-style: none;
+    padding-left: 20px;
+    border-left: 1px solid #ddd; }
+  .home__aside li {
+    margin: 10px 0; }
+  .home__aside li a {
+    font-size: 0.9em; }
 
-.card__cover {
-  float: left;
-  margin-right: 20px;
-  border: 1px solid #ddd; }
-
-.card__body :first-child {
-  margin-top: 0; }
+.contacts {
+  padding-left: 10px;
+  list-style: none; }
+  .contacts li {
+    padding: 4px 0; }
+    .contacts li a {
+      padding-left: 40px;
+      background-size: 28px;
+      background-repeat: no-repeat; }
+    .contacts li.twitter a {
+      background-image: url("/static/images/icon-twitter-black.png"); }
+    .contacts li.facebook a {
+      background-image: url("/static/images/icon-facebook-black.png"); }
+    .contacts li.mail a {
+      background-image: url("/static/images/icon-mail-black.png"); }
 
 .founders {
   display: table;
@@ -238,19 +279,3 @@ body {
     background-image: url("/static/images/icon-site-black.png"); }
   .founder__links li.twitter a {
     background-image: url("/static/images/icon-twitter-black.png"); }
-
-.contacts {
-  padding-left: 10px;
-  list-style: none; }
-  .contacts li {
-    padding: 4px 0; }
-    .contacts li a {
-      padding-left: 40px;
-      background-size: 28px;
-      background-repeat: no-repeat; }
-    .contacts li.twitter a {
-      background-image: url("/static/images/icon-twitter-black.png"); }
-    .contacts li.facebook a {
-      background-image: url("/static/images/icon-facebook-black.png"); }
-    .contacts li.mail a {
-      background-image: url("/static/images/icon-mail-black.png"); }

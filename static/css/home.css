@@ -1,0 +1,24 @@
+.home {
+  display: table;
+  width: 100%; }
+
+.home__desc {
+  display: table-cell;
+  width: 60%; }
+
+.home__aside {
+  display: table-cell;
+  padding-left: 40px;
+  width: 40%; }
+  .home__aside h2 {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; }
+  .home__aside ul {
+    list-style: none;
+    padding-left: 20px;
+    border-left: 1px solid #ddd; }
+  .home__aside li {
+    margin: 10px 0; }
+  .home__aside li a {
+    font-size: 0.9em; }

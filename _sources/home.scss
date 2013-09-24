@@ -1,0 +1,48 @@
+// ---------------------
+// Home
+// ---------------------
+
+.home {
+  display: table;
+  width: 100%;
+}
+
+.home__desc {
+  display: table-cell;
+  width: 60%;
+}
+
+.home__aside {
+  display: table-cell;
+  padding-left: 40px;
+  width: 40%;
+
+  h2 {
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  li a {
+    @extend %link;
+    font-size: 0.9em;
+  }
+}
+
+.home__projects {
+
+}
+
+.home__journal {
+
+}
