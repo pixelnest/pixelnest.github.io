@@ -168,20 +168,26 @@ body {
   margin-top: 200px;
   padding: 20px;
   background: #3b3b3d;
-  color: white; }
+  color: white;
+  font-size: 0.9em; }
 
 .credits {
   display: table;
+  caption-side: top;
   width: 100%; }
-  .credits p, .credits ul {
-    display: table-cell;
-    margin: 0; }
 
-.credits__desc strong {
-  font-style: italic;
-  font-weight: normal; }
+.credits__desc,
+.credits__follows {
+  margin: 0; }
+
+.credits__desc {
+  display: table-cell; }
+  .credits__desc strong {
+    font-style: italic;
+    font-weight: normal; }
 
 .credits__follows {
+  display: table-cell;
   padding: 0;
   list-style: none;
   text-align: right; }
@@ -196,12 +202,20 @@ body {
     .credits__follows li a:hover {
       color: #ddd; }
     .credits__follows li.twitter a {
-      padding: 0 40px;
+      padding: 0 20px 0 40px;
       background-image: url("/static/images/icon-twitter-white.png"); }
     .credits__follows li.facebook a {
       padding-left: 35px;
       background-image: url("/static/images/icon-facebook-white.png"); }
 
+@media only screen and (max-width: 800px) {
+  .credits__desc {
+    display: table-row; }
+
+  .credits__follows {
+    display: table-caption;
+    padding-bottom: 15px;
+    text-align: center; } }
 .home {
   display: table;
   width: 100%; }
