@@ -381,7 +381,7 @@ body {
   .founder__links li.twitter a {
     background-image: url("/static/images/icon-twitter-black.png"); }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 720px) {
   .founders {
     display: block;
     padding: 0;
