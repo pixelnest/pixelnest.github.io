@@ -1,4 +1,4 @@
-<header>
+<header class="page-header">
   <section class="banner">
     <a class="logo" href="/">
       <img
@@ -22,23 +22,34 @@
      {{ page.subtitle }} 
   </h2>
 
-  <ul class="navbar">
-    <li class="navbar__link">
-      <a href="/">home</a>
-    </li>
-    <li class="navbar__link">
-      <a href="/projects">projects</a>
-    </li>
-    <li class="navbar__link">
-      <a href="/journal">journal</a>
-    </li>
-    <li class="navbar__link">
-      <a href="/contact">contact</a>
-    </li>
-    <li class="navbar__link">
-      <a href="/about">about</a>
-    </li>
-  </ul>
+  <nav>
+    <ul class="navbar">
+      <li class="navbar__link">
+        <a href="/">home</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/projects">projects</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/journal">journal</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/contact">contact</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/about">about</a>
+      </li>
+    </ul>
+
+    <select id="quicknavbar" class="quicknavbar">
+      <option>Go to...</option>
+      <option value="/">→ Home</option>
+      <option value="/projects">→ Projects</option>
+      <option value="/journal">→ Journal</option>
+      <option value="/contact">→ Contact</option>
+      <option value="/about">→ About</option>
+    </select>
+  </nav>
 
   <hr class="page-start" />
 </header>

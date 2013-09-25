@@ -163,6 +163,9 @@ body {
   .navbar__link a:hover {
     color: #ddd; }
 
+.quicknavbar {
+  display: none; }
+
 .page-title {
   margin: 0;
   margin-top: 50px;
@@ -190,12 +193,19 @@ body {
 
 @media only screen and (max-width: 600px) {
   .page-title {
+    font-size: 2em;
     margin-top: 30px; }
 
-  .navbar__link {
+  .page-subtitle {
+    display: none; }
+
+  .navbar {
+    display: none; }
+
+  .quicknavbar {
     display: block;
-    margin-bottom: 5px;
-    font-size: 1.2em; } }
+    margin: 20px auto;
+    width: 70%; } }
 @media only screen and (max-width: 1200px) {
   .page-start {
     width: 80%; } }

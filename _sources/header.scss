@@ -117,6 +117,10 @@
   a:hover { color: #ddd; }
 }
 
+.quicknavbar {
+  display: none;
+}
+
 /// Title
 
 .page-title {
@@ -156,14 +160,24 @@
 /// For phone size
 
 @media only screen and (max-width: $phone) {
+
   .page-title {
+    font-size: 2em;
     margin-top: 30px;
   }
 
-  .navbar__link {
+  .page-subtitle {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .quicknavbar {
     display: block;
-    margin-bottom: 5px;
-    font-size: 1.2em;
+    margin: 20px auto;
+    width: 70%;
   }
 }
 
