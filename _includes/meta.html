@@ -1,6 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title }}</title>
+
+{% if page.url == '/index.html' %}
+<title>Pixelnest Studio — we craft games and apps</title>
+{% else %}
+<title>{{ page.title }} — Pixelnest Studio</title>
+{% endif %}
 
 <!-- misc -->
 <link rel="shortcut icon" href="/static/images/favicon.ico?v=0000" />
