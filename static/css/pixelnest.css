@@ -101,7 +101,7 @@ body {
   margin-right: 20px;
   border: 1px solid #ddd; }
 
-.card__body :first-child {
+.card__body > :first-child {
   margin-top: 0; }
 
 .navbar {
@@ -128,7 +128,7 @@ body {
   background-color: #f38539;
   height: 400px;
   width: 100%; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1200px) {
     .imagebar {
       height: 350px; } }
   @media only screen and (max-width: 800px) {

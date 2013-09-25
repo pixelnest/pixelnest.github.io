@@ -177,7 +177,7 @@ body {
 .card__body {
   @extend %clearfix;
 
-  :first-child {
+  > :first-child {
     margin-top: 0;
   }
 }
