@@ -115,36 +115,6 @@ body {
   max-width: 800px;
 }
 
-/// Logo
-
-.logo {
-  display: table;
-  position: relative;
-  top: 20px;
-  left: 20px;
-  padding: 10px;
-  background: rgba($brand3-color, 0.7);
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-.logo__img {
-  display: table-cell;
-  width: 82px;
-  height: 82px;
-  box-shadow: 0 0 6px #333;
-}
-
-.logo__title {
-  display: table-cell;
-  padding: 0 10px;
-  color: white;
-  font-size: 1.4em;
-  text-decoration: none;
-  text-shadow: 0 0 6px #333;
-  vertical-align: middle;
-}
-
 /// Cards
 
 .card {

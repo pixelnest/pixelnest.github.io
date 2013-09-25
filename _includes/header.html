@@ -1,18 +1,28 @@
 <header>
-  <section class="imagebar">
+  <section class="banner">
     <a class="logo" href="/">
-      <img class="logo__img" src="/static/images/pixelnest.png" />
-      <p class="logo__title">Pixelnest<br />Studio</p>
+      <img
+        class="logo__img"
+        src="/static/images/pixelnest.png"
+        title="Pixelnest Studio"
+        alt="Pixelnest Studio" />
+
+      <p class="logo__title">
+        <span>Pixelnest</span>
+        <span>Studio</span>
+      </p>
     </a>
   </section>
 
-  <h1 class="page-title">{{ page.title }}</h1>
+  <h1 class="page-title">
+    {{ page.title }}
+  </h1>
 
   <h2 class="page-subtitle">
      {{ page.subtitle }} 
   </h2>
 
-   <ul class="navbar">
+  <ul class="navbar">
     <li class="navbar__link">
       <a href="/">home</a>
     </li>

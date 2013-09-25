@@ -4,23 +4,9 @@
 
 @import "variables";
 
-.navbar {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-}
+/// Banner
 
-.navbar__link {
-  display: inline-block;
-  padding: 0 20px;
-  font-size: 0.9em;
-
-  a { color: black; text-decoration: none; }
-  a:hover { color: #ddd; }
-}
-
-.imagebar {
+.banner {
   border-bottom: 1px solid #888;
   background-image: url("/static/images/background02.png");
   background-size: cover;
@@ -39,9 +25,99 @@
   }
 
   @media only screen and (max-width: $phone) {
-    display: none;
+    height: auto;
+    background: none;
+    background-color: #eee;
+    border: none;
   }
 }
+
+/// Logo
+/// Note : the implementations for small and big screens are so different
+/// that we simply don't even bother to share anything in between.
+
+// For phone
+@media only screen and (max-width: $phone) {
+
+  .logo {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  .logo__img {
+    display: inline;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 5px #888;
+    vertical-align: middle;
+  }
+
+  .logo__title {
+    display: inline;
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+}
+
+// For everything else
+@media only screen and (min-width: $phone) {
+
+  .logo {
+    display: table;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background: rgba($brand3-color, 0.7);
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .logo__img {
+    display: table-cell;
+    width: 82px;
+    height: 82px;
+    box-shadow: 0 0 6px #333;
+  }
+
+  .logo__title {
+    display: table-cell;
+    padding: 0 10px;
+    color: white;
+    font-size: 1.4em;
+    text-decoration: none;
+    text-shadow: 0 0 6px #333;
+    vertical-align: middle;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+/// Navbar
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 0.9em;
+
+  a { color: black; text-decoration: none; }
+  a:hover { color: #ddd; }
+}
+
+/// Title
 
 .page-title {
   margin: 0;
@@ -51,6 +127,8 @@
   font-size: 3em;
   text-align: center;
 }
+
+/// Subtitle
 
 .page-subtitle {
   position: relative;
@@ -64,6 +142,8 @@
   }
 }
 
+// Separator
+
 .page-start {
   margin: 0 auto;
   margin-top: 30px;
@@ -71,4 +151,26 @@
   max-width: 900px;
   border-top: 0px;
   border-bottom: 1px solid #DDD;
+}
+
+/// For phone size
+
+@media only screen and (max-width: $phone) {
+  .page-title {
+    margin-top: 30px;
+  }
+
+  .navbar__link {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: $desk) {
+  // When not a desktop size, the page-start <hr /> should
+  // only be a fraction of the screen.
+  .page-start {
+    width: 80%;
+  }
 }

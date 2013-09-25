@@ -59,31 +59,6 @@ body {
   padding: 0 20px;
   max-width: 800px; }
 
-.logo {
-  display: table;
-  position: relative;
-  top: 20px;
-  left: 20px;
-  padding: 10px;
-  background: rgba(59, 59, 61, 0.7);
-  border-radius: 8px;
-  text-decoration: none; }
-
-.logo__img {
-  display: table-cell;
-  width: 82px;
-  height: 82px;
-  box-shadow: 0 0 6px #333; }
-
-.logo__title {
-  display: table-cell;
-  padding: 0 10px;
-  color: white;
-  font-size: 1.4em;
-  text-decoration: none;
-  text-shadow: 0 0 6px #333;
-  vertical-align: middle; }
-
 .card {
   margin-bottom: 90px;
   padding-bottom: 40px;
@@ -104,6 +79,74 @@ body {
 .card__body > :first-child {
   margin-top: 0; }
 
+.banner {
+  border-bottom: 1px solid #888;
+  background-image: url("/static/images/background02.png");
+  background-size: cover;
+  background-position: center;
+  background-color: #f38539;
+  height: 400px;
+  width: 100%; }
+  @media only screen and (max-width: 1200px) {
+    .banner {
+      height: 350px; } }
+  @media only screen and (max-width: 800px) {
+    .banner {
+      height: 300px; } }
+  @media only screen and (max-width: 600px) {
+    .banner {
+      height: auto;
+      background: none;
+      background-color: #eee;
+      border: none; } }
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: #353535;
+    text-decoration: none; }
+
+  .logo__img {
+    display: inline;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 5px #888;
+    vertical-align: middle; }
+
+  .logo__title {
+    display: inline;
+    font-size: 1.2em;
+    vertical-align: middle; } }
+@media only screen and (min-width: 600px) {
+  .logo {
+    display: table;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background: rgba(59, 59, 61, 0.7);
+    border-radius: 8px;
+    text-decoration: none; }
+
+  .logo__img {
+    display: table-cell;
+    width: 82px;
+    height: 82px;
+    box-shadow: 0 0 6px #333; }
+
+  .logo__title {
+    display: table-cell;
+    padding: 0 10px;
+    color: white;
+    font-size: 1.4em;
+    text-decoration: none;
+    text-shadow: 0 0 6px #333;
+    vertical-align: middle; }
+    .logo__title span {
+      display: block; } }
 .navbar {
   margin: 0;
   padding: 0;
@@ -119,24 +162,6 @@ body {
     text-decoration: none; }
   .navbar__link a:hover {
     color: #ddd; }
-
-.imagebar {
-  border-bottom: 1px solid #888;
-  background-image: url("/static/images/background02.png");
-  background-size: cover;
-  background-position: center;
-  background-color: #f38539;
-  height: 400px;
-  width: 100%; }
-  @media only screen and (max-width: 1200px) {
-    .imagebar {
-      height: 350px; } }
-  @media only screen and (max-width: 800px) {
-    .imagebar {
-      height: 300px; } }
-  @media only screen and (max-width: 600px) {
-    .imagebar {
-      display: none; } }
 
 .page-title {
   margin: 0;
@@ -163,6 +188,17 @@ body {
   border-top: 0px;
   border-bottom: 1px solid #DDD; }
 
+@media only screen and (max-width: 600px) {
+  .page-title {
+    margin-top: 30px; }
+
+  .navbar__link {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em; } }
+@media only screen and (max-width: 1200px) {
+  .page-start {
+    width: 80%; } }
 .page-footer {
   position: relative;
   margin-top: 200px;
