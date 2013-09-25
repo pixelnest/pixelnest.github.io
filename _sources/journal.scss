@@ -14,33 +14,7 @@
   a { @extend %link; }
 }
 
-.entry__metadata {
-  position: absolute;
-  left: -160px;
-  width: 150px;
-  text-align: center;
-}
-
-.entry__author {
-  img {
-    width: 80px;
-    height: 80px;
-    border-radius: 80px;
-  }
-
-  p {
-    margin: 5px;
-    font-size: 0.8em;
-  }
-}
-
-.entry__infos {
-  color: #bbb;
-  font-size: 0.7em;
-
-  p { margin: 0; }
-}
-
+// Restyle some default elements
 .entry__content {
   h1 {
     margin: 50px 0 0 0;
@@ -64,5 +38,95 @@
     padding-left: 30px;
     border-left: 1px solid #ccc;
     color: lighten($text-color, 30%);
+  }
+}
+
+@media only screen and (max-width: $phone) {
+  .entry__title {
+    font-size: 1.2em;
+  }
+}
+
+// ---------------------
+// SMALL SCREEN
+// ---------------------
+
+// Put the metadata in the flow on a small screen
+@media only screen and (max-width: $landscape) {
+  .entry__title {
+    margin-bottom: 0;
+  }
+
+  .entry__metadata {
+    position: relative;
+    top: -5px;
+  }
+
+  .entry__author {
+    display: inline;
+
+    img {
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 30px;
+      vertical-align: middle;
+    }
+
+    p {
+      display: inline-block;
+      font-style: italic;
+      vertical-align: middle;
+      font-size: 0.9em;
+    }
+  }
+
+  .entry__infos {
+    display: inline;
+    color: #bbb;
+
+    p {
+      display: inline;
+      margin-left: 10px;
+      font-style: italic;
+      font-size: 0.9em;
+      vertical-align: middle;
+    }
+  }
+}
+
+// ---------------------
+// BIG SCREEN
+// ---------------------
+
+// Put the metadata at the left of the content on a big screen
+@media only screen and (min-width: $landscape) {
+  .entry__metadata {
+    position: absolute;
+    left: -160px;
+    width: 150px;
+    text-align: center;
+  }
+
+  // Author
+  .entry__author {
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 80px;
+    }
+
+    p {
+      margin: 5px;
+      font-size: 0.8em;
+    }
+  }
+
+  // Set the infos style (date)
+  .entry__infos {
+    color: #bbb;
+    font-size: 0.7em;
+
+    p { margin: 0; }
   }
 }
