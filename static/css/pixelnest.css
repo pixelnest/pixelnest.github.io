@@ -327,6 +327,11 @@ body {
   padding-left: 30px;
   border-left: 1px solid #ccc;
   color: #828282; }
+.entry__content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border: 1px solid #ccc; }
 
 @media only screen and (max-width: 600px) {
   .entry__title {
