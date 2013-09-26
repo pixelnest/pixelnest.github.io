@@ -16,7 +16,7 @@ And we now have a blog (you are reading its first post!) where we can write abou
 Now, about the company. We have decided to wait January 2014 to officialy and legally create Pixelnet Studio. This is the best we can do to optimize some expenses, like taxes.
 
 Finally, the most interesting part: projects!
-We have often heard this question, so here is an exhaustive summary of our activity.
+We have often heard the question "Hum, what are you doing guys?", so here is an exhaustive summary of our activity.
 
 **The Koikoukesse**
 
@@ -24,13 +24,13 @@ We have often heard this question, so here is an exhaustive summary of our activ
 
 For now, we are not working on this project anymore.
 
-We tried Xamarin, a mobile cross platform technology to make applications in C#, but we finally were not satisfied with the result. The main issue was the deployment time, even on simulator. It was a real pain to tweak animation or particles effects.
+We tried Xamarin, a mobile cross platform technology to make applications in C#, but we finally were not satisfied with the result. The main issue was the deployment time, even on simulator. It was a real pain to tweak an animation or a particle effect.
 
 **Unity**
 
 We'd rather want to focus on more risky but fun projects, like George or others, as long as we can. This imply a major technology change: we now use Unity for games.
 
-The tool is great and conveinced us to use it. With the incoming 2D tools, we decided to learn and master it.
+The tool is great and convinced us to use it. With the incoming 2D tools, we decided to learn and master it.
 
 **George: Le pirate**
 
@@ -44,7 +44,7 @@ We will try an incremental way to develop, adding or changing features one after
 
 <a href="https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png"><img src="https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png" alt="Bunny Splash" /></a>
 
-Codename projects. Another Unity-made prototype, focused on local multiplayer party. For now it is somewhere between Jump'n'Bump and Smash Bros. Who knows where it will lead us?
+Another Unity-made prototype, focused on local multiplayer party. For now it is somewhere between Jump'n'Bump and Smash Bros. Who knows where it will lead us?
 Well, we have plans. But that's another story!
 
 As you can see, we are pretty busy!
