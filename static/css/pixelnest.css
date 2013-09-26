@@ -54,8 +54,18 @@ body {
   background: #00a9e0;
   color: white; }
 
+p {
+  line-height: 140%; }
+
+li {
+  line-height: 140%; }
+
 .page-content p strong {
   color: black; }
+
+.page-content li strong {
+  color: black;
+  text-decoration: underline; }
 
 .page-content {
   margin: 0 auto;
@@ -317,10 +327,10 @@ body {
   border-bottom: 1px solid #ccc;
   font-size: 1.5em; }
 .entry__content h2 {
-  margin: 40px 0 -10px 0;
+  margin: 40px 0 0 0;
   font-size: 1.4em; }
 .entry__content h3 {
-  margin: 40px 0 -20px 0;
+  margin: 40px 0 0 0;
   color: #87878a;
   font-size: 1.1em; }
 .entry__content blockquote {
