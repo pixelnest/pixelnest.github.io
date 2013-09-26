@@ -87,7 +87,7 @@ body {
   background-color: #f38539;
   height: 400px;
   width: 100%; }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1300px) {
     .banner {
       height: 350px; } }
   @media only screen and (max-width: 800px) {
@@ -206,7 +206,7 @@ body {
     display: block;
     margin: 20px auto;
     width: 70%; } }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .page-start {
     width: 80%; } }
 .page-footer {
