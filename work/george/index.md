@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: work
 title: George the Pirate
 cover: /static/images/work/thumb_g1.png
 ---
