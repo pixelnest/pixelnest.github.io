@@ -1,0 +1,40 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Pixelnest Studio</title>
+
+  <link href="http://pixelnest.io/atom.xml" rel="self"/>
+  <link href="http://pixelnest.io/"/>
+
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://pixelnest.io/</id>
+  <author>
+    <name>Pixelnest Studio</name>
+    <uri>http://pixelnest.io/about/</uri>
+  </author>
+
+  <!-- posts -->
+  {% for post in site.posts %}
+    {% unless post.category == 'meta' %}
+
+      <entry>
+        <title>{{ post.title }}</title>
+        <link href="http://pixelnest.io{{ post.url }}/" />
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>http://pixelnest.io/{{ post.id }}</id>
+        <content type="html">
+          {{ post.content | xml_escape }}
+        </content>
+        <author>
+          <name>Pixelnest Studio</name>
+          <uri>http://pixelnest.io/about/</uri>
+        </author>
+      </entry>
+
+    {% endunless %}
+  {% endfor %}
+</feed>
