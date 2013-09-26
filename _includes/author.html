@@ -1,0 +1,22 @@
+<section class="entry__author">
+  {% if post.author contains 'damien' or post.author contains 'Damien' or page.author contains 'damien' or page.author contains 'Damien' %}
+  <img src="http://www.gravatar.com/avatar/545f7c7f0ed11d6ef21722a7e6c47acf?s=200" />
+  <p>
+    <a href="/about/#damien">Damien</a>
+  </p>
+  {% endif %}
+
+  {% if post.author contains 'matthieu' or post.author contains 'Matthieu' or page.author contains 'matthieu' or page.author contains 'Matthieu' %}
+  <img src="/static/images/us/moger.jpg" />
+  <p>
+    <a href="/about/#matthieu">Matthieu</a>
+  </p>
+  {% endif %}
+
+  {% unless post.author and page.author %}
+  <img src="/static/images/us/pixelnest.png" />
+  <p>
+    <a href="/about/">Pixelnest</a>
+  </p>
+  {% endunless %}
+</section>

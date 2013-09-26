@@ -1,0 +1,171 @@
+@charset "utf-8";
+/**
+ * Pixelnest Studio
+ *
+ * -------------------------
+ * link: pixelnest.io
+ * twitter: @pixelnest
+ * contact: site@pixelnest.io
+ * -------------------------
+ *
+ * The rules must follow a strict order :
+ * - display
+ * - position
+ * - margin/padding
+ * - width/height
+ * - background/border
+ * - color/font/text/letter
+ * - transition
+ * - media queries
+ */
+
+@import "variables";
+
+// -------------------------------------------------------
+// Mixins
+// -------------------------------------------------------
+
+@mixin transition ($transition, $duration, $function: ease) {
+  // ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+  -webkit-transition: $transition $duration $function;
+  -moz-transition: $transition $duration $function;
+  -ms-transition: $transition $duration $function;
+  -o-transition: $transition $duration $function;
+  transition: $transition $duration $function;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &.placeholder { @content }
+}
+
+%clearfix {
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+
+%link {
+  color: $brand1-color;
+  text-decoration: none;
+
+  &:hover  { text-decoration: underline; }
+  &:active { color: $brand2-color; }
+  &:focus  { color: $brand2-color; }
+}
+
+// -------------------------------------------------------
+// Global
+// -------------------------------------------------------
+
+// ---------------------
+// Root
+// ---------------------
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+// Basic typography and background
+body {
+  background: $brand3-color;
+
+  color: $text-color;
+  font-family: 'Poly', serif;
+  font-size: 150%;
+}
+
+.page {
+  background: #fbfbfb;
+}
+
+// Change the selection to white on green
+.page *::-moz-selection {
+  background: $brand1-color;
+  color: white;
+}
+
+// Change the selection to white on green
+.page *::selection {
+  background: $brand1-color;
+  color: white;
+}
+
+p {
+  line-height: 140%;
+}
+
+li {
+  line-height: 140%;
+}
+
+// Change all the links in the page-content
+.page-content p a { @extend %link }
+
+// Emphasize a bit the strong element
+.page-content p strong { color: black; }
+.page-content li strong { color: black; text-decoration: underline; }
+
+// -------------------------------------------------------
+// Components
+// -------------------------------------------------------
+
+/// Body
+
+.page-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: $MAX;
+}
+
+/// Cards
+
+.card {
+  @extend %clearfix;
+
+  margin-bottom: 90px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.card.alone {
+  border-bottom: none;
+}
+
+.card__title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.card__title a {
+  @extend %link;
+}
+
+.card__cover {
+  float: left;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+}
+
+.card__body {
+  @extend %clearfix;
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+// ---------------------
+// Includes
+// ---------------------
+
+@import "header";
+@import "footer";
+@import "home";
+@import "work";
+@import "journal";
+@import "contact";
+@import "about";

@@ -1,0 +1,57 @@
+<header class="page-header">
+  <section class="banner">
+    <a class="logo" href="/">
+      <img
+        class="logo__img"
+        src="/static/images/pixelnest.png"
+        title="Pixelnest Studio"
+        alt="Pixelnest Studio" />
+
+      <p class="logo__title">
+        <span>Pixelnest</span>
+        <span>Studio</span>
+      </p>
+    </a>
+  </section>
+
+  <h1 class="page-title">
+    <a href="{{ page.url }}" title="{{ page.title }}">
+      {{ page.title }}
+    </a>
+  </h1>
+
+  <h2 class="page-subtitle">
+     {{ page.subtitle }} 
+  </h2>
+
+  <nav>
+    <ul class="navbar">
+      <li class="navbar__link">
+        <a href="/">home</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/work">work</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/journal">journal</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/contact">contact</a>
+      </li>
+      <li class="navbar__link">
+        <a href="/about">about</a>
+      </li>
+    </ul>
+
+    <select id="quicknavbar" class="quicknavbar">
+      <option>Go to...</option>
+      <option value="/">→ Home</option>
+      <option value="/work">→ Work</option>
+      <option value="/journal">→ Journal</option>
+      <option value="/contact">→ Contact</option>
+      <option value="/about">→ About</option>
+    </select>
+  </nav>
+
+  <hr class="page-start" />
+</header>

@@ -1,0 +1,3 @@
+run:
+	@jekyll serve --watch &
+	@scss _sources/pixelnest.scss:static/css/pixelnest.css -w

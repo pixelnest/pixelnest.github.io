@@ -1,0 +1,27 @@
+---
+layout: default
+title: Journal
+subtitle: read the lastest news from the studio
+---
+
+{% for post in site.posts %}
+<article class="entry">
+  <h2 class="entry__title">
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </h2>
+
+  <aside class="entry__metadata">
+    {% include author.html %}
+
+    <section class="entry__infos">
+      <p>
+        {{ post.date | date: "%d %b. %Y" | downcase }}
+      </p>
+    </section>
+  </aside>
+
+  <section class="entry__content">
+    {{ post.content }}
+  </section>
+</article>
+{% endfor %}
