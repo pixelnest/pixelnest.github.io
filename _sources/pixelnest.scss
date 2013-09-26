@@ -97,6 +97,9 @@ body {
 // Change all the links in the page-content
 .page-content p a { @extend %link }
 
+// Emphasize a bit the strong element
+.page-content p strong { color: black; }
+
 // -------------------------------------------------------
 // Components
 // -------------------------------------------------------

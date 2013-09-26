@@ -2,21 +2,7 @@
 // Home
 // ---------------------
 
-.home {
-  display: table;
-  width: 100%;
-}
-
-.home__desc {
-  display: table-cell;
-  width: 60%;
-}
-
 .home__aside {
-  display: table-cell;
-  padding-left: 40px;
-  width: 40%;
-
   h2 {
     font-size: 1.2em;
     padding-bottom: 10px;
@@ -39,10 +25,21 @@
   }
 }
 
-.home__work {
+@media only screen and (min-width: $small) {
 
-}
+  .home {
+    display: table;
+    width: 100%;
+  }
 
-.home__journal {
+  .home__desc {
+    display: table-cell;
+    width: 60%;
+  }
 
+  .home__aside {
+    display: table-cell;
+    padding-left: 40px;
+    width: 40%;
+  }
 }
