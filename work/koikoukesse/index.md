@@ -1,6 +1,6 @@
 ---
-layout: project
-title: Unknown, the mysterious game
+layout: work
+title: Koikoukesse
 cover: /static/images/work/thumb_k2.png
 ---
 
