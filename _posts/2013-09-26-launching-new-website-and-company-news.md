@@ -20,7 +20,7 @@ We have often heard this question, so here is an exhaustive summary of our activ
 
 **The Koikoukesse**.
 
-<img src="https://lh3.googleusercontent.com/-VZF7B7le8HA/UkQJLZQtWEI/AAAAAAAAAFc/krR7aRwB4HE/w571-h512-no/Capture+d%25E2%2580%2599e%25CC%2581cran+2013-09-26+a%25CC%2580+12.14.40.png" alt="Koikoukesse sketches" />
+<a href="https://lh3.googleusercontent.com/-VZF7B7le8HA/UkQJLZQtWEI/AAAAAAAAAFc/krR7aRwB4HE/w571-h512-no/Capture+d%25E2%2580%2599e%25CC%2581cran+2013-09-26+a%25CC%2580+12.14.40.png"><img src="https://lh3.googleusercontent.com/-VZF7B7le8HA/UkQJLZQtWEI/AAAAAAAAAFc/krR7aRwB4HE/w571-h512-no/Capture+d%25E2%2580%2599e%25CC%2581cran+2013-09-26+a%25CC%2580+12.14.40.png" alt="Koikoukesse sketches" /></a>
 
 For now, we are not working on this project anymore.
 
@@ -34,7 +34,7 @@ The tool is great and conveinced us to use it. With the incoming 2D tools, we de
 
 **George: Le pirate**
 
-<img src="https://lh3.googleusercontent.com/-35pl_4tSsNc/UkQGOWSXjbI/AAAAAAAAAB0/L6lYSQwzzOc/w953-h497-no/george.png" alt="George with Unity" />
+<a href="https://lh3.googleusercontent.com/-35pl_4tSsNc/UkQGOWSXjbI/AAAAAAAAAB0/L6lYSQwzzOc/w953-h497-no/george.png"><img src="https://lh3.googleusercontent.com/-35pl_4tSsNc/UkQGOWSXjbI/AAAAAAAAAB0/L6lYSQwzzOc/w953-h497-no/george.png" alt="George with Unity" /></a>
 
 After the Stunfest 2013 demo, we gathered gameplay ideas to make a better and full game. We are rebuilding the game from scratch (with Unity), changing some minor gameplay parts.
 
@@ -42,7 +42,7 @@ We will try an incremental way to develop, adding or changing features one after
 
 **Bunny Splash**
 
-<img src="https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png" alt="Bunny Splash" />
+<a href="https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png"><img src="https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png" alt="Bunny Splash" /></a>
 
 Codename projects. Another Unity-made prototype, focused on local multiplayer party. For now it is somewhere between Jump'n'Bump and Smash Bros. Who knows where it will lead us?
 Well, we have plans. But that's another story!
