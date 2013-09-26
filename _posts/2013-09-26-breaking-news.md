@@ -23,7 +23,7 @@ We have often heard the question "Hum, what are you doing guys?", so here is an 
 
 This project is a quizz about video game, developed for mobile devices.
 
-Here is a capture of some screens of the application:
+Here is a capture of some (not finished) screens of the application:
 
 [  ![Koikoukesse sketches][url_img_koikou]  ][url_img_koikou]
 
