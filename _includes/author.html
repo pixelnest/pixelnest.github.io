@@ -13,7 +13,7 @@
   </p>
   {% endif %}
 
-  {% unless post.author or page.author %}
+  {% unless post.author and page.author %}
   <img src="/static/images/us/pixelnest.png" />
   <p>
     <a href="/about/">Pixelnest</a>
