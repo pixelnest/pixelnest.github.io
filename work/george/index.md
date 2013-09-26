@@ -1,7 +1,7 @@
 ---
 layout: project
 title: George the Pirate
-cover: /static/images/projects/thumb_g1.png
+cover: /static/images/work/thumb_g1.png
 ---
 
 **[Watch the Stunfest 2013 trailer](http://www.youtube.com/watch?v=xBU0OXjJko4)**
