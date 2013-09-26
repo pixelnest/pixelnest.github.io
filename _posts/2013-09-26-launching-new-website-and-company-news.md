@@ -1,6 +1,6 @@
 ---
+layout: post
 title: Launching the new website and company news
-author: Pixelnest
 ---
 
 Dear reader, today we have a lot of things to announce!

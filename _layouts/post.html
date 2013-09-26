@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="entry">
+  <aside class="entry__metadata">
+    {% include author.html %}
+
+    <section class="entry__infos">
+      <p>
+        {{ page.date | date: "%d %b. %Y" | downcase }}
+      </p>
+    </section>
+  </aside>
+
+  <section class="entry__content">
+    {{ content }}
+  </section>
+</article>

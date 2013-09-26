@@ -176,6 +176,9 @@ body {
   color: #888888;
   font-size: 3em;
   text-align: center; }
+  .page-title a {
+    color: #888888;
+    text-decoration: none; }
 
 .page-subtitle {
   position: relative;
