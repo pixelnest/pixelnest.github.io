@@ -25,8 +25,21 @@
   }
 }
 
-@media only screen and (min-width: $small) {
+// ---------------------
+// Portrait phone
+// ---------------------
 
+@media only screen and (max-width: $small) {
+  .home__aside {
+    margin-top: 60px;
+  }
+}
+
+// ------------------------------
+// BIG SCREEN and landscape phone
+// ------------------------------
+
+@media only screen and (min-width: $small) {
   .home {
     display: table;
     width: 100%;

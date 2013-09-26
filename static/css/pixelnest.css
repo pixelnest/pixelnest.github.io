@@ -278,6 +278,9 @@ body {
 .home__aside li a {
   font-size: 0.9em; }
 
+@media only screen and (max-width: 500px) {
+  .home__aside {
+    margin-top: 60px; } }
 @media only screen and (min-width: 500px) {
   .home {
     display: table;
