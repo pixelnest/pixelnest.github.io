@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: work
 title: Unknown, the mysterious game
 cover: /static/images/work/thumb_k2.png
 ---
