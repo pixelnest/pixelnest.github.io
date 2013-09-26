@@ -133,7 +133,21 @@
   font-size: 3em;
   text-align: center;
 
-  a { color: $c; text-decoration: none; }
+  // Change the link
+  a {
+    @include transition(color, .5s);
+
+    color: $c;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand1-color;
+    }
+
+    &:active, &:focus {
+      color: $brand1-color;
+    }
+  }
 }
 
 /// Subtitle

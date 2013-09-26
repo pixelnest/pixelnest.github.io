@@ -177,8 +177,17 @@ body {
   font-size: 3em;
   text-align: center; }
   .page-title a {
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease;
     color: #888888;
     text-decoration: none; }
+    .page-title a:hover {
+      color: #00a9e0; }
+    .page-title a:active, .page-title a:focus {
+      color: #00a9e0; }
 
 .page-subtitle {
   position: relative;
