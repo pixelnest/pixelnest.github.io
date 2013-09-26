@@ -12,6 +12,14 @@ layout: nil
     <priority>1.0</priority>
   </url>
 
+    <!-- rss -->
+  <url>
+    <loc>http://pixelnest.io/atom.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- work -->
   <url>
     <loc>http://pixelnest.io/work/</loc>
@@ -28,7 +36,7 @@ layout: nil
     <priority>0.8</priority>
   </url>
 
-    <!-- contact -->
+  <!-- contact -->
   <url>
     <loc>http://pixelnest.io/contact/</loc>
     <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
@@ -44,6 +52,7 @@ layout: nil
     <priority>0.7</priority>
   </url>
 
+  <!-- posts -->
   {% for post in site.posts %}
     {% unless post.hide %}
 		  <url>

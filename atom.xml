@@ -19,22 +19,22 @@ layout: nil
 
   <!-- posts -->
   {% for post in site.posts %}
-    {% unless post.category == 'meta' %}
-
-      <entry>
-        <title>{{ post.title }}</title>
-        <link href="http://pixelnest.io{{ post.url }}/" />
-        <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <id>http://pixelnest.io/{{ post.id }}</id>
-        <content type="html">
-          {{ post.content | xml_escape }}
-        </content>
-        <author>
+    <entry>
+      <title>{{ post.title }}</title>
+      <link href="http://pixelnest.io{{ post.url }}/" />
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <id>http://pixelnest.io/{{ post.id }}</id>
+      <content type="html">
+        {{ post.content | xml_escape }}
+      </content>
+      <author>
+        {% if post.author %}
+          <name>{{ post.author }}</name>
+        {% else %}
           <name>Pixelnest Studio</name>
-          <uri>http://pixelnest.io/about/</uri>
-        </author>
-      </entry>
-
-    {% endunless %}
+        {% endif %}
+        <uri>http://pixelnest.io/about/</uri>
+      </author>
+    </entry>
   {% endfor %}
 </feed>

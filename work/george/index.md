@@ -1,15 +1,16 @@
 ---
 layout: work
-title: George the Pirate
+title: George
+subtitle: le pirate
 cover: /static/images/work/thumb_g1.png
 ---
 
 **[Watch the Stunfest 2013 trailer](http://www.youtube.com/watch?v=xBU0OXjJko4)**
 
-**George** was an unknown salary man, working in the offices of the Caribean Bank. But one day, he got bored and decided to live a real pirate adventure!
+**George** was an unknown salary man, working in the offices of the CaribbeanMegaBank™ (also known as the CMB). But one day, he got bored and decided to live a real pirate adventure!
 
-So he bought a small boat and decided to now search for lost treasures on islands.
+So he bought a small boat and sailed away, looking for lost treasures on islands.
 
-He must find as many treasures as possible the day, and come back home before the night. But on the way back, the more gold he found the more jealous pirates he will encounter!
+His goal? Find as many treasures as possible the day and come back home before the night. But on the way back, the more gold he amasses the more he will encounter jealous pirates!
 
-**George** was a little game initially made for the Stunfest 2013 (event at Rennes, France). We are now working on an improved version of the game.
+**George** was a little game initially made for the Stunfest 2013 (an event at Rennes, France). We are now working on an improved version of it.

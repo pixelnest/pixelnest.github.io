@@ -8,6 +8,6 @@ cover: /static/images/work/thumb_k2.png
 
 The Koikoukesse is a video game quizz made in collaboration with Laurent Brossard.
 
-Do you know your video games classic? Find the game title from a simple screenshot in solo and multiplayers game modes.
+Do you know your classics? Find a name from a simple image in solo or multiplayer game modes.
 
-Earn coins and unlock themes and harder modes to get harder and trickier question.
+Earn coins and unlock themes and modes to get harder and trickier questions. Battle your friends online!
