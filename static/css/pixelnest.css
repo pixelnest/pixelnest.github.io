@@ -157,7 +157,8 @@ li {
     font-size: 1.4em;
     text-decoration: none;
     text-shadow: 0 0 6px #333;
-    vertical-align: middle; }
+    vertical-align: middle;
+    line-height: 100%; }
     .logo__title span {
       display: block; } }
 .navbar {
@@ -389,7 +390,7 @@ li {
     height: 80px;
     border-radius: 80px; }
   .entry__author p {
-    margin: 5px;
+    margin: 5px 0 0 0;
     font-size: 0.8em; }
 
   .entry__infos {
@@ -401,7 +402,7 @@ li {
   padding-left: 10px;
   list-style: none; }
   .contacts li {
-    padding: 4px 0; }
+    padding: 0; }
     .contacts li a {
       padding-left: 40px;
       background-size: 28px;
@@ -439,7 +440,7 @@ li {
   list-style: none; }
 
 .founder__links li {
-  padding: 5px 0; }
+  padding: 2px 0; }
   .founder__links li a {
     padding-left: 35px;
     background-size: 28px;
