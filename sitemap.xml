@@ -55,15 +55,17 @@ layout: nil
   <!-- posts -->
   {% for post in site.posts %}
     {% unless post.hide %}
-		  <url>
-		    <loc>{{ site.url }}{{ post.url }}</loc>
-		    {% if post.lastmod %}
-		    <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-		    {% else %}
-		    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-		    {% endif %}
-        <priority>0.5</priority>
-		  </url>
-	  {% endunless %}
+      <url>
+	      <loc>http://pixelnest.io{{ post.url }}</loc>
+	      
+	      {% if post.lastmod %}
+	        <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
+	      {% else %}
+	        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+	      {% endif %}
+	      
+	      <priority>0.5</priority>
+      </url>
+     {% endunless %}
   {% endfor %}
 </urlset>
