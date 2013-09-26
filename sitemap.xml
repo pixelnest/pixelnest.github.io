@@ -63,7 +63,7 @@ layout: nil
 	      {% else %}
 	        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 	      {% endif %}
-	      
+	      <changefreq>monthly</changefreq>
 	      <priority>0.5</priority>
       </url>
      {% endunless %}
