@@ -20,7 +20,7 @@ We have often heard the question "Hum, what are you doing guys?", so here is an 
 
 **The Koikoukesse**
 
-<a href="https://lh3.googleusercontent.com/-VZF7B7le8HA/UkQJLZQtWEI/AAAAAAAAAFc/krR7aRwB4HE/w571-h512-no/Capture+d%25E2%2580%2599e%25CC%2581cran+2013-09-26+a%25CC%2580+12.14.40.png"><img src="https://lh3.googleusercontent.com/-VZF7B7le8HA/UkQJLZQtWEI/AAAAAAAAAFc/krR7aRwB4HE/w571-h512-no/Capture+d%25E2%2580%2599e%25CC%2581cran+2013-09-26+a%25CC%2580+12.14.40.png" alt="Koikoukesse sketches" /></a>
+[  ![Koikoukesse sketches][url_img_koikou]  ][url_img_koikou]
 
 For now, we are not working on this project anymore.
 
@@ -34,7 +34,7 @@ The tool is great and convinced us to use it. With the incoming 2D tools, we dec
 
 **George: Le pirate**
 
-<a href="https://lh3.googleusercontent.com/-35pl_4tSsNc/UkQGOWSXjbI/AAAAAAAAAB0/L6lYSQwzzOc/w953-h497-no/george.png"><img src="https://lh3.googleusercontent.com/-35pl_4tSsNc/UkQGOWSXjbI/AAAAAAAAAB0/L6lYSQwzzOc/w953-h497-no/george.png" alt="George with Unity" /></a>
+[  ![George with Unity][url_img_george]  ][url_img_george]
 
 After the Stunfest 2013 demo, we gathered gameplay ideas to make a better and full game. We are rebuilding the game from scratch (with Unity), changing some minor gameplay parts.
 
@@ -42,7 +42,7 @@ We will try an incremental way to develop, adding or changing features one after
 
 **Bunny Splash**
 
-<a href="https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png"><img src="https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png" alt="Bunny Splash" /></a>
+[  ![Bunny Splash][url_img_bunny]  ][url_img_bunny]
 
 Another Unity-made prototype, focused on local multiplayer party. For now it is somewhere between Jump'n'Bump and Smash Bros. Who knows where it will lead us?
 Well, we have plans. But that's another story!
@@ -52,3 +52,6 @@ Stay tuned!
 
 Follow us on Twitter if you want the hottest news :).
 
+[url_img_koikou]: https://lh6.googleusercontent.com/-6al56sIY5aw/UkQpBIlXUFI/AAAAAAAAAGE/Ta1vhWkzVaY/w953-h1100-no/koikou.png
+[url_img_george]: https://lh5.googleusercontent.com/-nR_Ty78xfTU/UkQqpFVwzHI/AAAAAAAAAGo/9Ou5JD9LcIc/w953-h488-no/george.png
+[url_img_bunny]: https://lh5.googleusercontent.com/-By5HNMoxPdg/UkQGOdOf2EI/AAAAAAAAAB4/yTR69t4cyvg/w953-h572-no/bunnysplash.png
