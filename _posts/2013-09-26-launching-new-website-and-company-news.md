@@ -18,7 +18,7 @@ Now, about the company. We have decided to wait January 2014 to officialy and le
 Finally, the most interesting part: projects!
 We have often heard this question, so here is an exhaustive summary of our activity.
 
-**The Koikoukesse**.
+**The Koikoukesse**
 
 <a href="https://lh3.googleusercontent.com/-VZF7B7le8HA/UkQJLZQtWEI/AAAAAAAAAFc/krR7aRwB4HE/w571-h512-no/Capture+d%25E2%2580%2599e%25CC%2581cran+2013-09-26+a%25CC%2580+12.14.40.png"><img src="https://lh3.googleusercontent.com/-VZF7B7le8HA/UkQJLZQtWEI/AAAAAAAAAFc/krR7aRwB4HE/w571-h512-no/Capture+d%25E2%2580%2599e%25CC%2581cran+2013-09-26+a%25CC%2580+12.14.40.png" alt="Koikoukesse sketches" /></a>
 
