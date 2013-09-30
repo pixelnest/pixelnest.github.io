@@ -12,9 +12,19 @@ layout: nil
 
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>http://pixelnest.io/</id>
+
+  <!-- authors -->
   <author>
     <name>Pixelnest Studio</name>
     <uri>http://pixelnest.io/about/</uri>
+  </author>
+  <author>
+    <name>Damien Mayance</name>
+    <uri>http://dmayance.com/</uri>
+  </author>
+  <author>
+    <name>Matthieu Oger</name>
+    <uri>http://solarsailer.net/</uri>
   </author>
 
   <!-- posts -->
@@ -23,17 +33,26 @@ layout: nil
       <title>{{ post.title }}</title>
       <link href="http://pixelnest.io{{ post.url }}/" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>http://pixelnest.io/{{ post.id }}</id>
+      <id>http://pixelnest.io{{ post.id }}/</id>
       <content type="html">
         {{ post.content | xml_escape }}
       </content>
+
+      <!-- author -->
       <author>
         {% if post.author %}
-          <name>{{ post.author }}</name>
+        <name>{{ post.author }}</name>
         {% else %}
-          <name>Pixelnest Studio</name>
+        <name>Pixelnest Studio</name>
         {% endif %}
+
+        {% if post.author contains 'damien' or post.author contains 'Damien' %}
+        <uri>http://dmayance.com/</uri>
+        {% elsif post.author contains 'matthieu' or post.author contains 'Matthieu' %}
+        <uri>http://solarsailer.net/</uri>
+        {% else %}
         <uri>http://pixelnest.io/about/</uri>
+        {% endif %}
       </author>
     </entry>
   {% endfor %}
