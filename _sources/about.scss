@@ -53,10 +53,16 @@
   }
 }
 
+@media only screen and (max-width: $phone) {
+  .founder__links {
+    font-size: 1.2em;
+  }
+}
+
 // Split the founders when the screen is not capable of handling both
 // on the same line.
 // DO NOT PUT anything else inside.
-// Create a new media query for desk/phone/lap
+// Instead, create a new media query for desk/phone/lap.
 @media only screen and (max-width: 720px) {
   .founders {
     display: block;

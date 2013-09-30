@@ -29,3 +29,10 @@
     }
   }
 }
+
+
+@media only screen and (max-width: $phone) {
+  .contacts li {
+    font-size: 1.2em;
+  }
+}

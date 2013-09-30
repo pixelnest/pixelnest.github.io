@@ -67,6 +67,9 @@ li {
   color: black;
   text-decoration: underline; }
 
+@media only screen and (max-width: 600px) {
+  body .page-content {
+    font-size: 0.8em; } }
 .page-content {
   margin: 0 auto;
   padding: 0 20px;
@@ -205,6 +208,9 @@ li {
   .page-subtitle {
     display: none; }
 
+  .page-start {
+    margin-bottom: 40px; }
+
   .navbar {
     display: none; }
 
@@ -278,8 +284,6 @@ li {
   border-left: 1px solid #ddd; }
 .home__aside li {
   margin: 10px 0; }
-.home__aside li a {
-  font-size: 0.9em; }
 
 @media only screen and (max-width: 500px) {
   .home__aside {
@@ -351,9 +355,6 @@ li {
   max-width: 100%;
   border: 1px solid #ccc; }
 
-@media only screen and (max-width: 600px) {
-  .entry__title {
-    font-size: 1.2em; } }
 @media only screen and (max-width: 1000px) {
   .entry__title {
     margin-bottom: 0; }
@@ -421,6 +422,9 @@ li {
     .contacts li.mail a {
       background-image: url("/static/images/icon-mail-black.png"); }
 
+@media only screen and (max-width: 600px) {
+  .contacts li {
+    font-size: 1.2em; } }
 .founders {
   display: table;
   margin: 0 auto;
@@ -457,6 +461,9 @@ li {
   .founder__links li.twitter a {
     background-image: url("/static/images/icon-twitter-black.png"); }
 
+@media only screen and (max-width: 600px) {
+  .founder__links {
+    font-size: 1.2em; } }
 @media only screen and (max-width: 720px) {
   .founders {
     display: block;
