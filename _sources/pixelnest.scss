@@ -121,43 +121,6 @@ li {
   max-width: $MAX;
 }
 
-/// Cards
-
-.card {
-  @extend %clearfix;
-
-  margin-bottom: 90px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #eee;
-}
-
-.card.alone {
-  border-bottom: none;
-}
-
-.card__title {
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.card__title a {
-  @extend %link;
-}
-
-.card__cover {
-  float: left;
-  margin-right: 20px;
-  border: 1px solid #ddd;
-}
-
-.card__body {
-  @extend %clearfix;
-
-  > :first-child {
-    margin-top: 0;
-  }
-}
-
 // ---------------------
 // Includes
 // ---------------------

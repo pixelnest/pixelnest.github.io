@@ -23,14 +23,14 @@
   _overflow: visible;
   zoom: 1; }
 
-.page-content p a, .card__title a, .home__aside li a, .entry__title a, .contacts li a, .founder__links li a {
+.page-content p a, .home__aside li a, .card__title a, .entry__title a, .contacts li a, .founder__links li a {
   color: #00a9e0;
   text-decoration: none; }
-  .page-content p a:hover, .card__title a:hover, .home__aside li a:hover, .entry__title a:hover, .contacts li a:hover, .founder__links li a:hover {
+  .page-content p a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .contacts li a:hover, .founder__links li a:hover {
     text-decoration: underline; }
-  .page-content p a:active, .card__title a:active, .home__aside li a:active, .entry__title a:active, .contacts li a:active, .founder__links li a:active {
+  .page-content p a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .contacts li a:active, .founder__links li a:active {
     color: #98c73d; }
-  .page-content p a:focus, .card__title a:focus, .home__aside li a:focus, .entry__title a:focus, .contacts li a:focus, .founder__links li a:focus {
+  .page-content p a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .contacts li a:focus, .founder__links li a:focus {
     color: #98c73d; }
 
 html, body {
@@ -71,26 +71,6 @@ li {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 700px; }
-
-.card {
-  margin-bottom: 90px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #eee; }
-
-.card.alone {
-  border-bottom: none; }
-
-.card__title {
-  margin: 0;
-  margin-bottom: 20px; }
-
-.card__cover {
-  float: left;
-  margin-right: 20px;
-  border: 1px solid #ddd; }
-
-.card__body > :first-child {
-  margin-top: 0; }
 
 .banner {
   border-bottom: 1px solid #888;
@@ -317,6 +297,33 @@ li {
     display: table-cell;
     padding-left: 40px;
     width: 40%; } }
+.card {
+  margin-bottom: 90px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee; }
+
+.card.alone {
+  border-bottom: none; }
+
+.card__title {
+  margin: 0;
+  margin-bottom: 20px; }
+
+.card__cover {
+  float: left;
+  margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ddd; }
+
+.card__body > :first-child {
+  margin-top: 0; }
+
+@media only screen and (max-width: 500px) {
+  .card__cover {
+    display: block;
+    float: none;
+    margin: 20px auto; } }
 .entry {
   position: relative;
   margin-bottom: 120px;
