@@ -1,0 +1,25 @@
+// ---------------------
+// Archives
+// ---------------------
+
+.archives {
+  padding: 0;
+  list-style: none;
+}
+
+.archives a {
+  @extend %link;
+}
+
+.archives li {
+  margin-bottom: 20px;
+}
+
+.archives__link {
+  font-size: 1.3em;
+}
+
+.archives__date {
+  margin-left: 10px;
+  color: #bbb;
+}

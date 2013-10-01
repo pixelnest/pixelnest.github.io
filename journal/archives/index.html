@@ -1,0 +1,14 @@
+---
+layout: default
+title: Archives
+subtitle: not so <em>news</em>
+---
+
+<ul class="archives">
+{% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}" title="{{ post.title }}" class="archives__link">{{ post.title }}</a>
+    <span class="archives__date">{{ post.date | date: "%d %b. %Y" | downcase }}</span>
+  </li>
+{% endfor %}
+</ul>

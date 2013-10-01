@@ -11,8 +11,8 @@ show_drafts: nil
 permalink: /:categories/:year/:month/:title
 
 # Pagination
-paginate_path: 'page-:num'
-paginate: 5
+paginate_path: 'journal/:num'
+paginate: 4
 
 # Markdown formatter
 markdown: redcarpet

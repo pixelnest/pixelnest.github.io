@@ -1,0 +1,40 @@
+// ---------------------
+// Pager
+// ---------------------
+
+.pager {
+  position: relative;
+  bottom: -140px;
+  display: table;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 100%;
+  border-top: 1px solid #eee;
+
+  color: #bbb;
+}
+
+.pager a {
+  @extend %link;
+}
+
+.pager__archives,
+.pager__newer,
+.pager__older {
+  display: table-cell;
+}
+
+.pager__archives {
+  width: 36%;
+  text-align: center;
+}
+
+.pager__older {
+  width: 32%;
+  text-align: left;
+}
+
+.pager__newer {
+  width: 32%;
+  text-align: right;
+}

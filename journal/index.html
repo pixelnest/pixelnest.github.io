@@ -4,7 +4,7 @@ title: Journal
 subtitle: read the lastest news from the studio
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article class="entry">
   <h2 class="entry__title">
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -25,3 +25,5 @@ subtitle: read the lastest news from the studio
   </section>
 </article>
 {% endfor %}
+
+{% include pager.html %}

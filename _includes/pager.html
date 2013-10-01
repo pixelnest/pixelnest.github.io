@@ -1,0 +1,33 @@
+<!-- start pagination -->
+<div class="pager">
+  <!-- start older -->
+  <section class="pager__older">
+  {% if paginator.next_page %}
+    <a href="/journal/{{ paginator.next_page }}" title="Older posts">← Older</a>
+  {% else %}
+    ◆ End
+  {% endif %}
+  </section>
+  <!-- end older -->
+
+  <!-- start archives -->
+  <section class="pager__archives">
+    <a href="/journal/archives" title="Archives">Archives</a>
+  </section>
+  <!-- end archives -->
+
+  <!-- start newer -->
+  <section class="pager__newer">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a href="/journal" title="Newer posts">Newer →</a>
+    {% else %}
+      <a href="/journal/{{ paginator.previous_page }}" title="Newer posts">Newer →</a>
+    {% endif %}
+  {% else %}
+    Start ◇
+  {% endif %}
+  </section>
+  <!-- end newer -->
+</div>
+<!-- end pagination -->
