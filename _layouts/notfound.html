@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include meta.html %}
+
+  <style type="text/css">
+    body {
+      background-color: #3B3B3D;
+      color: white;
+    }
+
+    .page {
+      background: transparent;
+    }
+
+    .notfound {
+      text-align: center;
+    }
+
+    .notfound__title {
+      display: inline-block;
+      margin: 30px 0;
+    }
+
+    .notfound__desc {
+      display: inline-block;
+      padding-left: 20px;
+    }
+
+    .notfound__img {
+      display: block;
+      margin: 40px auto;
+      width: 500px;
+      height: 268px;
+    }
+
+    /* Small screen */
+    @media only screen and (max-width: 600px) {
+      .notfound__title {
+        margin: 30px 0 0 0;
+      }
+      .notfound__desc {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      .notfound__img {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="page">
+    <div class="page-content">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include ga.html %}
+  {% include js.html %}
+</body>
+</html>
