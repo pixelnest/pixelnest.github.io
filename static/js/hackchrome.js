@@ -12,5 +12,5 @@
 // It is ugly, it is bad. But Chrome on Windows forces us to do that...
 // Remove the custom font and use serif instead. To remove when Chrome will be fixed.
 if (navigator.platform === 'Win32' && navigator.userAgent.indexOf('Chrome/') !== -1) {
-  document.body.style.fontFamily = 'serif';
+  document.body.style.fontFamily = 'Georgia, serif';
 }
