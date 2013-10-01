@@ -1,0 +1,23 @@
+// -----------------------
+// Hack for Chrome Windows
+// -----------------------
+
+/*
+ * Chrome on Windows is doing shit with some Google Webfonts.
+ * In order to render the font properly, we use a local one in SVG.
+ * Then, in JavaScript, we change the family to use this one in Chrome Windows.
+ */
+
+@font-face {
+  font-family: "Chropoly";
+  font-style: italic;
+  font-weight: 400;
+  src: url('/static/fonts/poly-italic-webfont.svg#polyitalic') format('svg');
+}
+
+@font-face {
+  font-family: "Chropoly";
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/poly-regular-webfont.svg#polyregular') format('svg');
+}
