@@ -17,19 +17,19 @@
  * - transition
  * - media queries
  */
-.card, .card__body {
+.card, .card__body, .ie .founders, .ie .founder {
   overflow: hidden;
   _overflow: visible;
   zoom: 1; }
 
-.page-content p a, .home__aside li a, .card__title a, .entry__title a, .contacts li a, .founder__links li a, .pager a, .archives a {
+.page-content p a, .home__aside li a, .card__title a, .entry__title a, .contacts li a, .founder__links li a, .pager a, .archives a, .ie .logo {
   color: #00a9e0;
   text-decoration: none; }
-  .page-content p a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover {
+  .page-content p a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .ie .logo:hover {
     text-decoration: underline; }
-  .page-content p a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active {
+  .page-content p a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .ie .logo:active {
     color: #98c73d; }
-  .page-content p a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus {
+  .page-content p a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .ie .logo:focus {
     color: #98c73d; }
 
 html, body {
@@ -519,3 +519,99 @@ li {
   color: #bbb;
   font-size: 0.9em;
   font-style: italic; }
+
+/*
+ * Dirty fixes for IE version 7 and 8. Not IE6, get away.
+ * The plan is not to make the site beautiful, but **readable**.
+ * If a CSS feature does not work, we simply remove it.
+ */
+.ie body {
+  font-family: Georgia, serif; }
+.ie .page {
+  min-width: 700px; }
+.ie .banner {
+  height: auto;
+  background: none;
+  background-color: #eee;
+  border: none; }
+.ie .logo {
+  display: block;
+  padding: 30px 0;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center; }
+.ie .logo__img {
+  width: 100px;
+  height: 100px; }
+.ie .logo__title {
+  margin: 0; }
+.ie .navbar li {
+  display: inline; }
+.ie .page-start {
+  width: 700px; }
+.ie .entry__title {
+  font-size: 1.5em; }
+.ie .entry__metadata {
+  margin-bottom: 50px; }
+.ie .entry__author {
+  display: inline; }
+  .ie .entry__author img {
+    display: inline;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle; }
+  .ie .entry__author p {
+    display: inline;
+    margin-left: 10px;
+    vertical-align: middle; }
+.ie .entry__infos {
+  display: inline; }
+  .ie .entry__infos p {
+    display: inline;
+    margin-left: 10px;
+    color: #bbb;
+    font-style: italic; }
+.ie .pager {
+  text-align: center; }
+  .ie .pager .pager__older {
+    display: inline; }
+  .ie .pager .pager__archives {
+    display: inline;
+    margin: 0 100px; }
+  .ie .pager .pager__newer {
+    display: inline; }
+.ie .contacts a {
+  padding: 0;
+  background: none !important; }
+.ie .founders {
+  padding: 30px 0; }
+.ie .founder {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 350px; }
+.ie .founder__cover {
+  float: left;
+  margin: 0 20px 0 0; }
+.ie .founder__title {
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-size: 1.2em;
+  text-align: left; }
+.ie .founder__links {
+  text-align: left; }
+  .ie .founder__links a {
+    padding: 0;
+    background: none !important; }
+.ie .page-footer {
+  position: relative; }
+.ie .page-footer ul {
+  position: absolute;
+  top: 20px;
+  right: 20px; }
+.ie .page-footer li {
+  display: inline;
+  margin-left: 30px; }
+  .ie .page-footer li a {
+    padding: 0;
+    background: none; }

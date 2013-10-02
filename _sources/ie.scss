@@ -1,0 +1,190 @@
+// -----------------------------------------
+// IE (7-8) (no, not you IE6, I have a life)
+// -----------------------------------------
+
+/*
+ * Dirty fixes for IE version 7 and 8. Not IE6, get away.
+ * The plan is not to make the site beautiful, but **readable**.
+ * If a CSS feature does not work, we simply remove it.
+ */
+
+.ie {
+
+  // Fix the font,  no custom
+  body {
+    font-family: Georgia, serif;
+  }
+
+  .page {
+    min-width: $MAX;
+  }
+
+  /// Header
+
+  // Make the banner like the mobile one
+  .banner {
+    height: auto;
+    background: none;
+    background-color: #eee;
+    border: none;
+  }
+
+  /// Logo
+
+  .logo {
+    @extend %link;
+    display: block;
+    padding: 30px 0;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .logo__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo__title {
+    margin: 0;
+  }
+
+  /// Navigation
+
+  .navbar li {
+    display: inline;
+  }
+
+  .page-start {
+    width: $MAX;
+  }
+
+  /// Body
+
+  /// Journal
+
+  .entry__title {
+    font-size: 1.5em;
+  }
+
+  .entry__metadata {
+    margin-bottom: 50px;
+  }
+
+  .entry__author {
+    display: inline;
+
+    img {
+      display: inline;
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    p {
+      display: inline;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  .entry__infos {
+    display: inline;
+
+    p {
+      display: inline;
+      margin-left: 10px;
+      color: #bbb;
+      font-style: italic;
+    }
+  }
+
+  /// Pager
+
+  .pager {
+    text-align: center;
+
+    .pager__older {
+      display: inline;
+    }
+
+    .pager__archives {
+      display: inline;
+      margin: 0 100px;
+    }
+
+    .pager__newer {
+      display: inline;
+    }
+  }
+
+  /// Contact
+
+  .contacts {
+    a {
+      padding: 0;
+      background: none !important;
+    }
+  }
+
+  /// About
+
+  .founders {
+    @extend %clearfix;
+
+    padding: 30px 0;
+  }
+
+  .founder {
+    @extend %clearfix;
+
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 350px;
+  }
+
+  .founder__cover {
+    float: left;
+    margin: 0 20px 0 0;
+  }
+
+  .founder__title {
+    margin: 5px 0 0 0;
+    padding: 0;
+
+    font-size: 1.2em;
+    text-align: left;
+  }
+
+  .founder__links {
+    text-align: left;
+
+    a {
+      padding: 0;
+      background: none !important;
+    }
+  }
+
+  /// Footer
+
+  .page-footer {
+    position: relative;
+  }
+
+  .page-footer ul {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .page-footer li {
+    display: inline;
+    margin-left: 30px;
+
+    a {
+      padding: 0;
+      background: none;
+    }
+  }
+}
