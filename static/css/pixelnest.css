@@ -22,14 +22,14 @@
   _overflow: visible;
   zoom: 1; }
 
-.page-content p a, .home__aside li a, .card__title a, .entry__title a, .contacts li a, .founder__links li a, .pager a, .archives a, .ie .logo {
+.page-content p a, .home__aside li a, .card__title a, .entry__title a, .entry__content a, .contacts li a, .founder__links li a, .pager a, .archives a, .tutorial .page-header a, .ie .logo {
   color: #00a9e0;
   text-decoration: none; }
-  .page-content p a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .ie .logo:hover {
+  .page-content p a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .entry__content a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .tutorial .page-header a:hover, .ie .logo:hover {
     text-decoration: underline; }
-  .page-content p a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .ie .logo:active {
+  .page-content p a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .entry__content a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .tutorial .page-header a:active, .ie .logo:active {
     color: #98c73d; }
-  .page-content p a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .ie .logo:focus {
+  .page-content p a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .entry__content a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .tutorial .page-header a:focus, .ie .logo:focus {
     color: #98c73d; }
 
 html, body {
@@ -519,6 +519,29 @@ li {
   color: #bbb;
   font-size: 0.9em;
   font-style: italic; }
+
+.tutorial .page-header {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 10px;
+  background-color: rgba(240, 240, 240, 0.8);
+  font-size: 0.8em; }
+  .tutorial .page-header p {
+    display: inline; }
+  .tutorial .page-header .page-link {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    text-align: right; }
+.tutorial .page-footer {
+  background-color: transparent;
+  color: #888888; }
+  .tutorial .page-footer p {
+    display: block;
+    font-size: 0.9em;
+    text-align: center; }
 
 /*
  * Dirty fixes for IE version 7 and 8. Not IE6, get away.

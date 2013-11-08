@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% include html.html %}
+<head>
+  {% include meta.html %}
+
+  <style>body { background-color: #fbfbfb; }</style>
+</head>
+<body>
+  <div class="page tutorial" id="page">
+
+    <!-- reduced header -->
+    <header class="page-header">
+
+      <!-- menu -->
+      <p class"page-back">
+        <a href="/">← Back to Pixelnest</a>
+      </p>
+
+      <!-- twitter -->
+      <p class="page-link">
+        <a href="http://twitter.com/pixelnest">follow us on twitter</a>
+      </p>
+    </header>
+
+    <div class="page-content">
+
+      <!-- post layout -->
+      <article class="entry">
+        <h2 class="entry__title">
+          <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+        </h2>
+
+        <aside class="entry__metadata">
+          {% include author.html %}
+
+          <section class="entry__infos">
+            <p>
+              {{ page.date | date: "%d %b. %Y" | downcase }}
+            </p>
+          </section>
+        </aside>
+
+        <section class="entry__content">
+          {{ content }}
+        </section>
+      </article>
+      <!-- end post layout -->
+
+    </div>
+
+    <!-- reduced footer -->
+    <footer class="page-footer">
+      <p class="credits__desc">© 2013 pixelnest.io - we craft <strong>games</strong> and <strong>apps</strong></p>
+    </footer>
+  </div>
+
+  {% include ga.html %}
+  {% include js.html %}
+</body>
+</html>

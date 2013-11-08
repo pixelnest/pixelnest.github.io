@@ -1,0 +1,52 @@
+// ---------------------
+// Tutorial
+// ---------------------
+
+.tutorial {
+
+  // Small header
+  .page-header {
+    // Padding
+    $distance: 10px;
+
+    position: relative;
+
+    margin-bottom: 60px;
+    padding: $distance;
+    background-color: rgba(240, 240, 240, 0.8);
+
+    font-size: 0.8em;
+
+    p {
+      display: inline;
+    }
+
+    // Put at the right end of the header
+    .page-link {
+      display: inline-block;
+      position: absolute;
+      top: $distance;
+      right: $distance;
+      margin: 0;
+
+      text-align: right;
+    }
+
+    a {
+      @extend %link
+    }
+  }
+
+
+  // Light footer
+  .page-footer {
+    background-color: transparent;
+    color: #888888;
+
+    p {
+      display: block;
+      font-size: 0.9em;
+      text-align: center;
+    }
+  }
+}
