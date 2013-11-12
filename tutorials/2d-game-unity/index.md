@@ -3,7 +3,7 @@ layout: tutorial
 title: Creating a 2D game with Unity
 subtitle: like a little Shoot Them Up.
 author: Damien
-date: 12/12/12
+date: 12/11/13
 ---
 
 Today we will share our knowledge in **Unity** and provides you all need ou  to make a simple 2D game.
@@ -31,21 +31,23 @@ The source code is available on our [GitHub repository](https://github.com/pixel
 
 Please select a chapter you are interested in to continue.
 
-- [Installation and the first game scene](./1-install-and-first-scene)
+- [Installation and the first game scene](./1-install-and-first-scene.html)
 
-{% for post in site.categories.tutorials %}
-
-{% if post.layout == 'tutorial' %}
-  <li><a href="{{ post.url }}">{{post.title}}</a></li>
-{% endif %}
-{% endfor %}
-
-</ul>
+2-background-and-camera
+3-players-enemies
+4-shooting-part-1
+5-shooting-part-2
+6-parallax scrolling
+7-particles
+8-sounds
+9-menus
+10-deployment
+11-bonus
 
 **Remarks:**
 
 - Unity will soon release 2D specific tools, this tutorial is NOT talking about them for now. We will update it as soon as we had our hands on the new toolset.
-- This tutorial was made with Unity 4.2.1
+- This tutorial was made with **Unity 4.2.2**
 
 [unity_logo_url]: ./Unity.png
 [result]: ./result.png
