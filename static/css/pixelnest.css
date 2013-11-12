@@ -355,8 +355,8 @@ li {
   max-width: 100%;
   border: 1px solid #ccc; }
 .entry__content .highlight {
-  margin: 20px -28px;
-  padding: 20px 28px;
+  margin: 20px -20px;
+  padding: 5px 20px;
   background: #313131;
   color: white;
   font-size: 0.8em; }
