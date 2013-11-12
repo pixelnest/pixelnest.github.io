@@ -10,7 +10,7 @@ Today we will share our knowledge in **Unity** and provides you all need ou  to 
 
 Something like that. **Click to play the demo!**
 
-[[  ![Tutorial result][result]  ][result]][demo_link]
+[  ![Tutorial result][result]  ][demo_link]
 
 We will focus on a Shoot them up with horizontal scrolling, but if we do our job correctly you'll understand how to extend to many other genre.
 
