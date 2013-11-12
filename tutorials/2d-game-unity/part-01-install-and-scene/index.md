@@ -93,7 +93,7 @@ Save the scene in the _Scenes_ folder. Call it how you want (what about "Stage1"
 ## Ready for the next step
 
 We are still far from a game, right?
-Next step we will start fun things: adding a background and a player!
+Next step we will start fun things: adding a background and some elements!
 
 [Take me to the next step]({{ page.next_link}})
 
