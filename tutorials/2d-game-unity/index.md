@@ -31,11 +31,18 @@ The source code is available on our [GitHub repository](https://github.com/pixel
 
 Please select a chapter you are interested in to continue.
 
+<ul>
+
 {% for post in site.posts %}
+
+<li><a href="{{ post.url }}">{{post.title}}</a></li>
+
 {% if post.layout == 'tutorial' %}
-  - <a href="{{ post.url }}">{{post.title}}</a>
+  <li><a href="{{ post.url }}">{{post.title}}</a></li>
 {% endif %}
 {% endfor %}
+
+</ul>
 
 **Remarks:**
 
