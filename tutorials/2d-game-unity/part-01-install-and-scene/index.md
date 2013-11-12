@@ -46,6 +46,8 @@ Create a new project. Do not check any standard package for now, you can re-impo
 
 [  ![Create a new Unity project][unity_create_project]  ][unity_create_project]
 
+Select the **2D** settings.  
+
 Do not worry about the name, the product name is defined in the option and changing the whole project name only consists in renaming the folder. 
 
 ### Prepare the project
