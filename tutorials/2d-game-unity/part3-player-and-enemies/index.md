@@ -7,13 +7,23 @@ author: Damien
 
 ## Chapters
 
-<Sommaire ici>
-
-https://github.com/pixelnest/2d-game-unity-tutorial/releases/tag/part2
+- [Installation and the first game scene](./part1-install-and-scene)
+- [Adding and displaying a background](./part2-background-and-camera)
+- **> [The player sprite and an enemy](./part3-player-and-enemies)**
+- [The shooting - part 1](./part4-shooting-101)
+- [The shooting - part 2](./part5-shooting-102)
+- [Parallax scrolling](./part6-parallax-scrolling)
+- [Adding particles](./part7-particles)
+- [Making some noise and adding music](./part8-sounds)
+- [Menu - loading and restarting the game](./part9-menus)
+- [Build, release and deployment](./part10-deployment)
+- [Bonus - advanced resources and tips](./part11-bonus)
 
 ## Summary
 
 We have a background, some props, it is time to add some useful game elements, like the player!
+
+[Download the project from part 2](https://github.com/pixelnest/2d-game-unity-tutorial/releases/tag/part2)
 
 ## Creating the player sprite
 
