@@ -50,6 +50,16 @@
   a {
     @extend %link;
   }
+
+  .highlight {
+    margin: 20px -28px;
+    padding: 20px 28px;
+    background: #313131;
+    color: white;
+    font-size: 0.8em;
+
+    code { font-family: monospace; }
+  }
 }
 
 // ---------------------

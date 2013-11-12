@@ -354,6 +354,14 @@ li {
   margin: 0 auto;
   max-width: 100%;
   border: 1px solid #ccc; }
+.entry__content .highlight {
+  margin: 20px -28px;
+  padding: 20px 28px;
+  background: #313131;
+  color: white;
+  font-size: 0.8em; }
+  .entry__content .highlight code {
+    font-family: monospace; }
 
 @media only screen and (max-width: 1000px) {
   .entry__title {
