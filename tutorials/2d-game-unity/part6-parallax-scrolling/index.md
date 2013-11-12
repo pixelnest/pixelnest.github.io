@@ -477,7 +477,7 @@ So we have a level, enemies that can move (try to change their direction in y to
 
 We will some fun stuff now, first particles then sounds!
 
-[Take me to the next step]()
+[Take me to the next step](../part7-particles)
 
 [scrolling_type_1]: ./img/scrolling_type_1.png
 [scrolling_type_2]: ./img/scrolling_type_2.png

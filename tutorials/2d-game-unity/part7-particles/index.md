@@ -342,7 +342,7 @@ Particles are a very useful way to enhance graphics and to make feedbacks to the
 
 The other usual feedbacks are sounds. And that's just what we are going to see right now!
 
-[Take me to the next step]()
+[Take me to the next step](../part8-sounds)
 
 [cloud]: ./img/cloud.png
 

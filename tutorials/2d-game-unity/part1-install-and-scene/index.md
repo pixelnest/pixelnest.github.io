@@ -105,7 +105,7 @@ Save the scene in the _Scenes_ folder. Call it how you want (what about "Stage1"
 We are still far from a game, right?
 Next step we will start fun things: adding a background and a player!
 
-[Take me to the next step]()
+[Take me to the next step](../part2-background-and-camera)
 
 [unity_logo_url]: ./img/Unity.png
 

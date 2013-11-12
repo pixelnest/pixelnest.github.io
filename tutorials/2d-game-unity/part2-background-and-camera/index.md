@@ -196,7 +196,7 @@ You learned how to create a simple static background and how to display it prope
 
 Now we will see how to add the player and enemies.
 
-[Take me to the next step]()
+[Take me to the next step](../part3-player-and-enemies)
 
 
 [background]: ./img/background.png

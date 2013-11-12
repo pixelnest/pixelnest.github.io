@@ -334,7 +334,7 @@ You can add more enemies and shoot them.
 
 But this part is not over! We now want enemies to shoot too. Take a break, what comes next is mainly reusing what we did here but it would have done too much in only one part.
 
-[I'm ready, take me to the next part]()
+[I'm ready, take me to the next part](../part5-shooting-102)
 
 [shot]: ./img/shot.png
 

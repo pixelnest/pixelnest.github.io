@@ -240,7 +240,7 @@ You can add more enemies and shoot them. Slow the firing rate to 0.95 for the en
 
 It is now time to enhance the background and the scene to get a full level.
 
-[Take me to the next step]()
+[Take me to the next step](../part6-parallax-scrolling)
 
 [shot_poulpi]: ./img/shot_poulpi.png
 

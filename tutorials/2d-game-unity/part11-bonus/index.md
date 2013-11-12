@@ -81,8 +81,6 @@ Simply go to _Edit->Preferences_ and change the "Playmode Tint".
 
 
 
-
-
 [texture_settings]: ./img/texture_settings.png
 
 [quality_result]: ./img/quality_result.png

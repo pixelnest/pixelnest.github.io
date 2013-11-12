@@ -243,7 +243,7 @@ If you move the player and collide the two sprites, they will just block each ot
 ## Ready for the next step
 
 Now we want to kill that moving thing! And for that, we need ammo!
-[Take me to the next step]()
+[Take me to the next step](../part4-shooting-101)
 
 [player]: ./img/player.png
 

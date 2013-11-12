@@ -83,7 +83,7 @@ This is tweaking and optimization, you should do that at the end of your develop
 That's it. You made it. This tutorial is over.
 Well, there is a bonus level, we gathered some useful resources on specific topic that can interest you.
 
-[Secret entry to the bonus level]()
+[Secret entry to the bonus level](../part11-bonus)
 
 You probably don't feel ready to make a full 2D game but you probably are.
 

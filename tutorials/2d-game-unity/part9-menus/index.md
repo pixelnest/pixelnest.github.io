@@ -240,7 +240,7 @@ You just made the new best selling game. But it's only on your computer for now.
 
 Last step: deploying on another machine, but it a PC, a mobile or a console...
 
-[Take me to this last part]()
+[Take me to this last part](../part10-deployment)
 
 [background]: ./img/background.png
 

@@ -161,7 +161,7 @@ We are far from a full game, but I'll stop here for the gameplay part.
 
 Now we will see build and deployment features provided by Unity to complete this development cycle.
 
-[Take me to the next step]()
+[Take me to the next step](../part9-menus)
 
 [3dsound]: ./img/3dsound.png
 [music]: ./img/music.png
