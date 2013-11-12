@@ -3,7 +3,7 @@ layout: tutorial
 title: Installation and the first game scene
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../
+previous_link:..
 next_link: ../part-02-background-and-camera
 ---
 
@@ -96,7 +96,7 @@ Save the scene in the _Scenes_ folder. Call it how you want (what about "Stage1"
 We are still far from a game, right?
 Next step we will start fun things: adding a background and a player!
 
-[Take me to the next step]()
+[Take me to the next step]({{ page.next_link}})
 
 [unity_logo_url]: ./Unity.png
 
