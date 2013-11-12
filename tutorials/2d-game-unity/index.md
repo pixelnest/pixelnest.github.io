@@ -35,8 +35,6 @@ Please select a chapter you are interested in to continue.
 
 {% for post in site.posts %}
 
-<li><a href="{{ post.url }}">{{post.title}}</a></li>
-
 {% if post.layout == 'tutorial' %}
   <li><a href="{{ post.url }}">{{post.title}}</a></li>
 {% endif %}
