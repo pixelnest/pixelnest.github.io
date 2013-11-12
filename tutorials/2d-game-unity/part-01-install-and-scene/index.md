@@ -3,8 +3,6 @@ layout: tutorial
 title: Installation and the first game scene
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:..
-next_link: ../part-02-background-and-camera
 ---
 
 ## Chapters
