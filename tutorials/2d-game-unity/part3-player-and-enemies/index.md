@@ -1,6 +1,6 @@
 ---
-layout: post
-title: The player sprite
+layout: tutorial
+title: The player sprite and an enemy
 subtitle: Creating a 2D game with Unity
 author: Damien
 ---
@@ -8,6 +8,8 @@ author: Damien
 ## Chapters
 
 <Sommaire ici>
+
+https://github.com/pixelnest/2d-game-unity-tutorial/releases/tag/part2
 
 ## Summary
 
@@ -34,7 +36,7 @@ Sprite creation procedure:
 Place it in the foreground.
 Change its scale. 5x4x1 should be fine.
 
-Add a box collider. This will become our **Hitbox** later. Make sure the hitbox has a size of 1x1x1 (by default the z is so small on quads that it will be hard to trigger collisions). 
+Add a box collider. This will become our **Hitbox** later. Make sure the hitbox has a size of 1x1x1 (by default the z is so small on quads that it will be hard to trigger collisions).
 
 **Tip:** if you plan to make a shoot them up, spend a lot of time tweaking your hitboxes. It should perfectly fit an element from the player sprite. What about the ship window here? You can change the collider's shape, for a _sphere collider_ for example, it change nothing to the behavior thanks to Unity.
 
@@ -85,10 +87,10 @@ Default script come with **Start** and **Update**. Here is a short list of the m
 - ``Start()``: called after Awake()
 - ``Update()``: main loop
 - ``Destroy()``: object is destroyed, last chance to execute some code
-- ``OnCollisionEnter(CollisionInfo info)``: a collider is touching the object collider 
+- ``OnCollisionEnter(CollisionInfo info)``: a collider is touching the object collider
 - ``OnCollisionExit(CollisionInfo info)``: a collider is not touching anymore the object collider
 - ``OnTriggerEnter(Collider otherCollider)``: a collider marked as trigger is touching the object collider
-- ``OnTriggerExit(Collider otherCollider)``: a collider marked as trigger is touching the object collider  
+- ``OnTriggerExit(Collider otherCollider)``: a collider marked as trigger is touching the object collider
 
 We will get back on some of them in details when we will be using them.
 
@@ -133,7 +135,7 @@ Explanations:
 - 0: we define a public variable that will appear in the editor. This is the speed applied to the ship. The value itself doesn't have a proper unit, but exposing it public without accessors allows you to live modify it in Unity through the inspector window. Remember it's script programming, not fully traditional C# programming. This implies to break some rules and convention.
 - 1: we used the default axis that can be redefine in _Edit->Project Settings->Input_. This will return a value between [-1,1], 0 being the idle state
 - 2: Multiply the direction by the speed
-- 3: Make sure everything is relative to the game time (so if the game slow down, your ship will slow too) 
+- 3: Make sure everything is relative to the game time (so if the game slow down, your ship will slow too)
 - 4: simply translate our sprite. We have no rigidbody attached so things are simple here, otherwise be careful with the physics
 
 Now attach the script to the game object (drag'n'drop to add it as a new component).
@@ -179,7 +181,7 @@ Save the prefab... and that's it!
 
 We will script a simple behavior: it will just moves in a direction.
 
-Create a new script "MoveScript". 
+Create a new script "MoveScript".
 
 We could have call it "EnemyScript", but we could reuse it later in another context. Also, the modularity provided by Unity component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters, it's your choice.
 
@@ -222,7 +224,7 @@ public class MoveScript : MonoBehaviour
 
 ```
 
-Add it to the enemy. Hit play, it should move like beyond. 
+Add it to the enemy. Hit play, it should move like beyond.
 
 [![Enemy is now moving][enemy_moving]][enemy_moving]
 
@@ -233,20 +235,20 @@ If you move the player and collide the two sprites, they will just block each ot
 Now we want to kill that moving thing! And for that, we need ammo!
 [Take me to the next step]()
 
-[player]: ./player.png
+[player]: ./img/player.png
 
-[adding_player]: ./adding_player.png
+[adding_player]: ./img/adding_player.png
 
-[inspector_script]: ./inspector_script.png
+[inspector_script]: ./img/inspector_script.png
 
-[ship_moving]: ./ship_moving.gif
+[ship_moving]: ./img/ship_moving.gif
 
-[poulpi]: ./poulpi.png
+[poulpi]: ./img/poulpi.png
 
-[falling_ship]: ./falling_ship.gif
+[falling_ship]: ./img/falling_ship.gif
 
-[player_rigidbody]: ./player_rigidbody.png
+[player_rigidbody]: ./img/player_rigidbody.png
 
-[enemy_definition]: ./enemy_definition.png
+[enemy_definition]: ./img/enemy_definition.png
 
-[enemy_moving]: ./enemy_moving.gif
+[enemy_moving]: ./img/enemy_moving.gif

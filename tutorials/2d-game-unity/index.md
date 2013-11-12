@@ -32,7 +32,8 @@ The source code is available on our [GitHub repository](https://github.com/pixel
 Please select a chapter you are interested in to continue.
 
 - [Installation and the first game scene](./part1-install-and-scene)
-
+- [Adding and displaying a background](./part2-background-and-camera)
+- [The player sprite and an enemy](part3-player-and-enemies)
 
 **Remarks:**
 

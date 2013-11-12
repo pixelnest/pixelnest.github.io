@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tutorial
 title: Adding and displaying a background
 subtitle: Creating a 2D game with Unity
 author: Damien
@@ -13,7 +13,7 @@ author: Damien
 
 Using the empty project we created in the step before, we will now see how to add a background and some fancy clouds.
 
-[Download the project from step 1]()
+[Download the project from step 1](https://github.com/pixelnest/2d-game-unity-tutorial/releases/tag/part1)
 
 ## Adding a background
 
@@ -21,13 +21,13 @@ Your first background will be static. We will use the two following images:
 
 [  ![TGPA background][background]  ][background]
 
-Import the image in the _Textures_ folder (simply copy the file in it). Do not worry about the import settings for now. 
+Import the image in the _Textures_ folder (simply copy the file in it). Do not worry about the import settings for now.
 
 In Unity, create a new game object. **A quad**.
 
 [  ![New quad][new_quad]  ][new_quad]
 
-What is a quad? 
+What is a quad?
 
 It's the simplest model possible. It is just 2 triangles assembled to make a rectangle. It's only visible from the front, the object is totally invisible from behind.
 
@@ -36,7 +36,7 @@ This mesh type is made for 2D sprite:
 - Only 2 triangles, fast and light
 - The UV mapping is reversed, so an image is displayed in the right direction (otherwise it is 180° rotated).
 - It has the same capabilities of any other object (= you can add any kind of component)
- 
+
 So you have a square in the middle of nowhere.
 
 Drag and drop the image, _background_, to the quad displayed in the editor window. It will apply the picture as a texture to the quad.
@@ -73,11 +73,11 @@ First, lightning. The choice is yours: no light at all or a global light for the
 
 - Set the default light to white, which is like not having lights:
 	- Go to _Edit->Render Settings_
-	
+
 	[ ![Render settings][render_settings] ] [render_settings]
 
 	- Change the _Ambient Light_ to white
-	
+
 	[ ![Ambient light settings][ambient_light] ] [ambient_light]
 
 #### Directional light
@@ -118,7 +118,7 @@ Here are some simple flying magically platform sprites:
 - Import them in your texture folder
 - Create two quads
 - Remove the mesh collider
-- Place them at (whatever, whatever, 0) 
+- Place them at (whatever, whatever, 0)
 - Scale them to 5x5x1
 - Rename them "Platform 1" and "Platform 2"
 - Drag and drop each platform image to one
@@ -146,7 +146,7 @@ Change the shader (a graphic card program) of each platform from _Diffuse_ to _T
 [ ![Change platform material shader][platform_shader] ] [platform_shader]
 
 [ ![Platform with transprency][platform_shader_transparency] ] [platform_shader_transparency]
- 
+
 
 ### Fighting the Z-fighting
 
@@ -189,36 +189,36 @@ Now we will see how to add the player and enemies.
 [Take me to the next step]()
 
 
-[background]: ./background.png
+[background]: ./img/background.png
 
-[new_quad]: ./new_quad.png
+[new_quad]: ./img/new_quad.png
 
-[dnd_background]: ./dnd_background.png
+[dnd_background]: ./img/dnd_background.png
 
-[dnd_background_applied]: ./dnd_background_applied.png
+[dnd_background_applied]: ./img/dnd_background_applied.png
 
-[background_in_place]: ./background_in_place.png
+[background_in_place]: ./img/background_in_place.png
 
-[background2_in_place]: ./background2_in_place.png
+[background2_in_place]: ./img/background2_in_place.png
 
-[render_settings]: ./render_settings.png
+[render_settings]: ./img/render_settings.png
 
-[ambient_light]: ./ambient_light.png
+[ambient_light]: ./img/ambient_light.png
 
-[directional_light]: ./directional_light.png
+[directional_light]: ./img/directional_light.png
 
-[camera]: ./camera.png
+[camera]: ./img/camera.png
 
-[platform1]: ./platform1.png
+[platform1]: ./img/platform1.png
 
-[platform2]: ./platform2.png
+[platform2]: ./img/platform2.png
 
-[platform_fail]: ./platform_fail.png
+[platform_fail]: ./img/platform_fail.png
 
-[platform_shader]: ./platform_shader.png
+[platform_shader]: ./img/platform_shader.png
 
-[platform_shader_transparency]: ./platform_shader_transparency.png
+[platform_shader_transparency]: ./img/platform_shader_transparency.png
 
-[depth]: ./depth.png
+[depth]: ./img/depth.png
 
-[prefab]: ./prefab.png
+[prefab]: ./img/prefab.png
