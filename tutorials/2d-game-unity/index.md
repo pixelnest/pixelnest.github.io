@@ -33,7 +33,7 @@ Please select a chapter you are interested in to continue.
 
 <ul>
 
-{% for post in site.posts %}
+{% for post in site.categories.tutorials %}
 
 {% if post.layout == 'tutorial' %}
   <li><a href="{{ post.url }}">{{post.title}}</a></li>
