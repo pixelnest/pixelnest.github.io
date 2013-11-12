@@ -31,18 +31,8 @@ The source code is available on our [GitHub repository](https://github.com/pixel
 
 Please select a chapter you are interested in to continue.
 
-- [Installation and the first game scene](./1-install-and-first-scene.html)
+- [Installation and the first game scene](./part1-install-and-scene)
 
-2-background-and-camera
-3-players-enemies
-4-shooting-part-1
-5-shooting-part-2
-6-parallax scrolling
-7-particles
-8-sounds
-9-menus
-10-deployment
-11-bonus
 
 **Remarks:**
 
