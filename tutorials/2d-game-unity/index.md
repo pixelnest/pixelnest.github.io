@@ -6,22 +6,42 @@ author: Damien
 date: 12/12/12
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, similique, aut beatae tempore iure voluptatibus illo impedit minima mollitia porro voluptatem reprehenderit cumque totam eius dolorum obcaecati maxime ipsum inventore.
+Today we will share our knowledge in **Unity** and provides you all need ou  to make a simple 2D game.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, error nihil rem enim culpa aliquam rerum eius perspiciatis earum nobis esse atque alias dolor eligendi velit quisquam eum cum labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, reprehenderit, et perspiciatis quos similique rerum rem soluta praesentium necessitatibus adipisci recusandae quas ullam quae odit numquam saepe maxime aspernatur voluptatum!
+Something like that. **Click to play the demo!**
 
-## Title
+[[  ![Tutorial result][result]  ][result]][demo_link]
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, atque, quia, facilis doloribus minus debitis dignissimos aut adipisci nostrum aspernatur esse officiis quasi natus molestias ipsum sapiente iusto. Ut, amet.
+We will focus on a Shoot them up with horizontal scrolling, but if we do our job correctly you'll understand how to extend to many other genre.
 
-- [Installing Unity and the first scene of the game]()
-- [Background stuff, camera settings](test)
-- [Creating a player and an enemy]()
-- [Shooting the enemy]()
-- [Parallax scrolling, level design]()
-- [Bonus resources]()
+About licences:
 
+- Assets are licenced [CC-BY-NC](http://creativecommons.org/licenses/by-nc/2.0/fr/). They have been made by [Thibault Person](twitter.com/mrlapinou) for the game [The Great Paper Adventure](http://www.thegreatpaperadventure.com).
+
+- Source code is copyrighted Pixelnest Studio and licenced MIT
+
+Get more information about our [licenses on GitHub](https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md) 
+
+
+The source code is available on our [GitHub repository](https://github.com/pixelnest/2d-game-unity-tutorial).
+
+## Chapters
+
+[  ![Unity][unity_logo_url]  ][unity_logo_url]
+
+Please select a chapter you are interested in to continue.
+
+{% for post in site.posts %}
+{% if post.layout == 'tutorial' %}
+  - <a href="{{ post.url }}">{{post.title}}</a>
+{% endif %}
+{% endfor %}
 
 **Remarks:**
 
-- Molestiae temporibus corporis inventore!
+- Unity will soon release 2D specific tools, this tutorial is NOT talking about them for now. We will update it as soon as we had our hands on the new toolset.
+- This tutorial was made with Unity 4.2.1 
+
+[unity_logo_url]: ./Unity.png
+[result]: ./result.png
+[demo_link]: ./demo/demo.html
