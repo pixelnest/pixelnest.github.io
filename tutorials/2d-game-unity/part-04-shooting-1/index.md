@@ -3,6 +3,8 @@ layout: tutorial
 title: The shooting (1/2)
 subtitle: Creating a 2D game with Unity
 author: Damien
+previous_link:../part-03-player-and-enemies
+next_link: ../part-05-shooting-2
 ---
 
 ## Chapters
