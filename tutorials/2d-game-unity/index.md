@@ -10,7 +10,7 @@ Using the fresh new **Unity** 2D tools, you will see and learn how to make a sma
 
 Something like that. **Click to play the demo!**
 
-[[  ![Tutorial result][result]  ][result]][demo_link]
+[  ![Tutorial result][result] ][demo_link]
 
 We will focus on a Shoot them up with horizontal scrolling, but if we do our job correctly you'll understand how to extend to many other genre.
 
@@ -20,7 +20,7 @@ About licences:
 
 - Source code is copyrighted Pixelnest Studio and licenced MIT
 
-Get more information about our [licenses on GitHub](https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md) 
+Get more information about our [licenses on GitHub](https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md)
 
 
 The source code is available on our [GitHub repository](https://github.com/pixelnest/2d-game-unity-tutorial).
