@@ -20,7 +20,7 @@ About licences:
 
 - Source code is copyrighted Pixelnest Studio and licenced MIT
 
-Get more information about our [licenses on GitHub](https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md) 
+Get more information about our [licenses on GitHub](https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md)
 
 
 The source code is available on our [GitHub repository](https://github.com/pixelnest/2d-game-unity-tutorial).
@@ -31,7 +31,7 @@ The source code is available on our [GitHub repository](https://github.com/pixel
 
 Please select a chapter you are interested in to continue.
 
-<ul>
+- [Installation and the first game scene](./1-install-and-first-scene)
 
 {% for post in site.categories.tutorials %}
 
@@ -45,7 +45,7 @@ Please select a chapter you are interested in to continue.
 **Remarks:**
 
 - Unity will soon release 2D specific tools, this tutorial is NOT talking about them for now. We will update it as soon as we had our hands on the new toolset.
-- This tutorial was made with Unity 4.2.1 
+- This tutorial was made with Unity 4.2.1
 
 [unity_logo_url]: ./Unity.png
 [result]: ./result.png
