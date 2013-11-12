@@ -24,10 +24,9 @@ Download the latest release from the official website (always):
 
 Launch the executable and everything will be properly install.
 
-Unity is bundled with MonoDevelop, but I find it horrible. Here are two free alternatives, depending on the system you use:
+Unity is bundled with MonoDevelop, but if you are on Windows you want to use an alternative:
 
 - **[Visual Studio 2013 Desktop (C#)](http://www.microsoft.com/visualstudio/fra/downloads#d-2013-express)** - Windows _(I can only find the french link via Google, sorry, but you will easily find the version in your language)_
-- **[Xamarin Studio](http://xamarin.com/studio)** - OS X (based on Mono Develop but with a nicer interface)
 
 Same goes here: download and install, it's simple as everything is bundled.
 
