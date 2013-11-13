@@ -168,6 +168,8 @@ Save the scene in the _Scenes_ folder. Call it how you want (what about "Stage1"
 We are still far from a game, right?
 Next step we will start fun things: adding a background and some elements!
 
+TMP
+
 
 [unity_logo_url]: ./-img/Unity.png
 [unity_create_project]: ./-img/create_project.png
