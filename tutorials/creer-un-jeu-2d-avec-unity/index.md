@@ -28,6 +28,10 @@ Les _assets_, le _gameplay_ et l'idée originale viennent du jeu [The Great Pape
 
 # Unity
 
+[Unity3D][unity_link] est un moteur de jeu très utilisé et complet pour créer des jeux vidéo multiplateformes, 2D ou 3D.
+
+Nous partons du principe que vous vous êtes déjà familiarisés avec l'outil (au moins en découvrant des projets d'exemples type "Hello World" fournis par Unity).
+
 Ce tutoriel est entièrement réalisable avec la version **Gratuite** de Unity.
 
 [ ![Unity][unity_logo_url] ][unity_download_link]
