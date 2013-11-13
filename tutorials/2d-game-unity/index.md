@@ -40,14 +40,33 @@ Get more information about our [licenses on GitHub][github_licence_link].
 
 The source code is available on our [GitHub repository][github_repo_link].
 
+# Contact
+
+If you find a typo, a mistake or a misspelling, let us know on [our twitter][pxn_twitter_link]. You can also contact us by [mail][pxn_mailto].
+
+If you want further informations about a specific topic, or a clarification on a chapter, we would be happy to hear you.
+
+Finally, you can follow us on [twitter][pxn_twitter_link] if you like what we do. :)
+
+This tutorial is redacted by [Damien][dam_twitter_link], and edited by [Matthieu][mog_twitter_link]. We hope you will enjoy it.
+
+<br />
+
+So, are you ready ? Let's dive into Unity!
+
 [unity_logo_url]: ./-img/unity.png
 [result]: ./-img/result.png
 
 [demo_link]: ./-demo/demo.html "Play the demo"
 
+[pxn_mailto]: mailto:site@pixelnest.io "Pixelnest Mail"
+
 [xna_link]: http://en.wikipedia.org/wiki/Microsoft_XNA "Microsoft XNA"
 [tgpa_link]: http://www.thegreatpaperadventure.com "The Great Paper Adventure"
-[tp_twitter_link]: http://twitter.com/mrlapinou "Thibault Person"
+[tp_twitter_link]: http://twitter.com/mrlapinou "Thibault Person Twitter"
+[pxn_twitter_link]: http://twitter.com/pixelnest "Pixelnest Studio Twitter"
+[dam_twitter_link]: http://twitter.com/valryon "Damien Mayance Twitter"
+[mog_twitter_link]: http://twitter.com/solarsailer "Matthieu Oger Twitter"
 [unity_download_link]: http://unity3d.com/unity/download "Download Unity 4.3"
 [cc_licence_link]: http://creativecommons.org/licenses/by-nc/2.0/fr/ "CC-BY-NC"
 [mit_licence_link]: http://choosealicense.com/licenses/mit/ "MIT Licence"
