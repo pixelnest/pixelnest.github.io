@@ -31,7 +31,18 @@ The source code is available on our [GitHub repository](https://github.com/pixel
 
 Please select a chapter you are interested in to continue.
 
-TODO
+- [Installation and the first game scene](./part-01-install-and-scene)
+- [Adding and displaying a background](./part-02-background-and-camera)
+- [The player and some enemies](./part-03-player-and-enemies)
+- [The shooting (1/2)](./part-04-shooting-1)
+- [The shooting (2/2)](./part-05-shooting-2)
+- [Parallax scrolling](./part-06-parallax-scrolling)
+- [Adding particles](./part-07-particles)
+- [Making some noise and adding music](./part-08-sounds)
+- [Menu - loading and restarting the game](./part-09-menus)
+- [Build, release and deployment](./part-10-deployment)
+- [2D Animations](./part-11-animations)
+- [Tweaking the gameplay](./part-12-tweaking-the-gameplay)
 
 **Remarks:**
 

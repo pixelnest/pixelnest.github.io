@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Menu: loading and restarting the game
+title: Menu - loading and restarting the game
 subtitle: Creating a 2D game with Unity
 author: Damien
 previous_link:../part-08-sounds

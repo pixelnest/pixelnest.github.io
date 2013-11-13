@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: The player sprite
+title: The player and some enemies
 subtitle: Creating a 2D game with Unity
 author: Damien
 previous_link:../part-02-background-and-camera
