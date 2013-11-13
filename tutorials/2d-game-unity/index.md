@@ -26,6 +26,8 @@ The assets, gameplay and original idea come from the game [The Great Paper Adven
 
 # Unity
 
+[Unity3D][unity_link] is a popular and complete solution to create multiplatform video games. This tutorial assumes that you are _at least a bit familiar_ with the tools and the engine.
+
 This tutorial is made with the Unity 4.3 **FREE** version.
 
 [ ![Unity][unity_logo_url] ][unity_download_link]
@@ -61,6 +63,7 @@ So, are you ready? Let's dive into Unity!
 
 [pxn_mailto]: mailto:site@pixelnest.io "Pixelnest Mail"
 
+[unity_link]: http://unity3d.com/ "Unity3D"
 [xna_link]: http://en.wikipedia.org/wiki/Microsoft_XNA "Microsoft XNA"
 [tgpa_link]: http://www.thegreatpaperadventure.com "The Great Paper Adventure"
 [tp_twitter_link]: http://twitter.com/mrlapinou "Thibault Person Twitter"
