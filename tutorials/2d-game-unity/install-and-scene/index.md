@@ -14,13 +14,15 @@ links:
   next: ../background-and-camera
 ---
 
-In this first chapter you will find very basics information: links to download and install Unity and then we will prepare our first scene for a game.
+In this first chapter you will find some very basic informations: first, the download and installation of Unity, then the preparation of the first scene of our game.
+
+# Set up your environment
+
+We start by the easy part: downloading and configuring Unity.
+
+[ ![Unity][unity_logo_url] ][unity_logo_url]
 
 ## Install Unity
-
-[  ![Unity][unity_logo_url]  ][unity_logo_url]
-
-The easy part.
 
 Download the latest release from the official website (always):
 - [link to the last Unity 3D version](http://unity3d.com/unity/download)
