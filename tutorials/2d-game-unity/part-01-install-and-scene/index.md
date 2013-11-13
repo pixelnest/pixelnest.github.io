@@ -1,10 +1,11 @@
 ---
 layout: tutorial
 title: Installation and the first game scene
-subtitle: Creating a 2D game with Unity
+tutorial: Creating a 2D game with Unity
 author: Damien
 previous: ..
 next: ../part-02-background-and-camera
+home: ..
 ---
 
 ## Chapters
@@ -44,13 +45,13 @@ Here are some other resources that we find interesting and that should complete 
 
 ### Create a project
 
-Create a new project. Do not check any standard package for now, you can re-import them later if you want but at first it will just get you confuse. 
+Create a new project. Do not check any standard package for now, you can re-import them later if you want but at first it will just get you confuse.
 
 [  ![Create a new Unity project][unity_create_project]  ][unity_create_project]
 
-Select the **2D** settings.  
+Select the **2D** settings.
 
-Do not worry about the name, the product name is defined in the option and changing the whole project name only consists in renaming the folder. 
+Do not worry about the name, the product name is defined in the option and changing the whole project name only consists in renaming the folder.
 
 ### Prepare the project
 
@@ -83,7 +84,7 @@ Now The scene. Create empty objects and use them as "folder".
 See those objects are purely logical ones.
 
 - Scripts: we will add our global (not related to an object, such as a "Game" script) scripts here
-- Render: camera (I moved the default one there), lights 
+- Render: camera (I moved the default one there), lights
 - Level: instantiated game objects
 	- 0 - Background
 	- 1 - Middleground
