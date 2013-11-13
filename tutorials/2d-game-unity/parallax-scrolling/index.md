@@ -24,7 +24,9 @@ How are we gonna use the parallax?
 
 ### Moving the camera or level on a treadmill
 
-Is it the player and the camera that moves or is the player and the camera static and the level is on a sort of treadmill?
+- Is it the player and the camera that moves
+or
+- Are the player and the camera statics and the level is on a sort of treadmill?
 
 The first choice is interesting if you have a **perspective** camera, because the parallax is obvious: elements in background are behind us and seems to move slower.
 
@@ -33,15 +35,13 @@ But in 2D we have the orthographic camera, and we don't have depth at render.
 We can also choose to mix both. We will have two scrolling:
 
 - the player moving forward along with the camera
-- backgrounds moving at different speeds, opposed to the first the scrolling
-
-As the camera is moving, background will have their own speed + the main scrolling speed applied.
+- backgrounds moving at different speeds (in addition to the camera movement), opposed to the first the scrolling
 
 ### Enemy spawn decisions
 
 This has consequences, especially for the enemy spawn. For now they are just moving and shooting as soon as the game starts. But we probably want them to wait and be invincible until they "spawn".
 
-What is spawning an enemy? It depends on the game, definitely. Here this is what we will define: enemies are static and invincible until the camera reach and activate them.
+What is spawning an enemy? It depends on the game, definitely. Here this is what we will define: enemies are statics and invincible until the camera reach and activate them.
 
  [![Camera usage][camera_use]][camera_use]
 
@@ -166,16 +166,17 @@ Values I propose are:
 </table>
 
 For a convincing result, add elements to the scene:
-- Duplicate the backgrounds part and make them follow the two previous ones.
-- Add small platforms in the background elements layer
-- Add platforms in the middleground layer
-- Add enemies far from the camera on the right
 
-The result, with the editor view that I find interesting to see:
+- Add a third backgrounds part and make it follow the two previous ones.
+- Add small platforms in the background elements layer (No 1)
+- Add platforms in the middleground layer (No 2)
+- Add enemies far from the camera on the right (on layer no 3)
+
+The result:
 
 [![Scrolling effect][scrolling1]][scrolling1]
 
-For now we also see that enemies moves and shot out of the camera. They also never get recycled after their role is done.
+For now we also see that enemies moves and shot out of the camera: they  never get recycled after their role is done.
 
 But first thing first, infinite backgrounds.
 
@@ -191,7 +192,7 @@ For a filled background, notice that you need a minimum size to cover all the ca
 
 So the idea is we will get every children on the layer and check its renderer. So it won't work for invisible objects (as the one handling scripts) but I am not sure there is a use case where you need them to repeat too.
 
-We will a nice method to check whether an object's renderer is visible or not. I found it on [the community wiki](http://wiki.unity3d.com/index.php?title=IsVisibleFrom). It is not a class or a script, it's a C# extension.
+We will a nice method to check whether an object's renderer is visible or not. I found it on [the community wiki](http://wiki.unity3d.com/index.php?title=IsVisibleFrom). It is not a class or a script, it's a C# class extension.
 
 Create a new C# file named "RendererExtensions.cs" and fill it with:
 `````csharp
@@ -319,7 +320,7 @@ public class ScrollingScript : MonoBehaviour
 }
 `````
 
-Remember to enable "IsLooping" in the first (0) background otherwise it won't work.
+Remember to enable "IsLooping" in the first (0) background otherwise it won't work. Click on the image to see an animation:
 
 [![Infinite scrolling][infinite_scrolling]][infinite_scrolling_gif]
 
@@ -333,7 +334,7 @@ I said earlier that enemies should be disabled until they are visible. They shou
 
 Let's update _EnemyScript_ so it will:
 
-- disable moving and shooting at start
+- disable moving, collider and shooting at start
 - check when the enemy's renderer is in camera sight
 - destroy when the enemy fully leave the camera
 
