@@ -16,7 +16,7 @@ We will focus on a Shoot them up with horizontal scrolling, but if we do our job
 
 About licences:
 
-- Assets are licenced [CC-BY-NC](http://creativecommons.org/licenses/by-nc/2.0/fr/). They have been made by [Thibault Person](twitter.com/mrlapinou) for the game [The Great Paper Adventure](http://www.thegreatpaperadventure.com).
+- Assets are licenced [CC-BY-NC](http://creativecommons.org/licenses/by-nc/2.0/fr/). They have been made by [Thibault Person](http://twitter.com/mrlapinou) for the game [The Great Paper Adventure](http://www.thegreatpaperadventure.com).
 
 - Source code is copyrighted Pixelnest Studio and licenced MIT
 
