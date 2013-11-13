@@ -245,6 +245,7 @@ Last step: deploying on another machine, but it a PC, a mobile or a console...
 [elements]: ./img/elements.png
 
 [result1]: ./img/result1.png
+[result2]: ./img/result2.png
 
 [build_settings]: ./img/build_settings.png
 
