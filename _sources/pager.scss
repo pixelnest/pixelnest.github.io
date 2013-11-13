@@ -4,7 +4,6 @@
 
 .pager {
   position: relative;
-  bottom: -140px;
   display: table;
   margin: 0 auto;
   padding-top: 20px;
@@ -12,19 +11,23 @@
   border-top: 1px solid #eee;
 
   color: #bbb;
+
+  &.bottom {
+    bottom: -140px;
+  }
 }
 
 .pager a {
   @extend %link;
 }
 
-.pager__archives,
+.pager__ref,
 .pager__newer,
 .pager__older {
   display: table-cell;
 }
 
-.pager__archives {
+.pager__ref {
   width: 36%;
   text-align: center;
 }

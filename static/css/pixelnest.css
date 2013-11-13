@@ -487,20 +487,21 @@ li {
     margin-top: 20px; } }
 .pager {
   position: relative;
-  bottom: -140px;
   display: table;
   margin: 0 auto;
   padding-top: 20px;
   width: 100%;
   border-top: 1px solid #eee;
   color: #bbb; }
+  .pager.bottom {
+    bottom: -140px; }
 
-.pager__archives,
+.pager__ref,
 .pager__newer,
 .pager__older {
   display: table-cell; }
 
-.pager__archives {
+.pager__ref {
   width: 36%;
   text-align: center; }
 
@@ -529,20 +530,28 @@ li {
   font-style: italic; }
 
 .tutorial .page-header {
-  position: relative;
   margin-bottom: 60px;
-  padding: 10px;
+  padding: 12px 10px;
   background-color: rgba(240, 240, 240, 0.8);
   font-size: 0.8em; }
-  .tutorial .page-header p {
-    display: inline; }
+  .tutorial .page-header nav {
+    display: table;
+    width: 100%; }
+  .tutorial .page-header .page-back,
+  .tutorial .page-header .page-ref,
   .tutorial .page-header .page-link {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    margin: 0;
+    display: table-cell;
+    width: 25%; }
+  .tutorial .page-header .page-back {
+    text-align: left; }
+  .tutorial .page-header .page-ref {
+    text-align: center;
+    padding: 0 10px;
+    width: 50%; }
+  .tutorial .page-header .page-link {
     text-align: right; }
+.tutorial .entry {
+  margin-bottom: 40px; }
 .tutorial .page-footer {
   background-color: transparent;
   color: #888888; }
@@ -606,7 +615,7 @@ li {
   text-align: center; }
   .ie .pager .pager__older {
     display: inline; }
-  .ie .pager .pager__archives {
+  .ie .pager .pager__ref {
     display: inline;
     margin: 0 100px; }
   .ie .pager .pager__newer {

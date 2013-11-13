@@ -6,29 +6,35 @@
 
   // Small header
   .page-header {
-    // Padding
-    $distance: 10px;
-
-    position: relative;
-
     margin-bottom: 60px;
-    padding: $distance;
+    padding: 12px 10px;
     background-color: rgba(240, 240, 240, 0.8);
 
     font-size: 0.8em;
 
-    p {
-      display: inline;
+    nav {
+      display: table;
+      width: 100%;
     }
 
-    // Put at the right end of the header
+    .page-back,
+    .page-ref,
     .page-link {
-      display: inline-block;
-      position: absolute;
-      top: $distance;
-      right: $distance;
-      margin: 0;
+      display: table-cell;
+      width: 25%;
+    }
 
+    .page-back {
+      text-align: left;
+    }
+
+    .page-ref {
+      text-align: center;
+      padding: 0 10px;
+      width: 50%;
+    }
+
+    .page-link {
       text-align: right;
     }
 
@@ -37,6 +43,9 @@
     }
   }
 
+  .entry {
+    margin-bottom: 40px;
+  }
 
   // Light footer
   .page-footer {

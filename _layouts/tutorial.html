@@ -10,16 +10,23 @@
 
     <!-- reduced header -->
     <header class="page-header">
+      <nav>
+        <!-- menu -->
+        <section class"page-back">
+          <a href="/">← Back to Pixelnest</a>
+        </section>
 
-      <!-- menu -->
-      <p class"page-back">
-        <a href="/">← Back to Pixelnest</a>
-      </p>
+        <section class="page-ref">
+          {% if page.home and page.tutorial %}
+          Tutorial : <a href="{{ page.home }}">{{ page.tutorial }}</a>
+          {% endif %}
+        </section>
 
-      <!-- twitter -->
-      <p class="page-link">
-        <a href="http://twitter.com/pixelnest">follow us on twitter</a>
-      </p>
+        <!-- twitter -->
+        <section class="page-link">
+          <a href="http://twitter.com/pixelnest">follow us on twitter</a>
+        </section>
+      </nav>
     </header>
 
     <div class="page-content">
@@ -27,7 +34,7 @@
       <!-- post layout -->
       <article class="entry">
         <h2 class="entry__title">
-          <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+          <a href="{{ page.url | remove: 'index.html' }}" title="{{ page.title }}">{{ page.title }}</a>
         </h2>
 
         <aside class="entry__metadata">
@@ -45,6 +52,26 @@
         </section>
       </article>
       <!-- end post layout -->
+
+      <!-- start pagination -->
+      <div class="pager">
+        <section class="pager__older">
+        {% if page.previous %}
+          <a href="{{ page.previous }}" title="Previous chapter">← Previous</a>
+        {% endif %}
+        </section>
+
+        <section class="pager__ref">
+          <a href="{{ page.url | remove: 'index.html' }}" title="Summary">Summary</a>
+        </section>
+
+        <section class="pager__newer">
+        {% if page.next %}
+          <a href="{{ page.next }}" title="Next chapter">Next →</a>
+        {% endif %}
+        </section>
+      </div>
+      <!-- end pagination -->
 
     </div>
 
