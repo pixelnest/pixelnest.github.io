@@ -25,7 +25,7 @@ Get more information about our [licenses on GitHub](https://github.com/pixelnest
 
 The source code is available on our [GitHub repository](https://github.com/pixelnest/2d-game-unity-tutorial).
 
-## Chapters
+## Chapters <span id="summary"></span>
 
 [  ![Unity][unity_logo_url]  ][unity_logo_url]
 

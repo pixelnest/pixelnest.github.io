@@ -61,9 +61,11 @@
         {% endif %}
         </section>
 
+        {% if page.home %}
         <section class="pager__ref">
-          <a href="{{ page.url | remove: 'index.html' }}" title="Summary">Summary</a>
+          <a href="{{ page.home | remove: 'index.html' }}#summary" title="Summary">Summary</a>
         </section>
+        {% endif %}
 
         <section class="pager__newer">
         {% if page.next %}
