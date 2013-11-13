@@ -9,14 +9,14 @@ tutorial:
   link: ../
 
 links:
-  summary: ../#summary
+  summary: ../table-of-contents
   previous: ../animations
 ---
 
 Better values:
 
 Player scale:0.2x0.2x1
-Player speed (Player script) : 25, 25 
+Player speed (Player script) : 25, 25
 
 Enemy scale: 0.3x0.3x1
 Enemy speed (Move script) : 5, 5

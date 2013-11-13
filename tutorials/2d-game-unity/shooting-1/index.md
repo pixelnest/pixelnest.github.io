@@ -9,7 +9,7 @@ tutorial:
   link: ../
 
 links:
-  summary: ../#summary
+  summary: ../table-of-contents
   previous: ../player-and-enemies
   next: ../shooting-2
 ---

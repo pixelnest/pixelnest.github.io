@@ -9,7 +9,7 @@ tutorial:
   link: ../
 
 links:
-  summary: ../#summary
+  summary: ../table-of-contents
   previous: ../sounds
   next: ../deployment
 ---

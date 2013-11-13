@@ -9,7 +9,7 @@ tutorial:
   link: ../
 
 links:
-  summary: ../#summary
+  summary: ../table-of-contents
   previous: ../shooting-2
   next: ../particles
 ---
