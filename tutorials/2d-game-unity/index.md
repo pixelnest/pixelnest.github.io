@@ -52,7 +52,7 @@ This tutorial is mainly redacted by [Damien][dam_twitter_link], and edited by [M
 
 <br />
 
-So, are you ready ? Let's dive into Unity!
+So, are you ready? Let's dive into Unity!
 
 [unity_logo_url]: ./-img/unity.png
 [result]: ./-img/result.png
