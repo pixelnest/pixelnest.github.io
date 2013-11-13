@@ -48,7 +48,7 @@ If you want further informations about a specific topic, or a clarification on a
 
 Finally, you can follow us on [twitter][pxn_twitter_link] if you like what we do. :)
 
-This tutorial is redacted by [Damien][dam_twitter_link], and edited by [Matthieu][mog_twitter_link]. We hope you will enjoy it.
+This tutorial is mainly redacted by [Damien][dam_twitter_link], and edited by [Matthieu][mog_twitter_link]. We hope you will enjoy it.
 
 <br />
 
