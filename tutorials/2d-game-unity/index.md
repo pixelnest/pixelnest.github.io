@@ -30,9 +30,9 @@ This tutorial is made with the Unity 4.3 **FREE** version.
 
 [ ![Unity][unity_logo_url] ][unity_download_link]
 
-# Licencing
+# Licensing
 
-- The assets and arts are licenced under a [CC-BY-NC][cc_licence_link] attribution. They have been made by [Thibault Person][tp_twitter_link] for the game [The Great Paper Adventure][tgpa_link].
+- The assets and arts are licensed under a [CC-BY-NC][cc_licence_link] attribution. They have been made by [Thibault Person][tp_twitter_link] for the game [The Great Paper Adventure][tgpa_link].
 
 - The source code belongs to Pixelnest Studio and is released under a [MIT licence][mit_licence_link].
 
