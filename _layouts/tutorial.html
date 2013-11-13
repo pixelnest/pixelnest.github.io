@@ -17,8 +17,8 @@
         </section>
 
         <section class="page-ref">
-          {% if page.home and page.tutorial %}
-          Tutorial : <a href="{{ page.home }}">{{ page.tutorial }}</a>
+          {% if page.tutorial.link and page.tutorial.name %}
+          Tutorial : <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
           {% endif %}
         </section>
 
@@ -34,20 +34,20 @@
       <!-- start pagination -->
       <div class="pager pager--top-separator pager--em">
         <section class="pager__older">
-        {% if page.previous %}
-          <a href="{{ page.previous }}" title="Previous chapter">← Previous</a>
+        {% if page.links.previous %}
+          <a href="{{ page.links.previous }}" title="Previous chapter">← Previous</a>
         {% endif %}
         </section>
 
-        {% if page.home %}
+        {% if page.links.summary %}
         <section class="pager__ref">
-          <a href="{{ page.home | remove: 'index.html' }}#summary" title="Summary">Summary</a>
+          <a href="{{ page.links.summary | remove: 'index.html' }}" title="Summary">Summary</a>
         </section>
         {% endif %}
 
         <section class="pager__newer">
-        {% if page.next %}
-          <a href="{{ page.next }}" title="Next chapter">Next →</a>
+        {% if page.links.next %}
+          <a href="{{ page.links.next }}" title="Next chapter">Next →</a>
         {% endif %}
         </section>
       </div>
@@ -78,20 +78,20 @@
       <!-- start pagination -->
       <div class="pager pager--bottom-separator pager--em">
         <section class="pager__older">
-        {% if page.previous %}
-          <a href="{{ page.previous }}" title="Previous chapter">← Previous</a>
+        {% if page.links.previous %}
+          <a href="{{ page.links.previous }}" title="Previous chapter">← Previous</a>
         {% endif %}
         </section>
 
-        {% if page.home %}
+        {% if page.links.summary %}
         <section class="pager__ref">
-          <a href="{{ page.home | remove: 'index.html' }}#summary" title="Summary">Summary</a>
+          <a href="{{ page.links.summary | remove: 'index.html' }}" title="Summary">Summary</a>
         </section>
         {% endif %}
 
         <section class="pager__newer">
-        {% if page.next %}
-          <a href="{{ page.next }}" title="Next chapter">Next →</a>
+        {% if page.links.next %}
+          <a href="{{ page.links.next }}" title="Next chapter">Next →</a>
         {% endif %}
         </section>
       </div>
