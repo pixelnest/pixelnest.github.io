@@ -14,12 +14,6 @@ links:
   next: ../menus
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 We will add sounds and a music to our game. It very simple in Unity, but it is a very important part.
 
 You will learn where to find sounds and music, pick some, and play them in our game via a script.

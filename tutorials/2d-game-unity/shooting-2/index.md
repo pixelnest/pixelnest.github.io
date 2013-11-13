@@ -14,12 +14,6 @@ links:
   next: ../parallax-scrolling
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 Our magnificent ship is now shooting innocent flying octopuses.
 This can't be like that. They need to respond. Shoot the player.
 

@@ -14,12 +14,6 @@ links:
   next: ../deployment
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 I must say it immediately: Menus and GUI are no fun in a game. You usually have to use a too basic GUI framework (or no framework at all), it takes a lot of time and the result is just... menus that players will skip as fast as possible.
 
 Fortunately, Unity is quite cool for game GUIs and menus, you will see why.

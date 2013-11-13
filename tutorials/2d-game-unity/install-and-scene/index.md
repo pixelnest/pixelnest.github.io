@@ -14,12 +14,6 @@ links:
   next: ../background-and-camera
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 In this first chapter you will find very basics information: links to download and install Unity and then we will prepare our first scene for a game.
 
 ## Install Unity

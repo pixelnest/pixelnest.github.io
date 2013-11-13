@@ -14,12 +14,6 @@ links:
   next: ../shooting-2
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 Our player ship is facing an enemy but cannot do anything...
 Let's grant him a weapon and some ammo! This will mainly require scripting but it worth it.
 

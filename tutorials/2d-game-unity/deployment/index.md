@@ -14,12 +14,6 @@ links:
   next: ../animations
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 A short last part about how to do an executable that you can distribute.
 
 ## Build settings again

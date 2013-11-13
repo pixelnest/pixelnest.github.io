@@ -14,12 +14,6 @@ links:
   next: ../player-and-enemies
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 Using the empty project we created in the step before, we will now see how to add a background and some fancy clouds.
 
 [Download the project from step 1]()

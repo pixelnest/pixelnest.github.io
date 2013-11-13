@@ -14,12 +14,6 @@ links:
   next: ../shooting-1
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 We have a background, some props, it is time to add some useful game elements, like the player!
 
 ## Creating the player sprite

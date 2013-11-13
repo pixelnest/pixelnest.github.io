@@ -14,12 +14,6 @@ links:
   next: ../sounds
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 Let's do more graphics and less code. Particles are usually very simple sprites that will be repeated and displayed for a very short time.
 
 Think of explosions, lasers, smoke... Those are sometimes particles (explosion can be a simple animated sprite).

@@ -14,12 +14,6 @@ links:
   next: ../particles
 ---
 
-## Chapters
-
-<Sommaire ici>
-
-## Summary
-
 It is time to enhance our background and scene. One effect you find in every single 2D game since 15 years is [the parallax scrolling](http://en.wikipedia.org/wiki/Parallax_scrolling).
 
 It's a cool and easy to achieve effect that makes a nice scrolling effect. Shoot them up are usually using the scrolling (except the original one, Space Invaders) so I find it interesting to implement it in Unity.
