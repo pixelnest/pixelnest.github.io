@@ -32,11 +32,11 @@ This tutorial is made with the Unity 4.3 **FREE** version.
 
 # Licensing
 
-- The assets and arts are licensed under a [CC-BY-NC][cc_licence_link] attribution. They have been made by [Thibault Person][tp_twitter_link] for the game [The Great Paper Adventure][tgpa_link].
+- The assets and arts are licensed under a [CC-BY-NC][cc_license_link] attribution. They have been made by [Thibault Person][tp_twitter_link] for the game [The Great Paper Adventure][tgpa_link].
 
-- The source code belongs to Pixelnest Studio and is released under a [MIT licence][mit_licence_link].
+- The source code belongs to Pixelnest Studio and is released under a [MIT license][mit_license_link].
 
-Get more information about our [licenses on GitHub][github_licence_link].
+Get more information about our [licenses on GitHub][github_license_link].
 
 The source code is available on our [GitHub repository][github_repo_link].
 
@@ -68,7 +68,7 @@ So, are you ready? Let's dive into Unity!
 [dam_twitter_link]: http://twitter.com/valryon "Damien Mayance Twitter"
 [mog_twitter_link]: http://twitter.com/solarsailer "Matthieu Oger Twitter"
 [unity_download_link]: http://unity3d.com/unity/download "Download Unity 4.3"
-[cc_licence_link]: http://creativecommons.org/licenses/by-nc/2.0/fr/ "CC-BY-NC"
-[mit_licence_link]: http://choosealicense.com/licenses/mit/ "MIT Licence"
+[cc_license_link]: http://creativecommons.org/licenses/by-nc/2.0/fr/ "CC-BY-NC"
+[mit_license_link]: http://choosealicense.com/licenses/mit/ "MIT license"
 [github_repo_link]: https://github.com/pixelnest/2d-game-unity-tutorial "Repository"
-[github_licence_link]: https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md "Repository licence"
+[github_license_link]: https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md "Repository license"
