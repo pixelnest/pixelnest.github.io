@@ -74,6 +74,7 @@ it could be quite the same as for music. But sound needs to be triggered at the 
 For that, I propose a simple solution. Just like the _SpecialEffectsHelper_, we will have a helper script for sounds that you can call from everywhere.
 
 This new script is "SoundEffectsHelper" and is made of:
+
 ````csharp
 using UnityEngine;
 using System.Collections;
