@@ -88,7 +88,7 @@ You now face a nice empty scene. Here is the layout we are using but you should 
 
 Before jumping into the game creation take a few minutes to organize your project and scene.
 
-We advise to create folder from the Unity inspector to organize your stuff. Those folder will technically be created in the _Assets_ folder of your project. Here is a simple hierarchy, you can adapt it to your needs:
+We advise to create folders from the Unity inspector to organize your stuff. Those folders will technically be created in the _Assets_ folder of your project. Here is a simple hierarchy, you can adapt it to your needs:
 
 [ ![Folders][unity_folders] ][unity_folders]
 
@@ -98,7 +98,7 @@ We advise to create folder from the Unity inspector to organize your stuff. Thos
 - Scripts: all the code goes here
 - **Textures**: sprites, images of your game. Keep this name! Unity will recognize it and automate some tasks.
 
-Now The scene. Create empty objects and use them as "folder".
+Now The scene. Create empty objects and use them as "folders" too.
 
 [ ![Logicial objects][unity_logical_objects] ][unity_logical_objects]
 
@@ -121,7 +121,7 @@ We are still far from a game, right?
 Next step we will start fun things: adding a background and some elements!
 
 
-[unity_logo_url]: ./-img/Unity.png
+[unity_logo_url]: ./-img/unity.png
 [unity_create_project]: ./-img/create_project.png
 [unity_empty_project]: ./-img/empty_project.png
 [unity_folders]: ./-img/folders.png
