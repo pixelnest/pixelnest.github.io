@@ -3,8 +3,8 @@ layout: tutorial
 title: Parallax scrolling
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-05-shooting-2
-next_link: ../part-07-particles
+previous: ../part-05-shooting-2
+next: ../part-07-particles
 ---
 
 ## Chapters
@@ -19,9 +19,9 @@ It's a cool and easy to achieve effect that makes a nice scrolling effect. Shoot
 
 ## Theorical part: defining the parallax in our game
 
-How are we gonna use the parallax? 
+How are we gonna use the parallax?
 
-### Moving the camera or level on a treadmill 
+### Moving the camera or level on a treadmill
 
 Is it the player and the camera that moves or is the player and the camera static and the level is on a sort of treadmill?
 
@@ -168,7 +168,7 @@ For a convincing result, add elements to the scene:
 - Duplicate the backgrounds part and make them follow the two previous ones.
 - Add small platforms in the background elements layer
 - Add platforms in the middleground layer
-- Add enemies far from the camera on the right 
+- Add enemies far from the camera on the right
 
 The result, with the editor view that I find interesting to see:
 
@@ -190,7 +190,7 @@ For a filled background, notice that you need a minimum size to cover all the ca
 
 So the idea is we will get every children on the layer and check its renderer. So it won't work for invisible objects (as the one handling scripts) but I am not sure there is a use case where you need them to repeat too.
 
-We will a nice method to check whether an object's renderer is visible or not. I found it on [the community wiki](http://wiki.unity3d.com/index.php?title=IsVisibleFrom). It is not a class or a script, it's a C# extension. 
+We will a nice method to check whether an object's renderer is visible or not. I found it on [the community wiki](http://wiki.unity3d.com/index.php?title=IsVisibleFrom). It is not a class or a script, it's a C# extension.
 
 Create a new C# file named "RendererExtensions.cs" and fill it with:
 `````csharp
@@ -261,7 +261,7 @@ public class ScrollingScript : MonoBehaviour
         }
       }
 
-      // Sort by position 
+      // Sort by position
       // REM: left from right here, we would need to add few conditions to handle all scrolling directions
       backgroundPart = backgroundPart.OrderBy(t => t.position.x).ToList();
     }
@@ -334,7 +334,7 @@ Let's update _EnemyScript_ so it will:
 
 - disable moving and shooting at start
 - check when the enemy's renderer is in camera sight
-- destroy when the enemy fully leave the camera 
+- destroy when the enemy fully leave the camera
 
 `````csharp
 using UnityEngine;
@@ -453,7 +453,7 @@ Open _PlayerScript_, and add this at the end of the "Update()" method.
               Mathf.Clamp(transform.position.x, leftBorder, rightBorder),
               Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
               transform.position.z
-              ); 
+              );
   }
 `````
 
@@ -463,7 +463,7 @@ It is not complicated, just verbose: we get the camera edges and we make sure th
 
 We now have a scrolling shooter! The code is for right to left scrolling only as I didn't want to have too big scripts but you should be able to enhance that in few more lines.
 
-The game really need some tweaks to be playable: 
+The game really need some tweaks to be playable:
 
 - Reducing sprite sizes
 - Adjusting speeds
@@ -471,7 +471,7 @@ The game really need some tweaks to be playable:
 
 You can have fun doing that, or wait to read what Matthieu has written about it for you in few steps.
 
-So we have a level, enemies that can move (try to change their direction in y to get new patterns). 
+So we have a level, enemies that can move (try to change their direction in y to get new patterns).
 
 We will some fun stuff now, first particles then sounds!
 

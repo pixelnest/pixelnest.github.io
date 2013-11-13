@@ -3,8 +3,8 @@ layout: tutorial
 title: The shooting (2/2)
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-04-shooting-1
-next_link: ../part-06-parallax-scrolling
+previous: ../part-04-shooting-1
+next: ../part-06-parallax-scrolling
 ---
 
 ## Chapters
@@ -16,7 +16,7 @@ next_link: ../part-06-parallax-scrolling
 Our magnificent ship is now shooting innocent flying octopuses.
 This can't be like that. They need to respond. Shoot the player.
 
-Using what we did in the last part, we will modify the enemy behavior so it will shoots projectiles too. 
+Using what we did in the last part, we will modify the enemy behavior so it will shoots projectiles too.
 
 ## The enemy projectile
 
@@ -161,9 +161,9 @@ Finally, update the shot speed (in the _MoveScript_) so they go faster than the 
 
 Here we are a super dangerous Poulpi. Of course we need to tweak the variable to make a real game.
 
-### Bonus: firing in two direction 
+### Bonus: firing in two direction
 
-Add another weapon and the enemy fire in two direction. This is just a few clicks and a duplication in the editor, no scripts! 
+Add another weapon and the enemy fire in two direction. This is just a few clicks and a duplication in the editor, no scripts!
 
 The result:
 
@@ -187,7 +187,7 @@ This is just some hints to go further on the shooting feature. You can skip it i
 
 As you shoot you will see game objects being created and removed only after 20 seconds
 .
-If you are doing a danmaku and need a LOT of bullets, this is not a viable technique. 
+If you are doing a danmaku and need a LOT of bullets, this is not a viable technique.
 
 One of the solution to handle a lot of bullet is to use a **pooling system**. You can simply use an array of bullets, limited in size. When if the array is filled, you delete the oldest object and replace it by a new one.
 
@@ -199,17 +199,17 @@ Remember also that Unity is really slow on the _Instantiate_ method, you need to
 
 ### Starting with delay
 
-Simply watching the gif, you should see how synchronous all enemies are. 
+Simply watching the gif, you should see how synchronous all enemies are.
 We could simply add a delay to the weapon: it's just initializing the cooldown to something else than 0.
 
-This would allow to have weapon still shooting continuously but all in the same time (why not "top" then, 0.5 sec later, "bottom"); 
+This would allow to have weapon still shooting continuously but all in the same time (why not "top" then, 0.5 sec later, "bottom");
 
 Once again, it depends on the gameplay you want to achieve.
 
 ## Ready for the next step
 
 We now have a shooter! A very basic and hardcore one, but still a shooter.
-You can add more enemies and shoot them. 
+You can add more enemies and shoot them.
 
 [![Result][result]][result]
 

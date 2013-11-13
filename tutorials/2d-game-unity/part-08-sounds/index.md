@@ -3,8 +3,8 @@ layout: tutorial
 title: Making some noise and adding music
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-07-particles
-next_link: ../part-09-menus
+previous: ../part-07-particles
+next: ../part-09-menus
 ---
 
 ## Chapters
@@ -13,7 +13,7 @@ next_link: ../part-09-menus
 
 ## Summary
 
-We will add sounds and a music to our game. It very simple in Unity, but it is a very important part. 
+We will add sounds and a music to our game. It very simple in Unity, but it is a very important part.
 
 You will learn where to find sounds and music, pick some, and play them in our game via a script.
 
@@ -25,7 +25,7 @@ For a game developer, you can:
 
 - Buy sounds
 - Use free sounds from sound banks (like [FindSounds](http://www.findsounds.com/))
-- Record your own sounds 
+- Record your own sounds
 
 Then you can modify and mix sounds with Audacity.
 
@@ -37,7 +37,7 @@ Let's create an explosion and a shot sound. If you are lazy, you can use mine:
 
 - [Download the player shot sound][sound_shot_player]
 - [Download the enemy shot sound][sound_shot_enemy]
-- [Download the explosion sound][sound_explosion]  
+- [Download the explosion sound][sound_explosion]
 
 For musics, it depends of what you want, but [Jamendo](http://www.jamendo.com/) has a ton of artists. Be careful with the licenses for commercial uses.
 This is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1), and as I really loved his music he authorized me to use them in The Great Paper Adventure.
@@ -149,7 +149,7 @@ I think we have a pretty good basis for a shoot them up game. You can make a lon
 
 We are far from a full game, but I'll stop here for the gameplay part.
 
-Now we will see build and deployment features provided by Unity to complete this development cycle. 
+Now we will see build and deployment features provided by Unity to complete this development cycle.
 
 [Take me to the next step]()
 

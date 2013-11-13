@@ -3,8 +3,8 @@ layout: tutorial
 title: The player and some enemies
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-02-background-and-camera
-next_link: ../part-04-shooting-1
+previous: ../part-02-background-and-camera
+next: ../part-04-shooting-1
 ---
 
 ## Chapters
@@ -33,13 +33,13 @@ Sprite creation procedure:
 Place it in the "0 - Foreground" layer.
 Change its scale: 0.3x0.3x1 should be fine.
 
-Add a _Box collider 2D_. This is our **Hitbox**. You can see it in the editor and tweak it's size in the inspector. Here, with a size of 10x10x1, it's way too large for a real shoot them up but it's still smaller than the sprite: 
+Add a _Box collider 2D_. This is our **Hitbox**. You can see it in the editor and tweak it's size in the inspector. Here, with a size of 10x10x1, it's way too large for a real shoot them up but it's still smaller than the sprite:
 
 [![Player hitbox][hitbox]][hitbox]
 
 **Tip:** if you plan to make a shoot them up, spend a lot of time tweaking your hitboxes. It should perfectly fit an element from the player sprite. What about the ship window here? You can change the collider's shape, for a Circle collider 2D_ for example, it change nothing to the behavior thanks to Unity.
 
-**Remark:** If you want a super precise hitbox, use the _Polygon Collider 2D_. It is less efficient but allows you to shape the exact collider you want using your mouse in the editor. 
+**Remark:** If you want a super precise hitbox, use the _Polygon Collider 2D_. It is less efficient but allows you to shape the exact collider you want using your mouse in the editor.
 
 Save the prefab. You now have a player base!
 
@@ -86,10 +86,10 @@ Default script come with **Start** and **Update**. Here is a short list of the m
 - ``Start()``: called after Awake()
 - ``Update()``: main loop
 - ``Destroy()``: object is destroyed, last chance to execute some code
-- ``OnCollisionEnter(CollisionInfo info)``: a collider is touching the object collider 
+- ``OnCollisionEnter(CollisionInfo info)``: a collider is touching the object collider
 - ``OnCollisionExit(CollisionInfo info)``: a collider is not touching anymore the object collider
 - ``OnTriggerEnter(Collider otherCollider)``: a collider marked as trigger is touching the object collider
-- ``OnTriggerExit(Collider otherCollider)``: a collider marked as trigger is touching the object collider  
+- ``OnTriggerExit(Collider otherCollider)``: a collider marked as trigger is touching the object collider
 
 We will get back on some of them in details when we will be using them.
 
@@ -197,7 +197,7 @@ Save the prefab... and that's it!
 
 We will script a simple behavior: it will just moves in a direction.
 
-Create a new script "MoveScript". 
+Create a new script "MoveScript".
 
 We could have call it "EnemyScript", but we could reuse it later in another context. Also, the modularity provided by Unity component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters, it's your choice.
 
@@ -240,7 +240,7 @@ public class MoveScript : MonoBehaviour
 
 ```
 
-Add it to the enemy. Hit play, it should move like beyond. 
+Add it to the enemy. Hit play, it should move like beyond.
 
 [![Enemy is now moving][moving_enemy]][moving_enemy]
 

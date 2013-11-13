@@ -3,8 +3,8 @@ layout: tutorial
 title: The shooting (1/2)
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-03-player-and-enemies
-next_link: ../part-05-shooting-2
+previous: ../part-03-player-and-enemies
+next: ../part-05-shooting-2
 ---
 
 ## Chapters
@@ -19,10 +19,10 @@ Let's grant him a weapon and some ammo! This will mainly require scripting but i
 ## Player projectile
 
 To make the player shot some projectile, we need to define the related game object it will be using. The sprite:
- 
+
 [![Shot Sprite][shot]][shot]
 
-And we will be using prefabs, so we will create multiple instances of the same object.  
+And we will be using prefabs, so we will create multiple instances of the same object.
 
 ### Preparing the prefab
 
@@ -36,14 +36,14 @@ Set a scale of 0.75x0.75x1 so it will looks good.
 
 We have a new setting:
 
-- In the box collider, check the "IsTrigger" property. 
+- In the box collider, check the "IsTrigger" property.
 
 **Trigger colliders** means they will raise en event when colliding but they won't be used for the physic simulation.
 That means that a shot will not move an object on touching, but the touched object will have it's "OnTriggerEnter" event raised.
 
 Tada, you have a shot! Time to script the behavior
 
-Create a new script "ShotScript": 
+Create a new script "ShotScript":
 
 - 0 - designer variables for the speed, direction, damages
 - 1 - destroy after 20 seconds to avoid any leaks
@@ -86,7 +86,7 @@ You should have this configuration:
 
 [![Shot configuration 1][shot_config1]][shot_config1]
 
-If you play, you will see the shot moving. 
+If you play, you will see the shot moving.
 
 ### Collisions and damages
 
@@ -149,11 +149,11 @@ If the enemy has more health than the shot damages, he will survive. Try to chan
 
 ### Firing prefab shots
 
-Delete the shot in the scene, it has nothing to do there now that we finished its preparation. 
+Delete the shot in the scene, it has nothing to do there now that we finished its preparation.
 
 Once again, a new reusable script. Create a new one called "WeaponScript".
 
-We will create a script that can be reused everywhere (players, enemies and why not something else). Its purpose is to instantiate a projectile in front of the gameobject it is attached to. 
+We will create a script that can be reused everywhere (players, enemies and why not something else). Its purpose is to instantiate a projectile in front of the gameobject it is attached to.
 
 #### The full Weapon script
 
@@ -213,7 +213,7 @@ public class WeaponScript : MonoBehaviour
     {
       shootCooldown = ShootingRate;
 
-      // Create a new shot 
+      // Create a new shot
       var shotTransform = Instantiate(ShotPrefab) as Transform;
 
       // Assign position
@@ -251,11 +251,11 @@ public class WeaponScript : MonoBehaviour
 
 **Before getting the explanation, attach it to the player.**
 
-The script is divided in three part. 
+The script is divided in three part.
 
 #### 1/ Variables that will appear in the inspector
 
-We need it to set the shot that will be used for this weapon. 
+We need it to set the shot that will be used for this weapon.
 
 Look at your player. In the new _WeaponScript_ you can see a field "Shot Prefab : None".
 
@@ -309,7 +309,7 @@ In the update method, after or before movement (doesn't matter at this point) ad
 
 - We read the input from a fire button (click or ctrl by default).
 - We retrieve the weapon's script
-- We call _Attack_ 
+- We call _Attack_
 
 Try and see the result. You should get this:
 

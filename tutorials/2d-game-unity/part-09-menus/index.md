@@ -3,8 +3,8 @@ layout: tutorial
 title: Menu - loading and restarting the game
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-08-sounds
-next_link: ../part-10-deployment
+previous: ../part-08-sounds
+next: ../part-10-deployment
 ---
 
 ## Chapters
@@ -35,15 +35,15 @@ Import those files in the project. Maybe you can put them in a "Menu" subfolder 
 
 Nearly all games have a title screen. It's where the player lands when the game has finished to launch and before the game really.
 
-Some are just awesome and memorable: Megaman, Metal Slug... (I'm a big fan of title screens). 
+Some are just awesome and memorable: Megaman, Metal Slug... (I'm a big fan of title screens).
 
-What we will create will not be that awesome, it will be... simple! 
+What we will create will not be that awesome, it will be... simple!
 
 ### Scene creation
 
 First, create a new scene:
 
-_File->Create->New scene_. 
+_File->Create->New scene_.
 
 Save it in the "Scenes" folder as "Menu".
 
@@ -56,7 +56,7 @@ Our menu will be made of:
 
 I think you are now able to reproduce the scene with the following information:
 
-Background 
+Background
 
 - Like any other sprite we did before (quad, texture, etc)
 - Position at (0,0,1)
@@ -109,7 +109,7 @@ public class MenuScript : MonoBehaviour
 }
 ````
 
-We are just drawing a button, that will load a new scene when the player click on it. 
+We are just drawing a button, that will load a new scene when the player click on it.
 
 Create an empty "Scripts" object add this new script as a component.
 
@@ -117,7 +117,7 @@ Launch the game to see it:
 
 [ ![Button result][result2]][result2]
 
-Click and... crash! 
+Click and... crash!
 
 	Level 'Stage1' (-1) couldn't be loaded because it has not been added to the build settings. To add a level to the build settings use the menu File->Build Settings...
 
@@ -234,7 +234,7 @@ Here you can tweak the UI controls to get something more fancy.
 
 You just made the new best selling game. But it's only on your computer for now.
 
-Last step: deploying on another machine, but it a PC, a mobile or a console... 
+Last step: deploying on another machine, but it a PC, a mobile or a console...
 
 [Take me to this last part]()
 

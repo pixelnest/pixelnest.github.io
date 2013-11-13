@@ -3,8 +3,8 @@ layout: tutorial
 title: Adding particles
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-06-parallax-scrolling
-next_link: ../part-08-sounds
+previous: ../part-06-parallax-scrolling
+next: ../part-08-sounds
 ---
 
 ## Chapters
@@ -19,7 +19,7 @@ Think of explosions, lasers, smoke... Those are sometimes particles (explosion c
 
 Unity provide a powerful built-in editor for particles, the **Shuriken Engine**. Let's see what we can do with it.
 
-## Particles prefabs for an explosion 
+## Particles prefabs for an explosion
 
 We will make an explosion that we will use when enemies or player are destroyed. This involve to:
 
@@ -37,7 +37,7 @@ I recommend you to work on an empty part of the scene (or in an empty scene) so 
 Zooming on your particles, you will see a continuous flow of sparks:
 
 [![Creating a new particle system][new_particle_system]][new_particle_system]
- 
+
 Notice the new window with "Pause" and "Stop" and the inspector. Yes, your inspector is now filled with dozen of fields related to the particle. And that's all the fun!
 
 The sprite
@@ -296,7 +296,7 @@ Open _HealthScript. We will check when the game object is destroyed and display 
 We will just add one line:
 
 ````
-SpecialEffectsHelper.Instance.Explosion(transform.position); 
+SpecialEffectsHelper.Instance.Explosion(transform.position);
 ````
 
 Giving us this:
@@ -323,13 +323,13 @@ Click to see the animation:
 
 [ ![Explosions in action][explosions]][explosions_gif]
 
-Not bad, right? The fire is not very nice but it could be replaced by a sprite. 
+Not bad, right? The fire is not very nice but it could be replaced by a sprite.
 
 But it's up to you to make beautiful explosions using particles, now you have an idea how it works ;).
 
 ## Ready for the next step
 
-Particles are always a fun part of the game. 
+Particles are always a fun part of the game.
 
 It can also be a time eating feature as you will probably want to tweak effects rather that code boring features like high-scores. As James Silva  wrote in [Building XNA 2.0 games](http://www.amazon.com/Building-XNA-2-0-Games-Professionals/dp/1430209798), work on particles at the end of the development or the other tasks will quickly lose interest. Or ask someone to make them for you.
 

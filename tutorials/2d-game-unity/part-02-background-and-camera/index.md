@@ -3,8 +3,8 @@ layout: tutorial
 title: Adding and displaying a background
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-01-install-and-scene
-next_link: ../part-03-player-and-enemies
+previous: ../part-01-install-and-scene
+next: ../part-03-player-and-enemies
 ---
 
 ## Chapters
@@ -23,18 +23,18 @@ Your first background will be static. We will use the following image:
 
 [  ![TGPA background][background]  ][background]
 
-Import the image in the _Textures_ folder (simply copy the file in it). Do not worry about the import settings for now. 
+Import the image in the _Textures_ folder (simply copy the file in it). Do not worry about the import settings for now.
 
 In Unity, create a new game object. **A sprite**.
 
 [  ![New sprite][new_sprite]  ][new_sprite]
 
-What is a sprite? 
+What is a sprite?
 
 In general, we call sprite a 2D image displayed in a video game. Here it's a Unity specific object made for 2D games.
 
 Unity may have set automatically your background as the sprite to display. If not, or if you want to change, go to the inspector and select "background":
- 
+
 [  ![Select a sprite][sprite_select]  ][sprite_select]
 
 We have set a simple cloudy background. Let's reorganize the scene.

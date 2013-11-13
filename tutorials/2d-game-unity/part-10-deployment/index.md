@@ -3,8 +3,8 @@ layout: tutorial
 title: Build, release and deployment
 subtitle: Creating a 2D game with Unity
 author: Damien
-previous_link:../part-09-menus
-next_link: ../part-11-animations
+previous: ../part-09-menus
+next: ../part-11-animations
 ---
 
 ## Chapters
@@ -50,7 +50,7 @@ There is not much to say for the PC build. Choosing the PC platform, you will be
 
 [ ![pc_target][pc_target]][pc_target]
 
-And that's all! Unity is really for deployment. 
+And that's all! Unity is really for deployment.
 
 ## Deploying on mobile
 
@@ -73,7 +73,7 @@ This is tweaking and optimization, you should do that at the end of your develop
 That's it. You made it. This tutorial is over.
 Well, there is a bonus level, we gathered some useful resources on specific topic that can interest you.
 
-You probably don't feel ready to make a full 2D game but you probably are. 
+You probably don't feel ready to make a full 2D game but you probably are.
 
 Now it's up to you to look for more resources specific to your game idea and, most of all, it's up to you to start your project.
 
