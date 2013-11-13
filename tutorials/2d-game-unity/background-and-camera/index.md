@@ -143,18 +143,15 @@ You learned how to create a simple static background and how to display it prope
 
 Now we will see how to add the player and enemies.
 
-[Take me to the next step]()
 
-
-[background]: ./img/background.png
-[platforms]: ./img/platforms.png
-
+[background]: ./-img/background.png
+[platforms]: ./-img/platforms.png
 [new_sprite]: ./img/new_sprite.png
-[sprite_select]: ./img/sprite_select.png
-[display_background]: ./img/display_background.png
-[background2_in_place]: ./img/background2_in_place.png
-[sprite_multiple]: ./img/sprite_multiple.png
-[sprite_editor]: ./img/sprite_editor.png
-[sprite_editor_result]: ./img/sprite_editor_result.png
-[adding_platforms]: ./img/adding_platforms.png
-[layers_3d]: ./img/layers.gif
+[sprite_select]: ./-img/sprite_select.png
+[display_background]: ./-img/display_background.png
+[background2_in_place]: ./-img/background2_in_place.png
+[sprite_multiple]: ./-img/sprite_multiple.png
+[sprite_editor]: ./-img/sprite_editor.png
+[sprite_editor_result]: ./-img/sprite_editor_result.png
+[adding_platforms]: ./-img/adding_platforms.png
+[layers_3d]: ./-img/layers.gif

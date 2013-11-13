@@ -256,15 +256,14 @@ If you move the player and collide the two sprites, they will just block each ot
 ## Ready for the next step
 
 Now we want to kill that moving thing! And for that, we need ammo!
-[Take me to the next step]()
 
-[player]: ./img/player.png
 
-[hitbox]: ./img/hitbox.png
-[adding_player]: ./img/adding_player.png
-[failing_ship]: ./img/failing_ship.gif
-[player_full_settings]: ./img/player_full_settings.png
-[ship_moving]: ./img/moving_ship.gif
-[player_value_tweak]: ./img/player_value_tweak.png
-[enemy_definition]: ./img/enemy_definition.png
-[moving_enemy]: ./img/moving_enemy.gif
+[player]: ./-img/player.png
+[hitbox]: ./-img/hitbox.png
+[adding_player]: ./-img/adding_player.png
+[failing_ship]: ./-img/failing_ship.gif
+[player_full_settings]: ./-img/player_full_settings.png
+[ship_moving]: ./-img/moving_ship.gif
+[player_value_tweak]: ./-img/player_value_tweak.png
+[enemy_definition]: ./-img/enemy_definition.png
+[moving_enemy]: ./-img/moving_enemy.gif

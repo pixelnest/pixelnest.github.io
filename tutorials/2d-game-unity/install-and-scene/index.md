@@ -98,20 +98,14 @@ See those objects are purely logical ones.
 
 Save the scene in the _Scenes_ folder. Call it how you want (what about "Stage1"?).
 
-
 ## Ready for the next step
 
 We are still far from a game, right?
 Next step we will start fun things: adding a background and some elements!
 
-[Take me to the next step]({{ page.next_link}})
 
-[unity_logo_url]: ./img/Unity.png
-
-[unity_create_project]: ./img/create_project.png
-
-[unity_empty_project]: ./img/empty_project.png
-
-[unity_folders]: ./img/folders.png
-
-[unity_logical_objects]: ./img/logical_objects.png
+[unity_logo_url]: ./-img/Unity.png
+[unity_create_project]: ./-img/create_project.png
+[unity_empty_project]: ./-img/empty_project.png
+[unity_folders]: ./-img/folders.png
+[unity_logical_objects]: ./-img/logical_objects.png

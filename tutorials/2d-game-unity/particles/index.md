@@ -344,23 +344,17 @@ Particles are a very useful way to enhance graphics and to make feedbacks to the
 
 The other usual feedbacks are sounds. And that's just what we are going to see right now!
 
-[Take me to the next step]()
 
-[cloud]: ./img/cloud.png
-
-[new_particle_system]: ./img/new_particle_system.png
-[cloud_settings]: ./img/cloud_settings.png
-[cloud_shader]: ./img/cloud_shader.png
-
-[smoke_settings]: ./img/smoke_settings.png
-[fade_out]: ./img/fade_out.png
-[decreasing_curve]: ./img/decreasing_curve.png
-[smoke_effect]: ./img/smoke_effect.gif
-
-[fire_gradient]: ./img/fire_gradient.png
-[fire_effect]: ./img/fire_effect.gif
-
-[filling_script]: ./img/filling_script.png
-
-[explosions]: ./img/explosions.png
-[explosions_gif]: ./img/explosions.gif
+[cloud]: ./-img/cloud.png
+[new_particle_system]: ./-img/new_particle_system.png
+[cloud_settings]: ./-img/cloud_settings.png
+[cloud_shader]: ./-img/cloud_shader.png
+[smoke_settings]: ./-img/smoke_settings.png
+[fade_out]: ./-img/fade_out.png
+[decreasing_curve]: ./-img/decreasing_curve.png
+[smoke_effect]: ./-img/smoke_effect.gif
+[fire_gradient]: ./-img/fire_gradient.png
+[fire_effect]: ./-img/fire_effect.gif
+[filling_script]: ./-img/filling_script.png
+[explosions]: ./-img/explosions.png
+[explosions_gif]: ./-img/explosions.gif

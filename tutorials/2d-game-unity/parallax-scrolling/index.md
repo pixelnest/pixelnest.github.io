@@ -482,15 +482,12 @@ So we have a level, enemies that can move (try to change their direction in y to
 
 We will some fun stuff now, first particles then sounds!
 
-[Take me to the next step]()
 
-[camera_use]: ./img/camera_use.png
-[planes]: ./img/planes.png
-
-[scrolling1]: ./img/scrolling1.gif
-[infinite_scrolling_definition]: ./img/infinite_scrolling_definition.png
-
-[infinite_scrolling]: ./img/infinite_scrolling.png
-[infinite_scrolling_gif]: ./img/infinite_scrolling.gif
-[enemy_spawn]: ./img/enemy_spawn.png
-[enemy_spawn_gif]: ./img/enemy_spawn.gif
+[camera_use]: ./-img/camera_use.png
+[planes]: ./-img/planes.png
+[scrolling1]: ./-img/scrolling1.gif
+[infinite_scrolling_definition]: ./-img/infinite_scrolling_definition.png
+[infinite_scrolling]: ./-img/infinite_scrolling.png
+[infinite_scrolling_gif]: ./-img/infinite_scrolling.gif
+[enemy_spawn]: ./-img/enemy_spawn.png
+[enemy_spawn_gif]: ./-img/enemy_spawn.gif

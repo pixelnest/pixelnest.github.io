@@ -243,23 +243,14 @@ You just made the new best selling game. But it's only on your computer for now.
 
 Last step: deploying on another machine, but it a PC, a mobile or a console...
 
-[Take me to this last part]()
 
-[background]: ./img/background.png
-
-[logo]: ./img/logo.png
-
-[elements]: ./img/elements.png
-
-[result1]: ./img/result1.png
-[result2]: ./img/result2.png
-
-[build_settings]: ./img/build_settings.png
-
-[build_settings_add]: ./img/build_settings_add.png
-
-[start]: ./img/start.gif
-
-[game_over]: ./img/game_over.png
-
-[game_over_script]: ./img/game_over_script.png
+[background]: ./-img/background.png
+[logo]: ./-img/logo.png
+[elements]: ./-img/elements.png
+[result1]: ./-img/result1.png
+[result2]: ./-img/result2.png
+[build_settings]: ./-img/build_settings.png
+[build_settings_add]: ./-img/build_settings_add.png
+[start]: ./-img/start.gif
+[game_over]: ./-img/game_over.png
+[game_over_script]: ./-img/game_over_script.png

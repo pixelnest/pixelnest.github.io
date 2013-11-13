@@ -159,12 +159,11 @@ We are far from a full game, but I'll stop here for the gameplay part.
 
 Now we will see build and deployment features provided by Unity to complete this development cycle.
 
-[Take me to the next step]()
 
-[3dsound]: ./img/3dsound.png
-[music]: ./img/music.png
-[sound_script]: ./img/sound_script.png
+[3dsound]: ./-img/3dsound.png
+[music]: ./-img/music.png
+[sound_script]: ./-img/sound_script.png
 
-[sound_explosion]: ./sounds/sound_explosion.wav
-[sound_shot_player]: ./sounds/sound_shot_player.wav
-[sound_shot_enemy]: ./sounds/sound_shot_enemy.wav
+[sound_explosion]: ./-sounds/sound_explosion.wav
+[sound_shot_player]: ./-sounds/sound_shot_player.wav
+[sound_shot_enemy]: ./-sounds/sound_shot_enemy.wav

@@ -336,18 +336,11 @@ You can add more enemies and shoot them.
 
 But this part is not over! We now want enemies to shoot too. Take a break, what comes next is mainly reusing what we did here but it would have done too much in only one part.
 
-[I'm ready, take me to the next part]()
 
-[shot]: ./img/shot.png
-
-[shot_config1]: ./img/shot_config1.png
-
-[bang]: ./img/bang.gif
-
-[bang2]: ./img/bang2.gif
-
-[dnd_prefab]: ./img/dnd_prefab.png
-
-[shooting]: ./img/shooting.gif
-
-[shooting_rotation]: ./img/shooting_rotation.png
+[shot]: ./-img/shot.png
+[shot_config1]: ./-img/shot_config1.png
+[bang]: ./-img/bang.gif
+[bang2]: ./-img/bang2.gif
+[dnd_prefab]: ./-img/dnd_prefab.png
+[shooting]: ./-img/shooting.gif
+[shooting_rotation]: ./-img/shooting_rotation.png
