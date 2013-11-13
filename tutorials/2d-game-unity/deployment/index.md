@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Build, release and deployment
+title: Build, release and deploy
 author: Damien
 date: 13/11/13
 

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Adding particles
+title: Playing with particles
 author: Damien
 date: 13/11/13
 

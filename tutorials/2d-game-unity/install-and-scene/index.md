@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Installation and the first game scene
+title: Install Unity and create your first scene
 author: Damien
 date: 13/11/13
 

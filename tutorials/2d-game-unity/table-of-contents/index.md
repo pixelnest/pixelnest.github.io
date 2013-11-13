@@ -19,15 +19,15 @@ You can use the navigation above and below each chapter to move between them.
 
 # Chapters
 
-- [Installation and the first game scene](../install-and-scene)
+- [Install Unity and create your first scene](../install-and-scene)
 - [Adding and displaying a background](../background-and-camera)
-- [The player and some enemies](../player-and-enemies)
-- [The shooting (1/2)](../shooting-1)
-- [The shooting (2/2)](../shooting-2)
+- [Create a player and its enemies](../player-and-enemies)
+- [Shooting (1/2)](../shooting-1)
+- [Shooting (2/2)](../shooting-2)
 - [Parallax scrolling](../parallax-scrolling)
-- [Adding particles](../particles)
-- [Making some noise and adding music](../sounds)
-- [Menu - loading and restarting the game](../menus)
-- [Build, release and deployment](../deployment)
+- [Playing with particles](../particles)
+- [Making some noises on music](../sounds)
+- [Menus - loading and restarting the game](../menus)
+- [Build, release and deploy](../deployment)
 - [2D Animations](../animations)
 - [Tweaking the gameplay](../tweaking-the-gameplay)

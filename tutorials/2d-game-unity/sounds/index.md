@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Making some noise and adding music
+title: Making some noises on music
 author: Damien
 date: 13/11/13
 

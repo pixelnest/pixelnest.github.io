@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: The shooting (2/2)
+title: Shooting (2/2)
 author: Damien
 date: 13/11/13
 

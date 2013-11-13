@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Menu - loading and restarting the game
+title: Menus - loading and restarting the game
 author: Damien
 date: 13/11/13
 
