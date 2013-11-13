@@ -13,7 +13,7 @@
       <nav>
         <!-- menu -->
         <section class"page-back">
-          <a href="/">← Back to Pixelnest</a>
+          <a href="/">◇ Back to Pixelnest</a>
         </section>
 
         <section class="page-ref">
@@ -30,6 +30,28 @@
     </header>
 
     <div class="page-content">
+
+      <!-- start pagination -->
+      <div class="pager pager--top-separator pager--em">
+        <section class="pager__older">
+        {% if page.previous %}
+          <a href="{{ page.previous }}" title="Previous chapter">← Previous</a>
+        {% endif %}
+        </section>
+
+        {% if page.home %}
+        <section class="pager__ref">
+          <a href="{{ page.home | remove: 'index.html' }}#summary" title="Summary">Summary</a>
+        </section>
+        {% endif %}
+
+        <section class="pager__newer">
+        {% if page.next %}
+          <a href="{{ page.next }}" title="Next chapter">Next →</a>
+        {% endif %}
+        </section>
+      </div>
+      <!-- end pagination -->
 
       <!-- post layout -->
       <article class="entry">
@@ -54,7 +76,7 @@
       <!-- end post layout -->
 
       <!-- start pagination -->
-      <div class="pager">
+      <div class="pager pager--bottom-separator pager--em">
         <section class="pager__older">
         {% if page.previous %}
           <a href="{{ page.previous }}" title="Previous chapter">← Previous</a>

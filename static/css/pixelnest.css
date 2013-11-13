@@ -489,12 +489,19 @@ li {
   position: relative;
   display: table;
   margin: 0 auto;
-  padding-top: 20px;
   width: 100%;
-  border-top: 1px solid #eee;
   color: #bbb; }
-  .pager.bottom {
+  .pager.pager--bottom-space {
     bottom: -140px; }
+  .pager.pager--bottom-separator {
+    padding-top: 20px;
+    border-top: 1px solid #eee; }
+  .pager.pager--top-separator {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; }
+
+.pager--em a {
+  color: #EC8604; }
 
 .pager__ref,
 .pager__newer,
@@ -530,7 +537,7 @@ li {
   font-style: italic; }
 
 .tutorial .page-header {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   padding: 12px 10px;
   background-color: rgba(240, 240, 240, 0.8);
   font-size: 0.8em; }
@@ -550,8 +557,10 @@ li {
     width: 50%; }
   .tutorial .page-header .page-link {
     text-align: right; }
+.tutorial .page-content {
+  margin: 20px auto; }
 .tutorial .entry {
-  margin-bottom: 40px; }
+  margin: 60px 0; }
 .tutorial .page-footer {
   background-color: transparent;
   color: #888888; }

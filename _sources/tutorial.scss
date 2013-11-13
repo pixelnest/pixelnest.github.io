@@ -6,7 +6,7 @@
 
   // Small header
   .page-header {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding: 12px 10px;
     background-color: rgba(240, 240, 240, 0.8);
 
@@ -43,8 +43,12 @@
     }
   }
 
+  .page-content {
+    margin: 20px auto;
+  }
+
   .entry {
-    margin-bottom: 40px;
+    margin: 60px 0;
   }
 
   // Light footer
