@@ -66,45 +66,93 @@ Here are some other resources that we find interesting and that should complete 
 
 # The first scene
 
-## Create a project
+## Create a new project
 
-Create a new project. Do not check any standard package for now, you can re-import them later if you want but at first it will just get you confuse.
+Go to file, then create a new project. Do not check any standard package for now. You can re-import them later if you want, but at first it will just confuse you.
 
 [ ![Create a new Unity project][unity_create_project] ][unity_create_project]
 
-Select the **2D** settings.
+Select the **2D** settings. Like before, you can change this flag in the project settings later.
 
-Do not worry about the name, the product name is defined in the option and changing the whole project name only consists in renaming the folder.
+_Do not worry about the name_. The product name is defined in the options and changing the whole project name only consists in renaming the folder.
 
 ## Prepare the project
 
-As Damien explain in [this other tutorial](http://dmayance.com/git-and-unity-projects/), if you plan to use Git or SVN the first thing you need to do is to enable some obscure settings for team collaboration.
+As I explained in [another tutorial][dam_versionning_tutorial], if you plan to use Git or SVN, the first thing you need to do is to enable some obscure settings for team collaboration.
 
-## Prepare the scene
+Instead of writing what I have already written before, just check the [tutorial][dam_versionning_tutorial] if you are interested. :)
 
-You now face a nice empty scene. Here is the layout we are using but you should take some time and organize as you are the most comfortable with. I personally like to have the console next to the game view, but if you have a small screen you may use tabs instead of panels.
+## Unity layout and panels
+
+You now face a nice empty scene. Here is the layout I am using, but you should take some times to personalize the interface to your needs. I personally like to have the console next to the game view, but if you have a small screen you may use tabs instead of panels.
 
 [ ![An empty project][unity_empty_project] ][unity_empty_project]
 
-Before jumping into the game creation take a few minutes to organize your project and scene.
+Before jumping into the game creation, take a few minutes to organize your project and scenes.
 
-We advise to create folder from the Unity inspector to organize your stuff. Those folder will technically be created in the _Assets_ folder of your project. Here is a simple hierarchy, you can adapt it to your needs:
+We advise to create folders in the Unity "Project" pane to organize your stuffs. These folders will technically be created in the _Assets_ folder  of your project.
+
+_Note_: The "Assets" folder is the superfolder containing everything you add in the "Project" pane. It is not visible inside Unity, but if you open your file explorer, you will be able to see it.
 
 [ ![Folders][unity_folders] ][unity_folders]
 
-- Prefabs: reusable game object (ex: Bullets, enemies, bonuses)
-- Scenes: levels and menus of your game
-- Sounds: I guess it's pretty clear. See if you want to split musics in another folder
-- Scripts: all the code goes here
-- **Textures**: sprites, images of your game. Keep this name! Unity will recognize it and automate some tasks.
+Here is an example of a structure we use for our projects at Pixelnest. You can adapt it to fit your preferences.
 
-Now The scene. Create empty objects and use them as "folder".
+## Project assets
+
+In your "Project" pane, you can find different types of assets:
+
+### Prefabs
+
+Reusable game objects (ex: Bullets, enemies, bonuses).
+
+Prefabs can be seen as a ``class`` in a programming language, which can be instantiated into game objects. It's a mold you can duplicate and change at will in the scene or during the game execution.
+
+### Scenes
+
+A scene is basically a level or a menu.
+
+Contrary to the other objects you create in the "Project" pane, scenes are created with the "File" menu. Click on "New Scene", then save it to the "Scenes" folder.
+
+### Sounds
+
+I guess it's pretty clear. See if you want to split musics in another folder.
+
+### Scripts
+
+All the code goes here. We use this folder as the equivalent of a root folder in a C# project.
+
+### Textures
+
+Textures are sprites and images of your game. In a 2D project, you could rename this folder to "Sprites".
+
+It doesn't really matter in a 2D project, but by keeping the name "Textures", Unity will recognize it and automate some tasks. If you want some informations about this topic, you can read [this](http://answers.unity3d.com/questions/172384/importing-models.html) or [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
+
+## Filling the scene
+
+The "Hierarchy" pane contains every object that is available in the scene. This is what you manipulate when you start the game with the "Play" button.
+
+Each object of the scene is a "game object" for Unity. You can create an object on the root of the scene, or as a child of another game object. You can move an object at any time to change its parent.
 
 [ ![Logicial objects][unity_logical_objects] ][unity_logical_objects]
 
-**Make sure they all are at the (0,0,0) position so you can track them easily! They don't position as they're not using it.**
+As you can see here, we have 3 children for the "Level" object.
 
-See those objects are purely logical ones.
+### Empty objects
+
+A trick in Unity is to create an empty game object and use it as a "folder" for other game objects. It will simplify your scene hierarchy.
+
+[ ![Empty objects][unity_create_empty] ][unity_create_empty]
+
+**Make sure they all are at the (0, 0, 0) position so you can track them easily! The position is not important as they're not using it.**
+
+But changing the position will affect the children relative position. We will not speak about this topic in this tutorial, so let the position of the empty objects to (0, 0, 0) for the moment.
+
+See those empty objects as purely logical ones.
+
+### Our first game scene
+
+In our scene, we have :
 
 - Scripts: we will add our global (not related to an object, such as a "Game" script) scripts here
 - Render: camera (I moved the default one there), lights
@@ -127,6 +175,7 @@ Next step we will start fun things: adding a background and some elements!
 [unity_folders]: ./-img/folders.png
 [unity_logical_objects]: ./-img/logical_objects.png
 [unity_prefs_vs_url]: ./-img/unity_vs2013.png
+[unity_create_empty]: ./-img/unity_create_empty.png
 
 [unity_download_link]: http://unity3d.com/unity/download "Download Unity"
 [vs_download_link]: http://www.microsoft.com/visualstudio/eng/downloads#d-2013-express "Download Visual Studio"
@@ -135,3 +184,5 @@ Next step we will start fun things: adding a background and some elements!
 
 [unity_videos_link]: http://unity3d.com/learn/tutorials/modules/beginner/editor "Unity Editor Tutorials"
 [unitypatterns_link]: http://unitypatterns.com/ "Unity Patterns"
+
+[dam_versionning_tutorial]: http://dmayance.com/git-and-unity-projects/
