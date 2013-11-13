@@ -10,7 +10,7 @@ tutorial:
 
 links:
   summary: ../#summary
-  previous: ../
+  previous: ../table-of-contents
   next: ../background-and-camera
 ---
 

@@ -9,51 +9,47 @@ tutorial:
   link: ./
 
 links:
-  next: ./install-and-scene
+  next: ./table-of-contents
 ---
 
-Using the fresh new **Unity** 2D tools, you will see and learn how to make a small Shoot them up.
+Using the brand new **Unity** native 2D tools, you will learn how to make a small "Shoot'Em Up" (abbreviated to _shmup_ thereafter) with this tutorial.
 
-Something like that. **Click to play the demo!**
+The result will be a lot like this demo:
 
 [ ![Tutorial result][result] ][demo_link]
 
-We will focus on a Shoot them up with horizontal scrolling, but if we do our job correctly you'll understand how to extend to many other genre.
+_(Click on the image to play)_
 
-About licences:
+I will focus on a _shmup_ with an horizontal scrolling. However, if this tutorial do its job correctly, you'll understand how to extend the code to many other genres.
 
-- Assets are licenced [CC-BY-NC](http://creativecommons.org/licenses/by-nc/2.0/fr/). They have been made by [Thibault Person](http://twitter.com/mrlapinou) for the game [The Great Paper Adventure](http://www.thegreatpaperadventure.com).
+The assets, gameplay and original idea come from the game [The Great Paper Adventure][tgpa_link]. I created this game a few years ago using [XNA][xna_link]. When I started this tutorial, I thought it was a perfect material to explain Unity.
 
-- Source code is copyrighted Pixelnest Studio and licenced MIT
+# Unity
 
-Get more information about our [licenses on GitHub](https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md)
+This tutorial is made with the Unity 4.3 **FREE** version.
 
+[ ![Unity][unity_logo_url] ][unity_download_link]
 
-The source code is available on our [GitHub repository](https://github.com/pixelnest/2d-game-unity-tutorial).
+# Licencing
 
-## Chapters <span id="summary"></span>
+- The assets and arts are licenced under a [CC-BY-NC][cc_licence_link] attribution. They have been made by [Thibault Person][tp_twitter_link] for the game [The Great Paper Adventure][tgpa_link].
 
-[ ![Unity][unity_logo_url] ][unity_logo_url]
+- The source code belongs to Pixelnest Studio and is released under a [MIT licence][mit_licence_link].
 
-Please select a chapter you are interested in to continue.
+Get more information about our [licenses on GitHub][github_licence_link].
 
-- [Installation and the first game scene](./install-and-scene)
-- [Adding and displaying a background](./background-and-camera)
-- [The player and some enemies](./player-and-enemies)
-- [The shooting (1/2)](./shooting-1)
-- [The shooting (2/2)](./shooting-2)
-- [Parallax scrolling](./parallax-scrolling)
-- [Adding particles](./particles)
-- [Making some noise and adding music](./sounds)
-- [Menu - loading and restarting the game](./menus)
-- [Build, release and deployment](./deployment)
-- [2D Animations](./animations)
-- [Tweaking the gameplay](./tweaking-the-gameplay)
-
-**Remarks:**
-
-- This tutorial was made with Unity 4.3 **FREE**
+The source code is available on our [GitHub repository][github_repo_link].
 
 [unity_logo_url]: ./-img/unity.png
 [result]: ./-img/result.png
-[demo_link]: ./-demo/demo.html
+
+[demo_link]: ./-demo/demo.html "Play the demo"
+
+[xna_link]: http://en.wikipedia.org/wiki/Microsoft_XNA "Microsoft XNA"
+[tgpa_link]: http://www.thegreatpaperadventure.com "The Great Paper Adventure"
+[tp_twitter_link]: http://twitter.com/mrlapinou "Thibault Person"
+[unity_download_link]: http://unity3d.com/unity/download "Download Unity 4.3"
+[cc_licence_link]: http://creativecommons.org/licenses/by-nc/2.0/fr/ "CC-BY-NC"
+[mit_licence_link]: http://choosealicense.com/licenses/mit/ "MIT Licence"
+[github_repo_link]: https://github.com/pixelnest/2d-game-unity-tutorial "Repository"
+[github_licence_link]: https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md "Repository licence"
