@@ -1,9 +1,15 @@
 ---
 layout: tutorial
 title: Creating a 2D game with Unity
-subtitle: like a little Shoot Them Up.
 author: Damien
 date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ./
+
+links:
+  next: ./install-and-scene
 ---
 
 Using the fresh new **Unity** 2D tools, you will see and learn how to make a small Shoot them up.
@@ -27,27 +33,27 @@ The source code is available on our [GitHub repository](https://github.com/pixel
 
 ## Chapters <span id="summary"></span>
 
-[  ![Unity][unity_logo_url]  ][unity_logo_url]
+[ ![Unity][unity_logo_url] ][unity_logo_url]
 
 Please select a chapter you are interested in to continue.
 
-- [Installation and the first game scene](./part-01-install-and-scene)
-- [Adding and displaying a background](./part-02-background-and-camera)
-- [The player and some enemies](./part-03-player-and-enemies)
-- [The shooting (1/2)](./part-04-shooting-1)
-- [The shooting (2/2)](./part-05-shooting-2)
-- [Parallax scrolling](./part-06-parallax-scrolling)
-- [Adding particles](./part-07-particles)
-- [Making some noise and adding music](./part-08-sounds)
-- [Menu - loading and restarting the game](./part-09-menus)
-- [Build, release and deployment](./part-10-deployment)
-- [2D Animations](./part-11-animations)
-- [Tweaking the gameplay](./part-12-tweaking-the-gameplay)
+- [Installation and the first game scene](./install-and-scene)
+- [Adding and displaying a background](./background-and-camera)
+- [The player and some enemies](./player-and-enemies)
+- [The shooting (1/2)](./shooting-1)
+- [The shooting (2/2)](./shooting-2)
+- [Parallax scrolling](./parallax-scrolling)
+- [Adding particles](./particles)
+- [Making some noise and adding music](./sounds)
+- [Menu - loading and restarting the game](./menus)
+- [Build, release and deployment](./deployment)
+- [2D Animations](./animations)
+- [Tweaking the gameplay](./tweaking-the-gameplay)
 
 **Remarks:**
 
 - This tutorial was made with Unity 4.3 **FREE**
 
-[unity_logo_url]: ./img/Unity.png
-[result]: ./img/result.png
-[demo_link]: ./img/demo/demo.html
+[unity_logo_url]: ./-img/unity.png
+[result]: ./-img/result.png
+[demo_link]: ./-demo/demo.html

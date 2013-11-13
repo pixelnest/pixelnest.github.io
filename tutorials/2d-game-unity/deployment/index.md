@@ -1,10 +1,17 @@
 ---
 layout: tutorial
 title: Build, release and deployment
-subtitle: Creating a 2D game with Unity
 author: Damien
-previous: ../part-09-menus
-next: ../part-11-animations
+date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ../
+
+links:
+  summary: ../#summary
+  previous: ../menus
+  next: ../animations
 ---
 
 ## Chapters

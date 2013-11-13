@@ -1,10 +1,17 @@
 ---
 layout: tutorial
 title: Making some noise and adding music
-subtitle: Creating a 2D game with Unity
 author: Damien
-previous: ../part-07-particles
-next: ../part-09-menus
+date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ../
+
+links:
+  summary: ../#summary
+  previous: ../particles
+  next: ../menus
 ---
 
 ## Chapters

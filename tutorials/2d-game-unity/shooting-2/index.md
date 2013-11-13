@@ -1,10 +1,17 @@
 ---
 layout: tutorial
 title: The shooting (2/2)
-subtitle: Creating a 2D game with Unity
 author: Damien
-previous: ../part-04-shooting-1
-next: ../part-06-parallax-scrolling
+date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ../
+
+links:
+  summary: ../#summary
+  previous: ../shooting-1
+  next: ../parallax-scrolling
 ---
 
 ## Chapters

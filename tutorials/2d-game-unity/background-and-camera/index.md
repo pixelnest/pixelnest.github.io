@@ -1,10 +1,17 @@
 ---
 layout: tutorial
 title: Adding and displaying a background
-subtitle: Creating a 2D game with Unity
 author: Damien
-previous: ../part-01-install-and-scene
-next: ../part-03-player-and-enemies
+date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ../
+
+links:
+  summary: ../#summary
+  previous: ../install-and-scene
+  next: ../player-and-enemies
 ---
 
 ## Chapters

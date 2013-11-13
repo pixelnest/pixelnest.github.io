@@ -1,10 +1,17 @@
 ---
 layout: tutorial
 title: Parallax scrolling
-subtitle: Creating a 2D game with Unity
 author: Damien
-previous: ../part-05-shooting-2
-next: ../part-07-particles
+date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ../
+
+links:
+  summary: ../#summary
+  previous: ../shooting-2
+  next: ../particles
 ---
 
 ## Chapters

@@ -1,10 +1,17 @@
 ---
 layout: tutorial
 title: The player and some enemies
-subtitle: Creating a 2D game with Unity
 author: Damien
-previous: ../part-02-background-and-camera
-next: ../part-04-shooting-1
+date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ../
+
+links:
+  summary: ../#summary
+  previous: ../background-and-camera
+  next: ../shooting-1
 ---
 
 ## Chapters

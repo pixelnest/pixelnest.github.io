@@ -1,10 +1,17 @@
 ---
 layout: tutorial
 title: Adding particles
-subtitle: Creating a 2D game with Unity
 author: Damien
-previous: ../part-06-parallax-scrolling
-next: ../part-08-sounds
+date: 13/11/13
+
+tutorial:
+  name: Creating a 2D game with Unity
+  link: ../
+
+links:
+  summary: ../#summary
+  previous: ../parallax-scrolling
+  next: ../sounds
 ---
 
 ## Chapters
