@@ -339,21 +339,21 @@ The other usual feedbacks are sounds. And that's just what we are going to see r
 
 [Take me to the next step]()
 
-[cloud]: ./cloud.png
+[cloud]: ./img/cloud.png
 
-[new_particle_system]: ./new_particle_system.png
-[cloud_settings]: ./cloud_settings.png
-[cloud_shader]: ./cloud_shader.png
+[new_particle_system]: ./img/new_particle_system.png
+[cloud_settings]: ./img/cloud_settings.png
+[cloud_shader]: ./img/cloud_shader.png
 
-[smoke_settings]: ./smoke_settings.png
-[fade_out]: ./fade_out.png
-[decreasing_curve]: ./decreasing_curve.png
-[smoke_effect]: ./smoke_effect.gif
+[smoke_settings]: ./img/smoke_settings.png
+[fade_out]: ./img/fade_out.png
+[decreasing_curve]: ./img/decreasing_curve.png
+[smoke_effect]: ./img/smoke_effect.gif
 
-[fire_gradient]: ./fire_gradient.png
-[fire_effect]: ./fire_effect.gif
+[fire_gradient]: ./img/fire_gradient.png
+[fire_effect]: ./img/fire_effect.gif
 
-[filling_script]: ./filling_script.png
+[filling_script]: ./img/filling_script.png
 
-[explosions]: ./explosions.png
-[explosions_gif]: ./explosions.gif
+[explosions]: ./img/explosions.png
+[explosions_gif]: ./img/explosions.gif

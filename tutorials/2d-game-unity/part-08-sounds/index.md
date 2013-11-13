@@ -153,10 +153,10 @@ Now we will see build and deployment features provided by Unity to complete this
 
 [Take me to the next step]()
 
-[3dsound]: ./3dsound.png
-[music]: ./music.png
-[sound_script]: ./sound_script.png
+[3dsound]: ./img/3dsound.png
+[music]: ./img/music.png
+[sound_script]: ./img/sound_script.png
 
-[sound_explosion]: ./sound_explosion.wav
-[sound_shot_player]: ./sound_shot_player.wav
-[sound_shot_enemy]: ./sound_shot_enemy.wav
+[sound_explosion]: ./sounds/sound_explosion.wav
+[sound_shot_player]: ./sounds/sound_shot_player.wav
+[sound_shot_enemy]: ./sounds/sound_shot_enemy.wav

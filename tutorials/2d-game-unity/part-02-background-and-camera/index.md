@@ -139,15 +139,15 @@ Now we will see how to add the player and enemies.
 [Take me to the next step]()
 
 
-[background]: ./background.png
-[platforms]: ./platforms.png
+[background]: ./img/background.png
+[platforms]: ./img/platforms.png
 
-[new_sprite]: ./new_sprite.png
-[sprite_select]: ./sprite_select.png
-[display_background]: ./display_background.png
-[background2_in_place]: ./background2_in_place.png
-[sprite_multiple]: ./sprite_multiple.png
-[sprite_editor]: ./sprite_editor.png
-[sprite_editor_result]: ./sprite_editor_result.png
-[adding_platforms]: ./adding_platforms.png
-[layers_3d]: ./layers.gif
+[new_sprite]: ./img/new_sprite.png
+[sprite_select]: ./img/sprite_select.png
+[display_background]: ./img/display_background.png
+[background2_in_place]: ./img/background2_in_place.png
+[sprite_multiple]: ./img/sprite_multiple.png
+[sprite_editor]: ./img/sprite_editor.png
+[sprite_editor_result]: ./img/sprite_editor_result.png
+[adding_platforms]: ./img/adding_platforms.png
+[layers_3d]: ./img/layers.gif

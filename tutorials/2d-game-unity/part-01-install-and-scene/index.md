@@ -99,12 +99,12 @@ Next step we will start fun things: adding a background and some elements!
 
 [Take me to the next step]({{ page.next_link}})
 
-[unity_logo_url]: ./Unity.png
+[unity_logo_url]: ./img/Unity.png
 
-[unity_create_project]: ./create_project.png
+[unity_create_project]: ./img/create_project.png
 
-[unity_empty_project]: ./empty_project.png
+[unity_empty_project]: ./img/empty_project.png
 
-[unity_folders]: ./folders.png
+[unity_folders]: ./img/folders.png
 
-[unity_logical_objects]: ./logical_objects.png
+[unity_logical_objects]: ./img/logical_objects.png

@@ -331,16 +331,16 @@ But this part is not over! We now want enemies to shoot too. Take a break, what 
 
 [I'm ready, take me to the next part]()
 
-[shot]: ./shot.png
+[shot]: ./img/shot.png
 
-[shot_config1]: ./shot_config1.png
+[shot_config1]: ./img/shot_config1.png
 
-[bang]: ./bang.gif
+[bang]: ./img/bang.gif
 
-[bang2]: ./bang2.gif
+[bang2]: ./img/bang2.gif
 
-[dnd_prefab]: ./dnd_prefab.png
+[dnd_prefab]: ./img/dnd_prefab.png
 
-[shooting]: ./shooting.gif
+[shooting]: ./img/shooting.gif
 
-[shooting_rotation]: ./shooting_rotation.png
+[shooting_rotation]: ./img/shooting_rotation.png

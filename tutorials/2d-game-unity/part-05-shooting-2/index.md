@@ -217,26 +217,26 @@ It is now time to enhance the background and the scene to get a full level.
 
 [Take me to the next step]()
 
-[shot_poulpi]: ./shot_poulpi.png
+[shot_poulpi]: ./img/shot_poulpi.png
 
-[shot_config2]: ./shot_config2.png
+[shot_config2]: ./img/shot_config2.png
 
-[enemy_config]: ./enemy_config.png
+[enemy_config]: ./img/enemy_config.png
 
-[shoot_right]: ./shoot_right.gif
+[shoot_right]: ./img/shoot_right.gif
 
-[gizmo]: ./gizmo.png
+[gizmo]: ./img/gizmo.png
 
-[reverse]: ./reverse.png
+[reverse]: ./img/reverse.png
 
-[enemy_full_config]: ./enemy_full_config.png
+[enemy_full_config]: ./img/enemy_full_config.png
 
-[shoot_ok]: ./shoot_ok.gif
+[shoot_ok]: ./img/shoot_ok.gif
 
-[shoot_two_dir]: ./shoot_two_dir.gif
+[shoot_two_dir]: ./img/shoot_two_dir.gif
 
-[player_no_enemy]: ./player_no_enemy.png
+[player_no_enemy]: ./img/player_no_enemy.png
 
-[player_die]: ./player_die.gif
+[player_die]: ./img/player_die.gif
 
-[result]: ./result.png
+[result]: ./img/result.png

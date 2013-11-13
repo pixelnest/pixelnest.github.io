@@ -48,6 +48,6 @@ Please select a chapter you are interested in to continue.
 
 - This tutorial was made with Unity 4.3 **FREE**
 
-[unity_logo_url]: ./Unity.png
-[result]: ./result.png
-[demo_link]: ./demo/demo.html
+[unity_logo_url]: ./img/Unity.png
+[result]: ./img/result.png
+[demo_link]: ./img/demo/demo.html

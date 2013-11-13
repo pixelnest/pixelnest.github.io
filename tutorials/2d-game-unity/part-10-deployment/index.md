@@ -86,12 +86,12 @@ and the rest is all yours...
 
 
 
-[platforms]: ./platforms.png
+[platforms]: ./img/platforms.png
 
-[web_result]: ./web_result.png
+[web_result]: ./img/web_result.png
 
-[player_settings]: ./player_settings.png
+[player_settings]: ./img/player_settings.png
 
-[pc_target]: ./pc_target.png
+[pc_target]: ./img/pc_target.png
 
-[texture_specific_quality]: ./texture_specific_quality.png
+[texture_specific_quality]: ./img/texture_specific_quality.png

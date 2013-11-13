@@ -238,20 +238,20 @@ Last step: deploying on another machine, but it a PC, a mobile or a console...
 
 [Take me to this last part]()
 
-[background]: ./background.png
+[background]: ./img/background.png
 
-[logo]: ./logo.png
+[logo]: ./img/logo.png
 
-[elements]: ./elements.png
+[elements]: ./img/elements.png
 
-[result1]: ./result1.png
+[result1]: ./img/result1.png
 
-[build_settings]: ./build_settings.png
+[build_settings]: ./img/build_settings.png
 
-[build_settings_add]: ./build_settings_add.png
+[build_settings_add]: ./img/build_settings_add.png
 
-[start]: ./start.gif
+[start]: ./img/start.gif
 
-[game_over]: ./game_over.png
+[game_over]: ./img/game_over.png
 
-[game_over_script]: ./game_over_script.png
+[game_over_script]: ./img/game_over_script.png
