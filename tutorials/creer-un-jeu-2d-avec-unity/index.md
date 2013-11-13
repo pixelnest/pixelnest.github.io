@@ -10,6 +10,8 @@ tutorial:
 
 links:
   next: ./sommaire
+
+lang: fr
 ---
 
 En utilisant les récents outils 2D intégrés à **Unity**, vous allez apprendre avec ce tutoriel à faire un petit jeu de type "Shoot'em up" (abrégé en _shmup_ par la suite).
@@ -54,7 +56,7 @@ Nous vous souhaitons une bonne lecture.
 
 <br />
 
-Vous êtes prêts ? Alors c'est parti pour la découverte de l'outil Unity !
+Assez parlés, découvrons ce que Unity a à nous offrir pour faire un jeu 2D.
 
 [unity_logo_url]: ../2d-game-unity/-img/unity.png
 [result]: ../2d-game-unity/-img/result.png
