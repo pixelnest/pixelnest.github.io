@@ -13,9 +13,11 @@ links:
   next: ../install-and-scene
 ---
 
-# Chapters
+I recommend that you read the chapters in the order below. By doing so, you will get a game almost identical to the demo in the previous part.
 
-Please select a chapter you are interested in to continue.
+You can use the navigation above and below each chapter to move between them.
+
+# Chapters
 
 - [Installation and the first game scene](./install-and-scene)
 - [Adding and displaying a background](./background-and-camera)
