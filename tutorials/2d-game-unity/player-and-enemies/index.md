@@ -60,13 +60,27 @@ You can add as many components as you want on an object. A script is added as a 
 
 _(You can click on the checkbox to disabled it. You can right-click on a component to reset it, remove it, etc.)_
 
-_Note_: Components can interact with other components. If an object has a component that requires another component of an object to work with, you can just drag the whole object inside this component, and it will find the correct one in the object.
+<md-note>
+_Note_: Components can interact with other components. If an object has a component that requires another component of an object to work with, you can just drag the whole object inside this component and it will find the correct one in the object.
+</md-note>
+
+A "Sprite Renderer" is a component that is able to display a sprite texture.
 
 Now that we have learned about the concept of component, let's add one to the player!
 
 ## Add a Box Collider
 
-Add a _Box collider 2D_. This is our **Hitbox**. You can see it in the editor and tweak it's size in the inspector. Here, with a size of 10x10x1, it's way too large for a real shoot them up but it's still smaller than the sprite:
+Click on the "Add Component" button of the player object. Choose a "Box Collider 2D".
+
+This will represent the player [_hitbox_][hitbox_link].
+
+You can see the collider in the editor "Scene" view and tweak its size in the inspector.
+
+<md-tip>
+_Tip_: There is another way to edit a box collider. Select a game object with a box collider and maintain the ``shift`` key of your keyboard. You can observe that the box collider (the green rectangle) is now showing four small handles onto. Drag one of them to change the shape of the box. Be careful, the blue rectangle represents the ``Transform`` component of your game object.
+</md-tip>
+
+Here, with a size of 10x10x1, it's way too large for a real shoot them up but it's still smaller than the sprite:
 
 [![Player hitbox][hitbox]][hitbox]
 
@@ -276,3 +290,5 @@ Now we want to kill that moving thing! And for that, we need ammo!
 [poulpi]: ./-img/poulpi.png
 [enemy_definition]: ./-img/enemy_definition.png
 [moving_enemy]: ./-img/moving_enemy.gif
+
+[hitbox_link]: http://en.wikipedia.org/wiki/Hitbox "Hitbox definition"

@@ -385,6 +385,47 @@ li {
     font-weight: 400; }
   .entry__content table td {
     border: 1px solid #e9e9e9; }
+.entry__content md-info,
+.entry__content md-tip,
+.entry__content md-note,
+.entry__content md-warning,
+.entry__content md-danger {
+  display: block;
+  margin: 20px -20px;
+  padding: 10px 20px;
+  font-size: 0.8em;
+  line-height: 135%; }
+  @media only screen and (max-width: 600px) {
+    .entry__content md-info,
+    .entry__content md-tip,
+    .entry__content md-note,
+    .entry__content md-warning,
+    .entry__content md-danger {
+      font-size: 0.9em;
+      line-height: 140%; } }
+  .entry__content md-info em, .entry__content md-info strong,
+  .entry__content md-tip em,
+  .entry__content md-tip strong,
+  .entry__content md-note em,
+  .entry__content md-note strong,
+  .entry__content md-warning em,
+  .entry__content md-warning strong,
+  .entry__content md-danger em,
+  .entry__content md-danger strong {
+    padding-right: 20px;
+    color: white;
+    font-style: normal;
+    font-weight: normal; }
+.entry__content md-info {
+  background-color: #E4E4E4; }
+.entry__content md-tip {
+  background-color: #8bd259; }
+.entry__content md-note {
+  background-color: #73c1ec; }
+.entry__content md-warning {
+  background-color: #F5D87D; }
+.entry__content md-danger {
+  background-color: #F67B64; }
 
 @media only screen and (max-width: 1000px) {
   .entry__title {
