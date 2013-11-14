@@ -372,6 +372,19 @@ li {
   background: #e9e9e9;
   font-family: monospace;
   font-size: 0.8em; }
+.entry__content table {
+  width: 100%; }
+  .entry__content table tr:nth-child(even) {
+    background-color: #eee; }
+  .entry__content table th, .entry__content table td {
+    height: 40px;
+    text-align: center; }
+  .entry__content table th {
+    background-color: #00a9e0;
+    color: white;
+    font-weight: 400; }
+  .entry__content table td {
+    border: 1px solid #e9e9e9; }
 
 @media only screen and (max-width: 1000px) {
   .entry__title {
