@@ -54,7 +54,9 @@ Then move the object to where it belongs: ``Level -> 0 - Background``. Change it
 
 A quick exercise: duplicate the background and place it at ``(20, 0, 0)``. It should fit perfectly with the first part.
 
+<md-tip>
 _Tip_: You can duplicate an objet with the ``cmd + D`` (OS X) or ``ctrl + D`` (Windows) shortcuts.
+</md-tip>
 
 [ ![Background2 in place][background2_in_place] ][background2_in_place]
 
@@ -115,7 +117,9 @@ By doing so, you will create a ``Prefab`` based exactly on the original game obj
 
 [ ![Prefab connection][prefab_link] ][prefab_link]
 
+<md-note>
 _Note on the "Prefab" buttons_: If you modify the game object later, you can "Apply" its changes to the ``Prefab`` or "Revert" it to the ``Prefab`` properties (canceling any change you've made on the game object). The "Select" button move your selection directly to the ``Prefab`` asset in the "Project" view (it will be highlighted).
+</md-note>
 
 Creating prefabs with the platform objects will make them easier to reuse later. Simply drag the ``Prefab`` into the scene to add a copy. Try to add another platform that way.
 
@@ -145,7 +149,9 @@ Well. In the previous version of this tutorial (for Unity 4.2), we had a long an
 
 The good new is that it's completely useless now. You have nothing to do. It just works™.
 
+<md-info>
 _Aside_: If you click on the ``Main Camera`` game object, you can see that it has a "Projection" flag set to "Orthographic". This is the setting that allows the camera to render a 2D game without taking the 3D into account. Keep in mind that even if you are working with 2D objects, Unity is still using its 3D engine to render the scene. The gif above shows this well.
+</md-info>
 
 # Next step
 

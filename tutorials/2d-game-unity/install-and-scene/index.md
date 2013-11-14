@@ -92,7 +92,9 @@ Before jumping into the game creation, take a few minutes to organize your proje
 
 We advise to create folders in the Unity "Project" pane to organize your stuffs. These folders will technically be created in the _Assets_ folder  of your project.
 
+<md-note>
 _Note_: The "Assets" folder is the superfolder containing everything you add in the "Project" pane. It is not visible inside Unity, but if you open your file explorer, you will be able to see it.
+</md-note>
 
 [ ![Folders][unity_folders] ][unity_folders]
 
@@ -148,7 +150,9 @@ A trick in Unity is to create an empty game object and use it as a "folder" for 
 
 **Make sure they all are at the ``(0, 0, 0)`` position so you can track them easily! The position is not important as these empty objects are not using it.**
 
+<md-note>
 _Note_: Changing the position will affect the children relative position. We will not speak about this topic in this tutorial, so let the position of the empty objects to ``(0, 0, 0)`` for the moment.
+</md-note>
 
 See those empty objects as purely logical ones.
 
