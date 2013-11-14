@@ -98,7 +98,9 @@ Avant d'attaquer la création de notre jeu, il nous reste une dernière étape.
 
 Nous vous conseillons de créer dans l'onglet "Project" de Unity des dossiers comme suit pour ranger les différents éléments. Ces dossiers et fichiers sont en réalité stockés dans le dossier _Assets_ de votre projet. 
 
+<md-note>
 _Note :_ Le dossier "Assets" est un le dossier racine des projets Unity pour tout ce qui touche au contenu. Vous ne le voyez pas dans le logiciel, mais vous pouvez le voir dans votre explorateur de fichiers.
+</md-note>
 
 [ ![Dossiers][unity_folders] ][unity_folders]
 
@@ -156,7 +158,9 @@ Une petite astuce pour rester organisé est d'utilisé des nouveaux objets vides
 
 **Vérifiez bien que leur position est ``(0, 0, 0)``. Ils n'utilisent pas cette information donc autant ne pas s'en servir. De plus, cela permet de les avoir tous à la même place.**
 
+<md-note>
 _Note_ : Changer la position d'un objet affectera tous ses enfants, ils sont liés. C'est le principe du graph de scène.
+</md-note>
 
 Ces objets vides peuvent être vu comme purement logiques et sans rapports avec le gameplay.
 

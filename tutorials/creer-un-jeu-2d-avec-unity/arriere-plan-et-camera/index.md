@@ -58,7 +58,9 @@ Exercice express : agrandissez l'arrière-plan pour plus tard en duplicant ce mo
 
 [  ![Background2 in place][background2_in_place]  ][background2_in_place]
 
+<md-tip>
 _Astuce_: Vous pouvez dupliquer un objet avec les raccourcis ``cmd + D`` (OS X) ou ``ctrl + D`` (Windows).
+</md-tip>
 
 # Ajouter des éléments
 
@@ -117,7 +119,9 @@ Cela va créer un ``Prefab`` ayant exactement les mêmes propriétés que l'obje
 
 [ ![Prefab connection][prefab_link] ][prefab_link]
 
+<md-note>
 _Note sur les boutons des Prefabs _: si vous modifiez cet objet dans la scène plus tard, vous pouvez appliquer ("Apply") ces changements au prefab et ainsi modifier directement tous les objets liés. Vous pouvez aussi annulez ("Revert") vos changements ou voir avec quel fichier est lié("Select") l'objet.
+</md-note>
 
 Maintenant vous pouvez facilement créer des nouvelles plateformes en faisant un drag'n'drop du prefab vers la scène. Essayez !
 
@@ -147,7 +151,9 @@ Bon. Dans l'ancienne version de ce tutoriel, nous avions une page entière consa
 
 La bonne nouvelle, c'est qu'avec Unity 4.3 et un projet 2D, il n'y a tout simplement plus rien à faire, les paramètres par défaut sont plus que satisfaisant.
 
+<md-info>
 _Pour information_ : Si vous sélectionnez l'objet``Main Camera``, vous verrez un paramètre "Projection". La valeur est sur "Orthographic" (2D), et non pas sur "Perspective" (3D). Une caméra orthographique affiche tous les objets à la même profondeur, on perd la notion de... perspective, même si c'est toujours le moteur 3D de Unity qui est utilisé pour le rendu. Le Gif ci-dessus le montre plutôt bien.
+</md-info>
 
 # Prêt pour la suite
 
