@@ -14,29 +14,35 @@ links:
   next: ../player-and-enemies
 ---
 
-Using the empty project we created in the step before, we will now see how to add a background and some fancy clouds.
+Using the empty project we created in the previous part, we will now learn how to add a background and some fancy clouds.
 
-## Adding a background
+# Adding a background
 
 Your first background will be static. We will use the following image:
 
 [  ![TGPA background][background]  ][background]
 
-Import the image in the _Textures_ folder (simply copy the file in it). Do not worry about the import settings for now.
+Import the image in the "Textures" folder. Simply copy the file in it, or drag and drop it from the explorer.
 
-In Unity, create a new game object. **A sprite**.
+Do not worry about the import settings for now.
+
+In Unity, create a new ``Sprite`` game object in the scene.
 
 [  ![New sprite][new_sprite]  ][new_sprite]
 
-What is a sprite?
+## What is a sprite?
 
-In general, we call sprite a 2D image displayed in a video game. Here it's a Unity specific object made for 2D games.
+In general, we call "sprite" a 2D image displayed in a video game. Here, it's a Unity specific object made for 2D games.
 
-Unity may have set automatically your background as the sprite to display. If not, or if you want to change, go to the inspector and select "background":
+## Add the background to the sprite
+
+Unity may have set automatically your background as the sprite to display. If not, or if you want to change the texture, go to the inspector and select "background":
 
 [  ![Select a sprite][sprite_select]  ][sprite_select]
 
-We have set a simple cloudy background. Let's reorganize the scene.
+_(You have to click on the small round icon at the right of the input box to show the "Select Sprite" inspector)_
+
+Well, we have set a simple sprite displaying a cloudy sky background. Let's reorganize the scene.
 
 In the _Hierarchy_, select the "New Sprite". Rename it in "Background1" or something you will easily remember.
 
