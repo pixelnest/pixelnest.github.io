@@ -403,15 +403,15 @@ li {
     .entry__content md-danger {
       font-size: 0.9em;
       line-height: 140%; } }
-  .entry__content md-info em, .entry__content md-info strong,
-  .entry__content md-tip em,
-  .entry__content md-tip strong,
-  .entry__content md-note em,
-  .entry__content md-note strong,
-  .entry__content md-warning em,
-  .entry__content md-warning strong,
-  .entry__content md-danger em,
-  .entry__content md-danger strong {
+  .entry__content md-info em:first-of-type, .entry__content md-info strong:first-of-type,
+  .entry__content md-tip em:first-of-type,
+  .entry__content md-tip strong:first-of-type,
+  .entry__content md-note em:first-of-type,
+  .entry__content md-note strong:first-of-type,
+  .entry__content md-warning em:first-of-type,
+  .entry__content md-warning strong:first-of-type,
+  .entry__content md-danger em:first-of-type,
+  .entry__content md-danger strong:first-of-type {
     padding-right: 10px;
     color: white;
     font-style: normal;
