@@ -16,23 +16,27 @@ links:
 
 It is time to enhance our background and scene. One effect you find in every single 2D game since 15 years is [the parallax scrolling](http://en.wikipedia.org/wiki/Parallax_scrolling).
 
-It's a cool and easy to achieve effect that makes a nice scrolling effect. Shoot them up are usually using the scrolling (except the original one, Space Invaders) so I find it interesting to implement it in Unity.
+To make it short, the idea is to move our layers at different speeds (the further the slower). If done correctly this give an illusion of depth.
 
-## Theorical part: defining the parallax in our game
+It's a cool, nice and easy-to-do effect. Shoot them up are usually using the scrolling (except the original one, Space Invaders) so I find it interesting to implement it in Unity.
 
-How are we gonna use the parallax?
+## Theorical part: defining the scrolling in our game
 
-### Moving the camera or level on a treadmill
+How are we gonna use the scrolling?
+
+### What will moves?
 
 - Is it the player and the camera that moves
+
 or
+
 - Are the player and the camera statics and the level is on a sort of treadmill?
 
 The first choice is interesting if you have a **perspective** camera, because the parallax is obvious: elements in background are behind us and seems to move slower.
 
 But in 2D we have the orthographic camera, and we don't have depth at render.
 
-We can also choose to mix both. We will have two scrolling:
+We can choose to mix both. We will have two scrolling:
 
 - the player moving forward along with the camera
 - backgrounds moving at different speeds (in addition to the camera movement), opposed to the first the scrolling
@@ -45,7 +49,7 @@ What is spawning an enemy? It depends on the game, definitely. Here this is what
 
  [![Camera usage][camera_use]][camera_use]
 
-The idea here is that you can use the camera to place the waves of enemies. This gives you a **ready to use level editor**.
+The idea here is that you can use the Unity editor to set the enemies. This gives you a **ready to use level editor**.
 
 Once again, it's a choice, not science ;).But I truly think that using Unity editor as a level editor is valuable, unless you have time, money and dedicated level designers that need special tools.
 
@@ -56,14 +60,10 @@ We need to define what our planes are, and for each, if it is a loop or not. A l
 We will add a new layer for background elements, to accentuate the parallax effect.
 So we are going to have:
 
-- A background with the sky, looping.
-  Position : (0,0,10)
-- A background for flying platforms.
-  Position : (0,0,9)
-- A middleground for flying platforms.
-  Position : (0,0,5)
-- A foreground for players and enemies.
-  Position : (0,0, 0)
+- A background with the sky, looping. Position : (0,0,10)
+- A background for flying platforms. Position : (0,0,9)
+- A middleground for flying platforms. Position : (0,0,5)
+- A foreground for players and enemies. Position : (0,0, 0)
 
  [![Planes][planes]][planes]
 
@@ -75,7 +75,7 @@ You saw that when the scrolling is at the core of your gameplay ("scrolling shoo
 
 But enough thoughts, time to practice!
 
-Unity has some parallax scrolling scripts in its package. You can of course use them, but I found it interesting to build one from scratch the first time.
+Unity has some parallax scrolling scripts in its standard packages (take a look at the 2D platformer demo on the Asset Store). You can of course use them, but I found it interesting to build one from scratch the first time.
 
 ## The simple scrolling
 
@@ -161,7 +161,7 @@ Values I propose are:
 	<td>3 - Foreground</td>
 	<td>(1,1)</td>
 	<td>(1,0,0)</td>
-	<td>**Yes**</td>
+	<td><strong>Yes</strong></td>
 </tr>
 </table>
 
@@ -176,7 +176,7 @@ The result:
 
 [![Scrolling effect][scrolling1]][scrolling1]
 
-For now we also see that enemies moves and shot out of the camera: they  never get recycled after their role is done.
+Not bad, but we can see that enemies moves and shoot out of the camera, before they spawn and after missing he player. They  never get recycled after their role is done.
 
 But first thing first, infinite backgrounds.
 
@@ -188,13 +188,14 @@ When this object goes beyond the camera, it is moved to the current end. And so 
 
 [![Infinite scrolling theory][infinite_scrolling_definition]][infinite_scrolling_definition]
 
-For a filled background, notice that you need a minimum size to cover all the camera so we never the what is behind. Here it's 3 parts for the sky.
+For a filled background, notice that you need a minimum size to cover all the camera so we never the what is behind. Here it's 3 parts for the sky, but it's completely arbitrary.
 
 So the idea is we will get every children on the layer and check its renderer. So it won't work for invisible objects (as the one handling scripts) but I am not sure there is a use case where you need them to repeat too.
 
-We will a nice method to check whether an object's renderer is visible or not. I found it on [the community wiki](http://wiki.unity3d.com/index.php?title=IsVisibleFrom). It is not a class or a script, it's a C# class extension.
+We will a nice method to check whether an object's renderer is visible by a camera or not. I found it on [the community wiki](http://wiki.unity3d.com/index.php?title=IsVisibleFrom). It is not a class or a script, it's a C# class extension.
 
 Create a new C# file named "RendererExtensions.cs" and fill it with:
+
 `````csharp
 using UnityEngine;
 
