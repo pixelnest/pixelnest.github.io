@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Install Unity and create your first scene
-author: Damien
+author: Damien Matthieu
 date: 13/11/13
 
 tutorial:
@@ -171,7 +171,7 @@ Next step we will start fun things: adding a background and some elements!
 TMP
 
 
-[unity_logo_url]: ./-img/Unity.png
+[unity_logo_url]: ./-img/unity.png
 [unity_create_project]: ./-img/create_project.png
 [unity_empty_project]: ./-img/empty_project.png
 [unity_folders]: ./-img/folders.png
