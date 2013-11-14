@@ -38,7 +38,7 @@ Add a _Box collider 2D_. This is our **Hitbox**. You can see it in the editor an
 
 [![Player hitbox][hitbox]][hitbox]
 
-**Tip:** if you plan to make a shoot them up, spend a lot of time tweaking your hitboxes. It should perfectly fit an element from the player sprite. What about the ship window here? You can change the collider's shape, for a _Circle collider 2D_ for example, it changes nothing to the behavior thanks to Unity but it will improve the gameplay. 
+**Tip:** if you plan to make a shoot them up, spend a lot of time tweaking your hitboxes. It should perfectly fit an element from the player sprite. What about the ship window here? You can change the collider's shape, for a _Circle collider 2D_ for example, it changes nothing to the behavior thanks to Unity but it will improve the gameplay.
 
 **Remark:** If you want a super precise and custom shaped hitbox, use the _Polygon Collider 2D_. It is less efficient but allows you to shape the exact collider you want using your mouse in the editor.
 
@@ -130,34 +130,13 @@ public class PlayerScript : MonoBehaviour
 }
 `````
 
-Explanations:
+Explanations (the number refers to the number in the code above):
 
-<table>
-<tr>
-<th>Step</th>
-<th>Explanations</th>
-</tr>
-<tr>
-<td>0</td>
-<td>we define a public variable that will appear in the editor. This is the speed applied to the ship. The value itself doesn't have a proper unit, but exposing it public without accessors allows you to live modify it in Unity through the inspector window. Remember it's script programming, not fully traditional C# programming. This implies to break some rules and convention.</td>
-</tr
-<tr>
-<td>1</td>
-<td>we used the default axis that can be redefine in _Edit->Project Settings->Input_. This will return a value between [-1,1], 0 being the idle state</td>
-</tr
-<tr>
-<td>2</td>
-<td>Multiply the direction by the speed</td>
-</tr
-<tr>
-<td>3</td>
-<td>Make sure everything is relative to the game time (so if the game slow down, your ship will slow too) </td>
-</tr
-<tr>
-<td>4</td>
-<td>Simply translate our sprit.</td>
-</tr
-</table>
+0. We define a public variable that will appear in the editor. This is the speed applied to the ship. The value itself doesn't have a proper unit, but exposing it public without accessors allows you to live modify it in Unity through the inspector window. Remember it's script programming, not fully traditional C# programming. This implies to break some rules and convention.
+1. We used the default axis that can be redefine in _Edit->Project Settings->Input_. This will return a value between [-1,1], 0 being the idle state.
+2. Multiply the direction by the speed.
+3. Make sure everything is relative to the game time (so if the game slow down, your ship will slow too).
+4. Simply translate our sprit.
 
 Now attach the script to the game object (drag'n'drop to add it as a new component).
 
