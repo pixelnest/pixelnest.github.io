@@ -30,7 +30,7 @@ And we will be using prefabs, so we will create multiple instances of the same o
 First create a sprite in Unity for it. You should be used to it now, if necessary check how you did for the enemy:
 
 - sprite
-- _rigidbody 2D with settings_
+- _rigidbody 2D_ with settings (no gravity, fixed angle)
 - _box collider 2D_ with a size of 1x1
 
 Set a scale of 0.75x0.75x1 so it will looks good.
