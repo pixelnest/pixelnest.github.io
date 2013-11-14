@@ -14,25 +14,57 @@ links:
   next: ../shooting-1
 ---
 
-We have a background, some props, it is time to add some useful game elements, like the player!
+In the previous chapter, we have added a background and some _props_ to our scene. It is time to add some useful game elements, like the player!
 
-## Creating the player sprite
+# Creating the player
 
-Here the sprite we will use:
+Creating a player controllable entity needs some elements : a sprite, a way to control it and a way to let it interact with the world.
+
+We will explore this process step by step.
+
+Let's begin with the sprite.
+
+## Add a sprite
+
+Here is the image that we will use:
 
 [![Player Sprite][player]][player]
 
-It is the same steps than for platforms.
+_(Right click to save the image)_
 
-Sprite creation procedure:
+1. Copy the player image to the "Textures" folder.
 
-- Copy the player image to the _Texture_ folder
-- New sprite
-- If necessary, select each sprite in the image
-- Select the sprite to display
+2. Create a new ``Sprite``. Name it "Player".
 
-Place it in the "0 - Foreground" layer.
-Change its scale: 0.3x0.3x1 should be fine.
+3. Select the sprite to display in the "Sprite" property of the "Sprite Renderer" component.
+
+  If you have any trouble, refer to the previous part. We did exactly the same procedure for the background and _props_.
+
+4. Place the player in the "0 - Foreground" layer.
+
+5. Change its scale. ``(0.3, 0.3, 1)`` should be fine.
+
+## A word about components
+
+We have just talked about a "Sprite Renderer" component. If you haven't remarked, a game object is composed of a few components, visibles in the "Inspector" pane.
+
+By default, an empty game object looks like:
+
+[![Empty game object components][empty_components]][empty_components]
+
+This object has only one component: a "Transform". This component is required and cannot be disabled or removed from an object.
+
+You can add as many components as you want on an object. A script is added as a component, for example. Every component (except the "Transform") can be enabled or disabled during the lifetime of the object.
+
+[![Enable a game object component][components]][components]
+
+_(You can click on the checkbox to disabled it. You can right-click on a component to reset it, remove it, etc.)_
+
+_Note_: Components can interact with other components. If an object has a component that requires another component of an object to work with, you can just drag the whole object inside this component, and it will find the correct one in the object.
+
+Now that we have learned about the concept of component, let's add one to the player!
+
+## Add a Box Collider
 
 Add a _Box collider 2D_. This is our **Hitbox**. You can see it in the editor and tweak it's size in the inspector. Here, with a size of 10x10x1, it's way too large for a real shoot them up but it's still smaller than the sprite:
 
@@ -233,6 +265,8 @@ Now we want to kill that moving thing! And for that, we need ammo!
 
 [player]: ./-img/player.png
 [hitbox]: ./-img/hitbox.png
+[empty_components]: ./-img/empty_go_components.png
+[components]: ./-img/go_components.png
 [adding_player]: ./-img/adding_player.png
 [failing_ship]: ./-img/failing_ship.gif
 [player_full_settings]: ./-img/player_full_settings.png

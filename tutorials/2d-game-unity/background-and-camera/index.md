@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Adding and displaying a background
-author: Damien
+author: Damien Matthieu
 date: 13/11/13
 
 tutorial:
