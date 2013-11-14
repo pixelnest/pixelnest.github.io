@@ -143,15 +143,15 @@ Si vous passez de la vue 2D à la vue 3D dans l'éditeur, vous comprendrez clair
 Vous avez appris à faire un décor simple à base de sprite. En réutilisant ces connaissances, nous allons afficher le joueur et des ennemis.
 
 
-[background]: ../../background-and-camera/-img/background.png
-[platforms]: ../../background-and-camera/-img/platforms.png
-[new_sprite]: ../../background-and-camera/-img/new_sprite.png
-[sprite_select]: ../../background-and-camera/-img/sprite_select.png
-[display_background]: ../../background-and-camera/-img/display_background.png
-[background2_in_place]: ../../background-and-camera/-img/background2_in_place.png
-[sprite_multiple]: ../../background-and-camera/-img/sprite_multiple.png
-[sprite_editor]: ../../background-and-camera/-img/sprite_editor.png
-[sprite_editor_result]: ../../background-and-camera/-img/sprite_editor_result.png
-[adding_platforms]: ../../background-and-camera/-img/adding_platforms.png
-[layers_3d]: ../../background-and-camera/-img/layers.gif
-[prefabs]: ../../background-and-camera/-img/prefabs.png
+[background]: ../../2d-game-unity/background-and-camera/-img/background.png
+[platforms]: ../../2d-game-unity/background-and-camera/-img/platforms.png
+[new_sprite]: ../../2d-game-unity/background-and-camera/-img/new_sprite.png
+[sprite_select]: ../../2d-game-unity/background-and-camera/-img/sprite_select.png
+[display_background]: ../../2d-game-unity/background-and-camera/-img/display_background.png
+[background2_in_place]: ../../2d-game-unity/background-and-camera/-img/background2_in_place.png
+[sprite_multiple]: ../../2d-game-unity/background-and-camera/-img/sprite_multiple.png
+[sprite_editor]: ../../2d-game-unity/background-and-camera/-img/sprite_editor.png
+[sprite_editor_result]: ../../2d-game-unity/background-and-camera/-img/sprite_editor_result.png
+[adding_platforms]: ../../2d-game-unity/background-and-camera/-img/adding_platforms.png
+[layers_3d]: ../../2d-game-unity/background-and-camera/-img/layers.gif
+[prefabs]: ../../2d-game-unity/background-and-camera/-img/prefabs.png
