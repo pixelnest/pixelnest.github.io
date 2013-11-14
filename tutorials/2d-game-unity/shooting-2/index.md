@@ -116,9 +116,9 @@ You should have this:
 
 [![Enemy with a new object][enemy_full_config]][enemy_full_config]
 
-Now we modify the script, otherwise it will not work: in _EnemyScript_ , _GetComponent_ will return null as the _WeaponScript_ is not attached to the same game object
+Now we modify the script, otherwise it will not work: in _EnemyScript_ , ``GetComponent`` will return null as the _WeaponScript_ is not attached to the same game object
 .
-Fortunately, we can look in the hierarchy of the current game object using the _...InChildren_ methods.
+Fortunately, we can look in the hierarchy of the current game object using the ``GetComponentInChildren`` or ``GetComponentsInChildren`` methods.
 
 I also added a way to manage multiple weapons, for fun, it's just that we look for a list instead of just one instance.
 
@@ -160,7 +160,7 @@ Finally, update the shot speed (in the _MoveScript_) so they go faster than the 
 
 [![Super dangerous Poulpi][shoot_ok]][shoot_ok]
 
-Here we are a super dangerous Poulpi. Of course we need to tweak the variable to make a real game.
+Here we have a super dangerous Poulpi. Of course we need to tweak the variable to make a real game.
 
 ### Bonus: firing in two direction
 
@@ -186,8 +186,8 @@ This is just some hints to go further on the shooting feature. You can skip it i
 
 ### Pooling the projectiles?
 
-As you shoot you will see game objects being created and removed only after 20 seconds
-.
+As you shoot you will see game objects being created and removed only after 20 seconds or less.
+
 If you are doing a danmaku and need a LOT of bullets, this is not a viable technique.
 
 One of the solution to handle a lot of bullet is to use a **pooling system**. You can simply use an array of bullets, limited in size. When if the array is filled, you delete the oldest object and replace it by a new one.
