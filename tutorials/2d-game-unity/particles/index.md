@@ -33,7 +33,7 @@ An explosion is usually made of two things: fire and smoke.
 
 Create a new _Particle System_ from the editor (_Game Object -> Create Other -> Particle System_).
 
-I recommend you to work on an empty part of the scene (or in an empty scene) so you know what is happening.
+I recommend you to work on an empty part of the scene (or in an empty scene) so you see clearly what is happening.
 
 Zooming on your particles, you will see a continuous flow of sparks:
 
@@ -143,7 +143,7 @@ Save as a prefab. you can organize a bit by creating a folder "Prefabs/Particles
 
 ## Fire
 
-This is another particle system. Create a new one, just as you did above. We will use the default material for fire, it will be enough for our needs.
+This is another particle system. Create a new one, just as you did above. We will use the default material for fire (no image), it will be enough for our needs.
 
 Settings:
 
@@ -292,7 +292,7 @@ Assign it to the "Scripts" game object. Inspect it, and fill the fields with the
 
 Time to call the script!
 
-Open _HealthScript. We will check when the game object is destroyed and display our sweet explosion.
+Open _HealthScript_. We will check when the game object is destroyed and display our sweet explosion.
 
 We will just add one line:
 
