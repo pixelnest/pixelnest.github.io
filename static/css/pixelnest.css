@@ -412,12 +412,12 @@ li {
   .entry__content md-warning strong,
   .entry__content md-danger em,
   .entry__content md-danger strong {
-    padding-right: 20px;
+    padding-right: 10px;
     color: white;
     font-style: normal;
     font-weight: normal; }
 .entry__content md-info {
-  background-color: #E4E4E4; }
+  background-color: #D8D8D8; }
 .entry__content md-tip {
   background-color: #8bd259; }
 .entry__content md-note {
