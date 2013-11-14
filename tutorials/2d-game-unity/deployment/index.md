@@ -14,13 +14,13 @@ links:
   next: ../animations
 ---
 
-A short last part about how to do an executable that you can distribute.
+A short last part about how to do an executable that you can distribute. Short, because deploying with Unity is easy.
 
 ## Build settings again
 
 Everything will be in the _File->Build Settings_ window that you had to open in the previous part.
 
-On your left, you can choose a platform. This will make its settings on the right.
+On your left, you can choose a platform. This will make its settings appears on the right.
 
 [ ![platforms][platforms]][platforms]
 
@@ -31,8 +31,6 @@ Let's try with the Web Player. Select "Web Player" in platform and build & run.
 This will produce an HTML page with the game embed in. This is the first and simplest way to distribute your game, you just have to host the two files on the Internet.
 
 [ ![The web version][web_result]][web_result]
-
-(See that the menu is not wide enough for this resolution. Easy to change, I didn't see it until I deployed)
 
 ## Player Settings
 
@@ -71,12 +69,12 @@ This is tweaking and optimization, you should do that at the end of your develop
 
 ## Ready for the next step
 
-That's it. You made it. This tutorial is over.
-Well, there is a bonus level, we gathered some useful resources on specific topic that can interest you.
-
+That's it. You made it. The development is over.
 You probably don't feel ready to make a full 2D game but you probably are.
 
-Now it's up to you to look for more resources specific to your game idea and, most of all, it's up to you to start your project.
+You will find next some bonus levels to extend this tutorial on some parts that can interest you (gameplay tweaking, animations tools).
+
+But now it's up to you to look for more resources specific to your game idea and, most of all, it's up to you to start your project.
 
 So in Unity:
 - Go to _File->New Project_
