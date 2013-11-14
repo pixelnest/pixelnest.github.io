@@ -20,7 +20,9 @@ Using the empty project we created in the previous part, we will now learn how t
 
 Your first background will be static. We will use the following image:
 
-[  ![TGPA background][background]  ][background]
+[ ![TGPA background][background] ][background]
+
+_(Right click to save the image)_
 
 Import the image in the "Textures" folder. Simply copy the file in it, or drag and drop it from the explorer.
 
@@ -28,118 +30,120 @@ Do not worry about the import settings for now.
 
 In Unity, create a new ``Sprite`` game object in the scene.
 
-[  ![New sprite][new_sprite]  ][new_sprite]
+[ ![New sprite][new_sprite] ][new_sprite]
 
 ## What is a sprite?
 
 In general, we call "sprite" a 2D image displayed in a video game. Here, it's a Unity specific object made for 2D games.
 
-## Add the background to the sprite
+## Add the texture to the sprite
 
 Unity may have set automatically your background as the sprite to display. If not, or if you want to change the texture, go to the inspector and select "background":
 
-[  ![Select a sprite][sprite_select]  ][sprite_select]
+[ ![Select a sprite][sprite_select] ][sprite_select]
 
 _(You have to click on the small round icon at the right of the input box to show the "Select Sprite" inspector)_
 
 Well, we have set a simple sprite displaying a cloudy sky background. Let's reorganize the scene.
 
-In the _Hierarchy_, select the "New Sprite". Rename it in "Background1" or something you will easily remember.
+In the "Hierarchy" pane, select the ``New Sprite``. Rename it in ``Background1`` or something you will easily remember.
 
-Then move the object where it belongs: _Level->0 - Background_. Make it's position is (0, 0, 0).
+Then move the object to where it belongs: ``Level -> 0 - Background``. Change its position to ``(0, 0, 0)``.
 
-[  ![Background is set][display_background]  ][display_background]
+[ ![Background is set][display_background] ][display_background]
 
-**A quick exercise**: duplicate the background and place it at (20,0,0). It should fit with the first part.
+A quick exercise: duplicate the background and place it at ``(20, 0, 0)``. It should fit perfectly with the first part.
 
-[  ![Background2 in place][background2_in_place]  ][background2_in_place]
+_Tip_: You can duplicate an objet with the ``cmd + D`` (OS X) or ``ctrl + D`` (Windows) shortcuts.
 
-## Adding background elements
+[ ![Background2 in place][background2_in_place] ][background2_in_place]
 
-Also known as "Props". Things that aren't used for gameplay but enhance visually the scene.
+# Adding background elements
 
-Here are some simple flying magically platform sprites:
+Also known as _props_. These elements aren't used to improve the gameplay but to visually enhance the scene.
+
+Here are some simple flying platform sprites:
 
 [ ![Platform sprites][platforms] ] [platforms]
 
-As you can see, we got two in one file. This is a good way to learn of to crop sprites with the new Unity tools.
+_(Right click to save the image)_
 
+As you can see, we got two platforms in one file. This is a good way to learn how to crop sprites with the new Unity tools.
 
-### Getting two sprites from one image
+## Getting two sprites from one image
 
-- Import the image in your texture folder
-- Select and go to the inspector
-- Change _Sprite Mode_ to _Multiple_
-- Click on _Sprite Editor_
+1. Import the image in your "Textures" folder
+2. Select the "platforms" sprite and go to the inspector
+3. Change "Sprite Mode" to "Multiple"
+4. Click on "Sprite Editor"
 
 [ ![Multiple sprites][sprite_multiple] ][sprite_multiple]
 
-- In the new window, you can draw rectangles around each platform to tell Unity where the interesting content is:
+In the new window ("Sprite Editor"), you can draw rectangles around each platform to _slice_ the texture into smaller parts:
 
 [ ![Sprite Editor][sprite_editor] ][sprite_editor]
 
-The top-left button "Slice" also allow you to quickly and automatically make this work.
+The top-left button "Slice" allow you to quickly and automatically make this tedious task:
 
-Call the platforms "platform1" and "platform2". Now, under the image file, you should see the two sprites separately:
+[ ![Automatic slicing][slice] ][slice]
+
+Unity will find the objects inside the image and will slice them automatically. You can specify the default pivot point, or set a minimum size for a slice. For a simple image without artifacts, it's really efficient. However, if you use this tool, _be careful and check the result_ to be sure to get what you want.
+
+For this tutorial, do it manually first. Call the platforms "platform1" and "platform2".
+
+Now, under the image file, you should see the two sprites separately:
 
 [ ![Sprite Editor result][sprite_editor_result] ][sprite_editor_result]
 
-### Adding them to the scene
+## Adding them to the scene
 
-This is the same as for a background image: create a new sprite and select "platform1" sprite. Repeat for "platform2".
+We will proceed like for the background sprite: create a new ``Sprite`` and select the "platform1" sprite. Repeat for "platform2".
 
-Place them in "1 - Middleground". Again make sure they have a 0 position for Z.
+Place them in the ``1 - Middleground`` object. Again make sure they have a ``0`` Z position.
 
 [ ![Two shiny new platforms][adding_platforms] ] [adding_platforms]
 
-And... it's working! I'm still amazed how simple it is now (it was a bit tricky without the 2D tools).
+And... it's working! I'm still amazed how simple it is now (to be honest, it was a bit tricky without the 2D tools, involving quad and image tiling).
 
-### Prefabs
+## Prefabs
 
-Save those platforms as prefabs. Just drag'n'drop from the _Hierarchy_ view to the _Project_ view, in the _Prefabs_ folder.
-
-It will be easier to reuse them later, you just have to drag'n'drop the prefab in the scene! Try to add another platform that way.
+Save those platforms as prefabs. Just drag'n'drop them inside the "Prefabs" folder of the "Project" pane from the "Hierarchy":
 
 [ ![Prefabs][prefabs] ] [prefabs]
 
-You can now add more platforms, change their position, scale and plane (you can put some in background or foreground too, **just make sure that the platform z position is 0**.
+By doing so, you will create a ``Prefab`` based exactly on the original game object. You can notice that the game object that you have converted to a ``Prefab`` presents a new row of buttons just under its name:
 
-For now it's not very fancy but in two chapters we will add a parallax scrolling and it will suddenly bring the scene to life.
+[ ![Prefab connection][prefab_link] ][prefab_link]
 
-## Layers
+_Note on the "Prefab" buttons_: If you modify the game object later, you can "Apply" its changes to the ``Prefab`` or "Revert" it to the ``Prefab`` properties (canceling any change you've made on the game object). The "Select" button move your selection directly to the ``Prefab`` asset in the "Project" view (it will be highlighted).
 
-Before we get any further, we will modify our homemade layers to avoid any display order issue.
+Creating prefabs with the platform objects will make them easier to reuse later. Simply drag the ``Prefab`` into the scene to add a copy. Try to add another platform that way.
 
-Simply change the Z position as following:
+You are now able to add more platforms, change their positions, scales and planes (you can put some in background or foreground too, **just make sure that the platform Z position is ``0`**).
 
-<table>
-<tr>
-<th>Layer</th>
-<th>Z position</th>
-</tr>
-<tr>
-<td>0 - Background</td>
-<td>10</td>
-</tr>
-<tr>
-<td>1 - Middleground</td>
-<td>5</td>
-</tr>
-<tr>
-<td>3 - Foreground</td>
-<td>0</td>
-</tr>
-</table>
+It's not very fancy but in two chapters we will add a parallax scrolling and it will suddenly bring the scene to life.
 
-If you switch from 2D to 3D view in editor, you will clearly see the layers:
+# Layers
+
+Before we get any further, we will modify our homemade layers to avoid any display order issues.
+
+Simply change the Z position of the game objects in your "Hierarchy" view as following:
+
+| Layer            | Z Position |
+| ---------------- | ---------- |
+| 0 - Background   | 10         |
+| 1 - Middleground | 5          |
+| 2 - Foreground   | 0          |
+
+If you switch from 2D to 3D view in the "Scene" view, you will clearly see the layers:
 
 [ ![Layers in 3D view][layers_3d] ][layers_3d]
 
-## Ready for the next step
+# Next step
 
-You learned how to create a simple static background and how to display it properly. Then we saw how to make simple sprites from a an image.
+You have just learned how to create a simple static background and how to display it properly. Then, we have taught you how to make simple sprites from a an image.
 
-Now we will see how to add the player and enemies.
+In the next chapter, we will learn how to add a player and its enemies.
 
 
 [background]: ./-img/background.png
@@ -154,3 +158,5 @@ Now we will see how to add the player and enemies.
 [adding_platforms]: ./-img/adding_platforms.png
 [layers_3d]: ./-img/layers.gif
 [prefabs]: ./-img/prefabs.png
+[prefab_link]: ./-img/prefab_link.png
+[slice]: ./-img/slice.png
