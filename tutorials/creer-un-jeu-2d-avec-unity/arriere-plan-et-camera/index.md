@@ -138,7 +138,16 @@ Changez simplement la position z des plans comme suit :
 | 2 - Foreground   | 0          |
 
 Si vous passez de la vue 2D à la vue 3D dans l'éditeur, vous comprendrez clairement ce que nous avons fait :
+
 [ ![Layers in 3D view][layers_3d] ][layers_3d]
+
+# Caméra et lumières
+
+Bon. Dans l'ancienne version de ce tutoriel, nous avions une page entière consacrée à l'ajout de la lumière et aux paramètres de la caméra.
+
+La bonne nouvelle, c'est qu'avec Unity 4.3 et un projet 2D, il n'y a tout simplement plus rien à faire, les paramètres par défaut sont plus que satisfaisant.
+
+_Pour information_ : Si vous sélectionnez l'objet``Main Camera``, vous verrez un paramètre "Projection". La valeur est sur "Orthographic" (2D), et non pas sur "Perspective" (3D). Une caméra orthographique affiche tous les objets à la même profondeur, on perd la notion de... perspective, même si c'est toujours le moteur 3D de Unity qui est utilisé pour le rendu. Le Gif ci-dessus le montre plutôt bien.
 
 # Prêt pour la suite
 
