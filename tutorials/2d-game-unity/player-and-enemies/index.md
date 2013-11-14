@@ -38,9 +38,9 @@ Add a _Box collider 2D_. This is our **Hitbox**. You can see it in the editor an
 
 [![Player hitbox][hitbox]][hitbox]
 
-**Tip:** if you plan to make a shoot them up, spend a lot of time tweaking your hitboxes. It should perfectly fit an element from the player sprite. What about the ship window here? You can change the collider's shape, for a Circle collider 2D_ for example, it change nothing to the behavior thanks to Unity.
+**Tip:** if you plan to make a shoot them up, spend a lot of time tweaking your hitboxes. It should perfectly fit an element from the player sprite. What about the ship window here? You can change the collider's shape, for a _Circle collider 2D_ for example, it changes nothing to the behavior thanks to Unity but it will improve the gameplay. 
 
-**Remark:** If you want a super precise hitbox, use the _Polygon Collider 2D_. It is less efficient but allows you to shape the exact collider you want using your mouse in the editor.
+**Remark:** If you want a super precise and custom shaped hitbox, use the _Polygon Collider 2D_. It is less efficient but allows you to shape the exact collider you want using your mouse in the editor.
 
 Save the prefab. You now have a player base!
 
@@ -59,7 +59,7 @@ Now hit play, and see what does it change.
 
 [![Falling player][failing_ship]][failing_ship]
 
-The ship is falling, no matter what. Say hello to **gravity** ! This can be used in some kind of games, but we don't want to use it here. As default scenes come with a default gravity (y = -9.81) and rigidbodies add a mass, the ship is now attracted to the bottom.
+The ship is falling, no matter what. Say hello to **gravity**! This can be used in some kind of games, but we don't want to use it here. As new scenes come with a default gravity (y = -9.81) and rigidbodies add a mass, the ship is now attracted to the bottom.
 
 Fortunately, it is simple to disable gravity on some object. Just set "Gravity Scale" to 0. That's it, the ship is flying again.
 
@@ -75,7 +75,7 @@ Time for some scripting! So far we didn't code anything. That's the power of (lo
 
 From Unity, create a new C# script in the _Scripts_ folder. Call it "PlayerScript".
 
-**Remark: you can do it in JavaScript too. Code snippets will be C# but it quite easy to translate from a language to another.**
+**Remark:** you can do it in JavaScript too. Code snippets will be C# but it quite easy to translate from a language to another.
 
 Open your favorite IDE or use the shortcut (_Assets -> Sync MonoDevelop Project_) to edit the script.
 
@@ -87,10 +87,10 @@ Default script come with **Start** and **Update**. Here is a short list of the m
 - ``Start()``: called after Awake()
 - ``Update()``: main loop
 - ``Destroy()``: object is destroyed, last chance to execute some code
-- ``OnCollisionEnter(CollisionInfo info)``: a collider is touching the object collider
-- ``OnCollisionExit(CollisionInfo info)``: a collider is not touching anymore the object collider
-- ``OnTriggerEnter(Collider otherCollider)``: a collider marked as trigger is touching the object collider
-- ``OnTriggerExit(Collider otherCollider)``: a collider marked as trigger is touching the object collider
+- ``OnCollisionEnter2D(CollisionInfo2D info)``: another collider is touching the object collider
+- ``OnCollisionExit2D(CollisionInfo2D info)``: another collider is not touching anymore the object collider
+- ``OnTriggerEnter2D(Collider2D otherCollider)``: another collider marked as trigger is touching the object collider
+- ``OnTriggerExit2D(Collider2D otherCollider)``: another collider marked as trigger is not touching anymore the object collider
 
 We will get back on some of them in details when we will be using them.
 
@@ -186,7 +186,7 @@ Time to create a new sprite! Again:
 
 - Copy the image to the _Texture_ folder
 - New sprite using this image
-- Scale the sprite transform to 0.4x0.4x1
+- Scale transform to 0.4x0.4x1
 - Add a _Box Collider 2D_ with a size of 4x4
 - Add a rigidbody 2D with 0 gravity and fixed angles.
 
@@ -200,9 +200,9 @@ We will script a simple behavior: it will just moves in a direction.
 
 Create a new script "MoveScript".
 
-We could have call it "EnemyScript", but we could reuse it later in another context. Also, the modularity provided by Unity component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters, it's your choice.
+We could have call it "EnemyScript", but we plan to reuse it later in another context. Also, the modularity provided by Unity component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters, it's your choice.
 
-We will reuse some pieces we have already written in the "PlayerScript" for movement, but we will add another designer variable for the direction.
+We will copy some pieces we have already written in the "PlayerScript" for movement, but we will add another designer variable for the direction.
 
 The script:
 
@@ -259,5 +259,7 @@ Now we want to kill that moving thing! And for that, we need ammo!
 [player_full_settings]: ./-img/player_full_settings.png
 [ship_moving]: ./-img/moving_ship.gif
 [player_value_tweak]: ./-img/player_value_tweak.png
+
+[poulpi]: ./-img/poulpi.png
 [enemy_definition]: ./-img/enemy_definition.png
 [moving_enemy]: ./-img/moving_enemy.gif
