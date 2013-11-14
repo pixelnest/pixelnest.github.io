@@ -139,6 +139,14 @@ If you switch from 2D to 3D view in the "Scene" view, you will clearly see the l
 
 [ ![Layers in 3D view][layers_3d] ][layers_3d]
 
+# Camera and lights
+
+Well. In the previous version of this tutorial (for Unity 4.2), we had a long and detailed explanation on how to set the camera and the lights for a 2D game.
+
+The good new is that it's completely useless now. You have nothing to do. It just works™.
+
+_Aside_: If you click on the ``Main Camera`` game object, you can see that it has a "Projection" flag set to "Orthographic". This is the setting that allows the camera to render a 2D game without taking the 3D into account. Keep in mind that even if you are working with 2D objects, Unity is still using its 3D engine to render the scene. The gif above shows this well.
+
 # Next step
 
 You have just learned how to create a simple static background and how to display it properly. Then, we have taught you how to make simple sprites from a an image.
