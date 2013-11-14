@@ -16,8 +16,6 @@ links:
 
 Using the empty project we created in the step before, we will now see how to add a background and some fancy clouds.
 
-[Download the project from step 1]()
-
 ## Adding a background
 
 Your first background will be static. We will use the following image:
@@ -96,7 +94,7 @@ Save those platforms as prefabs. Just drag'n'drop from the _Hierarchy_ view to t
 
 It will be easier to reuse them later, you just have to drag'n'drop the prefab in the scene! Try to add another platform that way.
 
-[ ![Prefabs][prefab] ] [prefab]
+[ ![Prefabs][prefabs] ] [prefabs]
 
 You can now add more platforms, change their position, scale and plane (you can put some in background or foreground too, **just make sure that the platform z position is 0**.
 
@@ -133,14 +131,14 @@ If you switch from 2D to 3D view in editor, you will clearly see the layers:
 
 ## Ready for the next step
 
-You learned how to create a simple static background and how to display it properly. Then we saw how to make simple sprites from a Cloud image.
+You learned how to create a simple static background and how to display it properly. Then we saw how to make simple sprites from a an image.
 
 Now we will see how to add the player and enemies.
 
 
 [background]: ./-img/background.png
 [platforms]: ./-img/platforms.png
-[new_sprite]: ./img/new_sprite.png
+[new_sprite]: ./-img/new_sprite.png
 [sprite_select]: ./-img/sprite_select.png
 [display_background]: ./-img/display_background.png
 [background2_in_place]: ./-img/background2_in_place.png
@@ -149,3 +147,4 @@ Now we will see how to add the player and enemies.
 [sprite_editor_result]: ./-img/sprite_editor_result.png
 [adding_platforms]: ./-img/adding_platforms.png
 [layers_3d]: ./-img/layers.gif
+[prefabs]: ./-img/prefabs.png
