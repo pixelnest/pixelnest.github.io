@@ -22,11 +22,11 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 # Chapitres
 
 - [Installer Unity et créer une première scène](../installation-et-preparation)
-
-
+- [Décor et arrière-plan](../decor-et-arriere-plan)
+- [Joueur et ennemis](../joueur-et-ennemis)
+- 
 TODO
 
-- [Adding and displaying a background](../background-and-camera)
 - [Create a player and its enemies](../player-and-enemies)
 - [Shooting (1/2)](../shooting-1)
 - [Shooting (2/2)](../shooting-2)
