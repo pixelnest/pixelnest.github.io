@@ -14,3 +14,6 @@ links:
   next: ../tweaking-the-gameplay
 ---
 
+**NOT WRITTEN YET**
+
+But we are working on it, stay tuned!

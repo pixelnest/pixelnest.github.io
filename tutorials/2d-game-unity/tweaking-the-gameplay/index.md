@@ -13,6 +13,11 @@ links:
   previous: ../animations
 ---
 
+**NOT WRITTEN YET**
+
+But we are working on it, stay tuned!
+
+
 Better values:
 
 Player scale:0.2x0.2x1

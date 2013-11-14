@@ -14,13 +14,13 @@ links:
   next: ../deployment
 ---
 
-I must say it immediately: Menus and GUI are no fun in a game. You usually have to use a too basic GUI framework (or no framework at all), it takes a lot of time and the result is just... menus that players will skip as fast as possible.
+I must say it immediately: menus and GUI are no fun in a game. You usually have to use a very basic GUI framework (or no framework at all), it takes a lot of time and the result is just... menus that players will skip as fast as possible.
 
-Fortunately, Unity is quite cool for game GUIs and menus, you will see why.
+Well, Unity is quite cool for game GUIs and menus, but it's not fancy without a lot of effort. Let's start with the basics.
 
 ## The assets
 
-This is what we will use for the menu. Buttons will be Unity standard.
+This is what we will use for the menu. Buttons will be Unity standard ones.
 
 A background:
 
@@ -51,6 +51,7 @@ Save it in the "Scenes" folder as "Menu".
 ### Scene settings
 
 Our menu will be made of:
+
 - a background
 - a logo
 - a script that will display buttons and stuff
@@ -60,13 +61,13 @@ I think you are now able to reproduce the scene with the following information:
 Background
 
 - Like any other sprite we did before (quad, texture, etc)
-- Position at (0,0,1)
+- Position at ``(0,0,1)``
 - Size 2x2x1
 
 Logo
 
 - Like any other sprite we did before (quad, texture, etc)
-- Position at (0,2,0)
+- Position at ``(0,2,0)``
 - Size 0.75x0.75x1
 
 The result:
@@ -122,11 +123,10 @@ Click and... crash!
 
 	Level 'Stage1' (-1) couldn't be loaded because it has not been added to the build settings. To add a level to the build settings use the menu File->Build Settings...
 
-What to do is right here in the error message.
+What to do is clearly said in the error message.
 
 ## Adding scene to the build
 
-Make sure you have the "Menu" scene opened.
 Go to _File->Build Settings_:
 
 [ ![Build settings][build_settings]][build_settings]
@@ -150,12 +150,12 @@ This is the actual flow:
 - Player lose 1 HP
 - _HealthScript_ decide to destroy the player as it has less than 1 point left
 
-We would modify but we can also let it like that, and add new steps:
+We will add new steps:
 
 - _PlayerScript.OnDestroy_ is called
 - A _GameOverScript_ is created and added to the scene
 
-The _GameOverScript_ is the new script you have to create right now.
+The _GameOverScript_ is the new script defined below. Please create it, as you did many times before.
 
 It is a little piece of code that will display a "Restart" and a "Back to menu" button:
 
@@ -209,7 +209,7 @@ Now, in the _PlayerScript_, we must instantiate this new script on death:
   }
 ````
 
-Now try to die:
+Now try to die (shoudln't be too long):
 
 [ ![Game Over][game_over]][game_over]
 
@@ -221,15 +221,19 @@ Of course this can be really improved, with text, animation, etc.
 
 But it works! :)
 
-## It's also ugly
+## "It's so ugly my eyes start bleeding"
 
-True!
+Damn! 
 
 If you want to do something about it, you can create a skin:
 
 _Assets->Create->Gui Skin_
 
 Here you can tweak the UI controls to get something more fancy.
+
+Make sure this skin is in a _Resources_ folder, then in your scripts you will have to load (**only once**, not at each frame) it using ``GUI.skin = Resources.Load("MySkin");``.
+
+If you have some money and you have a lot of menus and texts in your game, think about the NGUI plugin. It worth it.
 
 ## Ready for the next step
 
