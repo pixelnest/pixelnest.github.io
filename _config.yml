@@ -16,3 +16,6 @@ paginate: 4
 
 # Markdown formatter
 markdown: redcarpet
+
+redcarpet:
+  extensions: ["tables"]
