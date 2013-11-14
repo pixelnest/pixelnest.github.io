@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Creating a 2D game with Unity
-author: Damien
 date: 13/11/13
 
 tutorial:
@@ -20,9 +19,9 @@ The result will be a lot like this demo:
 
 _(Click on the image to play)_
 
-I will focus on a _shmup_ with an horizontal scrolling. However, if this tutorial do its job correctly, you'll understand how to extend the code to many other genres.
+We will focus on a _shmup_ with an horizontal scrolling. However, if this tutorial do its job correctly, you'll understand how to extend the code to many other genres.
 
-The assets, gameplay and original idea come from the game [The Great Paper Adventure][tgpa_link]. I created this game a few years ago using [XNA][xna_link]. When I started this tutorial, I thought it was a perfect material to explain Unity.
+The assets, gameplay and original idea come from the game [The Great Paper Adventure][tgpa_link]. Damien created this game a few years ago using [XNA][xna_link]. When we started this tutorial, we thought it was a perfect material to explain Unity.
 
 # Unity
 

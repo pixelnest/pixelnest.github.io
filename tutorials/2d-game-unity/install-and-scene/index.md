@@ -78,13 +78,13 @@ _Do not worry about the name_. The product name is defined in the options and ch
 
 ## Prepare the project
 
-As I explained in [another tutorial][dam_versionning_tutorial], if you plan to use Git or SVN, the first thing you need to do is to enable some obscure settings for team collaboration.
+As Damien explained in [another tutorial][dam_versionning_tutorial], if you plan to use Git or SVN, the first thing you need to do is to enable some obscure settings for team collaboration.
 
-Instead of writing what I have already written before, just check the [tutorial][dam_versionning_tutorial] if you are interested. :)
+Instead of writing what he have already written before, just check the [tutorial][dam_versionning_tutorial] if you are interested. :)
 
 ## Unity layout and panels
 
-You now face a nice empty scene. Here is the layout I am using, but you should take some times to personalize the interface to your needs. I personally like to have the console next to the game view, but if you have a small screen you may use tabs instead of panels.
+You now face a nice empty scene. Here is the layout we are using, but you should take some times to personalize the interface to your needs. I (Damien) personally like to have the console next to the game view, but if you have a small screen you may use tabs instead of panels.
 
 [ ![An empty project][unity_empty_project] ][unity_empty_project]
 
@@ -112,7 +112,9 @@ Prefabs can be seen as a ``class`` in a programming language, which can be insta
 
 A scene is basically a level or a menu.
 
-Contrary to the other objects you create in the "Project" pane, scenes are created with the "File" menu. Click on "New Scene", then save it to the "Scenes" folder.
+Contrary to the other objects you create in the "Project" pane, scenes are created with the "File" menu. If you want to create a scene, click on the "New Scene" submenu, then do not forget to save it to the "Scenes" folder.
+
+Scenes need to be manually saved. It's a classic mistake in Unity to make some changes to a scene and its elements and to forget to save it after. Your version control tool will not see any change until you scene is saved.
 
 ### Sounds
 
@@ -128,7 +130,7 @@ Textures are sprites and images of your game. In a 2D project, you could rename 
 
 It doesn't really matter in a 2D project, but by keeping the name "Textures", Unity will recognize it and automate some tasks. If you want some informations about this topic, you can read [this](http://answers.unity3d.com/questions/172384/importing-models.html) or [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
 
-## Filling the scene
+## Our first game scene
 
 The "Hierarchy" pane contains every object that is available in the scene. This is what you manipulate when you start the game with the "Play" button.
 
@@ -136,7 +138,7 @@ Each object of the scene is a "game object" for Unity. You can create an object 
 
 [ ![Logicial objects][unity_logical_objects] ][unity_logical_objects]
 
-As you can see here, we have 3 children for the "Level" object.
+As you can see here, we have 3 children for the ``Level`` object.
 
 ### Empty objects
 
@@ -144,31 +146,39 @@ A trick in Unity is to create an empty game object and use it as a "folder" for 
 
 [ ![Empty objects][unity_create_empty] ][unity_create_empty]
 
-**Make sure they all are at the (0, 0, 0) position so you can track them easily! The position is not important as they're not using it.**
+**Make sure they all are at the ``(0, 0, 0)`` position so you can track them easily! The position is not important as these empty objects are not using it.**
 
-But changing the position will affect the children relative position. We will not speak about this topic in this tutorial, so let the position of the empty objects to (0, 0, 0) for the moment.
+_Note_: Changing the position will affect the children relative position. We will not speak about this topic in this tutorial, so let the position of the empty objects to ``(0, 0, 0)`` for the moment.
 
 See those empty objects as purely logical ones.
 
-### Our first game scene
+### Filling the scene
 
-In our scene, we have :
+By default, a new scene is created with a default ``Main Camera``. Keep it.
 
-- Scripts: we will add our global (not related to an object, such as a "Game" script) scripts here
-- Render: camera (I moved the default one there), lights
-- Level: instantiated game objects
-	- 0 - Background
-	- 1 - Middleground
-	- 2 - Foreground
+For the moment, you will need to create these empty objects :
 
-Save the scene in the _Scenes_ folder. Call it how you want (what about "Stage1"?).
+- ``Scripts``: We will add our global scripts here. We use this object to attach the scripts that are not related to an object. For example, we will have a "Game" manager script attached to it.
+- ``Render``: Move the camera here. We also put the lights objects inside this one.
+- ``Level``
 
-# Ready for the next step
+In the ``Level`` object, add three empty children :
+
+- ``0 - Background``
+- ``1 - Middleground``
+- ``2 - Foreground``
+
+Save the scene in the "Scenes" folder. Call it how you want (what about "Stage1"?).
+
+You should have:
+
+[ ![Your first scene][unity_first_scene] ][unity_first_scene]
+
+# Next step
 
 We are still far from a game, right?
-Next step we will start fun things: adding a background and some elements!
 
-TMP
+We have just created the basic structure of our game. In the next step we will start to add fun things: a background and some elements!
 
 
 [unity_logo_url]: ./-img/unity.png
@@ -178,6 +188,7 @@ TMP
 [unity_logical_objects]: ./-img/logical_objects.png
 [unity_prefs_vs_url]: ./-img/unity_vs2013.png
 [unity_create_empty]: ./-img/unity_create_empty.png
+[unity_first_scene]: ./-img/first_scene.png
 
 [unity_download_link]: http://unity3d.com/unity/download "Download Unity"
 [vs_download_link]: http://www.microsoft.com/visualstudio/eng/downloads#d-2013-express "Download Visual Studio"

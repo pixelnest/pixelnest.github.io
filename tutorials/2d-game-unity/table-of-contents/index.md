@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Table of contents
-author: Damien
 date: 13/11/13
 
 tutorial:
@@ -13,7 +12,7 @@ links:
   next: ../install-and-scene
 ---
 
-I recommend that you read the chapters in the order below. By doing so, you will get a game almost identical to the demo in the previous part.
+We recommend that you read the chapters in the order below. By doing so, you will get a game almost identical to the demo in the previous part.
 
 You can use the navigation above and below each chapter to move between them.
 
