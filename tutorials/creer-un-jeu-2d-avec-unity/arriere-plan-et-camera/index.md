@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Affichage d'un arrière-plan
-author: Damien
+author: Damien Matthieu
 date: 13/11/13
 
 tutorial:

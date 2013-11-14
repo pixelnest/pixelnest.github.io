@@ -51,7 +51,7 @@ What is spawning an enemy? It depends on the game, definitely. Here this is what
 
 The idea here is that you can use the Unity editor to set the enemies. This gives you a **ready to use level editor**.
 
-Once again, it's a choice, not science ;).But I truly think that using Unity editor as a level editor is valuable, unless you have time, money and dedicated level designers that need special tools.
+[Once again, it's a choice, not science ;)](http://gamedev.stackexchange.com/questions/2712/enemy-spawning-method-in-a-top-down-shooter).But I truly think that using Unity editor as a level editor is valuable, unless you have time, money and dedicated level designers that need special tools.
 
 ### Planes
 
