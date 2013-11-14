@@ -364,9 +364,11 @@ li {
   color: white;
   font-size: 0.8em; }
   .entry__content .highlight code {
+    padding: 0;
     background: none;
     font-size: 1em; }
 .entry__content code {
+  padding: 0 5px;
   background: #e9e9e9;
   font-family: monospace;
   font-size: 0.8em; }
