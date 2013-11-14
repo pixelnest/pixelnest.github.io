@@ -14,7 +14,7 @@ links:
   next: ../menus
 ---
 
-We will add sounds and a music to our game. It very simple in Unity, but it is a very important part.
+We will add sounds and a music in our project. It is very simple in Unity, but it is still a very important part of a game.
 
 You will learn where to find sounds and music, pick some, and play them in our game via a script.
 
@@ -41,7 +41,8 @@ Let's create an explosion and a shot sound. If you are lazy, you can use mine:
 - [Download the explosion sound][sound_explosion]
 
 For musics, it depends of what you want, but [Jamendo](http://www.jamendo.com/) has a ton of artists. Be careful with the licenses for commercial uses.
-This is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1), and as I really loved his music he authorized me to use them in The Great Paper Adventure.
+
+This is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1), and as I really loved his music he authorized me to use them in _The Great Paper Adventure_.
 
 We will use one of my favourite track for this tutorial:
 
@@ -62,7 +63,7 @@ And... that's all!
 To play the music, simply drag'n'drop the music in the hierarchy. I invite you to:
 
 - Rename the new game object in "Music"
-- Place it at (0,0,0)
+- Place it at ``(0,0,0)``
 
 Locate the "Mute" checkbox, it can help when you do a lot of tests.
 
@@ -149,10 +150,11 @@ No Gifs this time, but you will see the result quickly ;).
 
 I think we have a pretty good basis for a shoot them up game. You can make a longer level, and you will get nearly the demo I showed you in the first place.
 
+Make your own graphics and add enemies, background elements, and why not a boss (more complex but more interesting)?
+
 We are far from a full game, but I'll stop here for the gameplay part.
 
-Now we will see build and deployment features provided by Unity to complete this development cycle.
-
+Before we see the deployment features, we will add menus so we can start and restart this hardcore game.
 
 [3dsound]: ./-img/3dsound.png
 [music]: ./-img/music.png
