@@ -11,7 +11,7 @@ tutorial:
 links:
   summary: ../sommaire
   previous: ../sommaire
-  next: ../decor-et-arriere-plan
+  next: ../arriere-plan-et-camera
 ---
 
 Dans ce premier chapitre nous aborderons la base : installer le logiciel, créer un nouveau projet et le préparer à la suite des événements. 

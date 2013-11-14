@@ -22,7 +22,7 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 # Chapitres
 
 - [Installer Unity et créer une première scène](../installation-et-preparation)
-- [Décor et arrière-plan](../decor-et-arriere-plan)
+- [Arrière-plan et caméra](../arriere-plan-et-camera)
 - [Joueur et ennemis](../joueur-et-ennemis)
 - 
 TODO
