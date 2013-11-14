@@ -74,23 +74,36 @@ Click on the "Add Component" button of the player object. Choose a "Box Collider
 
 This will represent the player [_hitbox_][hitbox_link].
 
-You can see the collider in the editor "Scene" view and tweak its size in the inspector.
+You can see the collider in the editor "Scene" view and tweak its size in the "Inspector" with the "Size" property.
 
 <md-tip>
-_Tip_: There is another way to edit a box collider. Select a game object with a box collider and maintain the ``shift`` key of your keyboard. You can observe that the box collider (the green rectangle) is now showing four small handles onto. Drag one of them to change the shape of the box. Be careful, the blue rectangle represents the ``Transform`` component of your game object.
+_Tip_: There is another way to edit a box collider. Select a game object with a box collider and maintain the ``shift`` key of your keyboard. You can observe that the box collider (_the green rectangle_) is now showing four small handles onto. Drag one of them to change the shape of the box.
+Be careful, the _blue rectangle represents the_ ``Transform`` component of your game object, not the collider.
 </md-tip>
 
-Here, with a size of 10x10x1, it's way too large for a real shoot them up but it's still smaller than the sprite:
+We will set the size of the collider to ``(10, 10)``.
+
+It's way too large for a real _shmup_ but it's still smaller than the sprite:
 
 [![Player hitbox][hitbox]][hitbox]
 
-**Tip:** if you plan to make a shoot them up, spend a lot of time tweaking your hitboxes. It should perfectly fit an element from the player sprite. What about the ship window here? You can change the collider's shape, for a _Circle collider 2D_ for example, it changes nothing to the behavior thanks to Unity but it will improve the gameplay.
+For the time being, it will be enough.
 
-**Remark:** If you want a super precise and custom shaped hitbox, use the _Polygon Collider 2D_. It is less efficient but allows you to shape the exact collider you want using your mouse in the editor.
+<md-tip>
+_Tip_: If you plan to make a _shmup_, spend a lot of time tweaking your hitboxes. In general, it should fit perfectly a small element inside the player sprite. What about the ship window here? You could also change the collider shape — with a "Circle Collider 2D" for example. It changes nothing to the behavior thanks to Unity, but it will slightly improve the gameplay.
+</md-tip>
 
-Save the prefab. You now have a player base!
+Save the player game objet to a prefab. You now have a player entity!
 
 [![Adding Player Sprite][adding_player]][adding_player]
+
+### Polygon Collider 2D
+
+If you want a super precise and custom shaped hitbox, Unity offers a "Polygon Collider 2D" component. It's less efficient but allows you to set the shape exactly like you want.
+
+<md-tip>
+_Tip_: The "Polygon Collider 2D" is like the other colliders: you can modify the shape with your mouse in the "Scene" view. By holding ``cmd`` or ``ctrl``, you can remove a point, and with ``shift`` you can adjust a point or add one onto the collider shape.
+</md-tip>
 
 ## The rigidbody magic
 
