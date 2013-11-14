@@ -377,11 +377,14 @@ li {
   .entry__author {
     display: inline; }
     .entry__author img {
-      margin-right: 10px;
+      margin-left: 10px;
+      margin-right: 5px;
       width: 40px;
       height: 40px;
       border-radius: 30px;
       vertical-align: middle; }
+      .entry__author img:first-of-type {
+        margin-left: 0; }
     .entry__author p {
       display: inline-block;
       font-style: italic;
@@ -405,9 +408,12 @@ li {
     text-align: center; }
 
   .entry__author img {
+    margin-top: 20px;
     width: 80px;
     height: 80px;
     border-radius: 80px; }
+    .entry__author img:first-of-type {
+      margin-top: 0; }
   .entry__author p {
     margin: 5px 0 0 0;
     font-size: 0.8em; }
