@@ -14,6 +14,9 @@ links:
   next: ../tweaking-the-gameplay
 ---
 
-**NOT WRITTEN YET**
 
-But we are working on it, stay tuned!
+**This chapter hasn't been written yet!**
+
+I know this is important for you so we are working hard on it!
+
+Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to get notcied when this chapter will be available.

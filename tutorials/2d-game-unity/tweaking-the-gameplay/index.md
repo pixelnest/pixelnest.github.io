@@ -13,12 +13,14 @@ links:
   previous: ../animations
 ---
 
-**NOT WRITTEN YET**
+**This chapter hasn't been written yet!**
 
-But we are working on it, stay tuned!
+But we are working hard on it!
+
+Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to get noticed when this chapter will be available.
 
 
-Better values:
+# Rough values to get the same game as in the demo 
 
 Player scale:0.2x0.2x1
 Player speed (Player script) : 25, 25
