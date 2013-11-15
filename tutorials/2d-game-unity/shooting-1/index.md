@@ -30,31 +30,34 @@ _(Right click to save the image)_
 
 The projectile is an object that we will use a lot: There is going to be a few instances on the screen when the player will be shooting.
 
-What should we use in this case ? A ``Prefab`` of course!
+What should we use in this case ? A `Prefab` of course!
 
-## Preparing the ``Prefab``
+## Preparing the `Prefab`
 
-First create a sprite in Unity for it. You should be used to it now, if necessary check how you did for the enemy:
+You should be used to the procedure of creating a `Prefab` from a `Sprite` now:
 
-- sprite
-- _rigidbody 2D_ with settings (no gravity, fixed angle)
-- _box collider 2D_ with a size of 1x1
+1. Import the texture.
+2. Create a new `Sprite` in the scene.
+3. Set the image on the sprite.
+4. Add a "Rigidbody 2D" with `0` "Gravity Scale" and "Fixed Angles".
+5. Add a "Box Collider 2D" with a size of `(1, 1)`.
 
-Set a scale of 0.75x0.75x1 so it will looks good.
+Set the scale to `(0.75, 0.75, 1)` so it will looks good.
 
-We have a new setting:
+However, this time, we need to set a new parameter in the "Inspector":
 
-- In the box collider, check the "IsTrigger" property.
+6. In the "Box Collider 2D", check the "IsTrigger" property.
 
-**Trigger colliders** means they will raise en event when colliding but they won't be used for the physic simulation.
-That means that a shot will not move an object on touching, but the touched object will have it's "OnTriggerEnter" event raised.
+A _trigger_ collider raise en event when colliding but is not used by the physic simulation.
 
-Tada, you have a shot! Time to script the behavior
+It means that a shot will pass through an object on touching — _there won't be any "real" interaction at all_. Yet, the other collider is going to have its "OnTriggerEnter2D" event raised.
+
+Tada, you have a shot! Time to script the behavior.
 
 Create a new script "ShotScript":
 
-- 0 - designer variables for the speed, direction, damages
-- 1 - destroy after 20 seconds to avoid any leaks
+0. - designer variables for the speed, direction, damages
+2. - destroy after 20 seconds to avoid any leaks
 
 `````csharp
 using UnityEngine;
