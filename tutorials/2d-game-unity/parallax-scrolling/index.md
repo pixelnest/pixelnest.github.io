@@ -96,31 +96,31 @@ public class ScrollingScript : MonoBehaviour
   /// <summary>
   /// Scrolling speed
   /// </summary>
-  public Vector2 Speed = new Vector2(2, 2);
+  public Vector2 speed = new Vector2(2, 2);
 
   /// <summary>
   /// Moving direction
   /// </summary>
-  public Vector2 Direction = new Vector2(-1, 0);
+  public Vector2 direction = new Vector2(-1, 0);
 
   /// <summary>
   /// Movement should be applied to camera
   /// </summary>
-  public bool IsLinkedToCamera = false;
+  public bool isLinkedToCamera = false;
 
   void Update()
   {
     // Movement
     Vector3 movement = new Vector3(
-      Speed.x * Direction.x,
-      Speed.y * Direction.y,
+      speed.x * direction.x,
+      speed.y * direction.y,
       0);
 
     movement *= Time.deltaTime;
     transform.Translate(movement);
 
     // Move the camera
-    if (IsLinkedToCamera)
+    if (isLinkedToCamera)
     {
       Camera.main.transform.Translate(movement);
     }
@@ -226,29 +226,29 @@ public class ScrollingScript : MonoBehaviour
   /// <summary>
   /// Scrolling speed
   /// </summary>
-  public Vector2 Speed = new Vector2(10, 10);
+  public Vector2 speed = new Vector2(10, 10);
 
   /// <summary>
   /// Moving direction
   /// </summary>
-  public Vector2 Direction = new Vector2(-1, 0);
+  public Vector2 direction = new Vector2(-1, 0);
 
   /// <summary>
   /// Movement should be applied to camera
   /// </summary>
-  public bool IsLinkedToCamera = false;
+  public bool isLinkedToCamera = false;
 
   /// <summary>
   /// Background is inifnite
   /// </summary>
-  public bool IsLooping = false;
+  public bool isLooping = false;
 
   private List<Transform> backgroundPart;
 
   void Start()
   {
     // For infinite background only
-    if (IsLooping)
+    if (isLooping)
     {
       // Get all part of the layer
       backgroundPart = new List<Transform>();
@@ -264,7 +264,7 @@ public class ScrollingScript : MonoBehaviour
         }
       }
 
-      // Sort by position
+      // Sort by position 
       // REM: left from right here, we would need to add few conditions to handle all scrolling directions
       backgroundPart = backgroundPart.OrderBy(t => t.position.x).ToList();
     }
@@ -274,21 +274,21 @@ public class ScrollingScript : MonoBehaviour
   {
     // Movement
     Vector3 movement = new Vector3(
-      Speed.x * Direction.x,
-      Speed.y * Direction.y,
+      speed.x * direction.x,
+      speed.y * direction.y,
       0);
 
     movement *= Time.deltaTime;
     transform.Translate(movement);
 
     // Move the camera
-    if (IsLinkedToCamera)
+    if (isLinkedToCamera)
     {
       Camera.main.transform.Translate(movement);
     }
 
     // Loop
-    if (IsLooping)
+    if (isLooping)
     {
       // Get the first object
       Transform firstChild = backgroundPart.FirstOrDefault();
@@ -321,7 +321,7 @@ public class ScrollingScript : MonoBehaviour
 }
 `````
 
-Remember to enable "IsLooping" in the first (0) background otherwise it won't work. Click on the image to see an animation:
+Remember to enable "Is Looping" in the first (0) background otherwise it won't work. Click on the image to see an animation:
 
 [![Infinite scrolling][infinite_scrolling]][infinite_scrolling_gif]
 

@@ -237,8 +237,8 @@ public class SpecialEffectsHelper : MonoBehaviour
   /// </summary>
   public static SpecialEffectsHelper Instance;
 
-  public ParticleSystem SmokeEffect;
-  public ParticleSystem FireEffect;
+  public ParticleSystem smokeEffect;
+  public ParticleSystem fireEffect;
 
   void Awake()
   {
@@ -257,12 +257,12 @@ public class SpecialEffectsHelper : MonoBehaviour
   public void Explosion(Vector3 position)
   {
     // Smoke on the water
-    instantiate(SmokeEffect, position);
+    instantiate(smokeEffect, position);
 
     // Tu tu tu, tu tu tudu
 
     // Fire in the sky
-    instantiate(FireEffect, position);
+    instantiate(fireEffect, position);
   }
 
   /// <summary>
@@ -306,7 +306,7 @@ Giving us this:
   void OnTriggerEnter(Collider collider)
   {
 	...
-        if (HP <= 0)
+        if (hp <= 0)
         {
           // Explosion!
           SpecialEffectsHelper.Instance.Explosion(transform.position);

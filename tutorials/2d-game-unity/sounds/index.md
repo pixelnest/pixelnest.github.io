@@ -84,16 +84,17 @@ using System.Collections;
 /// <summary>
 /// Creating instance of sounds from code with no effort
 /// </summary>
-public class SoundEffectsHelper : MonoBehaviour {
+public class SoundEffectsHelper : MonoBehaviour
+{
 
   /// <summary>
   /// Singleton
   /// </summary>
   public static SoundEffectsHelper Instance;
 
-  public AudioClip ExplosionSound;
-  public AudioClip PlayerShotSound;
-  public AudioClip EnemyShotSound;
+  public AudioClip explosionSound;
+  public AudioClip playerShotSound;
+  public AudioClip enemyShotSound;
 
   void Awake()
   {
@@ -107,17 +108,17 @@ public class SoundEffectsHelper : MonoBehaviour {
 
   public void MakeExplosionSound()
   {
-    MakeSound(ExplosionSound);
+    MakeSound(explosionSound);
   }
 
   public void MakePlayerShotSound()
   {
-    MakeSound(PlayerShotSound);
+    MakeSound(playerShotSound);
   }
 
   public void MakeEnemyShotSound()
   {
-    MakeSound(EnemyShotSound);
+    MakeSound(enemyShotSound);
   }
 
   /// <summary>
@@ -130,7 +131,6 @@ public class SoundEffectsHelper : MonoBehaviour {
     AudioSource.PlayClipAtPoint(originalClip, transform.position);
   }
 }
-
 ````
 
 Add it to the "Scripts" game object, and fill it:

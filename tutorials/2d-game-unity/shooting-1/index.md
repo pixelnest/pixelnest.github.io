@@ -62,12 +62,12 @@ public class ShotScript : MonoBehaviour
   /// <summary>
   /// Damage inflicted
   /// </summary>
-  public int Damage = 1;
+  public int damage = 1;
 
   /// <summary>
   /// Projectile damage player or enemies?
   /// </summary>
-  public bool IsEnemyShot = false;
+  public bool isEnemyShot = false;
 
   void Start()
   {
@@ -106,12 +106,12 @@ public class HealthScript : MonoBehaviour
   /// <summary>
   /// Total hitpoints
   /// </summary>
-  public int HP = 1;
+  public int hp = 2;
 
   /// <summary>
   /// Enemy or player?
   /// </summary>
-  public bool IsEnemy = true;
+  public bool isEnemy = true;
 
   void OnTriggerEnter2D(Collider2D collider)
   {
@@ -120,14 +120,14 @@ public class HealthScript : MonoBehaviour
     if (shot != null)
     {
       // Avoid friendly fire
-      if (shot.IsEnemyShot != IsEnemy)
+      if (shot.isEnemyShot != isEnemy)
       {
-        HP -= shot.Damage;
+        hp -= shot.damage;
 
         // Destroy the shot
         Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
 
-        if (HP <= 0)
+        if (hp <= 0)
         {
           // Dead!
           Destroy(gameObject);
@@ -175,12 +175,12 @@ public class WeaponScript : MonoBehaviour
   /// <summary>
   /// Projectile prefab for shooting
   /// </summary>
-  public Transform ShotPrefab;
+  public Transform shotPrefab;
 
   /// <summary>
   /// Cooldown in seconds between two shots
   /// </summary>
-  public float ShootingRate = 0.25f;
+  public float shootingRate = 0.25f;
 
   //--------------------------------
   // 2 - Cooldown
@@ -212,10 +212,10 @@ public class WeaponScript : MonoBehaviour
   {
     if (CanAttack)
     {
-      shootCooldown = ShootingRate;
+      shootCooldown = shootingRate;
 
       // Create a new shot
-      var shotTransform = Instantiate(ShotPrefab) as Transform;
+      var shotTransform = Instantiate(shotPrefab) as Transform;
 
       // Assign position
       shotTransform.position = transform.position;
@@ -224,14 +224,14 @@ public class WeaponScript : MonoBehaviour
       ShotScript shot = shotTransform.gameObject.GetComponent<ShotScript>();
       if (shot != null)
       {
-        shot.IsEnemyShot = isEnemy;
+        shot.isEnemyShot = isEnemy;
       }
 
       // Make the weapon shot always towards it
       MoveScript move = shotTransform.gameObject.GetComponent<MoveScript>();
       if (move != null)
       {
-        move.Direction = this.transform.right; // towards in 2D space is the right of the sprite
+        move.direction = this.transform.right; // towards in 2D space is the right of the sprite
       }
     }
   }

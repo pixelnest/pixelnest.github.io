@@ -65,7 +65,7 @@ public class EnemyScript : MonoBehaviour
 
   void Awake()
   {
-    // Retrieve the wepaon only once
+    // Retrieve the weapon only once
     weapon = GetComponent<WeaponScript>();
   }
 
