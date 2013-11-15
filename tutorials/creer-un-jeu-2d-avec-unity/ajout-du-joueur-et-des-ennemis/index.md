@@ -193,26 +193,26 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
   /// <summary>
-  /// 0 - La vitesse de déplacement
+  /// 1 - La vitesse de déplacement
   /// </summary>
   public Vector2 speed = new Vector2(50, 50);
 
   void Update()
   {
-    // 1 - Récupérer les informations du clavier/manette
+    // 2 - Récupérer les informations du clavier/manette
     float inputX = Input.GetAxis("Horizontal");
     float inputY = Input.GetAxis("Vertical");
 
-    // 2 - Calcul du mouvement
+    // 3 - Calcul du mouvement
     Vector3 movement = new Vector3(
       speed.x * inputX,
       speed.y * inputY,
       0);
 
-    // 3 - Le mouvement est relatif au temps écoulé
+    // 4 - Le mouvement est relatif au temps écoulé
     movement *= Time.deltaTime;
 
-    // 4 - Déplacement
+    // 5 - Déplacement
     transform.Translate(movement);
   }
 }
@@ -227,11 +227,11 @@ _Note sur les conventions_ C# : Si vous regardez la variable ``speed``, vous ver
 
 ### Explications du script
 
-0. Définition des variables accessibles depuis l'éditeur, ici la vitesse de déplacement du vaisseau (dans une unité arbitraire)
-1. Récupération des contrôles par défaut définis dans un nouveau projet Unity. Ils peuvent être changés via le menu  ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. La valeur récupérée est entre ``[-1, 1]``, ``0`` étant le point mort, 1 la droite, -1 la gauche.
-2. On calcule le mouvement pour cette frame à partir de la direction des flèches / du joystick et de la vitesse théorique vu vaisseau.
-3. Ce mouvement dépend du temps passé, ainsi si le jeu ralentit le joueur ralentira également
-4. Enfin, nous appliquons ce mouvement au ``transform`` du joueur pour modifier réellement sa position dans la scène.
+1. Définition des variables accessibles depuis l'éditeur, ici la vitesse de déplacement du vaisseau (dans une unité arbitraire)
+2. Récupération des contrôles par défaut définis dans un nouveau projet Unity. Ils peuvent être changés via le menu  ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. La valeur récupérée est entre ``[-1, 1]``, ``0`` étant le point mort, 1 la droite, -1 la gauche.
+3. On calcule le mouvement pour cette frame à partir de la direction des flèches / du joystick et de la vitesse théorique vu vaisseau.
+4. Ce mouvement dépend du temps passé, ainsi si le jeu ralentit le joueur ralentira également
+5. Enfin, nous appliquons ce mouvement au ``transform`` du joueur pour modifier réellement sa position dans la scène.
 
 Ajoutez ce script à notre objet joueur.
 
