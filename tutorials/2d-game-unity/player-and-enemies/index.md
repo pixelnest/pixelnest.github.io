@@ -171,7 +171,7 @@ You also have some functions for the collisions :
 - ``OnTriggerEnter2D(Collider2D otherCollider)`` is invoked when another collider marked as a "Trigger" is touching this object collider.
 - ``OnTriggerExit2D(Collider2D otherCollider)`` is invoked when another collider marked as a "Trigger" is not touching this object collider anymore.
 
-Fiou... This explanation was a bit boring, but mandatory. Sorry for that.
+Fiou... This explanation was a bit boring, but unavoidable. Sorry for _that_.
 
 <md-note>
 _Note about the 2D suffix_: You should have observed now that almost anything we talked about was suffixed with "2D". A "Box Collider 2D", a "Rigidbody 2D", the "OnCollisionEnter2D" or "OnTriggerEnter2D" methods, etc. _These new components or methods have appeared with Unity 4.3._ <br />By using them, you are adopting the new physics engine integrated in Unity 4.3 for 2D games (based on Box2D) instead of the one for 3D games (PhysX). The two engines are sharing similar concepts and objects, but they don't work exactly the same. If you start to work with one (favor Box2D for 2D games), stick to it. This is why we use all the objects or methods with a "2D" suffix.
@@ -181,7 +181,7 @@ We will get back on some of them in details when we will be using them.
 
 For our player script, we will add some simple controls: the arrow keys will move the ship.
 
-`````csharp
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -192,7 +192,7 @@ public class PlayerScript : MonoBehaviour
   /// <summary>
   /// 0 - The speed of the ship
   /// </summary>
-  public Vector2 Speed = new Vector2(50, 50);
+  public Vector2 speed = new Vector2(50, 50);
 
   void Update()
   {
@@ -202,8 +202,8 @@ public class PlayerScript : MonoBehaviour
 
     // 2 - Movement per direction
     Vector3 movement = new Vector3(
-      Speed.x * inputX,
-      Speed.y * inputY,
+      speed.x * inputX,
+      speed.y * inputY,
       0);
 
     // 3 - Relative to the time
@@ -213,62 +213,79 @@ public class PlayerScript : MonoBehaviour
     transform.Translate(movement);
   }
 }
-`````
+```
 
-Explanations (the number refers to the number in the code above):
+_(The numbers in the comments refer to the explanation below)_
 
-0. We define a public variable that will appear in the editor. This is the speed applied to the ship. The value itself doesn't have a proper unit, but exposing it public without accessors allows you to live modify it in Unity through the inspector window. Remember it's script programming, not fully traditional C# programming. This implies to break some rules and convention.
-1. We used the default axis that can be redefine in _Edit->Project Settings->Input_. This will return a value between [-1,1], 0 being the idle state.
-2. Multiply the direction by the speed.
-3. Make sure everything is relative to the game time (so if the game slow down, your ship will slow too).
-4. Simply translate our sprit.
+<md-note>
+_Note about C# conventions_: Look at the ``speed`` member visibility: it's public. In C#, a member variable should be private in order to keep the internal representation of the class private. <br />But exposing it as a public variable allows you to modify it in Unity through the "Inspector" pane, even during the game execution. This is a _powerful_ feature of Unity, letting you tweaks the gameplay without coding. <br />Remember that we are doing scripting here, not classic C# programming. This implies to break some rules and conventions.
+</md-note>
 
-Now attach the script to the game object (drag'n'drop to add it as a new component).
+### Explanations
 
-Hit the "play" button in top of the editor. The ship is moving!
+0. We first define a public variable that will appear in the "Inspector" view of Unity. This is the speed applied to the ship.
+1. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between ``[-1, 1]``, ``0`` being the idle state, 1 the right, -1 the left.
+2. We multiply the direction by the speed.
+3. With this line, we make sure that everything is relative to the game time (so if the game slows down, your ship will slow too).
+4. Then, we simply translate our sprite in the space (and because we do that for each frame, it will give the impression that the ship moves smoothly).
+
+Now, attach the script to the game object.
+
+<md-tip>
+_Tip_: You can attach a script to a game object by dragging the script from the "Project" view on the game object in the "Hierarchy". You can also click on "Add Component" and find it manually.
+</md-tip>
+
+Hit the "Play" button in top of the editor. The ship is moving and your game is running! Congratulations, you have just made the equivalent of a ["Hello, World!"][helloworld_link] for a game :)
 
 [![The player moves!][ship_moving]][ship_moving]
 
-Try to tweak the speed: click on the player, modify the speed values in the inspector, see the consequences.
+Try to tweak the speed: click on the player, modify the speed values in the "Inspector" and look at the consequences.
 
 [![The inspector for a script][player_value_tweak]][player_value_tweak]
 
-**Warning: modifications at runtime are lost when the game is stopped! It's a great tool to tweak but remember what you are doing!**
+<md-danger>
+_Be careful_: Modifications when the game is executed (or played) are lost when you stop it! It's a great tool for tweaking the gameplay, but remember what you are doing if you want to keep the changes. <br />However, this effect is also handy: you can destroy your game completely during the execution to test something new, without being afraid of breaking your real project.
+</md-danger>
 
 This was the first sign of life in our game! Let's add more!
 
 # The first enemy
 
-A _shoot them up_ is nothing without tons of enemies to kill.
+A _shmup_ is nothing without tons of enemies to blow up.
+
 Let's use an innocent Poulpi:
 
 [![Poulpi Sprite][poulpi]][poulpi]
 
-## The sprite
+_(Right click to save the image)_
+
+## Sprite
 
 Time to create a new sprite! Again:
 
-- Copy the image to the _Texture_ folder
-- New sprite using this image
-- Scale transform to 0.4x0.4x1
-- Add a _Box Collider 2D_ with a size of 4x4
-- Add a rigidbody 2D with 0 gravity and fixed angles.
+1. Copy the image to the "Textures" folder.
+2. Create a new ``Sprite`` using this image.
+3. Change the "Scale" property of the ``Transform`` to ``(0.4, 0.4, 1)``.
+4. Add a "Box Collider 2D" with a size of ``(4, 4)``.
+5. Add a "Rigidbody 2D" with a "Gravity Scale" of ``0`` and "Fixed Angles" ticked.
 
 Save the prefab... and that's it!
 
 [![Enemy Sprite in Unity][enemy_definition]][enemy_definition]
 
-## The script
+## Script
 
-We will script a simple behavior: it will just moves in a direction.
+We will script a simple behavior: the Poulpi will just move in a direction.
 
 Create a new script "MoveScript".
 
-We could have call it "EnemyScript", but we plan to reuse it later in another context. Also, the modularity provided by Unity component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters, it's your choice.
+We could have call it "EnemyScript" but we plan to reuse it later in another context.
 
-We will copy some pieces we have already written in the "PlayerScript" for movement, but we will add another designer variable for the direction.
+<md-note>
+_Note_: The modularity provided by Unity's component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters. It's your choice, but we highly recommend against doing that.
+</md-note>
 
-The script:
+We will copy some parts of what we have already written in the "PlayerScript" for movement. We will add another designer (a public member you can alter in the "Inspector") variable for the direction:
 
 ```csharp
 using UnityEngine;
@@ -283,37 +300,38 @@ public class MoveScript : MonoBehaviour
   /// <summary>
   /// Projectile speed
   /// </summary>
-  public Vector2 Speed = new Vector2(10, 10);
+  public Vector2 speed = new Vector2(10, 10);
 
   /// <summary>
   /// Moving direction
   /// </summary>
-  public Vector2 Direction = new Vector2(-1, 0);
+  public Vector2 direction = new Vector2(-1, 0);
 
   void Update()
   {
     // 1 - Movement
     Vector3 movement = new Vector3(
-      Speed.x * Direction.x,
-      Speed.y * Direction.y,
+      speed.x * direction.x,
+      speed.y * direction.y,
       0);
 
     movement *= Time.deltaTime;
     transform.Translate(movement);
   }
 }
-
 ```
 
-Add it to the enemy. Hit play, it should move like beyond.
+Attach the script to the Poulpi. Hit "Play": it should move just like below.
 
 [![Enemy is now moving][moving_enemy]][moving_enemy]
 
-If you move the player and collide the two sprites, they will just block each other as we didn't define the collision behavior yet.
+If you move the player in front of the enemy, the two sprites will collide. They will just block each other as we didn't define the collision behavior yet.
 
 # Next step
 
-Now we want to kill that moving thing! And for that, we need ammo!
+You have learned how to add a player entity, controlled by the keyboard. Then, we created a basic enemy with a rudimentary IA.
+
+Now, we want to destroy that moving thing! And for that, we need ammo!
 
 
 [player]: ./-img/player.png
@@ -331,3 +349,5 @@ Now we want to kill that moving thing! And for that, we need ammo!
 [moving_enemy]: ./-img/moving_enemy.gif
 
 [hitbox_link]: http://en.wikipedia.org/wiki/Hitbox "Hitbox definition"
+[unity_axis_link]: http://unity3d.com/learn/tutorials/modules/beginner/scripting/get-axis "Unity axis and inputs"
+[helloworld_link]: http://en.wikipedia.org/wiki/Hello_world_program "Hello, World! definition"
