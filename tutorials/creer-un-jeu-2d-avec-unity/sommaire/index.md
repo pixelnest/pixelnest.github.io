@@ -24,6 +24,8 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 - [Installer Unity et préparer un nouveau projet](../installation-et-preparation)
 - [Affichage d'un arrière-plan](../arriere-plan-et-camera)
 - [Ajout du joueur et des ennemis](../ajout-du-joueur-et-des-ennemis)
+- [Gestion du tir (1/2)](../gestion-du-tir-1)
+- - [Gestion du tir (2/2)](../gestion-du-tir-2)
 
 - [Shooting (1/2)](../shooting-1)
 - [Shooting (2/2)](../shooting-2)
