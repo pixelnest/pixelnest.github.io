@@ -105,24 +105,32 @@ If you want a super precise and custom shaped hitbox, Unity offers a "Polygon Co
 _Tip_: The "Polygon Collider 2D" is like the other colliders: you can modify the shape with your mouse in the "Scene" view. By holding ``cmd`` or ``ctrl``, you can remove a point, and with ``shift`` you can adjust a point or add one onto the collider shape.
 </md-tip>
 
-## The rigidbody magic
+## The Rigidbody magic
 
-There is one last component to add on our player: a _Rigidbody 2D_.
+There is one last component to add on our player: a "Rigidbody 2D".
 
-This will tell the physics engine how to handle the game object, and it will also allow collision events to be raised in scripts. And we will use them soon.
+This will tell to the physics engine how to handle the game object. Furthermore, it will also allow collision events to be raised in scripts.
 
-- select your player
-- add a _Rigidbody 2D_ component.
+1. Select your ``Player`` game object in the "Hierarchy".
+2. Add a "Rigidbody 2D" component.
 
-Now hit play, and see what does it change.
+Now, hit play and observe:
 
 [![Falling player][failing_ship]][failing_ship]
 
-The ship is falling, no matter what. Say hello to **gravity**! This can be used in some kind of games, but we don't want to use it here. As new scenes come with a default gravity (y = -9.81) and rigidbodies add a mass, the ship is now attracted to the bottom.
+The ship is falling!
 
-Fortunately, it is simple to disable gravity on some object. Just set "Gravity Scale" to 0. That's it, the ship is flying again.
+Say hello to our beloved _gravity_. :)
 
-You may also check "Fixed Angles" as we don't want our ship to rotate with the physics.
+As new scenes come with a default gravity and rigidbodies add a mass to an object, the ship is now attracted to the bottom.
+
+<md-info>
+The default gravity of Unity is ``9.81``, i.e. the earth gravity.
+</md-info>
+
+Gravity can be used in some kind of games, but we don't want to have to handle it here. Fortunately, it is simple to disable gravity on a rigidbody. Just set "Gravity Scale" to 0. _That's it, the ship is flying again_.
+
+You may also want to tick the "Fixed Angles" property as we don't want our ship to rotate because of the physics.
 
 The complete settings:
 
@@ -130,34 +138,48 @@ The complete settings:
 
 ## Moving the player
 
-Time for some scripting! So far we didn't code anything. That's the power of (love) Unity.
+Time for some scripting! So far, we didn't code anything. That's the power of (love) Unity.
 
-From Unity, create a new C# script in the _Scripts_ folder. Call it "PlayerScript".
+Inside Unity, create a new C# script in your "Scripts" folder. Call it "PlayerScript".
 
-**Remark:** you can do it in JavaScript too. Code snippets will be C# but it quite easy to translate from a language to another.
+<md-info>
+_Remark_: You can do it in JavaScript too. As we said before, code snippets will be in C#, but it is quite easy to translate the code from a language to another.
+</md-info>
 
-Open your favorite IDE or use the shortcut (_Assets -> Sync MonoDevelop Project_) to edit the script.
-
-If you come from XNA, you won't be lost. You can define some method (here called "message" as we are not using C# inheritance system) that Unity will recognize and execute.
-
-Default script come with **Start** and **Update**. Here is a short list of the most used functions:
-
-- ``Awake()``: called once when the object is created. It replace the constructor (Unity will forbid you any instruction in constructor)
-- ``Start()``: called after Awake()
-- ``Update()``: main loop
-- ``Destroy()``: object is destroyed, last chance to execute some code
-- ``OnCollisionEnter2D(CollisionInfo2D info)``: another collider is touching the object collider
-- ``OnCollisionExit2D(CollisionInfo2D info)``: another collider is not touching anymore the object collider
-- ``OnTriggerEnter2D(Collider2D otherCollider)``: another collider marked as trigger is touching the object collider
-- ``OnTriggerExit2D(Collider2D otherCollider)``: another collider marked as trigger is not touching anymore the object collider
+Open your favorite editor or use the "Sync" submenu (Click on "Assets" in the menubar, then on "Sync MonoDevelop Project") to edit the script.
 
 <md-note>
-_Note about the 2D suffix_: You should have observed now that almost anything we talked about was suffixed with "2D". A "Box Collider 2D", a "Rigidbody 2D", the "OnCollisionEnter2D" or "OnTriggerEnter2D" methods, etc. _These new components or methods have appeared with Unity 4.3._ <br />By using them, you are adopting the new physic engine integrated in Unity 4.3 for 2D games (based on Box2D) instead of the one for 3D games (PhysX). The two engines are sharing similar concepts and objects, but they don't work exactly the same. If you start to work with one (favor Box2D for 2D games), stick to it. This is why we use all the objects or methods with a "2D" suffix.
+_"Sync MonoDevelop Project"_: This submenu is a bit weird. First, the name does not change, even if you have set up another editor. <br />We also recommend to use this menu the first time you have to script, because Unity will create the solutions and link the Unity libraries in them (for Visual Studio, Xamarin Studio or MonoDevelop). <br />If you simply open the script instead, the compiler of your IDE will likely catch some errors because it won't know Unity. <br />It doesn't matter because you will never compile directly with it, but it is nice to have the autocompletion on the Unity objects and a first pass on errors.
+</md-note>
+
+If you come from XNA, you won't be lost.
+
+You can define some methods (called "Message" as we are not using C# inheritance system) that Unity will recognize and execute when needed.
+
+Default scripts come with the **Start** and **Update** methods. Here is a short list of the most used "Message" functions:
+
+- ``Awake()`` is called once when the object is created. See it as replacement of a classic constructor method.
+- ``Start()`` is executed after ``Awake()``. The difference is that the ``Start()`` method is not called if the script is not enabled (remember the checkbox on a component in the "Inspector").
+- ``Update()`` is executed for each frame in the main game loop.
+- ``FixedUpdate()`` is called at every fixed framerate frame. You should use this method over ``Update()`` when dealing with physics ("RigidBody" and forces).
+- ``Destroy()`` is invoked when the object is destroyed. It's your last chance to clean or execute some code.
+
+You also have some functions for the collisions :
+
+- ``OnCollisionEnter2D(CollisionInfo2D info)`` is invoked when another collider is touching this object collider.
+- ``OnCollisionExit2D(CollisionInfo2D info)`` is invoked when another collider is not touching this object collider anymore.
+- ``OnTriggerEnter2D(Collider2D otherCollider)`` is invoked when another collider marked as a "Trigger" is touching this object collider.
+- ``OnTriggerExit2D(Collider2D otherCollider)`` is invoked when another collider marked as a "Trigger" is not touching this object collider anymore.
+
+Fiou... This explanation was a bit boring, but mandatory. Sorry for that.
+
+<md-note>
+_Note about the 2D suffix_: You should have observed now that almost anything we talked about was suffixed with "2D". A "Box Collider 2D", a "Rigidbody 2D", the "OnCollisionEnter2D" or "OnTriggerEnter2D" methods, etc. _These new components or methods have appeared with Unity 4.3._ <br />By using them, you are adopting the new physics engine integrated in Unity 4.3 for 2D games (based on Box2D) instead of the one for 3D games (PhysX). The two engines are sharing similar concepts and objects, but they don't work exactly the same. If you start to work with one (favor Box2D for 2D games), stick to it. This is why we use all the objects or methods with a "2D" suffix.
 </md-note>
 
 We will get back on some of them in details when we will be using them.
 
-For our player script, we will add simple controls: arrows move the ship.
+For our player script, we will add some simple controls: the arrow keys will move the ship.
 
 `````csharp
 using UnityEngine;
