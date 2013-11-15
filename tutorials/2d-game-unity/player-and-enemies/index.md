@@ -93,7 +93,7 @@ For the time being, it will be enough.
 _Tip_: If you plan to make a _shmup_, spend a lot of time tweaking your hitboxes. In general, it should fit perfectly a small element inside the player sprite. What about the ship window here? You could also change the collider shape — with a "Circle Collider 2D" for example. It changes nothing to the behavior thanks to Unity, but it will slightly improve the gameplay.
 </md-tip>
 
-Save the player game objet to a prefab. You now have a player entity!
+Save the player game objet to a prefab. You now have a basic player entity!
 
 [![Adding Player Sprite][adding_player]][adding_player]
 
@@ -107,7 +107,7 @@ _Tip_: The "Polygon Collider 2D" is like the other colliders: you can modify the
 
 ## The rigidbody magic
 
-There is one last component to add to our player: a _Rigidbody 2D_.
+There is one last component to add on our player: a _Rigidbody 2D_.
 
 This will tell the physics engine how to handle the game object, and it will also allow collision events to be raised in scripts. And we will use them soon.
 
@@ -150,6 +150,10 @@ Default script come with **Start** and **Update**. Here is a short list of the m
 - ``OnCollisionExit2D(CollisionInfo2D info)``: another collider is not touching anymore the object collider
 - ``OnTriggerEnter2D(Collider2D otherCollider)``: another collider marked as trigger is touching the object collider
 - ``OnTriggerExit2D(Collider2D otherCollider)``: another collider marked as trigger is not touching anymore the object collider
+
+<md-note>
+_Note about the 2D suffix_: You should have observed now that almost anything we talked about was suffixed with "2D". A "Box Collider 2D", a "Rigidbody 2D", the "OnCollisionEnter2D" or "OnTriggerEnter2D" methods, etc. _These new components or methods have appeared with Unity 4.3._ <br />By using them, you are adopting the new physic engine integrated in Unity 4.3 for 2D games (based on Box2D) instead of the one for 3D games (PhysX). The two engines are sharing similar concepts and objects, but they don't work exactly the same. If you start to work with one (favor Box2D for 2D games), stick to it. This is why we use all the objects or methods with a "2D" suffix.
+</md-note>
 
 We will get back on some of them in details when we will be using them.
 
@@ -211,14 +215,14 @@ Try to tweak the speed: click on the player, modify the speed values in the insp
 
 This was the first sign of life in our game! Let's add more!
 
-## The first enemy
+# The first enemy
 
 A _shoot them up_ is nothing without tons of enemies to kill.
 Let's use an innocent Poulpi:
 
 [![Poulpi Sprite][poulpi]][poulpi]
 
-### The sprite
+## The sprite
 
 Time to create a new sprite! Again:
 
@@ -285,7 +289,7 @@ Add it to the enemy. Hit play, it should move like beyond.
 
 If you move the player and collide the two sprites, they will just block each other as we didn't define the collision behavior yet.
 
-## Ready for the next step
+# Next step
 
 Now we want to kill that moving thing! And for that, we need ammo!
 
