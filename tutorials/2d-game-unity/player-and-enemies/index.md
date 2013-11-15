@@ -190,26 +190,26 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
   /// <summary>
-  /// 0 - The speed of the ship
+  /// 1 - The speed of the ship
   /// </summary>
   public Vector2 speed = new Vector2(50, 50);
 
   void Update()
   {
-    // 1 - Retrieve axis information
+    // 2 - Retrieve axis information
     float inputX = Input.GetAxis("Horizontal");
     float inputY = Input.GetAxis("Vertical");
 
-    // 2 - Movement per direction
+    // 3 - Movement per direction
     Vector3 movement = new Vector3(
       speed.x * inputX,
       speed.y * inputY,
       0);
 
-    // 3 - Relative to the time
+    // 4 - Relative to the time
     movement *= Time.deltaTime;
 
-    // 4 - Move the game object
+    // 5 - Move the game object
     transform.Translate(movement);
   }
 }
@@ -223,11 +223,11 @@ _Note about C# conventions_: Look at the ``speed`` member visibility: it's publi
 
 ### Explanations
 
-0. We first define a public variable that will appear in the "Inspector" view of Unity. This is the speed applied to the ship.
-1. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between ``[-1, 1]``, ``0`` being the idle state, 1 the right, -1 the left.
-2. We multiply the direction by the speed.
-3. With this line, we make sure that everything is relative to the game time (so if the game slows down, your ship will slow too).
-4. Then, we simply translate our sprite in the space (and because we do that for each frame, it will give the impression that the ship moves smoothly).
+1. We first define a public variable that will appear in the "Inspector" view of Unity. This is the speed applied to the ship.
+2. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between ``[-1, 1]``, ``0`` being the idle state, 1 the right, -1 the left.
+3. We multiply the direction by the speed.
+4. With this line, we make sure that everything is relative to the game time (so if the game slows down, your ship will slow too).
+5. Then, we simply translate our sprite in the space (and because we do that for each frame, it will give the impression that the ship moves smoothly).
 
 Now, attach the script to the game object.
 
@@ -295,7 +295,7 @@ using UnityEngine;
 /// </summary>
 public class MoveScript : MonoBehaviour
 {
-  // 0 - Designer variables
+  // 1 - Designer variables
 
   /// <summary>
   /// Object speed
@@ -309,7 +309,7 @@ public class MoveScript : MonoBehaviour
 
   void Update()
   {
-    // 1 - Movement
+    // 2 - Movement
     Vector3 movement = new Vector3(
       speed.x * direction.x,
       speed.y * direction.y,
