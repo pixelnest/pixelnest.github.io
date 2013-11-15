@@ -28,11 +28,9 @@ Here is the sprite:
 
 _(Right click to save the image)_
 
-The projectile is an object that we will use a lot: At least, there is going to be a lot of instances on the screen at the a given time.
+The projectile is an object that we will use a lot: There is going to be a few instances on the screen when the player will be shooting.
 
 What should we use in this case ? A ``Prefab`` of course!
-
-And we will be using prefabs, so we will create multiple instances of the same object.
 
 ## Preparing the ``Prefab``
 
