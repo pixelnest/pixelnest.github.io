@@ -22,7 +22,7 @@ Le joueur se compose de plusieurs éléments : un sprite, un contrôleur (manett
 
 Nous allons voir ces étapes l'une après l'autre, commençons par le sprite.
 
-## Add a sprite
+## Ajout d'un sprite
 
 Voici l'image que nous allons utiliser :
 

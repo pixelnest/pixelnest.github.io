@@ -21,9 +21,9 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 
 # Chapitres
 
-- [Installer Unity et créer une première scène](../installation-et-preparation)
-- [Arrière-plan et caméra](../arriere-plan-et-camera)
-- [Ajout du joueur et ennemis](../ajout-du-joueur-et-des-ennemis)
+- [Installer Unity et préparer un nouveau projet](../installation-et-preparation)
+- [Affichage d'un arrière-plan](../arriere-plan-et-camera)
+- [Ajout du joueur et des ennemis](../ajout-du-joueur-et-des-ennemis)
 
 - [Shooting (1/2)](../shooting-1)
 - [Shooting (2/2)](../shooting-2)
