@@ -14,18 +14,27 @@ links:
   next: ../shooting-2
 ---
 
-Our player ship is facing an enemy but cannot do anything...
-Let's grant him a weapon and some ammo! This will mainly require scripting but it worth it.
+Our player ship is facing a terrifying Poulpi, but cannot do anything...
 
-# Player projectile
+Let's grant him a weapon and some ammo! This will involve a bit more of scripting, but be confident. It worths it.
 
-To make the player shot some projectile, we need to define the related game object it will be using. The sprite:
+# Projectile
+
+First, before allowing the player to shoot, we need to define a game object that represents the projectiles he will use.
+
+Here is the sprite:
 
 [ ![Shot Sprite][shot] ][shot]
 
+_(Right click to save the image)_
+
+The projectile is an object that we will use a lot: At least, there is going to be a lot of instances on the screen at the a given time.
+
+What should we use in this case ? A ``Prefab`` of course!
+
 And we will be using prefabs, so we will create multiple instances of the same object.
 
-## Preparing the prefab
+## Preparing the ``Prefab``
 
 First create a sprite in Unity for it. You should be used to it now, if necessary check how you did for the enemy:
 
