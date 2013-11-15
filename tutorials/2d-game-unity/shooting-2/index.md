@@ -15,45 +15,50 @@ links:
 ---
 
 Our magnificent ship is now shooting innocent flying octopuses.
-This can't be like that. They need to respond. Shoot the player.
 
-Using what we did in the last part, we will modify the enemy behavior so it will shoots projectiles too.
+It can't stay that way. They need to respond. To shoot back. To fight for freedo... Oups. Sorry.
 
-## The enemy projectile
+Using what we did in the last part, we will modify the enemy behavior so it can shoot projectiles too.
+
+# The enemy projectile
 
 We will create a new projectile using this sprite:
 
-[![Poulpi shot Sprite][shot_poulpi]][shot_poulpi]
+[ ![Poulpi shot Sprite][shot_poulpi] ][shot_poulpi]
 
-If you are as lazy as I am, duplicate the "PlayerShot" prefab, rename it "EnemyShot1" and change the sprite for a new one using the sprite above.
+_(Right click to save the image)_
 
-To duplicate, create an instance by doing a drag'n'drop in the scene, rename the created game object, resave it as a prefab.
+If you are as lazy as I am, duplicate the "PlayerShot" prefab, rename it to "EnemyShot1" and change the sprite with the new one above.
 
-You can also recreate a whole new sprite, rigibody, collider with trigger, etc).
+To duplicate, you can create an instance by doing a drag and drop on the scene, renaming the created game object and finally saving it as a `Prefab.
 
-The right scale is 0.35 x 0.35 x 1.
+<md-tip>
+Or you could simply duplicate the `Prefab` directly inside the folder with the `cmd+D` (OS X) or `ctrl+D` (Windows) shortcuts. <br />If you like to do it the hard way, you could also recreate a whole new sprite, rigibody, collider with trigger, etc.
+</md-tip>
 
-Something like this:
+The right scale is `(0.35, 0.35, 1)`.
 
-[![Poulpi shot configuration][shot_config2]][shot_config2]
+You should have something like this:
 
-If you hit play, the shot will move and potentially destroy the enemy. This is because of the _ShotScript_ properties.
+[ ![Poulpi shot configuration][shot_config2] ][shot_config2]
 
-Don't change them. Remember the _WeaponScript_ from last part? It will set those values properly.
+If you hit "Play", the shot will move and potentially destroy the enemy. This is because of the "ShotScript" properties (which is harmful for the Poulpi by default).
 
-Save as a prefab, remove the instance from the scene.
+Don't change them. Remember the "WeaponScript" from the last part? It will set those values properly.
 
-## Making the enemy actually shoot
+We have an "EnemyShot1" `Prefab`. Remove the instances from the scene if there are some.
 
-As we did for the player, we need to add the weapon to the enemy and make him call the projectile creation method.
+# Firing
 
-### New scripts and assignments
+Like we did for the player, we need to add a weapon to the enemy and make him call `Attack()`, thus creating projectile.
 
-- Add a _WeaponScript_ to the enemy. Dran'n'drop the "EnemyShot1" prefab into the "Shot Prefab" variable of the script.
+## New scripts and assignments
 
-- Then create a new script, _EnemyScript_. It will simply try to trigger the weapon at each frame, a kind of auto-fire.
+1. Add a "WeaponScript" to the enemy.
+2. Drag and drop the "EnemyShot1" `Prefab` into the "Shot Prefab" variable of the script.
+3. Create a new script called "EnemyScript". It will simply try to trigger the weapon at each frame. A kind of auto-fire.
 
-`````csharp
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -79,52 +84,64 @@ public class EnemyScript : MonoBehaviour
   }
 }
 
-`````
+```
 
-- Assign this new script to our enemy
+Attach this script to our enemy.
 
-You should have this (I just slightly reduce the firing rate to 0.75):
+You should have this (observe the slight increase of the shooting rate to `0.75`):
 
-[![Poulpi configuration with weapon][enemy_config]][enemy_config]
+[ ![Poulpi configuration with weapon][enemy_config] ][enemy_config]
 
-**Remark:** if you are modifying the game object in the scene, remember to save all changes to the prefab using the "Apply" button on the top right.
+<md-note>
+_Remark_: If you are modifying the game object in the scene, remember to save all the changes to the `Prefab` using the "Apply" button on the top right of the "Inspector".
+</md-note>
 
-Try and see!
+Try to play and look!
 
-[![Poulpi is shooting][shoot_right]][shoot_right]
+[ ![Poulpi is shooting][shoot_right] ][shoot_right]
 
-Okay, it's kinda working. The weapon is firing on it's right because that's what we told him. The right of the enemy can be seen in the editor, it's simply the gizmo.
+Okay, it's kinda working. The weapon is firing on its right because that's what we told it to do.
 
-If you rotate the object, you can make it fire at the left but the rest is messed up.
+If you rotate the enemy, you can make it fire on its left, but, erm... the sprite is also upside down. That's not what we want.
 
-So what?! Obviously, I made this mistake for a reason.
+[ ![Upside down Poulpi][gizmo2] ][gizmo2]
 
-###  Shooting in all direction
+So what?! Obviously, we made this mistake for a reason.
 
-The _WeaponScript_ has been made in a way that it is interesting to rotate its game object. It gives you a flexible direction, imagine a giant robot arm shooting laser.
+## Shooting in any direction
 
-We need to modify our enemy:
+The "WeaponScript" has been made in a particular way: you can choose its direction simply by rotating the game object onto which it is attached. We've seen that when we rotated the enemy sprite before.
 
-- Create a new **empty game object**. We will call it "WeaponObject" (just to know what we are talking about)
-- Delete the _WeaponScript_ for "Enemy1"
-- Add a _WepaonScript_ to "WeaponObject" and set the shot prefab like you did before
-- **Rotate**  "WeaponObject" to (0,0,180)
+The trick is to create an empty game object as a child of the enemy `Prefab`.
+
+We need to:
+
+1. Create an "Empty Game Object". Call it "WeaponObject".
+2. Delete the "WeaponScript" attached to your enemy prefab.
+3. Add a "WeaponScript" to the "WeaponObject" and set the shot prefab property like you did before.
+4. Rotate the "WeaponObject" to `(0, 0, 180)`.
+
+If you did the process on the game object (and not the `Prefab`), do not forget to "Apply" the changes.
 
 You should have this:
 
-[![Gizmo][gizmo]][gizmo]
+[ ![Enemy with a new object][enemy_full_config] ][enemy_full_config]
 
-[![Enemy with a new object][enemy_full_config]][enemy_full_config]
+However, we have a small change to make on the "EnemyScript" script.
 
-Now we modify the script, otherwise it will not work: in _EnemyScript_ , ``GetComponent`` will return null as the _WeaponScript_ is not attached to the same game object
-.
-Fortunately, we can look in the hierarchy of the current game object using the ``GetComponentInChildren`` or ``GetComponentsInChildren`` methods.
+In its current state, the "EnemyScript" call to `GetComponent<WeaponScript>()` is going to return null. Indeed, the "WeaponScript" is not attached to the same game object anymore.
 
-I also added a way to manage multiple weapons, for fun, it's just that we look for a list instead of just one instance.
+Fortunately, Unity provides a method that can also look in the children hierarchy of the game object calling it: the `GetComponentInChildren<Type>()` method.
 
-The whole _EnemyScript_:
+<md-note>
+_Note_: Like for `GetComponent<>()`, `GetComponentInChildren<>()` also exists in a plural form : `GetComponentsInChildren<Type>()`. Notice the `s` after "Component". This method returns a list instead of the first corresponding component.
+</md-note>
 
-`````csharp
+In fact, just for fun, we have also added a way to manage multiple weapons. We are just manipulating a list instead of a single instance of the component.
+
+Take a look at the whole "EnemyScript":
+
+```csharp
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -153,68 +170,84 @@ public class EnemyScript : MonoBehaviour
     }
   }
 }
+```
 
-`````
-
-Finally, update the shot speed (in the _MoveScript_) so they go faster than the enemy:
+Finally, update the shot speed by tweaking the public property of the "MoveScript" of the "EnemyShot1" `Prefab`. It should move faster than the Poulpi speed:
 
 [![Super dangerous Poulpi][shoot_ok]][shoot_ok]
 
-Here we have a super dangerous Poulpi. Of course we need to tweak the variable to make a real game.
+Great, we have a super dangerous Poulpi now.
 
-### Bonus: firing in two direction
+### Bonus: firing in two directions
 
-Add another weapon and the enemy fire in two direction. This is just a few clicks and a duplication in the editor, no scripts!
+Firing in two directions is just a few clicks and a duplication in the editor. It doesn't involve any script:
 
-The result:
+1. Add another weapon to the enemy (by duplicating the first "WeaponObject").
+2. Change the rotation of the second "WeaponObject".
 
-[![Still a super dangerous Poulpi with two guns][shoot_two_dir]][shoot_two_dir]
+The enemy should fire in two directions now.
 
+A possible result:
 
-## Player taking damage
+[ ![A "super super" dangerous Poulpi with two guns][shoot_two_dir] ][shoot_two_dir]
 
-But the player is still invincible. No challenge there.
-Simply adds a _HealthScript_ to him. Make sure to uncheck the "IsEnemy" field.
+It's a good example of using Unity properly: by creating independent scripts like this one and making public some useful variables, you can reduce the amount of code drastically. _Less code means less errors_.
+
+## Hurting the player
+
+Our Poulpies are dangerous, right? Erm, nope. Even if they can shoot, it won't harm the player character.
+
+We are still invincible. No challenge there.
+
+Simply add a "HealthScript" on the player. _Make sure to uncheck the "IsEnemy" field_.
 
 [![Script configuration for player health][player_no_enemy]][player_no_enemy]
 
+Run the game and observe the difference:
+
 [![Player hit by an enemy projectile][player_die]][player_die]
 
-## Bonus
+# Bonus
 
-This is just some hints to go further on the shooting feature. You can skip it if you are not interested into more specific shoot them up thoughts.
+We are going to give you some hints to go further on the shooting aspect of your game. You can skip this part if you are not interested into more specific _shmup_ thoughts.
 
-### Pooling the projectiles?
+## Pool of projectiles
 
-As you shoot you will see game objects being created and removed only after 20 seconds or less.
+As you play, you can observe in the "Hierarchy" that game objects are being created and removed only after 20 seconds (unless they hit a player or an enemy).
 
-If you are doing a danmaku and need a LOT of bullets, this is not a viable technique.
+If you plan to do a [danmaku][danmaku_link] which needs a LOT of bullets, this is not a viable technique anymore.
 
-One of the solution to handle a lot of bullet is to use a **pooling system**. You can simply use an array of bullets, limited in size. When if the array is filled, you delete the oldest object and replace it by a new one.
+One of the solution to handle a multitude of bullets is to use a _pool_. Basically, you can use an array of bullets limited in size. When the array is full, you delete the oldest object and replace it by a new one.
 
-I won't implement one here but it is quite simple. I used [the same technique a previous painting script, see the gist](http://dmayance.com/unity-paint-part-2/).
+We won't implement one here but it is quite simple. We used [the same technique on a painting script](http://dmayance.com/unity-paint-part-2/).
 
-You can also reduce the time to live of a bullet so it will disappear quicker.
+You could also reduce the time to live of a bullet so it will disappear more quickly.
 
-Remember also that Unity is really slow on the _Instantiate_ method, you need to use it carefully.
+<md-warning>
+_Attention_: Keep in mind that using the `Instantiate` method heavily has a cost. _You need to use it carefully_.
+</md-warning>
 
-### Starting with delay
+## Delaying shots
 
-Simply watching the gif, you should see how synchronous all enemies are.
-We could simply add a delay to the weapon: it's just initializing the cooldown to something else than 0.
+Add a few armed enemies in the scene and run the game. You should see how synchronous all enemies are.
 
-This would allow to have weapon still shooting continuously but all in the same time (why not "top" then, 0.5 sec later, "bottom");
+We could simply add a delay to the weapon: initialize the cooldown to something else than 0. You could use an algorithm or simply put a random number instead.
 
-Once again, it depends on the gameplay you want to achieve.
+The speed of the enemies can also be altered with a random value.
 
-## Ready for the next step
+Once again, it's up to you. It depends solely on what you want to achieve with your gameplay.
 
-We now have a shooter! A very basic and hardcore one, but still a shooter.
-You can add more enemies and shoot them.
+# Next step
+
+We have just learned how to give a weapon to our enemies. We've also seen how to reuse some scripts to improve the gameplay.
+
+We have an almost complete shooter! A very basic and hardcore one, admittedly.
 
 [![Result][result]][result]
 
-It is now time to enhance the background and the scene to get a full level.
+Don't hesitate to add enemies, weapons and to experiment with the properties.
+
+In the next chapter, we will learn how to enhance the background and the scene to create a big level.
 
 
 [shot_poulpi]: ./-img/shot_poulpi.png
@@ -222,6 +255,7 @@ It is now time to enhance the background and the scene to get a full level.
 [enemy_config]: ./-img/enemy_config.png
 [shoot_right]: ./-img/shoot_right.gif
 [gizmo]: ./-img/gizmo.png
+[gizmo2]: ./-img/gizmo2.png
 [reverse]: ./-img/reverse.png
 [enemy_full_config]: ./-img/enemy_full_config.png
 [shoot_ok]: ./-img/shoot_ok.gif
@@ -229,3 +263,5 @@ It is now time to enhance the background and the scene to get a full level.
 [player_no_enemy]: ./-img/player_no_enemy.png
 [player_die]: ./-img/player_die.gif
 [result]: ./-img/result.png
+
+[danmaku_link]: http://en.wikipedia.org/wiki/Shoot_%27em_up#Bullet_hell "Danmaku shmup"
