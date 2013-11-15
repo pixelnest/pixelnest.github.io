@@ -54,7 +54,7 @@ By default, an empty game object looks like:
 
 This object has only one component: a "Transform". This component is required and cannot be disabled or removed from an object.
 
-You can add as many components as you want on an object. A script is added as a component, for example. Every component (except the "Transform") can be enabled or disabled during the lifetime of the object.
+You can add as many components as you want on an object. A script is added as a component, for example. Most of the components can be enabled or disabled during the lifetime of the object.
 
 [![Enable a game object component][components]][components]
 
