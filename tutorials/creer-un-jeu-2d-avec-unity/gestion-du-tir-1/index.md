@@ -270,7 +270,7 @@ public class WeaponScript : MonoBehaviour
 
 ```
 
-Ajoutez ce script au joueur.
+**Ajoutez ce script au joueur.**
 
 Revenons sur les trois parties qui le compose :
 
@@ -288,56 +288,52 @@ Faites un drag'n'drop du prefab "PlayerShot" vers ce champ :
 
 Désormais Unity affectera automatiquement cette valeur au script. Facile non ?
 
-La deuxième variable, `shootingRate`, a déjà une valeur que nous définies dans le script. Elle est modifiable mais elle est suffisante par défaut pour le moment.
+La deuxième variable, `shootingRate`, définie la vitesse de tir du joueur. Elle a déjà une valeur que nous définies dans le script, qui est modifiable mais suffisante pour le moment.
 
 <md-warning>
 _Faites attention_ : Modifier une valeur dans Unity via l'_Inspector_ ne mettra pas à jour la valeur par défaut dans votre script. Donc si vous réutilisez ce script, il aura l'ancienne valeur, pas la nouvelle. <br />C'est logique mais il faut donc penser à reporter manuellement ces changements une fois que l'on a trouvé les bonnes valeurs.
 </md-warning>
 
-### 2. Recharge
+### 2. Vitesse de tir
 
-TODO traduction
+La vitesse de tir de l'arme a une incidence directe sur le gameplay et sur les performances du jeu. A vous de voir si vous voulez pouvoir créer des tonnes de _boulettes_ ou non à chaque frame (ce que Unity appréciera moyennement).
 
-Guns have a firing rate. If not, you would be able to create tons of projectiles at each frame.
+Nous avons donc un mécanisme tout simple de temps de recharge entre deux tirs. Si ce temps à attendre est supérieur à `0` alors on ne peut pas tirer. Ce temps est diminué à chaque frame par le temps écoulé.
 
-So we have a simple cooldown mechanism. If it is greater than `0` we simply cannot shoot. We substract the elapsed time at each frame.
+### 3. Méthode Attack(bool)
 
-### 3. Public attack method
+La méthode ``Attack(bool)`` est la raison d'être de ce script d'arme : créer un projectile à partir d'un  appel dans un autre script. 
 
-This is the main purpose of this script: being called from another one. This is why we have a public method that can create the projectile.
-
-Once the projectile is instantiated, we retrieve the scripts of the shot object and override some variables.
+Une fois le projectile instancié, nous le paramétrons  avec les bonnes valeurs.
 
 <md-note>
-_Note_: The `GetComponent<TypeOfComponent>()` method allows you to get a precise component (and thus a script, because a script is a component after all) from an object. The generic (`<TypeOfComponent>`) is used to indicate the exact component that you want. <br />There is also a `GetComponents<TypeOfComponent>()` that get a list instead of the first one, etc.
+_Note_ : La méthode `GetComponent<TypeOfComponent>()` permet de récupérer un composant précis sur l'objet courant, notamment un script à partir de sa classe. Cela est possible grâce à la généricité (`<TypeOfComponent>`).<br /> Il existe aussi la même méthode au pluriel, `GetComponents<TypeOfComponent>()`, pour récupérer une liste de composant du même type si vous savez que vous en avez plusieurs.
 </md-note>
 
-# Using the weapon with the player entity
+# Utilisez l'arme à partir du joueur
 
-If you launch the game at this point, nothing has changed at all. We have created a weapon but it's completely useless.
+Si vous essayez de jouer à ce moment du tutoriel, rien n'aura changé. L'arme (le script) est créé mais `Attack(bool)` n'est jamais appelée.
 
-Indeed, if a "WeaponScript" was attached to an entity, the `Attack(bool)` method would never be called.
+Changeons cela en ouvrant le "PlayerScript".
 
-Let's go back to "PlayerScript".
-
-In the `Update()` method, put this snippet:
+Dans `Update()`, ajoutez cette cinquième étape :
 
 ```csharp
   void Update()
   {
     // ...
 
-    // 5 - Shooting
+    // 5 - Tir
     bool shoot = Input.GetButtonDown("Fire1");
     shoot |= Input.GetButtonDown("Fire2");
-    // Careful: For Mac users, ctrl + arrow is a bad idea
+    // Astuce pour ceux sous Mac car Ctrl + flèches est utilisé par le système
 
     if (shoot)
     {
       WeaponScript weapon = GetComponent<WeaponScript>();
       if (weapon != null)
       {
-        // false because the player is not an enemy
+        // false : le joueur n'est pas un ennemi
         weapon.Attack(false);
       }
     }
@@ -346,38 +342,37 @@ In the `Update()` method, put this snippet:
   }
 ```
 
-It doesn't matter at this point if you put it after or before the movement.
+Cette étape peut être avant ou après le mouvement, la seule chose qui compte est que ce soit dans l'`Update()` du joueur.
 
-What did we do ?
+Mais qu'avons-nous fait ?
 
-1. We read the input from a fire button (`click` or `ctrl` by default).
-2. We retrieve the weapon's script.
-3. We call `Attack(false)`.
+1. Nous lisons la valeur des entrée claviers / gamepad
+2. S'il y a eu un appui intéressant, alors il faut récupérer le script de l'arme
+3. Et on appelle `Attack(false)` 
 
 <md-info>
-_Button down_: You can notice that we use the `GetButtonDown()` method to get an input. The "Down" at the end allows us to get the input when the button has been pressed and _only_ once. `GetButton()` returns `true` at each frame until the button is released. In our case, we clearly want the behavior of the `GetButtonDown()` method. <br />Try to use `GetButton()` instead, and observe the difference.
+_Button down_: Nous utilisons `GetButtonDown()` pour récupérer la valeur d'une entrée. Le "Down" correspond à l'état "vient juste d'être appuyé". Cet état n'est valable qu'une frame, lorsque le bouton est enfoncé et ne l'était pas l'instant d'avant.<br /> Nous pouvons aussi utiliser `GetButton()` qui indique si le bouton est enfoncé, cela permettrait de tirer en continu en restant appuyé.
 </md-info>
 
-Launch the game with the "Play" button. You should get this:
+Démarrez le jeu, vous devriez pouvoir tirer :
 
 [![Working shooting][shooting]][shooting]
 
-The bullets are too slow? Experiment with the "Shot" prefab to find a configuration you'd like.
+Vous trouvez les tirs trop lents ou pas assez puissants ? Changez les valeurs du prefab "Shot" jusqu'à obtenir la configuration qui vous plaît.
 
-_Bonus_: Just for fun, add a rotation to the player, like `(0, 0, 45)`.
-The shots have a 45 degrees movement, even if the rotation of the shot sprite is not correct as we didn't change it too.
+_Bonus_ : Si vous ajoutez une rotation sur le joueur, par exemple `(0, 0, 45)`, alors les tirs seront aussi soumis à cette trajectoire sans avoir rien à faire (même si les tirs n'auront pas la bonne orientation car nous ne la changeons pas en fonction de la trajectoire).
 
 [![Shooting rotation][shooting_rotation]][shooting_rotation]
 
-# Next step
+Ce petit détail aura son importance dans le chapitre suivant.
 
-We have a shooter! A very basic one, but a shooter despite everything. You learned how to create a weapon that can fire shots and destroy other objects.
+# Prochaine étape
 
-Try to add more enemies. ;)
+Nous avons un shooter ! Très basique, pas très marrant, mais dans les faits, ça l'est. Nous avons créé une arme qui tire des projectile pour détruire d'autres éléments.
 
-But this part is not over! We want enemies that can shoot too. Take a break, what comes next is mainly reusing what we did here.
+Ajoutez d'autres ennemis ;).
 
-
+Dans la prochaine partie nous allons équiper les Poulpis à leur tour en réutilisant et améliorant les scripts écrits ici.
 
 [shot]: ../../2d-game-unity/shooting-1/-img/shot.png
 [shot_config1]: ../../2d-game-unity/shooting-1/-img/shot_config1.png
