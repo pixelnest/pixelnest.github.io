@@ -298,7 +298,7 @@ public class MoveScript : MonoBehaviour
   // 0 - Designer variables
 
   /// <summary>
-  /// Projectile speed
+  /// Object speed
   /// </summary>
   public Vector2 speed = new Vector2(10, 10);
 

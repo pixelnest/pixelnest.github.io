@@ -23,11 +23,8 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 
 - [Installer Unity et créer une première scène](../installation-et-preparation)
 - [Arrière-plan et caméra](../arriere-plan-et-camera)
-- [Joueur et ennemis](../joueur-et-ennemis)
-- 
-TODO
+- [Ajout du joueur et ennemis](../ajout-du-joueur-et-des-ennemis)
 
-- [Create a player and its enemies](../player-and-enemies)
 - [Shooting (1/2)](../shooting-1)
 - [Shooting (2/2)](../shooting-2)
 - [Parallax scrolling](../parallax-scrolling)

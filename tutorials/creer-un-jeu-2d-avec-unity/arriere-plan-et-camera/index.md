@@ -11,7 +11,7 @@ tutorial:
 links:
   summary: ../sommaire
   previous: ../nstallation-et-preparation
-  next: ../joueur-et-ennemis
+  next: ../ajout-du-joueur-et-des-ennemis
 ---
 
 En partant du projet tout propre préparé dans la partie précédente, nous allons voir comment mettre en place l'arrière-plan de notre jeu.
