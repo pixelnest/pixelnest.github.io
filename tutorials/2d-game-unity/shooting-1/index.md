@@ -17,15 +17,15 @@ links:
 Our player ship is facing an enemy but cannot do anything...
 Let's grant him a weapon and some ammo! This will mainly require scripting but it worth it.
 
-## Player projectile
+# Player projectile
 
 To make the player shot some projectile, we need to define the related game object it will be using. The sprite:
 
-[![Shot Sprite][shot]][shot]
+[ ![Shot Sprite][shot] ][shot]
 
 And we will be using prefabs, so we will create multiple instances of the same object.
 
-### Preparing the prefab
+## Preparing the prefab
 
 First create a sprite in Unity for it. You should be used to it now, if necessary check how you did for the enemy:
 
@@ -89,7 +89,7 @@ You should have this configuration:
 
 If you play, you will see the shot moving.
 
-### Collisions and damages
+## Collisions and damages
 
 But it is not destroying anything.
 
@@ -148,7 +148,7 @@ If the enemy has more health than the shot damages, he will survive. Try to chan
 
 [![Enemy is shot but has more HP][bang2]][bang2]
 
-### Firing prefab shots
+## Firing prefab shots
 
 Delete the shot in the scene, it has nothing to do there now that we finished its preparation.
 
@@ -156,7 +156,7 @@ Once again, a new reusable script. Create a new one called "WeaponScript".
 
 We will create a script that can be reused everywhere (players, enemies and why not something else). Its purpose is to instantiate a projectile in front of the gameobject it is attached to.
 
-#### The full Weapon script
+### The full Weapon script
 
 Here's the full code, bigger than usual. The explanations are below.
 
@@ -254,7 +254,7 @@ public class WeaponScript : MonoBehaviour
 
 The script is divided in three part.
 
-#### 1/ Variables that will appear in the inspector
+### 1/ Variables that will appear in the inspector
 
 We need it to set the shot that will be used for this weapon.
 
@@ -266,19 +266,19 @@ Drag and drop the "Shot" prefab in this field:
 
 Now Unity will automatically fill the script with this information. Easy, right?
 
-#### 2/ The cooldown
+### 2/ The cooldown
 
 Guns have a firing rate, otherwise you would create tons of projectiles at each frame.
 
 So here we have a simple cooldown, if it is greater than 0 we can't shoot and we substract the elapsed time at each frame.
 
-#### 3/ Shooting from another script
+### 3/ Shooting from another script
 
 This is the main purpose of this script: being called from another one. This is why we have a public method that can create the projectile.
 
 Once the projectile instantiated we retrieve the script information and override some variables (direction from movement, enemy or not from shot).
 
-### Calling from player
+# Calling from player
 
 If you launch the game at this point, nothing changed.
 Even if a _WeaponScript_ is attached to the player, the _Attack_ method is never called.
@@ -323,7 +323,7 @@ The shots will have a 45 degrees movement, even if the rotation will not be corr
 
 [![Shooting rotation][shooting_rotation]][shooting_rotation]
 
-## Ready for the next step
+# Next step
 
 We now have a shooter! A very basic one, but still a shooter.
 You can add more enemies and shoot them.

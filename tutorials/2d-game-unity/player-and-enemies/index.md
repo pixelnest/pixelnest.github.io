@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Create a player and its enemies
-author: Damien
+author: Damien Matthieu
 date: 13/11/13
 
 tutorial:
