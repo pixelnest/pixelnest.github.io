@@ -34,7 +34,7 @@ What should we use in this case ? A `Prefab` of course!
 
 ## Preparing the `Prefab`
 
-You should be used to the procedure of creating a `Prefab` from a `Sprite` now:
+You should be used to the procedure now:
 
 1. Import the texture.
 2. Create a new `Sprite` in the scene.
@@ -54,12 +54,9 @@ It means that a shot will pass through an object on touching — _there won't be
 
 Tada, you have a shot! Time to script the behavior.
 
-Create a new script "ShotScript":
+Create a new script called "ShotScript":
 
-0. - designer variables for the speed, direction, damages
-2. - destroy after 20 seconds to avoid any leaks
-
-`````csharp
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -67,7 +64,7 @@ using UnityEngine;
 /// </summary>
 public class ShotScript : MonoBehaviour
 {
-  // 0 - Designer variables
+  // 1 - Designer variables
 
   /// <summary>
   /// Damage inflicted
@@ -81,31 +78,33 @@ public class ShotScript : MonoBehaviour
 
   void Start()
   {
-    // 1 - Limited time to live to avoid any leak
+    // 2 - Limited time to live to avoid any leak
     Destroy(gameObject, 20); // 20sec
   }
 }
 
-`````
+```
 
-Attach this "ShotScript"to your shot.
-Finally, attach a "MoveScript" too so your shot will move.
+1. Some designer variables for the speed, direction and damages.
+2. We destroy the object after 20 seconds to avoid any leak.
 
-Then drag'n'drop the shot game object to **create a prefab from it**, we will need it in few steps.
+Attach the "ShotScript" to the sprite. Add a "MoveScript" too so your shots will move.
+
+Then drag the shot game object in the "Project" pane to create a `Prefab` from it. We will need it in a few steps.
 
 You should have this configuration:
 
 [![Shot configuration 1][shot_config1]][shot_config1]
 
-If you play, you will see the shot moving.
+If you start the game with the "Play" button, you will see that the shot is moving.
 
 ## Collisions and damages
 
-But it is not destroying anything.
+However, the shot is not (yet) destroying anything.
 
 Don't be surprised, we didn't script the damage behavior. We only need one new script, "HealthScript":
 
-`````csharp
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -135,7 +134,9 @@ public class HealthScript : MonoBehaviour
         hp -= shot.damage;
 
         // Destroy the shot
-        Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
+        // Remember to always target the game object,
+        // otherwise you will just remove the script.
+        Destroy(shot.gameObject);
 
         if (hp <= 0)
         {
@@ -146,31 +147,39 @@ public class HealthScript : MonoBehaviour
     }
   }
 }
-`````
+```
 
-Attach this "HealthScript" **to the enemy**. Now play the scene and make sure the two collides.
+Attach this "HealthScript" on the Poulpi `Prefab`.
 
-**Remark:** Make sure the shot and the enemy are on the same plane (Z position)!
+<md-warning>
+_Attention_: It's better to work on the `Prefab` directly. <br />By doing so, every instantiated enemy in the scene is going to be modified to reflect the `Prefab`. It is particularly important here because we will have a lot of enemies in the scene. <br />If you have worked on a game object instance instead of the `Prefab`, don't be scared: you can click on the "Apply" button at the top of the "Inspector" to add the changes to the `Prefab`.
+</md-warning>
+
+Make sure the shot and the Poulpi are on the same line to test the collision.
+
+<md-note>
+_Note_: Pay especially attention to the Z axis: it should be `0` (we are not using the depth here). If the Z axis is different, the shot and the Poulpi will simply not collide.
+</md-note>
+
+Now play the scene and observe:
 
 [![Enemy is shot][bang]][bang]
 
-If the enemy has more health than the shot damages, he will survive. Try to change the _HP_ value in the Enemy's _HealScript_:
+If the enemy has more health than the shot damages, he will survive. Try to change the `hp` value in the enemy's "HealthScript":
 
 [![Enemy is shot but has more HP][bang2]][bang2]
 
-## Firing prefab shots
+## Firing
 
-Delete the shot in the scene, it has nothing to do there now that we finished its preparation.
+Delete the shot in the scene. It has nothing to do there now that we have finished it.
 
-Once again, a new reusable script. Create a new one called "WeaponScript".
+We need a new script to fire shots. Create one called "WeaponScript".
 
-We will create a script that can be reused everywhere (players, enemies and why not something else). Its purpose is to instantiate a projectile in front of the gameobject it is attached to.
+This script will be reused everywhere (players, enemies, etc.). Its purpose is to instantiate a projectile in front of the game object it is attached to.
 
-### The full Weapon script
+Here's the full code, bigger than usual. The explanations are below:
 
-Here's the full code, bigger than usual. The explanations are below.
-
-`````csharp
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -258,87 +267,112 @@ public class WeaponScript : MonoBehaviour
   }
 }
 
-`````
+```
 
-**Before getting the explanation, attach it to the player.**
+Attach this script to the player.
 
-The script is divided in three part.
+The script is divided in three parts:
 
-### 1/ Variables that will appear in the inspector
+### 1. Variables availables in the "Inspector" pane
 
-We need it to set the shot that will be used for this weapon.
+We have two members here : `shotPrefab` and `shootingRate`.
 
-Look at your player. In the new _WeaponScript_ you can see a field "Shot Prefab : None".
+The first one is needed to set the shot that will be used with this weapon.
 
-Drag and drop the "Shot" prefab in this field:
+Select your player in the scene "Hierarchy". In the "WeaponScript" component, you can see the property "Shot Prefab" with a "None" value.
+
+Drag the "Shot" prefab in this field:
 
 [![Using a prefab][dnd_prefab]][dnd_prefab]
 
-Now Unity will automatically fill the script with this information. Easy, right?
+Unity will automatically fill the script with this information. Easy, right?
 
-### 2/ The cooldown
+The `shootingRate` variable has a default value set in the code. We will not change it for the moment. But you can start the game and experiment with it to test what it does.
 
-Guns have a firing rate, otherwise you would create tons of projectiles at each frame.
+<md-warning>
+_Be careful_: Changing a variable value in the Unity "Inspector" does not apply the change to the default value of the script. If you add the script onto another object, the default value will be the one from the script. <br />It's logical, but you need to be careful. If you want to keep the tweaked value definitively, you have to open your code editor and backport the change yourself.
+</md-warning>
 
-So here we have a simple cooldown, if it is greater than 0 we can't shoot and we substract the elapsed time at each frame.
+### 2. Cooldown
 
-### 3/ Shooting from another script
+Guns have a firing rate. If not, you would be able to create tons of projectiles at each frame.
+
+So we have a simple cooldown mechanism. If it is greater than `0` we simply cannot shoot. We substract the elapsed time at each frame.
+
+### 3. Public attack method
 
 This is the main purpose of this script: being called from another one. This is why we have a public method that can create the projectile.
 
-Once the projectile instantiated we retrieve the script information and override some variables (direction from movement, enemy or not from shot).
+Once the projectile is instantiated, we retrieve the scripts of the shot object and override some variables.
 
-# Calling from player
+<md-note>
+_Note_: The `GetComponent<TypeOfComponent>()` method allows you to get a precise component (and thus a script, because a script is a component after all) from an object. The generic (`<TypeOfComponent>`) is used to indicate the exact component that you want. <br />There is also a `GetComponents<TypeOfComponent>()` that get a list instead of the first one, etc.
+</md-note>
 
-If you launch the game at this point, nothing changed.
-Even if a _WeaponScript_ is attached to the player, the _Attack_ method is never called.
+# Using the weapon with the player entity
 
-Let's go back to _PlayerScript_.
+If you launch the game at this point, nothing has changed at all. We have created a weapon but it's completely useless.
 
-In the update method, after or before movement (doesn't matter at this point) add this snippet:
+Indeed, if a "WeaponScript" was attached to an entity, the `Attack(bool)` method would never be called.
 
-`````csharp
+Let's go back to "PlayerScript".
+
+In the `Update()` method, put this snippet:
+
+```csharp
   void Update()
   {
-    ...
+    // ...
 
     // 5 - Shooting
     bool shoot = Input.GetButtonDown("Fire1");
-	shoot |= Input.GetButtonDown("Fire2"); // For Mac users, ctrl + arrow is a bad idea
+    shoot |= Input.GetButtonDown("Fire2");
+    // Careful: For Mac users, ctrl + arrow is a bad idea
 
     if (shoot)
     {
       WeaponScript weapon = GetComponent<WeaponScript>();
       if (weapon != null)
       {
+        // false because the player is not an enemy
         weapon.Attack(false);
       }
     }
 
+    // ...
   }
-`````
+```
 
-- We read the input from a fire button (click or ctrl by default).
-- We retrieve the weapon's script
-- We call _Attack_
+It doesn't matter at this point if you put it after or before the movement.
 
-Try and see the result. You should get this:
+What did we do ?
+
+1. We read the input from a fire button (`click` or `ctrl` by default).
+2. We retrieve the weapon's script.
+3. We call `Attack(false)`.
+
+<md-info>
+_Button down_: You can notice that we use the `GetButtonDown()` method to get an input. The "Down" at the end allows us to get the input when the button has been pressed and _only_ once. `GetButton()` returns `true` at each frame until the button is released. In our case, we clearly want the behavior of the `GetButtonDown()` method. <br />Try to use `GetButton()` instead, and observe the difference.
+</md-info>
+
+Launch the game with the "Play" button. You should get this:
 
 [![Working shooting][shooting]][shooting]
 
-**Remark:** Bullets are slow? Just tweak the _Shot_ prefab.
+The bullets are too slow? Experiment with the "Shot" prefab to find a configuration you'd like.
 
-**Bonus:** Just for fun, add a rotation to the player, like (0,0,45).
-The shots will have a 45 degrees movement, even if the rotation will not be correct as we didn't set it properly.
+_Bonus_: Just for fun, add a rotation to the player, like `(0, 0, 45)`.
+The shots have a 45 degrees movement, even if the rotation of the shot sprite is not correct as we didn't change it too.
 
 [![Shooting rotation][shooting_rotation]][shooting_rotation]
 
 # Next step
 
-We now have a shooter! A very basic one, but still a shooter.
-You can add more enemies and shoot them.
+We have a shooter! A very basic one, but a shooter despite everything. You learned how to create a weapon that can fire shots and destroy other objects.
 
-But this part is not over! We now want enemies to shoot too. Take a break, what comes next is mainly reusing what we did here but it would have done too much in only one part.
+Try to add more enemies. ;)
+
+But this part is not over! We want enemies that can shoot too. Take a break, what comes next is mainly reusing what we did here.
 
 
 [shot]: ./-img/shot.png
