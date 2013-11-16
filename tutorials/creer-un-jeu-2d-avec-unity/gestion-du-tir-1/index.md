@@ -14,7 +14,7 @@ links:
   next: ../gestion-du-tir-2
 ---
 
-Notre vaisseu fait face impuissant à un terrifiant Poulpi... il faut que nous lui ajoutions une arme !
+Notre vaisseau fait face impuissant à un terrifiant Poulpi... il faut que nous lui ajoutions une arme !
 
 Cela va nécessité pas mal de code, mais le jeu en vaut la chandelle.
 

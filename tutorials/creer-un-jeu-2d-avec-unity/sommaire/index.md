@@ -25,14 +25,17 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 - [Affichage d'un arrière-plan](../arriere-plan-et-camera)
 - [Ajout du joueur et des ennemis](../ajout-du-joueur-et-des-ennemis)
 - [Gestion du tir (1/2)](../gestion-du-tir-1)
-- - [Gestion du tir (2/2)](../gestion-du-tir-2)
+- [Gestion du tir (2/2)](../gestion-du-tir-2)
+- [Défilement du décor (Parallax scrolling)](../parallax-scrolling)
 
-- [Shooting (1/2)](../shooting-1)
-- [Shooting (2/2)](../shooting-2)
-- [Parallax scrolling](../parallax-scrolling)
-- [Playing with particles](../particles)
-- [Making some noises on music](../sounds)
-- [Menus - loading and restarting the game](../menus)
-- [Build, release and deploy](../deployment)
-- [2D Animations](../animations)
-- [Tweaking the gameplay](../tweaking-the-gameplay)
+A traduire :
+
+- [Playing with particles](.)
+- [Making some noises on music](.)
+- [Menus - loading and restarting the game](.)
+- [Build, release and deploy](.)
+
+A venir :
+
+- 2D Animations
+- Ajuster le gameplay pour rendre le jeu bien meilleur
