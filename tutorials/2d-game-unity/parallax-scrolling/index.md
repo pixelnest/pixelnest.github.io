@@ -234,7 +234,7 @@ Simple, isn't it ?
 _Namespaces_: You might have already noted that Unity doesn't add a namespace around a `MonoBehaviour` script when you create it from the "Project" view. And yet Unity _does_ handle namespaces... Except when you use a default value on a method parameter. And it sucks. <br /><br />In this tutorial, we are not using namespaces at all. However, in your real project, you might consider to use them. If not, prefix your classes and behaviours to avoid a collision with a third-party library (like _NGUI_).
 </md-danger>
 
-We will call this method on the last object of the infinite layer.
+We will call this method on the leftmost object of the infinite layer.
 
 ## Full "ScrollingScript"
 
@@ -367,10 +367,10 @@ _(The numbers in the comments refer to the explanations below)_
 
 ### Explanations
 
-1. We need a public variable to turn on the "looping" mode.
-2. We need a private variable to store the children.
-3. In the `Start()` method, we set the `backgroundPart` list with the children that have a renderer. Thanks to a bit of [LINQ][linq_link], we order them by their `X` position.
-4. In the `Update()` method, if the `isLooping` flag is set to true, we get the first child and we test if it's completely outside th camera field. When it's the case, we change its position to be after the last child, and we put it at the last position of `backgroundPart` list.
+1. We need a public variable to turn on the "looping" mode in the "Inspector" view.
+2. We also have to use a private variable to store the layer children.
+3. In the `Start()` method, we set the `backgroundPart` list with the children that have a renderer. Thanks to a bit of [LINQ][linq_link], we order them by their `X` position and put the leftmost at the first position of the array.
+4. In the `Update()` method, if the `isLooping` flag is set to `true`, we retrieve the first child stored in the `backgroundPart` list. We test if it's completely outside the camera field. When it's the case, we change its position to be after the last (rightmost) child. Finally, we put it at the last position of `backgroundPart` list.
 
 Indeed, the `backgroundPart` is the exact representation of what is happening in the scene.
 
@@ -380,19 +380,26 @@ Indeed, the `backgroundPart` is the exact representation of what is happening in
 
 _(Click on the image to see the animation)_
 
-# Bonus: enhancing existing scripts
+Yes! We finally have a functional "parallax scrolling" implementation.
+
+# Bonus: Enhancing existing scripts
 
 Let's update our previous scripts.
 
 ## Enemy v2 with spawn
 
-I said earlier that enemies should be disabled until they are visible. They should also be removed once completely off screen on the left.
+We said earlier that enemies should be disabled until they are visible by the camera.
 
-Let's update _EnemyScript_ so it will:
+They should also be removed once they are completely off the screen.
 
-- disable moving, collider and shooting at start
-- check when the enemy's renderer is in camera sight
-- destroy when the enemy fully leave the camera
+We need to update "EnemyScript", so it will:
+
+1. Disable the movement, the collider and the auto-fire (when initialized).
+2. Check when the renderer is inside the camera sight.
+3. Activate itself.
+4. Destroy the game object when it's outside the camera.
+
+_(The numbers refer to the comments below)_
 
 ```csharp
 using UnityEngine;
@@ -415,6 +422,7 @@ public class EnemyScript : MonoBehaviour
     moveScript = GetComponent<MoveScript>();
   }
 
+  // 1 - Disable everything
   void Start()
   {
     hasSpawn = false;
@@ -433,7 +441,7 @@ public class EnemyScript : MonoBehaviour
 
   void Update()
   {
-    // Check if the enemy has spawned
+    // 2 - Check if the enemy has spawned.
     if (hasSpawn == false)
     {
       if (renderer.IsVisibleFrom(Camera.main))
@@ -452,7 +460,7 @@ public class EnemyScript : MonoBehaviour
         }
       }
 
-      // Out of camera?
+      // 4 - Out of the camera ? Destroy the game object.
       if (renderer.IsVisibleFrom(Camera.main) == false)
       {
         Destroy(gameObject);
@@ -460,6 +468,7 @@ public class EnemyScript : MonoBehaviour
     }
   }
 
+  // 3 - Activate itself.
   private void Spawn()
   {
     hasSpawn = true;
