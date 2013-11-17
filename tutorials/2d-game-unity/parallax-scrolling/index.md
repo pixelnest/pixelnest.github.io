@@ -52,8 +52,8 @@ In order to add the parallax scrolling effect to our game, the solution is to mi
 
 <md-note>
 _Note_: You may ask: "Why don't we just set the camera as a child of the player object?". This way, the camera would always be at the same position from the player. It could be an idea, but this would not fit with our gameplay.
-<br/>In a shmup, the camera restricts the player moves. If the camera moves along with the player for both horizontal and vertical axis, the player is free to go where he wants and we would lose this element of our gameplay.
-<br/>And I would also recommand to always keep the camera independant from your player in a 2D game. Even in a platformer, the camera isn't strictly linked to the player, it follows him under some restrictions. Super Mario World has probably the best camera possible for a platformer, [you may have a look of how it is done][smw_camera].
+<br/><br/>In a shmup, the camera <stong>restricts</strong> the player moves. If the camera moves along with the player for both horizontal and vertical axis, the player is free to go where he wants and we would lose this element of our gameplay.
+<br/><br/>And I would also recommand to always keep the camera independant from your player in a 2D game. Even in a platformer, the camera isn't strictly linked to the player, it follows him under some restrictions. _Super Mario World_ has probably the best camera possible for a platformer, <a href="http://www.youtube.com/watch?v=TCIMPYM0AQg">you may have a look of how it is done</a>.
 </md-note>
 
 
