@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Shooting (2/2)
-author: Damien
 date: 13/11/13
 
 tutorial:

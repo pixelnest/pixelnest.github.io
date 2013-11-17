@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Install Unity and create your first scene
-author: Damien Matthieu
 date: 13/11/13
 
 tutorial:
