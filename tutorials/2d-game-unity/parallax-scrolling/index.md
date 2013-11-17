@@ -14,17 +14,17 @@ links:
   next: ../particles
 ---
 
-It is time to enhance our background and scene. One effect you find in every single 2D game since 15 years is [the parallax scrolling](http://en.wikipedia.org/wiki/Parallax_scrolling).
+It is time to enhance our background and scene. One effect you find in every single 2D game since 15 years is [the parallax scrolling][parallax_link].
 
 To make it short, the idea is to move our layers at different speeds (the further the slower). If done correctly this give an illusion of depth.
 
 It's a cool, nice and easy-to-do effect. Shoot them up are usually using the scrolling (except the original one, Space Invaders) so I find it interesting to implement it in Unity.
 
-## Theorical part: defining the scrolling in our game
+# Theorical part: defining the scrolling in our game
 
 How are we gonna use the scrolling?
 
-### What will moves?
+## What will move?
 
 - Is it the player and the camera that moves
 
@@ -41,19 +41,19 @@ We can choose to mix both. We will have two scrolling:
 - the player moving forward along with the camera
 - backgrounds moving at different speeds (in addition to the camera movement), opposed to the first the scrolling
 
-### Enemy spawn decisions
+## Enemy spawn decisions
 
 This has consequences, especially for the enemy spawn. For now they are just moving and shooting as soon as the game starts. But we probably want them to wait and be invincible until they "spawn".
 
 What is spawning an enemy? It depends on the game, definitely. Here this is what we will define: enemies are statics and invincible until the camera reach and activate them.
 
- [![Camera usage][camera_use]][camera_use]
+[ ![Camera usage][camera_use] ][camera_use]
 
 The idea here is that you can use the Unity editor to set the enemies. This gives you a **ready to use level editor**.
 
 [Once again, it's a choice, not science ;)](http://gamedev.stackexchange.com/questions/2712/enemy-spawning-method-in-a-top-down-shooter).But I truly think that using Unity editor as a level editor is valuable, unless you have time, money and dedicated level designers that need special tools.
 
-### Planes
+## Planes
 
 We need to define what our planes are, and for each, if it is a loop or not. A looping background will repeat over and over. It is useful for things like the sky or space for example.
 
@@ -65,11 +65,11 @@ So we are going to have:
 - A middleground for flying platforms. Position : (0,0,5)
 - A foreground for players and enemies. Position : (0,0, 0)
 
- [![Planes][planes]][planes]
+[ ![Planes][planes] ][planes]
 
 We could imagine to have layers in front of the player too, easily. Just keep the z positions between [0, 10] otherwise you need to tweak the camera.
 
-## Diving into the code
+# Diving into the code
 
 You saw that when the scrolling is at the core of your gameplay ("scrolling shooters" are another name for shoot them up), you must takes decisions.
 
@@ -85,7 +85,7 @@ Remember the _MoveScript_ we used before? The basis is the same: speed + directi
 
 Create a new "ScrollingScript" script:
 
-`````csharp
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -126,7 +126,7 @@ public class ScrollingScript : MonoBehaviour
     }
   }
 }
-`````
+```
 
 Add it to every layer ("0 - Background", "1 - Background elements", etc).
 
@@ -174,19 +174,19 @@ For a convincing result, add elements to the scene:
 
 The result:
 
-[![Scrolling effect][scrolling1]][scrolling1]
+[ ![Scrolling effect][scrolling1] ][scrolling1]
 
 Not bad, but we can see that enemies moves and shoot out of the camera, before they spawn and after missing he player. They  never get recycled after their role is done.
 
 But first thing first, infinite backgrounds.
 
-## Infinite background scrolling
+# Infinite background scrolling
 
 We need to mainly add code to get an infinite scrolling. We need to watch the child of the infinite layer that is to the left.
 
 When this object goes beyond the camera, it is moved to the current end. And so on.
 
-[![Infinite scrolling theory][infinite_scrolling_definition]][infinite_scrolling_definition]
+[ ![Infinite scrolling theory][infinite_scrolling_definition] ][infinite_scrolling_definition]
 
 For a filled background, notice that you need a minimum size to cover all the camera so we never the what is behind. Here it's 3 parts for the sky, but it's completely arbitrary.
 
@@ -196,7 +196,7 @@ We will a nice method to check whether an object's renderer is visible by a came
 
 Create a new C# file named "RendererExtensions.cs" and fill it with:
 
-`````csharp
+```csharp
 using UnityEngine;
 
 public static class RendererExtensions
@@ -207,13 +207,13 @@ public static class RendererExtensions
     return GeometryUtility.TestPlanesAABB(planes, renderer.bounds);
   }
 }
-`````
+```
 
 We will call this method on the last object of the looping layer.
 
 Now the full "ScrollingScript", using few LINQ features:
 
-`````csharp
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -264,7 +264,7 @@ public class ScrollingScript : MonoBehaviour
         }
       }
 
-      // Sort by position 
+      // Sort by position
       // REM: left from right here, we would need to add few conditions to handle all scrolling directions
       backgroundPart = backgroundPart.OrderBy(t => t.position.x).ToList();
     }
@@ -319,17 +319,17 @@ public class ScrollingScript : MonoBehaviour
     }
   }
 }
-`````
+```
 
 Remember to enable "Is Looping" in the first (0) background otherwise it won't work. Click on the image to see an animation:
 
 [![Infinite scrolling][infinite_scrolling]][infinite_scrolling_gif]
 
-## Bonus: enhancing existing scripts
+# Bonus: enhancing existing scripts
 
 Let's update our previous scripts.
 
-### Enemy v2 with spawn
+## Enemy v2 with spawn
 
 I said earlier that enemies should be disabled until they are visible. They should also be removed once completely off screen on the left.
 
@@ -339,7 +339,7 @@ Let's update _EnemyScript_ so it will:
 - check when the enemy's renderer is in camera sight
 - destroy when the enemy fully leave the camera
 
-`````csharp
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -421,7 +421,7 @@ public class EnemyScript : MonoBehaviour
     }
   }
 }
-`````
+```
 
 But you won't be able to test it yet. Disabling the _MoveScript_ as a negative effect: the player never reaches the enemies as they're all moving along.
 
@@ -432,18 +432,18 @@ Why not after all? The only thing that is moving in the layer is him, and the sc
 
 It works, enemies are static and invincible until they spawn. Then they disappear when they reach the end of the camera. Click to see a gif:
 
-[![Enemy spawn][enemy_spawn]][enemy_spawn_gif]
+[ ![Enemy spawn][enemy_spawn] ][enemy_spawn_gif]
 
 I don't like the fact that waves of enemies are broken if they are in line (the first one starts without the others), it's a side effect that is not simple to correct.
 
-### Keeping the player in the camera bounds
+## Keeping the player in the camera bounds
 
 Open _PlayerScript_, and add this at the end of the "Update()" method.
 
-`````csharp
+```csharp
   void Update()
   {
-	...
+    // ...
 
     // 6 - Make sure we are not outside the camera bounds
     var dist = (transform.position - Camera.main.transform.position).z;
@@ -457,12 +457,14 @@ Open _PlayerScript_, and add this at the end of the "Update()" method.
               Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
               transform.position.z
               );
+
+    // ...
   }
-`````
+```
 
 It is not complicated, just verbose: we get the camera edges and we make sure the player position (**the center of the sprite**) is in the borders.
 
-## Ready for the next step
+# Next step
 
 We now have a scrolling shooter! The code is for right to left scrolling only as I didn't want to have too big scripts but you should be able to enhance that in few more lines.
 
@@ -487,3 +489,5 @@ We will some fun stuff now, first particles then sounds!
 [infinite_scrolling_gif]: ./-img/infinite_scrolling.gif
 [enemy_spawn]: ./-img/enemy_spawn.png
 [enemy_spawn_gif]: ./-img/enemy_spawn.gif
+
+[parallax_link]: http://en.wikipedia.org/wiki/Parallax_scrolling "Parallax Scrolling"
