@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Create a player and its enemies
-author: Damien Matthieu
 date: 13/11/13
 
 tutorial:
@@ -215,7 +214,7 @@ public class PlayerScript : MonoBehaviour
 }
 ```
 
-_(The numbers in the comments refer to the explanation below)_
+_(The numbers in the comments refer to the explanations below)_
 
 <md-note>
 _Note about C# conventions_: Look at the ``speed`` member visibility: it's public. In C#, a member variable should be private in order to keep the internal representation of the class private. <br />But exposing it as a public variable allows you to modify it in Unity through the "Inspector" pane, even during the game execution. This is a _powerful_ feature of Unity, letting you tweaks the gameplay without coding. <br />Remember that we are doing scripting here, not classic C# programming. This implies to break some rules and conventions.

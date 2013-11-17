@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Parallax scrolling
-author: Damien
 date: 13/11/13
 
 tutorial:
@@ -364,7 +363,7 @@ public class ScrollingScript : MonoBehaviour
 }
 ```
 
-(The numbers in the comments refer to the explanation below)
+_(The numbers in the comments refer to the explanations below)_
 
 ### Explanations
 
