@@ -24,68 +24,94 @@ Moreover, many _shmups_ use a scrolling in one — or more — axis (except the 
 
 Let's implement that in Unity.
 
-# Theorical part: defining the scrolling in our game
+# _Theory_: defining the scrolling in our game
 
-How are we gonna use the scrolling?
+Adding a scrolling axis need a bit of thinking on how we will make the game with this new aspect.
 
-## What will move?
+_It's good to think before coding._ :)
 
-- Is it the player and the camera that moves
+## What do we want to move?
 
-or
+We have a decision to take here :
 
-- Are the player and the camera statics and the level is on a sort of treadmill?
+1. _First choice_: The player and the camera move. The rest is fixed.
+2. _Second choice_:  The player and the camera are static. The level is a treadmill.
 
-The first choice is interesting if you have a **perspective** camera, because the parallax is obvious: elements in background are behind us and seems to move slower.
+The first choice is a no-brainer if you have a `Perspective` camera. The parallax is obvious: background elements have a higher depth. Thus, they are behind and seems to move slower.
 
-But in 2D we have the orthographic camera, and we don't have depth at render.
+But in a standard 2D game in Unity, we use an `Orthographic` camera. We don't have depth at render.
 
-We can choose to mix both. We will have two scrolling:
+<md-note>
+_About the camera_: Remember the "Projection" property of your camera game object. It's set to `Orthographic` in our game. <br />`Perspective` means that the camera is a classic 3D camera, with depth management. `Orthographic` is a camera that renders everything at the same depth. It's particularly useful for a GUI or a 2D game.
+</md-note>
 
-- the player moving forward along with the camera
-- backgrounds moving at different speeds (in addition to the camera movement), opposed to the first the scrolling
+In order to add the parallax scrolling effect to our game, the solution is to mix both choices. We will have two scrollings:
 
-## Enemy spawn decisions
+- The player is moving forward along with the camera.
+- Background elements are moving at different speeds (in addition to the camera movement).
 
-This has consequences, especially for the enemy spawn. For now they are just moving and shooting as soon as the game starts. But we probably want them to wait and be invincible until they "spawn".
+## Spawning enemies
 
-What is spawning an enemy? It depends on the game, definitely. Here this is what we will define: enemies are statics and invincible until the camera reach and activate them.
+Adding a scrolling to our game has consequences, especially concerning enemies. Currently, they are just moving and shooting as soon as the game starts. However, we want them to wait and be invincible until they _spawn_.
+
+How do we spawn enemies ? It depends on the game, definitely. You could define events that spawn enemies when they are triggered, spawn points, pre-determined positions, etc.
+
+_Here is what we will do_: We position the Poulpies on the scene directly (by dragging the `Prefab` onto the scene). By default, they are static and invincibles until the camera reaches and activates them.
 
 [ ![Camera usage][camera_use] ][camera_use]
 
-The idea here is that you can use the Unity editor to set the enemies. This gives you a **ready to use level editor**.
+The nice idea here is that you can use the Unity editor to set the enemies. You read right: Without doing anything, _you already have a level editor_.
 
-[Once again, it's a choice, not science ;)](http://gamedev.stackexchange.com/questions/2712/enemy-spawning-method-in-a-top-down-shooter).But I truly think that using Unity editor as a level editor is valuable, unless you have time, money and dedicated level designers that need special tools.
+[Once again, it's a choice, not science][stackgamedev_link]. ;)
+
+<md-note>
+_Note_: We truly think that using the Unity editor as a level editor is valuable, unless you have time, money and dedicated level designers that need special tools.
+</md-note>
 
 ## Planes
 
-We need to define what our planes are, and for each, if it is a loop or not. A looping background will repeat over and over. It is useful for things like the sky or space for example.
+First, we must define what our planes are and for each, if it's a loop or not. A looping background will repeat over and over again during the level execution. E.g., it's particularly useful for things like the sky.
 
-We will add a new layer for background elements, to accentuate the parallax effect.
-So we are going to have:
+Add a new layer to the scene for the background elements.
 
-- A background with the sky, looping. Position : (0,0,10)
-- A background for flying platforms. Position : (0,0,9)
-- A middleground for flying platforms. Position : (0,0,5)
-- A foreground for players and enemies. Position : (0,0, 0)
+We are going to have:
+
+| Layer                                      |   Loop   |    Position    |
+| ------------------------------------------ | -------- | -------------- |
+| Background with the sky                    | Yes      | `(0, 0, 10)`   |
+| Background (1st row of flying platforms)   | No       | `(0, 0, 9)`    |
+| Middleground (2nd row of flying platforms) | No       | `(0, 0, 5)`    |
+| Foreground with players and enemies        | No       | `(0, 0, 0)`    |
 
 [ ![Planes][planes] ][planes]
 
-We could imagine to have layers in front of the player too, easily. Just keep the z positions between [0, 10] otherwise you need to tweak the camera.
+We could imagine to have some layers before the player too. Just keep the `Z` positions between `[0, 10]`, otherwise you will need to tweak the camera.
 
-# Diving into the code
+<md-warning>
+_Careful with that axe, Eugene_: If you add layers ahead of the foreground layer, be careful with the visibility. Many games do not use this technique because it reduces the clearness of the game.
+</md-warning>
 
-You saw that when the scrolling is at the core of your gameplay ("scrolling shooters" are another name for shoot them up), you must takes decisions.
+# _Practice_: Diving into the code
+
+Okay, we saw how implementing a parallax scrolling affects our game.
+
+<md-info>
+_Did you know?_ "Scrolling shooters" is another name used for the _shmups_.
+</md-info>
 
 But enough thoughts, time to practice!
 
-Unity has some parallax scrolling scripts in its standard packages (take a look at the 2D platformer demo on the Asset Store). You can of course use them, but I found it interesting to build one from scratch the first time.
+Unity has some parallax scrolling scripts in its standard packages (take a look at the 2D platformer demo on the Asset Store). You can of course use them, but we found it would be interesting to build one from scratch the first time.
 
-## The simple scrolling
+<md-warning>
+_Standard packages_: These are practicals, but be careful to not abuse of them. Using standard packages can block your thoughts and will not make your game stand out of the crowd. They give a _Unity_ feel to your gameplay. <br />Remember all the flash game clones?
+</md-warning>
 
-We will start with the easy thing: scrolling backgrounds **without** looping.
+## Simple scrolling
 
-Remember the _MoveScript_ we used before? The basis is the same: speed + direction applied over the time. We will add the camera support.
+We will start with the easy part: scrolling backgrounds _without_ looping.
+
+Remember the "MoveScript" we used before? The basis is the same: a speed and a direction applied over time.
 
 Create a new "ScrollingScript" script:
 
@@ -132,71 +158,61 @@ public class ScrollingScript : MonoBehaviour
 }
 ```
 
-Add it to every layer ("0 - Background", "1 - Background elements", etc).
+Attach the script to these game objects with these values:
 
-Values I propose are:
-
-<table>
-<tr>
-	<th>Layer</th>
-	<th>Speed</th>
-	<th>Direction</th>
-	<th>Linked to Camera</th>
-</tr>
-<tr>
-	<td>0 - Background</td>
-	<td>(1,1)</td>
-	<td>(-1,0,0)</td>
-	<td>No</td>
-</tr>
-<tr>
-	<td>1 - Background elements</td>
-	<td>(1.5,1.5)</td>
-	<td>(-1,0,0)</td>
-	<td>No</td>
-</tr>
-<tr>
-	<td>2 - Middleground</td>
-	<td>(2.5,2.5)</td>
-	<td>(-1,0,0)</td>
-	<td>No</td>
-</tr>
-<tr>
-	<td>3 - Foreground</td>
-	<td>(1,1)</td>
-	<td>(1,0,0)</td>
-	<td><strong>Yes</strong></td>
-</tr>
-</table>
+| Layer                   | Speed        | Direction    | Linked to Camera  |
+| ----------------------- | ------------ | ------------ | ----------------- |
+| 0 - Background          | `(1, 1)`     | `(-1, 0, 0)` | No                |
+| 1 - Background elements | `(1.5, 1.5)` | `(-1, 0, 0)` | No                |
+| 2 - Middleground        | `(2.5, 2.5)` | `(-1, 0, 0)` | No                |
+| 3 - Foreground          | `(1, 1)`     | `(1, 0, 0)`  | Yes               |
 
 For a convincing result, add elements to the scene:
 
-- Add a third backgrounds part and make it follow the two previous ones.
-- Add small platforms in the background elements layer (No 1)
-- Add platforms in the middleground layer (No 2)
-- Add enemies far from the camera on the right (on layer no 3)
+- Add a third [background][background_url] part after the two previous ones.
+- Add some small platforms in the layer `1 - Background elements`.
+- Add platforms in the layer `2 - Middleground`.
+- Add enemies on the right of the layer `3 - Foreground`, far from the camera.
 
 The result:
 
 [ ![Scrolling effect][scrolling1] ][scrolling1]
 
-Not bad, but we can see that enemies moves and shoot out of the camera, before they spawn and after missing he player. They  never get recycled after their role is done.
+Not bad! But we can see that enemies move and shoot when they are out of the camera, even before they spawn!
 
-But first thing first, infinite backgrounds.
+Moreover, they are never recycled when they pass the player (zoom out in the "Scene" view, and look at the left of the scene: the Poulpies are still moving).
+
+<md-note>
+_Note_: Experiment with the values. :)
+</md-note>
+
+We'll fix these problems later. First, we need to manage the infinite background (the sky).
 
 # Infinite background scrolling
 
-We need to mainly add code to get an infinite scrolling. We need to watch the child of the infinite layer that is to the left.
+In order to get an infinite background, we only need to watch the child which is at the left of the infinite layer.
 
-When this object goes beyond the camera, it is moved to the current end. And so on.
+When this object goes beyond the camera left edge, we move it to the right of the layer. _Indefinitely_.
 
 [ ![Infinite scrolling theory][infinite_scrolling_definition] ][infinite_scrolling_definition]
 
-For a filled background, notice that you need a minimum size to cover all the camera so we never the what is behind. Here it's 3 parts for the sky, but it's completely arbitrary.
+For a layer filled with images, notice that you need a minimum size to cover the camera field, so we never see what's behind. Here it's 3 parts for the sky, but it's completely arbitrary.
 
-So the idea is we will get every children on the layer and check its renderer. So it won't work for invisible objects (as the one handling scripts) but I am not sure there is a use case where you need them to repeat too.
+_Find the correct balance between resource consumption and flexibility for your game._
 
-We will a nice method to check whether an object's renderer is visible by a camera or not. I found it on [the community wiki](http://wiki.unity3d.com/index.php?title=IsVisibleFrom). It is not a class or a script, it's a C# class extension.
+In our case, the idea is that we will get all the children on the layer and check their renderer.
+
+<md-note>
+_A note about using the renderer component_: This method won't work with invisible objects (e.g., the ones handling scripts). However, a use case when you need to do this on invisible objects is unlikely.
+</md-note>
+
+We will use an handy method to check whether an object's renderer is visible by the camera. We've found it on [the community wiki][community_post_link]. It's neither a class nor a script, but a C# class [extension][extension_link].
+
+<md-tip>
+_Extension_: The C# language allows you to extend a class with extensions, without needing the base source code of the class. <br />Create a static method starting with a first parameter which looks like this: `this Type currentInstance`. The `Type` class will now have a new method available everywhere your own class is available. <br />Inside the extension method, you can refer to the current instance calling the method by using the `currentInstance` parameter instead of `this`.
+</md-tip>
+
+## The "RendererExtensions" script
 
 Create a new C# file named "RendererExtensions.cs" and fill it with:
 
@@ -213,9 +229,17 @@ public static class RendererExtensions
 }
 ```
 
-We will call this method on the last object of the looping layer.
+Simple, isn't it ?
 
-Now the full "ScrollingScript", using few LINQ features:
+<md-danger>
+_Namespaces_: You might have already noted that Unity doesn't add a namespace around a `MonoBehaviour` script when you create it from the "Project" view. And yet Unity _does_ handle namespaces... Except when you use a default value on a method parameter. And it sucks. <br /><br />In this tutorial, we are not using namespaces at all. However, in your real project, you might consider to use them. If not, prefix your classes and behaviours to avoid a collision with a third-party library (like _NGUI_).
+</md-danger>
+
+We will call this method on the last object of the infinite layer.
+
+## Full "ScrollingScript"
+
+Observe the full "ScrollingScript" (explanations below):
 
 ```csharp
 using System.Collections.Generic;
@@ -243,34 +267,42 @@ public class ScrollingScript : MonoBehaviour
   public bool isLinkedToCamera = false;
 
   /// <summary>
-  /// Background is inifnite
+  /// 1 - Background is infinite
   /// </summary>
   public bool isLooping = false;
 
+  /// <summary>
+  /// 2 - List of children with a renderer.
+  /// </summary>
   private List<Transform> backgroundPart;
 
+  // 3 - Get all the children
   void Start()
   {
     // For infinite background only
     if (isLooping)
     {
-      // Get all part of the layer
+      // Get all the children of the layer with a renderer
       backgroundPart = new List<Transform>();
 
       for (int i = 0; i < transform.childCount; i++)
       {
         Transform child = transform.GetChild(i);
 
-        // Only visible children
+        // Add only the visible children
         if (child.renderer != null)
         {
           backgroundPart.Add(child);
         }
       }
 
-      // Sort by position
-      // REM: left from right here, we would need to add few conditions to handle all scrolling directions
-      backgroundPart = backgroundPart.OrderBy(t => t.position.x).ToList();
+      // Sort by position.
+      // Note: Get the children from left to right.
+      // We would need to add a few conditions to handle
+      // all the possible scrolling directions.
+      backgroundPart = backgroundPart.OrderBy(
+        t => t.position.x
+      ).ToList();
     }
   }
 
@@ -291,30 +323,37 @@ public class ScrollingScript : MonoBehaviour
       Camera.main.transform.Translate(movement);
     }
 
-    // Loop
+    // 4 - Loop
     if (isLooping)
     {
-      // Get the first object
+      // Get the first object.
+      // The list is ordered from left (x position) to right.
       Transform firstChild = backgroundPart.FirstOrDefault();
 
       if (firstChild != null)
       {
-        // Check if we are after the camera
-        // Position first as IsVisibleFrom is a heavy method
+        // Check if the child is already (partly) before the camera.
+        // We test the position first because the IsVisibleFrom
+        // method is a bit heavier to execute.
         if (firstChild.position.x < Camera.main.transform.position.x)
         {
+          // If the child is already on the left of the camera,
+          // we test if it's completely outside and needs to be
+          // recycled.
           if (firstChild.renderer.IsVisibleFrom(Camera.main) == false)
           {
-            // Get the last positions
+            // Get the last child position.
             Transform lastChild = backgroundPart.LastOrDefault();
             Vector3 lastPosition = lastChild.transform.position;
             Vector3 lastSize = (lastChild.renderer.bounds.max - lastChild.renderer.bounds.min);
 
-            // Set position after
-            // REM: here too it works for horizontal scrolling only
+            // Set the position of the recyled one to be AFTER
+            // the last child.
+            // Note: Only work for horizontal scrolling currently.
             firstChild.position = new Vector3(lastPosition.x + lastSize.x, firstChild.position.y, firstChild.position.z);
 
-            // Set as last
+            // Set the recycled child to the last position
+            // of the backgroundPart list.
             backgroundPart.Remove(firstChild);
             backgroundPart.Add(firstChild);
           }
@@ -325,9 +364,22 @@ public class ScrollingScript : MonoBehaviour
 }
 ```
 
-Remember to enable "Is Looping" in the first (0) background otherwise it won't work. Click on the image to see an animation:
+(The numbers in the comments refer to the explanation below)
+
+### Explanations
+
+1. We need a public variable to turn on the "looping" mode.
+2. We need a private variable to store the children.
+3. In the `Start()` method, we set the `backgroundPart` list with the children that have a renderer. Thanks to a bit of [LINQ][linq_link], we order them by their `X` position.
+4. In the `Update()` method, if the `isLooping` flag is set to true, we get the first child and we test if it's completely outside th camera field. When it's the case, we change its position to be after the last child, and we put it at the last position of `backgroundPart` list.
+
+Indeed, the `backgroundPart` is the exact representation of what is happening in the scene.
+
+<br />Remember to enable the "Is Looping" property of the "ScrollingScript" for the `0 - Background` in the "Inspector" pane. Otherwise, it will (predictably enough) not work.
 
 [![Infinite scrolling][infinite_scrolling]][infinite_scrolling_gif]
+
+_(Click on the image to see the animation)_
 
 # Bonus: enhancing existing scripts
 
@@ -493,6 +545,11 @@ We will some fun stuff now, first particles then sounds!
 [infinite_scrolling_gif]: ./-img/infinite_scrolling.gif
 [enemy_spawn]: ./-img/enemy_spawn.png
 [enemy_spawn_gif]: ./-img/enemy_spawn.gif
+[background_url]: ../background-and-camera/-img/background.png
 
 [parallax_link]: http://en.wikipedia.org/wiki/Parallax_scrolling "Parallax Scrolling"
 [space_invaders_link]: http://en.wikipedia.org/wiki/Space_Invaders "Space Invaders"
+[stackgamedev_link]: http://gamedev.stackexchange.com/questions/2712/enemy-spawning-method-in-a-top-down-shooter "Spawning methods"
+[community_post_link]: http://wiki.unity3d.com/index.php?title=IsVisibleFrom "Is an object visible by the camera?"
+[extension_link]: http://msdn.microsoft.com/en-us/library/vstudio/bb383977.aspx "C# Extension Methods"
+[linq_link]: http://msdn.microsoft.com/fr-fr/library/bb397926.aspx "LINQ"
