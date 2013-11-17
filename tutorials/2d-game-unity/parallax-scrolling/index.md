@@ -399,7 +399,7 @@ We need to update "EnemyScript", so it will:
 3. Activate itself.
 4. Destroy the game object when it's outside the camera.
 
-_(The numbers refer to the comments below)_
+_(The numbers refer to the comments in the code)_
 
 ```csharp
 using UnityEngine;
