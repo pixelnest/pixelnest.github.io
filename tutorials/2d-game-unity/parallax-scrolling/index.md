@@ -49,17 +49,25 @@ In order to add the parallax scrolling effect to our game, the solution is to mi
 - The player is moving forward along with the camera.
 - Background elements are moving at different speeds (in addition to the camera movement).
 
+
+<md-note>
+_Note_: You may ask: "Why don't we just set the camera as a child of the player object?". This way, the camera would always be at the same position from the player. It could be an idea, but this would not fit with our gameplay.
+<br/>In a shmup, the camera restricts the player moves. If the camera moves along with the player for both horizontal and vertical axis, the player is free to go where he wants and we would lose this element of our gameplay.
+<br/>And I would also recommand to always keep the camera independant from your player in a 2D game. Even in a platformer, the camera isn't strictly linked to the player, it follows him under some restrictions. Super Mario World has probably the best camera possible for a platformer, [you may have a look of how it is done][smw_camera].
+</md-note>
+
+
 ## Spawning enemies
 
 Adding a scrolling to our game has consequences, especially concerning enemies. Currently, they are just moving and shooting as soon as the game starts. However, we want them to wait and be invincible until they _spawn_.
 
-How do we spawn enemies ? It depends on the game, definitely. You could define events that spawn enemies when they are triggered, spawn points, pre-determined positions, etc.
+How do we spawn enemies? It depends on the game, definitely. You could define events that spawn enemies when they are triggered, spawn points, pre-determined positions, etc.
 
 _Here is what we will do_: We position the Poulpies on the scene directly (by dragging the `Prefab` onto the scene). By default, they are static and invincibles until the camera reaches and activates them.
 
 [ ![Camera usage][camera_use] ][camera_use]
 
-The nice idea here is that you can use the Unity editor to set the enemies. You read right: Without doing anything, _you already have a level editor_.
+The nice idea here is that you can use the Unity editor to set the enemies. You read right: without doing anything, _you already have a level editor_.
 
 [Once again, it's a choice, not science][stackgamedev_link]. ;)
 
@@ -228,7 +236,7 @@ public static class RendererExtensions
 }
 ```
 
-Simple, isn't it ?
+Simple, isn't it?
 
 <md-danger>
 _Namespaces_: You might have already noted that Unity doesn't add a namespace around a `MonoBehaviour` script when you create it from the "Project" view. And yet Unity _does_ handle namespaces... Except when you use a default value on a method parameter. And it sucks. <br /><br />In this tutorial, we are not using namespaces at all. However, in your real project, you might consider to use them. If not, prefix your classes and behaviours to avoid a collision with a third-party library (like _NGUI_).
@@ -487,10 +495,11 @@ public class EnemyScript : MonoBehaviour
 }
 ```
 
-But you won't be able to test it yet. Disabling the _MoveScript_ as a negative effect: the player never reaches the enemies as they're all moving along.
+But you won't be able to test it yet. Disabling the _MoveScript_ as a negative effect: the player never reaches the enemies as they're all moving along:
+
+[ ![camera_moving_along_gif][camera_moving_along_gif]][camera_moving_along_gif]
 
 I see a simple solution: move the _ScrollingScript_ from the layer to the player!
-(A more complicated one could be to set up an exclusion list in the scrolling list for objects that shouldn't be affected.. or a tag, or a Unity layer)
 
 Why not after all? The only thing that is moving in the layer is him, and the script is not specific to a kind of object.
 
@@ -498,7 +507,6 @@ It works, enemies are static and invincible until they spawn. Then they disappea
 
 [ ![Enemy spawn][enemy_spawn] ][enemy_spawn_gif]
 
-I don't like the fact that waves of enemies are broken if they are in line (the first one starts without the others), it's a side effect that is not simple to correct.
 
 ## Keeping the player in the camera bounds
 
@@ -554,6 +562,7 @@ We will some fun stuff now, first particles then sounds!
 [enemy_spawn]: ./-img/enemy_spawn.png
 [enemy_spawn_gif]: ./-img/enemy_spawn.gif
 [background_url]: ../background-and-camera/-img/background.png
+[camera_moving_along_gif]: ./-img/camera_moving_along.gif
 
 [parallax_link]: http://en.wikipedia.org/wiki/Parallax_scrolling "Parallax Scrolling"
 [space_invaders_link]: http://en.wikipedia.org/wiki/Space_Invaders "Space Invaders"
@@ -561,3 +570,4 @@ We will some fun stuff now, first particles then sounds!
 [community_post_link]: http://wiki.unity3d.com/index.php?title=IsVisibleFrom "Is an object visible by the camera?"
 [extension_link]: http://msdn.microsoft.com/en-us/library/vstudio/bb383977.aspx "C# Extension Methods"
 [linq_link]: http://msdn.microsoft.com/fr-fr/library/bb397926.aspx "LINQ"
+[smw_camera][http://www.youtube.com/watch?v=TCIMPYM0AQg] "Super Mario World Camera logic review"
