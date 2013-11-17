@@ -14,11 +14,15 @@ links:
   next: ../particles
 ---
 
-It is time to enhance our background and scene. One effect you find in every single 2D game since 15 years is [the parallax scrolling][parallax_link].
+For the moment, we have created a static scene with a player and some enemies. It's a bit boring. Time to enhance our background and scene.
 
-To make it short, the idea is to move our layers at different speeds (the further the slower). If done correctly this give an illusion of depth.
+An effect that you find in every single 2D game for 15 years is "[parallax scrolling][parallax_link]".
 
-It's a cool, nice and easy-to-do effect. Shoot them up are usually using the scrolling (except the original one, Space Invaders) so I find it interesting to implement it in Unity.
+To make it short, the idea is to move the background layers at different speeds (i.e., the farther the layer is, the slower it moves). If done correctly, this gives an illusion of depth. _It's a cool, nice and easy-to-do effect_.
+
+Moreover, many _shmups_ use a scrolling in one — or more — axis (except the original one, [Space Invaders][space_invaders_link]).
+
+Let's implement that in Unity.
 
 # Theorical part: defining the scrolling in our game
 
@@ -491,3 +495,4 @@ We will some fun stuff now, first particles then sounds!
 [enemy_spawn_gif]: ./-img/enemy_spawn.gif
 
 [parallax_link]: http://en.wikipedia.org/wiki/Parallax_scrolling "Parallax Scrolling"
+[space_invaders_link]: http://en.wikipedia.org/wiki/Space_Invaders "Space Invaders"
