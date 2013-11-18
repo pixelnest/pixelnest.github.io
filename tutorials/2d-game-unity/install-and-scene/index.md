@@ -177,6 +177,10 @@ You should have:
 
 [ ![Your first scene][unity_first_scene] ][unity_first_scene]
 
+<md-tip>
+_Tip_: A camera has a nice side-effect: it follows its parent position. If the camera is at the root of the scene or inside an empty game object, the view is fixed. However, if you put the camera inside a moving game object, the camera will follow this object on the scene. <br /><br />Nonetheless, for our game, we want to keep the camera fixed and this is why we put it inside a `Render` empty game object. But remember this property of a camera object, it can be handy. <br />We will cover this topic a bit longer in the "Parallax Scrolling" chapter.
+</md-tip>
+
 # Next step
 
 We are still far from a game, right?
