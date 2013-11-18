@@ -221,7 +221,7 @@ Of course this can be really improved, with text, animation, etc.
 
 But it works! :)
 
-## "It's so ugly my eyes start bleeding"
+## "It's so ugly my eyes started bleeding"
 
 Damn! 
 
@@ -229,11 +229,64 @@ If you want to do something about it, you can create a skin:
 
 _Assets->Create->Gui Skin_
 
-Here you can tweak the UI controls to get something more fancy.
+[ ![GUISkin][GUISkin]][GUISkin]
 
-Make sure this skin is in a _Resources_ folder, then in your scripts you will have to load (**only once**, not at each frame) it using ``GUI.skin = Resources.Load("MySkin");``.
+Here you can tweak the UI controls to get something more fancy. Make sure this skin is in the `Resources  folder.
 
-If you have some money and you have a lot of menus and texts in your game, think about the NGUI plugin. It worth it.
+<md-note>
+_Note_: The _Resources_ folder is special to Unity. Everything that is in will be packed with the game and can be loaded using the `Resources.Load` method.
+<br />This allows you to load objects at runtime, and those objects may comes from your users (mods anyone?). 
+</md-note>
+
+But the skin isn't applied until you set it in your scripts. In all your GUI scripts you will have to load (**only once**, not at each frame) the skin using ``GUI.skin = Resources.Load("GUISkin");``. 
+
+Here is an example with the `MenuScript`:
+
+````csharp
+using UnityEngine;
+
+/// <summary>
+/// Title screen script
+/// </summary>
+public class MenuScript : MonoBehaviour
+{
+  private GUISkin skin;
+
+  void Start()
+  {
+	// Load a skin for the buttons
+    skin = Resources.Load("GUISkin") as GUISkin;
+  }
+
+  void OnGUI()
+  {
+    const int buttonWidth = 128;
+    const int buttonHeight = 60;
+
+	// Set the skin to use
+    GUI.skin = skin;
+
+    // Draw a button to start the game
+    if (GUI.Button(
+      // Center in X, 2/3 of the height in Y
+      new Rect(Screen.width / 2 - (buttonWidth / 2), (2 * Screen.height / 3) - (buttonHeight / 2), buttonWidth, buttonHeight),
+      "START"
+      ))
+    {
+      // On Click, load the first level.
+      Application.LoadLevel("Stage1"); // "Stage1" is the scene name
+    }
+  }
+}
+```` 
+
+As you can see, this is a lot of boring work just for menus. 
+
+
+<md-note>
+_Note_:
+If you have some money and you have a lot of menus and texts in your game, think about the [NGUI plugin][ngui_link]. It worth it.
+</md-note>
 
 ## Ready for the next step
 
@@ -252,3 +305,6 @@ Last step: deploying on another machine, but it a PC, a mobile or a console...
 [start]: ./-img/start.gif
 [game_over]: ./-img/game_over.png
 [game_over_script]: ./-img/game_over_script.png
+[GUISkin]: ./-img/GUISkin.png "Creating a GUISkin in Resources folder"
+
+[ngui_link]: http://www.tasharen.com/?page_id=140 "NGUI Unity Plugin"
