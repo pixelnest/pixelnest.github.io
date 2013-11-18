@@ -49,13 +49,11 @@ In order to add the parallax scrolling effect to our game, the solution is to mi
 - The player is moving forward along with the camera.
 - Background elements are moving at different speeds (in addition to the camera movement).
 
-
 <md-note>
-_Note_: You may ask: "Why don't we just set the camera as a child of the player object?". This way, the camera would always be at the same position from the player. It could be an idea, but this would not fit with our gameplay.
-<br/><br/>In a shmup, the camera <stong>restricts</strong> the player moves. If the camera moves along with the player for both horizontal and vertical axis, the player is free to go where he wants and we would lose this element of our gameplay.
-<br/><br/>And I would also recommand to always keep the camera independant from your player in a 2D game. Even in a platformer, the camera isn't strictly linked to the player, it follows him under some restrictions. _Super Mario World_ has probably the best camera possible for a platformer, <a href="http://www.youtube.com/watch?v=TCIMPYM0AQg">you may have a look of how it is done</a>.
+_Note_: You may ask: "Why don't we just set the camera as a child of the player object?". Indeed, in Unity, _if you add a camera as a subchild of a game object, the camera will be centered on this game object_ and will move to follow the object position. It could be a solution, but this would not fit with our gameplay.
+<br/><br/>In a _shmup_, the camera _restricts_ the player movement. If the camera moves along with the player for both horizontal and vertical axis, then the player is free to go where he wants. We _DO_ want to keep the player inside a restricted area.
+<br/><br/>We would also recommend to always keep the camera independent in a 2D game. Even in a platformer, the camera isn't strictly linked to the player: it follows him under some restrictions. Super Mario World has probably one the best camera possible for a platformer. [You may have a look at how it is done][smw_camera].
 </md-note>
-
 
 ## Spawning enemies
 
@@ -570,4 +568,4 @@ We will some fun stuff now, first particles then sounds!
 [community_post_link]: http://wiki.unity3d.com/index.php?title=IsVisibleFrom "Is an object visible by the camera?"
 [extension_link]: http://msdn.microsoft.com/en-us/library/vstudio/bb383977.aspx "C# Extension Methods"
 [linq_link]: http://msdn.microsoft.com/fr-fr/library/bb397926.aspx "LINQ"
-[smw_camera][http://www.youtube.com/watch?v=TCIMPYM0AQg] "Super Mario World Camera logic review"
+[smw_camera]: http://www.youtube.com/watch?v=TCIMPYM0AQg "Super Mario World Camera logic review"
