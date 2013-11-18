@@ -14,6 +14,6 @@ And this is why we have written a tutorial showing you a complete development cy
 
 [See the tutorial: Create a 2D game with Unity](http://pixelnest.io/tutorials/2d-game-unity/)
 
-We hope you will enjoy the reading. Feel free [to contact us](http://pixelnest.io/contact/) for any additional questions or feedback.
+We hope you will enjoy the reading. Feel free [to contact us](http://pixelnest.io/contact/) for any additional question or feedback.
 
 And for our french readers: the translation is nearly finished! Sorry for the delay, we are working hard on it. 
