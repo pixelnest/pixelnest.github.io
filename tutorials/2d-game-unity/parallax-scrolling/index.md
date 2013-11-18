@@ -516,7 +516,11 @@ _(Click on the image to see what happens)_
 
 ## Keeping the player in the camera bounds
 
-Open _PlayerScript_, and add this at the end of the "Update()" method.
+You might have noticed that the player is not (yet) restricted to the camera area. "Play" the game, push the "Left Arrow" and watch him leaves the camera.
+
+We have to fix that.
+
+Open the "PlayerScript", and add this at the end of the "Update()" method:
 
 ```csharp
   void Update()
@@ -525,38 +529,55 @@ Open _PlayerScript_, and add this at the end of the "Update()" method.
 
     // 6 - Make sure we are not outside the camera bounds
     var dist = (transform.position - Camera.main.transform.position).z;
-    var leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
-    var rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
-    var topBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).y;
-    var bottomBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, dist)).y;
+
+    var leftBorder = Camera.main.ViewportToWorldPoint(
+      new Vector3(0, 0, dist)
+    ).x;
+
+    var rightBorder = Camera.main.ViewportToWorldPoint(
+      new Vector3(1, 0, dist)
+    ).x;
+
+    var topBorder = Camera.main.ViewportToWorldPoint(
+      new Vector3(0, 0, dist)
+    ).y;
+
+    var bottomBorder = Camera.main.ViewportToWorldPoint(
+      new Vector3(0, 1, dist)
+    ).y;
 
     transform.position = new Vector3(
-              Mathf.Clamp(transform.position.x, leftBorder, rightBorder),
-              Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
-              transform.position.z
-              );
+      Mathf.Clamp(transform.position.x, leftBorder, rightBorder),
+      Mathf.Clamp(transform.position.y, topBorder, bottomBorder),
+      transform.position.z
+    );
 
-    // ...
+    // End of the update method
   }
 ```
 
-It is not complicated, just verbose: we get the camera edges and we make sure the player position (**the center of the sprite**) is in the borders.
+Nothing complicated, just verbose.
+
+We get the camera edges and we make sure the player position (_the center of the sprite_) is inside the area borders.
+
+Tweak the code to better understand what is happening.
 
 # Next step
 
-We now have a scrolling shooter! The code is for right to left scrolling only as I didn't want to have too big scripts but you should be able to enhance that in few more lines.
+We have a scrolling shooter!
 
-The game really need some tweaks to be playable:
+We have just learned how to add a scrolling mechanism to our game, as well as a parallax effect for the background layers. However, the current code only works for right to left scrolling. But with your new knowledge, you should be able to enhance it and make it work for all scrolling directions.
 
-- Reducing sprite sizes
-- Adjusting speeds
-- More enemies
+Still, _the game really needs some tweaks to be playable_. For example:
 
-You can have fun doing that, or wait to read what Matthieu has written about it for you in few steps.
+- Reducing the sprite sizes.
+- Adjusting the speeds.
+- Adding more enemies.
+- _Making it fun_.
 
-So we have a level, enemies that can move (try to change their direction in y to get new patterns).
+We will address these points in our upcoming chapter about gameplay tweaking (not released yet, unfortunately). For the moment, you can experiment. ;)
 
-We will some fun stuff now, first particles then sounds!
+In the next chapter, we will focus our attention on how to make the game a bit more... _flashy_. With particles!
 
 
 [camera_use]: ./-img/camera_use.png
