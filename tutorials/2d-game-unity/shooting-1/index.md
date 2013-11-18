@@ -15,7 +15,7 @@ links:
 
 Our player ship is facing a terrifying Poulpi, but cannot do anything...
 
-Let's grant him a weapon and some ammo! This will involve a bit more of scripting, but be confident. It worths it.
+Let's grant him a weapon and some ammo! This will involve a bit more of scripting, but be confident. It's worth it.
 
 # Projectile
 
