@@ -15,56 +15,69 @@ links:
 
 Our shooter is starting to have a good shape. It's time to enhance it a bit visually with _particles_.
 
-Particles are usually simple sprites that will be repeated and displayed for a very short timespan.
+Particles are (basically) simple sprites that will be repeated and displayed for a very short timespan.
 
 Think about explosions, lasers, smokes, etc. Those are done with particles — most of the time (an explosion can be a simple animated sprite).
 
 Unity provides a powerful built-in editor for particles with the _Shuriken Engine_. Let's see what we can do with it.
 
-# Particles prefabs for an explosion
+# Explosion prefab
 
-We will make an explosion that we will use when enemies or player are destroyed. This involve to:
+We will make an explosion that is going to be used when an enemy or a player is destroyed. This involves to:
 
-- create a particle system of our explosion as a prefab
-- instantiate and play it when we need
+1. Create a particle system of our explosion (as a prefab).
+2. Instantiate and play it when needed.
 
 An explosion is usually made of two things: fire and smoke.
 
 ## Smoke particles
 
-Create a new _Particle System_ from the editor (_Game Object -> Create Other -> Particle System_).
+Create a new "Particle System" ("Game Object" -> "Create Other" -> "Particle System").
 
-I recommend you to work on an empty part of the scene (or in an empty scene) so you see clearly what is happening.
+<md-tip>
+_Tip_: We recommend that you work on an empty part of the scene (or in an empty scene) so you can clearly see what is happening. <br /><br />If you want to focus on an object in the "Scene" view, you can `double-click` on it in the "Hierarchy", or press `F` inside the "Scene" view.
+</md-tip>
 
-Zooming on your particles, you will see a continuous flow of sparks:
+By zooming on your particle system, you will see a continuous flow of sparks emitted by the particles game object:
 
 [![Creating a new particle system][new_particle_system]][new_particle_system]
 
-Notice the new window with "Pause" and "Stop" and the inspector. Yes, your inspector is now filled with dozen of fields related to the particle. And that's all the fun!
+Observe the new window (with "Pause" and "Stop") in the "Scene" view, or the "Inspector" pane. Yes, the latter is now filled with dozen of fields related to the particle system.
 
-The sprite
+_And that's where all the fun lie!_
+
+<md-note>
+_Note_: When you select a particle system in the "Hierarchy", it starts simulating the system. If you unselect it, it stops. It's really practical to see what the system does in real (and instantly) when you conceive it.
+</md-note>
+
+We will use this sprite for the smoke particles:
 
 [![Cloud sprite][cloud]][cloud]
 
-**Tip:** if you have transparency issue with your own image, make sure transparent pixels are black ones with 0 alpha.
+_(Right click to save the image)_
 
-Copy the image in the "Textures" folder. Change the _Texture Type_ to Texture, and set Alpha As transparency:
+<md-tip>
+_Tip_: If you have an issue with the transparency when using your own asset, be sure that transparent pixels are black ones with `0` alpha. Indeed, even if a pixel is not visible, it still has a value. Which is used by the computer.
+</md-tip>
+
+Copy the image in the "Textures" folder. Change the "Texture Type" to "Texture", and set "Alpha Is Transparent". You should have:
 
 [![Cloud settings][cloud_settings]][cloud_settings]
 
-We are using a Unity 3D feature, not a 2D one.
+<md-note>
+_Note_: We are using a Unity 3D feature, not a "2D one". In fact, it doesn't matter. When you use the "2D" tools, you are only using a subset of Unity. But the full power of Unity is still there, ready to be used.
+</md-note>
 
-Assign the texture to the particle: drag'n'drop the texture to the _Particle System_ in the hierarchy or the editor. Finally, select the _particle System_ and change the shader to use, select _Particles -> Alpha Blended_:
+Assign the texture to the particle:
+
+1. Drag the texture to the your particle system in the "Inspector" (or onto the particles object in the "Hierarchy", which will assign the texture to the right property inside the "Inspector").
+2. Change the shader to "Particles" -> "Alpha Blended":
 
 [![Cloud shader][cloud_shader]][cloud_shader]
 
-Now we will change many settings to get the right effect. Here's an array of all parameters and a picture of the global configuration. It is just few tweaks, you must play with the editor to see how it works.
+To create a perfect smoke particles, we have to change many settings in the particle system "Inspector".
 
-The global picture:
-
-[![Full settings][smoke_settings]][smoke_settings]
-
-Parameters details:
+For the tutorial, we recommend to use:
 
 | Category            | Parameter name       | Value  |
 | ------------------- | -------------------- | ------ |
@@ -91,19 +104,30 @@ Choose a decreasing curve:
 
 [![Curve editor][decreasing_curve]][decreasing_curve]
 
-<br />When you are satisfied, _uncheck "Looping"_.
+<br />You should have:
 
-Result:
+[![Full settings][smoke_settings]][smoke_settings]
+
+Feel free to tweak the system. _Play with the editor to see how it works._ It's your game after all. :)
+
+When you are satisfied, _uncheck "Looping"_.
+
+Observe the result:
 
 [![Smoke effect][smoke_effect]][smoke_effect]
 
-Save as a prefab. you can organize a bit by creating a folder "Prefabs/Particles" and saving the game object as "SmokeEffect".
+It's clearly not perfect, but notice how simple it was to create. Adding particles can make the difference between a dull game and one that is fun to watch.
+
+Save as a prefab. You can organize a bit by creating a folder "Prefabs/Particles" and calling the prefab "SmokeEffect".
 
 ## Fire particles
 
-This is another particle system. Create a new one, just as you did above. We will use the default material for fire (no image), it will be enough for our needs.
+This one is no different.
 
-Settings:
+1. Create a new particle system, just as you did above.
+2. Use the default material for fire ("Renderer/Material" to "Default-Particle"). It's enough for our needs.
+
+We recommend to use:
 
 | Category            | Parameter name       | Value  |
 | ------------------- | -------------------- | ------ |
@@ -123,15 +147,15 @@ Create a nice gradient from yellow to orange, with a fade out in the end:
 
 [![Fire gradient][fire_gradient]][fire_gradient]
 
-<br />The result:
+<br />And you should get:
 
 [![Fire effect][fire_effect]][fire_effect]
 
 Save as a "FireEffect" prefab.
 
-Now we will use those prefabs in a helper script.
+Now, we are going to use these prefabs in a script.
 
-# The helper script
+# Helper script
 
 Instantiating those particles prefabs are no different from instantiate a player or a shot.
 
