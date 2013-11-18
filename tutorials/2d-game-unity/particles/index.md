@@ -157,11 +157,11 @@ Now, we are going to use these prefabs in a script.
 
 # Helper script
 
-Instantiating those particles prefabs are no different from instantiate a player or a shot.
+Instantiating those particles prefabs is identical to instantiating a player or a shot.
 
-However, you must remember that they should get deleted when they are over.
+However, you must remember that they should get deleted when they are no longer needed.
 
-Also, we will do the combination of fire + smoke in the script for our explosion.
+Also, we will do a combination of a fire particle system and a smoke particle system in the script for our explosion.
 
 Let's create a "SpecialEffectsHelper" script:
 
@@ -188,6 +188,7 @@ public class SpecialEffectsHelper : MonoBehaviour
     {
       Debug.LogError("Multiple instances of SpecialEffectsHelper!");
     }
+
     Instance = this;
   }
 
@@ -213,71 +214,89 @@ public class SpecialEffectsHelper : MonoBehaviour
   /// <returns></returns>
   private ParticleSystem instantiate(ParticleSystem prefab, Vector3 position)
   {
-    ParticleSystem newParticleSystem = Instantiate(prefab, position, Quaternion.identity) as ParticleSystem;
+    ParticleSystem newParticleSystem = Instantiate(
+      prefab,
+      position,
+      Quaternion.identity
+    ) as ParticleSystem;
 
     // Make sure it will be destroyed
-    Destroy(newParticleSystem.gameObject, newParticleSystem.startLifetime);
+    Destroy(
+      newParticleSystem.gameObject,
+      newParticleSystem.startLifetime
+    );
 
     return newParticleSystem;
   }
 }
 ```
 
-It's a singleton (it means that their should be this script only once per scene) and you can access it from everywhere using ``` SpecialEffectsHelper.Instance```.
+<md-note>
+_Note_: Because we can have multiple particles in the scene at the same time, we are forced to create a new prefab each time. If we were sure that only one system was used at a time, we would have kept the reference and use the same everytime.
+</md-note>
 
-Assign it to the "Scripts" game object. Inspect it, and fill the fields with the prefab.
+We created a singleton that you can access from everywhere using the `SpecialEffectsHelper.Instance` member.
+
+<md-info>
+_Singleton_: A singleton is a design pattern that is used to guarantee that an object is only instanciated once. We have diverged a bit from the classic implementation in our script: the principle remains, however.
+</md-info>
+
+1. Assign the script to the "Scripts" game object in the "Hierarchy".
+2. Inspect it, and fill the fields with the correct prefabs.
 
 [ ![Filling the script with prefab][filling_script]][filling_script]
 
-# Explosion on death
+# Blow up that thing !
 
-Time to call the script!
+It's (finally) time to call the script.
 
-Open _HealthScript_. We will check when the game object is destroyed and display our sweet explosion.
+Open "HealthScript". We will check when the game object is destroyed and, then, we will display our sweet explosion.
 
-We will just add one line:
+We just have to add one line:
 
 ````
 SpecialEffectsHelper.Instance.Explosion(transform.position);
 ````
 
-Giving us this:
+Into the `OnTriggerEnter()` method of the "HealthScript":
 
-`````csharp
+```csharp
   void OnTriggerEnter(Collider collider)
   {
-	...
-        if (hp <= 0)
-        {
-          // Explosion!
-          SpecialEffectsHelper.Instance.Explosion(transform.position);
+    // ...
 
-          // Dead!
-          Destroy(gameObject);
-        }
-	...
+    if (hp <= 0)
+    {
+      // 'Splosion!
+      SpecialEffectsHelper.Instance.Explosion(transform.position);
+
+      // Dead!
+      Destroy(gameObject);
+    }
+
+    // ...
   }
-`````
+```
 
-Now shoot enemies and let the player get killed!
-
-Click to see the animation:
+Start the game. Try to shoot enemies. Then, let the player dies.
 
 [ ![Explosions in action][explosions]][explosions_gif]
 
-Not bad, right? The fire is not very nice but it could be replaced by a sprite.
+_(Click to see the result)_
 
-But it's up to you to make beautiful explosions using particles, now you have an idea how it works ;).
+Not bad, right? Could be way better, though.
+
+But hey, it's up to you to make beautiful explosions using particles, now that you have an idea on how it works. ;)
 
 # Next Step
 
-Particles are always a fun part of the game.
+We have learned how to create particles using the built-in engine of Unity. And as you have seen, it's that easy. Moreover, they add delight and feedbacks to your game.
 
-It can also be a time eating feature as you will probably want to tweak effects rather that code boring features like high-scores. As James Silva  wrote in [Building XNA 2.0 games](http://www.amazon.com/Building-XNA-2-0-Games-Professionals/dp/1430209798), work on particles at the end of the development or the other tasks will quickly lose interest. Or ask someone to make them for you.
+Be careful however! It can slowly become time-consuming as you will probably prefer to tweak effects rather than code boring features like high-scores.
 
-Particles are a very useful way to enhance graphics and to make feedbacks to the player.
+As James Silva  wrote in [Building XNA 2.0 games](http://www.amazon.com/Building-XNA-2-0-Games-Professionals/dp/1430209798), you should work on particles at the end of the development or the other tasks will quickly loose interest.
 
-The other usual feedbacks are sounds. And that's just what we are going to see right now!
+Like using particles, there is another way to add feedbacks to your game: Sounds! And that's just what we are going to learn in the next chapter.
 
 
 [cloud]: ./-img/cloud.png
