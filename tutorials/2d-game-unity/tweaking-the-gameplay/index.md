@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Tweaking the gameplay
-author: Matthieu
 date: 13/11/13
 
 tutorial:
@@ -13,14 +12,14 @@ links:
   previous: ../animations
 ---
 
-**This chapter hasn't been written yet!**
+_This chapter hasn't been released yet!_
 
 But we are working hard on it!
 
-Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to get noticed when this chapter will be available.
+Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to be notified when this chapter is available.
 
-
-# Rough values to get the same game as in the demo 
+<!--
+# Rough values to get the same game as in the demo
 
 Player scale:0.2x0.2x1
 Player speed (Player script) : 25, 25
@@ -34,3 +33,4 @@ Player Shot speed (Move Script): 15, 15
 
 Enemy Shot scale: 0.25x0.25x1
 Enemy Shot speed (Move Script): 25, 25
+-->

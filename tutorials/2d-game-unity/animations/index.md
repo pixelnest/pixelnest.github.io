@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: 2D Animations
-author: Matthieu
 date: 13/11/13
 
 tutorial:
@@ -14,9 +13,8 @@ links:
   next: ../tweaking-the-gameplay
 ---
 
+_This chapter hasn't been released yet!_
 
-**This chapter hasn't been written yet!**
+We know this is important so we are working hard on it!
 
-I know this is important for you so we are working hard on it!
-
-Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to get notcied when this chapter will be available.
+Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to be notified when this chapter is available.

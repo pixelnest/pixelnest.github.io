@@ -10,12 +10,10 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../menus
-  next: ../animations
+  next: ../conclusion
 ---
 
-And _this is it_.
-
-The last thing we have to do is to create an executable that you can distribute. It's going to be short, because deploying with Unity is (fairly) easy.
+The game is ready. The last thing we have to do is to create an executable that you can distribute. It's going to be short, because deploying with Unity is (fairly) easy.
 
 # Build Settings, Pt. 2
 
@@ -128,31 +126,7 @@ You need to keep in mind that there is going to be a tweaking and optimization p
 That's it. You've made it. The development is over.
 You probably don't feel ready to make a full 2D game but _you are_. You need time and dedication now.
 
-# Conclusion
-
-In the near future, we are going to release some new chapters which will dive into other topics (like advanced gameplay or the new animation tools).
-
-But now, it's all up to you. It's up to you to start _your_ real project.
-
-The last steps?
-
-[ ![Last steps][last] ][last]
-
-And the rest is all yours...
-
-<md-tip>
-_A last tip?_ Use a version control system (Git, Mercurial or SVN), even if you are alone. You won't regret it.
-</md-tip>
-
-
-<br />If you liked this tutorial, you might want to:
-
-* Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio)?
-* Follow our [RSS feed](http://feedpress.me/pixelnest)?
-* Stay informed of the evolution of this tutorial with this [RSS feed](http://feedpress.me/pixelnest/2d-game-unity)?
-* Give your impressions? :)
-
-Thanks for reading us! We hope you have enjoyed this tutorial and that it will give you a solid foundation to build some great games!
+Go next to read the final last steps. :)
 
 
 [platforms]: ./-img/platforms.png
@@ -168,5 +142,3 @@ Thanks for reading us! We hope you have enjoyed this tutorial and that it will g
 [ios_simulator_mini]: ./-img/ios_simulator_mini.png
 [ios_xcode]: ./-img/ios_xcode.png
 [ios_result]: ./-img/ios_result.png
-
-[last]: ./-img/last.png
