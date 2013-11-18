@@ -13,13 +13,27 @@ links:
   next: ../deployment
 ---
 
-Let's say it immediately: menus and GUI are no fun in a game. You usually have to use a very basic GUI framework (or no framework at all), it takes a lot of time and the result is just... menus that players will skip as fast as possible.
+We have finished our first level with a basic gameplay, some sounds, graphics and particles.
 
-Well, Unity is quite cool for game GUIs and menus, but it's not fancy without a lot of effort. Let's start with the basics.
+However, when the player dies, the game continues to run and it's impossible to start again. Moreover, when you launch it, you start directly. We are clearly in a situation where we need some menus to control the game.
 
-# The menu assets
+<md-info>
+_Damien_: Let's say it immediately: menus and GUI are no fun in a game. You usually have to use a very basic GUI framework (or no framework at all). <br />It takes a lot of time and the result is just... menus that players will skip as fast as possible.
+</md-info>
 
-This is what we will use for the menu. Buttons will be Unity standard ones.
+<md-info>
+_Matthieu_: Unlike many game developers, I disagree with the previous statement. Creating a _good_ game GUI is not an easy task, but it can be rewarding and interesting. However, creating menus requires good tools and some sensible design decisions (like for an app interface). <br /><br />But yeah; a _good_ menu must be invisible and the players should not even notice it exists.
+</md-info>
+
+Unfortunately, Unity is not really well-equipped to create fancy menus without investing a lot of time or using a third-party library.
+
+We have no ambition to create a complex GUI for this tutorial. The built-in tools will be enough in our case, but you will likely find that they are too... limited.
+
+Let's start with the basics.
+
+# Assets
+
+This is what we will use for the menu. Buttons will be the (ugly) Unity standard ones.
 
 A background:
 
@@ -228,7 +242,7 @@ But it works! :)
 
 # "It's so ugly my eyes started bleeding"
 
-Damn! 
+Damn!
 
 If you want to do something about it, you can create a skin:
 
@@ -240,10 +254,10 @@ Here you can tweak the UI controls to get something more fancy. Make sure this s
 
 <md-note>
 _Note_: The _Resources_ folder is special to Unity. Everything that is in will be packed with the game and can be loaded using the `Resources.Load` method.
-<br />This allows you to load objects at runtime, and those objects may comes from your users (mods anyone?). 
+<br />This allows you to load objects at runtime, and those objects may comes from your users (mods anyone?).
 </md-note>
 
-But the skin isn't applied until you set it in your scripts. In all your GUI scripts you will have to load (**only once**, not at each frame) the skin using ``GUI.skin = Resources.Load("GUISkin");``. 
+But the skin isn't applied until you set it in your scripts. In all your GUI scripts you will have to load (**only once**, not at each frame) the skin using ``GUI.skin = Resources.Load("GUISkin");``.
 
 Here is an example with the `MenuScript`:
 
@@ -283,9 +297,9 @@ public class MenuScript : MonoBehaviour
     }
   }
 }
-```` 
+````
 
-As you can see, this is a lot of boring work just for menus. 
+As you can see, this is a lot of boring work just for menus.
 
 
 <md-note>
@@ -293,7 +307,7 @@ _Note_:
 If you have some money and you have a lot of menus and texts in your game, think about the [NGUI plugin][ngui_link]. It worth it.
 </md-note>
 
-# On the next episode
+# Next Step
 
 You just made the new best selling game. But it's only on your computer for now.
 
