@@ -493,18 +493,26 @@ public class EnemyScript : MonoBehaviour
 }
 ```
 
-But you won't be able to test it yet. Disabling the _MoveScript_ as a negative effect: the player never reaches the enemies as they're all moving along:
+Start the game. Yes, there's a bug.
+
+Disabling the "MoveScript" as a negative effect: The player never reaches the enemies as they're all moving with the `3 - Foreground` layer scrolling:
 
 [ ![camera_moving_along_gif][camera_moving_along_gif]][camera_moving_along_gif]
 
-I see a simple solution: move the _ScrollingScript_ from the layer to the player!
+_Remember: we've added a "ScrollingScript" to this layer in order to move the camera along with the player._
 
-Why not after all? The only thing that is moving in the layer is him, and the script is not specific to a kind of object.
+But there is a simple solution: move the "ScrollingScript" from the `3 - Foreground` layer to the player!
 
-It works, enemies are static and invincible until they spawn. Then they disappear when they reach the end of the camera. Click to see a gif:
+Why not after all? The only thing that is moving in this layer is him, and the script is not specific to a kind of object.
+
+Push the "Play" button and observe: It works.
+
+1. Enemies are disabled until they spawn (i.e., until the camera reaches their positions).
+2. Then they disappear when they are outside the camera.
 
 [ ![Enemy spawn][enemy_spawn] ][enemy_spawn_gif]
 
+_(Click on the image to see what happens)_
 
 ## Keeping the player in the camera bounds
 
