@@ -356,49 +356,47 @@ public class ScrollingScript : MonoBehaviour
 _(Les chiffres correspondent aux explications ci-dessous)_
 
 
-TODO TRADUCTION
+### Explications
 
-### Explanations
+1. Il nous faut une variable publique pour activer ou non la répétition (_looping_) dans l'onglet _Inspector_.
+2. Nous ajoutons une variable privée pour stocker la liste des enfants de l'objet plan.
+3. Dans le `Start()` nous récupérons tous les enfant s"affichables" (= avec un renderer). Puis, grâce à [LINQ][linq_link], nous trions ces éléments sur leur position en `X`, de gauche à droite.
+4. Dans `Update()`, si `isLooping` est actif, alors nous récupérons le premier objet de la liste `backgroundPart`, censé être le plus à gauche car la liste est triée.  Nous vérifions si cet élément est à gauche de la caméra et s'il n'est plus visible (donc passé). Dans ce cas on le met tout à droite, en bout de file. Enfin on réorganise la liste `backgroundPart`.
 
-1. We need a public variable to turn on the "looping" mode in the "Inspector" view.
-2. We also have to use a private variable to store the layer children.
-3. In the `Start()` method, we set the `backgroundPart` list with the children that have a renderer. Thanks to a bit of [LINQ][linq_link], we order them by their `X` position and put the leftmost at the first position of the array.
-4. In the `Update()` method, if the `isLooping` flag is set to `true`, we retrieve the first child stored in the `backgroundPart` list. We test if it's completely outside the camera field. When it's the case, we change its position to be after the last (rightmost) child. Finally, we put it at the last position of `backgroundPart` list.
+La liste `backgroundPart` est donc une représentation de ce qui se passe sur la scène.
 
-Indeed, the `backgroundPart` is the exact representation of what is happening in the scene.
-
-<br />Remember to enable the "Is Looping" property of the "ScrollingScript" for the `0 - Background` in the "Inspector" pane. Otherwise, it will (predictably enough) not work.
+Pensez à activer le champ  "Is Looping" du "ScrollingScript" dans l'objet `0 - Background`. Sinon la valeur sera à `false` et le fond ne sera pas répété à l'infini.
 
 [![Infinite scrolling][infinite_scrolling]][infinite_scrolling_gif]
 
-_(Click on the image to see the animation)_
+_(Cliquez pour voir l'animation)_
 
-Yes! We finally have a functional "parallax scrolling" implementation.
+Et voilà ! Nous avons une implémentation fonctionnelle de scrolling différentiel ! (et voilà pourquoi on garde le terme anglais...)
 
-# Bonus: Enhancing existing scripts
+# Bonus : Amélioration des scripts précédents
 
-Let's update our previous scripts.
+Le cœur du jeu est fonctionnel, voici quelques mises à jour pour les scripts existants pour améliorer certains points.
 
-## Enemy v2 with spawn
+## Ennemis v2 avec spawn
 
-We said earlier that enemies should be disabled until they are visible by the camera.
+Plus tôt dans ce chapitre nous avons vu qu'il fallait désactiver les ennemis tant qu'ils ne sont pas passés devant la caméra (le _spawn_).
 
-They should also be removed once they are completely off the screen.
+Il faut aussi les supprimer quand ils ont été raté et qu'ils ne sont plus visibles à l'écran
 
-We need to update "EnemyScript", so it will:
+Nous allons mettre à jour notre script "EnemyScript" pour :
 
-1. Disable the movement, the collider and the auto-fire (when initialized).
-2. Check when the renderer is inside the camera sight.
-3. Activate itself.
-4. Destroy the game object when it's outside the camera.
+1. Désactiver le mouvement, le collider le tir avant le spawn
+2. Vérifier si l'élément est visible
+3. Si oui, faire apparaître l'ennemi
+4. Détruire l'objet quand il n'est plus visible 
 
-_(The numbers refer to the comments in the code)_
+_(Ces chiffres font références à ceux du script ci-dessous)_
 
 ```csharp
 using UnityEngine;
 
 /// <summary>
-/// Enemy generic behavior
+/// Comportement générique pour les méchants
 /// </summary>
 public class EnemyScript : MonoBehaviour
 {
@@ -408,10 +406,10 @@ public class EnemyScript : MonoBehaviour
 
   void Awake()
   {
-    // Retrieve the weapon only once
+    // Récupération de toutes les armes de l'ennemi
     weapons = GetComponentsInChildren<WeaponScript>();
 
-    // Retrieve scripts to disable when not spawn
+    // Récupération du script de mouvement lié 
     moveScript = GetComponent<MoveScript>();
   }
 
@@ -420,12 +418,12 @@ public class EnemyScript : MonoBehaviour
   {
     hasSpawn = false;
 
-    // Disable everything
+    // On désactive tout
     // -- collider
     collider2D.enabled = false;
-    // -- Moving
+    // -- Mouvement
     moveScript.enabled = false;
-    // -- Shooting
+    // -- Tir
     foreach (WeaponScript weapon in weapons)
     {
       weapon.enabled = false;
@@ -434,7 +432,7 @@ public class EnemyScript : MonoBehaviour
 
   void Update()
   {
-    // 2 - Check if the enemy has spawned.
+    // 2 - On vérifie si l'ennemi est apparu à l'écran
     if (hasSpawn == false)
     {
       if (renderer.IsVisibleFrom(Camera.main))
@@ -444,7 +442,7 @@ public class EnemyScript : MonoBehaviour
     }
     else
     {
-      // Auto-fire
+      // On fait tirer toutes les armes automatiquement
       foreach (WeaponScript weapon in weapons)
       {
         if (weapon != null && weapon.enabled && weapon.CanAttack)
@@ -453,7 +451,7 @@ public class EnemyScript : MonoBehaviour
         }
       }
 
-      // 4 - Out of the camera ? Destroy the game object.
+      // 4 - L'ennemi n'a pas été détruit, il faut faire le ménage
       if (renderer.IsVisibleFrom(Camera.main) == false)
       {
         Destroy(gameObject);
@@ -461,17 +459,17 @@ public class EnemyScript : MonoBehaviour
     }
   }
 
-  // 3 - Activate itself.
+  // 3 - Activation
   private void Spawn()
   {
     hasSpawn = true;
 
-    // Enable everything
+    // On active tout
     // -- Collider
     collider2D.enabled = true;
-    // -- Moving
+    // -- Mouvement
     moveScript.enabled = true;
-    // -- Shooting
+    // -- Tir
     foreach (WeaponScript weapon in weapons)
     {
       weapon.enabled = true;
@@ -480,41 +478,41 @@ public class EnemyScript : MonoBehaviour
 }
 ```
 
-Start the game. Yes, there's a bug.
+Démarrer le jeu et... oui, ça ne marche pas.
 
-Disabling the "MoveScript" as a negative effect: The player never reaches the enemies as they're all moving with the `3 - Foreground` layer scrolling:
+Désactiver le "MoveScript" des ennemis à un effet de bord inattendu : le joueur ne peut jamais atteindre les ennemis car ceux-ci reculent à la même vitesse, en suivant le défilement du plan `3 - Foreground` :
 
 [ ![camera_moving_along_gif][camera_moving_along_gif]][camera_moving_along_gif]
 
-_Remember: we've added a "ScrollingScript" to this layer in order to move the camera along with the player._
+_Rappelez-vous : nous avons ajouté un "ScrollingScript" a ce plan pour faire bouger le joueur et la caméra._
 
-But there is a simple solution: move the "ScrollingScript" from the `3 - Foreground` layer to the player!
+Il y a une solution simple : déplacer ce "ScrollingScript" du plan `3 - Foreground` vers l'objet du joueur !
 
-Why not after all? The only thing that is moving in this layer is him, and the script is not specific to a kind of object.
+Et pourquoi ? Après tout la seule chose qui doit bouger dans ce plan, c'est lui. Le script de défilement n'est pas propre à un objet particulier, on peut donc l'attacher ailleurs.
 
-Push the "Play" button and observe: It works.
+Relancez le jeu avec cette modification, maintenant tout fonctionne :
 
-1. Enemies are disabled until they spawn (i.e., until the camera reaches their positions).
-2. Then they disappear when they are outside the camera.
+1. Les ennemis sont inactifs et invincibles avant d'être en vue
+2. Ils sont supprimés si le joueur ne les tue pas et qu'ils sortent de la caméra
 
 [ ![Enemy spawn][enemy_spawn] ][enemy_spawn_gif]
 
-_(Click on the image to see what happens)_
+_(Cliquez sur l'image pour voir l'animation)_
 
-## Keeping the player in the camera bounds
+## Empêcher le joueur de sortir de l'écran
 
-You might have noticed that the player is not (yet) restricted to the camera area. "Play" the game, push the "Left Arrow" and watch him leaves the camera.
+Vous avez sûrement remarqué que le joueur peut très facilement se retrouver en dehors de l'écran, il n'est pas limité par la caméra.
 
-We have to fix that.
+Il faut y remédier.
 
-Open the "PlayerScript", and add this at the end of the "Update()" method:
+Ouvrez le "PlayerScript", et ajoutez ceci à la fin de ``Update()``:
 
 ```csharp
   void Update()
   {
     // ...
 
-    // 6 - Make sure we are not outside the camera bounds
+    // 6 - Déplacement limité au cadre de la caméra
     var dist = (transform.position - Camera.main.transform.position).z;
 
     var leftBorder = Camera.main.ViewportToWorldPoint(
@@ -539,32 +537,30 @@ Open the "PlayerScript", and add this at the end of the "Update()" method:
       transform.position.z
     );
 
-    // End of the update method
+    // Fin d'Update
   }
 ```
 
-Nothing complicated, just verbose.
+Rien de bien compliqué, c'est juste très verbeux.
 
-We get the camera edges and we make sure the player position (_the center of the sprite_) is inside the area borders.
+Nous récupérons ici les coins de la caméra et nous nous assurons ensuite que sa position ne dépasse jamais l'un des côtés.
 
-Tweak the code to better understand what is happening.
+# Prochaine étape
 
-# Next step
+Maintenant nous avons un _scrolling shooter_ !
 
-We have a scrolling shooter!
+Vous avez vu comment utiliser et implémenter le défilement avec plusieurs plans. Pour l'instant le script se limite à une seule direction mais vous devriez être capable de changer cela si vous le souhaitez.
 
-We have just learned how to add a scrolling mechanism to our game, as well as a parallax effect for the background layers. However, the current code only works for right to left scrolling. But with your new knowledge, you should be able to enhance it and make it work for all scrolling directions.
+Mais avouons-le, le jeu a besoin de pas mal de petites retouches pour être jouable. Par exemple :
 
-Still, _the game really needs some tweaks to be playable_. For example:
+- Diminuer la taille des sprites
+- Ajuster les vitesses
+- Ajouter des ennemis et des nouveaux types d'ennemis
+- _Rendre le jeu fun_
 
-- Reducing the sprite sizes.
-- Adjusting the speeds.
-- Adding more enemies.
-- _Making it fun_.
+Nous parlerons de tous ces points dans notre chaptire à venir sur les réglages du gameplay (qui n'est pas encore terminé, désolés). Mais c'est un bon exercice auquel nous vous invitons à vous prêtez.
 
-We will address these points in our upcoming chapter about gameplay tweaking (not released yet, unfortunately). For the moment, you can experiment. ;)
-
-In the next chapter, we will focus our attention on how to make the game a bit more... _flashy_. With particles!
+C'est tout pour le gameplay, nous allons maintenant ajouter un peu de cosmétiques, de feedbacks... et un peu de dynamisme avec les particules !
 
 
 [camera_use]: ../../2d-game-unity/parallax-scrolling/-img/camera_use.png
