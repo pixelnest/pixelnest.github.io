@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Making some noises on music
-author: Damien
 date: 13/11/13
 
 tutorial:
@@ -14,70 +13,77 @@ links:
   next: ../menus
 ---
 
-We will add sounds and a music in our project. It is very simple in Unity, but it is still a very important part of a game.
+Now that we have improved our game visually, with particles, we will add some sounds and a music in our project. It's very simple in Unity but it's still a very important part of a game.
 
 You will learn where to find sounds and music, pick some, and play them in our game via a script.
 
-## Getting sounds for audio
+# Finding sounds
 
-I not so recently [participated on the subject on stack exchange](http://gamedev.stackexchange.com/questions/22525/how-does-a-one-man-developer-do-its-games-sounds).
+Damien (not so) recently [participated in an interesting subject on Stack Exchange](http://gamedev.stackexchange.com/questions/22525/how-does-a-one-man-developer-do-its-games-sounds) about this topic.
 
-For a game developer, you can:
+Based on our knowledge, a game developer can:
 
-- Buy sounds
-- Use free sounds from sound banks (like [FindSounds](http://www.findsounds.com/))
-- Record your own sounds
+- Buy sounds.
+- Hire/Know a musician.
+- Use free sounds from sound banks (like [FindSounds](http://www.findsounds.com/) or [Freesound](http://www.freesound.org/)).
+- Record his own sounds.
 
-Then you can modify and mix sounds with Audacity.
-
-Or my favorite:
+Or Damien's favorite:
 
 - Create chiptune (8-bit) sounds using [BFXR](http://www.bfxr.net/) (based on [SFXR](http://drpetter.se/project_sfxr.html) but with a web version that is very useful)
 
-Let's create an explosion and a shot sound. If you are lazy, you can use mine:
+<md-info>
+_Matthieu_: I have created some sounds and songs for a short school project made by a friend. I was a drummer at the time, but absolutely not a composer. <br />However, with the help of [Freesound](http://www.freesound.org/), a bit of inventiveness and a dozen of hours (without knowing any tool — so I just learned how to use [Audacity](http://audacity.sourceforge.net/) the quick way), I successfully did a (cheap) soundtrack for the whole game. <br /><br />I wouldn't recommend that for a song (find a musician and make a deal, it's way better), but with enough time and a good tool, you could defintely create cool sound effects. _It's feasible: be creative_.
+</md-info>
+
+For songs, it depends of what you want, but [Jamendo](http://www.jamendo.com/) has a ton of artists. Be careful with the licenses for commercial uses.
+
+<md-info>
+_Damien_: This is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1). I really loved his music. He kindly authorized me to use them in _The Great Paper Adventure_ game.
+</md-info>
+
+## Assets for the tutorial
+
+Create or find an explosion and a shot sound. If you are lazy, you can use ours:
 
 - [Download the player shot sound][sound_shot_player]
 - [Download the enemy shot sound][sound_shot_enemy]
 - [Download the explosion sound][sound_explosion]
 
-For musics, it depends of what you want, but [Jamendo](http://www.jamendo.com/) has a ton of artists. Be careful with the licenses for commercial uses.
-
-This is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1), and as I really loved his music he authorized me to use them in _The Great Paper Adventure_.
-
-We will use one of my favourite track for this tutorial:
+We will use one of the track of _The Great Paper Adventure_ by [Spintronic](http://spintronic.fr/ticket/listbyartist/1) for this tutorial:
 
 - Download [Spintronic - Firecrackers](http://spintronic.fr/song/download/45?format=mp3)
 
-## Import in Unity
+# Import in Unity
 
-Drag'n'drop all that stuff in the "Sounds" folder.
+Drag the 4 elements in the "Sounds" folder.
 
-**For each**, make sure to disable "3D sound" as we are in a 2D game. Make sure to **apply**.
+_For each_, make sure to disable the "3D sound" property in the "Inspector", as we are in a 2D game. Make sure to _apply_.
 
 [ ![Disabling 3D sound][3dsound]][3dsound]
 
 And... that's all!
 
-## Playing music
+# Playing music
 
-To play the music, simply drag'n'drop the music in the hierarchy. I invite you to:
+To play a music, simply drag the song into the "Hierarchy". We invite you to:
 
-- Rename the new game object in "Music"
-- Place it at ``(0,0,0)``
-
-Locate the "Mute" checkbox, it can help when you do a lot of tests.
+1. Rename the new game object "Music".
+2. Place it at `(0, 0, 0)`.
 
 [ ![Music object][music]][music]
 
-## Playing sounds
+Observe the "Mute" checkbox. It can help when you do a lot of tests.
 
-it could be quite the same as for music. But sound needs to be triggered at the right time.
+# Playing sounds
 
-For that, I propose a simple solution. Just like the _SpecialEffectsHelper_, we will have a helper script for sounds that you can call from everywhere.
+You could proceed like for the music. But sounds need to be triggered at the right time in the game.
 
-This new script is "SoundEffectsHelper" and is made of:
+For that, we propose a simple solution. Just like for the "SpecialEffectsHelper" code, we will have a helper script for sounds that you can call from everywhere.
 
-````csharp
+This new script is called "SoundEffectsHelper":
+
+```csharp
 using UnityEngine;
 using System.Collections;
 
@@ -131,30 +137,35 @@ public class SoundEffectsHelper : MonoBehaviour
     AudioSource.PlayClipAtPoint(originalClip, transform.position);
   }
 }
-````
+```
 
-Add it to the "Scripts" game object, and fill it:
+Add it to the "Scripts" game object, and fill its fields with the sound clips:
 
 [ ![Script for sounds][sound_script]][sound_script]
 
-Now simply call
+Then, do:
 
-- `SoundEffectsHelper.Instance.MakeExplosionSound();` in _HealthScript_, just after the particle effect
-- `SoundEffectsHelper.Instance.MakePlayerShotSound();` in _PlayerScript_, just after `weapon.Attack(false);`
-- `SoundEffectsHelper.Instance.MakeEnemyShotSound();` in _EnemyScript_, just after `weapon.Attack(true);`
+1. `SoundEffectsHelper.Instance.MakeExplosionSound();` in "HealthScript", just after the particle effect.
+2. `SoundEffectsHelper.Instance.MakePlayerShotSound();` in "PlayerScript", just after `weapon.Attack(false);`.
+3. `SoundEffectsHelper.Instance.MakeEnemyShotSound();` in "EnemyScript", just after `weapon.Attack(true);`.
 
-No Gifs this time, but you will see the result quickly ;).
+Start the game and listen. Yeah, we have a music and sounds now!
 
+<md-note>
+_Note_: This method is enough for the tutorial. For a bigger game, it's probably too light. Your call.
+</md-note>
 
-## Ready for the next step
+# Next Step
 
-I think we have a pretty good basis for a shoot them up game. You can make a longer level, and you will get nearly the demo I showed you in the first place.
+We just learned how to use sounds and music in our game.
 
-Make your own graphics and add enemies, background elements, and why not a boss (more complex but more interesting)?
+We have a pretty good basis for a _shmup_ game now. You can make a longer level and you will nearly get the demo we showed you in the introduction.
 
-We are far from a full game, but I'll stop here for the gameplay part.
+You could start making your own graphics and add enemies or background elements. You could even begin to implement a boss at the end of the level. It's a bit more complex but the challenge and the design decisions are really interesting.
 
-Before we see the deployment features, we will add menus so we can start and restart this hardcore game.
+We are far from a complete game, but we will stop here for the gameplay and game stage.
+
+In the next chapter, we will add menus so we can start and restart this hardcore level.
 
 [3dsound]: ./-img/3dsound.png
 [music]: ./-img/music.png
