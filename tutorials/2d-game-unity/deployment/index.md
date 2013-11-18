@@ -13,109 +13,146 @@ links:
   next: ../animations
 ---
 
-A short last part about how to do an executable that you can distribute. Short, because deploying with Unity is easy.
+And _this is it_.
 
-# Build settings again
+The last thing we have to do is to create an executable that you can distribute. It's going to be short, because deploying with Unity is (fairly) easy.
 
-Everything will be in the _File->Build Settings_ window that you had to open in the previous part.
+# Build Settings, Pt. 2
 
-On your left, you can choose a platform. This will make its settings appears on the right.
+Building is in one window that we have already used.
 
-[ ![platforms][platforms]][platforms]
+Re-open the "File" -> "Build Settings" window.
 
-Nothing much to say, choose the platform you want and hit "Build & Run".
+On the left, you can select a platform. This will make the platform settings appears on the right.
 
-Let's try with the Web Player. Select "Web Player" in platform and build & run.
+[ ![platforms][platforms] ][platforms]
 
-This will produce an HTML page with the game embed in. This is the first and simplest way to distribute your game, you just have to host the two files on the Internet.
+Choose the one you want and hit "Build & Run".
 
-[ ![The web version][web_result]][web_result]
+Let's try with the Web Player:
+
+1. Select "Web Player" in "Platform"
+2. Build the game.
+3. Observe: it produces an HTML page with the game embedded in.
+4. Try it.
+
+This is the first and simplest way to distribute your game. You just have to host the two files on a server.
+
+[ ![The web version][web_result] ][web_result]
 
 # Player Settings
 
-However, you may need to change settings like resolution, game name... You do that by going to
+You may need to adjust some settings (like the resolution, the game name or some resources) for a specific platform.
 
-- _File->Build Settings->Player Settings..._
-- _Edit->Project Settings->Player_
+You do that by going to the "Player Settings" panel:
 
-Check all properties to have the settings you want. Here I set the web player resolution to 1280 * 768.
+* "File" -> "Build Settings" -> "Player Settings"
 
-[ ![Player settings][player_settings]][player_settings]
+Or:
 
-# Deploying on Windows, Mac, Linux
+* "Edit" -> "Project Settings" -> "Player"
 
-There is not much to say for the PC build. Choosing the PC platform, you will be able to choose the operating system to target.
+Here, we set the web player resolution to 1280 * 780:
 
-[ ![pc_target][pc_target]][pc_target]
+[ ![Player settings][player_settings] ][player_settings]
 
-And that's all! Unity is really awesome for deployment.
+# Deploying on Windows, Mac and Linux
 
-# Deploying on mobile (iOS)
+There isn't much to say about these platforms. By choosing "PC, Mac & Linux Standalone", you will be able to select a specific operating system to target.
 
-Mobile deployement is not as easy as PC. You need to have the SDK (the official development tools) installed for the platform you target. That also mean you need Mac OS X to release an iOS game.
+[ ![pc_target][pc_target] ][pc_target]
 
-We are going to look at the procedure for iOS games. My guess is that it is very similar for Android games.
+And that's (almost) all! Unity is really awesome to build and deploy.
 
-First, select "iOS" in the build window.
+# Bonus for Mac users: Deploying on iOS
 
-[ ![ios_build][ios_build]][ios_build]
+Mobile deployment is a bit more complicated. You need to have the latest SDK (the official development tools) installed for the platform you target.
 
-Go to the "Player settings" to change few parameters (minimum SDK, icon, enable iTunes music...).
+This also means that you need Mac OS X to release an iOS game.
+
+We are going to look at the procedure for an iOS games. Our guess is that it is very similar for an Android game.
+
+First, select "iOS" in the build window:
+
+[ ![ios_build][ios_build] ][ios_build]
+
+Open the "Player settings" view to change a few parameters (minimum SDK, icon, etc.).
 
 <md-note>
-_Tip_: If you want to test on the simulator first, there is a trick. In the iOS player settings, find the parameter "SDK version". Then select "Simulator SDK":
-<br/>
-[ ![ios_simulator][ios_simulator]][ios_simulator]
+_Tip_: If you want to test on a simulator, there's a trick. In the iOS "Player Settings", find the "SDK version" field. Then choose "Simulator SDK":
+<br/><br />
+[ ![ios_simulator][ios_simulator_mini] ][ios_simulator]
+<br />
 </md-note>
 
 Build the project. Unity will prompt you to choose a location:
 
-[ ![ios_build2][ios_build2]][ios_build2]
+[ ![ios_build2][ios_build2] ][ios_build2]
 
-In fact, Unity will generate an Xcode project:
+In fact, Unity has generated an Xcode project:
 
-[ ![ios_project_xcode][ios_project_xcode]][ios_project_xcode]
+[ ![ios_project_xcode][ios_project_xcode] ][ios_project_xcode]
 
-So you really must have all the development tools installed otherwise you just can't deploy on iOS.
+That's why you really need to have all the development tools installed, otherwise you won't be able to even launch the project on an iOS device or simulator.
 
-Open the ``.xcodeproj`` file in order to open Xcode. Fortunately, we won't have to do anything except launching:
+Open the `.xcodeproj` file with Xcode. Fortunately, we don't have much to do now, except launching the project:
 
-[ ![ios_xcode][ios_xcode]][ios_xcode]
+[ ![ios_xcode][ios_xcode] ][ios_xcode]
 
-Try to launch the game. It should be deployed on simulator. For example, on an iPad:
+Try to start the game. It should be deployed on the simulator. For example, on an iPad:
 
-[ ![ios_result][ios_result]][ios_result]
+[ ![ios_result][ios_result] ][ios_result]
 
-It's working! Sprites are correctly displayed, game is loading... but it is also unplayable, because touch controls are not implemented (except the "tap" to fire that comes with the default input settings). 
+It's working!
 
-Also, resolution and orientation are tricky to handle.
-And finally, if you have a real device, you may discover that performances are quite low.
+Sprites are correctly displayed, the game is loading... But it is also unplayable, because touch controls are not implemented (except for the "tap" to fire that comes with the default input settings).
 
-That's why mobile is not that easy: you need to optimize and tweak your game to get the best from it on smartphones and tablets.
+The resolution and the orientation are also not handled.
 
-# Assets qualities per platform
+And finally, if you have a real device, you may discover that performances suck.
 
-For some assets, you may need to specify a lower (or higher) quality parameters.
+That's why mobile is not easy: you need to optimize and tweak your game to get the best from it on smartphones and tablets.
 
-Look at the images for example. You can lower the quality for mobile devices but keep the best on PC.
+# Asset quality per platform
 
-[ ![texture_specific_quality][texture_specific_quality]][texture_specific_quality]
+For some assets, you may need to specify a lower (or higher) quality for a given platform.
 
-This is tweaking and optimization, you should do that at the end of your development process.
+Look at the images, for example. You can lower the quality for mobile devices but keep it higher for desktop computers.
 
-# Next episode... oh wait
+[ ![texture_specific_quality][texture_specific_quality] ][texture_specific_quality]
 
-That's it. You made it. The development is over.
-You probably don't feel ready to make a full 2D game but you probably are.
+You need to keep in mind that there is going to be a tweaking and optimization phase at the end of your development.
 
-You will (soon, we are writing them!) find next some bonus levels to extend this tutorial on some parts that can interest you (gameplay tweaking, animations tools).
+# Next Step... Oh wait.
 
-But now it's up to you to look for more resources specific to your game idea and, most of all, it's up to you to start your project.
+That's it. You've made it. The development is over.
+You probably don't feel ready to make a full 2D game but _you are_. You need time and dedication now.
 
-So in Unity:
-- Go to _File->New Project_
+# Conclusion
 
-and the rest is all yours...
+In the near future, we are going to release some new chapters which will dive into other topics (like advanced gameplay or the new animation tools).
+
+But now, it's all up to you. It's up to you to start _your_ real project.
+
+The last steps?
+
+[ ![Last steps][last] ][last]
+
+And the rest is all yours...
+
+<md-tip>
+_A last tip?_ Use a version control system (Git, Mercurial or SVN), even if you are alone. You won't regret it.
+</md-tip>
+
+
+<br />If you liked this tutorial, you might want to:
+
+* Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio)?
+* Follow our [RSS feed](http://feedpress.me/pixelnest)?
+* Stay informed of the evolution of this tutorial with this [RSS feed](http://feedpress.me/pixelnest/2d-game-unity)?
+* Give your impressions? :)
+
+Thanks for reading us! We hope you have enjoyed this tutorial and that it will give you a solid foundation to build some great games!
 
 
 [platforms]: ./-img/platforms.png
@@ -125,8 +162,11 @@ and the rest is all yours...
 [texture_specific_quality]: ./-img/texture_specific_quality.png
 
 [ios_build]: ./-img/ios_build.png
-[ios_build2]: ./-img/ios_build.png
+[ios_build2]: ./-img/ios_build_2.png
 [ios_project_xcode]: ./-img/ios_project_xcode.png
 [ios_simulator]: ./-img/ios_simulator.png
-[ios_xcode]: ./-img/ios_build.png
+[ios_simulator_mini]: ./-img/ios_simulator_mini.png
+[ios_xcode]: ./-img/ios_xcode.png
 [ios_result]: ./-img/ios_result.png
+
+[last]: ./-img/last.png
