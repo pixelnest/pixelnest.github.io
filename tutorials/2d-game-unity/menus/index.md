@@ -365,6 +365,6 @@ That's what we will talk about in the last chapter: deployment.
 [start]: ./-img/start.gif
 [game_over]: ./-img/game_over.png
 [game_over_script]: ./-img/game_over_script.png
-[GUISkin]: ./-img/GUISkin.png 
+[GUISkin]: ./-img/gui_skin.png 
 
 [ngui_link]: http://www.tasharen.com/?page_id=140 "NGUI Unity Plugin"
