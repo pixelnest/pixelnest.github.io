@@ -352,7 +352,7 @@ Look at what you have done until now :
 
 Congratulations! But, unfortunately, it's only on your computer. To sell this new award-gaining game, we need to distribute it.
 
-That's what we will talk about in our last chapter: deployment.
+That's what we will talk about in the last chapter: deployment.
 
 
 [background]: ./-img/background.png
