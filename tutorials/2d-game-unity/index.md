@@ -72,5 +72,5 @@ So, are you ready? Let's dive into Unity!
 [unity_download_link]: http://unity3d.com/unity/download "Download Unity 4.3"
 [cc_license_link]: http://creativecommons.org/licenses/by-nc/2.0/fr/ "CC-BY-NC"
 [mit_license_link]: http://choosealicense.com/licenses/mit/ "MIT license"
-[github_repo_link]: https://github.com/pixelnest/2d-game-unity-tutorial "Repository"
-[github_license_link]: https://github.com/pixelnest/2d-game-unity-tutorial/blob/master/LICENSE.md "Repository license"
+[github_repo_link]: https://github.com/pixelnest/tutorial-2d-game-unity/ "Repository"
+[github_license_link]: https://github.com/pixelnest/tutorial-2d-game-unity/blob/master/LICENSE.md "Repository license"
