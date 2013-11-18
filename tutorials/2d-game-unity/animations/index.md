@@ -9,7 +9,7 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../deployment
+  previous: ../conclusion
   next: ../tweaking-the-gameplay
 ---
 

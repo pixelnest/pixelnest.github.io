@@ -28,6 +28,7 @@ You can use the navigation above and below each chapter to move between them.
 - [Making some noises on music](../sounds)
 - [Menus - loading and restarting the game](../menus)
 - [Build, release and deploy](../deployment)
+- [Conclusion](../conclusion)
 
 More to come, stay tuned:
 

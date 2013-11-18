@@ -15,7 +15,7 @@ links:
 
 And _this is it_.
 
-# Conclusion
+# And now what?
 
 In the near future, we are going to release some new chapters which will dive into other topics (like advanced gameplay or the new animation tools).
 
@@ -35,8 +35,8 @@ _A last tip?_ Use a version control system (Git, Mercurial or SVN), even if you 
 <br />If you liked this tutorial, you might want to:
 
 * Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio).
-* Follow our [RSS feed](http://feedpress.me/pixelnest).
-* Stay informed of the evolution of this tutorial with this [RSS feed](http://feedpress.me/pixelnest/2d-game-unity).
+* Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).
+* Subscribe to our [RSS feed](http://feedpress.me/pixelnest).
 * Give your impressions? :)
 
 Thanks for reading us! We hope you have enjoyed this tutorial and that it will give you a solid foundation to build some great games!
