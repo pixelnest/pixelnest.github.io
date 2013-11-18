@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Sommaire
-author: Damien
 date: 13/11/13
 
 tutorial:
@@ -27,15 +26,12 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 - [Gestion du tir (1/2)](../gestion-du-tir-1)
 - [Gestion du tir (2/2)](../gestion-du-tir-2)
 - [Défilement du décor (Parallax scrolling)](../parallax-scrolling)
-
-A traduire :
-
-- [Playing with particles](.)
-- [Making some noises on music](.)
-- [Menus - loading and restarting the game](.)
-- [Build, release and deploy](.)
+- [Jouons avec les particules](../particules)
+- [Faisons du bruit](../sons-et-musiques)
+- [Menus et chargement du jeu](../menus) 
+- [Préparer un exécutable de son jeu](../release)
 
 A venir :
 
-- 2D Animations
+- Animations 2D
 - Ajuster le gameplay pour rendre le jeu bien meilleur

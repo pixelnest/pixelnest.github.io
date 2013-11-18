@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Créer un jeu 2D avec Unity
-author: Damien
 date: 13/11/13
 
 tutorial:
