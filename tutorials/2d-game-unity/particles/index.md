@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Playing with particles
-author: Damien
 date: 13/11/13
 
 tutorial:
@@ -14,13 +13,15 @@ links:
   next: ../sounds
 ---
 
-Let's do more graphics and less code. Particles are usually very simple sprites that will be repeated and displayed for a very short time.
+Our shooter is starting to have a good shape. It's time to enhance it a bit visually with _particles_.
 
-Think of explosions, lasers, smoke... Those are sometimes particles (explosion can be a simple animated sprite).
+Particles are usually simple sprites that will be repeated and displayed for a very short timespan.
 
-Unity provide a powerful built-in editor for particles, the **Shuriken Engine**. Let's see what we can do with it.
+Think about explosions, lasers, smokes, etc. Those are done with particles — most of the time (an explosion can be a simple animated sprite).
 
-## Particles prefabs for an explosion
+Unity provides a powerful built-in editor for particles with the _Shuriken Engine_. Let's see what we can do with it.
+
+# Particles prefabs for an explosion
 
 We will make an explosion that we will use when enemies or player are destroyed. This involve to:
 
@@ -29,7 +30,7 @@ We will make an explosion that we will use when enemies or player are destroyed.
 
 An explosion is usually made of two things: fire and smoke.
 
-### The smoke particles
+## Smoke particles
 
 Create a new _Particle System_ from the editor (_Game Object -> Create Other -> Particle System_).
 
@@ -65,75 +66,32 @@ The global picture:
 
 Parameters details:
 
-<table>
-<tr>
-	<th>Category</th>
-	<th>Parameter name</th>
-	<th>Value</th>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Duration</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Max particles</td>
-	<td>15</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Start Lifetime</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Start Color</td>
-	<td>Gray</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Start Speed</td>
-	<td>3</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Start Size</td>
-	<td>2</td>
-</tr>
-<tr>
-	<td>Emission</td>
-	<td>Bursts</td>
-	<td>0 : 15</td>
-</tr>
-<tr>
-	<td>Shape</td>
-	<td>Shape</td>
-	<td>Sphere</td>
-</tr>
-<tr>
-	<td>Color over lifetime</td>
-	<td>Color</td>
-	<td>
-		Alpha in the end for fade out. See picture blow.
-	</td>
-</tr>
-<tr>
-	<td>Size over lifetime</td>
-	<td>Size</td>
-	<td>Choose a decreasing curve</td>
-</tr>
-</table>
+| Category            | Parameter name       | Value  |
+| ------------------- | -------------------- | ------ |
+| General             | Duration             | 1      |
+| General             | Max Particles        | 15     |
+| General             | Start Lifetime       | 1      |
+| General             | Start Color          | Gray   |
+| General             | Start Speed          | 3      |
+| General             | Start Size           | 2      |
+| Emission            | Bursts               | 0 : 15 |
+| Shape               | Shape                | Sphere |
+| Color Over Lifetime | Color                | See below (N°1) |
+| Size Over Lifetime  | Size                 | See below (N°2) |
 
-Color over lifetime:
+### N°1 — Color Over lifetime
+
+Set an alpha in the end to create a fade out:
 
 [![Fade out particles][fade_out]][fade_out]
 
-Size over lifetime:
+### N°2 — Size Over lifetime
+
+Choose a decreasing curve:
 
 [![Curve editor][decreasing_curve]][decreasing_curve]
 
-When you are satisfied, **uncheck "Looping"**.
+<br />When you are satisfied, _uncheck "Looping"_.
 
 Result:
 
@@ -141,72 +99,31 @@ Result:
 
 Save as a prefab. you can organize a bit by creating a folder "Prefabs/Particles" and saving the game object as "SmokeEffect".
 
-## Fire
+## Fire particles
 
 This is another particle system. Create a new one, just as you did above. We will use the default material for fire (no image), it will be enough for our needs.
 
 Settings:
 
-<table>
-<tr>
-	<th>Category</th>
-	<th>Parameter name</th>
-	<th>Value</th>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Looping</td>
-	<td>false</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Duration</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Max particles</td>
-	<td>10</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Start Lifetime</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Start Speed</td>
-	<td>0.5</td>
-</tr>
-<tr>
-	<td>General</td>
-	<td>Start Size</td>
-	<td>2</td>
-</tr>
-<tr>
-	<td>Emission</td>
-	<td>Bursts</td>
-	<td>0 : 10</td>
-</tr>
-<tr>
-	<td>Shape</td>
-	<td>Shape</td>
-	<td>Box</td>
-</tr>
-<tr>
-	<td>Color over lifetime</td>
-	<td>Color</td>
-	<td>
-		Yellow -> Orange with fade out in the end. See picture blow.
-	</td>
-</tr>
-</table>
+| Category            | Parameter name       | Value  |
+| ------------------- | -------------------- | ------ |
+| General             | Looping              | false  |
+| General             | Duration             | 1      |
+| General             | Max Particles        | 10     |
+| General             | Start Lifetime       | 1      |
+| General             | Start Speed          | 0.5    |
+| General             | Start Size           | 2      |
+| Emission            | Bursts               | 0 : 10 |
+| Shape               | Shape                | Box    |
+| Color Over Lifetime | Color                | See below (N°1) |
 
-The gradient:
+### N°1 — Color Over Lifetime
+
+Create a nice gradient from yellow to orange, with a fade out in the end:
 
 [![Fire gradient][fire_gradient]][fire_gradient]
 
-The result:
+<br />The result:
 
 [![Fire effect][fire_effect]][fire_effect]
 
@@ -214,7 +131,7 @@ Save as a "FireEffect" prefab.
 
 Now we will use those prefabs in a helper script.
 
-## The helper script
+# The helper script
 
 Instantiating those particles prefabs are no different from instantiate a player or a shot.
 
@@ -288,7 +205,7 @@ Assign it to the "Scripts" game object. Inspect it, and fill the fields with the
 
 [ ![Filling the script with prefab][filling_script]][filling_script]
 
-## Explosion on death
+# Explosion on death
 
 Time to call the script!
 
@@ -328,7 +245,7 @@ Not bad, right? The fire is not very nice but it could be replaced by a sprite.
 
 But it's up to you to make beautiful explosions using particles, now you have an idea how it works ;).
 
-## Ready for the next step
+# Next Step
 
 Particles are always a fun part of the game.
 
