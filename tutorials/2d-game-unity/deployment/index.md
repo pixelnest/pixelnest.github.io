@@ -51,11 +51,48 @@ There is not much to say for the PC build. Choosing the PC platform, you will be
 
 And that's all! Unity is really for deployment.
 
-## Deploying on mobile
+## Deploying on mobile (iOS)
 
-Mobile are not as easy as PC. You need to have the SDK (the official development tools) installed. That also mean you need a Mac to release an iOS game.
+Mobile deployement is not as easy as PC. You need to have the SDK (the official development tools) installed. That also mean you need a Mac to release an iOS game.
 
-I won't go too deep in details, but it is not much complicated. You'd need to know how to deploy a "normal" application on those platforms as the process will be the same (try a "Hello World" before).
+This is the procedure for iOS games. My guess is that it is very similar for Android games.
+
+First, select "iOS" in the build window.
+
+[ ![ios_build][ios_build]][ios_build]
+
+Go to the "Player settings" to change few parameters (orientation, minimum SDK, icon...).
+
+<md-note>
+_Tip_: If you want to test on the simulator first, there is a trick. In the iOS player settings, find the parameter "SDK version". Then select "Simulator SDK":
+<br/>
+[ ![ios_simulator][ios_simulator]][ios_simulator]
+</md-note>
+
+Build the project. Unity will prompt you to choose a location:
+
+[ ![ios_build2][ios_build2]][ios_build2]
+
+In fact, Unity will generate an Xcode project:
+
+[ ![ios_project_xcode][ios_project_xcode]][ios_project_xcode]
+
+So you really must have all the development tools installed otherwise you just can't deploy on iOS.
+
+Open the ``.xcodeproject`` file in order to open Xcode. Fortunately, we won't have to do anything except launching:
+
+[ ![ios_xcode][ios_xcode]][ios_xcode]
+
+Try to launch the game. It should be deployed on simulator. For example, on an iPad:
+
+[ ![ios_result][ios_result]][ios_result]
+
+It's working! Sprites are correctly displayed, game is loading... but it is also unplayable, because touch controls are not implemented (except the "tap" to fire that comes with the default input settings). 
+
+Also, resolution and orientation are tricky to handle.
+And finally, if you have a real device, you may discover that performances are quite low.
+
+That's why mobile is not that easy: you need to optimize and tweak your game to get the best from it on smartphones and tablets.
 
 ## Assets qualities per platform
 
@@ -87,3 +124,10 @@ and the rest is all yours...
 [player_settings]: ./-img/player_settings.png
 [pc_target]: ./-img/pc_target.png
 [texture_specific_quality]: ./-img/texture_specific_quality.png
+
+[ios_build]: ./-img/ios_build.png
+[ios_build2]: ./-img/ios_build.png
+[ios_project_xcode]: ./-img/ios_project_xcode.png
+[ios_simulator]: ./-img/ios_simulator.png
+[ios_xcode]: ./-img/ios_build.png
+[ios_result]: ./-img/ios_result.png
