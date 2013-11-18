@@ -1,7 +1,6 @@
 ---
 layout: tutorial
 title: Menus - loading and restarting the game
-author: Damien
 date: 13/11/13
 
 tutorial:
@@ -14,11 +13,11 @@ links:
   next: ../deployment
 ---
 
-I must say it immediately: menus and GUI are no fun in a game. You usually have to use a very basic GUI framework (or no framework at all), it takes a lot of time and the result is just... menus that players will skip as fast as possible.
+Let's say it immediately: menus and GUI are no fun in a game. You usually have to use a very basic GUI framework (or no framework at all), it takes a lot of time and the result is just... menus that players will skip as fast as possible.
 
 Well, Unity is quite cool for game GUIs and menus, but it's not fancy without a lot of effort. Let's start with the basics.
 
-## The assets
+# The menu assets
 
 This is what we will use for the menu. Buttons will be Unity standard ones.
 
@@ -32,7 +31,7 @@ And a logo:
 
 Import those files in the project. Maybe you can put them in a "Menu" subfolder of "Textures" otherwise "background" will erase the previous game file.
 
-## The Title screen
+# The Title screen
 
 Nearly all games have a title screen. It's where the player lands when the game has finished to launch and before the game really.
 
@@ -40,7 +39,7 @@ Some are just awesome and memorable: Megaman, Metal Slug... (I'm a big fan of ti
 
 What we will create will not be that awesome, it will be... simple!
 
-### Scene creation
+## Scene creation
 
 First, create a new scene:
 
@@ -48,7 +47,7 @@ _File->Create->New scene_.
 
 Save it in the "Scenes" folder as "Menu".
 
-### Scene settings
+## Scene settings
 
 Our menu will be made of:
 
@@ -60,15 +59,15 @@ I think you are now able to reproduce the scene with the following information:
 
 Background
 
-- Like any other sprite we did before (quad, texture, etc)
+- New sprite
 - Position at ``(0,0,1)``
-- Size 2x2x1
+- Size ``(2,2,1)``
 
 Logo
 
-- Like any other sprite we did before (quad, texture, etc)
+- New sprite
 - Position at ``(0,2,0)``
-- Size 0.75x0.75x1
+- Size ``(0.75,0.75,1)``
 
 The result:
 
@@ -76,7 +75,7 @@ The result:
 
 Of course you can add your name, instructions, jokes, make animation... menus are also a land of freedom. Just think about the player, he wants to play quick.
 
-## The loading script
+# The loading script
 
 Now we will add a button to click to play the game. We will do that in a script.
 
@@ -113,6 +112,12 @@ public class MenuScript : MonoBehaviour
 
 We are just drawing a button, that will load a new scene when the player click on it.
 
+
+<md-note>
+_Note_: The ``OnGUI`` is called every frame and should embed all the code to display GUI related code: lifebar, menus, interface...
+<br />The ``GUI`` object in Unity allows you to quickly create GUI component from the code, like a button with the ``GUI.Button`` method.
+</md-note>
+
 Create an empty "Scripts" object add this new script as a component.
 
 Launch the game to see it:
@@ -125,7 +130,7 @@ Click and... crash!
 
 What to do is clearly said in the error message.
 
-## Adding scene to the build
+# Adding scene to the build
 
 Go to _File->Build Settings_:
 
@@ -139,7 +144,7 @@ Now back to the menu, hit play:
 
 [ ![Start game][start]][start]
 
-## Player death and restart
+# Player death and restart
 
 Finally, we will allow the player to restart the game once he died.
 
@@ -221,7 +226,7 @@ Of course this can be really improved, with text, animation, etc.
 
 But it works! :)
 
-## "It's so ugly my eyes started bleeding"
+# "It's so ugly my eyes started bleeding"
 
 Damn! 
 
@@ -288,11 +293,11 @@ _Note_:
 If you have some money and you have a lot of menus and texts in your game, think about the [NGUI plugin][ngui_link]. It worth it.
 </md-note>
 
-## Ready for the next step
+# On the next episode
 
 You just made the new best selling game. But it's only on your computer for now.
 
-Last step: deploying on another machine, but it a PC, a mobile or a console...
+Last step: deploying on another machine, be it a PC, a mobile or a console...
 
 
 [background]: ./-img/background.png
