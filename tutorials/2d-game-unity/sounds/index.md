@@ -152,7 +152,7 @@ Then, do:
 Start the game and listen. Yeah, we have a music and sounds now!
 
 <md-note>
-_Note_: This method is enough for the tutorial. For a bigger game, it's probably too light. Your call.
+_Note_: This method is enough for the tutorial or for small projects. For a bigger game, it's probably too light, as you won't be able to easily manage hundreds of sounds.
 </md-note>
 
 # Next Step
