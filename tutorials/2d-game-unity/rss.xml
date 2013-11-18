@@ -50,6 +50,20 @@ layout: nil
   </author>
 </entry>
 <entry>
+  <title>Shooting (1/2)</title>
+  <link href="http://pixelnest.io/tutorials/2d-game-unity/shooting-1/" />
+  <id>http://pixelnest.io/tutorials/2d-game-unity/shooting-1/</id>
+  <content type="html">
+Our player ship is facing a terrifying Poulpi, but cannot do anything...
+
+Let's grant him a weapon and some ammo! This will involve a bit more of scripting, but be confident. It worths it.
+  </content>
+  <author>
+	<name>Pixelnest Studio</name>
+	<uri>http://pixelnest.io/about/</uri>
+  </author>
+</entry>
+<entry>
   <title>Shooting (2/2)</title>
   <link href="http://pixelnest.io/tutorials/2d-game-unity/shooting-2/" />
   <id>http://pixelnest.io/tutorials/2d-game-unity/shooting-2/</id>
