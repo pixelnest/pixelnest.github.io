@@ -298,16 +298,16 @@ Comme l'écrivait James Silva dans [Building XNA 2.0 games](http://www.amazon.co
 
 Voyons maintenant un autre moyen de donner du _feedback_ au joueur : le son !
 
-[cloud]: ./-img/cloud.png
-[new_particle_system]: ./-img/new_particle_system.png
-[cloud_settings]: ./-img/cloud_settings.png
-[cloud_shader]: ./-img/cloud_shader.png
-[smoke_settings]: ./-img/smoke_settings.png
-[fade_out]: ./-img/fade_out.png
-[decreasing_curve]: ./-img/decreasing_curve.png
-[smoke_effect]: ./-img/smoke_effect.gif
-[fire_gradient]: ./-img/fire_gradient.png
-[fire_effect]: ./-img/fire_effect.gif
-[filling_script]: ./-img/filling_script.png
-[explosions]: ./-img/explosions.png
-[explosions_gif]: ./-img/explosions.gif
+[cloud]: ../../2d-game-unity/particles/-img/cloud.png
+[new_particle_system]: ../../2d-game-unity/particles/-img/new_particle_system.png
+[cloud_settings]: ../../2d-game-unity/particles/-img/cloud_settings.png
+[cloud_shader]: ../../2d-game-unity/particles/-img/cloud_shader.png
+[smoke_settings]: ../../2d-game-unity/particles/-img/smoke_settings.png
+[fade_out]: ../../2d-game-unity/particles/-img/fade_out.png
+[decreasing_curve]: ../../2d-game-unity/particles/-img/decreasing_curve.png
+[smoke_effect]: ../../2d-game-unity/particles/-img/smoke_effect.gif
+[fire_gradient]: ../../2d-game-unity/particles/-img/fire_gradient.png
+[fire_effect]: ../../2d-game-unity/particles/-img/fire_effect.gif
+[filling_script]: ../../2d-game-unity/particles/-img/filling_script.png
+[explosions]: ../../2d-game-unity/particles/-img/explosions.png
+[explosions_gif]: ../../2d-game-unity/particles/-img/explosions.gif
