@@ -555,7 +555,7 @@ Nous récupérons ici les coins de la caméra et nous nous assurons ensuite que 
 
 Maintenant nous avons un _scrolling shooter_ !
 
-Vous avez vu comment utiliser et implémenter le défilement avec plusieurs plans. Pour l'instant le script se limite à une seule direction mais vous devriez être capable de changer cela si vous le souhaitez. (Bonus : [comme quelqu'un était bloqué sur le sujet, voici le corrigé et une animation du résultat !](https://gist.github.com/Valryon/7547513)).
+Vous avez vu comment utiliser et implémenter le défilement avec plusieurs plans. Pour l'instant le script se limite à une seule direction mais vous devriez être capable de changer cela si vous le souhaitez. (Bonus : [comme quelqu'un était bloqué sur le sujet, voici le corrigé et une petite animation du résultat ! Cliquez sur le lien pour les voir](https://gist.github.com/Valryon/7547513)).
 
 Mais avouons-le, le jeu a besoin de pas mal de petites retouches pour être jouable. Par exemple :
 
