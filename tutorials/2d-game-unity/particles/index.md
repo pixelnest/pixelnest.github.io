@@ -199,12 +199,12 @@ public class SpecialEffectsHelper : MonoBehaviour
   public void Explosion(Vector3 position)
   {
     // Smoke on the water
-    Instantiate(smokeEffect, position);
+    instantiate(smokeEffect, position);
 
     // Tu tu tu, tu tu tudu
 
     // Fire in the sky
-    Instantiate(fireEffect, position);
+    instantiate(fireEffect, position);
   }
 
   /// <summary>
