@@ -17,7 +17,7 @@ Now that we have improved our game visually, with particles, we will add some so
 
 You will learn where to find sounds and music, pick some, and play them in our game via a script.
 
-# Finding sounds
+# Finding sounds and musics
 
 Damien (not so) recently [participated in an interesting subject on Stack Exchange](http://gamedev.stackexchange.com/questions/22525/how-does-a-one-man-developer-do-its-games-sounds) about this topic.
 
@@ -36,7 +36,9 @@ Or Damien's favorite:
 _Matthieu_: I have created some sounds and songs for a short school project made by a friend. I was a drummer at the time, but absolutely not a composer. <br />However, with the help of [Freesound](http://www.freesound.org/), a bit of inventiveness and a dozen of hours (without knowing any tool — so I just learned how to use [Audacity](http://audacity.sourceforge.net/) the quick way), I successfully did a (cheap) soundtrack for the whole game. <br /><br />I wouldn't recommend that for a song (find a musician and make a deal, it's way better), but with enough time and a good tool, you could defintely create cool sound effects. _It's feasible: be creative_.
 </md-info>
 
-For songs, it depends of what you want, but [Jamendo](http://www.jamendo.com/) has a ton of artists. Be careful with the licenses for commercial uses.
+For musics, it depends of what you want:
+- [Jamendo](http://www.jamendo.com/) has a ton of artists. Be careful with the licenses for commercial uses.
+- [Bosca Ceoil](http://distractionware.com/blog/2013/08/bosca-ceoil/) is a simple software from Terry Cavanagh to make musics
 
 <md-info>
 _Damien_: This is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1). I really loved his music. He kindly authorized me to use them in _The Great Paper Adventure_ game.

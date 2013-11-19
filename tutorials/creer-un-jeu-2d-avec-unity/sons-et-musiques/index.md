@@ -17,7 +17,7 @@ Après avoir travaillé sur le visuel du jeu, attaquons-nous aux sons et à la m
 
 Vous apprendrez où vous procurez des bons petits sons et chouettes musiques pour du jeu vidéo et quoi en faire pour les retrouver dans le jeu.
 
-# la recherche de son
+# La recherche de sons et de musiques
 
 Damien a participé il y a quelques temps [à une discussion sur le sujet sur Stack Exchange](http://gamedev.stackexchange.com/questions/22525/how-does-a-one-man-developer-do-its-games-sounds).
 
@@ -39,7 +39,9 @@ _Matthieu_ : J'ai eu l'occasion de créer des sons et des musiques pour le proje
 Je ne vous conseillerai de le faire pour la musique (trouvez plutôt un musicien qui accepte de le faire), mais avec un peu de temps et les bons outils, vous pouvez vraiment créer de chouettes effets sonores. C'est à votre portée, soyez créatifs. 
 </md-info>
 
-Pour la musique, tout dépend de ce que vous recherchez. [Jamendo](http://www.jamendo.com/) recense un paquet d'artistes, mais faites attention aux licences souvent payants pour un usage commercial.
+Pour la musique, tout dépend de ce que vous recherchez :
+- [Jamendo](http://www.jamendo.com/) recense un paquet d'artistes, mais faites attention aux licences souvent payants pour un usage commercial.
+- - [Bosca Ceoil](http://distractionware.com/blog/2013/08/bosca-ceoil/) de Terry Cavanagh est un logiciel simple et efficace pour faire de la musique.
 
 <md-info>
 _Damien_ : C'est par Jamendo que j'ai vu rencontré [Spintronic](http://spintronic.fr/ticket/listbyartist/1). Comme j'adorais sa musique (et j'adore toujours), je l'ai contacté directement pour savoir si je pouvais utiliser sa musique dans le jeu _The Great Paper Adventure_. Il a adoré  l'idée et a même nommé une chanson au nom du jeu ! Donc n'hésitez pas à contacter les artistes qui vous plaisent : les licences CC-BY-NC ne prévalent plus si l'artiste vous donne l'accord d'utiliser ses œuvres.
