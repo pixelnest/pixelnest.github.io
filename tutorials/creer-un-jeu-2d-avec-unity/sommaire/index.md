@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Sommaire
-date: 13/11/13
+date: 20/11/13
 
 tutorial:
   name: Créer un jeu 2D avec Unity
@@ -30,8 +30,9 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 - [Faisons du bruit](../sons-et-musiques)
 - [Menus et chargement du jeu](../menus) 
 - [Préparer un exécutable de son jeu](../release)
+- [Conclusion](../conclusion)
 
 A venir :
 
-- Animations 2D
-- Ajuster le gameplay pour rendre le jeu bien meilleur
+- [Animations 2D](../animations)
+- [Ajuster le gameplay pour rendre le jeu bien meilleur](../ajuster-gameplay)

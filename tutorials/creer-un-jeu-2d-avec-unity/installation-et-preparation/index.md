@@ -1,8 +1,7 @@
 ---
 layout: tutorial
 title: Installer Unity et préparer un nouveau projet
-author: Damien Matthieu
-date: 13/11/13
+date: 20/11/13
 
 tutorial:
   name: Créer un jeu 2D avec Unity
