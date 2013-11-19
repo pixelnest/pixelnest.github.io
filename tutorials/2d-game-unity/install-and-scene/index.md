@@ -42,7 +42,7 @@ Likewise: download and install, it's simple as everything is bundled, though it 
 [ ![Change the preferences][unity_prefs_vs_url] ][unity_prefs_vs_url]
 
 <md-warning>
-_A savoir_ : Il n'est pas possible de déboguer simplement avec Visual Studio 2013 express. Il faut pour cela avoir au moins une version pro de Visual Studio et acheter le plugin [UnityVS][unityvs_link]. Vous aurez donc un meilleur éditeur pour le code mais l’absence de debug peut être critique dans certains cas.
+_Good to know_: It's not possible to use the Visual Studio 2013 Express debugger with Unity. You need to have a _Pro_ version of Visual Studio AND to buy the plugin [UnityVS][unityvs_link]. With the Express version, you will have a better code editor, but the lack of a debugger may be critical.
 </md-warning>
 
 ### Mac OS X
@@ -135,8 +135,9 @@ Textures are sprites and images of your game. In a 2D project, you could rename 
 
 It doesn't really matter in a 2D project, but by keeping the name "Textures", Unity will recognize it and automate some tasks. If you want some informations about this topic, you can read [this](http://answers.unity3d.com/questions/172384/importing-models.html) or [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
 
+<br />
 <md-note>
-_Note about the Resources folder_: if you already tried Unity you may know that _Resources_ is a useful and unique folder, that allows you to load an object, a file, from scripts (using the static ``Resources`` class). We <br />will not be using it until... nearly the end (menu chapter) so, to simplify, we decided not to include it for now. 
+_Note about the "Resources" folder_: If you have already tried Unity before, you may know that "Resources" is a useful and unique folder. It allows you to load an object or a file inside a script (using the static `Resources` class). <br />We will not be using it until... nearly the end (in the chapter about menus). So, to simplify, we decided to not include it for now.
 </md-note>
 
 ## Our first game scene
