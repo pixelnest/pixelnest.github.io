@@ -1,7 +1,7 @@
 ---
 layout: tutorial
-title: Conclusion
-date: 20/11/18
+title: Créer un jeu 2D avec Unity
+date: 13/11/20
 
 tutorial:
   name: Creating a 2D game with Unity

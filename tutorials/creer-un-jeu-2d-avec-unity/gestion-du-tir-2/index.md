@@ -1,8 +1,7 @@
 ---
 layout: tutorial
 title: Gestion du tir (2/2)
-author: Damien Matthieu
-date: 20/11/13
+date: 13/11/20
 
 tutorial:
   name: Créer un jeu 2D avec Unity

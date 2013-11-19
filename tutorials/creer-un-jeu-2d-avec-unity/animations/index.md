@@ -1,20 +1,20 @@
 ---
 layout: tutorial
-title: 2D Animations
-date: 20/11/18
+title: Animations 2D
+date: 13/11/20
 
 tutorial:
-  name: Creating a 2D game with Unity
+  name: Créer un jeu 2D avec Unity
   link: ../
 
 links:
-  summary: ../table-of-contents
+  summary: ../sommaire
   previous: ../conclusion
-  next: ../tweaking-the-gameplay
+  next: ../ajuster-gameplay
 ---
 
-_This chapter hasn't been released yet!_
+_Ce chapitre n'a pas encore été écrit_
 
-We know this is important so we are working hard on it!
+Mais nous travaillons dur pour qu'il soit rapidement mis en ligne !
 
-Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to be notified when this chapter is available.
+Restez à l'écoute, suivez nous sur [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) ou grâce au [flux RSS de notre blog RSS](http://feedpress.me/pixelnest) pour être informé des nouveautés !

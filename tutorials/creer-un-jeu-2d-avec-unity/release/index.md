@@ -1,144 +1,142 @@
 ---
 layout: tutorial
-title: Build, release and deploy
-date: 20/11/18
+title: Préparer et déployer un exécutable de son jeu
+date: 13/11/20
 
 tutorial:
-  name: Creating a 2D game with Unity
+  name: Créer un jeu 2D avec Unity
   link: ../
 
 links:
-  summary: ../table-of-contents
+  summary: ../sommaire
   previous: ../menus
   next: ../conclusion
 ---
 
-The game is ready. The last thing we have to do is to create an executable that you can distribute. It's going to be short, because deploying with Unity is (fairly) easy.
+Le jeu est prêt. Maintenant nous devons le sortir de Unity : créer un exécutable que l'on peut partager ou mettre en ligne (et en vente). Cette partie sera courte, car c'est assez simple à faire avec Unity.
 
-# Build Settings, Pt. 2
+# "Build Settings", deuxième manche
 
-Building is in one window that we have already used.
+Nous avons déjà vu cette fenêtre dans la partie sur les menus.
 
-Re-open the "File" -> "Build Settings" window.
+Réouvrez-la avec "File" -> "Build Settings".
 
-On the left, you can select a platform. This will make the platform settings appears on the right.
+Dans la liste de gauche, vous pouvez choisir une plateforme cible. Cela fera apparaître sur la droite une série de paramètres pour le déploiement.
 
 [ ![platforms][platforms] ][platforms]
 
-Choose the one you want and hit "Build & Run".
+Une fois choisie, il suffit de cliquez sur "Build" ou "Build & Run".
 
-Let's try with the Web Player:
+Essayons d'exporter une version web :
 
-1. Select "Web Player" in "Platform"
-2. Build the game.
-3. Observe: it produces an HTML page with the game embedded in.
-4. Try it.
+1. Sélectionnez "Web Player" dans les "Platform"
+2. Faites un "Build" du jeu
+3. Unity devrait produire une page HTML prêt à l'emploi
+4. Ouvrez-là et essayez votre jeu
 
-This is the first and simplest way to distribute your game. You just have to host the two files on a server.
+Voici la première et plus simple façon de distribuer votre jeu. Il vous suffit d'héberger quelque part sur l'Internet les deux fichiers produits et de diffuser le lien.
 
 [ ![The web version][web_result] ][web_result]
 
-# Player Settings
+# "Player Settings"
 
-You may need to adjust some settings (like the resolution, the game name or some resources) for a specific platform.
-
-You do that by going to the "Player Settings" panel:
+Évidemment, une palanquée de paramètres est disponible pour l'export (la résultion, le nom, l'icône, etc). Pour les modifier il faut aller dans l'onglet "Player Settings" :
 
 * "File" -> "Build Settings" -> "Player Settings"
 
-Or:
+Ou :
 
 * "Edit" -> "Project Settings" -> "Player"
 
-Here, we set the web player resolution to 1280 * 780:
+Ici par exemple nous modifions la résolution utilisée par le player web pour notre jeu en 1280 * 780 :
 
 [ ![Player settings][player_settings] ][player_settings]
 
-# Deploying on Windows, Mac and Linux
+# Déployer sur PC (Windows, Mac et Linux)
 
-There isn't much to say about these platforms. By choosing "PC, Mac & Linux Standalone", you will be able to select a specific operating system to target.
+Il n'y a pas grand chose à dire pour ces plateformes. En sélectionnant  "PC, Mac & Linux Standalone", vous pourrez ensuite préciser quelle plateforme vous visez réellement :
 
 [ ![pc_target][pc_target] ][pc_target]
 
-And that's (almost) all! Unity is really awesome to build and deploy.
+Et c'est a peu près tout. Unity fera un joli exécutable, pas mal non ?
 
-# Bonus for Mac users: Deploying on iOS
+# Bonus pour les utilisateurs Mac : déployer sur iOS
 
-Mobile deployment is a bit more complicated. You need to have the latest SDK (the official development tools) installed for the platform you target.
+Déployer sur mobile est un _chouilla_ plus compliqué. Il vous faut au préalable avoir les outils officiels de développement (le SDK) pour la plateforme visée d'installés.
 
-This also means that you need Mac OS X to release an iOS game.
+Cela veut aussi dire qu'il faudra Mac OS X pour déployer un jeu sur iOS.
 
-We are going to look at the procedure for an iOS games. Our guess is that it is very similar for an Android game.
+Nous allons voir la procédure détaillée pour déployer un jeu iOS, elle est probablement très similaire pour Android.
 
-First, select "iOS" in the build window:
+Tout d'abord, sélectionnez "iOS" dans la fenêtre "Build Settings"
 
 [ ![ios_build][ios_build] ][ios_build]
 
-Open the "Player settings" view to change a few parameters (minimum SDK, icon, etc.).
+Allez dans les "Player settings" pour mettre à jour certains paramètres (version du SDK, icon, etc.).
 
 <md-note>
-_Tip_: If you want to test on a simulator, there's a trick. In the iOS "Player Settings", find the "SDK version" field. Then choose "Simulator SDK":
+_Astuce_ : Si vous voulez tester sur le simulateur, il y a une option un peu cachée. Dans les "Player Settings" pour iOS, cherchez le champ "SDK version". Choisissez la valeur "Simulator SDK":
 <br/><br />
 [ ![ios_simulator][ios_simulator_mini] ][ios_simulator]
 <br />
 </md-note>
 
-Build the project. Unity will prompt you to choose a location:
+Faite un nouveau "Build" du projet. Unity vous demandera de choisir une destination :
 
 [ ![ios_build2][ios_build2] ][ios_build2]
 
-In fact, Unity has generated an Xcode project:
+Car en fait, Unity va générer un projet XCode :
 
 [ ![ios_project_xcode][ios_project_xcode] ][ios_project_xcode]
 
-That's why you really need to have all the development tools installed, otherwise you won't be able to even launch the project on an iOS device or simulator.
+Et voilà pourquoi il vous faut tous les outils de développement d'installés. Sans eux vous ne pourrez pas ouvrir, compiler et lancer le projet sur un terminal ou le simulateur iOS.
 
-Open the `.xcodeproj` file with Xcode. Fortunately, we don't have much to do now, except launching the project:
+Ouvrez le fichier `.xcodeproj` avec Xcode. Heureusement il n'y a rien à faire à part lancer le projet :
 
 [ ![ios_xcode][ios_xcode] ][ios_xcode]
 
-Try to start the game. It should be deployed on the simulator. For example, on an iPad:
+Lancez le jeu, il devrait alors s'exécuter comme une application iOS normale dans le simulateur (ou sur votre terminal) :
 
 [ ![ios_result][ios_result] ][ios_result]
 
-It's working!
+Et ça marche !
 
-Sprites are correctly displayed, the game is loading... But it is also unplayable, because touch controls are not implemented (except for the "tap" to fire that comes with the default input settings).
+Les sprites sont bien affichées, le jeu démarrer... mais c'est aussi injouable car nous ne gérons pas les contrôles tactiles (sauf le "tap" qui est livré avec les contrôles par défaut pour "Fire1").
 
-The resolution and the orientation are also not handled.
+La résolution et l'orientation ne sont pas bien gérées non plus.
 
-And finally, if you have a real device, you may discover that performances suck.
+Et selon votre jeu, vous découvrirez aussi que les performances sot peut-être très mauvaises.
 
-That's why mobile is not easy: you need to optimize and tweak your game to get the best from it on smartphones and tablets.
+C'est pour cela que viser le mobile n'est pas chose aisée, même avec Unity : il faut optimiser et bricoler finement son jeu pour tirer le meilleur parti des tablettes et smartphones.
 
-# Asset quality per platform
+# Changer la qualité selon la plateforme
 
-For some assets, you may need to specify a lower (or higher) quality for a given platform.
+Pour certaines assets, vous voudrez peut-être avoir une qualité différente selon la plateforme.
 
-Look at the images, for example. You can lower the quality for mobile devices but keep it higher for desktop computers.
+les images par exemple, peuvent êtres de moins bonne qualité sur mobile (mais gare au retina) tandis que la version PC aura la meilleure qualité possible.
 
 [ ![texture_specific_quality][texture_specific_quality] ][texture_specific_quality]
 
-You need to keep in mind that there is going to be a tweaking and optimization phase at the end of your development.
+Garez en tête que ce genre de décision et d’optimisations se font plutôt à la fin du développement.
 
-# Next Step... Oh wait.
+# Prochaine étape ?
 
-That's it. You've made it. The development is over.
-You probably don't feel ready to make a full 2D game but _you are_. You need time and dedication now.
+Et voilà. Vous y êtes arrivés. Le développement du jeu pour ce didacticiel est terminé.
 
-Go next to read the final last steps. :)
+Vous ne vous sentez probablement pas prêts à vous lancer dans votre propre jeu, mais vous l'êtes en réalité. Ce qu'il vous faut, c'est un peu de temps et d'investissement pour vous lancer.
 
+Il ne vous reste plus qu'à lire les dernières étapes, le mot de la fin :).
 
-[platforms]: ./-img/platforms.png
-[web_result]: ./-img/web_result.png
-[player_settings]: ./-img/player_settings.png
-[pc_target]: ./-img/pc_target.png
-[texture_specific_quality]: ./-img/texture_specific_quality.png
+[platforms]: ../../2d-game-unity/deployment/-img/platforms.png
+[web_result]: ../../2d-game-unity/deployment/-img/web_result.png
+[player_settings]: ../../2d-game-unity/deployment/-img/player_settings.png
+[pc_target]: ../../2d-game-unity/deployment/-img/pc_target.png
+[texture_specific_quality]: ../../2d-game-unity/deployment/-img/texture_specific_quality.png
 
-[ios_build]: ./-img/ios_build.png
-[ios_build2]: ./-img/ios_build_2.png
-[ios_project_xcode]: ./-img/ios_project_xcode.png
-[ios_simulator]: ./-img/ios_simulator.png
-[ios_simulator_mini]: ./-img/ios_simulator_mini.png
-[ios_xcode]: ./-img/ios_xcode.png
-[ios_result]: ./-img/ios_result.png
+[ios_build]: ../../2d-game-unity/deployment/-img/ios_build.png
+[ios_build2]: ../../2d-game-unity/deployment/-img/ios_build_2.png
+[ios_project_xcode]: ../../2d-game-unity/deployment/-img/ios_project_xcode.png
+[ios_simulator]: ../../2d-game-unity/deployment/-img/ios_simulator.png
+[ios_simulator_mini]: ../../2d-game-unity/deployment/-img/ios_simulator_mini.png
+[ios_xcode]: ../../2d-game-unity/deployment/-img/ios_xcode.png
+[ios_result]: ../../2d-game-unity/deployment/-img/ios_result.png

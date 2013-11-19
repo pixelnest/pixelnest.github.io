@@ -16,7 +16,7 @@ _This chapter hasn't been released yet!_
 
 But we are working hard on it!
 
-Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](https://www.facebook.com/pixelneststudio) to be notified when this chapter is available.
+Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog RSS](http://feedpress.me/pixelnest) to be notified when this chapter is available.
 
 <!--
 # Rough values to get the same game as in the demo
