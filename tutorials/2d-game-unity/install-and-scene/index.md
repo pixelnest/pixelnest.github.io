@@ -63,7 +63,7 @@ However, learning to use the main interface of Unity is relatively easy. _You mi
 
 Here are some other resources that we find interesting and that should complete us on this subject:
 
-- [Official Unity editor tutorials][unity_videos_link]: The official videos are great. You should take an afternoon to watch them all — we guarantee you that you will not loose your time.
+- [Official Unity editor tutorials][unity_videos_link]: The official videos are great. You should take an afternoon to watch them all — we guarantee you that you will not lose your time.
 
 - [Unity Patterns][unitypatterns_link]: A fresh new site with great articles and tools. The tutorials about coroutines is a must-read if you are not familiar with the concept.
 
