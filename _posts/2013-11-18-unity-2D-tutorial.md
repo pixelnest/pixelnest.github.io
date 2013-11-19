@@ -6,7 +6,7 @@ subtitle: learn how to make a little game from installation to deployment
 
 Fellow game developers,
 
-You probably heard last week that Unity has released along with the 4.3 version a new set of [great 2D tools](http://unity3d.com/unity/whats-new).
+You probably heard last week that Unity has released along with the 4.3 version a new set of [great 2D tools](http://unity3d.com/unity/whats-new/unity-4.3).
 
 If you haven't tried Unity yet, we think that it is the best time to give it a shot. 
 
