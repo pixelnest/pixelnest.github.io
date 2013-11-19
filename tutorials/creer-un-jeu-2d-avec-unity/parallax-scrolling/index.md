@@ -555,7 +555,7 @@ Nous récupérons ici les coins de la caméra et nous nous assurons ensuite que 
 
 Maintenant nous avons un _scrolling shooter_ !
 
-Vous avez vu comment utiliser et implémenter le défilement avec plusieurs plans. Pour l'instant le script se limite à une seule direction mais vous devriez être capable de changer cela si vous le souhaitez.
+Vous avez vu comment utiliser et implémenter le défilement avec plusieurs plans. Pour l'instant le script se limite à une seule direction mais vous devriez être capable de changer cela si vous le souhaitez. (Bonus : [comme quelqu'un était bloqué sur le sujet, voici le corrigé et une animation du résultat !](https://gist.github.com/Valryon/7547513)).
 
 Mais avouons-le, le jeu a besoin de pas mal de petites retouches pour être jouable. Par exemple :
 
@@ -564,7 +564,7 @@ Mais avouons-le, le jeu a besoin de pas mal de petites retouches pour être joua
 - Ajouter des ennemis et des nouveaux types d'ennemis
 - _Rendre le jeu fun_
 
-Nous parlerons de tous ces points dans notre chaptire à venir sur les réglages du gameplay (qui n'est pas encore terminé, désolés). Mais c'est un bon exercice auquel nous vous invitons à vous prêtez.
+Nous parlerons de tous ces points dans notre chapitre à venir sur les réglages du gameplay (qui n'est pas encore terminé, désolés). Mais c'est un bon exercice auquel nous vous invitons à vous prêtez. 
 
 C'est tout pour le gameplay, nous allons maintenant ajouter un peu de cosmétiques, de feedbacks... et un peu de dynamisme avec les particules !
 

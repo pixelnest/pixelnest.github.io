@@ -572,7 +572,8 @@ Tweak the code to better understand what is happening.
 
 We have a scrolling shooter!
 
-We have just learned how to add a scrolling mechanism to our game, as well as a parallax effect for the background layers. However, the current code only works for right to left scrolling. But with your new knowledge, you should be able to enhance it and make it work for all scrolling directions.
+We have just learned how to add a scrolling mechanism to our game, as well as a parallax effect for the background layers. However, the current code only works for right to left scrolling. But with your new knowledge, you should be able to enhance it and make it work for all scrolling directions (bonus: [I did it as someone was stuck on the subject, clic to the code and animation](https://gist.github.com/Valryon/7547513)).
+
 
 Still, _the game really needs some tweaks to be playable_. For example:
 
