@@ -41,7 +41,9 @@ Encore une fois, téléchargez et installez, tout est prêt à l'emploi. Changez
 
 [ ![Préferences][unity_prefs_vs_url] ][unity_prefs_vs_url]
 
-**Remarque : ** Il n'est pas possible de débugger gratuitement avec Visual Studio. Il faut faut un plugin (VSUnity) et une version au moins Pro de Visual Studio.
+<md-warning>
+_A savoir_ : Il n'est pas possible de déboguer simplement avec Visual Studio 2013 express. Il faut pour cela avoir au moins une version pro de Visual Studio et acheter le plugin [UnityVS][unityvs_link]. Vous aurez donc un meilleur éditeur pour le code mais l’absence de debug peut être critique dans certains cas.
+</md-warning>
 
 ### Mac OS X
 
@@ -51,7 +53,7 @@ Encore une fois, téléchargez et installez, tout est prêt à l'emploi. Changez
 
 Unity reconnaît trois langages pour les scripts : JavaScript (UnityScript), C# et Boo.
 
-Nous vous recommandons d'utiliser le C#, c'est un langage puissant, fortement typé et moins sujet aux erreurs. Et ce tutoriel est rédigé en C#.
+Nous vous recommandons d'utiliser le C#, c'est un langage puissant, fortement typé et moins sujet aux erreurs. Et c'est dans ce langage que sont écrits les scripts du tutoriel.
 
 ## "Je n'ai jamais touché à Unity"
 
@@ -164,7 +166,7 @@ Une petite astuce pour rester organisé est d'utilisé des nouveaux objets vides
 **Vérifiez bien que leur position est ``(0, 0, 0)``. Ils n'utilisent pas cette information donc autant ne pas s'en servir. De plus, cela permet de les avoir tous à la même place.**
 
 <md-note>
-_Note_ : Changer la position d'un objet affectera tous ses enfants, ils sont liés. C'est le principe du graph de scène.
+_Note_ : Changer la position d'un objet affectera tous ses enfants, ils sont liés. C'est le principe du graphe de scène.
 </md-note>
 
 Ces objets vides peuvent être vu comme purement logiques et sans rapports avec le gameplay.
@@ -223,6 +225,7 @@ Mais nous avons maintenant une base propre pour la suite. Les choses sérieuses 
 [vs_download_link]: http://www.microsoft.com/visualstudio/eng/downloads#d-2013-express "Download Visual Studio"
 [md_link]: http://monodevelop.com/ "MonoDevelop"
 [xs_link]: http://xamarin.com/studio "Xamarin Studio"
+[unityvs_link]: http://unityvs.com/
 
 [unity_videos_link]: http://unity3d.com/learn/tutorials/modules/beginner/editor "Unity Editor Tutorials"
 [unitypatterns_link]: http://unitypatterns.com/ "Unity Patterns"

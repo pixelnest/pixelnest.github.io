@@ -17,4 +17,4 @@ _Ce chapitre n'a pas encore été écrit_
 
 Mais nous travaillons dur pour qu'il soit rapidement mis en ligne !
 
-Restez à l'écoute, suivez nous sur [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) ou grâce au [flux RSS de notre blog RSS](http://feedpress.me/pixelnest) pour être informé des nouveautés !
+Restez à l'écoute, suivez nous sur [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) ou grâce au [flux RSS de notre blog](http://feedpress.me/pixelnest) pour être informé des nouveautés !

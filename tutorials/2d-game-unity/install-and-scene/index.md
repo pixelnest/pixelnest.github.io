@@ -41,6 +41,10 @@ Likewise: download and install, it's simple as everything is bundled, though it 
 
 [ ![Change the preferences][unity_prefs_vs_url] ][unity_prefs_vs_url]
 
+<md-warning>
+_A savoir_ : Il n'est pas possible de déboguer simplement avec Visual Studio 2013 express. Il faut pour cela avoir au moins une version pro de Visual Studio et acheter le plugin [UnityVS][unityvs_link]. Vous aurez donc un meilleur éditeur pour le code mais l’absence de debug peut être critique dans certains cas.
+</md-warning>
+
 ### Mac OS X
 
 [MonoDevelop 4][md_link] is very similar to [Xamarin Studio][xs_link]. Which means that it is way better than the old MonoDevelop 2 of the previous releases of Unity. It is far from perfect, but if you are on a Mac, it's still the best option that you've got.
@@ -205,6 +209,7 @@ We have just created the basic structure of our game. In the next step we will s
 [vs_download_link]: http://www.microsoft.com/visualstudio/eng/downloads#d-2013-express "Download Visual Studio"
 [md_link]: http://monodevelop.com/ "MonoDevelop"
 [xs_link]: http://xamarin.com/studio "Xamarin Studio"
+[unityvs_link]: http://unityvs.com/
 
 [unity_videos_link]: http://unity3d.com/learn/tutorials/modules/beginner/editor "Unity Editor Tutorials"
 [unitypatterns_link]: http://unitypatterns.com/ "Unity Patterns"
