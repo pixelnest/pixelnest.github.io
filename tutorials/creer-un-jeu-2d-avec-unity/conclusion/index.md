@@ -4,42 +4,43 @@ title: Créer un jeu 2D avec Unity
 date: 13/11/20
 
 tutorial:
-  name: Creating a 2D game with Unity
+  name: Créer un jeu 2D avec Unity
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../deployment
+  summary: ../sommaire
+  previous: ../release
   next: ../animations
 ---
 
-And _this is it_.
+C'est _terminé_.
 
-# And now what?
+# C'est quoi la suite ?
 
-In the near future, we are going to release some new chapters which will dive into other topics (like advanced gameplay or the new animation tools).
+Nous ajouterons prochainement d'autres chapitres pour aborder d'autres sujets intéressants (comment améliorer, comment utiliser le nouvel outil pour les animations).
 
-But now, it's all up to you. It's up to you to start _your_ real project.
+Mais en attendant, c'est votre à tour. C'est à vous de commencer _votre_ projet.
 
-The last steps?
+Les dernières étapes pour cela ?
 
 [ ![Last steps][last] ][last]
 
-And the rest is all yours...
+Et la suite n'appartient qu'à vous...
 
 <md-tip>
-_A last tip?_ Use a version control system (Git, Mercurial or SVN), even if you are alone. You won't regret it.
+_une dernière astuce ?_ Utilisez un outil de versionnement du code source (Git, Mercurial or SVN), même si vous travaillez seul. Vous ne le regretterez pas.
 </md-tip>
 
 
-<br />If you liked this tutorial, you might want to:
+<br />Si vous avez aimé ce tutoriel, vous pouvez :
 
-* Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio).
-* Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).
-* Subscribe to our [RSS feed](http://feedpress.me/pixelnest).
-* Give your impressions? :)
+* Nous suivre sur [Twitter](https://twitter.com/pixelnest) ou [Facebook](https://www.facebook.com/pixelneststudio).
+* Suivre les auteurs, [Damien](https://twitter.com/valryon) et [Matthieu](https://twitter.com/solarsailer).
+* Vous abonnez à notre [flux RSS](http://feedpress.me/pixelnest).
+* Le partager à vos collègues, à vos amis
+* Nous donnez votre avis :)
 
-Thanks for reading us! We hope you have enjoyed this tutorial and that it will give you a solid foundation to build some great games!
+Merci de nous avoir lus ! Nous espérons que vous avez appréciés ce didacticiel et que cela vous permettra d'attaquer sereinement votre propre projet pour faire d'excellent jeu auquel nous prendrons grand plaisir à jouer !
 
 
-[last]: ./-img/last.png
+[last]: ../../2d-game-unity/conclusion/-img/last.png
