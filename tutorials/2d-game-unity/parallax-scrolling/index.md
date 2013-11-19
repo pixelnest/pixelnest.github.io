@@ -388,6 +388,12 @@ _(Click on the image to see the animation)_
 
 Yes! We finally have a functional "parallax scrolling" implementation.
 
+<md-note>
+_Note:_ Why don't we just use the ``OnBecameVisible`` and ``OnBecameInvisible`` methods? Because they are broken. The idea is there, you add this method in your scripting (like ``Start`` or ``Update``) and the code is executed when the object is rendered.
+<br />_BUT_, it is also called when _the scene view_ (the editor) is rendering the object!
+<br />So it means it is not the same behavior in the editor and in the release. This is dangerous and absurd.     
+</md-note>
+
 # Bonus: Enhancing existing scripts
 
 Let's update our previous scripts.

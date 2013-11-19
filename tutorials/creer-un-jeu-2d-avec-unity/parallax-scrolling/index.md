@@ -373,6 +373,12 @@ _(Cliquez pour voir l'animation)_
 
 Et voilà ! Nous avons une implémentation fonctionnelle de scrolling différentiel ! (et voilà pourquoi on garde le terme anglais...)
 
+<md-note>
+_Note :_ Pourquoi ne pas simplement utiliser les méthodes  ``OnBecameVisible`` et ``OnBecameInvisible`` ? Parce qu'elles sont inutilisables. L'idée est bonne : vous ajoutez cette fonction dans votre script (comme vous ajoutez ``Start`` ou ``Update``) et le code est exécuté quand l'objet est affiché.
+<br />SAUF QUE c'est appelé aussi quand c'est l'onglet _Scene_ (l'éditeur) qui l'affiche !
+<br />Donc si on place ses ennemis plus loins dans la scène comme nous le faisons ici, la méthode est appelé différemment dans l'éditeur et dans l'exécutable final. C'est absurde et propice aux erreurs.     
+</md-note>
+
 # Bonus : Amélioration des scripts précédents
 
 Le cœur du jeu est fonctionnel, voici quelques mises à jour pour les scripts existants pour améliorer certains points.
