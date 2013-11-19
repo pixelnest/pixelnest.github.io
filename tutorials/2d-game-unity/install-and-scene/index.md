@@ -131,6 +131,10 @@ Textures are sprites and images of your game. In a 2D project, you could rename 
 
 It doesn't really matter in a 2D project, but by keeping the name "Textures", Unity will recognize it and automate some tasks. If you want some informations about this topic, you can read [this](http://answers.unity3d.com/questions/172384/importing-models.html) or [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
 
+<md-note>
+_Note about the Resources folder_: if you already tried Unity you may know that _Resources_ is a useful and unique folder, that allows you to load an object, a file, from scripts (using the static ``Resources`` class). We <br />will not be using it until... nearly the end (menu chapter) so, to simplify, we decided not to include it for now. 
+</md-note>
+
 ## Our first game scene
 
 The "Hierarchy" pane contains every object that is available in the scene. This is what you manipulate when you start the game with the "Play" button.

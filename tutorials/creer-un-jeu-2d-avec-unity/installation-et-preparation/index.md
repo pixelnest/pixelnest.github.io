@@ -140,6 +140,12 @@ On entend par texture toutes les images et les sprites de notre jeu. Si vous ne 
 
 En revanche en 3D cela permet l'automatisation par Unity de certaines tâches. [Plus d'informations](http://answers.unity3d.com/questions/172384/importing-models.html) or [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
 
+<md-note>
+_Note au sujet du dossier Resources_ : si vous avez déjà utilisé Unity, vous connaissez peut-être le dossier ``Resources``. Ce dernier est spécial : il permet de charger un fichier ou un objet qui se trouve dedans à partir d'un script (en utilisant la classe statique ``Resources``).
+<br />Comme nous le l'utiliserons pas avant la fin (chapitre sur les menus), nous avons préféré ne pas le créer pour le moment pour simplifier notre projet.
+</md-note>
+
+
 ## Notre première scène
 
 L'onglet _Hierarchy_ contient tous ce qui présent dans la scène. C'est ce qu'il faut manipuler, préparer avant de lancer le jeu.
