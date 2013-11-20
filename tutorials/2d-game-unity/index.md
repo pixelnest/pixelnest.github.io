@@ -25,7 +25,7 @@ The assets, gameplay and original idea come from the game [The Great Paper Adven
 
 # Unity
 
-[Unity3D][unity_link] is a popular and complete solution to create multiplatform video games. This tutorial assumes that you are _at least a bit familiar_ with the tools and the engine.
+[Unity3D][unity_link] is a popular and complete solution to create multiplatform video games. This tutorial assumes that you are _at least a bit familiar_ with a programming language. Knowing the tools and the engine is a _plus_, but is not necessary.
 
 This tutorial is made with the Unity 4.3 **FREE** version.
 
@@ -54,6 +54,7 @@ This tutorial is mainly redacted by [Damien][dam_twitter_link], and edited by [M
 <br />
 
 So, are you ready? Let's dive into Unity!
+
 
 [unity_logo_url]: ./-img/unity.png
 [result]: ./-img/result.png
