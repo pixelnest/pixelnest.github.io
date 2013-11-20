@@ -57,9 +57,9 @@ We highly recommend that you use C#. It's more powerful and less error-prone. Mo
 
 ## What if I am a total Unity newbie?
 
-If you are totally new to Unity, you may get lost as we are not going to explain every piece of the editor.
+If you are totally new to Unity, we will do our best to explain it as much as we can in this tutorial.
 
-However, learning to use the main interface of Unity is relatively easy. _You might be scared the first time you open the software_, but it is just a matter of hours to be comfortable with it.
+Learning to use the main interface of Unity is relatively easy. _You might be scared the first time you open the software_, but it is just a matter of hours to be comfortable with it.
 
 Here are some other resources that we find interesting and that should complete us on this subject:
 

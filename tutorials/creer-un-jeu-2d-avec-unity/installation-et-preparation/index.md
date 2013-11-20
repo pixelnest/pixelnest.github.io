@@ -13,7 +13,7 @@ links:
   next: ../arriere-plan-et-camera
 ---
 
-Dans ce premier chapitre nous aborderons la base : installer le logiciel, créer un nouveau projet et le préparer à la suite des événements. 
+Dans ce premier chapitre nous aborderons la base : installer le logiciel, créer un nouveau projet et le préparer à la suite des événements.
 
 # Installation de l'environnement
 
@@ -35,7 +35,7 @@ Unity est livré avec MonoDevelop (4.0.1 actuellement) pour l'écriture de code 
 
 Si vous êtes sur Windows, vous pouvez utiliser une alternative :
 
-* [Visual Studio 2013 Desktop (C#)][vs_download_link] 
+* [Visual Studio 2013 Desktop (C#)][vs_download_link]
 
 Encore une fois, téléchargez et installez, tout est prêt à l'emploi. Changez ensuite une préférence dans Unity pour que Visual Studio soit l'éditeur de scripts par défaut :
 
@@ -57,11 +57,11 @@ Nous vous recommandons d'utiliser le C#, c'est un langage puissant, fortement ty
 
 ## "Je n'ai jamais touché à Unity"
 
-Si vous venez juste d'installer le logiciel pour la première fois, il se peut que nous allions un peu vite sur certains points.
+Si vous n'avez encore jamais touché à Unity auparavant, nous allons faire de notre mieux pour vous expliquer le logiciel tout au long de ce tutorial.
 
-Même si dans un premier temps, l'interface semble envahissante et complexe, on s'habitude vite à ce logiciel un peu "clicodrome" il est vrai.
+Apprendre à utiliser l'interface principale de Unity est relativement simple. Dans un premier temps, _le logiciel pourra vous sembler envahissant et complexe_, mais ce n'est que l'histoire de quelques heures avant d'être à l'aise avec (le côté clicodrome peut être rédhibitoire, il est vrai).
 
-Voici d'autres ressources qui pourront vous aider à vous familiariser avec l'outil (EN) : 
+Voici d'autres ressources qui pourront vous aider à vous familiariser avec l'outil (en anglais) :
 
 - [Vidéos Unity officielles][unity_videos_link]: Très bien réalisées et très complètes, ces vidéos sont une ressource essentielle pour découvrir et apprendre Unity.
 
@@ -97,7 +97,7 @@ Il peut être par exemple intéressant d'avoir la fenêtre de jeu à côté de l
 
 Avant d'attaquer la création de notre jeu, il nous reste une dernière étape.
 
-Nous vous conseillons de créer dans l'onglet "Project" de Unity des dossiers comme suit pour ranger les différents éléments. Ces dossiers et fichiers sont en réalité stockés dans le dossier _Assets_ de votre projet. 
+Nous vous conseillons de créer dans l'onglet "Project" de Unity des dossiers comme suit pour ranger les différents éléments. Ces dossiers et fichiers sont en réalité stockés dans le dossier _Assets_ de votre projet.
 
 <md-note>
 _Note :_ Le dossier "Assets" est un le dossier racine des projets Unity pour tout ce qui touche au contenu. Vous ne le voyez pas dans le logiciel, mais vous pouvez le voir dans votre explorateur de fichiers.
@@ -181,7 +181,7 @@ Nous allons créer les objets vides suivants :
 - ``Render``: Déplacez la caméra ici. Nous pourrions aussi y mettre la lumière.
 - ``Level``
 
-Dans l'objet ``Level``, ajoutez trois objets vides comme enfants : 
+Dans l'objet ``Level``, ajoutez trois objets vides comme enfants :
 
 - ``0 - Background``
 - ``1 - Middleground``
