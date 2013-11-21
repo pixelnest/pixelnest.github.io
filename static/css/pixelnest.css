@@ -305,8 +305,8 @@ li {
     padding-left: 40px;
     width: 40%; } }
 .card {
-  margin-bottom: 90px;
-  padding-bottom: 40px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #eee; }
 
 .card.alone {
@@ -314,7 +314,13 @@ li {
 
 .card__title {
   margin: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 1.5em; }
+
+.card__type {
+  color: #bbb;
+  font-size: 0.7em;
+  font-style: italic; }
 
 .card__cover {
   float: left;
