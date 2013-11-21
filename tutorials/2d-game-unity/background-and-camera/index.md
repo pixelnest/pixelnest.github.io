@@ -44,9 +44,9 @@ Unity may have set automatically your background as the sprite to display. If no
 _(You have to click on the small round icon at the right of the input box to show the "Select Sprite" inspector)_
 
 <md-note>
-_"My sprite doesn't show up in the dialog?"_: First, make sure you are in the "Assets" tab of the "Select Sprite" dialog. <br /><br />Some readers have reported that, in their project, this dialog was empty. The reason is that for some Unity installations, even with a fresh new 2D project, images are imported as "Texture" and not "Sprite".
+_"My sprite doesn't show up in the dialog?"_: First, make sure you are in the "Assets" tab of the "Select Sprite" dialog. <br />Some readers have reported that, in their project, this dialog was empty. The reason is that for some Unity installations, even with a fresh new 2D project, images are imported as "Texture" and not "Sprite".
 <br /><br />To fix this, you need to select the image in the "Project" pane, and in the "Inspector", change the "Texture Type" property to "Sprite":
-<br />
+<br /><br />
 [ ![Sprite mode][sprite] ][sprite]
 <br />
 We don't know why everybody doesn't seem to have the same behavior.
