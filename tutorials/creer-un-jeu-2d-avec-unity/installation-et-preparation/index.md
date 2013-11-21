@@ -100,7 +100,7 @@ Avant d'attaquer la création de notre jeu, il nous reste une dernière étape.
 Nous vous conseillons de créer dans l'onglet "Project" de Unity des dossiers comme suit pour ranger les différents éléments. Ces dossiers et fichiers sont en réalité stockés dans le dossier _Assets_ de votre projet.
 
 <md-note>
-_Note :_ Le dossier "Assets" est un le dossier racine des projets Unity pour tout ce qui touche au contenu. Vous ne le voyez pas dans le logiciel, mais vous pouvez le voir dans votre explorateur de fichiers.
+_Note :_ Le dossier "Assets" est un le dossier racine des projets Unity pour tout ce qui touche au contenu. Vous ne le voyez _peut-être_ pas dans le logiciel, selon la disposition utilisée dans l'onglet _Projects_ ("One-column" ou "Two-columns"), mais vous pouvez le voir dans tous les cas dans votre explorateur de fichiers.
 </md-note>
 
 [ ![Dossiers][unity_folders] ][unity_folders]

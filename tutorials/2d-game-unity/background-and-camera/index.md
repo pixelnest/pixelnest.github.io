@@ -43,6 +43,14 @@ Unity may have set automatically your background as the sprite to display. If no
 
 _(You have to click on the small round icon at the right of the input box to show the "Select Sprite" inspector)_
 
+<md-note>
+_My sprite doesn't show up in the pane_: First, make sure you are in the "Assets" subpanel of the selector. Some readers has reported that, in their project, the selection screen was empty. For some Unity installation, even with a fresh new 2D project, images are imported as "Textures". 
+<br /><br />You need to select the image file and, in the Inspector pane, change the type to "Sprite" :
+
+[ ![Sprite mode][sprite] ][sprite]
+
+</md-note>
+
 Well, we have set a simple sprite displaying a cloudy sky background. Let's reorganize the scene.
 
 In the "Hierarchy" pane, select the ``New Sprite``. Rename it in ``Background1`` or something you will easily remember.
@@ -161,6 +169,7 @@ In the next chapter, we will learn how to add a player and its enemies.
 
 [background]: ./-img/background.png
 [platforms]: ./-img/platforms.png
+[sprite]: ./-img/sprite.png
 [new_sprite]: ./-img/new_sprite.png
 [sprite_select]: ./-img/sprite_select.png
 [display_background]: ./-img/display_background.png

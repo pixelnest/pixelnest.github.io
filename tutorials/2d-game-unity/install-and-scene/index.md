@@ -96,7 +96,7 @@ Before jumping into the game creation, take a few minutes to organize your proje
 We advise to create folders in the Unity "Project" pane to organize your stuffs. These folders will technically be created in the _Assets_ folder  of your project.
 
 <md-note>
-_Note_: The "Assets" folder is the superfolder containing everything you add in the "Project" pane. It is not visible inside Unity, but if you open your file explorer, you will be able to see it.
+_Note_: The "Assets" folder is the superfolder containing everything you add in the "Project" pane. It _may_ not be visible inside Unity, depending on the selected layout for the pane (One-column or Two-columns), but if you open your file explorer, you will be able to see it.
 </md-note>
 
 [ ![Folders][unity_folders] ][unity_folders]

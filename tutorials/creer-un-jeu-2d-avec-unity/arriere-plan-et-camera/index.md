@@ -45,6 +45,15 @@ Si ce n'est pas le cas, voici comment faire. Allez dans l'_Inspector_ de ce "New
 
 _(Il faut cliquer sur la petite icône ronde à droite du champ "Select Sprite")_
 
+<md-note>
+_Je ne vois pas mon sprite dans la fenêtre de sélection_ : Première chose à vérifier, êtes-vous bien dans le sous-inglet "Assets" ? Si oui, alors peut-être que comme certains de nos lecteurs nous l'ont signalé, vos images ont été importés en tant que "Textures".
+<br /><br />
+Sélectionnez votre fichier et, dans l'onglet _Inspector_, changez le type de texture en "Sprite" :
+
+[ ![Sprite mode][sprite] ][sprite]
+
+</md-note>
+
 Vous devriez voir le ciel nuageux s'afficher dans la scène. Faisons un peu de rangement.
 
 Dans l'onglet _Hierrachy_, choississez ``New Sprite`` et renommez le en "Background1" ou quelque chose de facilement identifiable.
@@ -161,6 +170,7 @@ Vous avez appris à faire un décor simple à base de sprite. En réutilisant ce
 [background]: ../../2d-game-unity/background-and-camera/-img/background.png
 [platforms]: ../../2d-game-unity/background-and-camera/-img/platforms.png
 [new_sprite]: ../../2d-game-unity/background-and-camera/-img/new_sprite.png
+[sprite]: ../../2d-game-unity/background-and-camera/-img/sprite.png
 [sprite_select]: ../../2d-game-unity/background-and-camera/-img/sprite_select.png
 [display_background]: ../../2d-game-unity/background-and-camera/-img/display_background.png
 [background2_in_place]: ../../2d-game-unity/background-and-camera/-img/background2_in_place.png
