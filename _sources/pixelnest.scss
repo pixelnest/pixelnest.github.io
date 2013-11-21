@@ -110,6 +110,10 @@ li {
 // Change all the links in the page-content
 .page-content p a { @extend %link }
 
+// And in the lists...
+.page-content ul a,
+.page-content ol a { @extend %link }
+
 // Emphasize a bit the strong element
 .page-content p strong { color: black; }
 .page-content li strong { color: black; text-decoration: underline; }

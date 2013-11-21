@@ -22,14 +22,18 @@
   _overflow: visible;
   zoom: 1; }
 
-.page-content p a, .home__aside li a, .card__title a, .entry__title a, .entry__content a, .contacts li a, .founder__links li a, .pager a, .archives a, .tutorial .page-header a, .ie .logo {
+.page-content p a, .page-content ul a,
+.page-content ol a, .home__aside li a, .card__title a, .entry__title a, .entry__content a, .contacts li a, .founder__links li a, .pager a, .archives a, .tutorial .page-header a, .ie .logo {
   color: #00a9e0;
   text-decoration: none; }
-  .page-content p a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .entry__content a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .tutorial .page-header a:hover, .ie .logo:hover {
+  .page-content p a:hover, .page-content ul a:hover,
+  .page-content ol a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .entry__content a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .tutorial .page-header a:hover, .ie .logo:hover {
     text-decoration: underline; }
-  .page-content p a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .entry__content a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .tutorial .page-header a:active, .ie .logo:active {
+  .page-content p a:active, .page-content ul a:active,
+  .page-content ol a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .entry__content a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .tutorial .page-header a:active, .ie .logo:active {
     color: #98c73d; }
-  .page-content p a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .entry__content a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .tutorial .page-header a:focus, .ie .logo:focus {
+  .page-content p a:focus, .page-content ul a:focus,
+  .page-content ol a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .entry__content a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .tutorial .page-header a:focus, .ie .logo:focus {
     color: #98c73d; }
 
 html, body {

@@ -1,16 +1,16 @@
 ---
-layout: tutorial
+layout: default
 title: Tutorials
-author: none
+subtitle: we like to help!
 ---
 
-Here is a list of all the tutorials made by Pixelnest.
+Here is a list of all the tutorials made by Pixelnest:
 
 <!--
  and/or friends.
- -->
 
-# Made by Pixelnest
+ # Made by Pixelnest
+ -->
 
 * [Creating a 2D game with Unity](./2d-game-unity/)
 
