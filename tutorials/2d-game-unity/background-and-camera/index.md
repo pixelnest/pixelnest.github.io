@@ -46,9 +46,10 @@ _(You have to click on the small round icon at the right of the input box to sho
 <md-note>
 _My sprite doesn't show up in the pane_: First, make sure you are in the "Assets" subpanel of the selector. Some readers has reported that, in their project, the selection screen was empty. For some Unity installation, even with a fresh new 2D project, images are imported as "Textures". 
 <br /><br />You need to select the image file and, in the Inspector pane, change the type to "Sprite" :
-
+<br />
 [ ![Sprite mode][sprite] ][sprite]
-
+<br />
+We don't know yet why everybody doesn't have the same behavior.
 </md-note>
 
 Well, we have set a simple sprite displaying a cloudy sky background. Let's reorganize the scene.

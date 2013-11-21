@@ -49,9 +49,10 @@ _(Il faut cliquer sur la petite icône ronde à droite du champ "Select Sprite")
 _Je ne vois pas mon sprite dans la fenêtre de sélection_ : Première chose à vérifier, êtes-vous bien dans le sous-inglet "Assets" ? Si oui, alors peut-être que comme certains de nos lecteurs nous l'ont signalé, vos images ont été importés en tant que "Textures".
 <br /><br />
 Sélectionnez votre fichier et, dans l'onglet _Inspector_, changez le type de texture en "Sprite" :
-
+<br />
 [ ![Sprite mode][sprite] ][sprite]
-
+<br />
+Nous ne savons pas pourquoi ce comportement par défaut n'est pas le même pour tous.
 </md-note>
 
 Vous devriez voir le ciel nuageux s'afficher dans la scène. Faisons un peu de rangement.
