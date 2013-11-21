@@ -617,6 +617,9 @@ li {
   padding: 12px 10px;
   background-color: rgba(240, 240, 240, 0.8);
   font-size: 0.8em; }
+  @media only screen and (max-width: 600px) {
+    .tutorial .page-header {
+      font-size: 0.6em; } }
   .tutorial .page-header nav {
     display: table;
     width: 100%; }

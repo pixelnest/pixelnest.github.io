@@ -12,6 +12,11 @@
 
     font-size: 0.8em;
 
+    // Decrease the font a bit on small screen
+    @media only screen and (max-width: $phone) {
+      font-size: 0.6em;
+    }
+
     nav {
       display: table;
       width: 100%;
