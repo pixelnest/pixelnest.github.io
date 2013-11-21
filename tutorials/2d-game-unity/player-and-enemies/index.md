@@ -328,7 +328,7 @@ If you move the player in front of the enemy, the two sprites will collide. They
 
 # Next step
 
-You have learned how to add a player entity, controlled by the keyboard. Then, we created a basic enemy with a rudimentary IA.
+You have learned how to add a player entity, controlled by the keyboard. Then, we created a basic enemy with a rudimentary AI.
 
 Now, we want to destroy that moving thing! And for that, we need ammo!
 

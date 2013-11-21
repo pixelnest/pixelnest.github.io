@@ -47,7 +47,7 @@ However, this time, we need to set a new parameter in the "Inspector":
 
 6. In the "Box Collider 2D", check the "IsTrigger" property.
 
-A _trigger_ collider raise en event when colliding but is not used by the physic simulation.
+A _trigger_ collider raises en event when colliding but is not used by the physics simulation.
 
 It means that a shot will pass through an object on touching — _there won't be any "real" interaction at all_. Yet, the other collider is going to have its "OnTriggerEnter2D" event raised.
 
@@ -255,7 +255,7 @@ public class WeaponScript : MonoBehaviour
   }
 
   /// <summary>
-  /// Is the wepaon ready to create a new projectile?
+  /// Is the weapon ready to create a new projectile?
   /// </summary>
   public bool CanAttack
   {
