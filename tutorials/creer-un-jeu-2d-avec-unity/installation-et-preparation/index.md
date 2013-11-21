@@ -196,12 +196,12 @@ Vous devriez avoir :
 [ ![Première scène][unity_first_scene] ][unity_first_scene]
 
 <md-tip>
-_Astuce_ : La caméra suit l'objet parent auquel elle est attachée. Donc :
+_Astuce_ : Par défaut, un "game object" est lié à la position de ses parents.<br /><br />Ce comportement donne lieu à un effet secondaire intéressant dans le cas d'une caméra. Si la caméra est l'enfant d'un autre objet, elle suivra alors la position de l'objet parent auquel elle est attachée. Donc :
 <br />
-1. Si la caméra est attachée à la racine ou à un objet fixe, comme ici, alors elle ne bouge pas
-2. Par contre, si cette caméra était attachée à un objet comme par exemple le joueur, elle bougerait exactement comme lui
+1. Si la caméra est attachée à la racine ou à un objet fixe, comme ici, elle ne bougera pas.
+2. Si cette caméra était attachée à un objet (comme par exemple le joueur), elle bougerait exactement comme celui-ci.
 <br /><br />
-Ici pour notre gameplay il faut que cette caméra soit indépendante de toutes les autres entités. Dans un shmup, c'est un élément central qui va restreindre les autres objets. Mais cette propriété peut être intéressant dans d'autres types de jeux (un FPS ou un TPS par exemple).
+Ici, pour notre gameplay, il faut que cette caméra soit indépendante de toutes les autres entités. Dans un shmup, c'est un élément central qui va restreindre les autres objets. Mais cette propriété peut être intéressant dans d'autres types de jeux (un FPS ou un TPS par exemple).
 <br />
 Nous en reparlerons plus tard dans le chapitre sur le "Parallax Scrolling".
 </md-tip>
