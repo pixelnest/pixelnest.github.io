@@ -50,7 +50,7 @@ In order to add the parallax scrolling effect to our game, the solution is to mi
 - Background elements are moving at different speeds (in addition to the camera movement).
 
 <md-note>
-_Note_: You may ask: "Why don't we just set the camera as a child of the player object?". Indeed, in Unity, _if you add an object, be it a camera or not, as a sub-child of a game object, this object will always keep its relative position to its parent. So if the camera is a child of the player and is centered on him, it will always be centered and it will follows him exactly. It could be a solution, but this would not fit with our gameplay.
+_Note_: You may ask: "Why don't we just set the camera as a child of the player object?". Indeed, in Unity, if you _set an object (camera or not) as a sub-child of a game object, this object will maintain its relative position_ to its parent. So if the camera is a child of the player and is centered on him, it will stay that way and will follow him exactly. It could be a solution, but this would not fit with our gameplay.
 <br/><br/>In a _shmup_, the camera _restricts_ the player movement. If the camera moves along with the player for both horizontal and vertical axis, then the player is free to go where he wants. We _DO_ want to keep the player inside a restricted area.
 <br/><br/>We would also recommend to always keep the camera independent in a 2D game. Even in a platformer, the camera isn't strictly linked to the player: it follows him under some restrictions. Super Mario World has probably one the best camera possible for a platformer. [You may have a look at how it is done][smw_camera].
 </md-note>
@@ -389,9 +389,9 @@ _(Click on the image to see the animation)_
 Yes! We finally have a functional "parallax scrolling" implementation.
 
 <md-note>
-_Note:_ Why don't we just use the ``OnBecameVisible`` and ``OnBecameInvisible`` methods? Because they are broken. The idea is there, you add this method in your scripting (like ``Start`` or ``Update``) and the code is executed when the object is rendered.
+_Note:_ Why don't we just use the ``OnBecameVisible`` and ``OnBecameInvisible`` methods? _Because they are broken._ The idea is there, you add this method in your scripting (like ``Start`` or ``Update``) and the code is executed when the object is rendered.
 <br />_BUT_, it is also called when _the scene view_ (the editor) is rendering the object!
-<br />So it means it is not the same behavior in the editor and in the release. This is dangerous and absurd.     
+<br />So it means it is not the same behavior in the editor and in the release. This is dangerous and absurd.
 </md-note>
 
 # Bonus: Enhancing existing scripts
