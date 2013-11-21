@@ -45,7 +45,7 @@ Pour obtenir cet effet nous pouvons mélanger un peu les deux solutions et avoir
 
 <md-note>
 _Note_ : Vous vous dites peut-être "Mais pourquoi on n'attache pas simplement la caméra à l'objet joueur ?". En faisant cela avec Unity, lobjet enfant sera déplacé en même temps que son parent. Donc la caméra aura toujours la même position par rapport au joueur. Cela ne colle pas avec notre gameplay.
-<br/><br/> Dans un _shmup_, la caméra restreint les mouvements du joueur dans une zone limitée. 
+<br/><br/> Dans un _shmup_, la caméra restreint les mouvements du joueur dans une zone limitée.
 <br/><br/> Plus généralement, il vaut mieux séparer la gestion de la caméra de son joueur dans un jeu 2D. Même sur un platformer, la caméra n'est pas directement liée à lui. Un excellent exemple est la caméra de Super Mario World, [nous vous invitons à en voir un peu plus][smw_camera].
 
 ## Apparition des ennemis
@@ -63,7 +63,7 @@ L'idée ici est d'utiliser l'éditeur de Unity pour placer les ennemis. Et mine 
 [Mais encore une fois c'est un choix nous vous proposons][stackgamedev_link]. ;)
 
 <md-note>
-_Note_ : nous pensons vraiment qu'utiliser l'éditeur de Unity comme éditeur de niveau est un grand plus. Après, si vous avez du temps, du budget, et des designers qui ont besoin d'outils spécifiques, c'est discutable. 
+_Note_ : nous pensons vraiment qu'utiliser l'éditeur de Unity comme éditeur de niveau est un grand plus. Après, si vous avez du temps, du budget, et des designers qui ont besoin d'outils spécifiques, c'est discutable.
 </md-note>
 
 ## Plans
@@ -178,7 +178,7 @@ Vous obtiendrez :
 
 [ ![Scrolling effect][scrolling1] ][scrolling1]
 
-Pas mal ! Mais vous remarquerez que les ennemis attaquent en dehors de la caméra et avant d'apparaître. Et si vous les ratez, ils continueront leur chemin sans jamais être supprimés du système (dézoomez et déplacez-vous dans la vue éditeur pour les voir quand le jeu est en action). 
+Pas mal ! Mais vous remarquerez que les ennemis attaquent en dehors de la caméra et avant d'apparaître. Et si vous les ratez, ils continueront leur chemin sans jamais être supprimés du système (dézoomez et déplacez-vous dans la vue éditeur pour les voir quand le jeu est en action).
 
 Nous réglerons ça plus tard, chaque chose en son temps. Maintenant attaquons-nous au décor qui se répète à l'infini.
 
@@ -205,7 +205,7 @@ _Extension_ : il est possible d'ajouter des méthodes à une classe en C# sans e
 <br />Il faut pour cela créer une classe statique, et dans cette classe une méthode statique avec un premier paramètre comme ceci : `this Type currentInstance`. La classe `Type` aura maintenant une nouvelle méthode. <br />
 </md-tip>
 
-## L'extension "RendererExtensions" 
+## L'extension "RendererExtensions"
 
 Créez un nouveau script, appelez-le "RendererExtensions.cs" et remplissez-le avec :
 
@@ -291,7 +291,7 @@ public class ScrollingScript : MonoBehaviour
 
       // Tri par position
 	  // Note : cela n'est bon que pour un défilement de gauche à droite
-	  // il faudrait modifier un peu pour gérer d'autres directions. 
+	  // il faudrait modifier un peu pour gérer d'autres directions.
       backgroundPart = backgroundPart.OrderBy(
         t => t.position.x
       ).ToList();
@@ -334,12 +334,12 @@ public class ScrollingScript : MonoBehaviour
             // On récupère le dernier élément de la liste
             Transform lastChild = backgroundPart.LastOrDefault();
 
-			// On calcule ainsi la position à laquelle nous allons replacer notre morceau 
+			// On calcule ainsi la position à laquelle nous allons replacer notre morceau
             Vector3 lastPosition = lastChild.transform.position;
             Vector3 lastSize = (lastChild.renderer.bounds.max - lastChild.renderer.bounds.min);
 
             // On place le morceau tout à la fin
-            // Note : ne fonctionne que pour un scorlling horizontal 
+            // Note : ne fonctionne que pour un scorlling horizontal
             firstChild.position = new Vector3(lastPosition.x + lastSize.x, firstChild.position.y, firstChild.position.z);
 
             // On met à jour la liste (le premier devient dernier)
@@ -374,9 +374,8 @@ _(Cliquez pour voir l'animation)_
 Et voilà ! Nous avons une implémentation fonctionnelle de scrolling différentiel ! (et voilà pourquoi on garde le terme anglais...)
 
 <md-note>
-_Note :_ Pourquoi ne pas simplement utiliser les méthodes  ``OnBecameVisible`` et ``OnBecameInvisible`` ? Parce qu'elles sont inutilisables. L'idée est bonne : vous ajoutez cette fonction dans votre script (comme vous ajoutez ``Start`` ou ``Update``) et le code est exécuté quand l'objet est affiché.
-<br />SAUF QUE c'est appelé aussi quand c'est l'onglet _Scene_ (l'éditeur) qui l'affiche !
-<br />Donc si on place ses ennemis plus loins dans la scène comme nous le faisons ici, la méthode est appelé différemment dans l'éditeur et dans l'exécutable final. C'est absurde et propice aux erreurs.     
+_Note :_ Pourquoi ne pas simplement utiliser les méthodes  ``OnBecameVisible`` et ``OnBecameInvisible`` ? _Parce qu'elles sont inutilisables._ <br /><br />L'idée est bonne : vous ajoutez cette fonction dans votre script (comme vous ajoutez ``Start`` ou ``Update``) et le code est exécuté quand l'objet est affiché (ou l'inverse).
+<br /><br />SAUF QUE que ces méthodes sont aussi appelées quand c'est la fenêtre "Scene" (l'éditeur) qui affiche l'objet ! Si nous plaçons les ennemis plus loins dans la scène comme nous le faisons jusqu'ici, la méthode est appelée différemment dans l'éditeur et dans l'exécutable final. C'est absurde et propice aux erreurs. _Nous vous recommandons de ne pas les utiliser._
 </md-note>
 
 # Bonus : Amélioration des scripts précédents
@@ -394,7 +393,7 @@ Nous allons mettre à jour notre script "EnemyScript" pour :
 1. Désactiver le mouvement, le collider le tir avant le spawn
 2. Vérifier si l'élément est visible
 3. Si oui, faire apparaître l'ennemi
-4. Détruire l'objet quand il n'est plus visible 
+4. Détruire l'objet quand il n'est plus visible
 
 _(Ces chiffres font références à ceux du script ci-dessous)_
 
@@ -415,7 +414,7 @@ public class EnemyScript : MonoBehaviour
     // Récupération de toutes les armes de l'ennemi
     weapons = GetComponentsInChildren<WeaponScript>();
 
-    // Récupération du script de mouvement lié 
+    // Récupération du script de mouvement lié
     moveScript = GetComponent<MoveScript>();
   }
 
@@ -564,7 +563,7 @@ Mais avouons-le, le jeu a besoin de pas mal de petites retouches pour être joua
 - Ajouter des ennemis et des nouveaux types d'ennemis
 - _Rendre le jeu fun_
 
-Nous parlerons de tous ces points dans notre chapitre à venir sur les réglages du gameplay (qui n'est pas encore terminé, désolés). Mais c'est un bon exercice auquel nous vous invitons à vous prêtez. 
+Nous parlerons de tous ces points dans notre chapitre à venir sur les réglages du gameplay (qui n'est pas encore terminé, désolés). Mais c'est un bon exercice auquel nous vous invitons à vous prêtez.
 
 C'est tout pour le gameplay, nous allons maintenant ajouter un peu de cosmétiques, de feedbacks... et un peu de dynamisme avec les particules !
 

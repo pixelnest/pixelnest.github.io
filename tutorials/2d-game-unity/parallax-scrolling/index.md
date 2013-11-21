@@ -389,9 +389,8 @@ _(Click on the image to see the animation)_
 Yes! We finally have a functional "parallax scrolling" implementation.
 
 <md-note>
-_Note:_ Why don't we just use the ``OnBecameVisible`` and ``OnBecameInvisible`` methods? _Because they are broken._ The idea is there, you add this method in your scripting (like ``Start`` or ``Update``) and the code is executed when the object is rendered.
-<br />_BUT_, it is also called when _the scene view_ (the editor) is rendering the object!
-<br />So it means it is not the same behavior in the editor and in the release. This is dangerous and absurd.
+_Note:_ Why don't we use the `OnBecameVisible()` and `OnBecameInvisible()` methods? _Because they are broken._ <br /><br />The basic idea of these methods is to execute a fragment of code when the object is rendered (or vice-versa). They work like the `Start()` or `Stop()` methods (if you need one, simply add the method in the `MonoBehaviour` and Unity will use it).
+<br /><br />The problem is that these methods are also called when rendered by the "Scene" view of the Unity editor. This means that we will not get the same behavior in the Unity editor and in a build (whatever the platform is). This is dangerous and absurd. _We highly recommend to avoid these methods._
 </md-note>
 
 # Bonus: Enhancing existing scripts
