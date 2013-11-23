@@ -39,7 +39,7 @@ _(Right click to save the image)_
 
   If you have any trouble, refer to the previous part. We did exactly the same procedure for the background and _props_.
 
-4. Place the player in the "0 - Foreground" layer.
+4. Place the player in the "2 - Foreground" layer.
 
 5. Change its scale. ``(0.3, 0.3, 1)`` should be fine.
 
@@ -92,7 +92,7 @@ For the time being, it will be enough.
 _Tip_: If you plan to make a _shmup_, spend a lot of time tweaking your hitboxes. In general, it should fit perfectly a small element inside the player sprite. What about the ship window here? You could also change the collider shape — with a "Circle Collider 2D" for example. It changes nothing to the behavior thanks to Unity, but it will slightly improve the gameplay.
 </md-tip>
 
-Save the player game objet to a prefab. You now have a basic player entity!
+Save the player game object to a prefab. You now have a basic player entity!
 
 [![Adding Player Sprite][adding_player]][adding_player]
 
@@ -252,7 +252,7 @@ This was the first sign of life in our game! Let's add more!
 
 A _shmup_ is nothing without tons of enemies to blow up.
 
-Let's use an innocent Poulpi:
+Let's use an innocent octopus, named "Poulpi":
 
 [![Poulpi Sprite][poulpi]][poulpi]
 
