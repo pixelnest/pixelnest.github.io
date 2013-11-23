@@ -41,13 +41,13 @@ You should be used to the procedure now:
 4. Add a "Rigidbody 2D" with `0` "Gravity Scale" and "Fixed Angles".
 5. Add a "Box Collider 2D" with a size of `(1, 1)`.
 
-Set the scale to `(0.75, 0.75, 1)` so it will looks good.
+Set the scale to `(0.75, 0.75, 1)` so it will look good.
 
 However, this time, we need to set a new parameter in the "Inspector":
 
 6. In the "Box Collider 2D", check the "IsTrigger" property.
 
-A _trigger_ collider raises en event when colliding but is not used by the physics simulation.
+A _trigger_ collider raises an event when colliding but is not used by the physics simulation.
 
 It means that a shot will pass through an object on touching — _there won't be any "real" interaction at all_. Yet, the other collider is going to have its "OnTriggerEnter2D" event raised.
 
