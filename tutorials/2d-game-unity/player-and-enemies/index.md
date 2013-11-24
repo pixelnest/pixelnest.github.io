@@ -41,7 +41,7 @@ _(Right click to save the image)_
 
 4. Place the player in the "2 - Foreground" layer.
 
-5. Change its scale. ``(0.3, 0.3, 1)`` should be fine.
+5. Change its scale. ``(0.2, 0.2, 1)`` should be fine.
 
 ## A word about components
 

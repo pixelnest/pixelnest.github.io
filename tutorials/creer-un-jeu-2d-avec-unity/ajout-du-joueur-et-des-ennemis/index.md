@@ -39,7 +39,7 @@ _(Clic droit pour sauver l'image sur votre disque)_
 
 4. Placez l'objet "Player" dans le plan "0 - Foreground".
 
-5. Changez son échelle. ``(0.3, 0.3, 1)`` fera l'affaire.
+5. Changez son échelle. ``(0.2, 0.2, 1)`` fera l'affaire.
 
 ## Un mot sur les composants
 
