@@ -173,6 +173,6 @@ In the next chapter, we will add menus so we can start and restart this hardcore
 [music]: ./-img/music.png
 [sound_script]: ./-img/sound_script.png
 
-[sound_explosion]: ./-sounds/sound_explosion.wav
-[sound_shot_player]: ./-sounds/sound_shot_player.wav
-[sound_shot_enemy]: ./-sounds/sound_shot_enemy.wav
+[sound_explosion]: ./-sounds/explosion.wav
+[sound_shot_player]: ./-sounds/shot_player.wav
+[sound_shot_enemy]: ./-sounds/shot_enemy.wav
