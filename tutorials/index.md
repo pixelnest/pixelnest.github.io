@@ -28,7 +28,6 @@ Here is a list of all the tutorials we made and external resources we liked.
 
 * [The Indie Roadmap](http://www.altdevblogaday.com/2013/11/22/the-indie-roadmap/)
 * [Prototyping](http://blog.defendthegrave.com/post/57803998628/friday-update-2-prototyping)
-* [Indie Game : The Movie](http://buy.indiegamethemovie.com/) — must-see.
 
 ## Game design
 
@@ -52,6 +51,7 @@ _NB: Some of these articles reflect a point of view that we don't necessarily ag
 
 ### Postmortems
 
+* [Indie Game : The Movie](http://buy.indiegamethemovie.com/) — must-see.
 * [Team Meat's Super Meat Boy](http://www.gamasutra.com/view/feature/134717/)
 * [Launch of the Stanley Parable](http://www.stanleyparable.com/2013/10/a-postmortem-on-the-launch-of-the-stanley-parable/)
 * ["Why PWN will be my last iOS game"](http://www.pockettactics.com/features/guest-posts/erik-asmussen-pwn-combat-hacking-post-mortem/)
