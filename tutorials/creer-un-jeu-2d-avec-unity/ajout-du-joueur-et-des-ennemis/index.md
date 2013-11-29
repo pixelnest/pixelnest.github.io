@@ -58,7 +58,7 @@ Vous pouvez ajouter autant de composants différents que vous le souhaitez. Vous
 _(Vous pouvez cliquer sur la checkbox pour le désactiver. Un clic droit vous donnera d'autres options selon le type de composant)_
 
 <md-note>
-_Note_ : Les composants peuvent interagir entre eux. Si vous prévoyez par exemple dans un script d'utiliser le "Collider 2D" d'un objet, vous pourrez directement les lier entre eux par un simple drag'n'dorp, comme nous le ferons plus tard. Si vous passez un _game objet_ et que Unity attend un composant, il fera lui-même la recherche du composant du type souhaité dans l'objet passé en paramètre.
+_Note_ : Les composants peuvent interagir entre eux. Si vous prévoyez par exemple dans un script d'utiliser le "Collider 2D" d'un objet, vous pourrez directement les lier entre eux par un simple drag'n'drop, comme nous le ferons plus tard. Si vous passez un _game objet_ et que Unity attend un composant, il fera lui-même la recherche du composant du type souhaité dans l'objet passé en paramètre.
 </md-note>
 
 Le composant "Sprite Renderer" permet d'afficher un sprite à l'écran.
@@ -69,7 +69,7 @@ Après ces petites explications sur le concept des composants, nous allons en aj
 
 Sélectionnez votre joueur et cliquez sur le bouton "Add Component" qui apparaît en bas de l'_Inspector_. Ajoutez un "Box Collider 2D".
 
-Cela va représenter la [_hitbox_][hitbox_link] de notre joueur, la forme acceptant les collisions.
+Cela va représenter la [_hitbox_][hitbox_link] de notre joueur, c'est à dire la forme acceptant les collisions.
 
 Vous pouvez voir le _collider_ dans l'éditeur (onglet "Scene") et vous pouvez modifier sa taille et sa forme directement depuis cet onglet, plutôt que de modifier les valeurs du champ "Size" "au pif" dans l'_Inspector_.
 
@@ -141,20 +141,20 @@ C'est l'heure de rentrer dans le code ! Pour le moment nous n'avions pas écrit 
 Depuis l'onglet "Proejcts", créez un nouveau script C# dans le dossier "Scripts". Appelons-le "PlayerScript".
 
 <md-info>
-_Remarque_ : vous pouvez tout à fait créer un script JavaScript à la place, nous ne vous fournissons que le code en C# mais la traduction est assez simple.
+_Remarque_ : vous pouvez tout à fait créer un script JavaScript à la place. Nous ne vous fournissons que le code en C# mais la traduction est assez simple.
 </md-info>
 
 Ouvrez votre éditeur de code préféré en passant par le sous-menu "Sync MonoDevelop Project" du menu "Assets".
 
 <md-note>
-_"Sync MonoDevelop Project"_ : Ce sous-menu est bien mal nommé, surtout qu'il ne s'adapte pas à l'éditeur lié à Unity.<br /> Nous vous recommandons de toujours passer par ce sous-menu pour que Unity créer une solution et un projet complets, avec les bonnes librairies liées.<br /> Cela vous permettre d'avoir l'auto-complétion et la reconnaissance des erreurs. Si vous ouvrez simplement le script sans ce contexte, vous ne bénéficierez plus que de la coloration syntaxique. 
+_"Sync MonoDevelop Project"_ : Ce sous-menu est bien mal nommé, surtout qu'il ne s'adapte pas à l'éditeur lié à Unity.<br /> Nous vous recommandons de toujours passer par ce sous-menu pour que Unity créer une solution et un projet Visual Studio, avec les bonnes librairies liées.<br /> Cela vous permettre d'avoir l'auto-complétion et la reconnaissance des erreurs. Si vous ouvrez simplement le script sans ce contexte, vous ne bénéficierez plus que de la coloration syntaxique. 
 </md-note>
 
 Si vous avez déjà utilisé XNA, vous ne serez pas perdus.
 
 Nous allons pouvoir définir des méthodes (appelée "Message", nous ne sommes pas dans du polymorphisme typique de la programmation objet mais bien dans du **script**) que Unity va reconnaître et pouvoir exécuter.
 
-Les scripts nouvellement créés contiennent deux de ces méthodes, **Start** et **Update**. Voici une liste des autres fonctions les plus courantes :
+Les scripts nouvellement créés contiennent deux de ces méthodes, **Start** et **Update**. Voici une liste des fonctions les plus courantes :
 
 - ``Awake()`` est appelé dans l'objet est créé
 - ``Start()`` est appelé après que tous les objets de la scène aient finis ``Awake()``. De plus, ``Start()`` n'est pas appelée tant que le script n'est pas activé.

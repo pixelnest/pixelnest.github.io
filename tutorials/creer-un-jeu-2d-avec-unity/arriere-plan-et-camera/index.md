@@ -63,7 +63,7 @@ Puis déplacez cet objet dans ``Level->0 - Background``. Vérifiez que sa positi
 
 [  ![Background is set][display_background]  ][display_background]
 
-Exercice express : agrandissez l'arrière-plan pour plus tard en duplicant ce morceau. Placez le nouveau bout en ``(20,0,0)`` de manière à ce qu'il fasse suite avec le premier morceau.
+Exercice express : agrandissez l'arrière-plan pour plus tard en dupliquant ce morceau. Placez le nouveau bout en ``(20,0,0)`` de manière à ce qu'il fasse suite avec le premier morceau.
 
 [  ![Background2 in place][background2_in_place]  ][background2_in_place]
 
@@ -110,7 +110,7 @@ Pour ce didacticiel, nous allons le faire à la main. Appelez les plateformes "p
 
 C'est aussi facile que pour l'image du fond : il faut créer un nouveau _Sprite_ et assigner l'image de la plateforme pour chaque.
 
-Modifiez la taille jusqu'à statisfaction.
+Modifiez la taille jusqu'à satisfaction.
 
 Déplacez ensuite les deux _game objects_ obtenus dans ``1 - Middleground``. Assurez-vous que la position en Z est à ``0`` pour ne pas perturber notre système de plans.
 
@@ -166,7 +166,7 @@ _Pour information_ : Si vous sélectionnez l'objet``Main Camera``, vous verrez u
 
 # Prêt pour la suite
 
-Vous avez appris à faire un décor simple à base de sprite. En réutilisant ces connaissances, nous allons afficher le joueur et des ennemis.
+Vous avez appris à faire un décor simple à base de sprites. En réutilisant ces connaissances, nous allons afficher le joueur et des ennemis.
 
 [background]: ../../2d-game-unity/background-and-camera/-img/background.png
 [platforms]: ../../2d-game-unity/background-and-camera/-img/platforms.png

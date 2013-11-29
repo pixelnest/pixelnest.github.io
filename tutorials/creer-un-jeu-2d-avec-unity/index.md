@@ -21,13 +21,13 @@ Le résultat sera très similaire à cette démo :
 
 _(Cliquez sur l'image pour jouer)_
 
-Je me focaliserai sur les _shmup_ à scrolling horizontaux, de gauche à droite, mais si ce didacticiel fait bien son travail vous n'aurez pas de mal à explorer d'autres sens et d'autres genres.
+Nous nous focaliserasons sur les _shmup_ à scrolling horizontaux, de gauche à droite, mais si ce didacticiel fait bien son travail vous n'aurez pas de mal à explorer d'autres sens et d'autres genres.
 
-Les _assets_, le _gameplay_ et l'idée originale viennent du jeu [The Great Paper Adventure][tgpa_link] que j'ai réalisé il y a quelques années (2010). Le jeu original est développé avec [XNA][xna_link], je me suis donc dit que c'était une occasion idéale de tester les nouveaux outils Unity sur ce projet.
+Les _assets_, le _gameplay_ et l'idée originale viennent du jeu [The Great Paper Adventure][tgpa_link] que Damien a réalisé il y a quelques années (2010). Le jeu original est développé avec [XNA][xna_link], nous avons donc penser que refaire le début de ce projet sous Unity serait l'occasion idéale de tester les nouveaux outils 2D.
 
 # Unity
 
-[Unity3D][unity_link] est un moteur de jeu très utilisé et complet pour créer des jeux vidéo multiplateformes, 2D ou 3D. Nous partons du principe que vous avez déjà quelques rudiments en programmation. Connaître l'outil est un plus, mais n'est pas nécessaire.
+[Unity3D][unity_link] est un moteur de jeu très populaire et complet pour créer des jeux vidéo multiplateformes, 2D ou 3D. Nous partons du principe que vous avez déjà quelques rudiments en programmation. Connaître l'outil est un plus, mais n'est pas nécessaire.
 
 Ce tutoriel est entièrement réalisable avec la version **Gratuite** de Unity.
 
@@ -45,7 +45,7 @@ Le code source est disponible [sur notre dépôt GitHub][github_repo_link].
 
 # Contact
 
-Si vous trouvez une faute de frappe, de français ou technique, n'hésitez pas à nous le signaler via [notre twitter][pxn_twitter_link]. ou par [e-mail][pxn_mailto].
+Si vous trouvez une faute de frappe, de français ou carrément un bug, n'hésitez pas à nous le signaler via [notre twitter][pxn_twitter_link]. ou par [e-mail][pxn_mailto].
 
 N'hésitez pas non plus à nous joindre si vous souhaitez des informations complémentaires à un chapitre ou des explications sur un sujet.
 

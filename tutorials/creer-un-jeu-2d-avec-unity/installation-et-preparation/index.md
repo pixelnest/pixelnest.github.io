@@ -57,7 +57,7 @@ Nous vous recommandons d'utiliser le C#, c'est un langage puissant, fortement ty
 
 ## "Je n'ai jamais touché à Unity"
 
-Si vous n'avez encore jamais touché à Unity auparavant, nous allons faire de notre mieux pour vous expliquer le logiciel tout au long de ce tutorial.
+Si vous n'avez encore jamais touché à Unity auparavant, nous allons faire de notre mieux pour vous expliquer le logiciel tout au long de ce tutoriel.
 
 Apprendre à utiliser l'interface principale de Unity est relativement simple. Dans un premier temps, _le logiciel pourra vous sembler envahissant et complexe_, mais ce n'est que l'histoire de quelques heures avant d'être à l'aise avec (le côté clicodrome peut être rédhibitoire, il est vrai).
 
@@ -71,15 +71,18 @@ Voici d'autres ressources qui pourront vous aider à vous familiariser avec l'ou
 
 ## Création d'un nouveau projet
 
-Si vous êtres déjà dans l'éditeur, allez dans "File", et créez un nouveau projet. Sinon en ouvrant le logiciel vous serez déjà sur la bonne fenêtre.
+Si vous êtes déjà dans l'éditeur, allez dans "File", et créez un nouveau projet. Sinon en ouvrant le logiciel vous serez déjà sur la bonne fenêtre.
 
 N'importez aucun des paquets standard proposés, cela ne ferait que vous embrouiller. Vous pourrez toujours les ajouter par la suite.
 
 [ ![Création d'un nouveau projet sur Unity][unity_create_project] ][unity_create_project]
 
-Choisissez l'option **2D**. Comme avant, il est toujours possible de modifier ce paramètres plus tard mais le saisir maintenant à l'avantage de préparer la caméra.
+Choisissez l'option **2D**. Comme avant, il est toujours possible de modifier ce paramètres plus tard mais le saisir maintenant à l'avantage de préparer la caméra et certains comportement automatiques.
 
-Ne vous en faites pas trop pour le nom du jeu. Il est très facile à changer car il est défini par le dossier qui stocke le projet et il est possible de le définir plus proprement dans les options.
+Ne vous en faites pas trop pour le nom du jeu/du projet. Il est très facile d'en changer :
+
+- le nom de projet est défini par le dossier qui stocke les fichiers
+- le nom du jeu est défini plus proprement dans les options
 
 ## Préparer le projet
 
@@ -117,7 +120,7 @@ Objets réutilisables (des ennemis, des projectiles, des bonus...).
 
 On peut faire l'analogie entre les prefabs et les ``class`` des langages de programmation objet. Ici c'est une sorte de moule à partir duquel vous fabriquez des objets quasi identiques.
 
-L'intérêt est de pouvoir stocker des paramètres pour un objet mais de ne le créer qu'à un moment précis de l'exécution.
+L'intérêt est de pouvoir stocker des paramètres pour un objet mais de ne le créer qu'à un moment précis de l'exécution. 
 
 ### Scenes
 
@@ -139,7 +142,7 @@ Toute la partie code se retrouve ici.
 
 On entend par texture toutes les images et les sprites de notre jeu. Si vous ne faite que de la 2D, vous pouvez très bien l'appeler "Sprites", cela n'aura pas d'incidence.
 
-En revanche en 3D cela permet l'automatisation par Unity de certaines tâches. [Plus d'informations](http://answers.unity3d.com/questions/172384/importing-models.html) or [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
+En revanche en 3D cela permet l'automatisation par Unity de certaines tâches. [Plus d'informations](http://answers.unity3d.com/questions/172384/importing-models.html) ou [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
 
 <md-note>
 _Note au sujet du dossier Resources_ : si vous avez déjà utilisé Unity, vous connaissez peut-être le dossier ``Resources``. Ce dernier est spécial : il permet de charger un fichier ou un objet qui se trouve dedans à partir d'un script (en utilisant la classe statique ``Resources``).
@@ -173,7 +176,7 @@ Ces objets vides peuvent être vu comme purement logiques et sans rapports avec 
 
 ### Remplissage de la scène
 
-Par défaut, une scène est créer avec une caméra``Main Camera``. Gardez-la, vous en aurez besoin !
+Par défaut, une scène est créée avec une caméra``Main Camera``. Gardez-la, vous en aurez besoin !
 
 Nous allons créer les objets vides suivants :
 
@@ -187,7 +190,7 @@ Dans l'objet ``Level``, ajoutez trois objets vides comme enfants :
 - ``1 - Middleground``
 - ``2 - Foreground``
 
-Cela constituera nos plans pour plus tard.
+Cela constituera nos plans d'affichage pour plus tard.
 
 Sauvez la scène dans le dossier... "Scenes" ! Appelez-la comme vous le souhaitez (pourquoi pas "Stage1" ?).
 
@@ -196,14 +199,7 @@ Vous devriez avoir :
 [ ![Première scène][unity_first_scene] ][unity_first_scene]
 
 <md-tip>
-_Astuce_ : Par défaut, un "game object" est lié à la position de ses parents.<br /><br />Ce comportement donne lieu à un effet secondaire intéressant dans le cas d'une caméra. Si la caméra est l'enfant d'un autre objet, elle suivra alors la position de l'objet parent auquel elle est attachée. Donc :
-<br />
-1. Si la caméra est attachée à la racine ou à un objet fixe, comme ici, elle ne bougera pas.
-2. Si cette caméra était attachée à un objet (comme par exemple le joueur), elle bougerait exactement comme celui-ci.
-<br /><br />
-Ici, pour notre gameplay, il faut que cette caméra soit indépendante de toutes les autres entités. Dans un shmup, c'est un élément central qui va restreindre les autres objets. Mais cette propriété peut être intéressant dans d'autres types de jeux (un FPS ou un TPS par exemple).
-<br />
-Nous en reparlerons plus tard dans le chapitre sur le "Parallax Scrolling".
+_Astuce_ : Par défaut, un "game object" est lié à la position de ses parents.<br />Donc si le parent bouge, tourne ou change de taille, tous ses enfant subiront également ces transformations proportionnellement à leurs propres propriétés.
 </md-tip>
 
 # Prochaine étape
