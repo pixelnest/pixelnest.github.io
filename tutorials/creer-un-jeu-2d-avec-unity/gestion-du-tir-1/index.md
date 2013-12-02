@@ -13,7 +13,7 @@ links:
   next: ../gestion-du-tir-2
 ---
 
-Notre vaisseau fait face impuissant à un terrifiant Poulpi... il faut que nous lui ajoutions une arme !
+Notre vaisseau impuissant fait face à un terrifiant Poulpi... donnons lui les moyens de se défendre !
 
 Cela va nécessité pas mal de code, mais le jeu en vaut la chandelle.
 
@@ -31,7 +31,7 @@ Ce projectile va être réutilisé abondamment, il y aura plusieurs instances en
 
 Donc qu'est-ce que l'on va utiliser ? Facile, un `Prefab` !
 
-## Préparation du `Prefab`
+## Préparation du Prefab
 
 Vous connaissez la musique :
 
@@ -50,7 +50,7 @@ Et petite nouveauté cette fois-ci :
 
 Un _collider_ marqué comme "trigger" déclenchera un évènement qui pourra être récupéré dans un script mais il ne sera pas pris en compte dans le calcul de la phyique.
 
-Ici, le tir passera donc à travers les objets qu'ils touchent - _il n'y a donc plus vraiment d'interaction_. Mais ces objets touchés auront l'évènement "OnTriggerEnter2D" levé.
+Ici, le tir passera donc à travers les objets qu'ils touchent : il n'y a donc plus vraiment d'interaction. Mais les objets touchés auront l’événement "OnTriggerEnter2D" levé.
 
 Voilà, le tir est prêt ! Il ne manque que le script, qui sera commun au tir du joueur et aux futurs tirs ennemis.
 
@@ -102,7 +102,9 @@ Si vous lancez le jeu vous devriez voir le tir avancer.
 
 Ce tir ne détruit rien (pour le moment). Ce n'est pas étonnant, nous n'avons rien fait pour que ce soir le cas.
 
-Ce qu'il nous manque, c'est un script pour gérer les points de vies. Créez un nouveau script "HealthScript" :
+Ce qu'il nous manque, c'est un script pour gérer les points de vies et un autre pour en perdre. 
+
+Créez un nouveau script "HealthScript" :
 
 ```csharp
 using UnityEngine;
@@ -152,13 +154,13 @@ public class HealthScript : MonoBehaviour
 Attachez ce "HealthScript" au `Prefab` du Poulpi.
 
 <md-warning>
-_Attention_ : Il vaut mieux travailler directement sur les `Prefab` quand ils ont été créés. <br />Ainsi, les modifications seront répercutées sur toutes les instances du `Prefab`. C'est très pratique pour modifier des dizaines d'objets directement, comme tous les ennemis d'un même type. <br />Si vous travaillez sur une instance plutôt que sur le `Prefab`, pas de panqiue, pensez juste à appuyer sur le bouton "Apply" en haut de l'onglet _Inspector_ pour répercuter les changements.
+_Attention_ : Il vaut mieux travailler directement sur les `Prefab` quand ils ont été créés. <br />Ainsi, les modifications seront répercutées sur toutes les instances du `Prefab`. C'est très pratique pour modifier des dizaines d'objets directement, comme tous les ennemis d'un même type. <br />Si vous travaillez sur une instance plutôt que sur le `Prefab`, pas de panique, pensez juste à appuyer sur le bouton "Apply" en haut de l'onglet _Inspector_ pour répercuter les changements.
 </md-warning>
 
 Alignez le Poulpi et le tir pour tester la collision.
 
 <md-note>
-_Note_ : Dans un jeu 2D, faites attention à l'axe des Z : il faut que vos objets soient sur le même plan pourqu'il y ait collision. Ici, tous les objets d'un même plan doivent avoir le même z : `0`.
+_Note_ : Dans un jeu 2D, faites attention à l'axe des Z : il faut que vos objets soient sur le même plan pour qu’il y ait collision. Ici, tous les objets d'un même plan doivent avoir le même z : `0`.
 </md-note>
 
 Lancez le jeu et observez le _frag_ :
@@ -173,9 +175,9 @@ Si l'ennemi a plus de points de vies que le tir fait de dégât, il survivra à 
 
 Supprimer le projectile qui se balade tout seul dans la scène, nous avons terminé avec lui.
 
-Il nous faut un script qui crée des projectiles sur demande. Créons en un nouveau que nous appelerons "WeaponScript".
+Il nous faut un script qui crée des projectiles sur demande. Créons en un nouveau que nous appellerons "WeaponScript".
 
-Ce script sera réutilisable par tous (ennemis, joueur, etc). SOn but est de générer un projectile en face l'objet auquel il est attaché.
+Ce script sera réutilisable par tous (ennemis, joueur, etc). Son but est de générer un projectile en face l'objet auquel il est attaché.
 
 Voici le code source complet, les explications viennent ensuite :
 
@@ -297,7 +299,7 @@ _Faites attention_ : Modifier une valeur dans Unity via l'_Inspector_ ne mettra 
 
 La vitesse de tir de l'arme a une incidence directe sur le gameplay et sur les performances du jeu. A vous de voir si vous voulez pouvoir créer des tonnes de _boulettes_ ou non à chaque frame (ce que Unity appréciera moyennement).
 
-Nous avons donc un mécanisme tout simple de temps de recharge entre deux tirs. Si ce temps à attendre est supérieur à `0` alors on ne peut pas tirer. Ce temps est diminué à chaque frame par le temps écoulé.
+Nous avons donc un mécanisme tout simple de temps de recharge entre deux tirs. Si ce temps d'attente est supérieur à `0` alors on ne peut pas tirer. Ce temps est diminué à chaque frame par le temps écoulé.
 
 ### 3. Méthode Attack(bool)
 
