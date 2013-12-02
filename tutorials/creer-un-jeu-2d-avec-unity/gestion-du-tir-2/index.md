@@ -13,7 +13,7 @@ links:
   next: ../parallax-scrolling
 ---
 
-Notre superbe vaisseau dégomme des pauvres poulpes volants innocents. Ce n'est pas juste, il faut réagir ! Ils ont des droits, ils doivent se battrent, pour leur survie et pour la liber... hum. Désolés.
+Notre superbe vaisseau dégomme des pauvres poulpes innocents. Ce n'est pas juste, il faut équilibrer cela !
 
 Réutilisons ce que nous avons fait dans la première partie pour que ces braves bêtes puissent tirer.
 
@@ -25,7 +25,7 @@ Nous utiliserons cette image pour faire un sprite :
 
 _(Clic droit pour sauver l'image sur votre disque)_
 
-Vous pouvez créer un nouveau sprite, avec un _rigidbody_, un _collider_, tout l'équipement habituel.
+Vous pouvez créer un nouveau sprite, avec un _rigidbody_, un _collider_,  bref tout l'équipement habituel.
 
 Ou si vous aussi aussi fainéant que moi, dupliquez le prefab "PlayerShot" en "EnemyShot1".
 
@@ -57,7 +57,7 @@ Exactement comme pour le joueur, nous allons ajouter à nos ennemis une arme et 
 
 ## Modifications des ennemis
 
-Rappelez-vous, nous modifions soit le prefab des ennemis, soit une instance ne pensant bien à appuyer sur "Apply".
+Souvenez-vous, nous modifions soit le prefab des ennemis, soit une instance en pensant à sauver les modifications en cliquant sur le bouton "Apply".
 
 1. Ajoutez un "WeaponScript" aux ennemis
 2. Drag & drop du prefab "EnemyShot1" dans le champ "Shot Prefab" du script.
