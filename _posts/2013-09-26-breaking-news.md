@@ -31,7 +31,7 @@ At the present time, we are not working on this project anymore.
 
 ## “Why?”
 
-We tried Xamarin, a mobile cross platform technology to make applications in C#, but were finally not satisfied with the result. 
+We tried Xamarin, a mobile cross platform technology to make applications in C#, but were finally not satisfied with the result.
 
 The main issue was the deployment time, even on simulators. It was a real pain to tweak an animation or a particle effect, for example.
 
@@ -39,9 +39,9 @@ Moreover, we'd rather want to focus on riskier and funnier projects (like George
 
 # Unity
 
-The tool is great and convinced us to use it. 
+The tool is great and convinced us to use it.
 
-The first time you will open the software, your eyes are likely going to bleed in front of the rich interface. If you have also developed game with XNA or a standard game framework, you will loose all your marks. 
+The first time you will open the software, your eyes are likely going to bleed in front of the rich interface. If you have also developed game with XNA or a standard game framework, you will loose all your marks.
 
 You need to force yourself to learn how to do things the Unity way, but after some time, you will find the tool extremely valuable. Instant feedback, live editing and a ready-made game engine are huge time savers and will allow you to focus your attention on the gameplay and not the dirty details of implementation. Damien wrote more about it [here](http://dmayance.com/Unity-and-me/).
 
@@ -55,7 +55,7 @@ George was a game we created to work with the Leap Motion for the Stunfest 2013 
 
 [  ![George with Unity][url_img_george]  ][url_img_george]
 
-After the event, we gathered gameplay ideas to make a better and richer game. Then, we decided to drop it until now. 
+After the event, we gathered gameplay ideas to make a better and richer game. Then, we decided to drop it until now.
 
 We are rebuilding the game from scratch — with Unity and without the Leap Motion[1]. For example, on the capture above, you can see that we added real time terraformation.
 
@@ -71,7 +71,7 @@ Well, we have plans. But that's another story!
 
 As you can see, we are pretty busy. Stay tuned!
 
-Follow us on [Twitter](http://twitter.com/pixelnest) or through our [RSS feed](http://feedpress.it/pixelnest) if you want the hottest news. :)
+Follow us on [Twitter](http://twitter.com/pixelnest) or through our [RSS feed](http://feedpress.me/pixelnest) if you want the hottest news. :)
 
 1. A cool and useless technology. Sorry!
 
