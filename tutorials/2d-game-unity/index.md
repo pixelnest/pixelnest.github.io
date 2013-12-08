@@ -31,6 +31,11 @@ This tutorial is made with the Unity 4.3 **FREE** version.
 
 [ ![Unity][unity_logo_url] ][unity_download_link]
 
+# Video version
+
+If you'd rather **watch** this tutorial than **read** it then have a look at [Jay Jennings's work from Game Dev Nation](http://gamedevnation.com/creating-a-2d-game-with-unity/).
+
+
 # Licensing
 
 - The assets and arts are licensed under a [CC-BY-NC][cc_license_link] attribution. They have been made by [Thibault Person][tp_twitter_link] for the game [The Great Paper Adventure][tgpa_link].

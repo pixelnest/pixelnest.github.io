@@ -34,3 +34,7 @@ More to come, stay tuned:
 
 - [2D Animations](../animations)
 - [Tweaking the gameplay](../tweaking-the-gameplay)
+
+# Video version
+
+[Watch the tutorial](http://gamedevnation.com/creating-a-2d-game-with-unity/), thanks to Jay Jennings's work from Game Dev Nation.
