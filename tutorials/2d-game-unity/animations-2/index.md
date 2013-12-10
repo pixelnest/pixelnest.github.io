@@ -562,11 +562,39 @@ _(Click to see the animation)_
 
 Excellent!
 
-# Bonus
+# Bonuses
 
-## Substates machines
+Unfortunately, we have only scratched the surface of what you can do with the animator. Hopefully, the rest is fairly simple to understand.
 
-Image subsate
+Let's see three other aspects.
+
+## Sub-State Machine
+
+Imagine you have that:
+
+[ ![Huge graph][bonus_big_graph] ][bonus_big_graph]
+
+_([Source: A very interesting topic on Unity Answers](http://answers.unity3d.com/questions/354357/how-complex-should-mecanim-state-machines-be.html))_
+
+Well, it's unmanageable.
+
+For these cases, Unity provides a "Sub-State Machine" feature. Right-click on your graph, and select "Create Sub-State Machine".
+
+[ ![Create Sub-State Machine][bonus_ssm] ][bonus_ssm]
+
+Then, double-click on the new state:
+
+[ ![Select a Sub-State Machine][bonus_nssm] ][bonus_nssm]
+
+Yup, that's right: it creates a whole new graph inside the machine, with an "Any State" and an "(Up) Base Layer" state. It works exactly like the main graph, except that you can join a sub-state to a main state via the "(Up) Base Layer".
+
+Here is an example from one of our games:
+
+[ ![Full graph][bonus_full] ][bonus_full]
+
+And inside the "Jump" sub-state machine:
+
+[ ![Jump graph][bonus_jump] ][bonus_jump]
 
 ## Blendtrees
 
@@ -629,3 +657,9 @@ TODO recopier la fin de deployment et link vers conclusion.
 [boss_final]: ./-img/boss_final.png
 [boss_final_gif]: ./-img/boss_final.gif
 [boss_final_animator]: ./-img/boss_final_animator.gif
+
+[bonus_big_graph]: ./-img/bonus_big_graph.png
+[bonus_ssm]: ./-img/bonus_ssm.png
+[bonus_nssm]: ./-img/bonus_nssm.png
+[bonus_full]: ./-img/bonus_full.png
+[bonus_jump]: ./-img/bonus_jump.png
