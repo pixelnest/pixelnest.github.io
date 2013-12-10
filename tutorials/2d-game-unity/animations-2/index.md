@@ -539,23 +539,28 @@ However, when the boss is hit, we force him to move (it stops any attack and fin
 
 Finally, when the boss spawns, it sets the camera and player scrolling to `0`. That way, the game stops and tells you that you must defeat the enemy in order to continue (even if nothing comes after in the demo, you get the idea).
 
-# The result
+# Result
 
-Include this in your level. Put the boss after all your enemies.
+It's time to include this new enemy in the "Stage1" scene.
 
- [ ![Boss in the scene][level]][level]
+Put the boss after all your enemies:
 
-If you want to test it, maybe add some health points to our player, otherwise it's a bit... hardcore :).
+[ ![Boss in the scene][level] ][level]
 
-Now you have a nice boss (with animations!) to defeat!
+If you want to test it, you may have to add some health points to the player, otherwise it's a bit... hardcore. :)
 
- [ ![Boss in action][boss_final]][boss_final_gif]
+And now, you have a really nice-looking boss (with animations) to defeat!
+
+[ ![Boss in action][boss_final] ][boss_final_gif]
 
 _(Click to see the animation)_
 
-And if you select the game object in the Hierarchy and open the "Animator" pane, you can see the animation controller in action.
 
- [ ![Boss controller in action][boss_final_animator]][boss_final_animator]
+<br />If you select the game object in the "Hierarchy" and open the "Animator" window, you can see the "Animator Controller" in action:
+
+[ ![Boss controller in action][boss_final_animator] ][boss_final_animator]
+
+Excellent!
 
 # Bonus
 
