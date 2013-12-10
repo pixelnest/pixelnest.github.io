@@ -149,6 +149,12 @@ Our animator graph now looks like this:
 
 Now we need to add some code in order to get it work ingame.
 
+<md-note>
+_Animator graph_: Creating a graph in the animator is not an exact science. Depending on your code implementation, what you want to achieve or a precise sequence of actions, you may want to proceed differently. For example, in our case, we could also transition the Attack from the Any State state. With only three animations, it don't make a difference, to be fair.
+<br />
+But when you graph will grow, you will have to make some choice that will impact your game.
+</md-note>
+
 # Who's the Boss?
 
 Before we jump into the interesting stuff, we should have the boss ready to be inserted in the game.
