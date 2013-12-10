@@ -231,8 +231,8 @@ _Note about C# conventions_: Look at the ``speed`` member visibility: it's publi
 5. We change the rigidbody velocity, and this will tell the physic engine to move the game object. We do that in ``FixedUpdate`` as it is recommanded to do everything that is physics-related there.
 
 <md-note>
-_Tutorial update_: If you have read this tutotial before, you may remember that we were using ``transform.Translate`` directly. This was working because translations were slows, however it is not recommanded as it can mess up the physics (for the physics engine, a translation is like a teleportation, so there is no collisions.
-<br />Thanks to your feedbacl, we updated our tutorial to make people learn the good practice for object movement.
+_Tutorial update_: If you have read this tutorial before, you may remember that we were using ``transform.Translate`` directly. This was working because translations were slows, however it is not recommanded as it can mess up the physics (for the physic engine, a translation is like a teleportation, so there is no collisions).
+<br />Thanks to your feedback, we updated the scripts to make people learn the good practices of game object movement.
 </md-note>
 
 Now, attach the script to the game object.
