@@ -13,7 +13,7 @@ links:
   next: ../gestion-du-tir-1
 ---
 
-Dans le chapitre précédent, nous avons vu comment ajouter un décor en arrière-plan. Il est d'ajouter des éléments du gameplay, comme, au sahard, le joueur 
+Dans le chapitre précédent, nous avons vu comment ajouter un décor en arrière-plan. Il est d'ajouter des éléments du gameplay, comme, au sahard, le joueur
 
 # Création du joueur
 
@@ -74,7 +74,7 @@ Cela va représenter la [_hitbox_][hitbox_link] de notre joueur, c'est à dire l
 Vous pouvez voir le _collider_ dans l'éditeur (onglet "Scene") et vous pouvez modifier sa taille et sa forme directement depuis cet onglet, plutôt que de modifier les valeurs du champ "Size" "au pif" dans l'_Inspector_.
 
 <md-tip>
-_Astuce_ : Pour éditer un _box collider_ depuis l'éditeur, sélectionnez tout d'abord votre objet dans la scène. Maintenez le bouton ``maj``, vous devriez voir apparaître des points sur les côtés du rectangles. Tirez ces points pour modifier la taille du rectangle. Attention, votre _collider_ est la rectangle vert, le bleu représente le sprite.   
+_Astuce_ : Pour éditer un _box collider_ depuis l'éditeur, sélectionnez tout d'abord votre objet dans la scène. Maintenez le bouton ``maj``, vous devriez voir apparaître des points sur les côtés du rectangles. Tirez ces points pour modifier la taille du rectangle. Attention, votre _collider_ est la rectangle vert, le bleu représente le sprite.
 </md-tip>
 
 La taille que nous voulons obtenir ici est de ``(10, 10)``.
@@ -89,13 +89,13 @@ Cela nous conviendra pour le moment.
 _Astuce_ : Si vous souhaitez vraiment faire un _shmup_, prenez tout votre temps pour définir les hitboxes de vos sprites. En général, celle du joueur doit être petite et doit s'adapter à un élément du sprite. Ici cela pourrait être un cercle autour du hublot central, donc un _Circle Collider 2D_. L'avantage est que peu importe le type de _collider_, Unity les gère de manière uniforme.
 </md-tip>
 
-Sauvez ce nouvel objet comme un prefab. Vous avez maintenant un début de joueur ! 
+Sauvez ce nouvel objet comme un prefab. Vous avez maintenant un début de joueur !
 
 [![Adding Player Sprite][adding_player]][adding_player]
 
 ### Polygon Collider 2D
 
-Si vous voulez une hitbox ultra précise et adaptée à une forme complexe, Unity propose désormais le "Polygon Collider 2D". Il est moins performant mais est incontournable dans certaines situations (terrains en pente par exemple). 
+Si vous voulez une hitbox ultra précise et adaptée à une forme complexe, Unity propose désormais le "Polygon Collider 2D". Il est moins performant mais est incontournable dans certaines situations (terrains en pente par exemple).
 
 <md-tip>
 _Astuce_ : Le "Polygon Collider 2D" est comme les autres _colliders_, il peut se modifier à la souris depuis l'onglet "Scene". C'est d'ailleurs là qu'il prend tout son sens : en restant appuyé sur  ``cmd`` ou ``ctrl``, vous pouvez supprimer un point du polygone, et avec ``maj`` vous pouvez ajouter ou modifier un point.
@@ -128,7 +128,7 @@ La gravité et le moteur physique peuvent être utilisés dans certains types de
 
 Nous allons la désactiver pour le joueur uniquement, en mettant le champ "Gravity Scale" à 0. Le vaisseau ne tombe plus !
 
-Cochez aussi l'option "Fixed Angles", cela évitera au vaisseau de tourner suite à une collision 
+Cochez aussi l'option "Fixed Angles", cela évitera au vaisseau de tourner suite à une collision
 
 Au final nous avons :
 
@@ -147,7 +147,7 @@ _Remarque_ : vous pouvez tout à fait créer un script JavaScript à la place. N
 Ouvrez votre éditeur de code préféré en passant par le sous-menu "Sync MonoDevelop Project" du menu "Assets".
 
 <md-note>
-_"Sync MonoDevelop Project"_ : Ce sous-menu est bien mal nommé, surtout qu'il ne s'adapte pas à l'éditeur lié à Unity.<br /> Nous vous recommandons de toujours passer par ce sous-menu pour que Unity créer une solution et un projet Visual Studio, avec les bonnes librairies liées.<br /> Cela vous permettre d'avoir l'auto-complétion et la reconnaissance des erreurs. Si vous ouvrez simplement le script sans ce contexte, vous ne bénéficierez plus que de la coloration syntaxique. 
+_"Sync MonoDevelop Project"_ : Ce sous-menu est bien mal nommé, surtout qu'il ne s'adapte pas à l'éditeur lié à Unity.<br /> Nous vous recommandons de toujours passer par ce sous-menu pour que Unity créer une solution et un projet Visual Studio, avec les bonnes librairies liées.<br /> Cela vous permettre d'avoir l'auto-complétion et la reconnaissance des erreurs. Si vous ouvrez simplement le script sans ce contexte, vous ne bénéficierez plus que de la coloration syntaxique.
 </md-note>
 
 Si vous avez déjà utilisé XNA, vous ne serez pas perdus.
@@ -172,7 +172,7 @@ Puis nous avons une collection de méthodes pour les collisions :
 Pfiou... C'était un peu barbant, mais avec cela vous êtes parés pour 90% de vos scripts.
 
 <md-note>
-_Note sur le suffixe "2D"_ : Vous aurez peut-être remarqués que de nombreux éléments que nous utilisons ont un nom qui fini par "2D":  "Box Collider 2D", "Rigidbody 2D", "OnCollisionEnter2D" ou encore "OnTriggerEnter2D", etc. 
+_Note sur le suffixe "2D"_ : Vous aurez peut-être remarqués que de nombreux éléments que nous utilisons ont un nom qui fini par "2D":  "Box Collider 2D", "Rigidbody 2D", "OnCollisionEnter2D" ou encore "OnTriggerEnter2D", etc.
 <br />
 _C'est une nouveauté de Unity 4.3 !_
 <br />
@@ -196,23 +196,26 @@ public class PlayerScript : MonoBehaviour
   /// </summary>
   public Vector2 speed = new Vector2(50, 50);
 
+  // 2 - Stockage du mouvement
+  private Vector2 movement;
+
   void Update()
   {
-    // 2 - Récupérer les informations du clavier/manette
+    // 3 - Récupérer les informations du clavier/manette
     float inputX = Input.GetAxis("Horizontal");
     float inputY = Input.GetAxis("Vertical");
 
-    // 3 - Calcul du mouvement
+    // 4 - Calcul du mouvement
     Vector3 movement = new Vector3(
       speed.x * inputX,
       speed.y * inputY,
       0);
+  }
 
-    // 4 - Le mouvement est relatif au temps écoulé
-    movement *= Time.deltaTime;
-
+  void FixedUpdate()
+  {
     // 5 - Déplacement
-    transform.Translate(movement);
+    rigidbody2D.velocity = movement;
   }
 }
 ```
@@ -227,10 +230,10 @@ _Note sur les conventions_ C# : Si vous regardez la variable ``speed``, vous ver
 ### Explications du script
 
 1. Définition des variables accessibles depuis l'éditeur, ici la vitesse de déplacement du vaisseau (dans une unité arbitraire)
-2. Récupération des contrôles par défaut définis dans un nouveau projet Unity. Ils peuvent être changés via le menu  ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. La valeur récupérée est entre ``[-1, 1]``, ``0`` étant le point mort, 1 la droite, -1 la gauche.
-3. On calcule le mouvement pour cette frame à partir de la direction des flèches / du joystick et de la vitesse théorique vu vaisseau.
-4. Ce mouvement dépend du temps passé, ainsi si le jeu ralentit le joueur ralentira également
-5. Enfin, nous appliquons ce mouvement au ``transform`` du joueur pour modifier réellement sa position dans la scène.
+2. On stocke le mouvement dans une variable pour pouvoir l'appliquer dans ``FixedUpdate``, méthode plus adaptée aux manipulations physique.
+3. Récupération des contrôles par défaut définis dans un nouveau projet Unity. Ils peuvent être changés via le menu  ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. La valeur récupérée est entre ``[-1, 1]``, ``0`` étant le point mort, 1 la droite, -1 la gauche.
+4. On calcule le mouvement pour cette frame à partir de la direction des flèches / du joystick et de la vitesse théorique vu vaisseau.
+5. Enfin, nous appliquons ce mouvement au ``rigidbody`` du joueur pour modifier réellement sa position dans la scène.
 
 Ajoutez ce script à notre objet joueur.
 
@@ -299,7 +302,7 @@ using UnityEngine;
 /// </summary>
 public class MoveScript : MonoBehaviour
 {
-  // 0 - Designer variables
+  // 1 - Designer variables
 
   /// <summary>
   /// Vitesse de déplacement
@@ -311,16 +314,20 @@ public class MoveScript : MonoBehaviour
   /// </summary>
   public Vector2 direction = new Vector2(-1, 0);
 
+  private Vector2 movement;
+
   void Update()
   {
-    // 1 - Calcul du mouvement
-    Vector3 movement = new Vector3(
+    // 2 - Calcul du mouvement
+    movement = new Vector2(
       speed.x * direction.x,
-      speed.y * direction.y,
-      0);
+      speed.y * direction.y);
+  }
 
-    movement *= Time.deltaTime;
-    transform.Translate(movement);
+  void FixedUpdate()
+  {
+    // Application du mouvement
+    rigidbody2D.velocity = movement;
   }
 }
 ```

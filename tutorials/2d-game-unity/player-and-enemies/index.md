@@ -193,23 +193,25 @@ public class PlayerScript : MonoBehaviour
   /// </summary>
   public Vector2 speed = new Vector2(50, 50);
 
+  // 2 - Store the movement
+  private Vector2 movement;
+
   void Update()
   {
-    // 2 - Retrieve axis information
+    // 3 - Retrieve axis information
     float inputX = Input.GetAxis("Horizontal");
     float inputY = Input.GetAxis("Vertical");
 
-    // 3 - Movement per direction
-    Vector3 movement = new Vector3(
-      speed.x * inputX,
-      speed.y * inputY,
-      0);
+    // 4 - Movement per direction
+    movement = new Vector2(
+      speed.x * direction.x,
+      speed.y * direction.y);
+  }
 
-    // 4 - Relative to the time
-    movement *= Time.deltaTime;
-
+  void FixedUpdate()
+  {
     // 5 - Move the game object
-    transform.Translate(movement);
+    rigidbody2D.velocity = movement;
   }
 }
 ```
@@ -223,10 +225,15 @@ _Note about C# conventions_: Look at the ``speed`` member visibility: it's publi
 ### Explanations
 
 1. We first define a public variable that will appear in the "Inspector" view of Unity. This is the speed applied to the ship.
-2. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between ``[-1, 1]``, ``0`` being the idle state, 1 the right, -1 the left.
-3. We multiply the direction by the speed.
-4. With this line, we make sure that everything is relative to the game time (so if the game slows down, your ship will slow too).
-5. Then, we simply translate our sprite in the space (and because we do that for each frame, it will give the impression that the ship moves smoothly).
+2. We store the movement each frame to compute then apply it in two differents methods.
+3. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between ``[-1, 1]``, ``0`` being the idle state, 1 the right, -1 the left.
+4. We multiply the direction by the speed.
+5. We change the rigidbody velocity, and this will tell the physic engine to move the game object. We do that in ``FixedUpdate`` as it is recommanded to do everything that is physics-related there.
+
+<md-note>
+_Tutorial update_: If you have read this tutotial before, you may remember that we were using ``transform.Translate`` directly. This was working because translations were slows, however it is not recommanded as it can mess up the physics (for the physics engine, a translation is like a teleportation, so there is no collisions.
+<br />Thanks to your feedbacl, we updated our tutorial to make people learn the good practice for object movement.
+</md-note>
 
 Now, attach the script to the game object.
 
@@ -306,16 +313,20 @@ public class MoveScript : MonoBehaviour
   /// </summary>
   public Vector2 direction = new Vector2(-1, 0);
 
+  private Vector2 movement;
+
   void Update()
   {
     // 2 - Movement
-    Vector3 movement = new Vector3(
+    movement = new Vector2(
       speed.x * direction.x,
-      speed.y * direction.y,
-      0);
+      speed.y * direction.y);
+  }
 
-    movement *= Time.deltaTime;
-    transform.Translate(movement);
+  void FixedUpdate()
+  {
+    // Apply movement to the rigidbody
+    rigidbody2D.velocity = movement;
   }
 }
 ```
