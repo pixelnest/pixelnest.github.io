@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unity 2d tutorial - animations chapters
+title: 2d animations with Unity
 subtitle: Tutorial update
 ---
 
