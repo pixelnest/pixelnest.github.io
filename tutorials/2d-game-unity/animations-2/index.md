@@ -283,7 +283,7 @@ Okay! We are ready for the script and the animations!
 
 ## New script
 
-Here is the full script of the boss.
+Here is the full script of the boss. Call it "BossScript".
 
 We'll divide the explanations in two parts below: those related to the animations and those related to the boss.
 
@@ -303,7 +303,7 @@ public class BossScript : MonoBehaviour
   private Animator animator;
   private SpriteRenderer[] renderers;
 
-  // Boss pattern (bot really an AI)
+  // Boss pattern (not really an AI)
   public float minAttackCooldown = 0.5f;
   public float maxAttackCooldown = 2f;
 
@@ -316,7 +316,7 @@ public class BossScript : MonoBehaviour
     // Retrieve the weapon only once
     weapons = GetComponentsInChildren<WeaponScript>();
 
-    // Retrieve scripts to disable when not spawn
+    // Retrieve scripts to disable when not spawned
     moveScript = GetComponent<MoveScript>();
 
     // Get the animator
@@ -331,7 +331,7 @@ public class BossScript : MonoBehaviour
     hasSpawn = false;
 
     // Disable everything
-    // -- collider
+    // -- Collider
     collider2D.enabled = false;
     // -- Moving
     moveScript.enabled = false;
@@ -474,46 +474,48 @@ public class BossScript : MonoBehaviour
 }
 ```
 
-** Don't forget to assign the script to the "Boss" object! **
+_Don't forget to assign the script to the "Boss" object!_
 
 <md-note>
-_Note_: This script shares a lot of code with EnemyScript. Well, it's because it's a copy. We could have refactor EnemyScript and make BossScript inherits from it but we wanted to stay simple and avoid to come back on a previous script.
-<br />And remember, we're here for the animations ;).
+_Note_: This script shares a lot of code with "EnemyScript". Well, it's because it's a copy. We could have refactored "EnemyScript" and make "BossScript" inherits from it, but we wanted to stay simple and avoid to have to come back on a previous script here.
+<br /><br />Remember: we're here for the animations. ;)
 </md-note>
 
-### Explanations: Animation
+### 1. Explanations: Animation
 
-Let's focus on few points:
+Let's focus on a few points:
 
-1. We store a reference to the animator so we can use it later
+1. We store a reference to the animator so we can use it later:
 
-````csharp
-private Animator animator;
+  ```csharp
+  private Animator animator;
 
-...
+  // ...
 
-void Awake()
-{
-	...
-	animator = GetComponent<Animator>();
-	...
-}
-````
+  void Awake()
+  {
+      // ...
+      animator = GetComponent<Animator>();
+      //...
+  }
+  ```
 
-2. We set the value of the boolean parameter "Attack" on the animator the first frame when we know that we are in an attack phase. Remember the controller and the transitions? Well, this will simply set a parameter value.
+2. We set the value of the boolean parameter "Attack" on the animator the first frame when we know that we are in an attack phase. Remember the controller and the transitions? Well, this will simply set a parameter value which will then trigger a transition to a new state:
 
-````
-// Set or unset the attack animation
-animator.SetBool("Attack", isAttacking);
-````
+  ```csharp
+  // Set or unset the attack animation
+  animator.SetBool("Attack", isAttacking);
+  ```
 
-3. We trigger the parameter "Hit" when a player shot hits the boss:
+3. We trigger the parameter "Hit" when a player's shot hits the boss:
 
-````csharp
-animator.SetTrigger("Hit");
-````
+  ```csharp
+  animator.SetTrigger("Hit");
+  ```
 
-### Explanations: Boss AI
+<br />Yes, you've read right: using an animator is _that_ simple. :)
+
+### 2. Explanations: Boss AI
 
 Well, AI is a big word. Our boss is stupid here, it just moves then shoot then move then shoot... until it dies.
 
