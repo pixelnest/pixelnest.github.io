@@ -10,7 +10,7 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../conclusion
-  next: ../animation-2
+  next: ../animations-2
 ---
 
 Although we have created an almost complete game, there are still some ways to make it better. Great, that's why we have these additional chapters!

@@ -9,8 +9,8 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../animation-1
-  next: ../conclusion
+  previous: ../animations-1
+  next: ../tweaking-the-gameplay
 ---
 
 We made some animation clips for a new super enemy. But for now they are never used.
@@ -458,7 +458,17 @@ And if you select the game object in the Hierarchy and open the "Animator" pane,
 
  [ ![Boss controller in action][boss_final_animator]][boss_final_animator]
 
-# Next step
+# Bonus
+
+## Substates machines
+
+## Blendtrees
+
+## UI
+
+Solo/Mute/Atomic.
+
+# Next Step
 
 TODO recopier la fin de deployment et link vers conclusion.
 
