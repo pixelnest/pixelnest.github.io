@@ -77,7 +77,7 @@ In this image, we have created a link between two states. In order to animate th
 
 We will focus a bit more on transitions in a moment. For now, let's look at the three different types of states.
 
-### Default state
+### 1. Default state
 
 The _orange state_ is the default one: the initial state when the game is launched.
 
@@ -87,7 +87,7 @@ In this case, the "Idle" state is the default one (if it's not, right click and 
 
 That means that when the game is started, the "Boss" object will automatically play the "Idle" animation (indefinitely if "Loop Time" is enabled in the animation "Inspector" — as it should be for this tutorial).
 
-### "Any State"
+### 2. "Any State"
 
 The _green state_, called "Any State", is a special case.
 
@@ -117,13 +117,13 @@ The solution is to use "Any State":
 
 With this state machine, any state can transition to a "Jump" state. Perfect, no?
 
-### Normal state
+### 3. Normal state
 
 The _gray states_ are the normal ones, holding zero or one animation.
 
 [ ![State][state_normal] ][state_normal]
 
-<br />On the bottom left corner of the "Animator" view, you can find a parameters list. These parameters are used for the conditions of the transitions. More on that below.
+<br /><br />On the bottom left corner of the "Animator" view, you can find a parameters list. These parameters are used for the conditions of the transitions. More on that below.
 
 [ ![Parameters][parameters] ][parameters]
 
@@ -139,93 +139,104 @@ _(Contrary to the image above, it should be empty currently)_
 
 ## Adding parameters
 
-A parameter is a value or a trigger for our state machine. Later we will use their values in the conditions of the transitions.
+A parameter is a value or a trigger for our state machine. Later, we will use these in the conditions of our transitions.
 
-Parameters have multiple types:
+A parameter has 4 types available:
 
 [ ![Parameters types][parameters_types]][parameters_types]
 
-- Int: simple integer number
-- Float: simple float number
-- Bool: true/false value
-- Trigger: true for a frame then false (raised only once per call in the code)
+- `Int` — simple integer number.
+- `Float` — simple float number.
+- `Bool` — `true` or `false` value.
+- `Trigger` — a flag which stays enabled until it is used. Then, it becomes unchecked.
 
-Numbers are interesting for special use case like speed. You may want a different animation for walk or run, but they both rely on the movement speed of the player, which could be a parameter.
+Numbers are interesting for special use cases like an horizontal or vertical speed. You may want a different animation for walk or run, but they both rely on the movement speed of the player, which could be a parameter.
 
 For our game, let's add two new parameters:
 
-1. Hit, a **trigger**
-2. Attack, a **boolean**
-
-(The editor sadly doesn't visually differentiate triggers from boolean).
+1. "Hit", a **trigger**
+2. "Attack", a **boolean**
 
 [ ![Two triggers][two_triggers]][two_triggers]
 
-Now we will directly see why we need them.
+_(Sadly, the editor doesn't differentiate triggers from booleans visually)_
+
+Now, let's see why we need them.
 
 ## Transitions
 
-A transition is a link between two states, telling the state machine how we go from one to another.
+A transition is a link between two states, telling to the state machine how we go from one to another.
 
-### Idle to Attack
+### 1. "Idle to Attack"
 
 To create a transition, make a right click on the source state.
 
-Let's do it for the "Idle to Attack" first. Right click on "Idle" state. Select "Make transition":
+Let's do it for "Idle to Attack" first:
 
-[ ![Transition menu][transition_1]][transition_1]
+1. Right click on "Idle" state.
+2. Select "Make transition":
 
-Now click on the destination state:
+  [ ![Transition menu][transition_1]][transition_1]
 
-[ ![Transition creation][transition_2]][transition_2]
+3. Now click on the destination state:
+
+  [ ![Transition creation][transition_2]][transition_2]
 
 And that's it!
 
-You can select the transition by clicking on the link. The Inspector will reveal a lot of interesting parameters, especially the entry conditions:
+You can select the transition by clicking on the link. The "Inspector" will reveal a lot of interesting parameters, especially the entry conditions:
 
 [ ![Transition parameters][transition_3]][transition_3]
 
-This is what we will edit. Change "Exit Time" (the default one, it means that the transition is true when the source animation is over) to "Attack".
+<md-note>
+_Exit Time_: The "Exit Time" condition is the default condition for a transition. It means that the transition is valid (and can be executed) when the source animation is over.
+</md-note>
+
+This is what we will edit. Change "Exit Time" for the "Attack" parameter that we have defined earlier.
 
 [ ![Transition attack][transition_attack_1]][transition_attack_1]
 
-It means "If Attack is true then play Attack animation".
+This condition means "If `Attack` is `true` then play "Attack" animation".
 
-The same way, add a transition between "Attack" and "Idle" with the condition "Attack" is false.
+The same way, add a transition between "Attack" and "Idle" with the condition "`Attack` is `false`".
 
 [ ![Transition attack end][transition_attack_2]][transition_attack_2]
 
-It means "If Attack is false then stop Attack animation and go back to Idle".
+It means "If `Attack` is `false` then stop "Attack" animation and go back to Idle".
+
+You can observe that we had to define both transitions. Otherwise, the state machine would not have come back to the "Idle" state after an attack.
 
 We will do nearly the same for the Idle animation.
 
-### Idle to Hit
+### 2. "Idle to Hit"
 
-Make two new transitions:
+Remember the "Any State" special state? We are going to use it now.
 
-- Idle to Hit, condition "Hit"
-- Hit to Idle, condition "Exit Time"
+Make two new connections:
+
+1. "Any State" to "Hit", condition `Hit`.
+2. "Hit" to "Idle", condition `Exit Time`.
 
 If the trigger "Hit" is set, we play the animation "Hit" once and go back to "Idle".
 
-#### Attack to Hit
+"Any State" is useful here because `Hit` can be triggered when the "Boss" is "Idle" or in an "Attack". Instead of defining two relations, we just use "Any State".
 
-The player can damage the boss when he's attacking. So we add a transition:
+<md-info>
+_Trigger_: As you can see, when you use a trigger, you don't have to specify a value. Indeed, a trigger is just a way to tell to the state machine "If `valid` Then transition".
+</md-info>
 
-- Attack to Hit, condition "Hit"
+### Final graph
 
-### The final graph
-
-Our animator graph now looks like this:
+Our animator graph should now look like that:
 
 [ ![Animator][transitions]][transitions]
 
-Now we need to add some code in order to get it work ingame.
+The last thing we need is some code to make it react in-game (the parameters are never triggered currently, so the animator will stay on "Idle").
 
 <md-note>
-_Animator graph_: Creating a graph in the animator is not an exact science. Depending on your code implementation, what you want to achieve or a precise sequence of actions, you may want to proceed differently. For example, in our case, we could also transition the Attack from the Any State state. With only three animations, it don't make a difference, to be fair.
-<br />
-But when you graph will grow, you will have to make some choice that will impact your game.
+_Animator graph_: Creating a graph in the animator is not an exact science. Depending on your code implementation, what you want to achieve or a precise sequence of actions, you may want to proceed differently. For example, in our case, we could also transition the "Attack" from the "Any State" state. But with only three short animations, it don't make a difference to be honest.
+<br /><br />
+When your graph will grow, you will have to make some choices that will impact your game.
 </md-note>
 
 # Who's the Boss?
