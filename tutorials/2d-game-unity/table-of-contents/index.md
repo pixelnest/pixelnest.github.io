@@ -30,9 +30,13 @@ You can use the navigation above and below each chapter to move between them.
 - [Build, release and deploy](../deployment)
 - [Conclusion](../conclusion)
 
+Bonus (advanced) chapters:
+
+- [Bonus — 2D Animations (1/2)](../animations-1)
+- [Bonus — 2D Animations (2/2)](../animations-2)
+
 More to come, stay tuned:
 
-- [2D Animations](../animations)
 - [Tweaking the gameplay](../tweaking-the-gameplay)
 
 # Video version

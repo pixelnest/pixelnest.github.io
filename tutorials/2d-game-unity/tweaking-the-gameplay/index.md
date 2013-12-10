@@ -9,7 +9,7 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../animations
+  previous: ../animations-2
 ---
 
 _This chapter hasn't been released yet!_

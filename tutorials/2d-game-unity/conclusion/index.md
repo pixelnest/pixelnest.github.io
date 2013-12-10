@@ -10,7 +10,7 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../deployment
-  next: ../animations
+  next: ../animations-1
 ---
 
 And _this is it_.
