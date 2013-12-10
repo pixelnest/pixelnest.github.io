@@ -517,25 +517,27 @@ Let's focus on a few points:
 
 ### 2. Explanations: Boss AI
 
-Well, AI is a big word. Our boss is stupid here, it just moves then shoot then move then shoot... until it dies.
+Well, AI is... a little bit exaggerated here.
 
-So we have a boolean value to tell if it moves or shoot (``isAttacking``). Shooting is just making all weapons fire.
+Our boss is in fact really stupid: it just moves, then shoots, then moves, then shoots... until it dies.
 
-For the moving part, the boss randomly takes a point visible in the camera and go to it. When it reaches the point (= when the point is in the collider bounds), it goes somewhere else. We made the point visible in debug modes.
+We have a boolean value to tell if it moves or shoots (`isAttacking`).
 
-<md-note>
-_Tip_: ``OnDrawGizmos`` is a very useful method to display debug information in the scene from a script, using the ``Gizmos`` class.
+For the movement part, the boss randomly takes a visible point in the camera and starts to move there. When it reaches the point (when the point is in the collider bounds), it goes somewhere else. We made the point visible in debug mode:
+
+[ ![Boss target position][draw_gizmos] ][draw_gizmos]
+
+<md-tip>
+_Tip_: `OnDrawGizmos` is a very useful method to display debug informations in the scene from a script, by using the `Gizmos` class.
 <br />
-Here we display the position where the boss is going as a sphere. You can see this sphere in the editor pane or in the game view (if you enable "Gizmos").
-<br />
- [ ![Boss target position][draw_gizmos]][draw_gizmos]
-</md-note>
+Here, we display the position where the boss is going as a sphere. You can see this sphere in the editor pane or in the "Game" view (if you enable "Gizmos").
+</md-tip>
 
-We alternate between those two phases with a simple timer (``aiCooldown``). When it reaches 0 we permute and set a new random cooldown.
+We alternate between these two phases with a simple timer (`aiCooldown`). When it reaches 0, we permute the phases and set a new random cooldown.
 
-However, when the boss take a shot, we force him to move (stop any attacks and find a new position).
+However, when the boss is hit, we force him to move (it stops any attack and finds a new position instead). This is why the transition to the "Hit" state is on "Any State" in the "Animator".
 
-Finally, when the boss spawn, it sets the camera and player scrolling to 0. That way, the game stop and tells you that you must defeat the enemy in order to continue (event if nothing comes after in the demo, you get the idea).
+Finally, when the boss spawns, it sets the camera and player scrolling to `0`. That way, the game stops and tells you that you must defeat the enemy in order to continue (even if nothing comes after in the demo, you get the idea).
 
 # The result
 
