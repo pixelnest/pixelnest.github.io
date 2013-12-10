@@ -13,56 +13,129 @@ links:
   next: ../tweaking-the-gameplay
 ---
 
-We made some animation clips for a new super enemy. But for now they are never used.
+We made some animation clips for our new enemy. But, for now, they are never used.
 
-Using the **Animator**, we will bring the boss in the scene and animate it. We will do that in two parts: first, understand and set the animation controller, then make a boss that sops the scene, have a pattern,  multiple HP and that uses the animations.
+Indeed, a clip is just a sheet containing informations on how to animate an object. It's never called or triggered.
 
-# The animation Controller
+Enter the _"Animator"_.
 
-## The new things
+An "Animator" is a component that you put on an object, which itself references an "Animator Controller". The "Animator Controller" is a state machine that manages all the animations of an object and the relations between them.
 
-You may have seen that your "Boss" object you were working on has automatically received a new component: an "Animator". You also automatically have a new file in the "Animations" folder, named just like your object.
+In this chapter, we are going to add the "Boss" object into the scene and animate it. By doing so, we will learn how to use the "Animator". Plus, we will have some scripts to add in order to have a proper behavior for this special character: stop the level, create a pattern for the shots and trigger the animations.
+
+# Animator
+
+You may have seen that your "Boss" object you were working on had automatically received a new component: an "Animator".
+
+At the same time, you may also have seen that a new file was added to your "Animations" folder, named just like your object. It's an "Animator Controller".
+
+Now, observe the "Controller" property of your "Animator" component:
 
 [ ![Component Animator][animator_component]][animator_component]
 
-The file "Boss" is the **controller**. It's where we will define how and when Unity should play the animation clips.
+The file "Boss" is the _controller_. You can check that by clicking onto the controller field — it will highlight the linked file:
 
-The **Animator component** is simply a link between an object and a controller. This component can be manipulated through the code.
+[ ![Animator Controller and the Animator component][link] ][link]
 
-## Opening the Animator pane
+This controller is where we will define how and when Unity should play the animation clips.
 
-As it was not confusing enough, we need to open the pane called "Animator".
+Basically, the "Animator" component is simply a link between an object and an "Animator Controller". This component can be retrieved and manipulated through the code.
 
-You can double click on the controller file (here Animations/Boss) to directly open the Animator. Or you can find it in the Window menu:
-
-[ ![Menu Animator][menu_animator]][menu_animator]
-
-The new pane should open and looks like this:
-
-[ ![Animator][animator_first_contact]][animator_first_contact]
-
-You can see that we have **states** created automatically with our clips (renamed here to remove the "Boss_" prefix).
-
-- This is a **state machine**. Each state **can** be an animation, and you can define transitions between them.
-
-- The orange state is the default one, the first that will be entered when the game launched. Here the "Idle" state is the default one (if it's not, right click and "Set As Default").
-
-- The green, "Any State", is a good way to simplify transitions. Instead of making many links to one state, you can have one single link between "Any Sate" and the destination state. Any transitions defined from "Any State" can be triggered from anywhere in the state machine.
-
-- Grey states are normal, handling zero to one animation.
-
-On bottom left you have the parameters list. We will need it for our game.
-
-On top left you can see the layers order. This is a way to have multiple state machine for one object: same animation used differently depending on the context.
-
-And finally, the button "Auto live Link" on top right is a cool Unity feature allowing you to see in real-time which animation is played. Leave it enabled.
-
+If your "Boss" prefab has no "Animator" component, add it manually and drag the "Boss" controller inside the property.
 
 <md-note>
-_Tip_: substates
-TODO Moger à toi l'honneur
+_Options_: The "Animator" component has some other options. The "Apply Root Motion" should probably be disabled when using the animations the way we do in this tutorial. Yet, it doesn't matter here because we have a very simple object with no gravity.
 </md-note>
 
+## Inside an animator
+
+As it was not confusing enough, we need to open the window called "Animator" (and not "Animation" this time).
+
+You can double click on the controller file ("Animations/Boss") to open the controller, or you can find it in the "Window" menu:
+
+[ ![Menu Animator][menu_animator] ][menu_animator]
+
+You should get something like this:
+
+[ ![Animator][animator_first_contact] ][animator_first_contact]
+
+You can see that we have some _states_ (the rectangles) created automatically with our clips, plus a special one called "Any State".
+
+Remember when you used the "Create New Clip" button of the "Animation" view ? Unity was in fact adding a state in the controller of the object, linked to the animation file you had created.
+
+Click on each state of the animator and rename them to remove the "Boss_" prefix:
+
+[ ![Rename the states][rename] ][rename]
+
+<br />An "Animator Controller" is a _state machine_. Each state **can** be an animation, and you can define transitions between them.
+
+A transition tells to Unity when and why it should move from a state to another.
+
+[ ![Transitions][state_transitions] ][state_transitions]
+
+In this image, we have created a link between two states. In order to animate the object with the "Hit" animation, we have to be in the "Idle" state first.
+
+We will focus a bit more on transitions in a moment. For now, let's look at the three different types of states.
+
+### Default state
+
+The _orange state_ is the default one: the initial state when the game is launched.
+
+[ ![Default state][state_default] ][state_default]
+
+In this case, the "Idle" state is the default one (if it's not, right click and "Set As Default").
+
+That means that when the game is started, the "Boss" object will automatically play the "Idle" animation (indefinitely if "Loop Time" is enabled in the animation "Inspector" — as it should be for this tutorial).
+
+### "Any State"
+
+The _green state_, called "Any State", is a special case.
+
+[ ![Any State][state_any] ][state_any]
+
+It's a good way to simplify a state machine. It represents (as its name says so well) any state at a given time. In our "Boss" state machine, this state is, at the same time, the "Idle", the "Hit" and the "Attack" states.
+
+Let's explain this with a few examples.
+
+Imagine we have this state machine:
+
+[ ![Example 1 - Run -> Walk -> Jump][any_state_1] ][any_state_1]
+
+In order to "Jump", you have to "Walk" first, then "Run" and FINALLY "Jump". It means that the "Jump" animation won't be played unless your object is in the "Run" state before. If you never "Run", you will never "Jump".
+
+It's not ideal, is it? We should be able to "Jump" when we "Walk" too!
+
+Okay, let's try this:
+
+[ ![Example 2 - (Run -> Walk) -> Jump][any_state_2] ][any_state_2]
+
+Great, we are now able to "Jump" from the "Walk" and "Run" states. However, if you add a few more states, you will need to create a lot of transitions to "Jump" from every state.
+
+The solution is to use "Any State":
+
+[ ![Example 3 - Any State -> Jump][any_state_3] ][any_state_3]
+
+With this state machine, any state can transition to a "Jump" state. Perfect, no?
+
+### Normal state
+
+The _gray states_ are the normal ones, holding zero or one animation.
+
+[ ![State][state_normal] ][state_normal]
+
+<br />On the bottom left corner of the "Animator" view, you can find a parameters list. These parameters are used for the conditions of the transitions. More on that below.
+
+[ ![Parameters][parameters] ][parameters]
+
+_(Contrary to the image above, it should be empty currently)_
+
+<br />On the top left, you can see the layers. This is a way to have multiple state machines for one object. We will not use this feature in this tutorial.
+
+[ ![Layers][layers] ][layers]
+
+<br />And finally, the button "Auto live Link" on the top right is a cool Unity feature which allows you to see in real-time which state is currently played. Leave it enabled.
+
+[ ![Auto Live Link][auto_live] ][auto_live]
 
 ## Adding parameters
 
@@ -468,7 +541,11 @@ And if you select the game object in the Hierarchy and open the "Animator" pane,
 
 ## Substates machines
 
+Image subsate
+
 ## Blendtrees
+
+Image blendtree
 
 ## UI
 
@@ -483,8 +560,24 @@ TODO recopier la fin de deployment et link vers conclusion.
 [menu_animator]: ./-img/menu_animator.png
 
 [animator_first_contact]: ./-img/animator_first_contact.png
+[link]: ./-img/link.png
+[rename]: ./-img/rename.png
 
+[parameters]: ./-img/parameters.png
 [parameters_types]: ./-img/parameters_types.png
+
+[layers]: ./-img/layers.png
+[auto_live]: ./-img/auto_live.png
+
+[state_transitions]: ./-img/state_transitions.png
+
+[state_default]: ./-img/state_default.png
+[state_any]: ./-img/state_any.png
+[state_normal]: ./-img/state_normal.png
+
+[any_state_1]: ./-img/any_state_1.png
+[any_state_2]: ./-img/any_state_2.png
+[any_state_3]: ./-img/any_state_3.png
 
 [two_triggers]: ./-img/two_triggers.png
 [transition_1]: ./-img/transition_1.png
