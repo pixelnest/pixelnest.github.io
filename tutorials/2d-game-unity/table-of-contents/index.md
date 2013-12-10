@@ -42,3 +42,7 @@ More to come, stay tuned:
 # Video version
 
 [Watch the tutorial](http://gamedevnation.com/creating-a-2d-game-with-unity/), thanks to Jay Jennings's work from Game Dev Nation.
+
+<md-danger>
+_Attention_: The "Bonus — 2D animations" chapters have not been converted yet.
+</md-danger>
