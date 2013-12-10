@@ -625,9 +625,18 @@ You can disable this behavior by unchecking this parameter:
 
 [ ![Atomic][bonus_atomic] ][bonus_atomic]
 
-# Next Step
+# End of this bonus chapter
 
-TODO recopier la fin de deployment et link vers conclusion.
+Here we are: we know how to create animation clips and use them in an animator!
+
+This bonus chapter about animations is over!
+
+<br />If you liked this advanced tutorial, you might want to:
+
+* Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio).
+* Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).
+* Subscribe to our [RSS feed](http://feedpress.me/pixelnest).
+* Give your impressions? :)
 
 
 [animator_component]: ./-img/animator_component.png
