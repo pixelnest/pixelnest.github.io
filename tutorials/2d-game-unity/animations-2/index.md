@@ -596,13 +596,34 @@ And inside the "Jump" sub-state machine:
 
 [ ![Jump graph][bonus_jump] ][bonus_jump]
 
-## Blendtrees
+## Blend tree
 
-Image blendtree
+A blend tree is a special state that will merge some clips based on a parameter.
 
-## UI
+For example, you can have a "Walk", "Run" and "Sprint" clips. With a blend tree and a speed parameter, the animator will know how to merge these three clips together depending on the speed.
 
-Solo/Mute/Atomic.
+## Miscellaneous
+
+### Selecting a precise transition, solo and mute
+
+If you have multiple transitions on a state, you can select the state and click on its transitions list directly to select one of them:
+
+[ ![Transitions list][bonus_transitions] ][bonus_transitions]
+
+Look at the "Mute" and "Solo" checkboxes.
+
+Their purposes are to isolate a transition from the rest.
+
+* If you click on "Mute", this transition is ignored.
+* If you click on "Solo", only this transition can be played by the animator.
+
+### Atomic
+
+By default, a transition is "Atomic". It means that a transition cannot be interrupted.
+
+You can disable this behavior by unchecking this parameter:
+
+[ ![Atomic][bonus_atomic] ][bonus_atomic]
 
 # Next Step
 
@@ -663,3 +684,6 @@ TODO recopier la fin de deployment et link vers conclusion.
 [bonus_nssm]: ./-img/bonus_nssm.png
 [bonus_full]: ./-img/bonus_full.png
 [bonus_jump]: ./-img/bonus_jump.png
+
+[bonus_transitions]: ./-img/bonus_transitions.png
+[bonus_atomic]: ./-img/bonus_atomic.png
