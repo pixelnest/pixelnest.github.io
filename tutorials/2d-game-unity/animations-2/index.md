@@ -243,46 +243,51 @@ When your graph will grow, you will have to make some choices that will impact y
 
 Before we jump into the interesting stuff, we should have the boss ready to be inserted in the game.
 
-This will be quick as the chapter is more about animation than anything else.
+We are going to be quick since this chapter is about animations.
 
 ## Preparing the prefab
 
-### Settings and known scripts
+### Settings and Scripts
 
-1. Add a HealthScript to the big bad guy, grant him a lot of points (like 50).
-2. Add a MoveScript. For a good behavior try a speed of ``(5,5)``.
+1. Add a "HealthScript" to the big bad guy and grant him a lot of health points (like `50`).
+2. Add a "MoveScript". For a good behavior, try a speed of `(5, 5)`.
 
 [ ![Boss settings][boss_settings]][boss_settings]
 
-### The projectile
+### Projectile
 
-We need a new projectile when the boss shoot.
+We need a new projectile when the boss try to hit the player.
 
-Duplicate the "EnemyShot1" and change the image by this new one.
+Duplicate the "EnemyShot1" and change the image with this new one:
 
 [ ![Boss attack projectile][shot_boss]][shot_boss]
 
 _(Right click to save the image)_
 
-Set the scale to ``(0.3,0.3,1)``. Save it as a new prefab. You should get something like this:
+1. Set the scale to `(0.3, 0.3, 1)`.
+2. Save it as a new prefab.
+
+You should get something like this:
 
 [ ![Boss projectile][boss_shot_2]][boss_shot_2]
 
 [ ![Boss projectile parameters][boss_shot_1]][boss_shot_1]
 
-### The weapon
+### Weapon
 
-Like we did for the enemy Poulpi, add a weapon made of an empty game object and a WeaponScript.
+As we did for the "Poulpi", add a weapon child to the boss (an empty game object with a "WeaponScript").
 
 [ ![Boss weapon][boss_weapon]][boss_weapon]
 
-Okay ready for the script and for the animations!
+Okay! We are ready for the script and the animations!
 
-## The new  script
+## New script
 
-Here is the full big script of the boss. I'll divide the explanations in two parts: those related to the animation, and those related to the boss. You maybe not be interested in both.
+Here is the full script of the boss.
 
-````csharp
+We'll divide the explanations in two parts below: those related to the animations and those related to the boss.
+
+```csharp
 using UnityEngine;
 
 /// <summary>
@@ -467,7 +472,7 @@ public class BossScript : MonoBehaviour
     }
   }
 }
-````
+```
 
 ** Don't forget to assign the script to the "Boss" object! **
 
