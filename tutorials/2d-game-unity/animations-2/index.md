@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Bonus — 2D Animations (2/2)
-date: 13/11/18
+date: 13/12/11
 
 tutorial:
   name: Creating a 2D game with Unity
