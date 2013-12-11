@@ -614,8 +614,10 @@ Look at the "Mute" and "Solo" checkboxes.
 
 Their purposes are to isolate a transition from the rest.
 
-* If you click on "Mute", this transition is ignored.
-* If you click on "Solo", only this transition can be played by the animator.
+* If you click on "Mute", _this transition is ignored_ by the animator.
+* If you click on "Solo", _only this transition can be played_ by the animator.
+
+It's really useful when you want to test a specific state or a precise flow.
 
 ### Atomic
 
