@@ -225,15 +225,15 @@ _Note about C# conventions_: Look at the ``speed`` member visibility: it's publi
 ### Explanations
 
 1. We first define a public variable that will appear in the "Inspector" view of Unity. This is the speed applied to the ship.
-2. We store the movement each frame to compute then apply it in two differents methods.
-3. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between ``[-1, 1]``, ``0`` being the idle state, 1 the right, -1 the left.
+2. We store the movement for each frame.
+3. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between `[-1, 1]`, `0` being the idle state, 1 the right, -1 the left.
 4. We multiply the direction by the speed.
-5. We change the rigidbody velocity, and this will tell the physic engine to move the game object. We do that in ``FixedUpdate`` as it is recommanded to do everything that is physics-related there.
+5. We change the rigidbody velocity. This will tell the physic engine to move the game object. We do that in `FixedUpdate()` as it is recommended to do everything that is physics-related in there.
 
-<md-note>
-_Tutorial update_: If you have read this tutorial before, you may remember that we were using ``transform.Translate`` directly. This was working because translations were slows, however it is not recommanded as it can mess up the physics (for the physic engine, a translation is like a teleportation, so there is no collisions).
-<br />Thanks to your feedback, we updated the scripts to make people learn the good practices of game object movement.
-</md-note>
+<md-info>
+_Tutorial update_: If you have read this tutorial before, you may remember that we were using `transform.Translate` directly. This was working because translations were slow, but it is not recommended since it can mess up the physics (for the physic engine, a translation is like a teleportation, so there is no collision).
+<br />Thanks to your feedback, we updated the scripts to help people learn the good practices of game object movement.
+</md-info>
 
 Now, attach the script to the game object.
 
