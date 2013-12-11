@@ -204,8 +204,9 @@ public class PlayerScript : MonoBehaviour
 
     // 4 - Movement per direction
     movement = new Vector2(
-      speed.x * direction.x,
-      speed.y * direction.y);
+      speed.x * inputX,
+      speed.y * inputY);
+
   }
 
   void FixedUpdate()
