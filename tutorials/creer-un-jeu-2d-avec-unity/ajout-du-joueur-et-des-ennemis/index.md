@@ -206,10 +206,10 @@ public class PlayerScript : MonoBehaviour
     float inputY = Input.GetAxis("Vertical");
 
     // 4 - Calcul du mouvement
-    Vector3 movement = new Vector3(
+    movement = new Vector2(
       speed.x * inputX,
-      speed.y * inputY,
-      0);
+      speed.y * inputY);
+
   }
 
   void FixedUpdate()
