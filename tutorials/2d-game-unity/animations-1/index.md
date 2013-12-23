@@ -162,7 +162,7 @@ To add a keyframe:
 
 [ ![Animation record][animation_pane_record]][animation_pane_record]
 
-Select the "Body" child of your "Boss" object in your scene. At `0:30` change its rotation to `(0, 0, 30)`.
+Select the "Boss" object in your scene. At `0:30` change its rotation to `(0, 0, 30)`.
 
 <md-tip>
 _Rotation_: In your "Scene" view, if you put your mouse near an handle of an object, you will see that the mouse pointer change. By holding and dragging the mouse, you can alter the rotation of the selected object.
@@ -184,8 +184,8 @@ If you press the "Play" button of the "Animation" view, you will see the animati
 
 That's a start! The boss looks stupid, so we will add two new keyframes:
 
-1. `1:00` - "Body" object rotation of `(0, 0, 30)`.
-2. `1:30` - "Body" object rotation of `(0, 0, 0)`.
+1. `1:00` - "Boss" object rotation of `(0, 0, 30)`.
+2. `1:30` - "Boss" object rotation of `(0, 0, 0)`.
 
 Now, the animation can loop smoothly (because the rotation is the same at the end and at the beginning).
 
@@ -198,8 +198,10 @@ In the editor, if you click on a value of a keyframe, Unity will activate the re
 <md-danger>
 _Changing a property of the "Boss" object_: If you change a property of the parent object (the "Boss" object here), be extremely vigilant, especially with the "Position".
 <br /><br />For instance, if you change the "Position" of the "Boss" object in an animation, its real position in the scene is going to be changed for the one in the animation each time it is played. It can block an object.
-<br />
-Most of the time, you want to change the children properties and not the container.
+<br /><br />
+Most of the time, you want to change the children properties and not the container. 
+<br /><br />
+Here we are working on the parent because we want everything to rotate together, but maybe we should have add an empty parent object on top of everything that is never animated.
 </md-danger>
 
 ### Playing with curves
