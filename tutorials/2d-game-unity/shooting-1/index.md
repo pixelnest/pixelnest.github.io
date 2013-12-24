@@ -157,7 +157,7 @@ _Attention_: It's better to work on the `Prefab` directly. <br />By doing so, ev
 Make sure the shot and the Poulpi are on the same line to test the collision.
 
 <md-note>
-_Note_: Pay especially attention to the Z axis: it should be `0` (we are not using the depth here). If the Z axis is different, the shot and the Poulpi will simply not collide.
+_Note_: The 2D physics engine, Box2D, doesn't use the Z position. Colliders 2D will always be in the same plane even if your game objects are not.
 </md-note>
 
 Now play the scene and observe:
