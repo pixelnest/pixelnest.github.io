@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Game development resources
+title: Gamedev resources
 date: 13/11/20
 
 tutorial:
