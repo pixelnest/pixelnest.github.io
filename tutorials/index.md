@@ -9,7 +9,7 @@ Here is a list of all the tutorials and articles we made.
 # Made by Pixelnest
 
 * [Creating a 2D game with Unity](./2d-game-unity/)
-* [Making 2D animations with Unity](./2d-game-unity/animations-1/)
+* [Making animations with Unity 2D](./2d-game-unity/animations-1/)
 * [Gamedev resources (postmortems, tips, sales, etc)](./gamedev-resources/)
 
 # Made by Damien
