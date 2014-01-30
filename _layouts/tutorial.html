@@ -55,6 +55,8 @@
 
       <!-- post layout -->
       <article class="entry">
+        {% include ad.html %}
+
         <h2 class="entry__title">
           <a href="{{ page.url | remove: 'index.html' }}" title="{{ page.title }}">{{ page.title }}</a>
         </h2>
@@ -106,6 +108,7 @@
   </div>
 
   {% include ga.html %}
+  {% include fusionads.html %}
   {% include js.html %}
 </body>
 </html>
