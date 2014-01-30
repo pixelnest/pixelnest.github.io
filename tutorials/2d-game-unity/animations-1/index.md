@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Bonus — 2D Animations (1/2)
+title: Making animations with Unity 2D (1/2)
 date: 13/12/11
 
 tutorial:
@@ -13,7 +13,7 @@ links:
   next: ../animations-2
 ---
 
-Although we have created an almost complete game, there are still some ways to make it better. Great, that's why we have these additional chapters!
+Although we have created an almost complete game [in the previous chapters][tutorial], there are still some ways to make it better. Great, that's why we have these additional chapters!
 
 Currently, there is clearly one area that we could improve on: animations.
 
@@ -304,6 +304,7 @@ In the next chapter, we will see how to combine the different animations and cal
 _Mecanim_: The 2D animation tool is based on the already existing _Mecanim_ system.
 </md-info>
 
+[tutorial]: ../
 
 [boss]: ./-img/boss.png
 [slice]: ./-img/slice.png

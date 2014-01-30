@@ -30,10 +30,10 @@ You can use the navigation above and below each chapter to move between them.
 - [Build, release and deploy](../deployment)
 - [Conclusion](../conclusion)
 
-Bonus (advanced) chapters:
+# Advanced chapters
 
-- [Bonus — 2D Animations (1/2)](../animations-1)
-- [Bonus — 2D Animations (2/2)](../animations-2)
+- [Making animations with Unity 2D (1/2)](../animations-1)
+- [Making animations with Unity 2D (2/2)](../animations-2)
 
 More to come, stay tuned:
 

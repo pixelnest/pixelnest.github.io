@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Bonus — 2D Animations (2/2)
+title: Making animations with Unity 2D (2/2)
 date: 13/12/11
 
 tutorial:
