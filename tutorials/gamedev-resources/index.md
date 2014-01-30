@@ -18,7 +18,7 @@ Here is a list of external resources we liked and recommend to you.
 # Game design
 
 * ["Juice it or lose it" by Martin Jonasson & Petri Purho](https://www.youtube.com/watch?v=Fy0aCDmgnxg)
-* ["The Art of Screenshake" by Jan Willem Nijman from Vlambeer](http://www.youtube.com/watch?v=AJdEqssNZ-U&feature=youtu.be) — must-see
+* ["The Art of Screenshake" by Jan Willem Nijman from Vlambeer](http://www.youtube.com/watch?v=AJdEqssNZ-U&feature=youtu.be) — must-see.
 * [13 More Tips for Making a Fun Platformer](http://devmag.org.za/2012/07/19/13-more-tips-for-making-a-fun-platformer/)
 * [Extra Credits videos about game design](http://www.youtube.com/playlist?list=PLhyKYa0YJ_5BkTruCmaBBZ8z6cP9KzPiX)
 
