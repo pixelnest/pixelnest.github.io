@@ -10,7 +10,7 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../animations-1
-  next: ../tweaking-the-gameplay
+  next: ../more
 ---
 
 We made some animation clips for our new enemy. But, for now, they are never used.
