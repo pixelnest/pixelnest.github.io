@@ -21,9 +21,9 @@ Le résultat sera très similaire à cette démo :
 
 _(Cliquez sur l'image pour jouer)_
 
-Nous nous focaliserasons sur les _shmup_ à scrolling horizontaux, de gauche à droite, mais si ce didacticiel fait bien son travail vous n'aurez pas de mal à explorer d'autres sens et d'autres genres.
+Nous nous focaliserons sur les _shmup_ à scrolling horizontaux, de gauche à droite, mais si ce didacticiel fait bien son travail vous n'aurez pas de mal à explorer d'autres sens et d'autres genres.
 
-Les _assets_, le _gameplay_ et l'idée originale viennent du jeu [The Great Paper Adventure][tgpa_link] que Damien a réalisé il y a quelques années (2010). Le jeu original est développé avec [XNA][xna_link], nous avons donc penser que refaire le début de ce projet sous Unity serait l'occasion idéale de tester les nouveaux outils 2D.
+Les _assets_, le _gameplay_ et l'idée originale viennent du jeu [The Great Paper Adventure][tgpa_link] que Damien a réalisé il y a quelques années (2010). Le jeu original est développé avec [XNA][xna_link], nous avons donc pensé que refaire le début de ce projet sous Unity serait l'occasion idéale de tester les nouveaux outils 2D.
 
 # Unity
 
