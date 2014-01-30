@@ -35,14 +35,12 @@ You can use the navigation above and below each chapter to move between them.
 - [Making animations with Unity 2D (1/2)](../animations-1)
 - [Making animations with Unity 2D (2/2)](../animations-2)
 
-More to come, stay tuned:
-
-- [Tweaking the gameplay](../tweaking-the-gameplay)
+More to come, stay tuned!
 
 # Video version
 
 [Watch the tutorial](http://gamedevnation.com/creating-a-2d-game-with-unity/), thanks to Jay Jennings's work from Game Dev Nation.
 
-<md-danger>
-_Attention_: The "Bonus — 2D animations" chapters have not been converted yet.
-</md-danger>
+<md-note>
+_Notice_: the "Making animations with Unity" chapters have not been converted to video yet.
+</md-note>
