@@ -35,9 +35,9 @@ This tutorial is made with the Unity 4.3 **FREE** version.
 
 If you'd rather **watch** this tutorial than **read** it, then have a look at [Jay Jennings's work from Game Dev Nation](http://gamedevnation.com/creating-a-2d-game-with-unity/).
 
-<md-danger>
-_Attention_: The "Bonus — 2D animations" chapters have not been converted yet.
-</md-danger>
+<md-note>
+_Notice_: The "Making animations with Unity 2D" chapters have not been converted yet.
+</md-note>
 
 # Licensing
 

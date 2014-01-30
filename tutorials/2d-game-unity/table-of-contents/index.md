@@ -42,5 +42,5 @@ More to come, stay tuned!
 [Watch the tutorial](http://gamedevnation.com/creating-a-2d-game-with-unity/), thanks to Jay Jennings's work from Game Dev Nation.
 
 <md-note>
-_Notice_: the "Making animations with Unity" chapters have not been converted to video yet.
+_Notice_: The "Making animations with Unity 2D" chapters have not been converted to video yet.
 </md-note>
