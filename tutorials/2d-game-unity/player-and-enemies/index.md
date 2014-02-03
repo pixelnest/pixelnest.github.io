@@ -286,7 +286,7 @@ We will script a simple behavior: the Poulpi will just move in a direction.
 
 Create a new script "MoveScript".
 
-We could have call it "EnemyScript" but we plan to reuse it later in another context.
+We could call it "EnemyScript" but we plan to reuse it later in another context.
 
 <md-note>
 _Note_: The modularity provided by Unity's component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters. It's your choice, but we highly recommend against doing that.
