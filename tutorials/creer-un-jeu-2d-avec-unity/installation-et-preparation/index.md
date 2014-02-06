@@ -92,7 +92,7 @@ Plutôt que de tout réexpliquer nous vous invitons donc à jeter un œil sur ce
 
 ## Unity et disposition des onglets
 
-Vous faite désormais face à une belle scène vide. Voici la disposition que vous utilisons pour travailler. Prenez un peu de temps pour adapter l'interface à vos besoins et à votre écran.
+Vous faites désormais face à une belle scène vide. Voici la disposition que nous utilisons pour travailler. Prenez un peu de temps pour adapter l'interface à vos besoins et à votre écran.
 
 Il peut être par exemple intéressant d'avoir la fenêtre de jeu à côté de la console pour le debug.
 
