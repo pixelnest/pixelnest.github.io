@@ -152,7 +152,7 @@ _Note au sujet du dossier Resources_ : si vous avez déjà utilisé Unity, vous 
 
 ## Notre première scène
 
-L'onglet _Hierarchy_ contient tous ce qui présent dans la scène. C'est ce qu'il faut manipuler, préparer avant de lancer le jeu.
+L'onglet _Hierarchy_ contient tout ce qui est présent dans la scène. C'est ce qu'il faut manipuler, préparer avant de lancer le jeu.
 
 Chaque élément de la scène est un _game object_ pour Unity. Ces objets peuvent être imbriqués les uns sous les autres pour former une arborescence.
 
