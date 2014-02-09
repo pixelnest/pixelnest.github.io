@@ -214,9 +214,9 @@ We are going to give you some hints to go further on the shooting aspect of your
 
 Let's see how we can handle the collision between the player and an enemy, as it is quite frustrating to see them block each other without consequences...
 
-The collision is the result of the intersection two non-triggers Collider2D. We simply need to handle the event ``OnCollisionEnter2D`` in our ``PlayerScript``: 
+The collision is the result of the intersection of two non-triggers Colliders 2D. We simply need to handle the event ``OnCollisionEnter2D`` in our ``PlayerScript``: 
 
-````chsarp
+````csharp
 //PlayerScript.cs
 //....
 
@@ -244,7 +244,7 @@ void OnCollisionEnter2D(Collision2D collision)
   }
 ````
 
-On collision, we damage both the player and the enemy by using the ``HealthScript`` component. By doing so, everything related to the health/damage behavior is linked to this component.
+On collision, we damage both the player and the enemy by using the ``HealthScript`` component. By doing so, everything related to the health/damage behavior is linked to it.
 
 ## Pool of projectiles
 
