@@ -210,6 +210,42 @@ Run the game and observe the difference:
 
 We are going to give you some hints to go further on the shooting aspect of your game. You can skip this part if you are not interested into more specific _shmup_ thoughts.
 
+## Player-enemy collision
+
+Let's see how we can handle the collision between the player and an enemy, as it is quite frustrating to see them block each other without consequences...
+
+The collision is the result of the intersection two non-triggers Collider2D. We simply need to handle the event ``OnCollisionEnter2D`` in our ``PlayerScript``: 
+
+````chsarp
+//PlayerScript.cs
+//....
+
+void OnCollisionEnter2D(Collision2D collision)
+  {
+    bool damagePlayer = false;
+
+    // Collision with enemy
+    EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript>();
+    if (enemy != null)
+    {
+      // Kill the enemy
+      HealthScript enemyHealth = enemy.GetComponent<HealthScript>();
+      if (enemyHealth != null) enemyHealth.Damage(enemyHealth.hp);
+
+      damagePlayer = true;
+    }
+
+    // Damage the player
+    if (damagePlayer)
+    {
+      HealthScript playerHealth = this.GetComponent<HealthScript>();
+      if (playerHealth != null) playerHealth.Damage(1);
+    }
+  }
+````
+
+On collision, we damage both the player and the enemy by using the ``HealthScript`` component. By doing so, everything related to the health/damage behavior is linked to this component.
+
 ## Pool of projectiles
 
 As you play, you can observe in the "Hierarchy" that game objects are being created and removed only after 20 seconds (unless they hit a player or an enemy).
