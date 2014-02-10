@@ -261,7 +261,7 @@ SpecialEffectsHelper.Instance.Explosion(transform.position);
 Into the `OnTriggerEnter()` method of the "HealthScript":
 
 ```csharp
-  void OnTriggerEnter(Collider collider)
+  public Damage(int damageCount)
   {
     // ...
 
