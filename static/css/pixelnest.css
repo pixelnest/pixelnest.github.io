@@ -658,6 +658,13 @@ li {
     color: #bbb;
     text-decoration: none; }
 
+.journal .fusion {
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background: rgba(59, 59, 61, 0.7);
+  border-radius: 8px; }
+
 @media only screen and (max-width: 1000px) {
   .fusion {
     display: none; } }
