@@ -652,6 +652,25 @@ li {
     font-size: 0.9em;
     text-align: center; }
 
+.legal-separator {
+  margin-top: 80px;
+  border: none;
+  border-top: 1px solid #DDD; }
+
+.legal-explanation {
+  margin-bottom: 50px; }
+
+.legal ul {
+  padding: 20px;
+  border: 1px solid #DDD;
+  background-color: #f8f8f8;
+  font-family: monospace;
+  list-style: none; }
+.legal .primary {
+  margin-bottom: 10px;
+  color: black;
+  font-size: 1.2em; }
+
 .fusion {
   font-size: 13px; }
   .fusion a {
