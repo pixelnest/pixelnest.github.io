@@ -47,6 +47,12 @@
     border: 1px solid #ccc;
   }
 
+  hr {
+    margin-top: 40px;
+    border: none;
+    border-top: 1px solid #DDD;
+  }
+
   a {
     @extend %link;
   }
