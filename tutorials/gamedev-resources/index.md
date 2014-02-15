@@ -49,6 +49,7 @@ _NB: Some of these articles reflect a point of view that we don't necessarily ag
 
 ## Starting with Unity
 
+* [The sounds of Tetrobot: from XACT to Unity](http://www.swingswingsubmarine.com/2014/02/14/sounds-of-tetrobot/) — A very well explained usage of the ScriptableObjects
 * [Unity official videos](http://unity3d.com/learn/tutorials/modules) — "Beginner Editor" and "Intermediate Editor" are some very valuable modules to watch.
 * [General Performance Tips](http://wiki.unity3d.com/index.php?title=General_Performance_Tips)
 * [50 Tips for Working with Unity (Best Practices)](http://devmag.org.za/2012/07/12/50-tips-for-working-with-unity-best-practices/)
