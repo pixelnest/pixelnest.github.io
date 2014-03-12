@@ -39,6 +39,10 @@ If you'd rather **watch** this tutorial than **read** it, then have a look at [J
 _Notice_: The "Making animations with Unity 2D" chapters have not been converted yet.
 </md-note>
 
+# Translations
+
+- [Chinese version](http://www.litpo.com/category/%E6%98%93%E5%AD%A6%E7%9A%84%E6%95%99%E7%A8%8B/) by Zhang Qianying from LITPO
+
 # Licensing
 
 - The assets and arts are licensed under a [CC-BY-NC][cc_license_link] attribution. They have been made by [Thibault Person][tp_twitter_link] for the game [The Great Paper Adventure][tgpa_link].
