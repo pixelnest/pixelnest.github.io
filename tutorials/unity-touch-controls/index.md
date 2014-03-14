@@ -610,7 +610,7 @@ If you want further informations about a specific topic, or a clarification on t
 
 Finally, you can follow us on [twitter][pxn_twitter_link] if you like what we do. :)
 
-This tutorial was mainly redacted by [Damien][dam_twitter_link], and edited by [Matthieu][mog_twitter_link]. We hope you will enjoy it.
+This tutorial was redacted by [Damien][dam_twitter_link], and edited by [Matthieu][mog_twitter_link]. We hope you will enjoy it.
 
 
 [result]: ./-img/result.png
