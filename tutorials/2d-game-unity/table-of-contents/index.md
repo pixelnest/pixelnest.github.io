@@ -35,6 +35,10 @@ You can use the navigation above and below each chapter to move between them.
 - [Making animations with Unity 2D (1/2)](../animations-1)
 - [Making animations with Unity 2D (2/2)](../animations-2)
 
+# Other Unity related tutorials
+
+- [Touch controls with Unity](../../unity-touch-controls)
+
 More to come, stay tuned!
 
 # Video version
