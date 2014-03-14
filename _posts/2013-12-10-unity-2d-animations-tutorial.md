@@ -20,8 +20,4 @@ _(Click to see it in motion)_
 
 We hope that you will enjoy this new content!
 
-<br />As always, feel free to to send us your feedback or the mistakes you find. We are very open to discussion and we will try to fix our errors quickly. You can reach us using our [contact page](http://pixelnest.io/contact).
-
-
-
-
+<br />As always, feel free to to send us your feedback or the mistakes you find. We are very open to discussion and we will try to fix our errors quickly. You can reach us using our [contact page](/contact).
