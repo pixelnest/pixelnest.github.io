@@ -458,7 +458,7 @@ If two fingers are on the screen, we create a new vortex between the two positio
 Eventually, and as soon as one finger is missing, the vortex is turned into some explosions. The gesture is over.
 
 <sub>
-_Note by Matthieu: Michael Bay would be proud._
+_Note from Matthieu: Michael Bay would be proud._
 </sub>
 
 # Full script
