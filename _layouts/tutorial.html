@@ -7,7 +7,6 @@
 </head>
 <body>
   <div class="page tutorial" id="page">
-
     <!-- reduced header -->
     <header class="page-header">
       <nav>
@@ -57,12 +56,21 @@
 
       <!-- post layout -->
       <article class="entry">
+        {% if page.show_ads == nil or page.show_ads == true %}
         {% include ad.html %}
+        {% endif %}
 
         <h2 class="entry__title">
           <a href="{{ page.url | remove: 'index.html' }}" title="{{ page.title }}">{{ page.title }}</a>
         </h2>
 
+        {% if page.subtitle %}
+        <h3 class="entry__subtitle">
+          {{ page.subtitle }}
+        </h3>
+        {% endif %}
+
+        {% if page.show_metadata == nil or page.show_metadata == true %}
         <aside class="entry__metadata">
           {% include author.html %}
 
@@ -72,6 +80,7 @@
             </p>
           </section>
         </aside>
+        {% endif %}
 
         <section class="entry__content">
           {{ content }}
@@ -109,8 +118,11 @@
     </footer>
   </div>
 
-  {% include ga.html %}
+  {% if page.show_ads == nil or page.show_ads == true %}
   {% include fusionads.html %}
+  {% endif %}
+
+  {% include ga.html %}
   {% include js.html %}
 </body>
 </html>
