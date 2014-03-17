@@ -14,6 +14,14 @@
   a { @extend %link; }
 }
 
+.entry__subtitle {
+  margin-top: -25px;
+
+  color: #727272;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
 // Restyle some default elements
 .entry__content {
   h1 {
