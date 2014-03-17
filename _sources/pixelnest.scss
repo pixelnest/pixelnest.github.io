@@ -137,6 +137,21 @@ li {
   max-width: $MAX;
 }
 
+/// Button
+
+.intent-button {
+  margin: 40px auto !important;
+  border: none !important;
+
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include transition(opacity, .3s)
+}
+
 // ---------------------
 // Includes
 // ---------------------

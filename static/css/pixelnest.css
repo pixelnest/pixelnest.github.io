@@ -81,6 +81,18 @@ li {
   padding: 0 20px;
   max-width: 700px; }
 
+.intent-button {
+  margin: 40px auto !important;
+  border: none !important;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+  .intent-button:hover {
+    opacity: 0.8; }
+
 .banner {
   border-bottom: 1px solid #888;
   background-image: url("/static/images/background.jpg");
