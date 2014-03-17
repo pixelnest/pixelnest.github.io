@@ -17,7 +17,11 @@
 
         <section class="page-ref">
           {% if page.tutorial.link and page.tutorial.name %}
-          Tutorial: <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
+            {% if page.tutorial.show_label == nil or page.tutorial.show_label == true %}
+              Tutorial: <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
+            {% else %}
+              <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
+            {% endif %}
           {% endif %}
         </section>
 
