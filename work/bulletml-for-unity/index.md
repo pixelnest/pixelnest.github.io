@@ -5,18 +5,13 @@ show_ads: false
 show_metadata: false
 
 tutorial:
+  show_label: false
   name: BulletML for Unity
-  link: ../
----
+  link: ./
 
-* [BulletML for Unity](#)
-* [What is inside the package?](./in-the-package)
-* [Licence](./license)
-* [About BulletML](./about)
-* [Documentation: Dependencies](./dependencies)
-* [Documentation: How to use](./how-to-use)
-* [Documentation: Customization](./customization)
-* [Support request](./support)
+links:
+  next: ./table-of-contents
+---
 
 *BulletML for Unity* is a **simple** and **powerful** BulletML plugin for Unity 4.3 and above made by [Pixelnest Studio](http://pixelnest.io).
 
