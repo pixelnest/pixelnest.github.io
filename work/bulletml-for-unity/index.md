@@ -38,3 +38,8 @@ This plugin works on all the platforms Unity supports.
     title="Buy BulletML for Unity"
   />
 </a>
+
+
+[demo]: http://dmayance.com/BulletML-Unity/demo/demo.html
+
+[screenshot]: ./-img/screenshot.png

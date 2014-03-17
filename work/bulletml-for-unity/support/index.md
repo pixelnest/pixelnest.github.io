@@ -14,3 +14,7 @@ links:
   summary: ../table-of-contents
   previous: ../customization
 ---
+
+If you are getting any trouble with this plugin, please send us a support request via e-mail at [bulletml-unity@pixelnest.io](mailto:bulletml-unity@pixelnest.io).
+
+You can also reach us on Twitter: [@pixelnest](https://twitter.com/pixelnest).
