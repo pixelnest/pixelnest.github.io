@@ -15,6 +15,12 @@ links:
   next: ../package-and-license
 ---
 
+This documentation presents our license and BulletML quickly. Then, we will dive deeper into the plugin usage. Don't be afraid, it's really quick and easy. ;)
+
+You can use the navigation above and below each part to move between them.
+
+# Documentation
+
 * [Package and license](../package-and-license)
 * [About BulletML](../about)
 * [Documentation: Dependencies](../dependencies)
