@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: What's inside the package?
+title: What is inside the package?
 subtitle: BulletML for Unity
 show_ads: false
 show_metadata: false
@@ -8,7 +8,9 @@ show_metadata: false
 
 The plugin is only available on the Unity Asset Store.
 
-What are you waiting for? Go get it here:
+* The code.
+* Two demos.
+* Documentation.
 
 <a href="#todo">
   <img

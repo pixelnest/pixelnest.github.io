@@ -10,7 +10,7 @@ tutorial:
 ---
 
 * [BulletML for Unity](#)
-* [Get the plugin](./get-the-plugin)
+* [What is inside the package?](./in-the-package)
 * [Licence](./license)
 * [About BulletML](./about)
 * [Documentation: Dependencies](./dependencies)
