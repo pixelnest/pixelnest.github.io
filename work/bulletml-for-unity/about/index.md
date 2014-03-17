@@ -12,7 +12,7 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../license
+  previous: ../package-and-license
   next: ../dependencies
 ---
 

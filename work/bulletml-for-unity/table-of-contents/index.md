@@ -12,11 +12,10 @@ tutorial:
 
 links:
   previous: ../
-  next: ../inside-the-package
+  next: ../package-and-license
 ---
 
-* [What is inside the package?](../inside-the-package)
-* [License](../license)
+* [Package and license](../package-and-license)
 * [About BulletML](../about)
 * [Documentation: Dependencies](../dependencies)
 * [Documentation: How to use](../how-to-use)

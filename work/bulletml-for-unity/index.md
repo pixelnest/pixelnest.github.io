@@ -33,7 +33,7 @@ This plugin works on all the platforms Unity supports.
 <a href="#todo">
   <img
     src="./-img/buy.png"
-    style="border: none; margin-top: 50px;"
+    class="intent-button"
     alt="Buy BulletML for Unity"
     title="Buy BulletML for Unity"
   />
