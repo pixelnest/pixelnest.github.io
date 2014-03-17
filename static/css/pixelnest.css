@@ -451,6 +451,10 @@ li {
   .entry__title {
     margin-bottom: 0; }
 
+  .entry__subtitle {
+    margin-top: 0;
+    margin-bottom: 0; }
+
   .entry__metadata {
     position: relative;
     top: -5px; }
