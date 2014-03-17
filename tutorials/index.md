@@ -8,10 +8,17 @@ Here is a list of all the tutorials and articles we made.
 
 # Made by Pixelnest
 
+## Unity
+
 * [Creating a 2D game with Unity](./2d-game-unity/)
 * [Making animations with Unity 2D](./2d-game-unity/animations-1/)
 * [Unity and touch controls](./unity-touch-controls/) <span style="color: #f4650c">_(new!)_</span>
+
+## Misc
+
 * [Gamedev resources (postmortems, tips, sales, etc)](./gamedev-resources/)
+
+- - -
 
 # Made by Damien
 
