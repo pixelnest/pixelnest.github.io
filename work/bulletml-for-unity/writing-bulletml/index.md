@@ -67,7 +67,12 @@ This is a great help and you should see if you can enable that feature in your f
 
 This pattern does... nothing, but it is valid.
 
-1. ``<bulletml>`` is the **root** tag.
+```xml
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+</bulletml>
+```
+
+* ``<bulletml>`` is the **root** tag.
 Like <html> for a webpage, you should have *one and only one* as the top tag of your file.
 
 The ``type`` attribute define your shooter orientation:
@@ -77,9 +82,18 @@ The ``type`` attribute define your shooter orientation:
 
 The BulletML engine **does not** use this information, you may set it only for you game and level designers.
 
-2. ``<!DOCTYPE>`` is a meta for your XML editor and parser to enable validation with a DTD
+```xml
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+```
 
-3. ``<action label="top">`` The entry point of your pattern. We will see the ``action`` tag soon.
+* ``<!DOCTYPE>`` is a meta for your XML editor and parser to enable validation with a DTD
+
+```xml
+<action label="top">
+</action>
+```
+
+* ``<action label="top">`` The entry point of your pattern. We will see the ``action`` tag soon.
 
 Before jumping in a concrete pattern construction, this is an explanation of the available tags and their parameters.
 
@@ -391,13 +405,21 @@ Those are two variables that can be used for a NUMBER.
 
 Use it to have a pattern getting harder while the difficulty increase (higher speeds, lower waits).
 
-Here, you have 1 at rank 0 (min) but 2 at rank 1 (max): ``(1 + 1 * $rank)``. A simple way to double the speed for example.
+```
+(1 + 1 * $rank)
+```
+
+Here, you have 1 at rank 0 (min) but 2 at rank 1 (max): . A simple way to double the speed for example.
 
 * $rand is a **random** number between 0 and 1.
 
 Use it to add a random behavior.
 
-For example, a random 0-360° direction: ``(360 * $rand)``
+```
+(360 * $rand)
+```
+
+For is an example of a random 0-360° direction.
 
 
 
