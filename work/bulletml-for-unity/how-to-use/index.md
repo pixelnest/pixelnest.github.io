@@ -13,7 +13,7 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../dependencies
-  next: ../customization
+  next: ../writing-bulletml
 ---
 
 # 1. Import the Unity package
@@ -24,7 +24,7 @@ The `Example/` folder contains a demo scene with some patterns. You can delete t
 
 The other folders are mandatory.
 
-# 2. The main script
+# 2. Main script
 
 The heart of the plugin is contained in a `BulletManagerScript`.
 
