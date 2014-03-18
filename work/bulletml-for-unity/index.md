@@ -13,7 +13,7 @@ links:
   next: ./table-of-contents
 ---
 
-*BulletML for Unity* is a **simple** and **powerful** wrapper around BulletML for Unity 4.3 and above made by [Pixelnest Studio](http://pixelnest.io).
+*BulletML for Unity* is a **simple** and **powerful** wrapper around BulletML, for Unity 4.3 and above made by [Pixelnest Studio](http://pixelnest.io).
 
 [ ![Screenshot][screenshot] ][screenshot]
 
