@@ -22,7 +22,7 @@ _BulletML for Unity_ is available for **20$** (normal price), only on the Unity 
 * Full documentation, code and demos.
 * An extensive list of patterns for BulletML.
 
-Unfortunately, you cannot ask for a refund. By buying this product, you gain full access to the source code and examples and we cannot take it back. Think about it a second before proceeding.
+Unfortunately, _you cannot ask for a refund_. By buying this product, you gain full access to the source code and examples and we cannot take it back. _Think about it a second before proceeding._
 
 <a href="#todo">
   <img
@@ -34,3 +34,7 @@ Unfortunately, you cannot ask for a refund. By buying this product, you gain ful
 </a>
 
 20$ is just the price of a few hours of work. We think that our plugin will save you much more time than that. ;)
+
+# Unity Asset Store agreement
+
+By using and buying stuffs on the Unity Asset Store (including _BulletML for Unity_), you have agreed to the [Asset Store Terms of Service and EULA](http://unity3d.com/company/legal/as_terms). This means that you cannot _"reproduce, duplicate, copy, sell, trade or resell any Asset that you have acquired from the Unity Asset Store for any purpose"_.
