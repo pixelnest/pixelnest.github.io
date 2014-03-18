@@ -114,24 +114,27 @@ Nevertheless, these two options may not suit your pattern logic. In this case, y
 
 # 4. Emitter
 
-We're nearly done! Now we want to shoot some bullets.
+We're nearly done! We have our bank and our bullets but they are still unused.
 
-An emitter is a projectile source. It will execute a pattern as define in a BulletML file.
+An emitter is a projectile source: it will execute a pattern as defined in a BulletML pattern file.
 
-Add an ``EmitterScript`` to a new object or to a sprite in your scene.
+Add an `EmitterScript` to a new object or to a sprite in your scene.
 
- [ ![The EmitterScript][emitter]][emitter]
+[ ![The EmitterScript][emitter] ][emitter]
 
-* **Xml File**: is the BulletML file you want to use.
+An `EmitterScript` has only one parameter:
 
-Make sure your file in your ``Assets`` folder, and simply drag'n'drop to assign it.
+* `Xml File` — this is the BulletML file you want to use for this emitter.
 
-The XML file will be parsed on the script start, any error will be reported in the console.
+Make sure that your file is in your `Assets` folder and simply drag it in the field to assign it.
+
+The XML file will be parsed on the script `Start` and any error will be reported in the console.
+
+# 5. Example
 
 Here's a nice BulletML example:
 
-````xml
-
+```xml
 <?xml version="1.0" ?>
 <!DOCTYPE bulletml SYSTEM "bulletml.dtd">
 
@@ -198,14 +201,20 @@ Here's a nice BulletML example:
   </bullet>
 
 </bulletml>
+```
 
-````
+_(Save it in your `Assets` folder)_
 
-_(Save it in your Assets folder)_
+If you haven't done it already, put a `BulletManagerScript` in your scene. Then, create a `BulletBank` and a default bullet container prefab. Associate the prefab in the bank.
 
-If you enter play mode, you see the pattern being played:
+Then create a new object and assign the pattern that you have just saved to a newly added `EmitterScript` on this object.
+
+If you start the game, you will see the pattern being played:
 
 [ ![Pattern in motion][gif_circle]][gif_circle]
+
+
+<br />And this is all you need to know to use _BulletML for Unity_. In the next section, we will learn a bit more about creating a BulletML pattern file.
 
 
 [demo_scene_script]: ../-img/demo_scene_script.png
