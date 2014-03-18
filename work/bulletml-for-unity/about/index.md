@@ -16,28 +16,34 @@ links:
   next: ../dependencies
 ---
 
-[BulletML](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/index_e.html), Bullet Markup Language, is an XML format designed by Kenta Cho for bullet patterns in Shoot Them Up games.
+[BulletML](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/index_e.html), for _Bullet Markup Language_, is an XML format designed by Kenta Cho to create bullet patterns in "Shoot'Em Up" games.
 
-The C# parser and engine used in this plugin is open-source, maintained by Dan Manning and can be found on [GitHub](https://github.com/dmanning23/BulletMLLib/). We use a slightly modified version to get it running with Unity.
+The C# parser and engine used in this plugin is open-source, maintained by Dan Manning and can be found on [GitHub](https://github.com/dmanning23/BulletMLLib/). We use a slightly modified version to get it running on Unity.
 
-# Writing you own BulletML files.
+# Writing you own BulletML file
 
 The format is [fully documented](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml_ref_e.html) by its creator.
 
-Also, we have bundle the original DTD in the package so you can validate your own files.
+We have also bundled the original [DTD](http://en.wikipedia.org/wiki/Document_type_definition) in the package so you can validate your own files.
+
+TODO check the step-by-step.
 
 # Existing patterns?
 
-You can find some well-know patterns written in BulletML. We have bundled some of them in the demo, you may have a looK.
+You can find some well-know patterns written in BulletML on Internet. We have already bundled some of them in our package and demos.
 
-Remember that they may not work nicely altogether: they were written for different types of games, scales, orientation.
+Remember that they may not work nicely altogether: they were written for different types of games, scales and orientations. It's still a good start to create your own.
 
-Also, some patterns need to handle more than 3500 bullets on the screen, it requires some performance optimization that are **not** covered by this plugin.
+<md-warning>
+*Caution*: Some patterns need to handle more than 3500 bullets on the screen. It requires some performance optimizations that are _NOT_ covered by this plugin.
+</md-warning>
+
+TODO we have also included our own custom examples with the plugin.
 
 # Framerate
 
-The BulletML lib has been made to run at 60 frames per second. But Unity, on mobile devices, set the framerate at 30 FPS by default.
+The BulletML library is designed to run at 60 frames per second. Alas, Unity set the framerate at 30 FPS by default on mobile devices.
 
-That's why, in `BulletManagerScript`, we override the `Application.targetFramerate` and set it to 60.
+That's why we override the `Application.targetFramerate` and set it to 60 in `BulletManagerScript`.
 
-You can change with your own value or disable the fix in our script but beware of different speeds between mobile and desktop platforms.
+You can change this property by your own value or disable the fix in our script, but beware of different speeds between mobile and desktop platforms.
