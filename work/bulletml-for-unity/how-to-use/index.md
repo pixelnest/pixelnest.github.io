@@ -16,48 +16,48 @@ links:
   next: ../customization
 ---
 
-### 1. Import the Unity package
+# 1. Import the Unity package
 
 Import the whole package in your Unity project.
 
-The **Example** folder contains a demo scene with some patterns. You can delete the whole folder from your project when you don't need the example anymore.
+The `Example/` folder contains a demo scene with some patterns. You can delete the whole folder from your project once you don't need the examples anymore.
 
 The other folders are mandatory.
 
-### 2. The main script
+# 2. The main script
 
-The heart of the plugin is contained in ``BulletManagerScript``.
+The heart of the plugin is contained in a `BulletManagerScript`.
 
-You should add **one**, and only one, to every scene that requires BulletML. The name and location doesn't matter.
+You should add **one occurrence** of this script (_and only one_) to every scene that requires BulletML. The name and location don't matter.
 
-[ ![BulletML main script][demo_scene_script]][demo_scene_script]
+[ ![BulletML main script][demo_scene_script] ][demo_scene_script]
 
 The script comes with some parameters:
 
-* **Player**: this is a **direct reference** to the **"player"'s GameObject**. Some patterns require the current location of the player to aim it.
+* `Player` — this is a **direct reference** to the **"player"'s GameObject**. Some patterns require the current location of the player to aim it.
 Simply drag'n'drop the GameObject containing your player's location. You can always update it at runtime.
 
-*  **Bullet Bank**: this is the definition of how we will instantiate bullets from a pattern. It create a link between a bullet name, a prefab and a sprite. Please see the chapters "Bullets" below for a full explanation.
+*  `Bullet Bank` — this is the definition of how we will instantiate bullets from a pattern. It create a link between a bullet name, a prefab and a sprite. Please see the chapters "Bullets" below for a full explanation.
 
-* **Use Default Bullet If Missing**: if you don't want to define each  kind of bullet you use in your patterns, as we do in the demo (that would make dozens of identical bullets to define), simply check this. The **first** bullet in the bank will be used as the default one.
+* `Use Default Bullet If Missing` — if you don't want to define each  kind of bullet you use in your patterns, as we do in the demo (that would make dozens of identical bullets to define), simply check this. The **first** bullet in the bank will be used as the default one.
 
-* **Scale**: Between ``0f`` and ``1f``. BulletML use its own metric system. To make sure a pattern fit to your game, you may need to tweak this Scale value, especially if you imported an existing pattern file.
+* `Scale` — Between ``0f`` and ``1f``. BulletML use its own metric system. To make sure a pattern fit to your game, you may need to tweak this Scale value, especially if you imported an existing pattern file.
 
-* **TimeSpeed**: Between ``0f`` and ``1f``. This way you can speed or slow the whole engine.
+* `TimeSpeed` — Between ``0f`` and ``1f``. This way you can speed or slow the whole engine.
 
-### 3. The bullet bank
+# 3. The bullet bank
 
 The plugin comes with a built-in mecanism to create the bullets with the right sprite.
 
 A bank is a file containing the association between a bullet name, a GmaeObject prefab and a sprite.
 
-#### Create a new bank
+## Create a new bank
 
 In your ``Assets`` folder, right click -> "Create -> "BulletML" -> "Bullet Bank".
 
  [ ![Bullet bank menu][bulletml_menu]][bulletml_menu]
 
-#### Create a bullet container prefab
+## Create a bullet container prefab
 
 You need to tell the plugin how you define your bullets. You can have a prefab for every bullet, or one prefab for each bullet, you have the choice.
 
@@ -68,7 +68,7 @@ Here's a simple prefab with a collider, as an example:
 
  [ ![Bullet container][bullet_prefab]][bullet_prefab]
 
-### Fill the bank
+## Fill the bank
 
 Define the bullets you will use in your game and your BulletML files.
 
@@ -87,7 +87,7 @@ If you want to handle the destruction by your self, simply set 0 and the bullet 
 
 * **Destroy When Out Of Screen**: bullets are automatically removed when they are not visible anymore. It is a simple way to avoid a too large numbers of bullets in the scene. However, it may not suits your patterns so you may tweak the behavior manually by using the ``vanish`` command in your pattern and the time to live property in the bank to clear your bullets.
 
-### 4. The emitter
+# 4. The emitter
 
 We're nearly done! Now we want to shoot some bullets.
 
