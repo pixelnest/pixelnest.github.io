@@ -189,6 +189,8 @@ Here's a simple example of bullet shot towards the player at low speed.
 
 ```
 
+[! [fire example][fire]][fire]
+
 ### vanish
 
 Destroy immediately the current bullet.
@@ -208,7 +210,7 @@ A *for* loop: do the nested action a given number of *times*.
 
 It is as simple as it seems. You can only define one action in the repeat node (but an action can be made of multiple actions).
 
-#### example
+#### Example
 
 Try to repeat the example we saw previously
 
@@ -231,12 +233,46 @@ Try to repeat the example we saw previously
 </bulletml>
 ```
 
+[! [repeat example][repeat]][repeat]
+
 Now we shoot at the player 42 aimed bullets. Problem, they are shot **simultaneously** !.
 It would be much better is they were shot one after the other, **waiting** their turn.
 
 ### wait
 
-And here's come the ``<wait>`` tag.
+And here comes the ``<wait>`` tag.
+
+``<wait>NUMBER</wait>``
+
+``<wait>`` will prevent an action from terminate until a number of frames has passed.
+
+#### Example
+
+This is exactly what we need before!
+With a small wait time between each shot, we will 42 **distinct** projectiles.
+
+```xml
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+  <action label="top">
+    <repeat>
+      <times>42</times>
+      <action>
+        <fire>
+          <direction type="aim">0</direction>
+          <speed>1</speed>
+          <bullet />
+        </fire>
+        <wait>10</wait>
+      </action>
+    </repeat>
+  </action>
+</bulletml>
+```
+
+[! [wait example][wait]][wait]
+
 
 ### changeSpeed and changeDirection
 
@@ -269,3 +305,9 @@ The bullet can also be one defined elsewhere, in a separate context.
 To reuse a bullet, use the same ``label``.
 
 ## Calling an action with parameters
+
+
+
+[fire]: ./-img/fire.gif
+[repeat]: ./-img/repeat.gif
+[wait]: ./-img/wait.gif
