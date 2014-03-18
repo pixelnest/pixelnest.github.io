@@ -16,17 +16,55 @@ links:
   next: ../customization
 ---
 
-If you have any trouble with the plugin, please send us a support request via e-mail at [bulletml-unity@pixelnest.io](mailto:bulletml-unity@pixelnest.io).
+So you tried our examples, maybe picked some new ones, but you don't know how to write your own BulletML file.
 
-You can also reach us on Twitter: [@pixelnest][twitter].
+Fortunately, that's what we will cover in this section.
+We suppose you know the basics of [XML](http://stackoverflow.com/tags/xml/info).
 
-# More
+For a complete reference about the language, have a look at:
 
-You have some problems with Unity? We also have an [in-depth tutorial](/tutorials/2d-game-unity/) about it. We cover some [advanced topics](/tutorials) too. :)
+- [the BulletML reference](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml_ref_e.html)
+- [the dmanning23's BUlletMLLib wiki](https://github.com/dmanning23/BulletMLLib/wiki)
 
-If you appreciate what we do and/or want to be informed by our future releases, please follow us on [twitter][twitter], [facebook][facebook] and subscribe to our [RSS feed][feed].
+# Minimum BulletML file
 
+The smallest valid BulletML file looks like the following one:
 
-[twitter]: https://twitter.com/pixelnest
-[facebook]: https://www.facebook.com/pixelneststudio
-[feed]: http://feedpress.me/pixelnest
+```xml
+<?xml version="1.0" ?>
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+  <action label="top">
+  </action>
+</bulletml>
+```
+
+The language is well documented and even has a [DTD (Document Type Definition)](http://www.w3schools.com/dtd/) file, ``bulletml.dtd``, which as bundled in our package.
+
+```xml
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+  <action label="top">
+  </action>
+</bulletml>
+```
+
+We can take advantage of this file to make sure we are writing a valid definition.
+All you need to do is to add ``DOCTYPE`` tag with a path the file (here, ./bulletml.dtd).
+
+<md-note>
+_Note_: Some developer tools, like Visual Studio, will take profit of the DTD file to update their auto-completion list.
+This way, the editor will always suggests you a valid tag, attribute or value at a given location.
+This is a great help and you should see if you can enable that feature in your favorite XML editor.
+</md-note>
+
+This pattern does... nothing, but it is valid.
+
+* <bulletml> is the **root** tag.
+Like <html> for a webpage, you should have **one and only one** as the top tag of your file.
+The ``type``attribute define your shooter orientation, ``horizontal``like R-Type or ``vertical``like Ikaruga.
+The BulletML engine **does not** use this information, you may set it only for you game and level designers.
+
+* <!DOCTYPE> is a meta for your XML editor and parser to enable validation with a DTD
+
+* <action label="top"> The entry point of your pattern. We will see the ``action`` tag in the next paragraph.
