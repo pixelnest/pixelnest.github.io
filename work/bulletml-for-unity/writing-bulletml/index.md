@@ -60,11 +60,15 @@ This is a great help and you should see if you can enable that feature in your f
 
 This pattern does... nothing, but it is valid.
 
-* <bulletml> is the **root** tag.
-Like <html> for a webpage, you should have **one and only one** as the top tag of your file.
-The ``type``attribute define your shooter orientation, ``horizontal``like R-Type or ``vertical``like Ikaruga.
+1. ``<bulletml>`` is the **root** tag.
+Like <html> for a webpage, you should have *one and only one* as the top tag of your file.
+
+The ``type`` attribute define your shooter orientation:
+  * ``horizontal`` like R-Type
+  * ``vertical``like Ikaruga.
+
 The BulletML engine **does not** use this information, you may set it only for you game and level designers.
 
-* <!DOCTYPE> is a meta for your XML editor and parser to enable validation with a DTD
+2. ``<!DOCTYPE>`` is a meta for your XML editor and parser to enable validation with a DTD
 
-* <action label="top"> The entry point of your pattern. We will see the ``action`` tag in the next paragraph.
+3. ``<action label="top">`` The entry point of your pattern. We will see the ``action`` tag in the next paragraph.
