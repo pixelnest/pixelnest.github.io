@@ -39,7 +39,7 @@ Unfortunately, _you cannot ask for a refund_. By buying this product, you gain f
 
 This plugin is NOT the BulletML library (but it includes it).
 
-It's a wrapper around it to make it work on Unity effortlessly. We are not the provider and main developer behind the library.
+It's a wrapper around it to make it work on Unity effortlessly. We are not the provider and main developer behind the official library.
 
 # Unity Asset Store agreement
 
