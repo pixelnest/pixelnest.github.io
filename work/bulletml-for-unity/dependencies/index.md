@@ -16,7 +16,10 @@ links:
   next: ../how-to-use
 ---
 
-In addition to Unity 4.3 or superior, the plugin requires two extra libraries bundled in the package (/Plugins folder):
+In addition to Unity 4.3 or superior, the plugin requires two extra libraries (bundled with the package in the `/Plugins` folder):
 
-* **BulletMLLib.dll**: a modified C# BulletML implementation (parser and engine) based on the open-source one. We mainly updated the lib to use Unity framework.
-* **Equationator.dll**: an [open-source library](https://github.com/dmanning23/Equationator) to compute an equation from a string
+* **BulletMLLib.dll**: a C# BulletML implementation (parser and engine) based on this open-source [repository](https://github.com/dmanning23/BulletMLLib/).
+
+  We have mainly modified and updated the library to make it work on the Unity framework.
+
+* **Equationator.dll**: an [open-source library](https://github.com/dmanning23/Equationator) to compute an equation from a `String`.
