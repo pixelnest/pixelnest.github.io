@@ -137,21 +137,92 @@ This should shoot a new projectile at a reasonable speed.
 Direction has a ``type`` attributes with 4 possible values
 
 1. aim: (default) Target the player ship
-2. absolute:
+2. absolute: NUMBER is the angle (clockwise) of the shot
+3. relative: NUMBER is an angle (clockwise) added to all other direction (fire, bullet, changeDirection)
+4. sequence: Each frame, NUMBER is added to the previous direction result
 
 #### speed
 
+``<speed type="(absolute | relative | sequence)">NUMBER</speed>``
 
+As for direction, speed comes with a ``type`` attribute with nearly the same possibility.
+Refer to the previous enumeration, simply replace angle by speed.
 
+The default value is ``absolute``.
 
-The bullet can also be one defined elsewhere, in a separate context.
-To reuse a bullet, use the same ``label``.
+#### Example
+
+Here's a simple example of bullet shot towards the player at low speed.
+
+```xml
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+	<action label="top">
+		<fire>
+		  <direction type="aim">0</direction>
+		  <speed>1</speed>
+		  <bullet />
+		</fire>
+	</action>
+</bulletml>
+
+```
 
 ### vanish
 
+Destroy immediately the current bullet.
+Does nothing outside of a ``<bullet>`` node.
+
 ### repeat
 
+A *for* loop: do the nested action a given number of *times*.
+
+```xml
+<repeat>
+  <times>42</times>
+  <action>
+  </action>
+</repeat>
+```
+
+It is as simple as it seems. You can only define one action in the repeat node (but an action can be made of multiple actions).
+
+#### example
+
+Try to repeat the example we saw previously
+
+```xml
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+  <action label="top">
+    <repeat>
+      <times>42</times>
+      <action>
+        <fire>
+          <direction type="aim">0</direction>
+          <speed>1</speed>
+          <bullet />
+        </fire>
+      </action>
+    </repeat>
+  </action>
+</bulletml>
+```
+
+Now we shoot at the player 42 aimed bullets. Problem, they are shot **simultaneously** !.
+
 ### changeSpeed and changeDirection
+
+Update the properties of a parent ``<bullet>`` tag.
+
+They both have a value tag, respectively ``<speed>`` or ``<direction>`` and a ``<term>``tag.
+
+The term is the time (in frames, remember) that will take the change. A linear interpolation will be made to have intermediary values.
+
+```xml
+```
 
 ### accel
 
@@ -166,5 +237,10 @@ You probably wants to make your first bullet appear.
 # $rank and $rank
 
 # Advanced topics
+
+## Reusing bullets or fire
+
+The bullet can also be one defined elsewhere, in a separate context.
+To reuse a bullet, use the same ``label``.
 
 ## Calling an action with parameters
