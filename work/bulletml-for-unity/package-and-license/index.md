@@ -35,6 +35,12 @@ Unfortunately, _you cannot ask for a refund_. By buying this product, you gain f
 
 20$ is just the price of a few hours of work. We think that our plugin will save you much more time than that. ;)
 
+# Disclaimer
+
+This plugin is NOT the BulletML library (but it includes it).
+
+It's a wrapper around it to make it work on Unity effortlessly. We are not the provider and main developer behind the library.
+
 # Unity Asset Store agreement
 
 By using and buying stuffs on the Unity Asset Store (including _BulletML for Unity_), you have agreed to the [Asset Store Terms of Service and EULA](http://unity3d.com/company/legal/as_terms). This means that you cannot _"reproduce, duplicate, copy, sell, trade or resell any Asset that you have acquired from the Unity Asset Store for any purpose"_.
