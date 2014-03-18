@@ -26,6 +26,12 @@ For a complete reference about the language, have a look at:
 - [the BulletML reference](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml_ref_e.html)
 - [the dmanning23's BUlletMLLib wiki](https://github.com/dmanning23/BulletMLLib/wiki)
 
+# Preparing your project
+
+You need to have the steps define before (plugin initialization) done in order to be able to test your pattern.
+
+The simplest way to write without worrying of the integration is to use the demo (Demo_Showcase) and save your XML files with the others, in Resources/patterns.
+
 # Minimum BulletML file
 
 The smallest valid BulletML file looks like the following one:
@@ -76,9 +82,7 @@ The BulletML engine **does not** use this information, you may set it only for y
 
 Before jumping in a concrete pattern construction, this is an explanation of the available tags and their parameters.
 
-# The BulletML reference
-
-## Units
+# Units
 
 You will find three types of units in BulletML:
 
@@ -86,11 +90,11 @@ You will find three types of units in BulletML:
 2. speed = Unity's meters per frame. It will be multiplied by the game scale.
 3. angle = 360 degrees clockwise
 
-## NUMBER
+# NUMBER
 
 We will sometimes use ``NUMBER`` in our documentation.
 
-``NUMBER`` is not just an integer. It can be also a float, or a simple mathematical operation like (1 + 2 * (4 / 5)).
+``NUMBER`` is not just an integer. It can be also a float, or a mathematical expression like (1 + 2 * (4 / 5)).
 
 Later we will introduce two variables, $rank and $rand, that can be used dynamically in those operation.
 
@@ -118,13 +122,13 @@ In BulletML, an action (tag ``<action>``) is a container of instructions.
 
 ### fire and fireRef
 
-``<fire>`` creates a new bullet.
-
 ```xml
 <fire>
-	<bullet />
+  <bullet />
 </fire>
 ```
+
+``<fire>`` creates a new bullet.
 
 Firing an anonymous bullet with no initial properties will only make a static projectile.
 
@@ -146,10 +150,8 @@ Notice that ``<fireRef>`` allows you to call a fire tag define in another contex
 
 #### direction
 
-``<direction type="(aim | absolute | relative | sequence)">NUMBER</direction>``
-
 ```xml
-  <direction type="sequence">30</direction>
+<direction type="(aim | absolute | relative | sequence)">NUMBER</direction>
 ```
 
 Direction has a ``type`` attributes with 4 possible values
@@ -161,18 +163,14 @@ Direction has a ``type`` attributes with 4 possible values
 
 #### speed
 
-``<speed type="(absolute | relative | sequence)">NUMBER</speed>``
-
 ```xml
-  <speed type="sequence">0.15</speed>
+<speed type="(absolute | relative | sequence)">NUMBER</speed>
 ```
 
 As for direction, speed comes with a ``type`` attribute with nearly the same possibility.
 Refer to the previous enumeration, simply replace angle by speed.
 
 The default value is ``absolute``.
-
-#### Example
 
 Here's a simple example of bullet shot towards the player at low speed.
 
@@ -195,8 +193,6 @@ Here's a simple example of bullet shot towards the player at low speed.
 
 ### repeat
 
-A *for* loop: do the nested action a given number of *times*.
-
 ```xml
 <repeat>
   <times>42</times>
@@ -204,10 +200,9 @@ A *for* loop: do the nested action a given number of *times*.
   </action>
 </repeat>
 ```
+A *for* loop: do the nested action a given number of *times*.
 
 It is as simple as it seems. You can only define one action in the repeat node (but an action can be made of multiple actions).
-
-#### Example
 
 Try to repeat the example we saw previously
 
@@ -239,11 +234,11 @@ It would be much better is they were shot one after the other, **waiting** their
 
 And here comes the ``<wait>`` tag.
 
-``<wait>NUMBER</wait>``
+```xml
+<wait>NUMBER</wait>
+```
 
 ``<wait>`` will prevent an action from terminate until a number of frames has passed.
-
-#### Example
 
 This is exactly what we need before!
 With a small wait time between each shot, we will 42 **distinct** projectiles.
@@ -275,8 +270,33 @@ With a small wait time between each shot, we will 42 **distinct** projectiles.
 Quickly and simply: you can define an action **inside** another action.
 
 Using ``<actionRef>`` you can also reuse an action define in another context (but in the same file), using its label.
+You can even pass some parameters. This is very interesting to reuse a fire action and giving, for example, a different direction.
 
-See the advanced chapters for passing parameters.
+```xml
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+  <action label="top">
+    <actionRef label="shoot">
+			<param>90</param>
+		</actionRef>
+		<wait>60</wait>
+		<actionRef label="shoot">
+			<param>-90</param>
+		</actionRef>
+  </action>
+
+	<action label="shoot">
+		<fire>
+			<direction>$1</direction>
+			<speed>1</speed>
+			<bullet />
+		</fire>
+	</action>
+</bulletml>
+```
+
+[! [actionRef example][actionRef]][actionRef]
 
 ## Bullet specific instructions
 
@@ -298,12 +318,41 @@ Destroy immediately the current bullet.
 
 Update the properties of the parent ``<bullet>`` tag.
 
+```xml
+<changeSpeed>
+  <speed>NUMBER</speed>
+  <term>NUMBER</term>
+</changeSpeed>
+```
+
 They both have a value tag, respectively ``<speed>`` or ``<direction>`` and a ``<term>``tag.
 
 The term is the time (in frames, remember) that will take the change. A linear interpolation will be made to have intermediary values.
 
+We define a reusable bullet outside the action, and fire it.
+
 ```xml
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+  <action label="top">
+    <fire>
+      <bulletRef label="bullet1" />
+    </fire>
+  </action>
+  <bullet label="bullet1">
+    <speed>0.01</speed>
+    <action>
+      <changeSpeed>
+        <speed>2</speed>
+        <term>60</term>
+      </changeSpeed>
+    </action>
+  </bullet>
+</bulletml>
 ```
+
+[! [changeSpeed example][changeSpeed]][changeSpeed]
 
 ### accel
 
@@ -318,23 +367,28 @@ The term is the time (in frames, remember) that will take the change. A linear i
 Speed the bullet in a horizontal line and in a vertical line in frames.
 Similar to changeSpeed but a more precise way to tweak the movement.
 
-# Shooting your first bullet
-
-You probably wants to make your first bullet appear.
-
 # $rank and $rank
 
-# Advanced topics
+Those are two variables that can be used for a NUMBER.
 
-## Reusing bullets or fire
+* $rank is the **game difficulty**. Its value is between 0 and 1 and is defined in the BulletManagerScript.
 
-The bullet can also be one defined elsewhere, in a separate context.
-To reuse a bullet, use the same ``label``.
+Use it to have a pattern getting harder while the difficulty increase (higher speeds, lower waits).
 
-## Calling an action with parameters
+Here, you have 1 at rank 0 (min) but 2 at rank 1 (max): ``(1 + 1 * $rank)``. A simple way to double the speed for example.
+
+* $rand is a **random** number between 0 and 1.
+
+Use it to add a random behavior.
+
+For example, a random 0-360° direction: ``(360 * $rand)``
+
+
 
 
 
 [fire]: ./-img/fire.gif
 [repeat]: ./-img/repeat.gif
 [wait]: ./-img/wait.gif
+[actionRef]: ./-img/actionRef.gif
+[changeSpeed]: ./-img/changeSpeed.gif
