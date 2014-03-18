@@ -78,7 +78,7 @@ Before jumping in a concrete pattern construction, this is an explanation of the
 
 # The BulletML reference
 
-# Units
+## Units
 
 You will find three types of units in BulletML:
 
@@ -86,9 +86,21 @@ You will find three types of units in BulletML:
 2. speed = Unity's meters per frame. It will be multiplied by the game scale.
 3. angle = 360 degrees clockwise
 
+## NUMBER
+
+We will sometimes use ``NUMBER`` in our documentation.
+
+``NUMBER`` is not just an integer. It can be also a float, or a simple mathematical operation like (1 + 2 * (4 / 5)).
+
+Later we will introduce two variables, $rank and $rand, that can be used dynamically in those operation.
+
+<md-note>
+_Note_: NUMBER is computed by [Equationator](https://github.com/dmanning23/Equationator), an open-source C# lib.
+</md-note>
+
 # The bullet tag
 
-BulletML is about... bullets. Projectiles, shot by something usually evil that the player must destroy.
+BulletML is about... bullets. Projectiles shot by something usually evil that the player must destroy.
 
 The ``<bullet>`` tag define:
 
@@ -134,6 +146,10 @@ This should shoot a new projectile at a reasonable speed.
 
 ``<direction type="(aim | absolute | relative | sequence)">NUMBER</direction>``
 
+```xml
+  <direction type="sequence">30</direction>
+```
+
 Direction has a ``type`` attributes with 4 possible values
 
 1. aim: (default) Target the player ship
@@ -144,6 +160,10 @@ Direction has a ``type`` attributes with 4 possible values
 #### speed
 
 ``<speed type="(absolute | relative | sequence)">NUMBER</speed>``
+
+```xml
+  <speed type="sequence">0.15</speed>
+```
 
 As for direction, speed comes with a ``type`` attribute with nearly the same possibility.
 Refer to the previous enumeration, simply replace angle by speed.
@@ -212,6 +232,11 @@ Try to repeat the example we saw previously
 ```
 
 Now we shoot at the player 42 aimed bullets. Problem, they are shot **simultaneously** !.
+It would be much better is they were shot one after the other, **waiting** their turn.
+
+### wait
+
+And here's come the ``<wait>`` tag.
 
 ### changeSpeed and changeDirection
 
