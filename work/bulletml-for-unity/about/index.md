@@ -30,15 +30,15 @@ TODO check the step-by-step.
 
 # Existing patterns?
 
-You can find some well-know patterns written in BulletML on Internet. We have already bundled some of them in our package and demos.
+We have included some of our own custom patterns inside the package.
+
+You can also find some well-know patterns written in BulletML on Internet. We have already bundled some of them in our package and demos.
 
 Remember that they may not work nicely altogether: they were written for different types of games, scales and orientations. It's still a good start to create your own.
 
 <md-warning>
 *Caution*: Some patterns need to handle more than 3500 bullets on the screen. It requires some performance optimizations that are _NOT_ covered by this plugin.
 </md-warning>
-
-TODO we have also included our own custom examples with the plugin.
 
 # Framerate
 
