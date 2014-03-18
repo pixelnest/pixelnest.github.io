@@ -71,8 +71,9 @@ This pattern does... nothing, but it is valid.
 Like <html> for a webpage, you should have *one and only one* as the top tag of your file.
 
 The ``type`` attribute define your shooter orientation:
-  * ``horizontal`` like R-Type
-  * ``vertical``like Ikaruga.
+
+  * ``horizontal`` like *R-Type*
+  * ``vertical``like *Ikaruga*.
 
 The BulletML engine **does not** use this information, you may set it only for you game and level designers.
 
@@ -90,7 +91,7 @@ You will find three types of units in BulletML:
 2. speed = Unity's meters per frame. It will be multiplied by the game scale.
 3. angle = 360 degrees clockwise
 
-# NUMBER
+# Number
 
 We will sometimes use ``NUMBER`` in our documentation.
 
@@ -108,11 +109,22 @@ BulletML is about... bullets. Projectiles shot by something usually evil that th
 
 The ``<bullet>`` tag define:
 
-* *(optional)* the name of the bullet with the ``label`` attribute.
-* *(optional)* the **initial** properties of the bullet: direction (tag ``direction``), speed (tag ``speed``)
-* *(optional)* the behavior: a list of ``<action>`` tags allowing to change dynamically its properties
+* ``label``: the name of the bullet as an attribute.
+* ``direction``, ``speed``: the **initial** properties of the bullet
+* ``<action>``: the dynamic behavior
 
-Notice that ``<bullet />``is valid, it will create a simple no-name bullet with a constant behavior defined by its parent.
+```xml
+<bullet label="bullet1">
+  <speed>1</speed>
+  <direction>-45</direction>
+  <action>
+    <wait>120</wait>
+    <vanish />
+  </action>
+</fire>
+```
+
+Notice that ``<bullet />``is valid, everyting is optional. It will create a simple no-name bullet with a constant behavior defined by its parent.
 
 # The action tag
 
@@ -189,7 +201,7 @@ Here's a simple example of bullet shot towards the player at low speed.
 
 ```
 
-[! [fire example][fire]][fire]
+[![fire example][fire]][fire]
 
 ### repeat
 
@@ -225,7 +237,7 @@ Try to repeat the example we saw previously
 </bulletml>
 ```
 
-[! [repeat example][repeat]][repeat]
+[![repeat example][repeat]][repeat]
 
 Now we shoot at the player 42 aimed bullets. Problem, they are shot **simultaneously** !.
 It would be much better is they were shot one after the other, **waiting** their turn.
@@ -263,7 +275,7 @@ With a small wait time between each shot, we will 42 **distinct** projectiles.
 </bulletml>
 ```
 
-[! [wait example][wait]][wait]
+[![wait example][wait]][wait]
 
 ### action and actionRef
 
@@ -296,7 +308,7 @@ You can even pass some parameters. This is very interesting to reuse a fire acti
 </bulletml>
 ```
 
-[! [actionRef example][actionRef]][actionRef]
+[![actionRef example][actionRef]][actionRef]
 
 ## Bullet specific instructions
 
@@ -311,6 +323,10 @@ Some instructions will not do anything outside of bullets.
 ```
 
 ### vanish
+
+```xml
+<vanish />
+```
 
 Destroy immediately the current bullet.
 
@@ -352,7 +368,7 @@ We define a reusable bullet outside the action, and fire it.
 </bulletml>
 ```
 
-[! [changeSpeed example][changeSpeed]][changeSpeed]
+[![changeSpeed example][changeSpeed]][changeSpeed]
 
 ### accel
 
