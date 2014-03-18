@@ -221,7 +221,7 @@ Here's a simple example of bullet shot towards the player at low speed.
 
 ```xml
 <repeat>
-  <times>42</times>
+  <times>NUMBER</times>
   <action>
   </action>
 </repeat>
