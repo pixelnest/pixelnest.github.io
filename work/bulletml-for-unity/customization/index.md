@@ -12,7 +12,7 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../how-to-use
+  previous: ../writing-bulletml
   next: ../support
 ---
 
