@@ -140,6 +140,8 @@ You can give it an initial speed and direction:
 
 This should shoot a new projectile at a reasonable speed.
 
+Notice that ``<fireRef>`` allows you to call a fire tag define in another context (but in the same file), using its label.
+
 ``<direction>`` and ``<speed>`` have some interesting attributes.
 
 #### direction
@@ -190,11 +192,6 @@ Here's a simple example of bullet shot towards the player at low speed.
 ```
 
 [! [fire example][fire]][fire]
-
-### vanish
-
-Destroy immediately the current bullet.
-Does nothing outside of a ``<bullet>`` node.
 
 ### repeat
 
@@ -273,10 +270,33 @@ With a small wait time between each shot, we will 42 **distinct** projectiles.
 
 [! [wait example][wait]][wait]
 
+### action and actionRef
+
+Quickly and simply: you can define an action **inside** another action.
+
+Using ``<actionRef>`` you can also reuse an action define in another context (but in the same file), using its label.
+
+See the advanced chapters for passing parameters.
+
+## Bullet specific instructions
+
+Some instructions will not do anything outside of bullets.
+
+```xml
+<bullet>
+  <action>
+    <!-- Here or nothing happend -->
+  </action>
+</bullet>
+```
+
+### vanish
+
+Destroy immediately the current bullet.
 
 ### changeSpeed and changeDirection
 
-Update the properties of a parent ``<bullet>`` tag.
+Update the properties of the parent ``<bullet>`` tag.
 
 They both have a value tag, respectively ``<speed>`` or ``<direction>`` and a ``<term>``tag.
 
@@ -287,9 +307,16 @@ The term is the time (in frames, remember) that will take the change. A linear i
 
 ### accel
 
-### wait
+```xml
+<accel>
+  <horizontal>10</horizontal>
+  <vertical>15</vertical>
+  <term>60</term>
+</accel>
+```
 
-### action and actionRef
+Speed the bullet in a horizontal line and in a vertical line in frames.
+Similar to changeSpeed but a more precise way to tweak the movement.
 
 # Shooting your first bullet
 
