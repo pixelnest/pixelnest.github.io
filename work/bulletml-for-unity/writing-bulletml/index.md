@@ -419,14 +419,37 @@ Use it to add a random behavior.
 (360 * $rand)
 ```
 
-For is an example of a random 0-360° direction.
+This is an example of a random 0-360° direction.
 
+You use those expression in place of ``NUMBER``. Here's a complete example: 
 
+```xml
+<?xml version="1.0" ?>
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml>
+  <action label="top">
+    <repeat>
+      <times>42</times>
+      <action>
+        <fire>
+          <direction type="absolute">360 * $rand</direction>
+          <speed>1 + 1 * $rank</speed>
+          <bullet />
+        </fire>
+        <wait>10</wait>
+      </action>
+    </repeat>
+  </action>
+</bulletml>
+```
 
+The image below shows the random effect, but we invite you to change the game difficulty to also see the rank effect.
 
+[![rand example][rand]][rand]
 
 [fire]: ./-img/fire.gif
 [repeat]: ./-img/repeat.gif
 [wait]: ./-img/wait.gif
 [actionRef]: ./-img/actionRef.gif
 [changeSpeed]: ./-img/changeSpeed.gif
+[rand]: ./-img/rand.gif
