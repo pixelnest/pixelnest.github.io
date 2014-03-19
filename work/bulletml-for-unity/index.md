@@ -42,6 +42,6 @@ Can't wait? Go get it here:
 For more information, click on "Next".
 
 
-[demo]: http://dmayance.com/BulletML-Unity/demo/demo.html
+[demo]: http://pixelnest.io/work/bulletml-for-unity/demo/
 
 [screenshot]: ./-img/screenshot.png
