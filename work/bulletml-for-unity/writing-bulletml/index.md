@@ -253,6 +253,8 @@ Try to repeat the example we saw previously
 
 [![repeat example][repeat]][repeat]
 
+[![repeat example hierarchy][repeat_hierarchy]][repeat_hierarchy]
+
 Now we shoot at the player 42 aimed bullets. Problem, they are shot **simultaneously** !.
 It would be much better is they were shot one after the other, **waiting** their turn.
 
@@ -449,6 +451,7 @@ The image below shows the random effect, but we invite you to change the game di
 
 [fire]: ./-img/fire.gif
 [repeat]: ./-img/repeat.gif
+[repeat_hierarchy]: ./repeat_hierarchy.png
 [wait]: ./-img/wait.gif
 [actionRef]: ./-img/actionRef.gif
 [changeSpeed]: ./-img/changeSpeed.gif
