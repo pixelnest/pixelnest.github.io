@@ -40,15 +40,15 @@ This is important to understand: if you only redefine the _Create_ behavior, the
 
 To implement your own behavior, you can add a delegate for those three events, corresponding to the following methods:
 
-* `BulletObject CreateBulletHandler()` — called when the engine has requested a new `Bullet` object without knowing its type.
-* `void SpawnBulletHandler(Bullet, string)` — called by the engine when the bullet is ready to be displayed on the screen.
+* `BulletObject OnBulletCreated()` — called when the engine has requested a new `Bullet` object without knowing its type.
+* `void OnBulletSpawned(Bullet, string)` — called by the engine when the bullet is ready to be displayed on the screen.
 
   All the information (name, type, position, etc) is available during this step.
 
-* `void DeleteBulletHandler(Bullet)` — called when the engine is destroying the given bullet.
+* `void OnBulletDestroyed(Bullet)` — called when the engine is destroying the given bullet.
 
 <md-note>
-_Spawn_: If you redefine `SpawnBulletHandler`, you can safely leave the `Bullet Bank` field (of `BulletManagerScript`) empty.
+_Spawn_: If you redefine `OnBulletSpawned`, you can safely leave the `Bullet Bank` field (of `BulletManagerScript`) empty.
 </md-note>
 
 # Player position
