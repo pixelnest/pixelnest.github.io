@@ -451,7 +451,7 @@ The image below shows the random effect, but we invite you to change the game di
 
 [fire]: ./-img/fire.gif
 [repeat]: ./-img/repeat.gif
-[repeat_hierarchy]: ./repeat_hierarchy.png
+[repeat_hierarchy]: ./-img/repeat_hierarchy.png
 [wait]: ./-img/wait.gif
 [actionRef]: ./-img/actionRef.gif
 [changeSpeed]: ./-img/changeSpeed.gif
