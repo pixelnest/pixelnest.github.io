@@ -74,4 +74,4 @@ Convinced? Then, get the plugin here:
   />
 </a>
 
-Need support or information? Read the following section.
+<br />In the next section, you will learn how to create your patterns.
