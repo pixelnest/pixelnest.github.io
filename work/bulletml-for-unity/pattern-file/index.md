@@ -43,7 +43,7 @@ The smallest valid BulletML file looks like this:
 </bulletml>
 ```
 
-The language is well documented and even has a [DTD (Document Type Definition)](http://www.w3schools.com/dtd/) file, ``bulletml.dtd``, which as bundled in our package.
+The language is well documented and even has a [DTD (Document Type Definition)](http://en.wikipedia.org/wiki/Document_type_definition) file, ``bulletml.dtd``, which as bundled in our package.
 
 ```xml
 <?xml version="1.0" ?>
