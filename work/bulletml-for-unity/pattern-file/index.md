@@ -169,7 +169,7 @@ BulletML is about... bullets. The projectiles shot by something usually evil tha
 </fire>
 ```
 
-Notice that `<bullet />`is valid. Everything else is optional.
+Notice that `<bullet />` is valid. Everything else is optional.
 
 <md-note>
 _Empty bullet_: Using an empty `<bullet />` will create a simple no-name bullet with a constant behavior defined by its parent.
@@ -177,11 +177,11 @@ _Empty bullet_: Using an empty `<bullet />` will create a simple no-name bullet 
 
 # Action tag
 
-In BulletML, an action (tag ``<action>``) is a container of instructions.
+In BulletML, an action (`<action />`) is a container of instructions.
 
-## Available instructions
+## Instruction: fire
 
-### fire and fireRef
+`<fire />` creates a new bullet.
 
 ```xml
 <fire>
@@ -189,51 +189,49 @@ In BulletML, an action (tag ``<action>``) is a container of instructions.
 </fire>
 ```
 
-``<fire>`` creates a new bullet.
-
 Firing an anonymous bullet with no initial properties will only make a static projectile.
 
-You can give it an initial speed and direction:
+You can give it an initial `<speed />` and `<direction />`:
 
 ```xml
 <fire>
   <direction>0</direction>
   <speed>1</speed>
+
   <bullet />
 </fire>
 ```
 
 This should shoot a new projectile at a reasonable speed.
 
-Notice that ``<fireRef>`` allows you to call a fire tag define in another context (but in the same file), using its label.
+The `<direction />` and `<speed />` tags have some interesting attributes.
 
-``<direction>`` and ``<speed>`` have some interesting attributes.
-
-#### direction
+### direction
 
 ```xml
 <direction type="(aim | absolute | relative | sequence)">NUMBER</direction>
 ```
 
-Direction has a ``type`` attributes with 4 possible values
+The `<direction />` tag has a `type` attribute with 4 possible values:
 
-1. aim: (default) Target the player ship
-2. absolute: NUMBER is the angle (clockwise) of the shot
-3. relative: NUMBER is an angle (clockwise) added to all other direction (fire, bullet, changeDirection)
-4. sequence: Each frame, NUMBER is added to the previous direction result
+1. `aim` (default) — Target the player ship.
+2. `absolute` — `NUMBER` is the `angle` (clockwise) of the shot.
+3. `relative` — `NUMBER` is an `angle` (clockwise) added to all other directions (`fire`, `bullet`, `changeDirection`).
+4. `sequence` — Each frame, `NUMBER` is added to the previous direction result.
 
-#### speed
+### speed
 
 ```xml
 <speed type="(absolute | relative | sequence)">NUMBER</speed>
 ```
 
-As for direction, speed comes with a ``type`` attribute with nearly the same possibility.
-Refer to the previous enumeration, simply replace angle by speed.
+Like for `<direction />`, `<speed />` comes with a `type` attribute which has nearly the same values:
 
-The default value is ``absolute``.
+1. `absolute` (default) — `NUMBER` is the `speed` of the shot.
+2. `relative` — `NUMBER` is a `speed` which depends on all other speeds.
+3. `sequence` — Each frame, `NUMBER` is added to the previous direction result.
 
-Here's a simple example of bullet shot towards the player at low speed.
+<br />Here's a simple example of a bullet shot that moves toward the player at a low speed:
 
 ```xml
 <?xml version="1.0" ?>
@@ -247,12 +245,18 @@ Here's a simple example of bullet shot towards the player at low speed.
 		</fire>
 	</action>
 </bulletml>
-
 ```
+
+The result:
 
 [![fire example][fire]][fire]
 
-### repeat
+## Instruction: fireRef
+
+The `<fireRef />` tag allows you to call a `<fire />` tag defined in an another context (but in the same file), using its label.
+
+
+## Instruction: repeat
 
 ```xml
 <repeat>
@@ -293,7 +297,7 @@ Try to repeat the example we saw previously
 Now we shoot at the player 42 aimed bullets. Problem, they are shot **simultaneously** !.
 It would be much better is they were shot one after the other, **waiting** their turn.
 
-### wait
+## Instruction: wait
 
 And here comes the ``<wait>`` tag.
 
@@ -328,7 +332,7 @@ With a small wait time between each shot, we will 42 **distinct** projectiles.
 
 [![wait example][wait]][wait]
 
-### action and actionRef
+## Instruction: action and actionRef
 
 Quickly and simply: you can define an action **inside** another action.
 
