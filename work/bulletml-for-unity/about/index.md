@@ -24,9 +24,9 @@ The C# parser and engine used in this plugin is open-source, maintained by Dan M
 
 The format is [fully documented](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml_ref_e.html) by its creator.
 
-We have also bundled the original [DTD](http://en.wikipedia.org/wiki/Document_type_definition) in the package so you can validate your own files.
+If you want to create your own files, [we cover this topic later](../pattern-file). For the moment, you will use the package's patterns.
 
-TODO check the step-by-step.
+We have also bundled the original [DTD](http://en.wikipedia.org/wiki/Document_type_definition) in the package so you can validate your creations.
 
 # Existing patterns?
 

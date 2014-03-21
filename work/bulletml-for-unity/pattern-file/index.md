@@ -16,10 +16,9 @@ links:
   next: ../support
 ---
 
-So you tried our examples, maybe picked some new ones, but you don't know how to write your own BulletML file.
+For the moment, you have tried some examples (maybe some new ones you've find on the web), but you still don't know how to write your own BulletML file.
 
-Fortunately, that's what we will cover in this section.
-We suppose you know the basics of [XML](http://stackoverflow.com/tags/xml/info).
+Fortunately, that's what we will cover in this section. We will suppose you know the basics of [XML](http://stackoverflow.com/tags/xml/info).
 
 For a complete reference about the language, have a look at:
 
