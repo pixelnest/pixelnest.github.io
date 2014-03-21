@@ -43,7 +43,7 @@ The smallest valid BulletML file looks like this:
 </bulletml>
 ```
 
-The language is well documented and even has a [DTD (Document Type Definition)](http://en.wikipedia.org/wiki/Document_type_definition) file, ``bulletml.dtd``, which as bundled in our package.
+The language is well documented and even has a [DTD (Document Type Definition)](http://en.wikipedia.org/wiki/Document_type_definition). We bundle it with the package (the `bulletml.dtd` file).
 
 ```xml
 <?xml version="1.0" ?>
@@ -54,77 +54,109 @@ The language is well documented and even has a [DTD (Document Type Definition)](
 </bulletml>
 ```
 
-We can take advantage of this file to make sure we are writing a valid definition.
-All you need to do is to add ``DOCTYPE`` tag with a path the file (here, ./bulletml.dtd).
+We can take advantage of this file to make sure we are writing a valid pattern.
+
+All you need to do is to add the `DOCTYPE` tag with a path to the DTD (here, `./bulletml.dtd`) at the top your document.
 
 <md-note>
 _Note_: Some developer tools, like Visual Studio, will take profit of the DTD file to update their auto-completion list.
-<br />
-This way, the editor will always suggests you a valid tag, attribute or value at a given location.
+<br /><br />
+This way, the editor will always suggest you a valid tag, attribute or value at a given location.
 This is a great help and you should see if you can enable that feature in your favorite XML editor.
 </md-note>
 
-This pattern does... nothing, but it is valid.
+The pattern above does... nothing but is valid nonetheless.
+
+## Explanation
+
+Let's deconstruct the previous pattern:
+
+### Doctype definition
+
+```xml
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+```
+
+Basically, the `<!DOCTYPE>` tag is a meta for your XML editor and parser to enable validation with a DTD.
+
+### Root element
 
 ```xml
 <bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 </bulletml>
 ```
 
-* ``<bulletml>`` is the **root** tag.
-Like <html> for a webpage, you should have *one and only one* as the top tag of your file.
+`<bulletml />` is the _root_ tag.
 
-The ``type`` attribute define your shooter orientation:
+Like `<html />` in a webpage, you should have *one* and *only one* `<bulletml />` tag in your file.
 
-  * ``horizontal`` like *R-Type*
-  * ``vertical``like *Ikaruga*.
-
-The BulletML engine **does not** use this information, you may set it only for you game and level designers.
+e.g., this is invalid:
 
 ```xml
-<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+</bulletml>
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+</bulletml>
 ```
 
-* ``<!DOCTYPE>`` is a meta for your XML editor and parser to enable validation with a DTD
+The `type` attribute defines your shooter orientation:
+
+  * `horizontal` like *[R-Type](http://en.wikipedia.org/wiki/R-Type)*
+  * `vertical` like *[Ikaruga](http://en.wikipedia.org/wiki/Ikaruga)*.
+
+The BulletML engine _does not_ use this information but it may still be useful for your game and level designers.
+
+### Action tag
 
 ```xml
 <action label="top">
 </action>
 ```
 
-* ``<action label="top">`` The entry point of your pattern. We will see the ``action`` tag soon.
+The `<action label="top">` tag is the entry point of your pattern. We will look at the `action` tag soon.
 
-Before jumping in a concrete pattern construction, this is an explanation of the available tags and their parameters.
+# Datatypes
 
-# Units
+## Units
 
 You will find three types of units in BulletML:
 
-1. time = frames. Multiplied by the game speed. The BulletML engine is aimed to run at 60 frames per second.
-2. speed = Unity's meters per frame. It will be multiplied by the game scale.
-3. angle = 360 degrees clockwise
+1. `time` — expressed in frames by second. The BulletML engine is aimed to run at 60 frames per second, so 60 FPS is one second.
 
-# Number
+  The time depends on the Game Speed (which can accelerate or slow down the pattern).
 
-We will sometimes use ``NUMBER`` in our documentation.
+2. `speed` — expressed in Unity's meters per frame. It will be multiplied by the game scale.
+3. `angle` — expressed in degrees and always oriented clockwise.
 
-``NUMBER`` is not just an integer. It can be also a float, or a mathematical expression like (1 + 2 * (4 / 5)).
+## Number
 
-Later we will introduce two variables, $rank and $rand, that can be used dynamically in those operation.
+Sometimes, we will use the `NUMBER` value.
 
-<md-note>
-_Note_: NUMBER is computed by [Equationator](https://github.com/dmanning23/Equationator), an open-source C# lib.
-</md-note>
+`NUMBER` is not just an `integer`. It can also be a `float` or a mathematical expression like `(1 + 2 * (4 / 5))`.
 
-# The bullet tag
+Later, we will also introduce two new variables, `$rank` and `$rand`, that can be used dynamically in those operations.
 
-BulletML is about... bullets. Projectiles shot by something usually evil that the player must destroy.
+<md-info>
+_Note_: `NUMBER` is computed by [Equationator](https://github.com/dmanning23/Equationator), an open-source C# lib.
+</md-info>
 
-The ``<bullet>`` tag define:
+# Bullet tag
 
-* ``label``: the name of the bullet as an attribute.
-* ``direction``, ``speed``: the **initial** properties of the bullet
-* ``<action>``: the dynamic behavior
+BulletML is about... bullets. The projectiles shot by something usually evil that the player must destroy.
+
+## Content
+
+### Attributes
+
+* `label` — name of the bullet.
+
+### Children
+
+* `direction` — _initial_ direction.
+* `speed` — _initial_ speed.
+* `action` — dynamic behavior.
+
+## Example
 
 ```xml
 <bullet label="bullet1">
@@ -137,9 +169,13 @@ The ``<bullet>`` tag define:
 </fire>
 ```
 
-Notice that ``<bullet />``is valid, everyting is optional. It will create a simple no-name bullet with a constant behavior defined by its parent.
+Notice that `<bullet />`is valid. Everything else is optional.
 
-# The action tag
+<md-note>
+_Empty bullet_: Using an empty `<bullet />` will create a simple no-name bullet with a constant behavior defined by its parent.
+</md-note>
+
+# Action tag
 
 In BulletML, an action (tag ``<action>``) is a container of instructions.
 
