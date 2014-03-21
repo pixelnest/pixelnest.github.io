@@ -253,10 +253,11 @@ The result:
 
 ## Instruction: fireRef
 
-The `<fireRef />` tag allows you to call a `<fire />` tag defined in an another context (but in the same file), using its label.
-
+The `<fireRef />` tag allows you to call a `<fire />` tag defined in another context (but in the same file), using its label.
 
 ## Instruction: repeat
+
+The `<repeat />` tag is basically a *for* loop. It executes the nested action a given number of *times*.
 
 ```xml
 <repeat>
@@ -265,11 +266,10 @@ The `<fireRef />` tag allows you to call a `<fire />` tag defined in an another 
   </action>
 </repeat>
 ```
-A *for* loop: do the nested action a given number of *times*.
 
-It is as simple as it seems. You can only define one action in the repeat node (but an action can be made of multiple actions).
+It is as simple as it seems. You can only define _one action_ in the repeat node (but an action can be made of multiple actions).
 
-Try to repeat the example we saw previously
+The pattern below repeats the example we saw previously:
 
 ```xml
 <?xml version="1.0" ?>
@@ -290,25 +290,33 @@ Try to repeat the example we saw previously
 </bulletml>
 ```
 
+The result:
+
 [![repeat example][repeat]][repeat]
+
+And the hierarchy:
 
 [![repeat example hierarchy][repeat_hierarchy]][repeat_hierarchy]
 
-Now we shoot at the player 42 aimed bullets. Problem, they are shot **simultaneously** !.
-It would be much better is they were shot one after the other, **waiting** their turn.
+Now, we shoot 42 bullets toward the player. The problem is... they are all shot **simultaneously**!
+
+It would be much better if they were shot one after the other, _waiting_ for their turn.
 
 ## Instruction: wait
 
-And here comes the ``<wait>`` tag.
+And here comes the `wait` instruction.
+
+The `<wait />` tag will prevent the termination of an action until a specified number of frames has passed.
 
 ```xml
 <wait>NUMBER</wait>
 ```
 
-``<wait>`` will prevent an action from terminate until a number of frames has passed.
+This is exactly what we needed before!
 
-This is exactly what we need before!
-With a small wait time between each shot, we will 42 **distinct** projectiles.
+With a small wait time between each projectile, we will shoot 42 **distinct** bullets.
+
+The pattern:
 
 ```xml
 <?xml version="1.0" ?>
@@ -330,14 +338,17 @@ With a small wait time between each shot, we will 42 **distinct** projectiles.
 </bulletml>
 ```
 
+And the result with the `wait` instruction:
+
 [![wait example][wait]][wait]
 
 ## Instruction: action and actionRef
 
-Quickly and simply: you can define an action **inside** another action.
+Simply: you can nest an `<action />` **inside** another action.
 
-Using ``<actionRef>`` you can also reuse an action define in another context (but in the same file), using its label.
-You can even pass some parameters. This is very interesting to reuse a fire action and giving, for example, a different direction.
+Using `<actionRef>`, you can also reuse an action defined in another context (but in the same file) by specifying its label.
+
+You can even pass some parameters. This is very interesting to reuse a fire action and giving, for example, a different direction:
 
 ```xml
 <?xml version="1.0" ?>
@@ -345,23 +356,29 @@ You can even pass some parameters. This is very interesting to reuse a fire acti
 <bulletml>
   <action label="top">
     <actionRef label="shoot">
-			<param>90</param>
-		</actionRef>
-		<wait>60</wait>
-		<actionRef label="shoot">
-			<param>-90</param>
-		</actionRef>
+      <param>90</param>
+  	</actionRef>
+  	<wait>60</wait>
+  	<actionRef label="shoot">
+      <param>-90</param>
+  	</actionRef>
   </action>
 
-	<action label="shoot">
-		<fire>
-			<direction>$1</direction>
-			<speed>1</speed>
-			<bullet />
-		</fire>
-	</action>
+  <action label="shoot">
+  	<fire>
+      <direction>$1</direction>
+      <speed>1</speed>
+      <bullet />
+  	</fire>
+  </action>
 </bulletml>
 ```
+
+<md-note>
+_$1_: Name of the first parameter.
+</md-note>
+
+The result:
 
 [![actionRef example][actionRef]][actionRef]
 
