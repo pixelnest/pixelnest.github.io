@@ -382,29 +382,33 @@ The result:
 
 [![actionRef example][actionRef]][actionRef]
 
-## Bullet specific instructions
+# Bullet instructions
 
-Some instructions will not do anything outside of bullets.
+Some instructions will not do anything outside of a `<bullet />`.
 
 ```xml
 <bullet>
   <action>
-    <!-- Here or nothing happend -->
+    <!-- Here or nothing will happen. -->
   </action>
 </bullet>
 ```
 
-### vanish
+## Instruction: vanish
+
+Destroy immediately the current parent `<bullet />`.
 
 ```xml
 <vanish />
 ```
 
-Destroy immediately the current bullet.
+## Instruction: change
 
-### changeSpeed and changeDirection
+Update the properties of the parent `<bullet>` tag.
 
-Update the properties of the parent ``<bullet>`` tag.
+### changeSpeed
+
+The `<changeSpeed />` tag:
 
 ```xml
 <changeSpeed>
@@ -413,11 +417,24 @@ Update the properties of the parent ``<bullet>`` tag.
 </changeSpeed>
 ```
 
-They both have a value tag, respectively ``<speed>`` or ``<direction>`` and a ``<term>``tag.
+### changeDirection
 
-The term is the time (in frames, remember) that will take the change. A linear interpolation will be made to have intermediary values.
+The `<changeDirection />` tag:
 
-We define a reusable bullet outside the action, and fire it.
+```xml
+<changeDirection>
+  <direction>NUMBER</direction>
+  <term>NUMBER</term>
+</changeDirection>
+```
+
+### Content
+
+They both have a value tag, respectively `<speed />` or `<direction />`, and a `<term>` tag.
+
+The `term` is the time (in frames, remember) that will take the change. BulletML will do a linear interpolation for the intermediary values.
+
+Example of a pattern which uses `<changeSpeed />`:
 
 ```xml
 <?xml version="1.0" ?>
@@ -428,6 +445,7 @@ We define a reusable bullet outside the action, and fire it.
       <bulletRef label="bullet1" />
     </fire>
   </action>
+
   <bullet label="bullet1">
     <speed>0.01</speed>
     <action>
@@ -440,9 +458,13 @@ We define a reusable bullet outside the action, and fire it.
 </bulletml>
 ```
 
+The result:
+
 [![changeSpeed example][changeSpeed]][changeSpeed]
 
-### accel
+## Instruction: accel
+
+Speed the bullet.
 
 ```xml
 <accel>
@@ -452,34 +474,43 @@ We define a reusable bullet outside the action, and fire it.
 </accel>
 ```
 
-Speed the bullet in a horizontal line and in a vertical line in frames.
-Similar to changeSpeed but a more precise way to tweak the movement.
+You can specify the amount with the `<horizontal />` and `<vertical />` tags.
 
-# $rank and $rank
+<md-note>
+_Accel_: Similar to `<changeSpeed />`, but it is a more precise way to tweak the movement.
+</md-note>
 
-Those are two variables that can be used for a NUMBER.
+# Global variables
 
-* $rank is the **game difficulty**. Its value is between 0 and 1 and is defined in the BulletManagerScript.
+There are two variables that can be used inside a `NUMBER` value.
 
-Use it to have a pattern getting harder while the difficulty increase (higher speeds, lower waits).
+## $rank
+
+`$rank` represents the **game difficulty**. Its value is between 0 and 1 and is defined in the `BulletManagerScript`.
+
+Use this variable to create a pattern which gets harder while the difficulty increases (e.g., higher speeds or lower wait times).
+
+Example:
 
 ```
 (1 + 1 * $rank)
 ```
 
-Here, you have 1 at rank 0 (min) but 2 at rank 1 (max): . A simple way to double the speed for example.
+Here, you will have `1` at `rank 0` (min, easy) but `2` at `rank 1` (max, hard). It's a simple way to double the speed, for example.
 
-* $rand is a **random** number between 0 and 1.
+## $rand
 
-Use it to add a random behavior.
+`$rand` is a **random** number between 0 and 1. Use it to add a bit of chance to your pattern.
+
+This equation will give a random value between 0° and 360° degrees (direction):
 
 ```
 (360 * $rand)
 ```
 
-This is an example of a random 0-360° direction.
+You can use these variables in place of `NUMBER`.
 
-You use those expression in place of ``NUMBER``. Here's a complete example:
+<br />Here's a complete example:
 
 ```xml
 <?xml version="1.0" ?>
@@ -494,6 +525,7 @@ You use those expression in place of ``NUMBER``. Here's a complete example:
           <speed>1 + 1 * $rank</speed>
           <bullet />
         </fire>
+
         <wait>10</wait>
       </action>
     </repeat>
@@ -501,9 +533,15 @@ You use those expression in place of ``NUMBER``. Here's a complete example:
 </bulletml>
 ```
 
-The image below shows the random effect, but we invite you to change the game difficulty to also see the rank effect.
+The image below shows the random effect:
 
 [![rand example][rand]][rand]
+
+We invite you to try the pattern after changing the game difficulty to also understand the effect of the `$rank` variable on it.
+
+<br />And that's it. We have almost covered all the aspects of BulletML. You are ready to create some wonderful patterns for your _shmup_ with Unity and BulletML!
+
+Need support or information? Read the following section.
 
 [fire]: ./-img/fire.gif
 [repeat]: ./-img/repeat.gif
