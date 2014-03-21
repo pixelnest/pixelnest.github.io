@@ -1,15 +1,16 @@
 ---
 layout: tutorial
-title: BulletML for Unity - Demo
+title: Demo
+subtitle: BulletML for Unity
 show_ads: false
 show_metadata: false
 
 tutorial:
   show_label: false
-  name: BulletML for Unity - Demo
-  link: ./
-
+  name: BulletML for Unity
+  link: ../
 ---
+
 <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 <script type="text/javascript">
 <!--
@@ -70,7 +71,7 @@ document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/
 
 This is a complete preview of what you can achieve with *Bullet for Unity*.
 
-* Use the top buttons to change the current pattern. 
+* Use the top buttons to change the current pattern.
 * Use the bottom-left button to switch to a concrete boss fight example.
 
 <div class="content">
