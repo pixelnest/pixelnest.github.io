@@ -12,7 +12,7 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../table-of-contents
+  previous: ../demo
   next: ../about
 ---
 

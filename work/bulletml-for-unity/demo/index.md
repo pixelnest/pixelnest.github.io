@@ -9,6 +9,11 @@ tutorial:
   show_label: false
   name: BulletML for Unity
   link: ../
+  
+links:
+  summary: ../table-of-contents
+  previous: ../table-of-contents
+  next: ../package-and-license
 ---
 
 <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
