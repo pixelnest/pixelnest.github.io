@@ -23,8 +23,8 @@ document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/
 <script type="text/javascript">
 <!--
 	var config = {
-		width: 1024,
-		height: 768,
+		width: 640,
+		height: 480,
 		params: { enableDebugging:"0" }
 
 	};
