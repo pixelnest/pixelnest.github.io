@@ -13,7 +13,7 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../how-to-use
-  next: ../writing-bulletml
+  next: ../pattern-file
 ---
 
 All we did before didn't require any scripting from your side.

@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title: Writing BulletML
+title: "Documentation: Pattern file"
 subtitle: BulletML for Unity
 show_ads: false
 show_metadata: false
