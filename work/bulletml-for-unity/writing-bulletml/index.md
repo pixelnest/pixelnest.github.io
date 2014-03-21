@@ -12,8 +12,8 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../how-to-use
-  next: ../customization
+  previous: ../customization
+  next: ../support
 ---
 
 So you tried our examples, maybe picked some new ones, but you don't know how to write your own BulletML file.
@@ -423,7 +423,7 @@ Use it to add a random behavior.
 
 This is an example of a random 0-360° direction.
 
-You use those expression in place of ``NUMBER``. Here's a complete example: 
+You use those expression in place of ``NUMBER``. Here's a complete example:
 
 ```xml
 <?xml version="1.0" ?>

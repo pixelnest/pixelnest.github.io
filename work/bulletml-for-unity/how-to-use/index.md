@@ -13,7 +13,7 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../dependencies
-  next: ../writing-bulletml
+  next: ../customization
 ---
 
 # 1. Import the Unity package

@@ -12,8 +12,8 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../writing-bulletml
-  next: ../support
+  previous: ../how-to-use
+  next: ../writing-bulletml
 ---
 
 All we did before didn't require any scripting from your side.

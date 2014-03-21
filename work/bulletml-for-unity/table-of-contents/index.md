@@ -25,6 +25,6 @@ You can use the navigation above and below each part to move between them.
 * [About BulletML](../about)
 * [Documentation: Dependencies](../dependencies)
 * [Documentation: How to use](../how-to-use)
-* [Documentation: How to write BulletML files](../writing-bulletml)
 * [Documentation: Customization](../customization)
+* [Documentation: BulletML pattern file](../writing-bulletml)
 * [Support request](../support)
