@@ -17,10 +17,12 @@ links:
 
 [ ![Screenshot1][screenshot1] ][screenshot1]
 
-It allows you to design some very complex shmup patterns in a simple XML file.
+It allows you to design some very complex "Shoot'Em Up" (_shmup_) patterns in a simple XML file.
 
 [ ![Screenshot2][screenshot2] ][screenshot2]
+
 [ ![Screenshot3][screenshot3] ][screenshot3]
+
 [ ![Screenshot4][screenshot4] ][screenshot4]
 
 # Main features
