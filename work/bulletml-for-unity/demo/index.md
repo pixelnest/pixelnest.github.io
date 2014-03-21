@@ -68,6 +68,11 @@ document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/
 -->
 </script>
 
+This is a complete preview of what you can achieve with *Bullet for Unity*.
+
+* Use the top buttons to change the current pattern. 
+* Use the bottom-left button to switch to a concrete boss fight example.
+
 <div class="content">
 	<div id="unityPlayer">
 		<div class="missing">
