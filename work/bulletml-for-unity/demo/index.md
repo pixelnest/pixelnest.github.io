@@ -68,8 +68,6 @@ document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/
 -->
 </script>
 
-# BulletML for Unity
-
 <div class="content">
 	<div id="unityPlayer">
 		<div class="missing">
