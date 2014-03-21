@@ -22,18 +22,18 @@ Fortunately, that's what we will cover in this section. We will suppose you know
 
 For a complete reference about the language, have a look at:
 
-- [the BulletML reference](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml_ref_e.html)
-- [the dmanning23's BUlletMLLib wiki](https://github.com/dmanning23/BulletMLLib/wiki)
+- [BulletML reference documentation](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml_ref_e.html)
+- [dmanning23's BUlletMLLib wiki](https://github.com/dmanning23/BulletMLLib/wiki)
 
 # Preparing your project
 
-You need to have the steps define before (plugin initialization) done in order to be able to test your pattern.
+You need to have followed the steps before (the plugin initialization with the `BulletManagerScript`) in order to be able to test your pattern.
 
-The simplest way to write without worrying of the integration is to use the demo (Demo_Showcase) and save your XML files with the others, in Resources/patterns.
+The simplest way to write without worrying about the integration is to use the demo (`Demo_Showcase`) and save your XML files with the others, in `Resources/patterns`.
 
 # Minimum BulletML file
 
-The smallest valid BulletML file looks like the following one:
+The smallest valid BulletML file looks like this:
 
 ```xml
 <?xml version="1.0" ?>
