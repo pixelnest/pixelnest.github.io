@@ -112,17 +112,17 @@ As you have seen before, you can use the `Time To Live In Seconds` or `Destroy W
 
 Nevertheless, these two options may not suit your pattern logic. In this case, you can also use the standard BulletML command `vanish` manually in your pattern.
 
-# 4. Emitter
+# 4. Bullet source
 
 We're nearly done! We have our bank and our bullets but they are still unused.
 
-An emitter is a projectile source: it will execute a pattern as defined in a BulletML pattern file.
+A bullet source is simply a projectile launcher: it will execute a pattern as defined in a BulletML pattern file.
 
-Add an `EmitterScript` to a new object or to a sprite in your scene.
+Add an `BulletSourceScript` to a new object or to a sprite in your scene.
 
-[ ![The EmitterScript][emitter] ][emitter]
+[ ![The BulletSourceScript][bulletSource] ][bulletSource]
 
-An `EmitterScript` has only one parameter:
+An `BulletSourceScript` has only one parameter:
 
 * `Xml File` — this is the BulletML file you want to use for this emitter.
 
@@ -207,7 +207,7 @@ _(Save it in your `Assets` folder)_
 
 If you haven't done it already, put a `BulletManagerScript` in your scene. Then, create a `BulletBank` and a default bullet container prefab. Associate the prefab in the bank.
 
-Then create a new object and assign the pattern that you have just saved to a newly added `EmitterScript` on this object.
+Then create a new object and assign the pattern that you have just saved to a newly added `BulletSourceScript` on this object.
 
 If you start the game, you will see the pattern being played:
 
@@ -221,5 +221,5 @@ If you start the game, you will see the pattern being played:
 [bulletml_menu]:     ../-img/bulletml_menu.png
 [bullet_prefab]:     ../-img/bullet_prefab.png
 [bulletbank]:        ../-img/bulletbank.png
-[emitter]:           ../-img/emitter.png
+[bulletSource]:           ../-img/bulletSource.png
 [gif_circle]:        ../-img/gif_circle.gif
