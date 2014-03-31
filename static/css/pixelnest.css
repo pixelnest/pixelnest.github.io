@@ -93,6 +93,10 @@ li {
   .intent-button:hover {
     opacity: 0.8; }
 
+.intent-button--bulletml {
+  width: 559px;
+  height: 108px; }
+
 .banner {
   border-bottom: 1px solid #888;
   background-image: url("/static/images/background.jpg");

@@ -27,7 +27,7 @@ Unfortunately, _you cannot ask for a refund_. By buying this product, you gain f
 <a href="#todo">
   <img
     src="../-img/buy.png"
-    class="intent-button"
+    class="intent-button intent-button--bulletml"
     alt="Buy BulletML for Unity"
     title="Buy BulletML for Unity"
   />
