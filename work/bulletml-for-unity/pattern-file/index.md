@@ -23,7 +23,7 @@ Fortunately, that's what we will cover in this section. We will suppose you know
 For a complete reference about the language, have a look at:
 
 - [BulletML reference documentation](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/bulletml_ref_e.html)
-- [dmanning23's BUlletMLLib wiki](https://github.com/dmanning23/BulletMLLib/wiki)
+- [dmanning23's BulletMLLib wiki](https://github.com/dmanning23/BulletMLLib/wiki)
 
 # Preparing your project
 
