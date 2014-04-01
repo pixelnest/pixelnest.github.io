@@ -20,7 +20,7 @@ links:
 
 Import the whole package in your Unity project.
 
-The `Example/` folder contains a demo scene with some patterns. You can delete the whole folder from your project once you don't need the examples anymore.
+The `Demo/` folder contains a demo scene with some patterns. You can delete the whole folder from your project once you don't need the examples anymore.
 
 The other folders are mandatory.
 
@@ -116,15 +116,15 @@ Nevertheless, these two options may not suit your pattern logic. In this case, y
 
 We're nearly done! We have our bank and our bullets but they are still unused.
 
-A bullet source is simply a projectile launcher: it will execute a pattern as defined in a BulletML pattern file.
+A "bullet source" is simply a projectile launcher: it will execute a pattern as defined in a BulletML pattern file.
 
-Add an `BulletSourceScript` to a new object or to a sprite in your scene.
+Add a `BulletSourceScript` to a new object or to a sprite in your scene.
 
 [ ![The BulletSourceScript][bulletSource] ][bulletSource]
 
-An `BulletSourceScript` has only one parameter:
+A `BulletSourceScript` has only one parameter:
 
-* `Xml File` — this is the BulletML file you want to use for this emitter.
+* `Xml File` — this is the BulletML file you want to use for this bullet source.
 
 Make sure that your file is in your `Assets` folder and simply drag it in the field to assign it.
 
