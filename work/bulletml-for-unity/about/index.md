@@ -18,7 +18,7 @@ links:
 
 [BulletML](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/index_e.html), for _Bullet Markup Language_, is an XML format designed by Kenta Cho to create bullet patterns in "Shoot'Em Up" games.
 
-The C# parser and engine used in this plugin is open-source, maintained by Dan Manning and can be found on [GitHub](https://github.com/dmanning23/BulletMLLib/). We use a slightly modified version to get it running on Unity.
+The C# parser and engine used in this plugin is open-source, maintained by Dan Manning and can be found on [GitHub](https://github.com/dmanning23/BulletMLLib/). We use a [slightly modified version](https://github.com/pixelnest/BulletMLLib) to get it running on Unity.
 
 # Writing you own BulletML file
 
