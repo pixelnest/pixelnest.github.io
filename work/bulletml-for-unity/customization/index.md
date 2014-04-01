@@ -65,7 +65,7 @@ Finally, you can redefine the way BulletML gets the player position with:
 
 Convinced? Then, get the plugin here:
 
-<a href="#todo">
+<a href="http://bulletml-for-unity.pixelnest.io/">
   <img
     src="../-img/buy.png"
     class="intent-button intent-button--bulletml"

@@ -24,7 +24,7 @@ _BulletML for Unity_ is available for **20$** (normal price), only on the Unity 
 
 Unfortunately, _you cannot ask for a refund_. By buying this product, you gain full access to the source code and examples and we cannot take it back. _Think about it a second before proceeding._
 
-<a href="#todo">
+<a href="http://bulletml-for-unity.pixelnest.io/">
   <img
     src="../-img/buy.png"
     class="intent-button intent-button--bulletml"
