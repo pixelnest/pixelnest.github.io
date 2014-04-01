@@ -13,11 +13,15 @@ links:
   next: ./table-of-contents
 ---
 
-*BulletML for Unity* is a **simple** and **powerful** wrapper around BulletML, for Unity 4.3 and above made by [Pixelnest Studio](http://pixelnest.io).
+*BulletML for Unity* is a **simple** and **powerful** wrapper around BulletML, for Unity 4.3 or higher, made by [Pixelnest Studio](http://pixelnest.io).
 
 [ ![Screenshot1][screenshot1] ][screenshot1]
 
-It allows you to design some very complex "Shoot'Em Up" (_shmup_) patterns in a simple XML file.
+It allows you to design some very complex bullet patterns with a simple XML file. It’s especially useful in “Shoot’Em Up” (_shmup_) games to create memorable boss fights or enemies.
+
+<md-info>
+_Game_: Although _BulletML for Unity_ is intended to be used in shmups, it is NOT limited to this genre. _You can use it in any game you want_.
+</md-info>
 
 [ ![Screenshot2][screenshot2] ][screenshot2]
 
@@ -30,7 +34,8 @@ It allows you to design some very complex "Shoot'Em Up" (_shmup_) patterns in a 
 - Simple and lightweight. No scripting required (if you don't want to).
 - Bullet bank mechanism. Associate a pattern's bullet to a sprite easily.
 - Customizable.
-- Multiplatform.
+- Multi-platform.
+- Completely documented.
 
 Have a look at our [plugin demo][demo] to see what is possible (hint: a lot). This plugin works on all the platforms Unity supports.
 
