@@ -31,7 +31,9 @@ We hope you will enjoy this package for Unity. It's our first officially release
 
 Do not hesitate to follow us on [twitter][twitter] or through our [RSS feed](http://feedpress.me/pixelnest) if you like _BulletML for Unity_.
 
-For any problem about the plugin, contact us via [bulletml-unity@pixelnest.io][bulletml_support] or [twitter][twitter].
+We would love to hear your feedback too!
+
+For any problem about the plugin, contact us via [bulletml-unity@pixelnest.io][bulletml_support] or [twitter][twitter]. 
 
 ## Disclaimer
 
