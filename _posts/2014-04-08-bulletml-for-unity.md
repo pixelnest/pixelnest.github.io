@@ -2,12 +2,11 @@
 layout: post
 title: BulletML for Unity
 subtitle: unity package
-published: false
 ---
 
 Hello,
 
-Our first package for Unity—_BulletML for Unity_—has been accepted! Great! But… what is _BulletML for Unity_? 
+Our first package for Unity—_BulletML for Unity_—has been accepted! Great! But… what is _BulletML for Unity_?
 
 From our [documentation][bulletml]:
 
@@ -17,9 +16,7 @@ From our [documentation][bulletml]:
 
 > Although BulletML for Unity is intended to be used in _shmups_, it is NOT limited to this genre. _You can use it in any game you want._
 
-The plugin costs 20$ on the Asset Store, _with a special introductory price of 15$_. 
-
-Yep, we are giving a -25% discount for our early users. ;)
+The plugin costs 20$ on the Asset Store.
 
 You can find more information about the features, the package and the [license][bulletml_license] on our [complete documentation][bulletml].
 
@@ -33,7 +30,7 @@ Do not hesitate to follow us on [twitter][twitter] or through our [RSS feed](htt
 
 We would love to hear your feedback too!
 
-For any problem about the plugin, contact us via [bulletml-unity@pixelnest.io][bulletml_support] or [twitter][twitter]. 
+For any problem about the plugin, contact us via [bulletml-unity@pixelnest.io][bulletml_support] or [twitter][twitter].
 
 ## Disclaimer
 
