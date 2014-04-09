@@ -26,7 +26,7 @@ You can find more information about the features, the package and the [license][
 
 We hope you will enjoy this package for Unity. It's our first officially released product so it's a big day for us. :)
 
-Do not hesitate to follow us on [twitter][twitter] or through our [RSS feed](http://feedpress.me/pixelnest) if you like _BulletML for Unity_.
+Do not hesitate to follow us on [twitter][twitter] or through our [RSS feed](http://feedpress.me/pixelnest) if you like _BulletML for Unity_. We would be happy if you could also review our plugin on the [Asset Store](https://www.assetstore.unity3d.com/#/content/16206#reviewBox) too.
 
 We would love to hear your feedback too!
 
