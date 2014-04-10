@@ -22,7 +22,7 @@ You can find more information about the features, the package and the [license][
 
 <a href="http://bulletml-for-unity.pixelnest.io/">
   <img
-    src="../work/bulletml-for-unity/-img/buy.png"
+    src="http://pixelnest.io/work/bulletml-for-unity/-img/buy.png"
     class="intent-button intent-button--bulletml"
     alt="Buy BulletML for Unity"
     title="Buy BulletML for Unity"
