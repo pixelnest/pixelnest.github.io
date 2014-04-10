@@ -20,7 +20,14 @@ The plugin costs 20$ on the Asset Store.
 
 You can find more information about the features, the package and the [license][bulletml_license] on our [complete documentation][bulletml].
 
-[Buy _BulletML for Unity_ on the Unity Asset Store][buy].
+<a href="http://bulletml-for-unity.pixelnest.io/">
+  <img
+    src="../work/bulletml-for-unity/-img/buy.png"
+    class="intent-button intent-button--bulletml"
+    alt="Buy BulletML for Unity"
+    title="Buy BulletML for Unity"
+  />
+</a>
 
 ## Thanks!
 
