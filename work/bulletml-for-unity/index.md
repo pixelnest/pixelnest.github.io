@@ -50,10 +50,17 @@ Can't wait? Go get it here:
   />
 </a>
 
-For more information, click on "Next".
+For more information, click on **"Next"**.
+
+# Support and feedback
+
+Please feel free to contact us for any question, feedback or support request related to this plugin.
+
+Have a look at [the support page][support] to find all the information you need in order to reach us.
 
 
 [demo]: http://pixelnest.io/work/bulletml-for-unity/demo/
+[support]: http://pixelnest.io/work/bulletml-for-unity/support/
 
 [screenshot1]: ./-img/screenshot1.png
 [screenshot2]: ./-img/screenshot2.png
