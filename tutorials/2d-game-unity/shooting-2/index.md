@@ -262,6 +262,16 @@ You could also reduce the time to live of a bullet so it will disappear more qui
 _Attention_: Keep in mind that using the `Instantiate` method heavily has a cost. _You need to use it carefully_.
 </md-warning>
 
+## Bullet behavior
+
+A good shooter should have memorable fights.
+
+Some libraries, like BulletML, allows you to easily define some complex and spectacular bullet patterns. 
+
+[![BulletML for Unity][bulletml_for_unity_img]][bulletml_for_unity]
+
+If you are interested in making a complete shoot them up game, have a look at our [BulletML for Unity plugin][bulletml_for_unity].
+
 ## Delaying shots
 
 Add a few armed enemies in the scene and run the game. You should see how synchronous all enemies are.
@@ -300,3 +310,6 @@ In the next chapter, we will learn how to enhance the background and the scene t
 [result]: ./-img/result.png
 
 [danmaku_link]: http://en.wikipedia.org/wiki/Shoot_%27em_up#Bullet_hell "Danmaku shmup"
+
+[bulletml_for_unity_img]: http://pixelnest.io/work/bulletml-for-unity/-img/screenshot2.png
+[bulletml_for_unity]: http://pixelnest.io/work/bulletml-for-unity/
