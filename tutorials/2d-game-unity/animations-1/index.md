@@ -3,6 +3,8 @@ layout: tutorial
 title: Making animations with Unity 2D (1/2)
 date: 13/12/11
 
+show_promotion: bulletml-for-unity
+
 tutorial:
   name: Creating a 2D game with Unity
   link: ../
@@ -199,7 +201,7 @@ In the editor, if you click on a value of a keyframe, Unity will activate the re
 _Changing a property of the "Boss" object_: If you change a property of the parent object (the "Boss" object here), be extremely vigilant, especially with the "Position".
 <br /><br />For instance, if you change the "Position" of the "Boss" object in an animation, its real position in the scene is going to be changed for the one in the animation each time it is played. It can block an object.
 <br /><br />
-Most of the time, you want to change the children properties and not the container. 
+Most of the time, you want to change the children properties and not the container.
 <br /><br />
 Here we are working on the parent because we want everything to rotate together, but maybe we should have add an empty parent object on top of everything that is never animated.
 </md-danger>
