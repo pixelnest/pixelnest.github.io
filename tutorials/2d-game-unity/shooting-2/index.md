@@ -214,7 +214,7 @@ We are going to give you some hints to go further on the shooting aspect of your
 
 Let's see how we can handle the collision between the player and an enemy, as it is quite frustrating to see them block each other without consequences...
 
-The collision is the result of the intersection of two non-triggers Colliders 2D. We simply need to handle the event ``OnCollisionEnter2D`` in our ``PlayerScript``: 
+The collision is the result of the intersection of two non-triggers Colliders 2D. We simply need to handle the event ``OnCollisionEnter2D`` in our ``PlayerScript``:
 
 ````csharp
 //PlayerScript.cs
@@ -266,11 +266,11 @@ _Attention_: Keep in mind that using the `Instantiate` method heavily has a cost
 
 A good shooter should have memorable fights.
 
-Some libraries, like BulletML, allows you to easily define some complex and spectacular bullet patterns. 
+Some libraries, like BulletML, allows you to easily define some complex and spectacular bullet patterns.
 
 [![BulletML for Unity][bulletml_for_unity_img]][bulletml_for_unity]
 
-If you are interested in making a complete shoot them up game, have a look at our [BulletML for Unity plugin][bulletml_for_unity].
+If you are interested in making a complete Shoot'Em Up game, have a look at our [_BulletML for Unity_][bulletml_for_unity] plugin.
 
 ## Delaying shots
 
@@ -311,5 +311,5 @@ In the next chapter, we will learn how to enhance the background and the scene t
 
 [danmaku_link]: http://en.wikipedia.org/wiki/Shoot_%27em_up#Bullet_hell "Danmaku shmup"
 
-[bulletml_for_unity_img]: http://pixelnest.io/work/bulletml-for-unity/-img/screenshot2.png
-[bulletml_for_unity]: http://pixelnest.io/work/bulletml-for-unity/
+[bulletml_for_unity_img]: /work/bulletml-for-unity/-img/screenshot2.png
+[bulletml_for_unity]:     /work/bulletml-for-unity/
