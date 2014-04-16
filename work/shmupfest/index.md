@@ -5,7 +5,7 @@ subtitle: the Stunfest 2014 game
 cover: cover.png
 ---
 
-The **Shmupfest** is a game made for the [Stunfest 2014][stunfest], a french video game festival based in Rennes.
+The **Shmupfest** is a game we made for the [Stunfest 2014][stunfest], a french video game festival based in Rennes.
 
 It's an **infinite retro 2D Shoot'Em Up**, made with Unity. Bullets patterns are made with [BulletML][bulletml].
 
