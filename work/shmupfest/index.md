@@ -2,7 +2,7 @@
 layout: work
 title: Shmupfest
 subtitle: the Stunfest 2014 game
-cover: cover.png
+cover: ./-img/cover.png
 ---
 
 The **Shmupfest** is a game we made for the [Stunfest 2014][stunfest], a french video game festival based in Rennes.
@@ -39,8 +39,8 @@ Watch the trailer:
 
 [bulletml]: /work/bulletml-for-unity
 
-[screen1]: ./screen1.png
-[screen2]: ./screen2.png
-[screen3]: ./screen3.png
-[screen4]: ./screen4.png
-[screen5]: ./screen5.png
+[screen1]: ./-img/screen1.png
+[screen2]: ./-img/screen2.png
+[screen3]: ./-img/screen3.png
+[screen4]: ./-img/screen4.png
+[screen5]: ./-img/screen5.png
