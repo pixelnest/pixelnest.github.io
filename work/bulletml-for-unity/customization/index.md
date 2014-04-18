@@ -69,7 +69,7 @@ Add a delegate to the event `void OnBulletSpawned(Bullet, string)`.
 
 It will called by the engine when the bullet is ready to be displayed on the screen.
 
-````chasp
+````csharp
 void Awake()
 {
   var bulletManager = FindObjectOfType<BulletManagerScript>();
@@ -122,6 +122,7 @@ It is called for each aimed bullet (`direction type='aim'`).
 
 When shot, the bullet look for the player position and aim it. This position can be tricked or redefined, depending on your needs.
 
+````csharp
 void Awake()
 {
   var bulletManager = FindObjectOfType<BulletManagerScript>();
@@ -133,13 +134,14 @@ void Awake()
     return Camera.main.ScreenToWorldPoint(Input.mousePosition);
   };
 }
+````
 
 - `BulletObject source` is a link to the bullet object requesting the aim. This way you can link the aim request to a game object and get a transform position.
 
 Another use case is when you have two players and want the enemies to target one or the other but not always the same.
 
 <md-warning>
-**Breaking change: **The source parameter was introduced in the version **1.1.2** of the plugin.
+**Breaking change: **the `source` parameter was introduced in the version **1.1.2** of the plugin.
 </md-warning>
 
 <br />And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
