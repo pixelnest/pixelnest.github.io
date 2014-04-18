@@ -23,23 +23,21 @@ Ce premier arrière-plan sera statique. Nous utiliserons cette image :
 
 _(Clic droit pour sauver l'image)_
 
-Importez-la dans le dossier "Textures" de votre projet (copiez simplement le fichier).
+Importez-la dans le dossier "Textures" de votre projet (copiez simplement le fichier). Ne vous souciez pas des paramètres d'importation proposés par le logiciel pour le moment.
 
-Ne vous souciez pas des paramètres d'import proposés par le logiciel pour le moment.
-
-Créez un nouveau _game object_ de type ``Sprite`` dans la scène.
+Puis créez un nouveau _game object_ de type `Sprite` dans la scène :
 
 [ ![New sprite][new_sprite] ][new_sprite]
 
 ## Qu'est-ce qu'un sprite ?
 
-Un "sprite", en plus d'être une marque de soda, est le terme généralement utilisé pour désigner une image 2D dans un jeu. Dans Unity, c'est aussi un composant spécial pour afficher les images 2D.
+Un _sprite_, en plus d'être une marque de soda, est le terme généralement utilisé pour désigner une image 2D dans un jeu. Dans Unity, c'est aussi un composant spécial pour afficher les images 2D très simplement.
 
-## Ajouter l'image du fond au sprite
+## Ajouter l'image du fond au _sprite_
 
-Si l'image était encore sélectionnée lorsque vous avez créé le sprite, alors l'image est déjà affichée automatiquement.
+Si l'image était encore sélectionnée lorsque vous avez créé le _sprite_, alors l'image sera déjà affichée automatiquement.
 
-Si ce n'est pas le cas, voici comment faire. Allez dans l'_Inspector_ de ce "New Sprite" et sélctionner "background" comme image :
+Si ce n'est pas le cas, voici comment faire. Allez dans l'"Inspector" de ce "New Sprite" et sélectionnez "background" (ce que vous avez copié plus haut) comme image :
 
 [  ![Select a sprite][sprite_select]  ][sprite_select]
 
@@ -57,18 +55,18 @@ Nous ne savons pas pourquoi le comportement par défaut n'est pas le même pour 
 
 Vous devriez voir le ciel nuageux s'afficher dans la scène. Faisons un peu de rangement.
 
-Dans l'onglet _Hierrachy_, choississez ``New Sprite`` et renommez le en "Background1" ou quelque chose de facilement identifiable.
+Dans l'onglet "Hierarchy", choisissez "New Sprite" et renommez-le en "Background1" ou quelque chose de facilement identifiable.
 
-Puis déplacez cet objet dans ``Level->0 - Background``. Vérifiez que sa position est ``(0, 0, 0)``.
+Puis déplacez cet objet dans `Level` -> `0 - Background`. Vérifiez que sa position est bien `(0, 0, 0)`.
 
 [  ![Background is set][display_background]  ][display_background]
 
-Exercice express : agrandissez l'arrière-plan pour plus tard en dupliquant ce morceau. Placez le nouveau bout en ``(20,0,0)`` de manière à ce qu'il fasse suite avec le premier morceau.
+Exercice expresse : agrandissez l'arrière-plan pour plus tard en dupliquant ce morceau. Placez le nouveau morceau en `(20, 0, 0)` de manière à ce qu'il fasse une frise avec le premier élément.
 
 [  ![Background2 in place][background2_in_place]  ][background2_in_place]
 
 <md-tip>
-_Astuce_: Vous pouvez dupliquer un objet avec les raccourcis ``cmd + D`` (OS X) ou ``ctrl + D`` (Windows).
+_Astuce_: Vous pouvez dupliquer un objet avec les raccourcis `cmd + D` (OS X) ou `ctrl + D` (Windows).
 </md-tip>
 
 # Ajouter des éléments
