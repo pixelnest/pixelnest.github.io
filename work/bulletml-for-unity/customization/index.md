@@ -38,51 +38,109 @@ The plugin handles each step and let you redefine them **separately**.
 
 This is important to understand: if you only redefine the _Create_ behavior, then the plugin will use the default _Spawn_ and _Delete_ behaviors.
 
-To implement your own behavior, you can add a delegate for those three events, corresponding to the following methods:
+Let's see how to implement a custom behavior for each of them.
 
-* `BulletObject OnBulletCreated()` — called when the engine has requested a new `Bullet` object without knowing its type.
-* `void OnBulletSpawned(Bullet, string)` — called by the engine when the bullet is ready to be displayed on the screen.
+## Created
 
-  All the information (name, type, position, etc) is available during this step.
+Add a delegate to the event `BulletObject OnBulletCreated()`.
 
-* `void OnBulletDestroyed(Bullet)` — called when the engine is destroying the given bullet.
+It will be called when the engine has request a new `Bullet` object without knowing its type.
+
+````csharp
+void Awake()
+{
+  var bulletManager = FindObjectOfType<BulletManagerScript>();
+  bulletManager.OnBulletCreated += HandleBulletCreation;
+}
+
+private BulletObject HandleBulletCreation() {
+  Debug.Log("Create an empty and unknow bullet or allocate some space.");
+
+  return new MyBulletObject();
+}
+````
+
+Using your own delegate you can instantiate your own class (here `MyBulletObject`), that should be a subclass of `BulletObject`.
+
+
+## Spawned
+
+Add a delegate to the event `void OnBulletSpawned(Bullet, string)`.
+
+It will called by the engine when the bullet is ready to be displayed on the screen.
+
+````chasp
+void Awake()
+{
+  var bulletManager = FindObjectOfType<BulletManagerScript>();
+  bulletManager.OnBulletSpawned += HandleBulletSpawn;
+}
+
+private void HandleBulletSpawn(BulletMLLib.Bullet bullet, string bulletName)
+{
+  Debug.Log("Create Bullet's game object, sprite, etc.");
+}
+````
+
+This is the most interesting event. This is where you should instantiate a Game Object (visible in Unity) and fill it with the appropriate sprite.
+
+- `bullet` is the engine object containing all the bullet properties (xml, tasks, name, etc)
+- `bulletName` is a quick access to the bullet's label as defined in your pattern file
 
 <md-note>
 _Spawn_: If you redefine `OnBulletSpawned`, you can safely leave the `Bullet Bank` field (of `BulletManagerScript`) empty.
 </md-note>
 
-## Example
+## Destroyed
 
-Here is an example on how to hook one of those events:
+Similar to the other events, add a delegate to `void OnBulletDestroyed(Bullet)`.
 
-````csharp
-// Customization by events example
-void Start ()
+It will be called when the engine is destroying the given bullet.
+
+````chasp
+void Awake()
 {
-    // Get access to the BulletManagerScript component 
-    BulletManagerScript bmScript = FindObjectOfType<BulletManagerScript>();
-    if(bmScript != null) 
-    {
-      bmScript.OnBulletSpawned += HandleOnBulletSpawned;
-    }
+  var bulletManager = FindObjectOfType<BulletManagerScript>();
+  bulletManager.OnBulletDestroyed += HandleBulletDestroyed;
 }
 
-// Your event
-void HandleOnBulletSpawned (Bullet bullet, string label)
+private void HandleBulletDestroyed(BulletMLLib.Bullet bullet)
 {
-    // Execute your own code on bullet spawn
-    Debug.Log("Spawned");
+  Debug.Log("Delete the Bullet's game object, free some space.");
 }
 ````
 
+- `bullet` is the engine bullet that will be destroyed. You have to link it to your own game object.
+
+The plugin offers a link between `BulletObject` and `BulletScript`, so you can link one to the other.
+
 # Player position
 
-Finally, you can redefine the way BulletML gets the player position with:
+Finally, you can redefine the way BulletML gets the player position.
 
-* `Vector2 GetPlayerPosition()` — returns a `Vector2` of the current position of the "player" `GameObject` (or what you want BulletML to *aim* at).
+It is called for each aimed bullet (`direction type='aim'`).
 
-  It can be required if you have two players and want the enemies to target one or the other but not always the same.
+When shot, the bullet look for the player position and aim it. This position can be tricked or redefined, depending on your needs.
 
+void Awake()
+{
+  var bulletManager = FindObjectOfType<BulletManagerScript>();
+
+  // Another delegate syntax
+  bulletManager.GetPlayerPosition += (source) =>
+  {
+    // The player is the mouse
+    return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+  };
+}
+
+- `BulletObject source` is a link to the bullet object requesting the aim. This way you can link the aim request to a game object and get a transform position.
+
+Another use case is when you have two players and want the enemies to target one or the other but not always the same.
+
+<md-warning>
+**Breaking change: **The source parameter was introduced in the version **1.1.2** of the plugin.
+</md-warning>
 
 <br />And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
  :)
