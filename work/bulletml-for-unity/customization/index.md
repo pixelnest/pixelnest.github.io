@@ -46,7 +46,7 @@ Add a delegate to the event `BulletObject OnBulletCreated()`.
 
 It will be called when the engine has request a new `Bullet` object without knowing its type.
 
-````csharp
+```csharp
 void Awake()
 {
   var bulletManager = FindObjectOfType<BulletManagerScript>();
@@ -58,7 +58,7 @@ private BulletObject HandleBulletCreation() {
 
   return new MyBulletObject();
 }
-````
+```
 
 Using your own delegate you can instantiate your own class (here `MyBulletObject`), that should be a subclass of `BulletObject`.
 
@@ -69,7 +69,7 @@ Add a delegate to the event `void OnBulletSpawned(Bullet, string)`.
 
 It will called by the engine when the bullet is ready to be displayed on the screen.
 
-````csharp
+```csharp
 void Awake()
 {
   var bulletManager = FindObjectOfType<BulletManagerScript>();
@@ -80,7 +80,7 @@ private void HandleBulletSpawn(BulletMLLib.Bullet bullet, string bulletName)
 {
   Debug.Log("Create Bullet's game object, sprite, etc.");
 }
-````
+```
 
 This is the most interesting event. This is where you should instantiate a Game Object (visible in Unity) and fill it with the appropriate sprite.
 
@@ -97,7 +97,7 @@ Similar to the other events, add a delegate to `void OnBulletDestroyed(Bullet)`.
 
 It will be called when the engine is destroying the given bullet.
 
-````csharp
+```csharp
 void Awake()
 {
   var bulletManager = FindObjectOfType<BulletManagerScript>();
@@ -108,7 +108,7 @@ private void HandleBulletDestroyed(BulletMLLib.Bullet bullet)
 {
   Debug.Log("Delete the Bullet's game object, free some space.");
 }
-````
+```
 
 - `bullet` is the engine bullet that will be destroyed. You have to link it to your own game object.
 
@@ -122,7 +122,7 @@ It is called for each aimed bullet (`direction type='aim'`).
 
 When shot, the bullet look for the player position and aim it. This position can be tricked or redefined, depending on your needs.
 
-````csharp
+```csharp
 void Awake()
 {
   var bulletManager = FindObjectOfType<BulletManagerScript>();
@@ -134,7 +134,7 @@ void Awake()
     return Camera.main.ScreenToWorldPoint(Input.mousePosition);
   };
 }
-````
+```
 
 - `BulletObject source` is a link to the bullet object requesting the aim. This way you can link the aim request to a game object and get a transform position.
 
