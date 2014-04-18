@@ -14,7 +14,7 @@ links:
 lang: fr
 ---
 
-Je vous recommande de lire les chapitres dans l'ordre proposé, cela vous permettra de construire progressivement un projet jusqu'à atteindre ce que vous avez vu dans la démo.
+Nous vous recommandons de lire les chapitres dans l'ordre proposé. Cela vous permettra de construire progressivement le projet jusqu'à atteindre le résultat que vous avez vu dans la démo.
 
 Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour passer d'un chapitre à l'autre.
 
@@ -32,7 +32,6 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 - [Préparer et déployer un exécutable de son jeu](../release)
 - [Conclusion](../conclusion)
 
-A venir :
+# Autres tutoriaux
 
-- [Animations 2D](../animations)
-- [Ajuster le gameplay pour rendre le jeu bien meilleur](../ajuster-gameplay)
+Nous proposons d'autres tutoriaux sur notre [site](/tutorials). Ceux-ci ne sont disponibles qu'en anglais.
