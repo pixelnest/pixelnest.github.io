@@ -51,6 +51,30 @@ To implement your own behavior, you can add a delegate for those three events, c
 _Spawn_: If you redefine `OnBulletSpawned`, you can safely leave the `Bullet Bank` field (of `BulletManagerScript`) empty.
 </md-note>
 
+## Example
+
+Here is an example on how to hook one of those events:
+
+````csharp
+// Customization by events example
+void Start ()
+{
+    // Get access to the BulletManagerScript component 
+    BulletManagerScript bmScript = FindObjectOfType<BulletManagerScript>();
+    if(bmScript != null) 
+    {
+      bmScript.OnBulletSpawned += HandleOnBulletSpawned;
+    }
+}
+
+// Your event
+void HandleOnBulletSpawned (Bullet bullet, string label)
+{
+    // Execute your own code on bullet spawn
+    Debug.Log("Spawned");
+}
+````
+
 # Player position
 
 Finally, you can redefine the way BulletML gets the player position with:
