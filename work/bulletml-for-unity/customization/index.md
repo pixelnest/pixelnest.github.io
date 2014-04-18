@@ -97,7 +97,7 @@ Similar to the other events, add a delegate to `void OnBulletDestroyed(Bullet)`.
 
 It will be called when the engine is destroying the given bullet.
 
-````chasp
+````csharp
 void Awake()
 {
   var bulletManager = FindObjectOfType<BulletManagerScript>();
@@ -141,7 +141,7 @@ void Awake()
 Another use case is when you have two players and want the enemies to target one or the other but not always the same.
 
 <md-warning>
-**Breaking change: **the `source` parameter was introduced in the version **1.1.2** of the plugin.
+**Breaking change:** the `source` parameter was introduced in the version **1.1.2** of the plugin.
 </md-warning>
 
 <br />And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
