@@ -116,6 +116,11 @@ The plugin offers a link between `BulletObject` and `BulletScript`, so you can l
 
 # Player position
 
+<md-danger>
+_Note_: thanks to a bug report we have detected that the `source` parameter was not filled properly (always `null`).
+We are working on a fix that will be released soon. If you need it quickly, please contact us and we will send you a quick patch for this issue.
+</md-danger>
+
 Finally, you can redefine the way BulletML gets the player position.
 
 It is called for each aimed bullet (`direction type='aim'`).
