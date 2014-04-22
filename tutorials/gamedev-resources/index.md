@@ -12,6 +12,7 @@ Here is a list of external resources we liked and recommend to you.
 
 # Gamedev
 
+* [Game Mechanic Explorer](http://gamemechanicexplorer.com/)
 * [The Indie Roadmap](http://www.altdevblogaday.com/2013/11/22/the-indie-roadmap/)
 * [Prototyping](http://blog.defendthegrave.com/post/57803998628/friday-update-2-prototyping)
 
