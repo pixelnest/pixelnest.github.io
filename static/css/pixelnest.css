@@ -356,7 +356,8 @@ li {
   max-width: 100%; }
 .card__body iframe {
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 100%; }
 
 @media only screen and (max-width: 500px) {
   .card__cover {
@@ -401,7 +402,8 @@ li {
   border-top: 1px solid #DDD; }
 .entry__content iframe {
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 100%; }
 .entry__content .highlight {
   margin: 20px -20px;
   padding: 5px 20px;
