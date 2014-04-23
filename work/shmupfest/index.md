@@ -7,19 +7,13 @@ cover: ./-img/cover.png
 
 The **Shmupfest** is a game we made for the [Stunfest 2014][stunfest], a french video game festival based in Rennes.
 
-It's an **infinite retro 2D Shoot'Em Up**, made with Unity. Bullets patterns are made with [BulletML][bulletml].
+It's an _infinite retro 2D Shoot'Em Up_, created with Unity. Bullets patterns are designed and implemented with _[BulletML for Unity][bulletml]_.
 
-All the sprites have been made by the [Ulule's backers][ulule], making the game unique and personalized.
+All the [sprites][shmupfest] have been drawn by the [Ulule's backers][ulule], making the game truly unique and personalized for the festival.
 
-# Trailer
+<iframe width="640" height="360" src="//www.youtube.com/embed/N4cRAA7Q-p4?rel=0" frameborder="0" allowfullscreen></iframe>
 
-Watch the trailer:
-
-**COMING SOON**
-
-# Play the game
-
-**AVAILABLE AFTER THE FESTIVAL**
+The game will be playable during (in-place) and after the festival.
 
 # Screenshots
 
@@ -34,7 +28,8 @@ Watch the trailer:
 [![Screenshot 5][screen5]][screen5]
 
 
-[stunfest]: http://stunfest.fr
+[stunfest]: http://stunfest.fr/
+[shmupfest]: http://shmupfest.stunfest.fr/
 [ulule]: http://fr.ulule.com/stunfest-2014/
 
 [bulletml]: /work/bulletml-for-unity
