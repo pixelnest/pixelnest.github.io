@@ -13,7 +13,7 @@ Remember the unforgettable nights playing [Smash Bros](http://www.smashbros.com/
 
 It is currently _in development_ (and far from complete) and should be released during the year 2014. When it's done.
 
-Meanwhile, you can watch an [early gameplay footage of the game on YouTube](http://youtu.be/Wee-F32Zcp0).
+<iframe width="640" height="360" src="//www.youtube.com/embed/Wee-F32Zcp0?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
 <br />Follow our [journal](/journal) to keep yourself updated about the game. ;)
