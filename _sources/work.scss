@@ -35,16 +35,26 @@
 .card__cover {
   float: left;
   margin-right: 20px;
+  margin-bottom: 20px;
   width: 150px;
   height: 150px;
   border: 1px solid #ddd;
 }
 
 .card__body {
-  @extend %clearfix;
+  // @extend %clearfix;
 
   > :first-child {
     margin-top: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
   }
 }
 

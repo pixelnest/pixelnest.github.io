@@ -17,7 +17,7 @@
  * - transition
  * - media queries
  */
-.card, .card__body, .ie .founders, .ie .founder {
+.card, .ie .founders, .ie .founder {
   overflow: hidden;
   _overflow: visible;
   zoom: 1; }
@@ -345,12 +345,18 @@ li {
 .card__cover {
   float: left;
   margin-right: 20px;
+  margin-bottom: 20px;
   width: 150px;
   height: 150px;
   border: 1px solid #ddd; }
 
 .card__body > :first-child {
   margin-top: 0; }
+.card__body img {
+  max-width: 100%; }
+.card__body iframe {
+  display: block;
+  margin: 0 auto; }
 
 @media only screen and (max-width: 500px) {
   .card__cover {
