@@ -65,7 +65,7 @@ Using your own delegate you can instantiate your own class (here `MyBulletObject
 
 ## Spawned
 
-Add a delegate to the event `void OnBulletSpawned(Bullet, string)`.
+Add a delegate to the event `BulletScript OnBulletSpawned(BulletObject, string)`.
 
 It will called by the engine when the bullet is ready to be displayed on the screen.
 
@@ -76,9 +76,13 @@ void Awake()
   bulletManager.OnBulletSpawned += HandleBulletSpawn;
 }
 
-private void HandleBulletSpawn(BulletMLLib.Bullet bullet, string bulletName)
+private BulletScript HandleBulletSpawn(BulletObjectbullet, string bulletName)
 {
   Debug.Log("Create Bullet's game object, sprite, etc.");
+  GameObject gameObject = new GameObject("Test");
+  
+  // Return the BulletScript that should be attached to the game object
+  return gameObject.AddComponent<BulletScript>();
 }
 ```
 
@@ -116,12 +120,9 @@ The plugin offers a link between `BulletObject` and `BulletScript`, so you can l
 
 # Player position
 
-<md-danger>
-_Note_: thanks to a bug report we have detected that the `source` parameter was not filled properly (always `null`).
-We are working on a fix that will be released soon. If you need it quickly, please contact us and we will send you a quick patch for this issue.
-</md-danger>
-
 Finally, you can redefine the way BulletML gets the player position.
+
+Add a delegate to the event `Vector2 GetPlayerPosition(GameObject)`.
 
 It is called for each aimed bullet (`direction type='aim'`).
 
@@ -141,12 +142,12 @@ void Awake()
 }
 ```
 
-- `BulletObject source` is a link to the bullet object requesting the aim. This way you can link the aim request to a game object and get a transform position.
+- `GameObject source` is a link to the game object requesting the aim. This way you can link the aim request to a game object and get a transform position.
 
 Another use case is when you have two players and want the enemies to target one or the other but not always the same.
 
 <md-warning>
-**Breaking change:** the `source` parameter was introduced in the version **1.1.2** of the plugin.
+**Breaking change:** the `source` parameter was introduced in the version **1.2** of the plugin.
 </md-warning>
 
 <br />And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
