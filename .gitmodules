@@ -1,0 +1,3 @@
+[submodule "presskit"]
+	path = presskit
+	url = git@github.com:pixelnest/presskit.git
