@@ -150,6 +150,43 @@ Another use case is when you have two players and want the enemies to target one
 **Breaking change:** the `source` parameter was introduced in the version **1.2** of the plugin.
 </md-warning>
 
+# Trigger
+
+<md-warning>
+**Note:** the `<trigger>` tag was introduced in the version **1.3** of the plugin.
+</md-warning>
+
+A trigger is a simple way to tell Unity to execute some code from a BulletML file.
+
+In your XML pattern, add the new instruction:
+
+```xml
+<action>
+	<trigger>beforefire</trigger>
+</action>
+```
+
+`beforefire` is a simple string, you can replace it by any string you want.
+
+<md-warning>
+**Note:** You can't use a NUMBER expression here.
+</md-warning>
+
+You can know that a Bullet source has raised the evend ``beforefire`` by adding a delegate to ``OnTrigger``
+
+```csharp
+var bulletManager = FindObjectOfType<BulletManagerScript>();
+
+bulletManager.OnTrigger += (source, name) =>
+      {
+        Debug.Log("Trigger " + name + " received from " + source);
+      };
+```
+
+- ``source`` is the GameObject sending the trigger (usually a GameObject with a BulletScript or BulletSourceScript)
+- ``name``the string written in the XML file. In our example, it would be ``beforefire``.
+
+
 <br />And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
  :)
 
