@@ -184,7 +184,7 @@ bulletManager.OnTrigger += (source, name) =>
 ```
 
 - ``source`` is the GameObject sending the trigger (usually a GameObject with a BulletScript or BulletSourceScript)
-- ``name``the string written in the XML file. In our example, it would be ``beforefire``.
+- ``name`` is the string written in the XML file. In our example, it would be ``beforefire``.
 
 
 <br />And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
