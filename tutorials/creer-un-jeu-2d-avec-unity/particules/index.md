@@ -15,7 +15,7 @@ links:
 
 Notre jeu commence à avoir bonne mine. C'est le moment de plonger dans le merveilleux monde des particules pour l'améliorer encore plus.
 
-Les particules sont (en gros) des sprites simples, nombreux, identiques et avec une durée de vie très réduite. 
+Les particules sont (en gros) des sprites simples, nombreux, identiques et avec une durée de vie très réduite.
 
 Pensez aux explosions, aux lasers, à la fumée, etc. Ces effets sont fait avec des particules - en général, parfois il s'agit simplement d'un sprite animé.
 
@@ -35,7 +35,7 @@ Une explosion se décompose en général en deux morceaux dans un jeu : de la fu
 Créez un nouveau "Particle System" ("Game Object" -> "Create Other" -> "Particle System").
 
 <md-tip>
-_Astuce_ : Nous vous recommandons de travailler sur une partie vide de la scène (ou sur une scène vide) pour bien voir ce que vous faites. 
+_Astuce_ : Nous vous recommandons de travailler sur une partie vide de la scène (ou sur une scène vide) pour bien voir ce que vous faites.
 <br /><br />
 Pour faire un focus sur un objet dans la scène, vous pouvez faire un `double-click` sur lui depuis l'onglet _Inspector_ ou appuyer sur `F` depuis l'onglet _Scene_.
 </md-tip>
@@ -79,7 +79,7 @@ Assignez la texture aux particules :
 
 Pour avoir l'effet désiré, nous allons modifier un certains nombres de paramètres dans l'onglet _Inspector_.
 
-Dans ce didacticiel nous utiliserons : 
+Dans ce didacticiel nous utiliserons :
 
 | Catégorie           | Nom du paramètre     | Valeur |
 | ------------------- | -------------------- | ------ |
@@ -118,7 +118,7 @@ Ici nous obtenons :
 
 [![Smoke effect][smoke_effect]][smoke_effect]
 
-Ce n'est pas incroyable mais avouez que c'était simple et rapide à faire. Ajouter des particules à un jeu peut faire une grosse différence dans le ressenti et dans le fun procuré (on aime tous quand l'écran fourmille de couleur et de "trucs qui explosent de partout"). 
+Ce n'est pas incroyable mais avouez que c'était simple et rapide à faire. Ajouter des particules à un jeu peut faire une grosse différence dans le ressenti et dans le fun procuré (on aime tous quand l'écran fourmille de couleur et de "trucs qui explosent de partout").
 
 Sauvegardez votre objet comme un préfab "SmokeEffect". Au passage, pourquoi ne pas faire un nouveau sous-dossier "Prefabs/Particles" ?
 
@@ -290,11 +290,11 @@ Mais c'est votre boulot de faire des superbes explosions en utilisant les partic
 
 # Prochaine étape
 
-Nous avons vu comment créez des particules en utilisant le moteur prévu pour dans Unity. C'est assez simple mais leurs utilisations sera un gros plus dans votre jeu. 
+Nous avons vu comment créez des particules en utilisant le moteur prévu pour dans Unity. C'est assez simple mais leurs utilisations sera un gros plus dans votre jeu.
 
 Attention quand même, c'est très chronophage ! Vous voudrez rapidement faire de nouveaux effets "super cools" plutôt qu'un nouveau système de high-scores peu passionnant.
 
-Comme l'écrivait James Silva dans [Building XNA 2.0 games](http://www.amazon.com/Building-XNA-2-0-Games-Professionals/dp/1430209798), il vaut mieux travailler sur les particules à la fin du développement du jeu, voir de laisser quelqu'un d’autres sans charger.
+Comme l'écrivait James Silva dans [Building XNA 2.0 games](http://www.amazon.com/Building-XNA-2-0-Games-Professionals/dp/1430209798), il vaut mieux travailler sur les particules à la fin du développement du jeu, ou carrément laisser quelqu'un d’autre s'en charger.
 
 Voyons maintenant un autre moyen de donner du _feedback_ au joueur : le son !
 
