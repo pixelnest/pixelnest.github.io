@@ -143,7 +143,7 @@ _A propos de la syntaxe_ : oui, elle est [vraiment étrange](http://docs.unity3d
 Nous affichons juste un bouton qui charge la scène "Stage1" quand l'utilisateur clique dessus.
 
 <md-note>
-_Note_: La méthode `OnGUI` est appelée à chaque frame et est destinée à afficher tous les éléments d'interface : barres de vies, compteurs, menus, etc. 
+_Note_: La méthode `OnGUI` est appelée à chaque frame et est destinée à afficher tous les éléments d'interface : barres de vies, compteurs, menus, etc.
 <br />L'objet `GUI` permet de créer rapidement dans le code des composants d'interface, comme la méthode `GUI.Button` par exemple.
 </md-note>
 
@@ -178,7 +178,7 @@ _Astuce_ : La méthode `Application.LoadLevel()` est radicale : elle instancie l
 
 # Mort du joueur et nouvelle partie
 
-Nous voulons aussi que notre joueur puisse redémarrer une partie quand il a perdu. Et pour le moment, cela arrive très souvent (nous y remédierons dans un chapitre à venir). 
+Nous voulons aussi que notre joueur puisse redémarrer une partie quand il a perdu. Et pour le moment, cela arrive très souvent (nous y remédierons dans un chapitre à venir).
 
 Actuellement le déroulement du partie est :
 
@@ -330,7 +330,7 @@ public class MenuScript : MonoBehaviour
 Comme vous le voyez, c'est pas mal de boulot pour un simple bout de menu.
 
 <md-note>
-_Note_ : Si vousavez un peu d'argent à investir et que vous avez besoins de menus et/ou d'afficher du texte, jetez un œil au [plugin NGUI][ngui_link]. Il vaut le coup._ Vraiment_. 
+_Note_ : Si vousavez un peu d'argent à investir et que vous avez besoins de menus et/ou d'afficher du texte, jetez un œil au [plugin NGUI][ngui_link]. Il vaut le coup._ Vraiment_.
 </md-note>
 
 # Prochaine étape
@@ -348,16 +348,16 @@ Félicitations ! Bon par contre, c'est uniquement sur votre ordinateur... et pou
 
 C'est justement ce dont nous allons parler dans cette dernière partie : créer un exécutable et le déployer sur un terminal iOS.
 
-[background]: ./-img/background.png
-[logo]: ./-img/logo.png
-[elements]: ./-img/elements.png
-[result1]: ./-img/result1.png
-[result2]: ./-img/result2.png
-[build_settings]: ./-img/build_settings.png
-[build_settings_add]: ./-img/build_settings_add.png
-[start]: ./-img/start.gif
-[game_over]: ./-img/game_over.png
-[game_over_script]: ./-img/game_over_script.png
-[GUISkin]: ./-img/GUISkin.png "Creating a GUISkin in Resources folder"
+[background]: ../../2d-game-unity/menus/-img/background.png
+[logo]: ../../2d-game-unity/menus/-img/logo.png
+[elements]: ../../2d-game-unity/menus/-img/elements.png
+[result1]: ../../2d-game-unity/menus/-img/result1.png
+[result2]: ../../2d-game-unity/menus/-img/result2.png
+[build_settings]: ../../2d-game-unity/menus/-img/build_settings.png
+[build_settings_add]: ../../2d-game-unity/menus/-img/build_settings_add.png
+[start]: ../../2d-game-unity/menus/-img/start.gif
+[game_over]: ../../2d-game-unity/menus/-img/game_over.png
+[game_over_script]: ../../2d-game-unity/menus/-img/game_over_script.png
+[GUISkin]: ../../2d-game-unity/menus/-img/GUISkin.png "Creating a GUISkin in Resources folder"
 
 [ngui_link]: http://www.tasharen.com/?page_id=140 "NGUI Unity Plugin"
