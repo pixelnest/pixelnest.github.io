@@ -28,4 +28,5 @@ You can use the navigation above and below each part to move between them.
 * [Documentation: How to use](../how-to-use)
 * [Documentation: Customization](../customization)
 * [Documentation: Pattern file](../pattern-file)
+* [Documentation: Integration with a pooling system](../pooling)
 * [Support request](../support)

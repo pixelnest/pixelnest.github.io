@@ -13,7 +13,7 @@ tutorial:
 links:
   summary: ../table-of-contents
   previous: ../customization
-  next: ../support
+  next: ../pooling
 ---
 
 For the moment, you have tried some examples (maybe some new ones you've find on the web), but you still don't know how to write your own BulletML file.
