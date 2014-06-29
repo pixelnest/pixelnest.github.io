@@ -103,12 +103,8 @@ You can define as many bullets as you want. A definition is:
 * `Time To Live In Seconds` — bullets are automatically destroyed after a duration time defined here. If your bullets are very fast, you should have a low time to live value.
  
 <md-note>
-If you wish to **turn off** this feature, set the Time To Live value to `0`. This is especially useful when integrating with another plugin that will handle the bullet spawn and despawn.
+If you wish to **turn off** this feature and  handle the destruction yoruself, set the Time To Live value to `0`. This is especially useful when integrating with another plugin that will handle the bullet spawn and despawn.
 </md-note>
-
-
-
-  If you want to handle the destruction yourself, simply set 0 and the bullets will never be destroyed.
 
 * `Destroy When Out Of Screen` — if ticked, the bullets are automatically removed when they are not visible anymore. It is a simple way to avoid a too large number of bullets in the scene at a given time.
 
