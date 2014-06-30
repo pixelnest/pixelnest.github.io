@@ -101,9 +101,9 @@ You can define as many bullets as you want. A definition is:
 * `Sprite` — (_optional_) the sprite image that will be set in the `SpriteRenderer` of the bullet container prefab at runtime.
 
 * `Time To Live In Seconds` — bullets are automatically destroyed after a duration time defined here. If your bullets are very fast, you should have a low time to live value.
- 
+
 <md-note>
-If you wish to **turn off** this feature and  handle the destruction yoruself, set the Time To Live value to `0`. This is especially useful when integrating with another plugin that will handle the bullet spawn and despawn.
+_Turn off_: If you wish to _turn off_ this feature and handle the destruction yourself, set the `Time To Live` value to `0`. This is especially useful when integrating with another plugin that manages bullets spawn and de-spawn.
 </md-note>
 
 * `Destroy When Out Of Screen` — if ticked, the bullets are automatically removed when they are not visible anymore. It is a simple way to avoid a too large number of bullets in the scene at a given time.
