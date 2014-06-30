@@ -12,7 +12,7 @@ tutorial:
 
 links:
   summary: ../table-of-contents
-  previous: ../pattern-file
+  previous: ../pooling
 ---
 
 If you have any trouble with the plugin, please send us a support request via e-mail at [bulletml-unity@pixelnest.io](mailto:bulletml-unity@pixelnest.io).
