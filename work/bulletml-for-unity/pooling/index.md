@@ -16,13 +16,13 @@ links:
   next: ../support
 ---
 
-BulletML for Unity does not provide a pooling system as we think there is already enough great pooling plugins on the Asset Store.
+_BulletML for Unity_ does not provide a pooling system. We think there are more than enough great pooling plugins on the Asset Store.
 
-However, you can easily hook our plugin with any other.
+However, you can easily bind our plugin with another one.
 
-Here's a simple script skeleton to give you an idea of how you can hook to another pooling plugin, like *Core GameKit*.
+Here's a simple script skeleton to give you an idea of how you can hook _BulletML for Unity_ into a pooling plugin, like *[Core GameKit](http://u3d.as/content/dark-tonic-inc-/core-game-kit-pooling-/43o)*:
 
-````csharp
+```csharp
 public class BulletPoolScript : MonoBehaviour
 {
 	void Start()
@@ -34,7 +34,7 @@ public class BulletPoolScript : MonoBehaviour
 			bulletManager.OnBulletDestroyed += OnBulletDestroyed;
 		}
 	}
-	
+
 	BulletScript OnBulletSpawned(BulletObject bullet, string bulletName)
 	{
 		// Get a GameObject from the pool
@@ -46,7 +46,7 @@ public class BulletPoolScript : MonoBehaviour
 		// BulletScript can be added on the fly, there is no special parameter to pass
 
 		BulletScript bulletScript = go.GetComponent<BulletScript>();
-		if(bulletScript == null) 
+		if(bulletScript == null)
 		{
 			bulletScript = go.AddComponent<BulletScript>();
 		}
@@ -67,18 +67,17 @@ public class BulletPoolScript : MonoBehaviour
       // TODO: Your pool here
 			MyPool.Recycle(bulletScript);
 		}
-		
+
 		// 2/ Otherwise you have a direct reference to the bullet's GameObject
 		// TODO: Your pool here
 		MyPool.Recycle(bullet);
 	}
 }
-	
-````
+```
 
-To make sure no bullets are instantiated without pooling, make sure to change the *Script Execution Order* to:
+To be sure no bullets are instantiated without pooling, be careful to change the *Script Execution Order* to:
 
-1. BulletManagerScript
-2. Your bulletML + pooling script
-3. BulletSourceScript
+1. `BulletManagerScript`
+2. Your BulletML + pooling script
+3. `BulletSourceScript`
 
