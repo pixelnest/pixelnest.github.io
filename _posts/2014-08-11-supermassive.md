@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Supermassive
-subtitle: space + pirates + pixel art = <3
+title: Supermassive!
+subtitle: space + shooter + pirates + pixel art = <3
 ---
 
 It has been a long time since we've made a public announcement. _We were hard at work on a very cool new thing._
