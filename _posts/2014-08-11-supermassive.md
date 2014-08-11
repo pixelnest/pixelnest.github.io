@@ -10,7 +10,7 @@ It's time for us to reveal our new baby: _Supermassive_! And there's no better w
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/2R4hqa3w27M?rel=0" frameborder="0" allowfullscreen></iframe>
 
-Supermassive is a frenetic space shooter, carved in big beautiful pixels. But enough talking, just go read what's on [the brand new website of Supermassive](http://supermassive.pixelnest.io/). ;)
+Supermassive is a frenetic space shooter, carved in big beautiful pixels. But enough talking, just go read what's on [the brand new Supermassive's website](http://supermassive.pixelnest.io/). ;)
 
 The game is made in collaboration with this awesome illustrator and friend of ours: [Plus](http://pluspixels.tumblr.com/).
 
