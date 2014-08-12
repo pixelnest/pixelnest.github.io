@@ -3,7 +3,7 @@ layout: tutorial
 title: Adding and displaying a background
 date: 13/11/18
 
-show_promotion: bulletml-for-unity
+show_promotion: supermassive
 
 tutorial:
   name: Creating a 2D game with Unity

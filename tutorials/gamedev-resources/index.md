@@ -3,6 +3,8 @@ layout: tutorial
 title: Gamedev resources
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Gamedev resources
   link: ./

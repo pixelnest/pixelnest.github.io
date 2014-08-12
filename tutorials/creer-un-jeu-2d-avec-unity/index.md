@@ -3,6 +3,8 @@ layout: tutorial
 title: Créer un jeu 2D avec Unity
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Créer un jeu 2D avec Unity
   link: ./
@@ -27,7 +29,7 @@ Les _assets_, le _gameplay_ et l'idée originale viennent du jeu [The Great Pape
 
 # Unity
 
-[Unity3D][unity_link] est un moteur de jeu très populaire et complet permettant de créer des jeux vidéo multiplateformes, aussi bien en 2D qu'en 3D. Nous partons du principe que vous avez déjà quelques bases en programmation. Connaître l'outil est un plus, mais n'est pas nécessaire. 
+[Unity3D][unity_link] est un moteur de jeu très populaire et complet permettant de créer des jeux vidéo multiplateformes, aussi bien en 2D qu'en 3D. Nous partons du principe que vous avez déjà quelques bases en programmation. Connaître l'outil est un plus, mais n'est pas nécessaire.
 
 Ce tutoriel est entièrement réalisable avec la version **Gratuite** de Unity.
 

@@ -3,6 +3,8 @@ layout: tutorial
 title: Jouons avec les particules
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Créer un jeu 2D avec Unity
   link: ../

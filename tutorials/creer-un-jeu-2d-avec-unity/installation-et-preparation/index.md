@@ -3,6 +3,8 @@ layout: tutorial
 title: Installer Unity et préparer un nouveau projet
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Créer un jeu 2D avec Unity
   link: ../
@@ -116,7 +118,7 @@ Vous allez retrouver dans l'onglet "Project" différents types d'assets :
 
 Objets réutilisables (des ennemis, des projectiles, des bonus, etc.).
 
-Nous pouvons faire l'analogie entre les prefabs et les `class` des langages de programmation objet. Ici, c'est une sorte de moule à partir duquel vous fabriquez des objets quasi-identiques. L'intérêt est de pouvoir stocker des paramètres pour un objet mais de ne le créer qu'à un moment précis de l'exécution du programme. 
+Nous pouvons faire l'analogie entre les prefabs et les `class` des langages de programmation objet. Ici, c'est une sorte de moule à partir duquel vous fabriquez des objets quasi-identiques. L'intérêt est de pouvoir stocker des paramètres pour un objet mais de ne le créer qu'à un moment précis de l'exécution du programme.
 
 ### Scenes
 
@@ -124,7 +126,7 @@ Une scène est un écran dans le jeu, comme un niveau ou un menu. Elles contienn
 
 Contrairement aux autres objets dans Unity, les scènes sont créées via le menu "File".
 
-Il faut également les sauver régulièrement et **manuellement**. C'est une erreur typique que vous ferez souvent et, même si Unity vous demandera de sauvegarder avant de quitter, il vous arrivera fréquemment de faire un nouveau _commit_ sans avoir enregistré cette scène auparavant. 
+Il faut également les sauver régulièrement et **manuellement**. C'est une erreur typique que vous ferez souvent et, même si Unity vous demandera de sauvegarder avant de quitter, il vous arrivera fréquemment de faire un nouveau _commit_ sans avoir enregistré cette scène auparavant.
 
 ### Sounds
 

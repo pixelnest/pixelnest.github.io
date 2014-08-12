@@ -3,7 +3,7 @@ layout: tutorial
 title: Making animations with Unity 2D (1/2)
 date: 13/12/11
 
-show_promotion: bulletml-for-unity
+show_promotion: supermassive
 
 tutorial:
   name: Creating a 2D game with Unity

@@ -4,6 +4,8 @@ title: Unity and touch controls
 author: Damien
 date: 14/03/14
 
+show_promotion: supermassive
+
 tutorial:
   name: Unity and touch controls
   link: ./

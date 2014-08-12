@@ -3,6 +3,8 @@ layout: tutorial
 title: Ajuster le gameplay pour rendre le jeu bien meilleur
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Créer un jeu 2D avec Unity
   link: ../

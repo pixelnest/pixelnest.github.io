@@ -3,6 +3,8 @@ layout: tutorial
 title: Gestion du tir (1/2)
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Créer un jeu 2D avec Unity
   link: ../
@@ -27,7 +29,7 @@ Voici le sprite à utiliser :
 
 _(Clic droit pour sauver l'image sur votre disque)_
 
-Ce projectile va être réutilisé abondamment, il y aura plusieurs instances en même temps à l'écran quand le joueur tirera. 
+Ce projectile va être réutilisé abondamment, il y aura plusieurs instances en même temps à l'écran quand le joueur tirera.
 
 Donc qu'est-ce que l'on va utiliser ? Facile, un `Prefab` !
 
@@ -102,7 +104,7 @@ Si vous lancez le jeu vous devriez voir le tir avancer.
 
 Ce tir ne détruit rien (pour le moment). Ce n'est pas étonnant, nous n'avons rien fait pour que ce soir le cas.
 
-Ce qu'il nous manque, c'est un script pour gérer les points de vies et un autre pour en perdre. 
+Ce qu'il nous manque, c'est un script pour gérer les points de vies et un autre pour en perdre.
 
 Créez un nouveau script "HealthScript" :
 
@@ -115,7 +117,7 @@ using UnityEngine;
 public class HealthScript : MonoBehaviour
 {
   /// <summary>
-  /// Points de vies 
+  /// Points de vies
   /// </summary>
   public int hp = 1;
 
@@ -303,7 +305,7 @@ Nous avons donc un mécanisme tout simple de temps de recharge entre deux tirs. 
 
 ### 3. Méthode Attack(bool)
 
-La méthode ``Attack(bool)`` est la raison d'être de ce script d'arme : créer un projectile à partir d'un  appel dans un autre script. 
+La méthode ``Attack(bool)`` est la raison d'être de ce script d'arme : créer un projectile à partir d'un  appel dans un autre script.
 
 Une fois le projectile instancié, nous le paramétrons  avec les bonnes valeurs.
 
@@ -349,7 +351,7 @@ Mais qu'avons-nous fait ?
 
 1. Nous lisons la valeur des entrée claviers / gamepad
 2. S'il y a eu un appui intéressant, alors il faut récupérer le script de l'arme
-3. Et on appelle `Attack(false)` 
+3. Et on appelle `Attack(false)`
 
 <md-info>
 _Button down_: Nous utilisons `GetButtonDown()` pour récupérer la valeur d'une entrée. Le "Down" correspond à l'état "vient juste d'être appuyé". Cet état n'est valable qu'une frame, lorsque le bouton est enfoncé et ne l'était pas l'instant d'avant.<br /> Nous pouvons aussi utiliser `GetButton()` qui indique si le bouton est enfoncé, cela permettrait de tirer en continu en restant appuyé.

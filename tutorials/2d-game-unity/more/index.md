@@ -3,7 +3,7 @@ layout: tutorial
 title: More to come!
 date: 13/11/18
 
-show_promotion: bulletml-for-unity
+show_promotion: supermassive
 
 tutorial:
   name: Creating a 2D game with Unity

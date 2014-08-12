@@ -3,6 +3,8 @@ layout: tutorial
 title: Gestion du tir (2/2)
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Créer un jeu 2D avec Unity
   link: ../
@@ -117,7 +119,7 @@ Il nous faut :
 
 1. Créer un objet vide. Appelons le "WeaponObject".
 2. Supprimer le composant "WeaponScript" attaché à l'objet / au prefab de l'ennemi.
-3. Ajouter un "WeaponScript" à notre "WeaponObject" et remettre le prefab du projectile en paramètre. 
+3. Ajouter un "WeaponScript" à notre "WeaponObject" et remettre le prefab du projectile en paramètre.
 4. Appliquer une rotation de `(0, 0, 180)` au "WeaponObject".
 
 Au final ce n'est pas très compliqué, il vous faut juste obtenir ceci :
@@ -206,13 +208,13 @@ Ce qui suit n'est qu'une piste d'améliorations et de réflexions autour du dév
 
 ## _Pool_ de projectiles
 
-En jouant un peu avec votre projet actuel vous verrez que l'onglet _Hierarchy_ se remplit rapidement de projectiles qui mettent du temps à être détruits : 20 secondes d'après le script s'ils ne touchent pas leur cible. 
+En jouant un peu avec votre projet actuel vous verrez que l'onglet _Hierarchy_ se remplit rapidement de projectiles qui mettent du temps à être détruits : 20 secondes d'après le script s'ils ne touchent pas leur cible.
 
 Si vous voulez faire un [danmaku][danmaku_link] avec BEAUCOUP de "boulettes", il va falloir mieux gérer le nombre d'objets à l'écran et en mémoire.
 
-Une solution pour gérer beaucoup de projectiles et de limiter leur nombre (c'est le système de _pool_). 
+Une solution pour gérer beaucoup de projectiles et de limiter leur nombre (c'est le système de _pool_).
 
-Concrètement, cela peut être un tableau à taille limité référençant les objets créés. Une fois plein, on supprime les plus anciens pour en recréer des nouveaux. 
+Concrètement, cela peut être un tableau à taille limité référençant les objets créés. Une fois plein, on supprime les plus anciens pour en recréer des nouveaux.
 
 Nous n'allons pas le faire ici mais nous eu l'occasion de l'utiliser pour un [script de peinture](http://dmayance.com/unity-paint-part-2/).
 

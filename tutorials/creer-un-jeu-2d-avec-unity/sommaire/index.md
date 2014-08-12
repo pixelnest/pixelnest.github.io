@@ -3,6 +3,8 @@ layout: tutorial
 title: Sommaire
 date: 13/11/20
 
+show_promotion: supermassive
+
 tutorial:
   name: Créer un jeu 2D avec Unity
   link: ../
@@ -28,7 +30,7 @@ Vous pouvez utiliser les flèches de navigation en haut et en bas des pages pour
 - [Défilement du décor (Parallax scrolling)](../parallax-scrolling)
 - [Jouons avec les particules](../particules)
 - [Faisons du bruit](../sons-et-musiques)
-- [Menus et chargement du jeu](../menus) 
+- [Menus et chargement du jeu](../menus)
 - [Préparer et déployer un exécutable de son jeu](../release)
 - [Conclusion](../conclusion)
 
