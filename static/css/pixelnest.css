@@ -23,17 +23,17 @@
   zoom: 1; }
 
 .page-content p a, .page-content ul a,
-.page-content ol a, .home__aside li a, .card__title a, .entry__title a, .entry__content a, .contacts li a, .founder__links li a, .pager a, .archives a, .tutorial .page-header a, .promotion a, .ie .logo {
+.page-content ol a, .home__aside li a, .card__title a, .entry__title a, .entry__content a, .contacts li a, .founder__links li a, .pager a, .archives a, .tutorial .page-header a, .promotion a, .promotion-image a, .ie .logo {
   color: #00a9e0;
   text-decoration: none; }
   .page-content p a:hover, .page-content ul a:hover,
-  .page-content ol a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .entry__content a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .tutorial .page-header a:hover, .promotion a:hover, .ie .logo:hover {
+  .page-content ol a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .entry__content a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .tutorial .page-header a:hover, .promotion a:hover, .promotion-image a:hover, .ie .logo:hover {
     text-decoration: underline; }
   .page-content p a:active, .page-content ul a:active,
-  .page-content ol a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .entry__content a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .tutorial .page-header a:active, .promotion a:active, .ie .logo:active {
+  .page-content ol a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .entry__content a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .tutorial .page-header a:active, .promotion a:active, .promotion-image a:active, .ie .logo:active {
     color: #98c73d; }
   .page-content p a:focus, .page-content ul a:focus,
-  .page-content ol a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .entry__content a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .tutorial .page-header a:focus, .promotion a:focus, .ie .logo:focus {
+  .page-content ol a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .entry__content a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .tutorial .page-header a:focus, .promotion a:focus, .promotion-image a:focus, .ie .logo:focus {
     color: #98c73d; }
 
 html, body {
@@ -781,6 +781,28 @@ li {
   color: #5f5f5f;
   font-size: 0.7em;
   line-height: 1.4em; }
+
+.promotion-image {
+  margin-top: 60px; }
+  .promotion-image img {
+    width: 700px;
+    opacity: 0.8;
+    -webkit-transition: opacity 300ms ease-out;
+    -moz-transition: opacity 300ms ease-out;
+    -ms-transition: opacity 300ms ease-out;
+    -o-transition: opacity 300ms ease-out;
+    transition: opacity 300ms ease-out; }
+    .promotion-image img:hover {
+      opacity: 1; }
+  .promotion-image p {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1rem;
+    text-align: center; }
+    .promotion-image p:hover {
+      text-decoration: underline; }
+  .promotion-image a:hover {
+    text-decoration: none; }
 
 /*
  * Dirty fixes for IE version 7 and 8. Not IE6, get away.

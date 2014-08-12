@@ -2,8 +2,10 @@
 // Promotion.
 // -------------------------------------------------------
 
+$promotion-margin-top: 60px;
+
 .promotion {
-  margin-top: 60px;
+  margin-top: $promotion-margin-top;
   padding: 15px;
   background: #f3f3f3;
   border: 1px solid #d6d6d6;
@@ -14,4 +16,32 @@
   line-height: 1.4em;
 
   a { @extend %link; }
+}
+
+.promotion-image {
+  margin-top: $promotion-margin-top;
+
+  img {
+    width: 700px;
+    opacity: 0.8;
+
+    @include transition(opacity, 300ms, ease-out);
+
+    &:hover { opacity: 1; }
+  }
+
+  p {
+    margin: 0;
+    margin-top: 5px;
+
+    font-size: 1rem;
+    text-align: center;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  a {
+    @extend %link;
+    &:hover { text-decoration: none; }
+  }
 }
