@@ -12,7 +12,6 @@ tutorial:
 links:
   summary: ../sommaire
   previous: ../release
-  next: ../animations
 ---
 
 Et… c'est _terminé_.
@@ -25,7 +24,7 @@ Mais en attendant, c'est à votre à tour. C'est à vous de commencer _votre_ pr
 
 Les dernières étapes pour cela ?
 
-[ ![Dernières étapes[last] ][last]
+[ ![Dernières étapes][last] ][last]
 
 Et la suite ne dépend que de vous… :)
 

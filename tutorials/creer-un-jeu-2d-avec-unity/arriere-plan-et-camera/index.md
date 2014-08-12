@@ -11,7 +11,7 @@ tutorial:
 
 links:
   summary: ../sommaire
-  previous: ../nstallation-et-preparation
+  previous: ../installation-et-preparation
   next: ../ajout-du-joueur-et-des-ennemis
 ---
 
