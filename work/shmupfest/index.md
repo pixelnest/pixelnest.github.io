@@ -18,6 +18,10 @@ All the [sprites][shmupfest] have been drawn by the [Ulule's backers][ulule], ma
 
 The game will be playable during (in-place) and after the festival.
 
+# Press
+
+[View the press page.](/presskit/shmupfest.html)
+
 # Screenshots
 
 [![Screenshot 1][screen1]][screen1]
