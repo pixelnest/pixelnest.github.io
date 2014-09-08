@@ -3,7 +3,7 @@ layout: tutorial
 title: Playing with particles
 date: 13/11/18
 
-show_promotion: supermassive
+show_promotion: steredenn
 
 tutorial:
   name: Creating a 2D game with Unity

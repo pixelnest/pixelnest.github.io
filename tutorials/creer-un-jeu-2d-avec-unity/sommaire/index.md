@@ -3,7 +3,7 @@ layout: tutorial
 title: Sommaire
 date: 13/11/20
 
-show_promotion: supermassive
+show_promotion: steredenn
 
 tutorial:
   name: Créer un jeu 2D avec Unity

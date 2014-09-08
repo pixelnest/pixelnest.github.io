@@ -3,7 +3,7 @@ layout: tutorial
 title: Gamedev resources
 date: 13/11/20
 
-show_promotion: supermassive
+show_promotion: steredenn
 
 tutorial:
   name: Gamedev resources

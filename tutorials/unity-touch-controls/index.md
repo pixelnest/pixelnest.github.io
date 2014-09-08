@@ -4,7 +4,7 @@ title: Unity and touch controls
 author: Damien
 date: 14/03/14
 
-show_promotion: supermassive
+show_promotion: steredenn
 
 tutorial:
   name: Unity and touch controls
