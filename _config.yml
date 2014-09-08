@@ -19,3 +19,6 @@ markdown: redcarpet
 
 redcarpet:
   extensions: ["tables"]
+
+gems:
+  - jekyll-redirect-from
