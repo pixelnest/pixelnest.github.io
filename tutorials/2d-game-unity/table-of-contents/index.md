@@ -40,6 +40,7 @@ You can use the navigation above and below each chapter to move between them.
 # Other Unity related tutorials
 
 - [Touch controls with Unity](../../unity-touch-controls)
+- [How to make a 2D expandable laser in Unity](http://steredenn-game.tumblr.com/post/98397504410/steredenn-making-an-expandable-laser) <span style="color: #f4650c">_(new!)_</span>
 
 More to come, stay tuned!
 

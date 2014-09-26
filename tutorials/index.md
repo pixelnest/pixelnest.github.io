@@ -12,7 +12,8 @@ Here is a list of all the tutorials and articles we made.
 
 * [Creating a 2D game with Unity](./2d-game-unity/)
 * [Making animations with Unity 2D](./2d-game-unity/animations-1/)
-* [Unity and touch controls](./unity-touch-controls/) <span style="color: #f4650c">_(new!)_</span>
+* [Unity and touch controls](./unity-touch-controls/) 
+* [How to make a 2D expandable laser in Unity](http://steredenn-game.tumblr.com/post/98397504410/steredenn-making-an-expandable-laser) <span style="color: #f4650c">_(new!)_</span>
 
 ## Misc
 
