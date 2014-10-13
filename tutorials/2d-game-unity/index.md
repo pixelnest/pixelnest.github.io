@@ -21,6 +21,8 @@ The result will be a lot like this demo:
 
 _(Click on the image to play)_
 
+With time and work you can make a game like [Steredenn][steredenn]. We actually use the code of the tutorial in our game!
+
 We will focus on a _shmup_ with an horizontal scrolling. However, if this tutorial does its job correctly, you'll understand how to extend the code to many other genres.
 
 The assets, gameplay and original idea come from the game [The Great Paper Adventure][tgpa_link]. Damien created this game a few years ago using [XNA][xna_link]. When we started this tutorial, we thought it was a perfect material to explain Unity.
@@ -72,7 +74,7 @@ So, are you ready? Let's dive into Unity!
 
 [unity_logo_url]: ./-img/unity.png
 [result]: ./-img/result.png
-
+[steredenn]: http://steredenn.pixelnest.io
 [demo_link]: ./-demo/demo.html "Play the demo"
 
 [pxn_mailto]: mailto:site@pixelnest.io "Pixelnest Mail"
