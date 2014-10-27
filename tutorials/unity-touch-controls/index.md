@@ -17,6 +17,8 @@ Welcome to a short Pixelnest's tutorial. We will make a simple "game" where touc
 
 _(Click to see the animation)_
 
+You can download the [full project on GitHub][sourcecode].
+
 This is an advanced chapter. If you are new to Unity, we recommend you to follow our [beginner's tutorial first][tutorial].
 
 # Disclaimer
@@ -614,6 +616,7 @@ Finally, you can follow us on [twitter][pxn_twitter_link] if you like what we do
 
 This tutorial was redacted by [Damien][dam_twitter_link], and edited by [Matthieu][mog_twitter_link]. We hope you will enjoy it.
 
+[sourcecode]: https://github.com/pixelnest/tutorial-unity-touch-controls
 
 [result]: ./-img/result.png
 [result_gif]: ./-img/result.gif
