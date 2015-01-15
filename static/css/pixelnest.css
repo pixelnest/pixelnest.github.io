@@ -97,6 +97,10 @@ li {
   width: 559px;
   height: 108px; }
 
+.intent-button--greenlight {
+  width: 500px;
+  height: auto; }
+
 .banner {
   border-bottom: 1px solid #888;
   background-image: url("/static/images/background.jpg");
