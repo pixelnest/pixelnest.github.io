@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Steam Greenlight
-subtitle: help us getting greenlighted!
+subtitle: help us getting greenlit!
 ---
 
 Happy new year!
@@ -12,7 +12,7 @@ Let's start with a great new for Pixelnest: _Steredenn has been submitted on Ste
 
 Our main focus is still the Xbox One, but we don't want to forget PC players.
 
-If you like Steredenn — we sure hope so —, [help us getting greenlighted](http://steredenn-greenlight.pixelnest.io/)!
+If you like Steredenn — we sure hope so —, [help us getting greenlit](http://steredenn-greenlight.pixelnest.io/)!
 
 <a href="http://steredenn-greenlight.pixelnest.io/">
   <img
