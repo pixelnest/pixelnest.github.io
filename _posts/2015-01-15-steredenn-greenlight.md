@@ -23,6 +23,8 @@ If you like Steredenn — we sure hope so —, [help us getting greenlit](http:/
   />
 </a>
 
+<center>[_(or open directly in the Steam app)_](steam://url/CommunityFilePage/375439529)<br /><br /></center>
+
 Thanks for your support. :)
 
 
