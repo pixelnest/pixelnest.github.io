@@ -1,4 +1,28 @@
 // -------------------------------------------------------
+// Promotion header.
+// -------------------------------------------------------
+
+.promotion-header {
+    min-height: 23px;
+    padding: 12px 10px 15px 10px;
+    background: $brand1-color;
+
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+
+    a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px dotted white;
+
+      &:hover {
+        border-bottom-style: solid;
+      }
+    }
+  }
+
+// -------------------------------------------------------
 // Promotion.
 // -------------------------------------------------------
 
@@ -23,6 +47,7 @@ $promotion-margin-top: 60px;
 
   img {
     width: 700px;
+    max-width: 100%;
     opacity: 0.8;
 
     @include transition(opacity, 300ms, ease-out);

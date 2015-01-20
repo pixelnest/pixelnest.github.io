@@ -784,6 +784,20 @@ li {
   margin-top: 20px;
   text-align: center; }
 
+.promotion-header {
+  min-height: 23px;
+  padding: 12px 10px 15px 10px;
+  background: #00a9e0;
+  color: white;
+  font-size: 0.8em;
+  text-align: center; }
+  .promotion-header a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dotted white; }
+    .promotion-header a:hover {
+      border-bottom-style: solid; }
+
 .promotion {
   margin-top: 60px;
   padding: 15px;
@@ -798,6 +812,7 @@ li {
   margin-top: 60px; }
   .promotion-image img {
     width: 700px;
+    max-width: 100%;
     opacity: 0.8;
     -webkit-transition: opacity 300ms ease-out;
     -moz-transition: opacity 300ms ease-out;
