@@ -41,19 +41,29 @@ Here are the official places to find those resources:
 
 # Testing environments
 
-Mobile deployment with Unity is fastidious. It takes several minutes to fully deploy a project on a device.
+Mobile deployment with Unity can be quite fastidious. It takes up to several minutes to fully deploy a project on a device.
 
-This is because you cannot **test directly** on the device. You have to build, open the Xcode project, compile then deploy.
+This is because you cannot **test directly** on the device. You have to build, open the Xcode project (for iOS), compile then deploy.
 
-Fortunately, Unity comes with a small iOS/Android app: [Unity Remote](http://docs.unity3d.com/Documentation/Manual/unity-remote.html). It allows a device to connect to Unity via a local network.
+## iOS and Android
+
+For **iOS** and **Android**, Unity comes with a small app: [Unity Remote](http://docs.unity3d.com/Documentation/Manual/unity-remote.html). It allows a device to connect to Unity via the local network.
 
 Using the app, the touch screen becomes a usable interface with a degraded live preview of your computer.
 
-This is the only way to debug touch controls, but you still need to fully deploy to really test the app on a device.
+This is the good way to debug touch controls, but you still need to fully deploy to really test the app on a device.
 
 <md-note>
 _Note_: the iOS app only works with a Mac.
 </md-note>
+
+## Windows Phone
+
+For **Windows Phone** there is no remote app but a closer integration with the Phone 8 SDK.
+
+In the *Windows Store* Build Settings, select `Phone 8.1` as the SDK value and check `Unity C# projects`.
+
+This will allow you to build, deploy and debug directly from Visual Studio.
 
 # Setup
 
