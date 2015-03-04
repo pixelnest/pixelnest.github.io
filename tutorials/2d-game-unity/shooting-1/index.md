@@ -37,17 +37,18 @@ What should we use in this case ? A `Prefab` of course!
 
 You should be used to the procedure now:
 
-1. Import the texture.
+1. Import the image.
 2. Create a new `Sprite` in the scene.
 3. Set the image on the sprite.
+4. Set thesprite  layer to "Bullets"
 4. Add a "Rigidbody 2D" with `0` "Gravity Scale" and "Fixed Angles".
-5. Add a "Box Collider 2D" with a size of `(1, 1)`.
+5. Add a "Box Collider 2D".
 
-Set the scale to `(0.75, 0.75, 1)` so it will look good.
+Set the scale to `(0.5, 0.5, 1)` so it will look good.
 
 However, this time, we need to set a new parameter in the "Inspector":
 
-6. In the "Box Collider 2D", check the "IsTrigger" property.
+6. In the "Box Collider 2D", check the "Is Trigger" property.
 
 A _trigger_ collider raises an event when colliding but is not used by the physics simulation.
 
@@ -314,14 +315,14 @@ This is the main purpose of this script: being called from another one. This is 
 Once the projectile is instantiated, we retrieve the scripts of the shot object and override some variables.
 
 <md-note>
-_Note_: The `GetComponent<TypeOfComponent>()` method allows you to get a precise component (and thus a script, because a script is a component after all) from an object. The generic (`<TypeOfComponent>`) is used to indicate the exact component that you want. <br />There is also a `GetComponents<TypeOfComponent>()` that get a list instead of the first one, etc.
+_Note_: The `GetComponent<TypeOfComponent>()` method allows you to get a precise component (and thus a script, because a script is a component after all) from an object. The generic (`<TypeOfComponent>`) is used to indicate the exact component that you want. <br />There is also a `GetComponents<TypeOfComponent>()` that get an array instead of the first one, etc.
 </md-note>
 
 # Using the weapon with the player entity
 
 If you launch the game at this point, nothing has changed at all. We have created a weapon but it's completely useless.
 
-Indeed, if a "WeaponScript" was attached to an entity, the `Attack(bool)` method would never be called.
+Indeed, even if a "WeaponScript" was attached to an entity, the `Attack(bool)` method would never be called.
 
 Let's go back to "PlayerScript".
 
@@ -360,7 +361,7 @@ What did we do ?
 3. We call `Attack(false)`.
 
 <md-info>
-_Button down_: You can notice that we use the `GetButtonDown()` method to get an input. The "Down" at the end allows us to get the input when the button has been pressed and _only_ once. `GetButton()` returns `true` at each frame until the button is released. In our case, we clearly want the behavior of the `GetButtonDown()` method. <br />Try to use `GetButton()` instead, and observe the difference.
+_Button down_: You can notice that we use the `GetButtonDown()` method to get an input. The "Down" at the end allows us to get the input when the button has been pressed once and _only_ once. `GetButton()` returns `true` at each frame until the button is released. In our case, we clearly want the behavior of the `GetButtonDown()` method. <br />Try to use `GetButton()` instead, and observe the difference.
 </md-info>
 
 Launch the game with the "Play" button. You should get this:
