@@ -72,7 +72,7 @@ The nice idea here is that you can use the Unity editor to set the enemies. You 
 [Once again, it's a choice, not science][stackgamedev_link]. ;)
 
 <md-note>
-_Note_: We truly think that using the Unity editor as a level editor is valuable, unless you have time, money and dedicated level designers that need special tools.
+_Note_: On a bigger project, you may need a dedicated level editor such as Tiled or a custom one you made. Your levels can be text (plain, XML, JSON, etc) files that you read in Unity for example.
 </md-note>
 
 ## Planes
@@ -83,19 +83,19 @@ Add a new layer to the scene for the background elements.
 
 We are going to have:
 
-| Layer                                      |   Loop   |    Position    |
-| ------------------------------------------ | -------- | -------------- |
-| Background with the sky                    | Yes      | `(0, 0, 10)`   |
-| Background (1st row of flying platforms)   | No       | `(0, 0, 9)`    |
-| Middleground (2nd row of flying platforms) | No       | `(0, 0, 5)`    |
-| Foreground with players and enemies        | No       | `(0, 0, 0)`    |
+| Layer                                      |   Loop   |
+| ------------------------------------------ | -------- |
+| Background with the sky                    | Yes      |
+| Background (1st row of flying platforms)   | No       |
+| Middleground (2nd row of flying platforms) | No       |
+| Foreground with players and enemies        | No       |
 
 [ ![Planes][planes] ][planes]
 
-We could imagine to have some layers before the player too. Just keep the `Z` positions between `[0, 10]`, otherwise you will need to tweak the camera.
+We could add as many layers of backgorund objects as we want.
 
 <md-warning>
-_Careful with that axe, Eugene_: If you add layers ahead of the foreground layer, be careful with the visibility. Many games do not use this technique because it reduces the clearness of the game.
+_Careful with that axe, Eugene_: If you add layers ahead of the foreground layer, be careful with the visibility. Many games do not use this technique because it reduces the clearness of the game, especially in a shmup where the gameplay elements needs to be very clearly visible.
 </md-warning>
 
 # _Practice_: Diving into the code
@@ -167,19 +167,19 @@ public class ScrollingScript : MonoBehaviour
 
 Attach the script to these game objects with these values:
 
-| Layer                   | Speed        | Direction    | Linked to Camera  |
-| ----------------------- | ------------ | ------------ | ----------------- |
-| 0 - Background          | `(1, 1)`     | `(-1, 0, 0)` | No                |
-| 1 - Background elements | `(1.5, 1.5)` | `(-1, 0, 0)` | No                |
-| 2 - Middleground        | `(2.5, 2.5)` | `(-1, 0, 0)` | No                |
-| 3 - Foreground          | `(1, 1)`     | `(1, 0, 0)`  | Yes               |
+| Layer               | Speed        | Direction    | Linked to Camera  |
+| ------------------- | ------------ | ------------ | ----------------- |
+| Background          | `(1, 1)`     | `(-1, 0, 0)` | No                |
+| Background elements | `(1.5, 1.5)` | `(-1, 0, 0)` | No                |
+| Middleground        | `(2.5, 2.5)` | `(-1, 0, 0)` | No                |
+| Foreground          | `(1, 1)`     | `(1, 0, 0)`  | Yes               |
 
 For a convincing result, add elements to the scene:
 
 - Add a third [background][background_url] part after the two previous ones.
-- Add some small platforms in the layer `1 - Background elements`.
-- Add platforms in the layer `2 - Middleground`.
-- Add enemies on the right of the layer `3 - Foreground`, far from the camera.
+- Add some small platforms in the layer ` Background elements`.
+- Add platforms in the layer `Middleground`.
+- Add enemies on the right of the layer `Foreground`, far from the camera.
 
 The result:
 
@@ -239,7 +239,7 @@ public static class RendererExtensions
 Simple, isn't it?
 
 <md-danger>
-_Namespaces_: You might have already noted that Unity doesn't add a namespace around a `MonoBehaviour` script when you create it from the "Project" view. And yet Unity _does_ handle namespaces... Except when you use a default value on a method parameter. And it sucks. <br /><br />In this tutorial, we are not using namespaces at all. However, in your real project, you might consider to use them. If not, prefix your classes and behaviours to avoid a collision with a third-party library (like _NGUI_).
+_Namespaces_: You might have already noted that Unity doesn't add a namespace around a `MonoBehaviour` script when you create it from the "Project" view. And yet Unity _does_ handle namespaces... <br /><br />In this tutorial, we are not using namespaces at all. However, in your real project, you might consider to use them. If not, prefix your classes and behaviours to avoid a collision with a third-party library (like _NGUI_).
 </md-danger>
 
 We will call this method on the leftmost object of the infinite layer.
@@ -258,116 +258,118 @@ using UnityEngine;
 /// </summary>
 public class ScrollingScript : MonoBehaviour
 {
-  /// <summary>
-  /// Scrolling speed
-  /// </summary>
-  public Vector2 speed = new Vector2(10, 10);
+    /// <summary>
+    /// Scrolling speed
+    /// </summary>
+    public Vector2 speed = new Vector2(10, 10);
 
-  /// <summary>
-  /// Moving direction
-  /// </summary>
-  public Vector2 direction = new Vector2(-1, 0);
+    /// <summary>
+    /// Moving direction
+    /// </summary>
+    public Vector2 direction = new Vector2(-1, 0);
 
-  /// <summary>
-  /// Movement should be applied to camera
-  /// </summary>
-  public bool isLinkedToCamera = false;
+    /// <summary>
+    /// Movement should be applied to camera
+    /// </summary>
+    public bool isLinkedToCamera = false;
 
-  /// <summary>
-  /// 1 - Background is infinite
-  /// </summary>
-  public bool isLooping = false;
+    /// <summary>
+    /// 1 - Background is infinite
+    /// </summary>
+    public bool isLooping = false;
 
-  /// <summary>
-  /// 2 - List of children with a renderer.
-  /// </summary>
-  private List<Transform> backgroundPart;
+    /// <summary>
+    /// 2 - List of children with a renderer.
+    /// </summary>
+    private List<SpriteRenderer> backgroundPart;
 
-  // 3 - Get all the children
-  void Start()
-  {
-    // For infinite background only
-    if (isLooping)
+    // 3 - Get all the children
+    void Start()
     {
-      // Get all the children of the layer with a renderer
-      backgroundPart = new List<Transform>();
-
-      for (int i = 0; i < transform.childCount; i++)
-      {
-        Transform child = transform.GetChild(i);
-
-        // Add only the visible children
-        if (child.renderer != null)
+        // For infinite background only
+        if (isLooping)
         {
-          backgroundPart.Add(child);
+            // Get all the children of the layer with a renderer
+            backgroundPart = new List<SpriteRenderer>();
+
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform child = transform.GetChild(i);
+                SpriteRenderer r = child.GetComponent<SpriteRenderer>();
+
+                // Add only the visible children
+                if (r != null)
+                {
+                    backgroundPart.Add(r);
+                }
+            }
+
+            // Sort by position.
+            // Note: Get the children from left to right.
+            // We would need to add a few conditions to handle
+            // all the possible scrolling directions.
+            backgroundPart = backgroundPart.OrderBy(
+              t => t.transform.position.x
+            ).ToList();
         }
-      }
-
-      // Sort by position.
-      // Note: Get the children from left to right.
-      // We would need to add a few conditions to handle
-      // all the possible scrolling directions.
-      backgroundPart = backgroundPart.OrderBy(
-        t => t.position.x
-      ).ToList();
-    }
-  }
-
-  void Update()
-  {
-    // Movement
-    Vector3 movement = new Vector3(
-      speed.x * direction.x,
-      speed.y * direction.y,
-      0);
-
-    movement *= Time.deltaTime;
-    transform.Translate(movement);
-
-    // Move the camera
-    if (isLinkedToCamera)
-    {
-      Camera.main.transform.Translate(movement);
     }
 
-    // 4 - Loop
-    if (isLooping)
+    void Update()
     {
-      // Get the first object.
-      // The list is ordered from left (x position) to right.
-      Transform firstChild = backgroundPart.FirstOrDefault();
+        // Movement
+        Vector3 movement = new Vector3(
+          speed.x * direction.x,
+          speed.y * direction.y,
+          0);
 
-      if (firstChild != null)
-      {
-        // Check if the child is already (partly) before the camera.
-        // We test the position first because the IsVisibleFrom
-        // method is a bit heavier to execute.
-        if (firstChild.position.x < Camera.main.transform.position.x)
+        movement *= Time.deltaTime;
+        transform.Translate(movement);
+
+        // Move the camera
+        if (isLinkedToCamera)
         {
-          // If the child is already on the left of the camera,
-          // we test if it's completely outside and needs to be
-          // recycled.
-          if (firstChild.renderer.IsVisibleFrom(Camera.main) == false)
-          {
-            // Get the last child position.
-            Transform lastChild = backgroundPart.LastOrDefault();
-            Vector3 lastPosition = lastChild.transform.position;
-            Vector3 lastSize = (lastChild.renderer.bounds.max - lastChild.renderer.bounds.min);
-
-            // Set the position of the recyled one to be AFTER
-            // the last child.
-            // Note: Only work for horizontal scrolling currently.
-            firstChild.position = new Vector3(lastPosition.x + lastSize.x, firstChild.position.y, firstChild.position.z);
-
-            // Set the recycled child to the last position
-            // of the backgroundPart list.
-            backgroundPart.Remove(firstChild);
-            backgroundPart.Add(firstChild);
-          }
+            Camera.main.transform.Translate(movement);
         }
-      }
+
+        // 4 - Loop
+        if (isLooping)
+        {
+            // Get the first object.
+            // The list is ordered from left (x position) to right.
+            SpriteRenderer firstChild = backgroundPart.FirstOrDefault();
+
+            if (firstChild != null)
+            {
+                // Check if the child is already (partly) before the camera.
+                // We test the position first because the IsVisibleFrom
+                // method is a bit heavier to execute.
+                if (firstChild.transform.position.x < Camera.main.transform.position.x)
+                {
+                    // If the child is already on the left of the camera,
+                    // we test if it's completely outside and needs to be
+                    // recycled.
+                    if (firstChild.IsVisibleFrom(Camera.main) == false)
+                    {
+                        // Get the last child position.
+                        SpriteRenderer lastChild = backgroundPart.LastOrDefault();
+
+                        Vector3 lastPosition = lastChild.transform.position;
+                        Vector3 lastSize = (lastChild.bounds.max - lastChild.bounds.min);
+
+                        // Set the position of the recyled one to be AFTER
+                        // the last child.
+                        // Note: Only work for horizontal scrolling currently.
+                        firstChild.transform.position = new Vector3(lastPosition.x + lastSize.x, firstChild.transform.position.y, firstChild.transform.position.z);
+
+                        // Set the recycled child to the last position
+                        // of the backgroundPart list.
+                        backgroundPart.Remove(firstChild);
+                        backgroundPart.Add(firstChild);
+                    }
+                }
+            }
+        }
     }
-  }
 }
 ```
 
@@ -422,93 +424,99 @@ using UnityEngine;
 /// </summary>
 public class EnemyScript : MonoBehaviour
 {
-  private bool hasSpawn;
-  private MoveScript moveScript;
-  private WeaponScript[] weapons;
+    private bool hasSpawn;
+    private MoveScript moveScript;
+    private WeaponScript[] weapons;
+    private Collider2D coliderComponent;
+    private SpriteRenderer rendererComponent;
 
-  void Awake()
-  {
-    // Retrieve the weapon only once
-    weapons = GetComponentsInChildren<WeaponScript>();
-
-    // Retrieve scripts to disable when not spawn
-    moveScript = GetComponent<MoveScript>();
-  }
-
-  // 1 - Disable everything
-  void Start()
-  {
-    hasSpawn = false;
-
-    // Disable everything
-    // -- collider
-    collider2D.enabled = false;
-    // -- Moving
-    moveScript.enabled = false;
-    // -- Shooting
-    foreach (WeaponScript weapon in weapons)
+    void Awake()
     {
-      weapon.enabled = false;
+        // Retrieve the weapon only once
+        weapons = GetComponentsInChildren<WeaponScript>();
+
+        // Retrieve scripts to disable when not spawn
+        moveScript = GetComponent<MoveScript>();
+
+        coliderComponent = GetComponent<Collider2D>();
+
+        rendererComponent = GetComponent<SpriteRenderer>();
     }
-  }
 
-  void Update()
-  {
-    // 2 - Check if the enemy has spawned.
-    if (hasSpawn == false)
+    // 1 - Disable everything
+    void Start()
     {
-      if (renderer.IsVisibleFrom(Camera.main))
-      {
-        Spawn();
-      }
-    }
-    else
-    {
-      // Auto-fire
-      foreach (WeaponScript weapon in weapons)
-      {
-        if (weapon != null && weapon.enabled && weapon.CanAttack)
+        hasSpawn = false;
+
+        // Disable everything
+        // -- collider
+        coliderComponent.enabled = false;
+        // -- Moving
+        moveScript.enabled = false;
+        // -- Shooting
+        foreach (WeaponScript weapon in weapons)
         {
-          weapon.Attack(true);
+            weapon.enabled = false;
         }
-      }
-
-      // 4 - Out of the camera ? Destroy the game object.
-      if (renderer.IsVisibleFrom(Camera.main) == false)
-      {
-        Destroy(gameObject);
-      }
     }
-  }
 
-  // 3 - Activate itself.
-  private void Spawn()
-  {
-    hasSpawn = true;
-
-    // Enable everything
-    // -- Collider
-    collider2D.enabled = true;
-    // -- Moving
-    moveScript.enabled = true;
-    // -- Shooting
-    foreach (WeaponScript weapon in weapons)
+    void Update()
     {
-      weapon.enabled = true;
+        // 2 - Check if the enemy has spawned.
+        if (hasSpawn == false)
+        {
+            if (rendererComponent.IsVisibleFrom(Camera.main))
+            {
+                Spawn();
+            }
+        }
+        else
+        {
+            // Auto-fire
+            foreach (WeaponScript weapon in weapons)
+            {
+                if (weapon != null && weapon.enabled && weapon.CanAttack)
+                {
+                    weapon.Attack(true);
+                }
+            }
+
+            // 4 - Out of the camera ? Destroy the game object.
+            if (rendererComponent.IsVisibleFrom(Camera.main) == false)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
-  }
+
+    // 3 - Activate itself.
+    private void Spawn()
+    {
+        hasSpawn = true;
+
+        // Enable everything
+        // -- Collider
+        coliderComponent.enabled = true;
+        // -- Moving
+        moveScript.enabled = true;
+        // -- Shooting
+        foreach (WeaponScript weapon in weapons)
+        {
+            weapon.enabled = true;
+        }
+    }
 }
 ```
 
 Start the game. Yes, there's a bug.
 
-Disabling the "MoveScript" as a negative effect: The player never reaches the enemies as they're all moving with the `3 - Foreground` layer scrolling:
+Disabling the "MoveScript" as a negative effect: The player never reaches the enemies as they're all moving with the `Foreground` layer scrolling:
 
 [ ![camera_moving_along_gif][camera_moving_along_gif]][camera_moving_along_gif]
 
 _Remember: we've added a "ScrollingScript" to this layer in order to move the camera along with the player._
 
-But there is a simple solution: move the "ScrollingScript" from the `3 - Foreground` layer to the player!
+But there is a simple solution: move the "ScrollingScript" from the `Foreground` layer to the player!
 
 Why not after all? The only thing that is moving in this layer is him, and the script is not specific to a kind of object.
 
