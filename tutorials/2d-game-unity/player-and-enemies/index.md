@@ -41,7 +41,9 @@ _(Right click to save the image)_
 
   If you have any trouble, refer to the previous part. We did exactly the same procedure for the background and _props_.
 
-4. Place the player in the "2 - Foreground" layer.
+3. Select the "Player" sprite layer.
+
+4. Place the player in the "Foreground" object. 
 
 5. Change its scale. ``(0.2, 0.2, 1)`` should be fine.
 
@@ -78,7 +80,7 @@ This will represent the player [_hitbox_][hitbox_link].
 You can see the collider in the editor "Scene" view and tweak its size in the "Inspector" with the "Size" property.
 
 <md-tip>
-_Tip_: There is another way to edit a box collider. Select a game object with a box collider and maintain the ``shift`` key of your keyboard. You can observe that the box collider (_the green rectangle_) is now showing four small handles onto. Drag one of them to change the shape of the box.
+_Tip_: There is another way to edit a box collider. Select a game object with a box collider and enable the "Edit Collider" toggle in the component. You can observe that the box collider (_the green rectangle_) is now showing four small handles onto. Drag one of them to change the shape of the box.
 Be careful, the _blue rectangle represents the_ ``Transform`` component of your game object, not the collider.
 </md-tip>
 
@@ -101,10 +103,6 @@ Save the player game object to a prefab. You now have a basic player entity!
 ### Polygon Collider 2D
 
 If you want a super precise and custom shaped hitbox, Unity offers a "Polygon Collider 2D" component. It's less efficient but allows you to set the shape exactly like you want.
-
-<md-tip>
-_Tip_: The "Polygon Collider 2D" is like the other colliders: you can modify the shape with your mouse in the "Scene" view. By holding ``cmd`` or ``ctrl``, you can remove a point, and with ``shift`` you can adjust a point or add one onto the collider shape.
-</md-tip>
 
 ## The Rigidbody magic
 
@@ -190,32 +188,36 @@ using UnityEngine;
 /// </summary>
 public class PlayerScript : MonoBehaviour
 {
-  /// <summary>
-  /// 1 - The speed of the ship
-  /// </summary>
-  public Vector2 speed = new Vector2(50, 50);
+    /// <summary>
+    /// 1 - The speed of the ship
+    /// </summary>
+    public Vector2 speed = new Vector2(50, 50);
 
-  // 2 - Store the movement
-  private Vector2 movement;
+    // 2 - Store the movement and the component
+    private Vector2 movement;
+    private Rigidbody2D rigidbodyComponent;
 
-  void Update()
-  {
-    // 3 - Retrieve axis information
-    float inputX = Input.GetAxis("Horizontal");
-    float inputY = Input.GetAxis("Vertical");
+    void Update()
+    {
+        // 3 - Retrieve axis information
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
 
-    // 4 - Movement per direction
-    movement = new Vector2(
-      speed.x * inputX,
-      speed.y * inputY);
+        // 4 - Movement per direction
+        movement = new Vector2(
+          speed.x * inputX,
+          speed.y * inputY);
 
-  }
+    }
 
-  void FixedUpdate()
-  {
-    // 5 - Move the game object
-    rigidbody2D.velocity = movement;
-  }
+    void FixedUpdate()
+    {
+        // 5 - Get the component and store the reference
+        if (rigidbodyComponent == null) rigidbodyComponent = GetComponent<Rigidbody2D>();
+
+        // 6 - Move the game object
+        rigidbodyComponent.velocity = movement;
+    }
 }
 ```
 
@@ -228,10 +230,11 @@ _Note about C# conventions_: Look at the ``speed`` member visibility: it's publi
 ### Explanations
 
 1. We first define a public variable that will appear in the "Inspector" view of Unity. This is the speed applied to the ship.
-2. We store the movement for each frame.
+2. The fields we need.
 3. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between `[-1, 1]`, `0` being the idle state, 1 the right, -1 the left.
 4. We multiply the direction by the speed.
-5. We change the rigidbody velocity. This will tell the physic engine to move the game object. We do that in `FixedUpdate()` as it is recommended to do everything that is physics-related in there.
+5. We need to access the rigidbody component, but we can avoid to do it every frame by storing a reference.
+6. We change the rigidbody velocity. This will tell the physic engine to move the game object. We do that in `FixedUpdate()` as it is recommended to do everything that is physics-related in there.
 
 <md-info>
 _Tutorial update_: If you have read this tutorial before, you may remember that we were using `transform.Translate` directly. This was working because translations were slow, but it is not recommended since it can mess up the physics (for the physic engine, a translation is like a teleportation, so there is no collision).
@@ -272,9 +275,10 @@ _(Right click to save the image)_
 
 Time to create a new sprite! Again:
 
-1. Copy the image to the "Textures" folder.
+1. Copy the image to the "sprites" folder.
 2. Create a new ``Sprite`` using this image.
-3. Change the "Scale" property of the ``Transform`` to ``(0.4, 0.4, 1)``.
+3. Set the sprite layer to "Enemies"
+3. Change the "Scale" property of the ``Transform`` to ``(0.3, 0.3, 1)``.
 4. Add a "Box Collider 2D" with a size of ``(4, 4)``.
 5. Add a "Rigidbody 2D" with a "Gravity Scale" of ``0`` and "Fixed Angles" ticked.
 
@@ -309,7 +313,7 @@ public class MoveScript : MonoBehaviour
   /// <summary>
   /// Object speed
   /// </summary>
-  public Vector2 speed = new Vector2(10, 10);
+  public Vector2 speed = new Vector2(5, 5);
 
   /// <summary>
   /// Moving direction
