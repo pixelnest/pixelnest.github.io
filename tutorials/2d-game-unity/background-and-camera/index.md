@@ -25,7 +25,7 @@ Your first background will be static. We will use the following image:
 
 _(Right click to save the image)_
 
-Import the image in the "Textures" folder. Simply copy the file in it, or drag and drop it from the explorer.
+Import the image in the "sprites" folder. Simply copy the file in it, or drag and drop it from the explorer.
 
 Do not worry about the import settings for now.
 
@@ -39,11 +39,13 @@ In general, we call "sprite" a 2D image displayed in a video game. Here, it's a 
 
 ## Add the texture to the sprite
 
-Unity may have set automatically your background as the sprite to display. If not, or if you want to change the texture, go to the inspector and select "background":
+We will now select the sprite to display. Make your the "New Sprite" is selected and look at go to the inspector. Set the `Sprite` as "background":
 
 [ ![Select a sprite][sprite_select] ][sprite_select]
 
 _(You have to click on the small round icon at the right of the input box to show the "Select Sprite" inspector)_
+
+You can see that some other sprites are there. Those are the default images used by the new Unity UI.  
 
 <md-note>
 _"My sprite doesn't show up in the dialog?"_: First, make sure you are in the "Assets" tab of the "Select Sprite" dialog. <br />Some readers have reported that, in their project, this dialog was empty. The reason is that for some Unity installations, even with a fresh new 2D project, images are imported as "Texture" and not "Sprite".
@@ -54,11 +56,15 @@ _"My sprite doesn't show up in the dialog?"_: First, make sure you are in the "A
 We don't know why everybody doesn't seem to have the same behavior.
 </md-note>
 
-Well, we have set a simple sprite displaying a cloudy sky background. Let's reorganize the scene.
+Well, we have set a simple sprite displaying a cloudy sky background. You can think it was a bit complicated just for that.
+
+In fact, we could have just "drag'n'dropped" the sprite from the Project tab to the Scene one.
+
+Let's reorganize the scene.
 
 In the "Hierarchy" pane, select the ``New Sprite``. Rename it in ``Background1`` or something you will easily remember.
 
-Then move the object to where it belongs: ``Level -> 0 - Background``. Change its position to ``(0, 0, 0)``.
+Then move the object to where it belongs: ``Level -> Background``. Change its position to ``(0, 0, 0)``.
 
 [ ![Background is set][display_background] ][display_background]
 
@@ -70,6 +76,40 @@ _Tip_: You can duplicate an objet with the ``cmd + D`` (OS X) or ``ctrl + D`` (W
 
 [ ![Background2 in place][background2_in_place] ][background2_in_place]
 
+# Sprite layers
+
+The next statement will seems prettry obvious but it has some consequences: we are displaying a 2D world.
+
+This means that all images are at the same depth, 0. And you (and the graphics engine) don't really know who's going to be displayed first.
+
+Sprite layers allow us to tell Unity what is in front and what is behind.
+
+In Unity, we can change the "Z" of our elements, and this will allow us to have layers. This is actually what we were doing in this tutorial before the Unity 5 update.
+
+But we thought that it was a good idea to now use Sprite Layers.
+
+On your "Sprite Renderer" component, you have a field named... "Sprite Layer", actually set to Default.
+
+If you click on it, a short list will drop:
+
+[ ![Sorting layer list][sorting_layers_list] ] [sorting_layers_list]
+
+Let's add some layers to fit our needs (use the "+" button):
+
+[ ![Sorting layer add][sorting_layers_add] ] [sorting_layers_add]
+
+Apply the "Background" layer to our backgrounds sprites:
+
+[ ![Set sorting layer][sorting_layers_set] ] [sorting_layers_set]
+
+<md-tip>
+_Tip_: the settings "Order in Layer" is a way to limit sub layers. Sprites with lower numbers are renderer **before** sprites with greater numbers. 
+</md-tip>
+
+<md-note>
+_Note_: the "Default" layer cannot be removed, because this is the layer used by 3D elements. You can have 3D objects in your 2D game. Particles are considered as 3D objects by Unity, so they will be rendered at this layer. 
+</md-note>
+
 # Adding background elements
 
 Also known as _props_. These elements aren't used to improve the gameplay but to visually enhance the scene.
@@ -80,11 +120,11 @@ Here are some simple flying platform sprites:
 
 _(Right click to save the image)_
 
-As you can see, we got two platforms in one file. This is a good way to learn how to crop sprites with the new Unity tools.
+As you can see, we got two platforms in one file. This is a good way to learn how to crop sprites with the Unity tools.
 
 ## Getting two sprites from one image
 
-1. Import the image in your "Textures" folder
+1. Import the image in your "sprites" folder
 2. Select the "platforms" sprite and go to the inspector
 3. Change "Sprite Mode" to "Multiple"
 4. Click on "Sprite Editor"
@@ -95,13 +135,13 @@ In the new window ("Sprite Editor"), you can draw rectangles around each platfor
 
 [ ![Sprite Editor][sprite_editor] ][sprite_editor]
 
-The top-left button "Slice" allow you to quickly and automatically make this tedious task:
+Call the platforms "platform1" and "platform2".
 
-[ ![Automatic slicing][slice] ][slice]
-
+<md-tip>
+_Tip_: the top-left button "Slice" allow you to quickly and automatically make this tedious task.<br />
+<br />
 Unity will find the objects inside the image and will slice them automatically. You can specify the default pivot point, or set a minimum size for a slice. For a simple image without artifacts, it's really efficient. However, if you use this tool, _be careful and check the result_ to be sure to get what you want.
-
-For this tutorial, do it manually first. Call the platforms "platform1" and "platform2".
+</md-tip>
 
 Now, under the image file, you should see the two sprites separately:
 
@@ -109,9 +149,11 @@ Now, under the image file, you should see the two sprites separately:
 
 ## Adding them to the scene
 
-We will proceed like for the background sprite: create a new ``Sprite`` and select the "platform1" sprite. Repeat for "platform2".
+We will proceed like for the background sprite: create a new ``Sprite`` and select the "platform1" sprite (or drag'n'drop **one by one** from Proejct to Scene tab). Repeat for "platform2".
 
-Place them in the ``1 - Middleground`` object. Again make sure they have a ``0`` Z position.
+Set their "Sprite Layer" to "Platforms".
+
+Place them in the ``Middleground`` object. 
 
 [ ![Two shiny new platforms][adding_platforms] ] [adding_platforms]
 
@@ -133,25 +175,15 @@ _Note on the "Prefab" buttons_: If you modify the game object later, you can "Ap
 
 Creating prefabs with the platform objects will make them easier to reuse later. Simply drag the ``Prefab`` into the scene to add a copy. Try to add another platform that way.
 
-You are now able to add more platforms, change their positions, scales and planes (you can put some in background or foreground too, **just make sure that the platform Z position is ``0`**).
+You are now able to add more platforms, change their positions, scales and planes.
+
+You can put some in background or foreground too. Remember that the "Background", "Middleground" and "Foreground" objects are just folders. So you need to set the right "Sprite Layer" (Platforms) and change the "Order in Layer". 
+
+Use `-10` for far platforms, and up this number as you reach foreground. An example:
+
+[ ![Add a platform in background][platform_background] ][platform_background]
 
 It's not very fancy but in two chapters we will add a parallax scrolling and it will suddenly bring the scene to life.
-
-# Layers
-
-Before we get any further, we will modify our homemade layers to avoid any display order issues.
-
-Simply change the Z position of the game objects in your "Hierarchy" view as following:
-
-| Layer            | Z Position |
-| ---------------- | ---------- |
-| 0 - Background   | 10         |
-| 1 - Middleground | 5          |
-| 2 - Foreground   | 0          |
-
-If you switch from 2D to 3D view in the "Scene" view, you will clearly see the layers:
-
-[ ![Layers in 3D view][layers_3d] ][layers_3d]
 
 # Camera and lights
 
@@ -177,6 +209,11 @@ In the next chapter, we will learn how to add a player and its enemies.
 [sprite_select]: ./-img/sprite_select.png
 [display_background]: ./-img/display_background.png
 [background2_in_place]: ./-img/background2_in_place.png
+
+[sorting_layers_list]: ./-img/sorting_layers.png
+[sorting_layers_add]: ./-img/sorting_layers_add.png
+[sorting_layers_set]: ./-img/sorting_layers_set.png
+
 [sprite_multiple]: ./-img/sprite_multiple.png
 [sprite_editor]: ./-img/sprite_editor.png
 [sprite_editor_result]: ./-img/sprite_editor_result.png
@@ -184,4 +221,5 @@ In the next chapter, we will learn how to add a player and its enemies.
 [layers_3d]: ./-img/layers.gif
 [prefabs]: ./-img/prefabs.png
 [prefab_link]: ./-img/prefab_link.png
-[slice]: ./-img/slice.png
+
+[platform_background]: ./-img/platform_background.png
