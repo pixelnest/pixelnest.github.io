@@ -19,6 +19,10 @@ Now that we have improved our game visually, with particles, we will add some so
 
 You will learn where to find sounds and music, pick some, and play them in our game via a script.
 
+<md-note>
+_Note_: Unity 5 has been released with a lot of new Audio tools. However, we will not cover the new features in this tutorial.
+</md-note>
+
 # Finding sounds and musics
 
 Damien (not so) recently [participated in an interesting subject on Stack Exchange](http://gamedev.stackexchange.com/questions/22525/how-does-a-one-man-developer-do-its-games-sounds) about this topic.
@@ -54,26 +58,19 @@ Create or find an explosion and a shot sound. If you are lazy, you can use ours:
 - [Download the enemy shot sound][sound_shot_enemy]
 - [Download the explosion sound][sound_explosion]
 
-We will use one of the track of _The Great Paper Adventure_ by [Spintronic](http://spintronic.fr/ticket/listbyartist/1) for this tutorial:
+We will use one of the track of _The Great Paper Adventure_ by [Spintronic](https://www.jamendo.com/fr/list/a85421/the-great-paper-adventure-bo) for this tutorial:
 
-- Download [Spintronic - Firecrackers](http://spintronic.fr/song/download/45?format=mp3)
+- Download [Spintronic - Firecrackers](https://storage-new.newjamendo.com/download/track/730917/mp32/)
 
 # Import in Unity
 
 Drag the 4 elements in the "Sounds" folder.
 
-_For each_, make sure to disable the "3D sound" property in the "Inspector", as we are in a 2D game. Make sure to _apply_.
-
-[ ![Disabling 3D sound][3dsound]][3dsound]
-
 And... that's all!
 
 # Playing music
 
-To play a music, simply drag the song into the "Hierarchy". We invite you to:
-
-1. Rename the new game object "Music".
-2. Place it at `(0, 0, 0)`.
+To play a music, simply drag the song into the "Hierarchy". 
 
 [ ![Music object][music]][music]
 
