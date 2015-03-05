@@ -72,7 +72,7 @@ _Note_: We are using a Unity 3D feature, not a "2D one". In fact, it doesn't mat
 
 Assign the texture to the particle:
 
-1. Drag the texture to the your particle system in the "Inspector" (or onto the particles object in the "Hierarchy", which will assign the texture to the right property inside the "Inspector").
+1. Drag the texture to your particle system in the "Inspector" (or onto the particles object in the "Hierarchy", which will assign the texture to the right property inside the "Inspector").
 2. Change the shader to "Particles" -> "Alpha Blended":
 
 [![Cloud shader][cloud_shader]][cloud_shader]
