@@ -193,48 +193,27 @@ using UnityEngine;
 /// </summary>
 public class GameOverScript : MonoBehaviour
 {
-  void OnGUI()
-  {
-    const int buttonWidth = 120;
-    const int buttonHeight = 60;
-
-    if (
-      GUI.Button(
-        // Center in X, 1/3 of the height in Y
-        new Rect(
-          Screen.width / 2 - (buttonWidth / 2),
-          (1 * Screen.height / 3) - (buttonHeight / 2),
-          buttonWidth,
-          buttonHeight
-        ),
-        "Retry!"
-      )
-    )
+    public void ExitToMenu()
     {
-      // Reload the level
-      Application.LoadLevel("Stage1");
+        // Reload the level
+        Application.LoadLevel("Menu");
     }
 
-    if (
-      GUI.Button(
-        // Center in X, 2/3 of the height in Y
-        new Rect(
-          Screen.width / 2 - (buttonWidth / 2),
-          (2 * Screen.height / 3) - (buttonHeight / 2),
-          buttonWidth,
-          buttonHeight
-        ),
-        "Back to menu"
-      )
-    )
+    public void RestartGame()
     {
-      // Reload the level
-      Application.LoadLevel("Menu");
+        // Reload the level
+        Application.LoadLevel("Stage1");
     }
-  }
 }
 
 ```
+
+1. In the "Stage1" scene, create a "Panel".
+2. Remove the "Source Image" and set the color to white full alpha
+2. Add two buttons to this panel.
+3. Add the GameOverScript to the panel.
+ 
+[ ![Game Over UI][ui_gameover]][ui_gameover]
 
 It's exactly identical to the first script we wrote, with two buttons.
 
@@ -355,6 +334,7 @@ That's what we will talk about in the last chapter: deployment.
 [ui_logo]: ./-img/ui_logo.png
 [ui_button]: ./-img/ui_button.png
 [ui_button_click]: ./-img/ui_button_click.png
+[ui_gameover]: ./-img/ui_gameover.png
 
 [result2]: ./-img/result2.png
 [build_settings]: ./-img/build_settings.png
