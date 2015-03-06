@@ -21,6 +21,10 @@ You can download the [full project on GitHub][sourcecode].
 
 This is an advanced chapter. If you are new to Unity, we recommend you to follow our [beginner's tutorial first][tutorial].
 
+<md-warning>
+_Warning_: The following tutorial parts has not been updated to Unity 5. 
+</md-warning>
+
 # Disclaimer
 
 We will cover the basics of touch controls on mobile devices.

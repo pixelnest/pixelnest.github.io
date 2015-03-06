@@ -28,6 +28,10 @@ In Unity, animations are made of a few things:
 
 To lighten things a bit, we have separated this tutorial in two parts as there are many topics to cover.
 
+<md-warning>
+_Warning_: The following tutorial parts has not been updated to Unity 5. There is some differences especially about components access, but the features are the same.
+</md-warning>
+
 # The new sprite
 
 The sprite is made of multiple images: a body, the eyes and some additional stuffs.
