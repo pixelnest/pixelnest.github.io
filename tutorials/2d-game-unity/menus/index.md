@@ -81,7 +81,7 @@ Let's create the background. Use the dedicated menu "Game Object" -> "UI" -> "Im
 [ ![Create UI image][ui_create_image] ] [ui_create_image]
 
 1. Affect the menus' background sprite to the newly created UI object
-1. Change the anchor to the strech horizontal & vertical:
+1. Change the anchor to the strech horizontaly & vertically:
 [ ![Set anchors][ui_anchors]][ui_anchors]
 2. Make sure "Top", "Bottom", "Left" and "Right" are set to `0`
 
@@ -183,16 +183,44 @@ We will add two new steps:
 
 Create a new "GameOverScript" in the "Scripts" folder.
 
-It's a little piece of code that will display a "Restart" and a "Back to Menu" buttons:
+It's a little piece of code that will handle a "Restart" and a "Back to Menu" buttons:
 
 ```csharp
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Start or quit the game
 /// </summary>
 public class GameOverScript : MonoBehaviour
 {
+    private Button[] buttons;
+
+    void Awake()
+    {
+        // Get the buttons
+        buttons = GetComponentsInChildren<Button>();
+
+        // Disable them
+        HideButtons();
+    }
+
+    public void HideButtons()
+    {
+        foreach (var b in buttons)
+        {
+            b.gameObject.SetActive(false);
+        }
+    }
+
+    public void ShowButtons()
+    {
+        foreach (var b in buttons)
+        {
+            b.gameObject.SetActive(true);
+        }
+    }
+
     public void ExitToMenu()
     {
         // Reload the level
@@ -205,8 +233,9 @@ public class GameOverScript : MonoBehaviour
         Application.LoadLevel("Stage1");
     }
 }
-
 ```
+
+We also need some UI components. 
 
 1. In the "Stage1" scene, create a "Panel".
 2. Remove the "Source Image" and set the color to white full alpha
@@ -215,102 +244,37 @@ public class GameOverScript : MonoBehaviour
  
 [ ![Game Over UI][ui_gameover]][ui_gameover]
 
-It's exactly identical to the first script we wrote, with two buttons.
+For each button:
 
-Now, in the "PlayerScript", we must instantiate this new script on death:
+1. Wire the "OnClick()" events of the Panel
+2. Select the appropriate methods in the GameOverScript
+
+For example, the" Back to menu" button:
+
+[ ![Menu OnClick][ui_gameover_wire]][ui_gameover_wire]
+
+Now, in the "PlayerScript", we must trigger this new script on death:
 
 ```csharp
-void OnDestroy()
-{
-  // Game Over.
-  // Add the script to the parent because the current game
-  // object is likely going to be destroyed immediately.
-  transform.parent.gameObject.AddComponent<GameOverScript>();
-}
+    void OnDestroy()
+    {
+        // Game Over.
+        var gameOver = FindObjectOfType<GameOverScript>();
+        gameOver.ShowButtons();
+    }
 ```
 
 Launch the game and try to die (it shouldn't take long):
 
 [ ![Game Over][game_over]][game_over]
 
-You can find the script somewhere in the scene:
-
-[ ![Game Over Script][game_over_script]][game_over_script]
-
 Of course, this can be improved with scores and animations, for example.
 
 But it works! :)
 
-# "It's so ugly my eyes bleed"
-
-Damn!
-
-If you want to do something about it, you can create a "GUI Skin".
-
-* "Assets" -> "Create" -> "Gui Skin":
-
-[ ![GUISkin][GUISkin]][GUISkin]
-
-Inside the "Inspector", you can tweak the UI controls to get something more fancy. Make sure to put this skin inside the "Resources" folder.
-
-<md-note>
-_Note_: The "Resources" folder is a special one in Unity. Everything inside this folder will be packed with the game and can be loaded using the `Resources.Load()` method.
-<br />This permits you to load objects at runtime, and those objects may come from your users (mods anyone?).
-</md-note>
-
-However, the skin is not applied until you set it in your scripts.
-
-In all our previous GUI scripts, we have to load (_only once_, not for each frame) the skin using `GUI.skin = Resources.Load("GUISkin");`.
-
-Here is an example inside the "MenuScript" (Observe the `Start()` method):
-
-````csharp
-using UnityEngine;
-
-/// <summary>
-/// Title screen script
-/// </summary>
-public class MenuScript : MonoBehaviour
-{
-  private GUISkin skin;
-
-  void Start()
-  {
-	// Load a skin for the buttons
-    skin = Resources.Load("GUISkin") as GUISkin;
-  }
-
-  void OnGUI()
-  {
-    const int buttonWidth = 128;
-    const int buttonHeight = 60;
-
-	// Set the skin to use
-    GUI.skin = skin;
-
-    // Draw a button to start the game
-    if (GUI.Button(
-      // Center in X, 2/3 of the height in Y
-      new Rect(Screen.width / 2 - (buttonWidth / 2), (2 * Screen.height / 3) - (buttonHeight / 2), buttonWidth, buttonHeight),
-      "START"
-      ))
-    {
-      // On Click, load the first level.
-      Application.LoadLevel("Stage1"); // "Stage1" is the scene name
-    }
-  }
-}
-````
-
-As you can see, this is a lot of boring work just for a dead-simple menu.
-
-<md-note>
-_Note_: If you have some money and you need a lot of menus and texts in your game, consider buying the [NGUI plugin][ngui_link]. It worths it. _Really_.
-</md-note>
-
 # Next Step
 
-We just learned how to make the inevitable menus for our game.
+We just learned how to make the menus for our game.
 
 Look at what you have done until now :
 
@@ -335,6 +299,7 @@ That's what we will talk about in the last chapter: deployment.
 [ui_button]: ./-img/ui_button.png
 [ui_button_click]: ./-img/ui_button_click.png
 [ui_gameover]: ./-img/ui_gameover.png
+[ui_gameover_wire]: ./-img/ui_gameover_wire.png
 
 [result2]: ./-img/result2.png
 [build_settings]: ./-img/build_settings.png
@@ -342,6 +307,3 @@ That's what we will talk about in the last chapter: deployment.
 [start]: ./-img/start.gif
 [game_over]: ./-img/game_over.png
 [game_over_script]: ./-img/game_over_script.png
-[GUISkin]: ./-img/gui_skin.png
-
-[ngui_link]: http://www.tasharen.com/?page_id=140 "NGUI Unity Plugin"
