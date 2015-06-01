@@ -35,6 +35,10 @@ This tutorial is made with the Unity 4.3 **FREE** version.
 
 [ ![Unity][unity_logo_url] ][unity_download_link]
 
+**If you are using Unity 5, please note that this tutorial has NOT been updated yet. But the [source code repository][github_repo_link] has been updated for Unity 5 and the new Unity UI system.**
+
+This tutorial is made with the Unity 4.3 **FREE** version.
+
 # Video version
 
 If you'd rather **watch** this tutorial than **read** it, then have a look at [Jay Jennings's work from Game Dev Nation](http://gamedevnation.com/creating-a-2d-game-with-unity/).
