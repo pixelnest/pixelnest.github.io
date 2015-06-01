@@ -186,7 +186,7 @@ If you press the "Play" button of the "Animation" view, you will see the animati
 
 That's a start! The boss looks stupid, so we will add two new keyframes:
 
-1. `1:00` - "Boss" object rotation of `(0, 0, 30)`.
+1. `1:00` - "Boss" object rotation of `(0, 0, -30)`.
 2. `1:30` - "Boss" object rotation of `(0, 0, 0)`.
 
 Now, the animation can loop smoothly (because the rotation is the same at the end and at the beginning).
