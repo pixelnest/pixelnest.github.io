@@ -31,13 +31,11 @@ The assets, gameplay and original idea come from the game [The Great Paper Adven
 
 [Unity3D][unity_link] is a popular and complete solution to create multiplatform video games. This tutorial assumes that you are _at least a bit familiar_ with a programming language. Knowing the tools and the engine is a _plus_, but is not necessary.
 
-This tutorial is made with the Unity 4.3 **FREE** version.
-
 [ ![Unity][unity_logo_url] ][unity_download_link]
 
-**If you are using Unity 5, please note that this tutorial has NOT been updated yet. But the [source code repository][github_repo_link] has been updated for Unity 5 and the new Unity UI system.**
-
 This tutorial is made with the Unity 4.3 **FREE** version.
+
+**If you are using Unity 5, please note that this tutorial has NOT been updated yet. But the [source code repository][github_repo_link] has been updated for Unity 5 and the new Unity UI system.**
 
 # Video version
 
