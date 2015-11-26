@@ -1,7 +1,7 @@
 name: Pixelnest Studio
 
 # Code
-pygments: true
+highlighter: true
 exclude: ['_sources', '_raws']
 
 # Publishing
