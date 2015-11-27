@@ -2,7 +2,7 @@ name: Pixelnest Studio
 
 # Code
 highlighter: true
-exclude: ['_sources', '_raws']
+exclude: ['README.md']
 
 # Publishing
 show_drafts: nil
