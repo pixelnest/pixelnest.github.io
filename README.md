@@ -1,8 +1,5 @@
 # Pixelnest Studio
 
-Hello!
+We craft games and apps.
 
-We are Pixelnest Studio. We make video games and apps we love.
-
-You can find the [website here](http://pixelnest.io).
-
+[pixelnest.io](http://pixelnest.io)
