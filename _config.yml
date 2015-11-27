@@ -2,7 +2,7 @@ name: Pixelnest Studio
 
 # Code
 highlighter: true
-exclude: ['README.md']
+exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', '_sass']
 
 # Publishing
 show_drafts: nil
