@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+// -------------------------------------------------------
+// Typography and vertical rythm.
+// -------------------------------------------------------
+
+html {
+  color: $text-color;
+
+  font-family: $font-normal;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+// Add the line-height as a the default spacing
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dd,
+p,
+figure,
+pre,
+table,
+fieldset,
+hr {
+  margin-bottom: $margin-default;
+}
+
+// -------------------------------------------------------
+// Links and selections.
+// -------------------------------------------------------
+
+// Remove decoration on all the links.
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Default styling for links inside paragraph.
+p a {
+  @extend %link;
+}
+
+%link {
+  color: $brand-color;
+
+  text-decoration: none;
+
+  &:hover {
+    color: darken($brand-color, 25%);
+
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: lighten($brand-color, 25%);
+  }
+
+  &:focus {
+    color: lighten($brand-color, 25%);
+  }
+}
+
+::selection {
+  color: white;
+  background: $brand-color;
+}
