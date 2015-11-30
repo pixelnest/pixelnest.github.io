@@ -1,61 +1,29 @@
-<header class="page-header">
-  <section class="banner">
-    <a class="logo" href="/">
-      <img
-        class="logo__img"
-        src="/static/images/pixelnest.png"
-        title="Pixelnest Studio"
-        alt="Pixelnest Studio" />
-
-      <p class="logo__title">
-        <span>Pixelnest</span>
-        <span>Studio</span>
-      </p>
+<header class="c-page-header">
+  <section class="c-site-banner">
+    <a href="/" class="c-site-banner__link">
+      <img class="c-site-banner__logo" src="/static/images/logo.png" alt="Pixelnest Studio" title="Pixelnest Studio" />
     </a>
+
+    <nav class="c-site-banner__nav">
+      <ul class="c-site-banner__social">
+        <li><a href="https://twitter.com/pixelnest">twitter</a></li>
+        <li><a href="mailto:site@pixelnest.io">mail</a></li>
+        <li><a href="https://facebook.com/pixelneststudio">facebook</a></li>
+      </ul>
+      <p class="c-site-banner__tagline">
+        “we craft games and apps”
+      </p>
+    </nav>
   </section>
 
-  <h1 class="page-title">
-    <a href="{{ page.url }}" title="{{ page.title }}">
-      {{ page.title }}
-    </a>
-  </h1>
-
-  <h2 class="page-subtitle">
-     {{ page.subtitle }} 
-  </h2>
-
-  <nav>
-    <ul class="navbar">
-      <li class="navbar__link">
-        <a href="/">home</a>
-      </li>
-      <li class="navbar__link">
-        <a href="/work">work</a>
-      </li>
-      <li class="navbar__link">
-        <a href="/tutorials">tutorials</a>
-      </li>
-      <li class="navbar__link">
-        <a href="/journal">journal</a>
-      </li>
-      <li class="navbar__link">
-        <a href="/contact">contact</a>
-      </li>
-      <li class="navbar__link">
-        <a href="/about">about</a>
-      </li>
+  <nav class="c-site-nav">
+    <ul>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/service">Service</a></li>
+      <li><a href="/tutorials">Tutorials</a></li>
+      <li><a href="/journal">Journal</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
     </ul>
-
-    <select id="quicknavbar" class="quicknavbar">
-      <option>Go to...</option>
-      <option value="/">→ Home</option>
-      <option value="/work">→ Work</option>
-      <option value="/tutorials">→ Tutorials</option>
-      <option value="/journal">→ Journal</option>
-      <option value="/contact">→ Contact</option>
-      <option value="/about">→ About</option>
-    </select>
   </nav>
-
-  <hr class="page-start" />
 </header>
