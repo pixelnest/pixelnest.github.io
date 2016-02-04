@@ -12,4 +12,4 @@ To celebrate the event, [a brand new update of Steredenn][changelog] is availabl
 And as if it wasn't enough, we have another great event today. [Damien](/about/#damien) is a dad, now. Welcome to his son, Elouan!
 
 
-[changelog]: http://steredenn-game.tumblr.com
+[changelog]: http://steredenn-game.tumblr.com/post/138670865140/steredenn-120-days-of-conquest
