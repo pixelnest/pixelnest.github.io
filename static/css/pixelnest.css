@@ -24,24 +24,24 @@
 
 .page-content p a, .page-content ul a,
 .page-content ol a, .home__aside li a, .card__title a, .entry__title a, .entry__content a, .contacts li a, .founder__links li a, .pager a, .archives a, .tutorial .page-header a, .promotion a, .promotion-image a, .ie .logo {
-  color: #00a9e0;
+  color: #00A9E0;
   text-decoration: none; }
   .page-content p a:hover, .page-content ul a:hover,
   .page-content ol a:hover, .home__aside li a:hover, .card__title a:hover, .entry__title a:hover, .entry__content a:hover, .contacts li a:hover, .founder__links li a:hover, .pager a:hover, .archives a:hover, .tutorial .page-header a:hover, .promotion a:hover, .promotion-image a:hover, .ie .logo:hover {
     text-decoration: underline; }
   .page-content p a:active, .page-content ul a:active,
   .page-content ol a:active, .home__aside li a:active, .card__title a:active, .entry__title a:active, .entry__content a:active, .contacts li a:active, .founder__links li a:active, .pager a:active, .archives a:active, .tutorial .page-header a:active, .promotion a:active, .promotion-image a:active, .ie .logo:active {
-    color: #98c73d; }
+    color: #98C73D; }
   .page-content p a:focus, .page-content ul a:focus,
   .page-content ol a:focus, .home__aside li a:focus, .card__title a:focus, .entry__title a:focus, .entry__content a:focus, .contacts li a:focus, .founder__links li a:focus, .pager a:focus, .archives a:focus, .tutorial .page-header a:focus, .promotion a:focus, .promotion-image a:focus, .ie .logo:focus {
-    color: #98c73d; }
+    color: #98C73D; }
 
 html, body {
   margin: 0;
   padding: 0; }
 
 body {
-  background: #3b3b3d;
+  background: #3B3B3D;
   color: #353535;
   font-family: 'Poly', serif;
   font-size: 150%; }
@@ -53,11 +53,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #fbfbfb; }
 
 .page *::-moz-selection {
-  background: #00a9e0;
+  background: #00A9E0;
   color: white; }
 
 .page *::selection {
-  background: #00a9e0;
+  background: #00A9E0;
   color: white; }
 
 p {
@@ -206,9 +206,9 @@ li {
     color: #888888;
     text-decoration: none; }
     .page-title a:hover {
-      color: #00a9e0; }
+      color: #00A9E0; }
     .page-title a:active, .page-title a:focus {
-      color: #00a9e0; }
+      color: #00A9E0; }
 
 .page-subtitle {
   position: relative;
@@ -252,7 +252,7 @@ li {
   position: relative;
   margin-top: 160px;
   padding: 20px;
-  background: #3b3b3d;
+  background: #3B3B3D;
   color: white;
   font-size: 0.9em; }
 
@@ -356,11 +356,14 @@ li {
 
 .card__cover {
   float: left;
+  margin: 5px;
   margin-right: 20px;
   margin-bottom: 20px;
-  width: 150px;
-  height: 150px;
-  border: 1px solid #ddd; }
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(100, 100, 100, 0.4);
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.25); }
 
 .card__body > :first-child {
   margin-top: 0; }
@@ -439,7 +442,7 @@ li {
     height: 40px;
     text-align: center; }
   .entry__content table th {
-    background-color: #00a9e0;
+    background-color: #00A9E0;
     color: white;
     font-weight: 400; }
   .entry__content table td {
@@ -787,7 +790,7 @@ li {
 .promotion-header {
   min-height: 23px;
   padding: 12px 10px 15px 10px;
-  background: #00a9e0;
+  background: #00A9E0;
   color: white;
   font-size: 0.8em;
   text-align: center; }
@@ -926,3 +929,5 @@ li {
   .ie .page-footer li a {
     padding: 0;
     background: none; }
+
+/*# sourceMappingURL=pixelnest.css.map */
