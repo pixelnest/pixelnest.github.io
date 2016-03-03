@@ -1,24 +1,39 @@
 name: Pixelnest Studio
 
-# Code
-highlighter: true
-exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', '_sass']
+# -------------------------------------------------------
+# Globals.
+# -------------------------------------------------------
 
-# Publishing
 show_drafts: nil
-
-# Permalink format (without day)
 permalink: /:categories/:year/:month/:title
 
-# Pagination
-paginate_path: 'journal/:num'
-paginate: 4
+exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', '_sass']
 
-# Markdown formatter
+# -------------------------------------------------------
+# Markdown.
+# -------------------------------------------------------
+
 markdown: redcarpet
 
 redcarpet:
-  extensions: ["tables"]
+  extensions: ['tables']
+
+# -------------------------------------------------------
+# Code.
+# -------------------------------------------------------
+
+highlighter: rouge
+
+# -------------------------------------------------------
+# Pagination.
+# -------------------------------------------------------
+
+paginate_path: 'journal/:num'
+paginate: 4
+
+# -------------------------------------------------------
+# Plugins.
+# -------------------------------------------------------
 
 gems:
   - jekyll-redirect-from
