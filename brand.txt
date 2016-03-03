@@ -1,0 +1,4 @@
+Blue:   #00A9E0
+Green:  #98C73D
+Orange: #F66E0E
+Grey:   #3B3B3D
