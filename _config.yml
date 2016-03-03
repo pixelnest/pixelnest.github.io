@@ -7,7 +7,7 @@ name: Pixelnest Studio
 show_drafts: nil
 permalink: /:categories/:year/:month/:title
 
-exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', '_sass']
+exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', '_sass', 'Gemfile', 'Gemfile.lock']
 
 # -------------------------------------------------------
 # Markdown.
@@ -16,7 +16,7 @@ exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules',
 markdown: redcarpet
 
 redcarpet:
-  extensions: ['tables']
+  extensions: ['tables', 'footnotes', 'no_intra_emphasis', 'autolink', 'strikethrough', 'space_after_headers']
 
 # -------------------------------------------------------
 # Code.
@@ -36,5 +36,6 @@ paginate: 4
 # -------------------------------------------------------
 
 gems:
-  - jekyll-redirect-from
   - jekyll-paginate
+  - jekyll-redirect-from
+  - octopress-autoprefixer
