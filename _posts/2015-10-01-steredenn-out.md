@@ -12,4 +12,4 @@ It costs $12.99 (-15% for the launch week). It's available on [Steam](http://sto
 
 And it's awesome. Enjoy!
 
-![Steredenn Out](/static/posts/steredenn-out/release.png)
+![Steredenn Out](/static/images/posts/steredenn-out/release.png)
