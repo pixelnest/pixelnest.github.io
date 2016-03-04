@@ -1,7 +1,7 @@
 ---
 layout: work
 title: Koikoukesse
-cover: /static/images/work/thumb_k2.png
+cover: /static/images/projects/Koikoukesse/cover.png
 ---
 
 **This project is discontinued. See [this Journal post](/2013/09/breaking-news) to know why.**

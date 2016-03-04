@@ -2,7 +2,7 @@
 layout: work
 title: George
 subtitle: le pirate
-cover: /static/images/work/thumb_g1.png
+cover: /static/images/projects/george/cover.png
 ---
 
 “_George_ was an unknown salary man, working in the offices of the CaribbeanMegaBank™ (also known as the CMB). But one day, he got bored and decided to live a real pirate adventure!
