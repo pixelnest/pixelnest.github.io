@@ -19,6 +19,16 @@ redcarpet:
   extensions: ['tables', 'footnotes', 'no_intra_emphasis', 'autolink', 'strikethrough', 'space_after_headers']
 
 # -------------------------------------------------------
+# CSS.
+# -------------------------------------------------------
+
+sass:
+  style: compressed
+
+autoprefixer:
+  dir: /static/css
+
+# -------------------------------------------------------
 # Code.
 # -------------------------------------------------------
 
@@ -38,4 +48,3 @@ paginate: 4
 gems:
   - jekyll-paginate
   - jekyll-redirect-from
-  - octopress-autoprefixer
