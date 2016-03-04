@@ -57,17 +57,17 @@ p a {
   text-decoration: none;
 
   &:hover {
-    color: darken($brand-color, 25%);
+    color: $brand-color-dark;
 
     text-decoration: underline;
   }
 
   &:active {
-    color: lighten($brand-color, 25%);
+    color: $brand-color-light;
   }
 
   &:focus {
-    color: lighten($brand-color, 25%);
+    color: $brand-color-light;
   }
 }
 

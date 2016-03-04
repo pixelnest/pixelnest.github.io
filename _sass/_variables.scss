@@ -5,15 +5,19 @@
 // -------------------------------------------------------
 
 // Colors.
-$brand-color: red;
+$brand-color: #ff4600;
+$brand-color-sub: #ff5303;
+$brand-color-dark: #da4101;
+$brand-color-light: #ff8914;
 
 // Texts.
-$text-color: black;
+$text-color: #010101;
 $background-color: white;
 
 // Fonts.
-$font-normal: Verdana, sans-serif;
-$font-title: Impact, sans-serif;
+$font-normal: "PT Sans", sans-serif;
+$font-title: "Bebas Neue", sans-serif;
+$font-code: Menlo, monospace;
 
 // Margins.
 $margin-default: 1.4rem;
