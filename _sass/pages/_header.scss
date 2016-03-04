@@ -3,3 +3,88 @@
 // -------------------------------------------------------
 // Header.
 // -------------------------------------------------------
+
+.page-header {
+  font-family: $font-title;
+}
+
+.header-logo {
+  width: 128px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+
+  text-align: center;
+
+  &:hover img {
+    transform: translateY(-5px) scale(1.05, 1.05);
+  }
+}
+
+.header-logo__image,
+.header-logo__name {
+  margin-bottom: 0;
+}
+
+.header-logo__image {
+  img {
+    width: 64px;
+    height: 64px;
+
+    transition: all 300ms ease-out;
+  }
+}
+
+.header-logo__name {
+  color: $text-color;
+
+  font-size: 1.8rem;
+}
+
+.header-contact {
+  margin-top: 5px;
+  margin-bottom: 25px;
+
+  font-size: 1rem;
+
+  text-align: center;
+
+  a {
+    color: #a2a2a2;
+  }
+
+  li {
+    display: inline-block;
+
+    margin: 0 2px;
+  }
+}
+
+.header-menu {
+  margin-bottom: 45px;
+
+  background-color: #fbfbfb;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    padding: 15px 10px;
+  }
+
+  a {
+    color: lighten($brand-color, 5%);
+
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+
+  a.active {
+    color: $brand-color;
+    border-bottom: 2px solid;
+  }
+}
