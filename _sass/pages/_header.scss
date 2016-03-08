@@ -8,6 +8,10 @@
   font-family: $font-title;
 }
 
+// -------------------------------------------------------
+// header-logo
+// -------------------------------------------------------
+
 .header-logo {
   width: 128px;
   margin: 0 auto;
@@ -16,7 +20,15 @@
   text-align: center;
 
   &:hover img {
-    transform: translateY(-5px) scale(1.05, 1.05);
+    transform: rotateZ(360deg);
+  }
+
+  &:hover .header-logo__name {
+    color: $brand-color;
+
+    transform: translateY(2px) scale(1.2, 1.2);
+
+    -webkit-font-smoothing: antialiased; // Hack to prevent weird behavior on the scale.
   }
 }
 
@@ -38,7 +50,15 @@
   color: $text-color;
 
   font-size: 1.8rem;
+
+  transition: all 250ms ease-out;
+
+  -webkit-font-smoothing: antialiased; // Hack to prevent weird behavior on the scale.
 }
+
+// -------------------------------------------------------
+// header-contact
+// -------------------------------------------------------
 
 .header-contact {
   margin-top: 5px;
@@ -59,10 +79,16 @@
   }
 }
 
+// -------------------------------------------------------
+// header-menu
+// -------------------------------------------------------
+
 .header-menu {
+  $bar-background-color: #fbfbfb;
+
   margin-bottom: 45px;
 
-  background-color: #fbfbfb;
+  background-color: $bar-background-color;
 
   font-size: 1.2rem;
   font-weight: bold;
@@ -77,6 +103,9 @@
 
   a {
     color: lighten($brand-color, 5%);
+    border-bottom: 1px solid $bar-background-color;
+
+    transition: all 0.25s ease-in;
 
     &:hover {
       border-bottom: 1px solid;

@@ -18,12 +18,36 @@
 
   <nav class="header-menu">
     <ul>
-      <li><a href="/work" class="active">Projects</a></li>
-      <li><a href="/service">Services</a></li>
-      <li><a href="/tutorials">Tutorials</a></li>
-      <li><a href="/journal">Journal</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li><a href="/about">About</a></li>
+      <li>
+        <a href="/work"      {% if page.url contains '/work' %}class="active"{% endif %}>
+          Work
+        </a>
+      </li>
+      <li>
+        <a href="/service"   {% if page.url contains '/service' %}class="active"{% endif %}>
+          Service
+        </a>
+      </li>
+      <li>
+        <a href="/tutorials" {% if page.url contains '/tutorials' %}class="active"{% endif %}>
+          Tutorials
+        </a>
+      </li>
+      <li>
+        <a href="/journal"   {% if page.url contains '/journal' %}class="active"{% endif %}>
+          Journal
+        </a>
+      </li>
+      <li>
+        <a href="/contact"   {% if page.url contains '/contact' %}class="active"{% endif %}>
+          Contact
+        </a>
+      </li>
+      <li>
+        <a href="/about"     {% if page.url contains '/about' %}class="active"{% endif %}>
+          About
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
