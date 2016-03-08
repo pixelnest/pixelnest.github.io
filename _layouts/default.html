@@ -4,7 +4,7 @@
   {% include meta.html %}
 </head>
 <body>
-  <div class="page" id="page">
+  <div class="page{% if page.classes %} {{ page.classes }}{% endif %}" id="page">
     {% include header.html %}
 
     <div class="page-content">
