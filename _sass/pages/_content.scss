@@ -5,7 +5,25 @@
 // -------------------------------------------------------
 
 .page-content {
-  width: 700px;
+  width: 600px;
   min-height: 600px;
   margin: 0 auto;
+}
+
+.home .tagline {
+  font-family: $font-title;
+  font-size: 1.1rem;
+}
+
+.home .page-content {
+  text-align: center;
+}
+
+.home-nav {
+  a {
+    @extend %link;
+
+    font-family: $font-title;
+    font-size: 1.6rem;
+  }
 }

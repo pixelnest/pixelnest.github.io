@@ -83,6 +83,10 @@
 // header-menu
 // -------------------------------------------------------
 
+.home .header-menu {
+  display: none;
+}
+
 .header-menu {
   $bar-background-color: #fbfbfb;
 
