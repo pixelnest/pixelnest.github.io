@@ -7,6 +7,12 @@ layout: journal
     <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
   </h2>
 
+  {% if page.subtitle %}
+  <h3 class="entry__subtitle">
+    {{ page.subtitle }}
+  </h3>
+  {% endif %}
+
   <aside class="entry__metadata">
     {% include author.html %}
 

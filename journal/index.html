@@ -10,6 +10,13 @@ subtitle: read the lastest news from the studio
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </h2>
 
+
+  {% if post.subtitle %}
+  <h3 class="entry__subtitle">
+    {{ post.subtitle }}
+  </h3>
+  {% endif %}
+
   <aside class="entry__metadata">
     {% include author.html %}
 
