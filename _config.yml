@@ -7,7 +7,7 @@ name: Pixelnest Studio
 show_drafts: nil
 permalink: /:categories/:year/:month/:title
 
-exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock']
+exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock', '_sass']
 
 # -------------------------------------------------------
 # Markdown.
