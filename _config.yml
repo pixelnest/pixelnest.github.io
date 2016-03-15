@@ -10,6 +10,24 @@ permalink: /:categories/:year/:month/:title
 exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock', '_sass']
 
 # -------------------------------------------------------
+# Defaults.
+# -------------------------------------------------------
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# -------------------------------------------------------
 # Markdown.
 # -------------------------------------------------------
 
