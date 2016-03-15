@@ -1,10 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    autoprefixer-rails (6.3.3.1)
-      execjs
     colorator (0.1)
-    execjs (2.6.0)
     ffi (1.9.10)
     jekyll (3.1.2)
       colorator (~> 0.1)
@@ -40,7 +37,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
   jekyll
   jekyll-paginate
   jekyll-redirect-from
