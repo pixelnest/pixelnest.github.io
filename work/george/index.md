@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: project
 title: George
 subtitle: le pirate
 cover: /static/images/projects/george/cover.png

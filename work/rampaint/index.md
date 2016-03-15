@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: project
 title: RAMPAINT
 subtitle: multiplayer-platformer-fighter-yeah
 cover: cover.png

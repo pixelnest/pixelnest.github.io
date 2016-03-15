@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: project
 title: Koikoukesse
 cover: /static/images/projects/Koikoukesse/cover.png
 ---
