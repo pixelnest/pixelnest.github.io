@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Unity and touch controls
 subtitle: new tutorial
 ---

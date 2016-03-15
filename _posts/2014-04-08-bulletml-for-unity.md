@@ -1,5 +1,4 @@
 ---
-layout: post
 title: BulletML for Unity
 subtitle: unity package
 ---

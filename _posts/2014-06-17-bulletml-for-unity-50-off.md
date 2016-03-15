@@ -1,5 +1,4 @@
 ---
-layout: post
 title: BulletML for Unity is 50% off
 subtitle: Guts And Glory sale
 ---

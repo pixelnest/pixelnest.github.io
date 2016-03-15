@@ -1,5 +1,4 @@
 ---
-layout: post
 title: EGX Rezzed
 subtitle: 12-14 March 2015, London
 ---

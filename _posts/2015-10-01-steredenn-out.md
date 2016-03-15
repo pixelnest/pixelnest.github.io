@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Steredenn is officially available on PC/Mac/Linux
 subtitle: Steam, Itch.io and Humble Bundle
 ---

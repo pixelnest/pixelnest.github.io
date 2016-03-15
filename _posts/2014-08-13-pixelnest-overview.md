@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Pixelnest overview
 subtitle: a quick tour
 ---

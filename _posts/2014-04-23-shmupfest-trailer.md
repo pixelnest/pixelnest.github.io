@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "This is... #SHMUPFEST!"
 subtitle: trailer
 ---

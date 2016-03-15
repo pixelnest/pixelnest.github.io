@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2D animations tutorial
 subtitle: bonus chapter for our Unity 2D tutorial!
 ---

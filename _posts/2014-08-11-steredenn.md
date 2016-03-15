@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Steredenn!
 subtitle: space + shooter + pirates + pixel art = <3
 
@@ -21,4 +20,3 @@ _We are thrilled to present this new game_. It's coming really soon and we will 
 We've also updated our press kit. [It's available here](http://pixelnest.io/presskit).
 
 Have fun awaiting Steredenn.
-

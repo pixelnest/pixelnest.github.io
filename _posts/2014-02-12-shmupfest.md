@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Stunfest + Pixelnest
 subtitle: shmupfest
 ---

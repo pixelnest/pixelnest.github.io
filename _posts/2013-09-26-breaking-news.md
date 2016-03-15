@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Breaking news!
 subtitle: the website, the products and the company
 ---

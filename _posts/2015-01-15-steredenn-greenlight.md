@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Steam Greenlight
 subtitle: help us getting greenlit!
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2nd Year Anniversary
 subtitle: Happy Birthday Pixelnest
 author: matthieu

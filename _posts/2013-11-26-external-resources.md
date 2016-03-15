@@ -1,5 +1,4 @@
 ---
-layout: post
 title: External resources
 subtitle: game dev, design, unity and business articles
 ---

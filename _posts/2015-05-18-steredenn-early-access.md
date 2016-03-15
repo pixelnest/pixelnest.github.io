@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Steredenn - Steam Early Access
 subtitle: play the game now
 ---

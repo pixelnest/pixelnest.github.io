@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Steredenn - Teaser 2
 subtitle: faster than space
 ---
