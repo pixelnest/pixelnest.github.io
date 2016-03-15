@@ -40,7 +40,7 @@ var options = {
   sass: {
     folder: SASS_SRC,
     file:   SASS_SRC + '/pixelnest.scss',
-    
+
     watch:  SASS_SRC + '/**/*.scss',
 
     config: {
@@ -112,7 +112,7 @@ gulp.task('serve', options.default.tasks, () => {
   jekyll.on('close', (code) => console.log(`\nJekyll exited.`))
 
   // Proxy on jekyll.
-  browserSync.init({ proxy: 'localhost:4000' })
+  browserSync.init({ proxy: 'localhost:4000', open: false })
 
   // Watchers:
   gulp.start('watch')
