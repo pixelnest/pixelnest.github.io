@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{{ partial "html" }}
+<head>
+  {{ partial "meta" . }}
+</head>
+<body>
+  <div class="page{{ if .Params.Classes }} {{ .Params.Classes }}{{ end }}" id="page">
+{{ if not .Params.Simple }}
+    {{ partial "header" . }}
+{{ end }}
+
+    <div class="page-content">
+      {{ .Content }}
+    </div>
+
+{{ if not .Params.Simple }}
+    {{ partial "footer" . }}
+{{ end }}
+  </div>
+
+  {{ partial "js" . }}
+</body>
+</html>
