@@ -1,22 +1,20 @@
 <header class="page-header">
-  <nav>
-    <ul class="header-contact">
-      <li><a href="https://twitter.com/pixelnest">twitter</a></li>
-      <li><a href="mailto:site@pixelnest.io">mail</a></li>
-      <li><a href="https://facebook.com/pixelneststudio">facebook</a></li>
-    </ul>
-  </nav>
 
-  <div class="header-logo">
+  <div class="logo">
     <a href="/">
-      <p class="header-logo__image">
-        <img src="/static/images/logo_256.png" alt="Pixelnest Studio" title="Pixelnest Studio" />
+      <p class="logo__image-wrapper">
+        <img class="logo__image"
+
+             src="/static/images/logo_256.png"
+             alt="Pixelnest Studio"
+             title="Pixelnest Studio" />
       </p>
-      <p class="header-logo__name">Pixelnest</p>
+      <p class="logo__name">Pixelnest</p>
+      <p class="logo__catchphrase">We craft <strong>games</strong> and <strong>apps</strong></p>
     </a>
   </div>
 
-  <nav class="header-menu">
+  <nav class="navbar">
     <ul>
       <li>
         <a href="/work"      {% if page.url contains '/work' %}class="active"{% endif %}>
