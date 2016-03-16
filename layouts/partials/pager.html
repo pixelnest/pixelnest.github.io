@@ -2,11 +2,11 @@
 <div class="pager pager--bottom-space pager--bottom-separator">
   <!-- start older -->
   <section class="pager__older">
-  {% if paginator.next_page %}
-    <a href="/journal/{{ paginator.next_page }}" title="Older posts">← Older</a>
-  {% else %}
+  {{ if .Paginator.HasNext }}
+    <a href="/journal/{{ .Paginator.Next.URL }}" title="Older posts">← Older</a>
+  {{ else }}
     ◆ End
-  {% endif %}
+  {{ end }}
   </section>
   <!-- end older -->
 
@@ -18,15 +18,15 @@
 
   <!-- start newer -->
   <section class="pager__newer">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
+  {{ if .Paginator.HasPrev }}
+    {{ if eq .Paginator.Prev.PageNumber 1 }}
       <a href="/journal" title="Newer posts">Newer →</a>
-    {% else %}
-      <a href="/journal/{{ paginator.previous_page }}" title="Newer posts">Newer →</a>
-    {% endif %}
-  {% else %}
+    {{ else }}
+      <a href="/journal/{{ .Paginator.Prev.URL }}" title="Newer posts">Newer →</a>
+    {{ end }}
+  {{ else }}
     Start ◇
-  {% endif %}
+  {{ end }}
   </section>
   <!-- end newer -->
 </div>
