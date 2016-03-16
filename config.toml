@@ -7,7 +7,6 @@ copyright = "© 2016 Pixelnest Studio—we craft games and apps."
 publishdir = "_site"
 
 builddrafts = false
-canonifyurls = true
 
 # -------------------------------------------------------
 # Globals.
