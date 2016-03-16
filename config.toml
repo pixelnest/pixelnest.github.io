@@ -18,5 +18,5 @@ permalink = "/:categories/:year/:month/:title"
 # Pagination.
 # -------------------------------------------------------
 
-paginate_path = "journal/:num"
+paginatePath = "journal/:num"
 paginate = 4
