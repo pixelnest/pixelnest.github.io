@@ -1,0 +1,9 @@
+= doctype html
+html
+  head
+  body
+    {{ partial "header" . }}
+    
+    .page-content {{ .Content }}
+      
+    {{ partial "footer" . }}
