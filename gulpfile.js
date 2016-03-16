@@ -17,7 +17,6 @@ const gulp         = require('gulp')
 
 
 const exec = require('child_process').exec
-const browserSync = require('browser-sync').create()
 
 // -------------------------------------------------------
 // Browsers.
@@ -25,7 +24,7 @@ const browserSync = require('browser-sync').create()
 
 const BROWSERS = [ 'last 2 versions' ]
 
-const SASS_SRC = '_sass'
+const SASS_SRC = 'src/sass'
 
 // -------------------------------------------------------
 // Options.
@@ -48,7 +47,7 @@ var options = {
       require: 'sass-globbing'
     },
 
-    destination: '_site/static/css'
+    destination: 'static/static/css'
   },
 
   autoprefixer: {
@@ -75,8 +74,6 @@ gulp.task('compile:sass', () => {
     .pipe(autoprefixer(options.autoprefixer.config))
     .pipe(gulp.dest(options.sass.destination))
 
-    .pipe(browserSync.stream())
-
     .pipe(rename(options.rename.config))
     .pipe(minifycss())
     .pipe(gulp.dest(options.sass.destination))
@@ -97,7 +94,9 @@ gulp.task('watch', ['watch:sass'])
 // -------------------------------------------------------
 
 gulp.task('build', options.default.tasks, () => {
-  exec('jekyll build')
+  var hugo = exec('hugo')
+  hugo.stdout.on('data', (data) => process.stdout.write(data))
+  hugo.stderr.on('data', (data) => process.stderr.write(data))
 })
 
 // -------------------------------------------------------
@@ -106,13 +105,10 @@ gulp.task('build', options.default.tasks, () => {
 
 gulp.task('serve', options.default.tasks, () => {
   // Launch Jekyll.
-  var jekyll = exec('jekyll serve')
-  jekyll.stdout.on('data', (data) => process.stdout.write(data))
-  jekyll.stderr.on('data', (data) => process.stderr.write(data))
-  jekyll.on('close', (code) => console.log(`\nJekyll exited.`))
-
-  // Proxy on jekyll.
-  browserSync.init({ proxy: 'localhost:4000', open: false })
+  var hugo = exec('hugo server -w')
+  hugo.stdout.on('data', (data) => process.stdout.write(data))
+  hugo.stderr.on('data', (data) => process.stderr.write(data))
+  hugo.on('close', (code) => console.log(`\nHugo exited.`))
 
   // Watchers:
   gulp.start('watch')
