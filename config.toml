@@ -1,0 +1,23 @@
+title = "Pixelnest Studio"
+baseurl = "http://pixelnest.io/"
+
+languageCode = "en-us"
+copyright = "© 2016 Pixelnest Studio—we craft games and apps."
+
+publishdir = "_site"
+
+builddrafts = false
+canonifyurls = true
+
+# -------------------------------------------------------
+# Globals.
+# -------------------------------------------------------
+
+permalink = "/:categories/:year/:month/:title"
+
+# -------------------------------------------------------
+# Pagination.
+# -------------------------------------------------------
+
+paginate_path = "journal/:num"
+paginate = 4
