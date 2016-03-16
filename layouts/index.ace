@@ -1,7 +1,9 @@
 = doctype html
 html
   head
+    {{ partial "meta" . }}
   body
+  
     nav
       ul
           

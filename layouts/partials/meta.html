@@ -1,14 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% if page.url == '/index.html' %}
+{{ if eq .URL '/' }}
 <title>Pixelnest Studio</title>
-{% else %}
-<title>{{ page.title }} — Pixelnest Studio</title>
-{% endif %}
+{{ else }}
+<title>{{ .Title }} — Pixelnest Studio</title>
+{{ end }}
 
 <!-- misc -->
-<link rel="shortcut icon" href="/static/images/favicon.ico?v=0001" />
+<link rel="shortcut icon" href="/favicon.ico?v=0002" />
 <link rel="alternate" type="application/atom+xml" title="Pixelnest Studio" href="http://feedpress.me/pixelnest" />
 
 <!-- fonts -->
@@ -18,12 +18,6 @@
 <!-- css -->
 <link rel="stylesheet" type="text/css" href="/static/vendor/css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/pixelnest.css" />
-
-<!-- apple -->
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-precomposed.png" />
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
-<link rel="apple-touch-icon-precomposed" href="/static/images/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
 
 <!-- description -->
 <meta name="author" content="Pixelnest Studio">

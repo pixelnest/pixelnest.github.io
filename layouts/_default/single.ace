@@ -1,6 +1,7 @@
 = doctype html
 html
   head
+    {{ partial "meta" . }}
   body
     {{ partial "header" . }}
     
