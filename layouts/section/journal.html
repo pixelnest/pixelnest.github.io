@@ -5,7 +5,7 @@
     {{ partial "header" . }}
 
     <div class="page-content">
-      {{ range .Data.Pages }}
+      {{ range .Paginator.Pages }}
         {{ .Render "li" }}
       {{ end }}
 
