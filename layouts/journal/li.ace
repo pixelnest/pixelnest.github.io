@@ -1,0 +1,14 @@
+article.entry
+  h2.entry__title
+    a href="{{ .RelPermalink }}" title="{{ .Title }}" {{ .Title }}
+
+  {{ if isset .Params "subtitle" }}
+  h3.entry__subtitle {{ .Params.subtitle }}
+  {{ end }}
+  
+  aside.entry__metadata
+    {{ partial "author" . }}
+    div.entry__infos
+      p {{ .Date.Format "02 Jan. 2006" | lower }}
+      
+  section.entry__content {{ .Content }}

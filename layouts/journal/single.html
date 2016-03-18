@@ -1,0 +1,17 @@
+{{ partial "html_head" . }}
+<body>
+  <div class="page" id="page">
+
+    {{ partial "header" . }}
+
+    <div class="page-content">
+      {{ .Render "li" }}
+    </div>
+
+    {{ partial "footer" . }}
+
+  </div>
+
+  {{ partial "js" . }}
+</body>
+</html>
