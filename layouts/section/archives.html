@@ -1,0 +1,26 @@
+{{ partial "html_head" . }}
+<body>
+
+  <div class="page" id="page">
+
+    {{ partial "header" . }}
+
+    <div class="page-content">
+      <ul class="archives">
+      {{ range where .Site.Pages "Section" "journal" }}
+        <li>
+          <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="archives__link">{{ .Title }}</a>
+          <span class="archives__date">{{ .Date.Format "02 Jan. 2006" | lower }}</span>
+        </li>
+      {{ end }}
+      </ul>
+    </div>
+
+    {{ partial "footer" . }}
+
+  </div>
+
+  {{ partial "js" . }}
+
+</body>
+</html>
