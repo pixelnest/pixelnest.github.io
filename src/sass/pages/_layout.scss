@@ -3,3 +3,31 @@
 // -------------------------------------------------------
 // Layout.
 // -------------------------------------------------------
+
+.page {
+  width: 800px;
+  margin: 20px auto;
+
+  border: 1px solid red;
+  img {
+    max-width: 100%;
+  }
+}
+
+.page-header {
+  margin: 20px;
+
+  border: 1px solid green;
+}
+
+.page-content {
+  margin: 20px;
+
+  border: 1px solid blue;
+}
+
+.page-footer {
+  margin: 20px;
+
+  border: 1px solid purple;
+}
