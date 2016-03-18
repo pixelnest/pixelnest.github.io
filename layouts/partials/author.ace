@@ -1,0 +1,27 @@
+div.entry__author
+
+  {{if isset .Params "author"}}
+
+    {{ if in (lower .Params.author) "damien" }}
+    
+    img src="http://www.gravatar.com/avatar/545f7c7f0ed11d6ef21722a7e6c47acf?s=200" title="Damien Mayance" alt="Damien Mayance"
+    p
+      a href="/about/#damien" Damien
+      
+    {{ end }}
+
+    {{ if in (lower .Params.author) "matthieu" }}
+    
+    img src="/static/images/team/moger.jpg" title="Matthieu Oger" alt="Matthieu Oger"
+    p
+      a href="/about/#matthieu" Matthieu
+      
+    {{ end }}
+
+  {{ else }}
+
+  img src="/static/images/team/pixelnest.png" title="Pixelnest Studio" alt="Pixelnest Studio"
+  p
+    a href="/about/" Pixelnest
+
+  {{ end }}
