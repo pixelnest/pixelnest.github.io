@@ -4,9 +4,9 @@ baseurl = "http://pixelnest.io/"
 languageCode = "en-us"
 copyright = "© 2016 Pixelnest Studio—we craft games and apps."
 
-publishdir = "_site"
+publishDir = "_site"
 
-builddrafts = false
+buildDrafts = false
 
 # -------------------------------------------------------
 # Globals.
