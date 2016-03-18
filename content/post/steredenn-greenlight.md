@@ -1,6 +1,8 @@
 ---
 title: Steam Greenlight
 subtitle: help us getting greenlit!
+
+date: 2015-01-15
 ---
 
 Happy new year!

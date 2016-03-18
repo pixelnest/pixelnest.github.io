@@ -1,6 +1,8 @@
 ---
 title: RAMPAINT
 subtitle: announcement!
+
+date: 2013-12-17
 ---
 
 Hello!

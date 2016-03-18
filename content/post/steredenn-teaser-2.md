@@ -1,6 +1,8 @@
 ---
 title: Steredenn - Teaser 2
 subtitle: faster than space
+
+date: 2014-10-13
 ---
 
 Today is an awesome day: [we have a new teaser for Steredenn!](http://youtu.be/LMAmQLODcTg)

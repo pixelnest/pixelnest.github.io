@@ -2,6 +2,8 @@
 title: 2nd Year Anniversary
 subtitle: Happy Birthday Pixelnest
 author: matthieu
+
+date: 2016-02-04
 ---
 
 Pixelnest is two years old today. Happy birthday!

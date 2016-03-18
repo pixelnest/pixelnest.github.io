@@ -1,6 +1,8 @@
 ---
 title: Unity and touch controls
 subtitle: new tutorial
+
+date: 2014-03-14
 ---
 
 Hello fellows,

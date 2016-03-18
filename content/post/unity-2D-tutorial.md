@@ -1,6 +1,8 @@
 ---
 title: Unity 2D tutorial
 subtitle: learn how to make a little game from installation to deployment
+
+date: 2013-11-18
 ---
 
 Fellow game developers,

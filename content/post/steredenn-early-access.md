@@ -1,6 +1,8 @@
 ---
 title: Steredenn - Steam Early Access
 subtitle: play the game now
+
+date: 2015-05-18
 ---
 
 Hello,

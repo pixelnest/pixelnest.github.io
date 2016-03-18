@@ -2,7 +2,9 @@
 title: Steredenn!
 subtitle: space + shooter + pirates + pixel art = <3
 
-redirect_from: /2014/08/supermassive/
+date: 2014-08-11
+
+aliases: [/2014/08/supermassive/]
 ---
 
 It has been a long time since we've made a public announcement. _We were hard at work on a very cool new thing._

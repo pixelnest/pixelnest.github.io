@@ -1,6 +1,8 @@
 ---
 title: Say hello to Steredenn!
 subtitle: it's still "space + shooter + pirates + pixel art = <3"
+
+date: 2014-09-08
 ---
 
 The end of August has been a busy time for Pixelnest. We are still working hard on our upcoming shooter. And, as you might already have seen, the game has changed its name.

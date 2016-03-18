@@ -1,6 +1,8 @@
 ---
 title: Pixelnest overview
 subtitle: a quick tour
+
+date: 2014-08-13
 ---
 
 Two days ago, we made a big announcement in the form of [_Steredenn_](/2014/08/steredenn/).

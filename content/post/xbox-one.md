@@ -2,6 +2,8 @@
 title: Shows and... Xbox One
 subtitle: a small surprise
 author: matthieu
+
+date: 2014-12-04
 ---
 
 Hey folks,

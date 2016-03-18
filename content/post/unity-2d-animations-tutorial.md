@@ -1,6 +1,8 @@
 ---
 title: 2D animations tutorial
 subtitle: bonus chapter for our Unity 2D tutorial!
+
+date: 2013-12-10
 ---
 
 Fellow game developers, many of you asked us when we were going to release a new chapter about the 2D animations tools with Unity 4.3.

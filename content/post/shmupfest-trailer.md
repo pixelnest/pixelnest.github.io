@@ -1,6 +1,8 @@
 ---
 title: "This is... #SHMUPFEST!"
 subtitle: trailer
+
+date: 2014-04-23
 ---
 
 Hi,

@@ -1,6 +1,8 @@
 ---
 title: Pixelnest Studio
 subtitle: finally.
+
+date: 2014-02-11
 ---
 
 Hello fellows!

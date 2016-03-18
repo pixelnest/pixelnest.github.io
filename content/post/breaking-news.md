@@ -1,6 +1,8 @@
 ---
 title: Breaking news!
 subtitle: the website, the products and the company
+
+date: 2013-09-26
 ---
 
 Dear reader, today we have a lot of things to announce!

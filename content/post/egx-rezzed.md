@@ -1,6 +1,8 @@
 ---
 title: EGX Rezzed
 subtitle: 12-14 March 2015, London
+
+date: 2015-02-26
 ---
 
 We are going to the [EGX Rezzed](http://www.egx.net/rezzed) (12-14 March, 2015) in London!

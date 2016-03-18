@@ -1,6 +1,8 @@
 ---
 title: Stunfest + Pixelnest
 subtitle: shmupfest
+
+date: 2014-02-12
 ---
 
 This is... Shmupfest!

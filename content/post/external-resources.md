@@ -1,6 +1,8 @@
 ---
 title: External resources
 subtitle: game dev, design, unity and business articles
+
+date: 2013-11-26
 ---
 
 We have compiled a big list of external resources in our [Tutorials](/tutorials) page.

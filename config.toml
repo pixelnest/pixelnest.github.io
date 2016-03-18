@@ -12,7 +12,8 @@ builddrafts = false
 # Globals.
 # -------------------------------------------------------
 
-permalink = "/:categories/:year/:month/:title"
+[permalinks]
+  post = "/:year/:month/:filename/"
 
 # -------------------------------------------------------
 # Pagination.

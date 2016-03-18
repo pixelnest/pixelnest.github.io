@@ -1,6 +1,8 @@
 ---
 title: BulletML for Unity is 50% off
 subtitle: Guts And Glory sale
+
+date: 2014-06-17
 ---
 
 Hello everyone,
