@@ -1,0 +1,32 @@
+nav
+  ul
+
+    li
+      h2
+        a href=/work Work
+      p Our projects and products.
+
+    li
+      h2
+        a href=/service Service
+      p Want to hire us?
+
+    li
+      h2
+        a href=/tutorials Tutorials
+      p Improve your skills.
+
+    li
+      h2
+        a href=/journal Journal
+      p Read our articles and announcements.
+
+    li
+      h2
+        a href=/contact Contact
+      p Get in touch with us.
+
+    li
+      h2
+        a href=/about About
+      p Pixelnest Studio—who are we?
