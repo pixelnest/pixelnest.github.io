@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Creating a 2D game with Unity
 date: 2013-11-18
 

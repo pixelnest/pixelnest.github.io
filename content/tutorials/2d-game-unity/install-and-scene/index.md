@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Install Unity and create your first scene
 date: 2013-11-18
 
