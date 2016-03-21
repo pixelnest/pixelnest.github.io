@@ -1,0 +1,132 @@
+{{ partial "html_head" . }}
+<body>
+  <div class="page tutorial" id="page">
+
+{{/*
+    <!-- start promotion header -->
+    {{ partial "promotion_header" . }}
+    <!-- end promotion header -->
+*/}}
+
+    <!-- reduced header -->
+    <header class="page-header">
+      <nav>
+        <!-- menu -->
+        <section class="page-back">
+          <a href="/">◇ Back to Pixelnest</a>
+        </section>
+
+        <section class="page-ref">
+          {{ if (and .Params.tutorial.link .Params.tutorial.name) }}
+            {{ if (or (eq .Params.tutorial.show_label nil) (eq .Params.tutorial.show_label true)) }}
+              Tutorial: <a href="{{ .Params.tutorial.link }}">{{ .Params.tutorial.name }}</a>
+            {{ else }}
+              <a href="{{ .Params.tutorial.link }}">{{ .Params.tutorial.name }}</a>
+            {{ end }}
+          {{ end }}
+        </section>
+
+        <!-- twitter -->
+        <section class="page-link">
+          <a href="http://twitter.com/pixelnest">follow us on twitter</a>
+        </section>
+      </nav>
+    </header>
+
+    <div class="page-content">
+
+      <!-- start pagination -->
+      {{ if .Params.links }}
+      <div class="pager pager--top-separator pager--em">
+        <section class="pager__older">
+        {{ if .Params.links.previous }}
+          <a href="{{ .Params.links.previous }}" title="Previous chapter">← Prev.</a>
+        {{ end }}
+        </section>
+
+        {{ if .Params.links.summary }}
+        <section class="pager__ref">
+          <a href="{{ .Params.links.summary }}" title="Summary">Summary</a>
+        </section>
+        {{ end }}
+
+        <section class="pager__newer">
+        {{ if .Params.links.next }}
+          <a href="{{ .Params.links.next }}" title="Next chapter">Next →</a>
+        {{ end }}
+        </section>
+      </div>
+      {{ end }}
+      <!-- end pagination -->
+
+      <!-- post layout -->
+      <article class="entry">
+        <h2 class="entry__title">
+          <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        </h2>
+
+        {{ if .Params.subtitle }}
+        <h3 class="entry__subtitle">
+          {{ .Params.subtitle }}
+        </h3>
+        {{ end }}
+
+        {{ if (or (eq .Params.show_metadata nil) (eq .Params.show_metadata true)) }}
+        <aside class="entry__metadata">
+          {{ partial "author" . }}
+
+          <section class="entry__infos">
+            <p>
+              {{ .Date.Format "02 Jan. 2006" | lower }}
+            </p>
+          </section>
+        </aside>
+        {{ end }}
+
+        <section class="entry__content">
+          {{ .Content }}
+        </section>
+      </article>
+      <!-- end post layout -->
+
+      <!-- start pagination -->
+      {{ if .Params.links }}
+      <div class="pager pager--bottom-separator pager--em">
+        <section class="pager__older">
+        {{ if .Params.links.previous }}
+          <a href="{{ .Params.links.previous }}" title="Previous chapter">← Prev.</a>
+        {{ end }}
+        </section>
+
+        {{ if .Params.links.summary }}
+        <section class="pager__ref">
+          <a href="{{ .Params.links.summary }}" title="Summary">Summary</a>
+        </section>
+        {{ end }}
+
+        <section class="pager__newer">
+        {{ if .Params.links.next }}
+          <a href="{{ .Params.links.next }}" title="Next chapter">Next →</a>
+        {{ end }}
+        </section>
+      </div>
+      {{ end }}
+      <!-- end pagination -->
+
+{{/*
+      <!-- start promotion -->
+      {{ partial "promotion" . }}
+      <!-- end promotion -->
+*/}}
+
+    </div>
+
+    <!-- reduced footer -->
+    <footer class="page-footer">
+      <p class="credits__desc">© 2013 pixelnest.io - we craft <strong>games</strong> and <strong>apps</strong></p>
+    </footer>
+  </div>
+
+  {{ partial "js" . }}
+</body>
+</html>
