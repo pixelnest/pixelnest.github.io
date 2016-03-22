@@ -1,20 +1,20 @@
-{% if page.show_promotion != nil %}
+{{ if .Params.show_promotion }}
 
-<!-- BulletML for Unity promotion -->
-{% if page.show_promotion == 'bulletml-for-unity' %}
-<div class="promotion">
-  We have created a plugin called <em>"BulletML for Unity"</em> which allows you to create fantastic patterns for your shooter. Interested? <a href="/work/bulletml-for-unity/">Read more here.</a>
-</div>
-{% endif %}
+  <!-- BulletML for Unity promotion -->
+  {{ if eq .Params.show_promotion "bulletml-for-unity" }}
+  <div class="promotion">
+    We have created a plugin called <em>"BulletML for Unity"</em> which allows you to create fantastic patterns for your shooter. Interested? <a href="/work/bulletml-for-unity/">Read more here.</a>
+  </div>
+  {{ end }}
 
-<!-- Steredenn -->
-{% if page.show_promotion == 'steredenn' %}
-<div class="promotion-image">
-  <a href="http://steredenn.pixelnest.io" target="_BLANK">
-    <img src="/work/steredenn/-img/banner.png" title="Steredenn" alt="Steredenn" />
-    <p>click to get more information about our roguelike/shmup!</p>
-  </a>
-</div>
-{% endif %}
+  <!-- Steredenn -->
+  {{ if eq .Params.show_promotion "steredenn" }}
+  <div class="promotion-image">
+    <a href="http://steredenn.pixelnest.io" target="_BLANK">
+      <img src="/work/steredenn/-img/banner.png" title="Steredenn" alt="Steredenn" />
+      <p>click to get more information about our roguelike/shmup!</p>
+    </a>
+  </div>
+  {{ end }}
 
-{% endif %}
+{{ end }}

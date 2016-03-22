@@ -1,10 +1,10 @@
-{% if page.show_promotion != nil %}
+{{ if .Params.show_promotion }}
 
-<!-- Steredenn -->
-{% if page.show_promotion == 'steredenn' %}
-<div class="promotion-header">
-  Our game — <a href="http://steredenn.pixelnest.io/">Steredenn</a> — is <a href="http://steredenn.pixelnest.io/#buy">available</a> on PC/Mac/Linux!
-</div>
-{% endif %}
+  <!-- Steredenn -->
+  {{ if eq .Params.show_promotion "steredenn" }}
+  <div class="promotion-header">
+    Our game — <a href="http://steredenn.pixelnest.io/">Steredenn</a> — is <a href="http://steredenn.pixelnest.io/#buy">available</a> on PC/Mac/Linux!
+  </div>
+  {{ end }}
 
-{% endif %}
+{{ end }}
