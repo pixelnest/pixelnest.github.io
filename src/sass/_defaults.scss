@@ -46,35 +46,6 @@ a {
   }
 }
 
-// Default styling for links inside paragraph.
-p a {
-  @extend %link;
-}
-
-%link {
-  color: $brand-color;
-
-  text-decoration: none;
-
-  &:hover {
-    color: $brand-color-dark;
-
-    text-decoration: underline;
-  }
-
-  &:active {
-    color: $brand-color-light;
-  }
-
-  &:focus {
-    color: $brand-color-light;
-  }
-
-  &:visited {
-    color: $brand-color;
-  }
-}
-
 ::selection {
   color: white;
   background: $brand-color;
