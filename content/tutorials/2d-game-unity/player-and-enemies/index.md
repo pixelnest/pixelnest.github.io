@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Create a player and its enemies
 date: 2013-11-18
 

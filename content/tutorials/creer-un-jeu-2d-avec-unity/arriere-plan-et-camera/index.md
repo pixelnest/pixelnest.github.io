@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Affichage d'un arrière-plan
 date: 2013-11-20
 

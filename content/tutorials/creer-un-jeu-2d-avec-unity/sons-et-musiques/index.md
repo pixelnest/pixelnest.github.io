@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Faisons du bruit dans Unity
 date: 2013-11-20
 

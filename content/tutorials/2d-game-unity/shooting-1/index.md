@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Shooting (1/2)
 date: 2013-11-18
 

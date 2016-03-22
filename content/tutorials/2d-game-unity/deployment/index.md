@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Build, release and deploy
 date: 2013-11-18
 

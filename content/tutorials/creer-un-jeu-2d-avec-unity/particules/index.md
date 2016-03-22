@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Jouons avec les particules
 date: 2013-11-20
 

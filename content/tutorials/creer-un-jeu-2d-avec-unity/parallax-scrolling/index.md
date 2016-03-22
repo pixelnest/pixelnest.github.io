@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Parallax scrolling
 date: 2013-11-20
 

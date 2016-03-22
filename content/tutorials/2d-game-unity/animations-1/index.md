@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Making animations with Unity 2D (1/2)
 date: 2013-12-11
 

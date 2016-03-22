@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Menus et chargement du jeu
 date: 2013-11-20
 

@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Gamedev resources
 date: 2013-11-20
 
@@ -74,5 +73,3 @@ Coroutines are an essential tool to develop a game. Learn more about them:
 * [Use Custom Made Assets As Configuration Files](http://www.jacobpennock.com/Blog/?p=670) with a _ScriptableObject_.
 * [Go Beyond Retro Pixel Art With Flat Shaded 3D](http://dev.tutsplus.com/tutorials/go-beyond-retro-pixel-art-with-flat-shaded-3d-in-unity--gamedev-12259)
 * [Animated tips](http://imgur.com/a/2w7zd)
-
-

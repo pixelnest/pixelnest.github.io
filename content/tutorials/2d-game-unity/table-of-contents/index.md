@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Table of contents
 date: 2013-11-18
 

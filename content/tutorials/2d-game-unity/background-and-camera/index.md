@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Adding and displaying a background
 date: 2013-11-18
 

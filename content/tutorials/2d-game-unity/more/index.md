@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: More to come!
 date: 2013-11-18
 

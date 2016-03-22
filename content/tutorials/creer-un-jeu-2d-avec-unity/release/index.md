@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Préparer et déployer un exécutable de son jeu
 date: 2013-11-20
 

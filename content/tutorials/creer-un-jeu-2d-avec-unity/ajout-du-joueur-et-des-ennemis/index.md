@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Ajout du joueur et des ennemis
 date: 2013-11-20
 

@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Unity and touch controls
 author: Damien
 date: 2014-03-14

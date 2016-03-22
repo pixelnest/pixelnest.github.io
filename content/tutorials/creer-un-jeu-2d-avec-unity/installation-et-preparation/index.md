@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Installer Unity et préparer un nouveau projet
 date: 2013-11-20
 

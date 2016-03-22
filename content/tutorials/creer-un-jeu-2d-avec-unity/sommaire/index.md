@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Sommaire
 date: 2013-11-20
 

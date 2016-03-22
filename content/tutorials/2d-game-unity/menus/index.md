@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Menus - loading and restarting the game
 date: 2013-11-18
 

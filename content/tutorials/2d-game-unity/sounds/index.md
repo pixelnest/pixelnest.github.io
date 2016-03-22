@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Making some noises on music
 date: 2013-11-18
 

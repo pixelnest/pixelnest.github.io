@@ -1,5 +1,4 @@
 ---
-layout: tutorial
 title: Conclusion
 date: 2013-11-18
 
