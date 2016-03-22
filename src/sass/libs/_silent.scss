@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+// -------------------------------------------------------
+// Silent classes.
+// -------------------------------------------------------
+
+// Standard link for light backgrounds.
+%link {
+  color: $brand-color;
+
+  text-decoration: none;
+
+  &:hover {
+    color: $brand-color-dark;
+
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $brand-color-light;
+  }
+
+  &:focus {
+    color: $brand-color-light;
+  }
+
+  &:visited {
+    color: $brand-color;
+  }
+}
+
+// Light link to use on dark backgrounds.
+%link-light {
+  color: $brand-color-light;
+
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($brand-color-light, 10%);
+
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus {
+    color: lighten($brand-color-light, 20%);
+  }
+}
