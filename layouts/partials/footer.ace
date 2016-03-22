@@ -1,4 +1,5 @@
 footer.page-footer
-  section
-    p <span>© 2016</span> <strong>Pixelnest Studio</strong> - we craft <strong>games</strong> and <strong>apps</strong>
+  .page-footer__wrapper
+    p.page-footer__copyright <span>© 2016</span> Pixelnest Studio - we craft <strong>games</strong> and <strong>apps</strong>
+    p.page-footer__social Follow us on <a href="https://twitter.com/pixelnest">Twitter</a> and <a href="https://facebook.com/pixelneststudio">Facebook</a>
       

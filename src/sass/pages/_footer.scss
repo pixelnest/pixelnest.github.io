@@ -3,3 +3,40 @@
 // -------------------------------------------------------
 // Footer.
 // -------------------------------------------------------
+
+.page-footer {
+  color: white;
+  background: rgba($brand-dark, 0.3);
+
+  font-size: 0.9rem;
+}
+
+.page-footer__wrapper {
+  display: table;
+
+  width: 100%;
+  height: 43px;
+}
+
+.page-footer__copyright,
+.page-footer__social {
+  display: table-cell;
+
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0 15px;
+
+  vertical-align: middle;
+
+  a {
+    @extend %link-light;
+  }
+}
+
+.page-footer__copyright {
+}
+
+.page-footer__social {
+  text-align: right;
+}
