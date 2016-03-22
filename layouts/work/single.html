@@ -1,0 +1,25 @@
+{{ partial "html_head" . }}
+<body>
+  <div class="page" id="page">
+
+    {{ partial "header" . }}
+
+    <div class="page-content">
+      <article class="card work alone">
+        <section class="card__images">
+          <img class="card__cover" src="{{ .Params.cover }}" width="200" height="200" />
+        </section>
+
+        <section class="card__body">
+          {{ .Content }}
+        </section>
+      </article>
+    </div>
+
+    {{ partial "footer" . }}
+
+  </div>
+
+  {{ partial "js" . }}
+</body>
+</html>

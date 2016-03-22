@@ -1,5 +1,4 @@
 ---
-layout: project
 title: Shmupfest
 subtitle: the Stunfest 2014 game
 cover: ./-img/cover.png
