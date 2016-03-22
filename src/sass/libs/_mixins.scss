@@ -3,29 +3,3 @@
 // -------------------------------------------------------
 // Mixins.
 // -------------------------------------------------------
-
-// Link.
-
-%link {
-  color: $brand-color;
-
-  text-decoration: none;
-
-  &:hover {
-    color: $brand-color-dark;
-
-    text-decoration: underline;
-  }
-
-  &:active {
-    color: $brand-color-light;
-  }
-
-  &:focus {
-    color: $brand-color-light;
-  }
-
-  &:visited {
-    color: $brand-color;
-  }
-}
