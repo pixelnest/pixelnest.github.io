@@ -5,16 +5,76 @@
 // -------------------------------------------------------
 
 .logo {
+  padding-top: 50px;
+
+  color: white;
+
+  font-family: $font-title;
+
+  text-align: center;
 }
 
-.logo__image-wrapper {
-}
+// Image.
 
 .logo__image {
+  width: 64px;
+  height: 64px;
+
+  transition: all 300ms ease-out;
 }
+
+.logo__link:hover .logo__image {
+  transform: rotateZ(360deg);
+}
+
+// Name.
 
 .logo__name {
+  margin-top: -10px;
+  margin-bottom: 30px;
+
+  color: white;
+
+  font-size: 3.5rem;
+
+  transition: all 250ms ease-out;
+
+  -webkit-font-smoothing: antialiased; // Hack to prevent weird behavior on the scale.
 }
 
+.logo__link:hover .logo__name {
+  color: $brand-color;
+
+  transform: translateY(2px) scale(1.2, 1.2);
+
+  -webkit-font-smoothing: antialiased; // Hack to prevent weird behavior on the scale.
+}
+
+// Catchphrase.
+
 .logo__catchphrase {
+  display: inline-block;
+
+  padding: 4px 45px 2px 45px;
+
+  background: rgba($brand-dark, 0.8);
+  border-radius: 5px;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  strong {
+    font-weight: normal;
+  }
+}
+
+// -------------------------------------------------------
+// Modifiers.
+// -------------------------------------------------------
+
+.logo--home {
+  .logo__image {
+    width: 120px;
+    height: 120px;
+  }
 }
