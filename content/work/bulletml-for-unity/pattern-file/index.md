@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: "Documentation: Pattern file"
 subtitle: BulletML for Unity
 show_ads: false

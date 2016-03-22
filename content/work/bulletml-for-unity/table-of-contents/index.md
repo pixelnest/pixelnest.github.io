@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: Table of contents
 subtitle: BulletML for Unity
 show_ads: false

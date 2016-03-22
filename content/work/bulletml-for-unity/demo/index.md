@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: Demo
 subtitle: BulletML for Unity
 show_ads: false
@@ -9,7 +10,7 @@ tutorial:
   show_label: false
   name: BulletML for Unity
   link: ../
-  
+
 links:
   summary: ../table-of-contents
   previous: ../table-of-contents

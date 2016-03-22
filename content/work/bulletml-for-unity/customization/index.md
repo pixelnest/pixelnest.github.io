@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: "Documentation: Customization"
 subtitle: BulletML for Unity
 show_ads: false
@@ -80,7 +81,7 @@ private BulletScript HandleBulletSpawn(BulletObjectbullet, string bulletName)
 {
   Debug.Log("Create Bullet's game object, sprite, etc.");
   GameObject gameObject = new GameObject("Test");
-  
+
   // Return the BulletScript that should be attached to the game object
   return gameObject.AddComponent<BulletScript>();
 }

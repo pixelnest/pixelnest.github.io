@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: The plugin is still in validation...
 subtitle: BulletML for Unity
 show_ads: false

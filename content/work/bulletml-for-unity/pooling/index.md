@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: "Documentation: Integration with a pooling system"
 subtitle: BulletML for Unity
 show_ads: false
@@ -80,4 +81,3 @@ To be sure no bullets are instantiated without pooling, be careful to change the
 1. `BulletManagerScript`
 2. Your BulletML + pooling script
 3. `BulletSourceScript`
-

@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: About BulletML
 subtitle: BulletML for Unity
 show_ads: false

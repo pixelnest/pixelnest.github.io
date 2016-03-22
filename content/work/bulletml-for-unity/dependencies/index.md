@@ -1,5 +1,6 @@
 ---
-layout: tutorial
+type: tutorials
+
 title: "Documentation: Dependencies"
 subtitle: BulletML for Unity
 show_ads: false
