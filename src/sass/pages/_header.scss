@@ -3,3 +3,14 @@
 // -------------------------------------------------------
 // Header.
 // -------------------------------------------------------
+
+.page-header {
+}
+
+.page-header--home {
+  height: 400px;
+
+  background: url("/static/images/header.jpg") no-repeat;
+  background-position: top center;
+  background-size: 1200px auto;
+}
