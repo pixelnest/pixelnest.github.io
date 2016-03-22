@@ -8,6 +8,9 @@ publishDir = "_site"
 
 buildDrafts = false
 
+# Disable auto-RSS generation.
+disableRSS = false
+
 # Remove the "s" at the end of a section.
 # ie. "Journal" and not "Journals".
 pluralizeListTitles = false

@@ -6,7 +6,7 @@
   <link href="http://pixelnest.io/atom.xml" rel="self"/>
   <link href="http://pixelnest.io/"/>
 
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <updated>{{ .Site.LastChange }} {{/* site.time | date_to_xmlschema */}}</updated>
   <id>http://pixelnest.io/</id>
 
   <!-- authors -->
@@ -23,6 +23,7 @@
     <uri>http://solarsailer.net/</uri>
   </author>
 
+{{/*
   <!-- posts -->
   {% for post in site.posts %}
     <entry>
@@ -52,4 +53,6 @@
       </author>
     </entry>
   {% endfor %}
+
+*/}}
 </feed>
