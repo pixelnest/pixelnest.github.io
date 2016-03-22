@@ -1,0 +1,8 @@
+header.page-header.page-header--home
+
+  .logo.logo--home
+    a.logo__link href=/
+      p.logo__image-wrapper
+        img.logo__image src="/static/images/logo_256.png" alt="Pixelnest Studio" title="Pixelnest Studio"
+      p.logo__name Pixelnest
+    p.logo__catchphrase We craft <strong>games</strong> and <strong>apps</strong>
