@@ -24,12 +24,12 @@ hgroup,
 ul,
 ol,
 dd,
-p,
 figure,
 pre,
 table,
 fieldset,
-hr {
+hr,
+.page-content p {
   margin-bottom: $margin-default;
 }
 
