@@ -5,7 +5,7 @@
 // -------------------------------------------------------
 
 .logo {
-  padding-top: 50px;
+  padding-top: 40px;
 
   color: white;
 
@@ -17,8 +17,8 @@
 // Image.
 
 .logo__image {
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
 
   transition: all 300ms ease-out;
 }
@@ -30,12 +30,9 @@
 // Name.
 
 .logo__name {
-  margin-top: -10px;
-  margin-bottom: 30px;
-
   color: white;
 
-  font-size: 3.5rem;
+  font-size: 3rem;
 
   transition: all 250ms ease-out;
 
@@ -73,8 +70,17 @@
 // -------------------------------------------------------
 
 .logo--home {
+  padding-top: 50px;
+
   .logo__image {
     width: 120px;
     height: 120px;
+  }
+
+  .logo__name {
+    margin-top: -10px;
+    margin-bottom: 30px;
+
+    font-size: 3.5rem;
   }
 }
