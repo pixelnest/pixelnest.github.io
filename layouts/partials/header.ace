@@ -1,12 +1,14 @@
 header.page-header
   
-  .logo
-    a href=/
-      p.logo__image-wrapper 
-        img.logo__image src="/static/images/logo_256.png" alt="Pixelnest Studio" title="Pixelnest Studio"
-      p.logo__name Pixelnest
+  .page-header__banner
+  
+    .logo
+      a.logo__link href=/
+        p.logo__image-wrapper 
+          img.logo__image src="/static/images/logo_256.png" alt="Pixelnest Studio" title="Pixelnest Studio"
+        p.logo__name Pixelnest
 
-  nav
+  nav.page-header__nav
     ul
       li 
         a href=/work Work
