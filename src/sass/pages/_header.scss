@@ -7,6 +7,38 @@
 .page-header {
 }
 
+.page-header__banner {
+  height: 240px;
+
+  background: url("/static/images/header_compact.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-header__nav {
+  background: $brand-dark;
+
+  font-family: $font-title;
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    padding: 15px 11px 13px 11px;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+// -------------------------------------------------------
+// Modifiers.
+// -------------------------------------------------------
+
 .page-header--home {
   height: 400px;
 
