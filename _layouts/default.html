@@ -4,18 +4,18 @@
   {% include meta.html %}
 </head>
 <body>
-  <div class="page{% if page.classes %} {{ page.classes }}{% endif %}" id="page">
-{% unless page.simple == true %}
-    {% include header.html %}
-{% endunless %}
+  <div class="page{% if page.class %} {{ page.class }}{% endif %}" id="page">
+    {% unless page.simple == true %}
+      {% include header.html %}
+    {% endunless %}
 
     <div class="page-content">
       {{ content }}
     </div>
 
-{% unless page.simple == true %}
-    {% include footer.html %}
-{% endunless %}
+    {% unless page.simple == true %}
+      {% include footer.html %}
+    {% endunless %}
   </div>
 
   {% include js.html %}
