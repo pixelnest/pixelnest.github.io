@@ -16,104 +16,83 @@ const gulp         = require('gulp')
   , del            = require('del')
 
 
-const exec = require('child_process').exec
+const cp = require('child_process')
 const browserSync = require('browser-sync').create()
 
 // -------------------------------------------------------
-// Browsers.
+// Constants.
 // -------------------------------------------------------
 
-const BROWSERS = [ 'last 2 versions' ]
-
+const BROWSERS = [ 'last 3 versions' ]
 const SASS_SRC = '_sass'
 
-// -------------------------------------------------------
-// Options.
-// -------------------------------------------------------
-
-
-var options = {
-  default: {
-    tasks: ['compile:sass']
-  },
-
-  sass: {
-    folder: SASS_SRC,
-    file:   SASS_SRC + '/pixelnest.scss',
-
-    watch:  SASS_SRC + '/**/*.scss',
-
-    config: {
-      style: 'expanded',
-      require: 'sass-globbing'
-    },
-
-    destination: '_site/static/css'
-  },
-
-  autoprefixer: {
-    config: { browsers: BROWSERS }
-  },
-
-  rename: {
-    config: { suffix: '.min' }
-  }
-}
+var IGNORED_FILES = [
+  '!test/**/*',
+  '!.gitignore',
+  '!node_modules/**/*',
+  '!.sass-cache/**/*',
+  '!_site/**/*',
+  '!.jshintrc'
+]
 
 // -------------------------------------------------------
 // Tasks.
 // -------------------------------------------------------
 
-gulp.task('default', options.default.tasks)
+gulp.task('default', ['build:sass', 'build:jekyll'])
+gulp.task('serve', ['watch'], () => gulp.start('sync'))
 
 // -------------------------------------------------------
 // CSS.
 // -------------------------------------------------------
 
-gulp.task('compile:sass', () => {
-  return sass(options.sass.file, options.sass.config)
-    .pipe(autoprefixer(options.autoprefixer.config))
-    .pipe(gulp.dest(options.sass.destination))
+gulp.task('build:sass', () => {
+  return sass(SASS_SRC + '/pixelnest.scss', { style: 'expanded', require: 'sass-globbing' })
+    .pipe(autoprefixer({ browsers: BROWSERS }))
+    .pipe(gulp.dest('_site/static/css'))
 
     .pipe(browserSync.stream())
 
-    .pipe(rename(options.rename.config))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest(options.sass.destination))
+    .pipe(gulp.dest('_site/static/css'))
+})
+
+// -------------------------------------------------------
+// Jekyll.
+// -------------------------------------------------------
+
+gulp.task('build:jekyll', (done) => {
+  return cp.spawn('jekyll', ['build', '--incremental'], { stdio: 'inherit' })
+           .on('close', done)
 })
 
 // -------------------------------------------------------
 // Watch.
 // -------------------------------------------------------
 
-gulp.task('watch:sass', () => {
-  gulp.watch(options.sass.watch, ['compile:sass'])
+gulp.task('watch:sass', ['build:sass'], () => {
+  gulp.watch([SASS_SRC + '/**/*.scss'].concat(IGNORED_FILES), ['build:sass'])
 })
 
-gulp.task('watch', ['watch:sass'])
-
-// -------------------------------------------------------
-// Build.
-// -------------------------------------------------------
-
-gulp.task('build', options.default.tasks, () => {
-  exec('jekyll build')
+gulp.task('watch:html', ['build:jekyll'], () => {
+  gulp.watch(['**/*.html', '**/*.md', '**/*.markdown'].concat(IGNORED_FILES), ['reload'])
 })
 
+gulp.task('watch', ['watch:sass', 'watch:html'])
+
 // -------------------------------------------------------
-// Misc.
+// Browser-Sync.
 // -------------------------------------------------------
 
-gulp.task('serve', options.default.tasks, () => {
-  // Launch Jekyll.
-  var jekyll = exec('jekyll serve')
-  jekyll.stdout.on('data', (data) => process.stdout.write(data))
-  jekyll.stderr.on('data', (data) => process.stderr.write(data))
-  jekyll.on('close', (code) => console.log(`\nJekyll exited.`))
+gulp.task('sync', () => {
+  browserSync.init({
+    server: { baseDir: '_site' },
+    port: 4000,
+    open: false
+  })
+})
 
-  // Proxy on jekyll.
-  browserSync.init({ proxy: 'localhost:4000', open: false })
-
-  // Watchers:
-  gulp.start('watch')
+gulp.task('reload', ['build:jekyll'], () => {
+  browserSync.reload()
 })
