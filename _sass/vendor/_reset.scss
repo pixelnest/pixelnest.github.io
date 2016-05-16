@@ -78,3 +78,12 @@ hr {
   margin: 0;
   padding: 0;
 }
+
+/* Links */
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
