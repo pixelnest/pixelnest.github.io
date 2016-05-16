@@ -5,25 +5,19 @@
 // -------------------------------------------------------
 
 %link {
-  color: $brand-color;
+  $color: $brand-color;
+
+  color: $color;
 
   text-decoration: none;
 
   &:hover {
-    color: $brand-color-dark;
+    color: lighten($color, 5%);
 
     text-decoration: underline;
   }
 
   &:active {
-    color: $brand-color-light;
-  }
-
-  &:focus {
-    color: $brand-color-light;
-  }
-
-  &:visited {
-    color: $brand-color;
+    color: darken($color, 5%);
   }
 }
