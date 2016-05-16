@@ -4,25 +4,35 @@
 // Typography.
 // -------------------------------------------------------
 
-// Colors.
+// Brand colors.
 $brand-color: #ff4600;
 $brand-color-sub: #ff5303;
 $brand-color-dark: #da4101;
 $brand-color-light: #ff8914;
-$brand-dark: #353535;
 
-// Texts.
-$text-color: #010101;
-$background-color: white;
+// Grays:
+$gray-darkish: #010101;
+$gray-darker: #353535;
+$gray-medium: #616161;
+$gray-light: #a3a3a3;
+$gray-whitish: #e6e6e6;
 
+// -------------------------------------------------------
+// Defaults.
+// -------------------------------------------------------
+
+$default-text-color: $gray-darkish;
+$default-background-color: white;
+$default-line-height: 1.45;
+$default-spacing: $default-line-height + 0rem;
+
+// -------------------------------------------------------
 // Fonts.
+// -------------------------------------------------------
+
 $font-normal: "PT Sans", Verdana, sans-serif;
 $font-title: "Bebas Neue", "Arial Narrow", Arial, sans-serif;
 $font-code: Menlo, monospace;
-
-// Margins.
-$line-height-default: 1.45;
-$margin-default: 1.45rem;
 
 // -------------------------------------------------------
 // Viewports.

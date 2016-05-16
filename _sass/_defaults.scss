@@ -5,13 +5,18 @@
 // -------------------------------------------------------
 
 html {
-  color: $text-color;
+  color: $default-text-color;
+  background-color: $default-background-color;
 
   font-family: $font-normal;
   font-size: 100%;
   font-weight: normal;
-  line-height: $line-height-default;
+  line-height: $default-line-height;
 }
+
+// -------------------------------------------------------
+// Spacings.
+// -------------------------------------------------------
 
 // Add the line-height as a the default spacing
 h1,
@@ -30,28 +35,14 @@ pre,
 table,
 fieldset,
 hr {
-  margin-bottom: $margin-default;
+  margin-bottom: $default-spacing;
 }
 
 // -------------------------------------------------------
-// Links and selections.
+// Selections.
 // -------------------------------------------------------
-
-// Remove decoration on all the links.
-a {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-// Default styling for links inside paragraph.
-p a {
-  @extend %link;
-}
 
 ::selection {
   color: white;
-  background: $brand-color;
+  background: $brand-color-light;
 }
