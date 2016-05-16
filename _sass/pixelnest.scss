@@ -6,14 +6,12 @@
 
 @import "variables";
 
-@import "libs/highlighter";
-
-@import "libs/reset";
-@import "libs/mixins";
-@import "libs/utilities";
+@import "vendor/**/*";
+@import "utilities/**/*";
+@import "mixins/**/*";
 
 @import "defaults";
 
-@import "objects/*";
-@import "components/*";
-@import "pages/*";
+@import "objects/**/*";
+@import "components/**/*";
+@import "pages/**/*";
