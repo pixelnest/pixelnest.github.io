@@ -39,31 +39,60 @@ var IGNORED_FILES = [
 // Tasks.
 // -------------------------------------------------------
 
-gulp.task('default', ['build:sass', 'build:jekyll'])
-gulp.task('serve', ['watch'], () => gulp.start('sync'))
+gulp.task('default', ['build:sass:prod', 'build:jekyll:prod'])
+
+// Serve jekyll in dev mode (watch files, build and use browser sync).
+gulp.task('dev', ['watch'], () => gulp.start('sync'))
+
+// Serve jekyll in production.
+gulp.task('prod', ['build:sass:prod'], done => {
+  var env = process.env
+  env.JEKYLL_ENV = "production"
+
+  return cp.spawn('jekyll', ['serve'], { env, stdio: 'inherit' }).on('close', done)
+})
 
 // -------------------------------------------------------
 // CSS.
 // -------------------------------------------------------
 
-gulp.task('build:sass', () => {
+// This task only create a non-minified CSS file, in the _site folder.
+// This file will never be commited to the repository and will never conflict with git.
+gulp.task('build:sass:dev', () => {
   return sass(SASS_SRC + '/pixelnest.scss', { style: 'expanded', require: 'sass-globbing' })
     .pipe(autoprefixer({ browsers: BROWSERS }))
     .pipe(gulp.dest('_site/static/css'))
-
     .pipe(browserSync.stream())
+})
 
+// This task creates a minified CSS file.
+// Be careful: this file is checked in the repository.
+// You MUST run this task to push the modification to the live server.
+// This task SHOULD NOT be used in conjunction with the 'watch' task.
+gulp.task('build:sass:prod', () => {
+  return sass(SASS_SRC + '/pixelnest.scss', { style: 'expanded', require: 'sass-globbing' })
+    .pipe(autoprefixer({ browsers: BROWSERS }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest('_site/static/css'))
+    .pipe(gulp.dest('static/css'))
 })
 
 // -------------------------------------------------------
 // Jekyll.
 // -------------------------------------------------------
 
-gulp.task('build:jekyll', (done) => {
+gulp.task('build:jekyll:dev', done => {
   return cp.spawn('jekyll', ['build', '--incremental'], { stdio: 'inherit' })
+           .on('close', done)
+})
+
+gulp.task('build:jekyll:prod', done => {
+  // Add the production flag for jekyll.
+  // We need to re-use process.env or node will throw an error.
+  var env = process.env
+  env.JEKYLL_ENV = "production"
+
+  return cp.spawn('jekyll', ['build'], { env, stdio: 'inherit' })
            .on('close', done)
 })
 
@@ -71,11 +100,11 @@ gulp.task('build:jekyll', (done) => {
 // Watch.
 // -------------------------------------------------------
 
-gulp.task('watch:sass', ['build:sass'], () => {
-  gulp.watch([SASS_SRC + '/**/*.scss'].concat(IGNORED_FILES), ['build:sass'])
+gulp.task('watch:sass', ['build:sass:dev'], () => {
+  gulp.watch([SASS_SRC + '/**/*.scss'].concat(IGNORED_FILES), ['build:sass:dev'])
 })
 
-gulp.task('watch:html', ['build:jekyll'], () => {
+gulp.task('watch:html', ['build:jekyll:dev'], () => {
   gulp.watch(['**/*.html', '**/*.md', '**/*.markdown'].concat(IGNORED_FILES), ['reload'])
 })
 
@@ -93,6 +122,6 @@ gulp.task('sync', () => {
   })
 })
 
-gulp.task('reload', ['build:jekyll'], () => {
+gulp.task('reload', ['build:jekyll:dev'], () => {
   browserSync.reload()
 })
