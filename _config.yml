@@ -42,7 +42,7 @@ highlighter: rouge
 # Pagination.
 # -------------------------------------------------------
 
-paginate_path: 'journal/:num'
+paginate_path: '/journal/:num/'
 paginate: 4
 
 # -------------------------------------------------------
