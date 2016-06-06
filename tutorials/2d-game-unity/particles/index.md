@@ -260,7 +260,7 @@ We just have to add one line:
 SpecialEffectsHelper.Instance.Explosion(transform.position);
 ````
 
-Into the `OnTriggerEnter()` method of the "HealthScript":
+Into the `Damage` method of the "HealthScript":
 
 ```csharp
   public Damage(int damageCount)
@@ -280,7 +280,7 @@ Into the `OnTriggerEnter()` method of the "HealthScript":
   }
 ```
 
-Start the game. Try to shoot enemies. Then, let the player dies.
+Start the game. Try to shoot enemies. Then, let the player die.
 
 [ ![Explosions in action][explosions]][explosions_gif]
 
