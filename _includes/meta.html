@@ -1,34 +1,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% if page.url == '/index.html' %}
+{% if page.url == '/' or page.url == '/index.html' %}
 <title>Pixelnest Studio</title>
 {% else %}
 <title>{{ page.title }} — Pixelnest Studio</title>
 {% endif %}
 
-<!-- misc -->
+<!-- Misc. -->
 <link rel="shortcut icon" href="/static/images/favicon.ico?v=0002" />
 <link rel="alternate" type="application/atom+xml" title="Pixelnest Studio" href="http://feedpress.me/pixelnest" />
 
-<!-- fonts -->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic">
-<link rel="stylesheet" type="text/css" href="/static/fonts/bebas-neue/font.css">
-
-<!-- css -->
-<link rel="stylesheet" type="text/css" href="/static/vendor/css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/pixelnest.css" />
-
-<!-- description -->
+<!-- Description. -->
 <meta name="author" content="Pixelnest Studio">
 <meta name="description" content="Pixelnest Studio. We craft games and apps.">
 <meta name="keywords" content="pixelnest, studio, damien, mayance, matthieu, oger, games, apps, development, mobile, web, steredenn" />
 
-<!-- social -->
+<!-- Social. -->
 <link rel="author" href="http://pixelnest.io/about/"/>
 <link rel="publisher" href="https://plus.google.com/+PixelnestStudio">
 
-<!-- twitter -->
+<!-- Twitter. -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@pixelnest">
 <meta name="twitter:creator" content="@pixelnest">
