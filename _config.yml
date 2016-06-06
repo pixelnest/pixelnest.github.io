@@ -32,11 +32,6 @@ defaults:
 # Markdown.
 # -------------------------------------------------------
 
-markdown: redcarpet
-
-redcarpet:
-  extensions: ['tables', 'footnotes', 'no_intra_emphasis', 'autolink', 'strikethrough', 'space_after_headers']
-
 # -------------------------------------------------------
 # Code.
 # -------------------------------------------------------
