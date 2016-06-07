@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Font title.
+// -------------------------------------------------------
+
+@mixin font-title {
+  font-family: $font-title;
+
+  -webkit-font-smoothing: antialiased; // Disable thick font look on Chrome.
+}
