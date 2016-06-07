@@ -34,14 +34,14 @@ pre,table,fieldset,hr{
 }
 */
 
-/* Container */
+/* Container. */
 html,
 body {
   margin: 0;
   padding: 0;
 }
 
-/* Title */
+/* Titles. */
 h1,
 h2,
 h3,
@@ -51,10 +51,12 @@ h6 {
   margin: 0;
   padding: 0;
 
+  font-size: 100%;
   font-weight: normal;
+  font-style: normal;
 }
 
-/* List + paragraph */
+/* Lists + paragraphs. */
 ul,
 ol,
 dl,
@@ -67,7 +69,7 @@ ul {
   list-style: none;
 }
 
-/* Misc */
+/* Misc. */
 hgroup,
 dd,
 figure,
@@ -79,7 +81,7 @@ hr {
   padding: 0;
 }
 
-/* Links */
+/* Links. */
 a {
   text-decoration: none;
 
