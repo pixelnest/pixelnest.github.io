@@ -5,16 +5,36 @@
 // -------------------------------------------------------
 
 .logo {
+  @include font-title;
+
+  background: $brand-black; // TMP
+
+  text-align: center;
+}
+
+.logo--home {
 }
 
 .logo__link {
+  color: white;
 }
 
 .logo__image {
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-.logo__image img {
+.logo__image--big {
+  img {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .logo__name {
+  text-shadow: 0 3px 10px rgba(black, 0.2);
+
+  font-size: 4.8rem;
 }
