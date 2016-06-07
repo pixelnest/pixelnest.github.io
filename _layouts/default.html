@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html{% if page.class %} class="{{ page.class }}"{% endif %}>
 <head>
   {% include meta.html %}
   {% include css.html %}
 </head>
 <body>
-  <div class="page{% if page.class %} {{ page.class }}{% endif %}" id="page">
+  <div class="page" id="page">
     {% include header.html %}
 
     <div class="page-content">
