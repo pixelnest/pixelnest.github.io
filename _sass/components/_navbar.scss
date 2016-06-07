@@ -5,13 +5,41 @@
 // -------------------------------------------------------
 
 .navbar {
+  @include font-title;
+
+  box-sizing: border-box;
+  height: 40px;
+  padding: 6px 0;
+
+  background: $brand-black;
+
+  font-size: 2rem;
+
+  text-align: center;
+}
+
+.navbar--home {
+  height: 32px;
+  padding: 2px 0;
+
+  background: rgba($brand-black, 0.1);
 }
 
 .navbar__list {
 }
 
 .navbar__item {
+  display: inline-block;
+
+  padding: 0 7px;
 }
 
 .navbar__item a {
+  @extend %link;
+
+  color: white;
+}
+
+.navbar__item a.is-active {
+  color: $brand-color-light;
 }
