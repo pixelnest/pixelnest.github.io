@@ -15,34 +15,34 @@
   </div>
 
   <nav class="navbar">
-    <ul>
-      <li>
-        <a href="/work"      {% if page.url contains '/work' %}class="active"{% endif %}>
+    <ul class="navbar__list">
+      <li class="navbar__item">
+        <a href="/work/"      {% if page.url contains '/work' %}class="is-active"{% endif %}>
           Work
         </a>
       </li>
-      <li>
-        <a href="/service"   {% if page.url contains '/service' %}class="active"{% endif %}>
-          Service
+      <li class="navbar__item">
+        <a href="/services/"   {% if page.url contains '/service' %}class="is-active"{% endif %}>
+          Services
         </a>
       </li>
-      <li>
-        <a href="/tutorials" {% if page.url contains '/tutorials' %}class="active"{% endif %}>
+      <li class="navbar__item">
+        <a href="/tutorials/" {% if page.url contains '/tutorials' %}class="is-active"{% endif %}>
           Tutorials
         </a>
       </li>
-      <li>
-        <a href="/journal"   {% if page.url contains '/journal' %}class="active"{% endif %}>
+      <li class="navbar__item">
+        <a href="/journal/"   {% if page.url contains '/journal' %}class="is-active"{% endif %}>
           Journal
         </a>
       </li>
-      <li>
-        <a href="/contact"   {% if page.url contains '/contact' %}class="active"{% endif %}>
+      <li class="navbar__item">
+        <a href="/contact/"   {% if page.url contains '/contact' %}class="is-active"{% endif %}>
           Contact
         </a>
       </li>
-      <li>
-        <a href="/about"     {% if page.url contains '/about' %}class="active"{% endif %}>
+      <li class="navbar__item">
+        <a href="/about/"     {% if page.url contains '/about' %}class="is-active"{% endif %}>
           About
         </a>
       </li>
