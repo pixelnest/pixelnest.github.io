@@ -8,13 +8,9 @@
   {% include development.html %}
 
   <div class="page{% if page.class %} {{ page.class }}{% endif %}" id="page">
-    {% include header.html %}
-
     <div class="page-content">
       {{ content }}
     </div>
-
-    {% include footer.html %}
   </div>
 
   {% include js.html %}
