@@ -4,25 +4,31 @@
 // Typography.
 // -------------------------------------------------------
 
-// Brand colors.
-$brand-color: #ff4600;
-$brand-color-sub: #ff5303;
-$brand-color-dark: #da4101;
-$brand-color-light: #ff8914;
-$brand-black: #392f2f;
+// Pizza color.
+$pizza: #ff4600;
+$pizza-dark: #da4101;
+$pizza-light: #ff5303;
 
-// Grays:
-$gray-darkish: #070707;
-$gray-darker: #353535;
-$gray-medium: #616161;
-$gray-light: #a3a3a3;
-$gray-whitish: #e6e6e6;
+// Burger color.
+$burger: #ff8914;
+$burger-dark: #f66e0e;
+$burger-light: #ffae15;
+
+// Dragon color.
+$dragon: #392f2f;
+
+// Spectrum.
+$pxn-black: #070707;
+$pxn-dark: #353535;
+$pxn-medium: #616161;
+$pxn-light: #a3a3a3;
+$pxn-white: #e6e6e6;
 
 // -------------------------------------------------------
 // Defaults.
 // -------------------------------------------------------
 
-$default-text-color: $gray-darkish;
+$default-text-color: $pxn-black;
 $default-background-color: white;
 $default-line-height: 1.45;
 $default-spacing: $default-line-height + 0rem;
