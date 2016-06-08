@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Home card.
+// -------------------------------------------------------
+
+.home-card {
+  position: relative;
+
+  width: 160px;
+  height: 320px;
+
+  cursor: pointer;
+}
+
+// Diffuse drop shadow, not a basic drop shadow on the box.
+// http://blog.invisionapp.com/how-to-make-the-perfect-diffused-drop-shadow/
+//
+// $1 =>
+// Quick note about the box-shadow declaration:
+// We use TWO shadows. The second one is tinted to reflect the image color.
+// In order to do that, and because we don't have the box-shadow-color long-hand property,
+// we need to use the inherited color behavior (like on border/outline/etc.).
+// This means that we omit the second color from the declaration. The second shadow will
+// then default to the block `color` rule value.
+// In the implementation, each variant will apply the correct tint. See at the end of file.
+.home-card__shadow {
+  position: absolute;
+  right: 10%;
+  bottom: 2%;
+  left: 10%;
+
+  height: 85%;
+
+  box-shadow: 0 5px 40px rgba(0,0,0, 0.5), 0 5px 40px;  // See $1.
+}
+
+.home-card__image {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 2px;
+}
+
+.home-card__shadow,
+.home-card__image {
+  transition: all 600ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.home-card:hover .home-card__shadow {
+  box-shadow: 0 5px 60px rgba($pxn-black, 0.5), 0 5px 60px; // See $1.
+}
+
+.home-card:hover .home-card__image {
+  transform: translateY(-10px) scale(1.05, 1.05);
+}
+
+.home-card__text {
+  @include font-title;
+
+  position: absolute;
+  right: 8px;
+  bottom: 16px;
+  left: 0;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: 8px;
+
+  color: white;
+  background: linear-gradient(to right, rgba($pxn-black, 0.5) 0%, rgba($pxn-black, 0) 100%);
+
+  font-size: 2.0rem;
+
+  text-align: left;
+}
+
+// -------------------------------------------------------
+// Implementations.
+// -------------------------------------------------------
+
+.home-card--steredenn {
+  .home-card__shadow {
+    color: rgba($pizza, 0.25); // Tint the shadow.
+  }
+  .home-card__image {
+    background-image: url("/static/images/projects/home/card-steredenn.jpg");
+  }
+}
+
+.home-card--bulletml {
+  .home-card__shadow {
+    color: rgba(#1566a6, 0.25); // Tint the shadow.
+  }
+
+  .home-card__image {
+    background-image: url("/static/images/projects/home/card-bulletml.jpg");
+  }
+}
