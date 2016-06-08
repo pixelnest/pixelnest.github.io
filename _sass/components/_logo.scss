@@ -23,7 +23,7 @@
 }
 
 .logo__link:hover .logo__name {
-  color: $pizza;
+  color: $dragon;
   text-shadow: none;
 
   transform: translateY(2px) scale(1.2, 1.2);
@@ -34,8 +34,6 @@
 // Image.
 
 .logo__image {
-  padding: 8px 0;
-
   img {
     width: 110px;
     height: auto;
@@ -57,6 +55,7 @@
   text-shadow: 0 3px 10px rgba(black, 0.2);
 
   font-size: 4.8rem;
+  line-height: normal;
 
   transition: all 250ms ease-out;
 }
@@ -65,5 +64,6 @@
 // Block-variants.
 // -------------------------------------------------------
 
-.logo--home {
+.logo--home .logo__name {
+  margin-bottom: 16px;
 }
