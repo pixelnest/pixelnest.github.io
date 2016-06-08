@@ -3,3 +3,41 @@
 // -------------------------------------------------------
 // Footer.
 // -------------------------------------------------------
+
+.page-footer {
+  @include font-title;
+
+  display: table;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+  padding: 0 16px;
+
+  color: white;
+  background: $pxn-dark;
+}
+
+.page-footer__item {
+  display: table-cell;
+
+  width: 50%;
+
+  vertical-align: middle;
+}
+
+.page-footer__item.copyright {
+  line-height: 1.4;
+
+  p:first-child {
+    font-size: 1.2rem;
+  }
+
+  p:last-child {
+    font-size: 1.6rem;
+  }
+}
+
+.page-footer__item.social {
+  text-align: right;
+}
