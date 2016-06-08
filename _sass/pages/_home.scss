@@ -5,6 +5,35 @@
 // -------------------------------------------------------
 
 .home {
+  @include font-title;
+
   background: url("/static/images/header/home.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+
+.home__list {
+  padding: 32px 0;
+
+  text-align: center;
+}
+
+.home__project {
+  display: inline-block;
+
+  margin: 8px;
+}
+
+.home__tagline {
+  color: white;
+
+  font-size: 2.4rem;
+
+  text-align: center;
+}
+
+.home__footer {
+  position: fixed;
+  bottom: 24px;
+
+  width: 100%;
 }
