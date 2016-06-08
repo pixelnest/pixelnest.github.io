@@ -3,3 +3,22 @@
 // -------------------------------------------------------
 // Header.
 // -------------------------------------------------------
+
+.page-header {
+}
+
+.banner {
+  display: table;
+
+  width: 100%;
+  height: 240px;
+
+  background: url("/static/images/header/header_compact.jpg") no-repeat center bottom;
+  background-size: cover;
+}
+
+.banner__cell {
+  display: table-cell;
+
+  vertical-align: middle;
+}
