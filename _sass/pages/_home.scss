@@ -11,6 +11,21 @@
   background-size: cover;
 }
 
+// -------------------------------------------------------
+// Header.
+// -------------------------------------------------------
+
+.home__header {
+  padding-top: 32px;
+}
+
+// -------------------------------------------------------
+// Content.
+// -------------------------------------------------------
+
+.home__content {
+}
+
 .home__list {
   padding: 32px 0;
 
@@ -23,17 +38,21 @@
   margin: 8px;
 }
 
-.home__tagline {
-  color: white;
-
-  font-size: 2.4rem;
-
-  text-align: center;
-}
+// -------------------------------------------------------
+// Footer.
+// -------------------------------------------------------
 
 .home__footer {
   position: fixed;
   bottom: 24px;
 
   width: 100%;
+}
+
+.home__tagline {
+  color: white;
+
+  font-size: 2.4rem;
+
+  text-align: center;
 }
