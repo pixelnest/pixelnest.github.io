@@ -4,14 +4,72 @@
 // Entry.
 // -------------------------------------------------------
 
-.entry__content {
+.entry {
+  position: relative;
+
+  margin-bottom: 128px;
+}
+
+// Titles.
+
+.entry__title,
+.entry__subtitle {
+  @include font-title;
+
+  line-height: normal;
+}
+
+.entry__title {
+  font-size: 3.2rem;
+}
+
+.entry__subtitle {
   font-size: 1.8rem;
+}
 
-  // -------------------------------------------------------
-  // Spacings.
-  // -------------------------------------------------------
+// Meta.
 
-  // Add the line-height as a the default spacing
+.entry__metadata {
+}
+
+.entry__author {
+}
+
+.entry__date {
+}
+
+// Content.
+
+.entry__content {
+  margin-bottom: 48px;
+
+  font-size: 1.6rem;
+}
+
+// Footer.
+
+.entry__footer {
+  @include font-title;
+
+  padding-top: 8px;
+
+  color: $pxn-light;
+  border-top: 1px solid $pxn-white;
+
+  font-size: 1.2rem;
+
+  img {
+    width: 16px;
+    height: auto;
+  }
+}
+
+// -------------------------------------------------------
+// Content.
+// -------------------------------------------------------
+
+.entry__content {
+  // Add the line-height as a the default spacing.
   h1,
   h2,
   h3,
@@ -31,6 +89,7 @@
     margin-bottom: $default-spacing;
   }
 
+  // Max-width for images.
   img {
     max-width: 100%;
   }
