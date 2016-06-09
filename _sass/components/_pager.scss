@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Pager.
+// -------------------------------------------------------
+
+.pager {
+  $height: 40px;
+
+  display: table;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: $height;
+
+  color: rgba($pxn-black, 0.5);
+  background: $burger;
+  border-radius: 2px;
+
+  text-align: center;
+
+  .pager__link {
+    line-height: $height; // Take full height.
+  }
+}
+
+// Cells.
+
+.pager__previous,
+.pager__next,
+.pager__all {
+  display: table-cell;
+
+  width: 33.33%;
+
+  font-size: 1.6rem;
+
+  vertical-align: middle;
+}
+
+.pager__previous {
+}
+
+.pager__next {
+}
+
+.pager__all {
+  border-right: 1px solid $burger-dark;
+  border-left: 1px solid $burger-dark;
+}
+
+// Link.
+
+.pager__link {
+  display: block;
+
+  color: white;
+
+  transition: background 200ms ease-out;
+
+  span {
+    border-bottom: 1px solid $burger;
+
+    transition: border 200ms ease-out;
+  }
+}
+
+.pager__link:hover {
+  background: rgba($burger-dark, 0.5);
+
+  span {
+    border-bottom: 1px solid white;
+  }
+}
