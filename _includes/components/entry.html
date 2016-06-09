@@ -1,0 +1,36 @@
+{% comment %}
+  Expected variable:
+
+  * entry_url
+  * entry_title
+  * entry_subtitle
+  * entry_date
+  * entry_content
+  * entry_author
+{% endcomment %}
+
+<article class="entry">
+  <h1 class="entry__title">
+    <a href="{{ entry_url }}">
+      {{ entry_title }}
+    </a>
+  </h1>
+
+  {% if entry_subtitle %}
+    <h2 class="entry__subtitle">
+      {{ entry_subtitle }}
+    </h2>
+  {% endif %}
+
+  <aside class="entry__metadata">
+    {% include components/author.html %}
+
+    <footer>
+      {{ entry_date | date: "%d %b. %Y" | downcase }}
+    </footer>
+  </aside>
+
+  <div class="entry__content">
+    {{ entry_content }}
+  </div>
+</article>

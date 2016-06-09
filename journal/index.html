@@ -6,33 +6,15 @@ subtitle: read the lastest news from the studio
 # So, for the moment, we need to let journal in its own folder.
 ---
 
-{% for post in paginator.posts %}
-<article class="entry">
-  <h2 class="entry__title">
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </h2>
+{% for entry in paginator.posts %}
+  {% assign entry_url      = entry.url %}
+  {% assign entry_title    = entry.title %}
+  {% assign entry_subtitle = entry.subtitle %}
+  {% assign entry_author   = entry.author %}
+  {% assign entry_date     = entry.date %}
+  {% assign entry_content  = entry.content %}
 
-
-  {% if post.subtitle %}
-  <h3 class="entry__subtitle">
-    {{ post.subtitle }}
-  </h3>
-  {% endif %}
-
-  <aside class="entry__metadata">
-    {% include components/author.html %}
-
-    <section class="entry__infos">
-      <p>
-        {{ post.date | date: "%d %b. %Y" | downcase }}
-      </p>
-    </section>
-  </aside>
-
-  <section class="entry__content">
-    {{ post.content }}
-  </section>
-</article>
+  {% include components/entry.html %}
 {% endfor %}
 
 {% include components/pager.html %}
