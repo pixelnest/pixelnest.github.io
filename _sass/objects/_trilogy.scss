@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Trilogy.
+// A trilogy is a three-part table, each cell having the
+// same size and being vertically-aligned.
+// By default, each cell has its text centered.
+// -------------------------------------------------------
+
+.trilogy {
+  display: table;
+
+  width: 100%;
+}
+
+.trilogy__pane {
+  display: table-cell;
+
+  width: 33.33%;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+.trilogy__pane--left {
+  text-align: left;
+}
+
+.trilogy__pane--right {
+  text-align: right;
+}
