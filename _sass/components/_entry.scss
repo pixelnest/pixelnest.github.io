@@ -25,6 +25,21 @@
 
 .entry__title {
   font-size: 3.2rem;
+
+  a {
+    display: block;
+
+    color: $pizza;
+
+    transition: all 250ms ease-out;
+  }
+
+  a:hover {
+    padding-left: 5px;
+
+    color: white;
+    background: $pizza;
+  }
 }
 
 .entry__subtitle {
