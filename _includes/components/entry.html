@@ -9,6 +9,13 @@
   * entry_author
 {% endcomment %}
 
+{% capture author_lower %}{{ entry_author | downcase }}{% endcapture %}
+{% if author_lower contains 'damien' %}
+  {% assign author_id = "dm" %}
+{% elsif author_lower contains 'matthieu' %}
+  {% assign author_id = "mo" %}
+{% endif %}
+
 <article class="entry">
   <h1 class="entry__title">
     <a href="{{ entry_url }}">
@@ -33,4 +40,25 @@
   <div class="entry__content">
     {{ entry_content }}
   </div>
+
+  <footer class="entry__footer">
+    <div class="trilogy">
+      <div class="trilogy__pane trilogy__pane--left">
+        {{ entry_date | date: "%d %b. %Y" | downcase }}
+      </div>
+      <div class="trilogy__pane">
+        <img src="/static/images/logo/logo_filled.png" />
+      </div>
+      <div class="trilogy__pane trilogy__pane--right">
+        {% case author_id %}
+          {% when 'dm' %}
+            By Damien Mayance
+          {% when 'mo' %}
+            By Matthieu Oger
+          {% else %}
+            By Pixelnest Studio
+        {% endcase %}
+      </div>
+    </div>
+  </footer>
 </article>
