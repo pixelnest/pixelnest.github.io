@@ -10,7 +10,11 @@
   margin-bottom: 128px;
 }
 
-// Titles.
+// Header.
+
+.entry__header {
+  margin-bottom: 40px;
+}
 
 .entry__title,
 .entry__subtitle {
@@ -24,18 +28,47 @@
 }
 
 .entry__subtitle {
+  color: $pxn-medium;
+
   font-size: 1.8rem;
 }
 
 // Meta.
 
 .entry__metadata {
+  $size: 128px;
+
+  @include font-title;
+
+  position: absolute;
+  top: 54px + 40px;
+  left: -$size;
+
+  width: $size;
+
+  line-height: normal;
+
+  text-align: center;
 }
 
 .entry__author {
+  img {
+    width: 64px;
+    height: auto;
+    margin-bottom: 8px;
+
+    border-radius: 2px;
+  }
+
+  figcaption {
+    font-size: 1.6rem;
+  }
 }
 
 .entry__date {
+  color: $pxn-light;
+
+  font-size: 1.4rem;
 }
 
 // Content.
