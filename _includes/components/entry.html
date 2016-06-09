@@ -17,17 +17,19 @@
 {% endif %}
 
 <article class="entry">
-  <h1 class="entry__title">
-    <a href="{{ entry_url }}">
-      {{ entry_title }}
-    </a>
-  </h1>
+  <header class="entry__header">
+    <h1 class="entry__title">
+      <a href="{{ entry_url }}">
+        {{ entry_title }}
+      </a>
+    </h1>
 
-  {% if entry_subtitle %}
-    <h2 class="entry__subtitle">
-      {{ entry_subtitle }}
-    </h2>
-  {% endif %}
+    {% if entry_subtitle %}
+      <h2 class="entry__subtitle">
+        {{ entry_subtitle }}
+      </h2>
+    {% endif %}
+  </header>
 
   <aside class="entry__metadata">
     {% include components/author.html %}
