@@ -6,11 +6,11 @@ subtitle: April 1st, 2016
 
 ### A mass arrival of bullets is coming this April on the Xbox One with the chaotic space shooter STEREDENN!
 
-<small>
-The unique space roguelike-shooter will hit the Xbox One on April 1st.
+<div style="font-size: 0.8em;">
+  The unique space roguelike-shooter will hit the Xbox One on April 1st.
 
-_March 21, 2016 - Rennes, France._
-</small>
+  _March 21, 2016 - Rennes, France._
+</div>
 
 ---
 
