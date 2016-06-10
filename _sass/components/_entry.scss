@@ -78,6 +78,18 @@
   figcaption {
     font-size: 1.6rem;
   }
+
+  a {
+    color: $burger;
+
+    &:hover {
+      color: $burger-light;
+    }
+
+    &:active {
+      color: $burger-dark;
+    }
+  }
 }
 
 .entry__date {
