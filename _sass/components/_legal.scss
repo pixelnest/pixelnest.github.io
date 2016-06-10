@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Legal.
+// -------------------------------------------------------
+
+.legal {
+  padding: 16px;
+
+  background: #fafafa;
+  border: 1px solid $pxn-white;
+
+  font-family: $font-code;
+  font-size: 1.2rem;
+
+  .primary {
+    margin-bottom: 8px;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  a {
+    @extend %link;
+  }
+}
+
+.legal__data,
+.legal__contact {
+  margin-bottom: $default-spacing;
+}
+
+.legal__data {
+}
+
+.legal__contact {
+}
+
+.legal__detail {
+}
