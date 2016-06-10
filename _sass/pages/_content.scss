@@ -10,3 +10,87 @@
   margin: 0 auto;
   padding: 80px 0;
 }
+
+// -------------------------------------------------------
+// Content block.
+//
+// A content-block is a generic block of content which can
+// contains almost anything. It's an entry body, a standard
+// section.
+//
+// If you have some contents that need basic styling, use
+// this.
+// -------------------------------------------------------
+
+.content-block {
+  font-size: 1.8rem;
+}
+
+.content-block {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hgroup,
+  ul,
+  ol,
+  dd,
+  p,
+  figure,
+  pre,
+  table,
+  fieldset,
+  hr {
+    // Add the line-height as a the default spacing.
+    margin-bottom: $default-spacing;
+  }
+}
+
+.content-block ul {
+  padding-left: $default-spacing * 2;
+
+  list-style: circle;
+}
+
+.content-block ol {
+  padding-left: $default-spacing * 2;
+}
+
+.content-block strong {
+  font-weight: bold;
+}
+
+.content-block em {
+  font-style: italic;
+}
+
+.content-block img {
+  display: block;
+
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.content-block a {
+  @extend %link;
+}
+
+.content-block hr {
+  width: 50%;
+  margin-right: auto;
+  margin-bottom: $default-spacing * 2;
+  margin-left: auto;
+
+  border: none;
+  border-top: 1px solid $pxn-white;
+}
+
+.content-block iframe {
+  display: block;
+
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: $default-spacing;
+}
