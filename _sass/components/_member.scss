@@ -38,20 +38,17 @@
 
 .member__site a,
 .member__twitter a {
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.member__site a {
   padding-left: 20px + 8px;
 
-  background-image: url("/static/images/icons/member-site.png");
+  background-repeat: no-repeat;
+  background-position: left center;
   background-size: 20px;
 }
 
-.member__twitter a {
-  padding-left: 19px + 8px;
+.member__site a {
+  background-image: url("/static/images/icons/member-site.png");
+}
 
+.member__twitter a {
   background-image: url("/static/images/icons/member-twitter.png");
-  background-size: 19px 15px;
 }
