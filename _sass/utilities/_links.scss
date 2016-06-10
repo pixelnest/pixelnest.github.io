@@ -5,19 +5,17 @@
 // -------------------------------------------------------
 
 %link {
-  $color: $pizza;
-
-  color: $color;
+  color: $pizza;
 
   text-decoration: none;
 
   &:hover {
-    color: lighten($color, 5%);
+    color: $pizza-light;
 
     text-decoration: underline;
   }
 
   &:active {
-    color: darken($color, 5%);
+    color: $pizza-dark;
   }
 }
