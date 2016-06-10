@@ -5,63 +5,50 @@ subtitle: <em>pixelnest</em>
 permalink: /about/
 ---
 
-<p>Pixelnest Studio is a company based in Rennes, France.</p>
+<section class="studio">
+  <p>Pixelnest Studio is a company based in Rennes, France.</p>
 
-<h2>Folks</h2>
+  <div class="basic-grid">
+    <div class="col col-1-2">
+      {% assign member_name    = "Damien Mayance" %}
+      {% assign member_id      = "damien" %}
+      {% assign member_avatar  = "http://www.gravatar.com/avatar/545f7c7f0ed11d6ef21722a7e6c47acf?s=400" %}
+      {% assign member_site    = "http://dmayance.com" %}
+      {% assign member_twitter = "valryon" %}
 
-<section class="founders">
+      {% include components/member.html %}
+    </div>
 
-  <article class="founder dmayance">
-    <img class="founder__cover"
-         src="http://www.gravatar.com/avatar/545f7c7f0ed11d6ef21722a7e6c47acf?s=400"
-         title="Damien Mayance"
-         alt="Damien Mayance" />
+    <div class="col col-1-2">
+      {% assign member_name    = "Matthieu Oger" %}
+      {% assign member_id      = "matthieu" %}
+      {% assign member_avatar  = "/static/images/team/moger.jpg" %}
+      {% assign member_site    = "http://solarsailer.net" %}
+      {% assign member_twitter = "solarsailer" %}
 
-    <h3 class="founder__title" id="damien">Damien Mayance</h3>
-
-    <ul class="founder__links">
-      <li class="blog">
-        <a href="http://dmayance.com">dmayance.com</a>
-      </li>
-      <li class="twitter">
-        <a href="http://twitter.com/valryon">@valryon</a>
-      </li>
-    </ul>
-  </article>
-
-  <article class="founder moger">
-    <img class="founder__cover"
-         src="/static/images/team/moger.jpg"
-         title="Matthieu Oger"
-         alt="Matthieu Oger" />
-
-    <h3 class="founder__title" id="matthieu">Matthieu Oger</h3>
-
-    <ul class="founder__links">
-      <li class="blog">
-        <a href="http://solarsailer.net">solarsailer.net</a>
-      </li>
-      <li class="twitter">
-        <a href="http://twitter.com/solarsailer">@solarsailer</a>
-      </li>
-    </ul>
-  </article>
+      {% include components/member.html %}
+    </div>
+  </div>
 </section>
 
-<h2>Press</h2>
+<section>
+  <h2>Press</h2>
 
-<p>We have a <a href="/presskit">complete press kit available online</a>.</p>
+  <p>We have a <a href="/presskit">complete press kit available online</a>.</p>
+</section>
 
-<h2>Attributions</h2>
+<section>
+  <h2>Attributions</h2>
 
-<p>`Entypo` pictograms by Daniel Bruce, available on <a href="http://www.entypo.com/">entypo.com</a>. `Poly` font by <a href="http://www.nsilva.com/">José Nicolás Silva Schwarzenberg</a>.</p>
+  <p>`Entypo` pictograms by Daniel Bruce, available on <a href="http://www.entypo.com/">entypo.com</a>. `Poly` font by <a href="http://www.nsilva.com/">José Nicolás Silva Schwarzenberg</a>.</p>
 
-<p>The site is hosted by Github, and powered by Jekyll.</p>
+  <p>The site is hosted by Github, and powered by Jekyll.</p>
+</section>
 
-<!-- legal -->
+<hr />
 
-<hr class="legal-separator" />
+<section>
+  <p class="legal-explanation">Because the company is located in France, the law forces us to display what's next in French:</p>
 
-<p class="legal-explanation">Because the company is located in France, the law forces us to display what's next in French:</p>
-
-{% include components/legal.html %}
+  {% include components/legal.html %}
+</section>

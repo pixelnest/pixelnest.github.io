@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Member.
+// -------------------------------------------------------
+
+.member {
+  line-height: normal;
+
+  text-align: center;
+
+  a {
+    @extend %link;
+  }
+}
+
+.member__avatar {
+  width: 216px;
+  height: auto;
+  margin-bottom: 24px;
+
+  border-radius: 1000px;
+}
+
+.member__title {
+  @include font-title;
+
+  font-size: 3.2rem;
+}
+
+.member__social {
+  font-size: 1.8rem;
+}
+
+// -------------------------------------------------------
+// Images.
+// -------------------------------------------------------
+
+.member__site a,
+.member__twitter a {
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.member__site a {
+  padding-left: 20px + 8px;
+
+  background-image: url("/static/images/icons/member-site.png");
+  background-size: 20px;
+}
+
+.member__twitter a {
+  padding-left: 19px + 8px;
+
+  background-image: url("/static/images/icons/member-twitter.png");
+  background-size: 19px 15px;
+}

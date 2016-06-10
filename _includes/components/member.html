@@ -1,0 +1,31 @@
+{% comment %}
+  Expected variables:
+
+  - member_name
+  - member_id
+  - member_avatar
+  - member_site
+  - member_twitter
+{% endcomment %}
+
+<div class="member">
+  <img class="member__avatar"
+       src="{{ member_avatar }}"
+       title="{{ member_name }}"
+       alt="{{ member_name }}" />
+
+  <h1 class="member__title" id="{{ member_id }}">{{ member_name }}</h1>
+
+  <ul class="member__social">
+    <li class="member__site">
+      <a href="{{ member_site }}/">
+        {{ member_site | remove: 'http://' | remove: 'https://' }}
+      </a>
+    </li>
+    <li class="member__twitter">
+      <a href="https://twitter.com/{{ member_twitter }}/">
+        @{{ member_twitter }}
+      </a>
+    </li>
+  </ul>
+</div>
