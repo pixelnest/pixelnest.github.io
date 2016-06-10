@@ -40,4 +40,37 @@
 
 .page-footer__item.social {
   text-align: right;
+
+  img {
+    vertical-align: middle;
+  }
+
+  .facebook,
+  .twitter {
+    width: auto;
+    height: 20px;
+  }
+
+  .facebook {
+    margin-right: 16px;
+  }
+
+  .twitter {
+    margin-right: 32px;
+  }
+
+  .pxn {
+    width: auto;
+    height: 32px;
+  }
+
+  a {
+    img {
+      transition: all 150ms ease-out;
+    }
+
+    &:hover img {
+      transform: scale(1.1, 1.1);
+    }
+  }
 }
