@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Titles.
+// -------------------------------------------------------
+
+.block {
+  margin-bottom: 40px;
+}
+
+.block:last-of-type {
+  margin-bottom: 0;
+}
+
+.block__title {
+  @include font-title;
+
+  margin-bottom: 24px;
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid $pxn-white;
+
+  font-size: 4.0rem;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.block__content {
+  @extend %content-block;
+}
