@@ -22,11 +22,11 @@
 // this.
 // -------------------------------------------------------
 
-.content-block {
+%content-block {
   font-size: 1.8rem;
 }
 
-.content-block {
+%content-block {
   h1,
   h2,
   h3,
@@ -48,36 +48,36 @@
   }
 }
 
-.content-block ul {
+%content-block ul {
   padding-left: $default-spacing * 2;
 
   list-style: circle;
 }
 
-.content-block ol {
+%content-block ol {
   padding-left: $default-spacing * 2;
 }
 
-.content-block strong {
+%content-block strong {
   font-weight: bold;
 }
 
-.content-block em {
+%content-block em {
   font-style: italic;
 }
 
-.content-block img {
+%content-block img {
   display: block;
 
   max-width: 100%;
   margin: 0 auto;
 }
 
-.content-block a {
+%content-block a {
   @extend %link;
 }
 
-.content-block hr {
+%content-block hr {
   width: 50%;
   margin-right: auto;
   margin-bottom: $default-spacing * 2;
@@ -87,7 +87,7 @@
   border-top: 1px solid $pxn-white;
 }
 
-.content-block iframe {
+%content-block iframe {
   display: block;
 
   max-width: 100%;

@@ -101,6 +101,8 @@
 // Content.
 
 .entry__content {
+  @extend %content-block;
+
   margin-bottom: 48px;
 
   font-size: 1.8rem;
