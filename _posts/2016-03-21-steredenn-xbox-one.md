@@ -19,7 +19,7 @@ Pixelnest Studio is happy to announce the **upcoming release of STEREDENN on the
 STEREDENN is a frenetic and chaotic space shooter, carved in big beautiful pixels, with insane boss battles.
 
 <p>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/qIXPGx6yrXs?rel=0" frameborder="0" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qIXPGx6yrXs?rel=0" frameborder="0" allowfullscreen>
 </iframe>
 </p>
 

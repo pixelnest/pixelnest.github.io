@@ -9,7 +9,7 @@ It has been a long time since we've made a public announcement. _We were hard at
 
 It's time for us to reveal our new baby: _Steredenn_! And there's no better way to present it than with this short teaser we've made for you:
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/ydeg_N86gBw?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/ydeg_N86gBw?rel=0" frameborder="0" allowfullscreen></iframe>
 
 Steredenn is a frenetic space shooter, carved in big beautiful pixels. But enough talking, just go read what's on [the brand new Steredenn's website](http://steredenn.pixelnest.io/). ;)
 

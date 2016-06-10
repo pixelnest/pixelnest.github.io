@@ -14,7 +14,7 @@ It's an _infinite retro 2D Shoot'Em Up_, created with Unity. Bullets patterns ar
 
 All the [sprites][shmupfest] have been drawn by the [Ulule's backers][ulule], making the game truly unique and personalized for the festival.
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/N4cRAA7Q-p4?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/N4cRAA7Q-p4?rel=0" frameborder="0" allowfullscreen></iframe>
 
 The game will be playable during (in-place) and after the festival.
 

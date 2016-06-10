@@ -7,7 +7,7 @@ Hi,
 
 The Stunfest 2014 is really close now... and we have released a trailer for the Shmupfest! ;)
 
-<iframe width="640" height="360" src="//www.youtube.com/embed/N4cRAA7Q-p4?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/N4cRAA7Q-p4?rel=0" frameborder="0" allowfullscreen></iframe>
 
 As you can see, the Shmupfest integrates our _[BulletML for Unity](/work/bulletml-for-unity/)_ plugin to create those awesome patterns.
 

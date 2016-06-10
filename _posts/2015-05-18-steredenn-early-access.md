@@ -11,7 +11,7 @@ It will cost $9.99, minus 10% during the Early Access.
 
 [Grab it NOW!](http://store.steampowered.com/app/347160) :)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/EtyQMcc19xY?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EtyQMcc19xY?rel=0" frameborder="0" allowfullscreen></iframe>
 
 _If you like the game, please please, spread the word! Tweet, like, reblog, do a stream or a video on Youtube, etc. It will help us a lot._
 
