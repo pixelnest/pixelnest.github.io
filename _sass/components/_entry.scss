@@ -148,9 +148,51 @@
   hr {
     margin-bottom: $default-spacing;
   }
+}
 
-  // Max-width for images.
-  img {
-    max-width: 100%;
-  }
+.entry__content ul {
+  padding-left: $default-spacing * 2;
+
+  list-style: circle;
+}
+
+.entry__content ol {
+  padding-left: $default-spacing * 2;
+}
+
+.entry__content strong {
+  font-weight: bold;
+}
+
+.entry__content em {
+  font-style: italic;
+}
+
+.entry__content img {
+  display: block;
+
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.entry__content a {
+  @extend %link;
+}
+
+.entry__content hr {
+  width: 50%;
+  margin-right: auto;
+  margin-bottom: $default-spacing * 2;
+  margin-left: auto;
+
+  border: none;
+  border-top: 1px solid $pxn-white;
+}
+
+.entry__content iframe {
+  display: block;
+
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: $default-spacing;
 }
