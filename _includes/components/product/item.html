@@ -1,0 +1,22 @@
+{% assign item = include.data %}
+
+<article class="product-item">
+  <div class="product-item__image-wrapper">
+    <img class="product-item__image"
+         src="{{ item.cover }}"
+         alt="{{ item.title }}"
+         title="{{ item.title }}" />
+  </div>
+
+  <section class="product-item__body">
+    <h1 class="product-item__title">{{ item.title }}</h1>
+
+    <div class="product-item__content">
+      {% if item.recap %}
+        {{ item.recap | markdownify }}
+      {% else %}
+        {{ item.excerpt | markdownify }}
+      {% endif %}
+    </div>
+  </section>
+</article>

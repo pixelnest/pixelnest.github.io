@@ -1,0 +1,19 @@
+---
+title: Projects
+subtitle: Games, apps and other products
+
+permalink: /portfolio/
+redirect_from: /work/
+---
+
+{% for product in site.products %}
+  {% if product.hero %}
+    {% include components/product/hero.html data=product %}
+  {% endif %}
+{% endfor %}
+
+{% for product in site.products %}
+  {% if product.hero == nil %}
+    {% include components/product/item.html data=product %}
+  {% endif %}
+{% endfor %}

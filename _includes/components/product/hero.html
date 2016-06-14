@@ -1,0 +1,38 @@
+{% assign hero = include.data %}
+
+<article class="product-hero">
+  <div class="product-hero__image-wrapper">
+    <img class="product-hero__image"
+         src="{{ hero.cover }}"
+         alt="{{ hero.title }}"
+         title="{{ hero.title }}" />
+  </div>
+
+  <section class="product-hero__inner">
+    <header class="product-hero__header">
+      <h1 class="product-hero__title">{{ hero.title }}</h1>
+
+      {% if hero.subtitle %}
+        <h2 class="product-hero__subtitle">{{ hero.subtitle }}</h2>
+      {% endif %}
+    </header>
+
+    <div class="product-hero__content">
+      {{ hero.content | markdownify }}
+    </div>
+
+    <aside class="product-hero__links">
+      {% if hero.links and hero.links != empty %}
+        <ul>
+          {% for link in hero.links %}
+            <li>
+              <a href="{{ link.url }}">
+                {{ link.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </aside>
+  </section>
+</article>
