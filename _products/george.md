@@ -1,8 +1,10 @@
 ---
 title: George
 subtitle: Le Pirate
-type: game
+type: [game]
 cover: /static/images/products/george/cover.jpg
+
+excerpt: "_George_ is a short game created to illustrate the use of the LeapMotion and presented at the Stunfest 2013 (an event at Rennes, France)."
 ---
 
 “_George_ was an unknown salary man, working in the offices of the CaribbeanMegaBank™ (also known as the CMB). But one day, he got bored and decided to live a real pirate adventure!

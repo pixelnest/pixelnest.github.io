@@ -1,15 +1,15 @@
 ---
 title: RAMPAINT
 subtitle: Multiplayer-Platformer-Fighter-Yeah
-type: game
+type: [game]
 cover: /static/images/products/rampaint/cover.jpg
 
 state: dead
 ---
 
-**This project is discontinued. See [this Journal post](/2014/08/pixelnest-overview/) to know why.**
-
 RAMPAINT is a multiplayer-platformer-fighter game for your couch, friends and TV.
+
+**This project has been discontinued on 13 aug. 2014. See [this Journal post](/2014/08/pixelnest-overview/) to know why.**
 
 It involves explosions, powershards and giant avatars.
 

@@ -1,6 +1,7 @@
 ---
 title: Steredenn
-type: game
+subtitle: An Endless Chaotic Space Shooter
+type: [game]
 cover: /static/images/products/steredenn/cover.jpg
 
 excerpt: "_Steredenn_ is a frenetic and chaotic space shooter, carved in big beautiful pixels."
@@ -12,6 +13,8 @@ links:
     url: http://steredenn.pixelnest.io
   - name: Watch the trailer
     url: https://youtu.be/EtXajayBLzw
+  - name: Press Page
+    url: /presskit/steredenn.html
 ---
 
 Steredenn is a **roguelike-shmup** video game for **PC/Mac/Linux**, **Xbox One** and **PlayStation 4** made by Pixelnest Studio.
