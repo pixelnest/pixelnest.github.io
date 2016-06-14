@@ -74,6 +74,8 @@
 // -------------------------------------------------------
 
 .product-item {
+  margin-bottom: 40px;
+
   &:after {
     display: table;
     clear: both;
@@ -83,21 +85,35 @@
 }
 
 .product-item__image-wrapper {
+  float: left;
+
+  margin-right: 24px;
 }
 
 .product-item__image {
-  float: left;
+  display: block;
 
   width: 128px;
   height: auto;
+
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(black, 0.25);
 }
 
 .product-item__body {
 }
 
 .product-item__title {
+  @include font-title;
+
+  margin-bottom: 12px;
+
+  font-size: 2.4rem;
+  line-height: normal;
 }
 
 .product-item__content {
   @extend %content-block;
+
+  font-size: 1.6rem !important;
 }
