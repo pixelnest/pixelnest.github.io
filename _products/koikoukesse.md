@@ -2,9 +2,12 @@
 title: Koikoukesse
 type: game
 cover: /static/images/products/koikoukesse/cover.jpg
+excerpt: "A quizz about video games for iOS devices."
+
+state: dead
 ---
 
-**This project is discontinued. See [this Journal post](/2013/09/breaking-news) to know why.**
+**This project has been discontinued on 26 sep. 2013. See [this Journal post](/2013/09/breaking-news) to know why.**
 
 The Koikoukesse is a video game quizz made in collaboration with Laurent Brossard.
 
