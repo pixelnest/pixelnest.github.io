@@ -2,7 +2,7 @@
 title: Shmupfest
 subtitle: Stunfest 2014 Game
 type: [game, service]
-cover: /static/images/products/shmupfest/cover.jpg
+cover: /static/images/products/shmupfest/cover.png
 
 excerpt: "The _Shmupfest_ is an _infinite retro 2D shmup_ we made for the Stunfest 2014 festival."
 
