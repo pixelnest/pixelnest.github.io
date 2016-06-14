@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Koikoukesse
-cover: /static/images/projects/Koikoukesse/cover.png
+cover: /static/images/products/koikoukesse/cover.png
 ---
 
 **This project is discontinued. See [this Journal post](/2013/09/breaking-news) to know why.**

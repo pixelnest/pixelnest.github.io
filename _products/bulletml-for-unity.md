@@ -1,7 +1,7 @@
 ---
 title: BulletML for Unity
 type: library
-cover: /static/images/projects/bulletml-for-unity/cover.jpg
+cover: /static/images/products/bulletml-for-unity/cover.jpg
 
 links:
   - name: Read the docs
