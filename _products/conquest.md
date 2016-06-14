@@ -1,3 +1,4 @@
 ---
 title: Conquest
+type: service
 ---
