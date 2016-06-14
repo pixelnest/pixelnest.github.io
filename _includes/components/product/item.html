@@ -12,11 +12,7 @@
     <h1 class="product-item__title">{{ item.title }}</h1>
 
     <div class="product-item__content">
-      {% if item.recap %}
-        {{ item.recap | markdownify }}
-      {% else %}
-        {{ item.excerpt | markdownify }}
-      {% endif %}
+      {{ item.excerpt | markdownify }}
     </div>
   </section>
 </article>

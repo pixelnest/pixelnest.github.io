@@ -2,6 +2,7 @@
 title: Koikoukesse
 type: game
 cover: /static/images/products/koikoukesse/cover.jpg
+
 excerpt: "A quizz about video games for iOS devices."
 
 state: dead
