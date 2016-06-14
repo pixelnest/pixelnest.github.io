@@ -11,22 +11,33 @@ include: ['_pages']
 exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock']
 
 # -------------------------------------------------------
+# Collections.
+# -------------------------------------------------------
+
+collections:
+  products:
+    output: true
+
+# -------------------------------------------------------
 # Defaults.
 # -------------------------------------------------------
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
 
 # -------------------------------------------------------
 # Markdown.
