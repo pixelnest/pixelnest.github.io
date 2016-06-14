@@ -7,13 +7,23 @@ redirect_from: /work/
 ---
 
 {% for product in site.products %}
-  {% if product.hero %}
+  {% if product.state == "hero" %}
     {% include components/product/hero.html data=product %}
   {% endif %}
 {% endfor %}
 
+<h1>Other products</h1>
+
 {% for product in site.products %}
-  {% if product.hero == nil %}
+  {% if product.state == nil %}
+    {% include components/product/item.html data=product %}
+  {% endif %}
+{% endfor %}
+
+<h1>Graveyard</h1>
+
+{% for product in site.products %}
+  {% if product.state == "dead" %}
     {% include components/product/item.html data=product %}
   {% endif %}
 {% endfor %}

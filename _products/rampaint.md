@@ -3,6 +3,8 @@ title: RAMPAINT
 subtitle: Multiplayer-Platformer-Fighter-Yeah
 type: game
 cover: /static/images/products/rampaint/cover.jpg
+
+state: dead
 ---
 
 **This project is discontinued. See [this Journal post](/2014/08/pixelnest-overview/) to know why.**

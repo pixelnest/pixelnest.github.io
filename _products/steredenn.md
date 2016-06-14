@@ -4,7 +4,7 @@ type: game
 cover: /static/images/products/steredenn/cover.jpg
 recap: "_Steredenn_ is a frenetic and chaotic space shooter, carved in big beautiful pixels."
 
-hero: true
+state: hero
 
 links:
   - name: Go to website
