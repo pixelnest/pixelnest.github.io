@@ -61,7 +61,7 @@
 }
 
 .home-card__text {
-  @include font-title;
+  @include font-title(false);
 
   position: absolute;
   right: 8px;

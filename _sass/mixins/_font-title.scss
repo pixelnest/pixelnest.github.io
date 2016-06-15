@@ -4,8 +4,9 @@
 // Font title.
 // -------------------------------------------------------
 
-@mixin font-title {
+@mixin font-title($normal-line-height: true) {
   font-family: $font-title;
+  line-height: if($normal-line-height, normal, $default-line-height);
 
   -webkit-font-smoothing: antialiased; // Disable thick font look on Chrome.
 }

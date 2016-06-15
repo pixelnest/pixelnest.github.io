@@ -19,8 +19,6 @@
 .entry__title,
 .entry__subtitle {
   @include font-title;
-
-  line-height: normal;
 }
 
 .entry__title {
@@ -60,8 +58,6 @@
   left: -$size;
 
   width: $size;
-
-  line-height: normal;
 
   text-align: center;
 }

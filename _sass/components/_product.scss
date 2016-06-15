@@ -30,8 +30,6 @@
 .product-hero__subtitle {
   @include font-title;
 
-  line-height: normal;
-
   text-align: center;
 }
 
@@ -60,7 +58,6 @@
   @include font-title;
 
   font-size: 2.4rem;
-  line-height: normal;
 
   text-align: right;
 
@@ -109,7 +106,6 @@
   margin-bottom: 12px;
 
   font-size: 2.4rem;
-  line-height: normal;
 }
 
 .product-item__content {

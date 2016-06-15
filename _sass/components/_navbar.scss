@@ -5,7 +5,7 @@
 // -------------------------------------------------------
 
 .navbar {
-  @include font-title;
+  @include font-title(false);
 
   box-sizing: border-box;
   height: 40px;
