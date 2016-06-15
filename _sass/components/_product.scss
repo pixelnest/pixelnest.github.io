@@ -67,6 +67,21 @@
 
   a {
     @extend %link;
+
+    padding-right: 28px;
+
+    background-image: url("/static/images/icons/product-website.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+  }
+
+  a[href*="youtu"] {
+    background-image: url("/static/images/icons/product-trailer.png");
+  }
+
+  a[href*="press"] {
+    background-image: url("/static/images/icons/product-press.png");
   }
 }
 
