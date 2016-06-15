@@ -48,7 +48,7 @@
 }
 
 .product-hero__content {
-  @extend %content-block;
+  @include mixed-data;
 
   box-sizing: border-box;
   margin-bottom: 24px;
@@ -134,9 +134,9 @@
 }
 
 .product-item__content {
-  @extend %content-block;
+  @include mixed-data;
 
-  font-size: 1.6rem !important;
+  font-size: 1.6rem;
 }
 
 .product-item__link {

@@ -97,7 +97,7 @@
 // Content.
 
 .entry__content {
-  @extend %content-block;
+  @include mixed-data;
 
   margin-bottom: 48px;
 

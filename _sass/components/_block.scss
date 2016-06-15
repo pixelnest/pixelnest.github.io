@@ -25,5 +25,5 @@
 }
 
 .block__content {
-  @extend %content-block;
+  @include mixed-data;
 }
