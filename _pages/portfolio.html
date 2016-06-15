@@ -6,24 +6,30 @@ permalink: /portfolio/
 redirect_from: /work/
 ---
 
-{% for product in site.products %}
+{% assign products = site.products | sort: 'date' | reverse %}
+
+{% for product in products %}
   {% if product.state == "hero" %}
     {% include components/product/hero.html data=product %}
   {% endif %}
 {% endfor %}
 
-<h1>Other products</h1>
+<section class="block">
+  <h1 class="block__title">Products and services</h1>
 
-{% for product in site.products %}
-  {% if product.state == nil %}
-    {% include components/product/item.html data=product %}
-  {% endif %}
-{% endfor %}
+  {% for product in products %}
+    {% if product.state == nil %}
+      {% include components/product/item.html data=product %}
+    {% endif %}
+  {% endfor %}
+</section>
 
-<h1>Graveyard</h1>
+<section class="block">
+  <h1 class="block__title">Abandoned</h1>
 
-{% for product in site.products %}
-  {% if product.state == "dead" %}
-    {% include components/product/item.html data=product %}
-  {% endif %}
-{% endfor %}
+  {% for product in products %}
+    {% if product.state == "dead" %}
+      {% include components/product/item.html data=product %}
+    {% endif %}
+  {% endfor %}
+</section>
