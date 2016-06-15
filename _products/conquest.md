@@ -2,6 +2,7 @@
 title: Conquest
 type: [service]
 cover: /static/images/products/conquest/cover.jpg
+date: 2016-03-01
 
 links:
   - name: Read more on their website

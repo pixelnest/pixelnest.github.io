@@ -3,6 +3,7 @@ title: RAMPAINT
 subtitle: Multiplayer-Platformer-Fighter-Yeah
 type: [game]
 cover: /static/images/products/rampaint/cover.jpg
+date: 2013-12-17
 
 state: dead
 ---
