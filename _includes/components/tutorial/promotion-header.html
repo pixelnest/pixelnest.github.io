@@ -1,10 +1,9 @@
 {% if page.show_promotion != nil %}
 
-<!-- Steredenn -->
-{% if page.show_promotion == 'steredenn' %}
-<div class="promotion-header">
-  Our game — <a href="http://steredenn.pixelnest.io/">Steredenn</a> — is <a href="http://steredenn.pixelnest.io/#buy">available</a> on PC/Mac/Linux!
-</div>
-{% endif %}
+  {% if page.show_promotion == 'steredenn' %}
+    <div class="promotion-header promotion-header--steredenn">
+      <a href="http://steredenn.pixelnest.io/">Steredenn</a> — our game — is <a href="http://steredenn.pixelnest.io/#buy">available</a> on PC/Mac/Linux and Xbox One!
+    </div>
+  {% endif %}
 
 {% endif %}

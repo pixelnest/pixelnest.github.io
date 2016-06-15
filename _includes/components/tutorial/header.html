@@ -1,0 +1,32 @@
+<header class="tutorial-header">
+  <nav class="trilogy">
+
+    <div class"tutorial-header__back trilogy__pane">
+      <a href="/">
+        ◇ Back to Pixelnest
+      </a>
+    </div>
+
+    <div class="tutorial-header__reference trilogy__pane">
+      {% if page.tutorial.link and page.tutorial.name %}
+        {% if page.tutorial.show_label == nil or page.tutorial.show_label == true %}
+          Tutorial:
+          <a href="{{ page.tutorial.link }}">
+            {{ page.tutorial.name }}
+          </a>
+        {% else %}
+          <a href="{{ page.tutorial.link }}">
+            {{ page.tutorial.name }}
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="tutorial-header__social trilogy__pane trilogy__pane--right">
+      <a href="http://twitter.com/pixelnest/">
+        Follow us on Twitter
+      </a>
+    </div>
+
+  </nav>
+</header>

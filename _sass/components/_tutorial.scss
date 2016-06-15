@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Global.
+// -------------------------------------------------------
+
+.tutorial-header,
+.promotion {
+  a {
+    @extend %link;
+  }
+}
+
+// -------------------------------------------------------
+// Header.
+// -------------------------------------------------------
+
+.tutorial-header {
+  padding: 8px;
+
+  background: $pxn-white;
+
+  font-size: 1.6rem;
+}
+
+.tutorial-header__back {
+}
+
+.tutorial-header__reference {
+}
+
+.tutorial-header__social {
+}
+
+// -------------------------------------------------------
+// Footer.
+// -------------------------------------------------------
+
+.tutorial-footer {
+  @include font-title;
+
+  padding-bottom: 16px;
+
+  color: $pxn-medium;
+
+  font-size: 1.8rem;
+
+  text-align: center;
+}
+
+// -------------------------------------------------------
+// Promotion Header.
+// -------------------------------------------------------
+
+.promotion-header {
+  padding: 8px;
+
+  color: white;
+  background: $dragon;
+
+  font-size: 1.6rem;
+
+  text-align: center;
+
+  a {
+    color: white;
+    border-bottom: 1px dotted $pxn-light;
+  }
+
+  a:hover {
+    border-bottom: 1px solid;
+  }
+}
+
+// -------------------------------------------------------
+// Promotion.
+// -------------------------------------------------------
+
+.promotion {
+}
+
+.promotion--text {
+}
+
+.promotion--image {
+  figure {
+  }
+
+  img {
+    max-width: 100%;
+
+    opacity: 0.8;
+
+    transition: opacity 300ms ease-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  figcaption {
+    font-size: 1.4rem;
+
+    text-align: center;
+  }
+}
+
+// -------------------------------------------------------
+// Page.
+// -------------------------------------------------------

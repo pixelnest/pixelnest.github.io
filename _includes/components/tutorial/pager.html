@@ -1,0 +1,31 @@
+<div class="pager {{ include.class }}">
+
+  <section class="pager__previous">
+    {% if page.links.previous %}
+      <a href="{{ page.links.previous }}" class="pager__link">
+        ← <span>Prev.</span>
+      </a>
+    {% else %}
+      ◇ Start
+    {% endif %}
+  </section>
+
+  <section class="pager__all">
+    {% if page.links.summary %}
+      <a href="{{ page.links.summary | remove: 'index.html' }}"  class="pager__link">
+        Summary
+      </a>
+    {% endif %}
+  </section>
+
+  <section class="pager__next">
+    {% if page.links.next %}
+      <a href="{{ page.links.next }}" class="pager__link">
+        <span>Next</span> →
+      </a>
+    {% else %}
+      End ◆
+    {% endif %}
+  </section>
+
+</div>
