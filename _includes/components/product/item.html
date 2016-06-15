@@ -9,7 +9,10 @@
   </div>
 
   <section class="product-item__body">
-    <h1 class="product-item__title">{{ item.title }}</h1>
+    <h1 class="product-item__title">
+      {{ item.title }}
+      <span class="product-item__type">{{ item.type | join: ", " }}</span>
+    </h1>
 
     <div class="product-item__content">
       {{ item.excerpt | markdownify }}
