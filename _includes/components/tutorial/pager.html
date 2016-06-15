@@ -5,12 +5,10 @@
       <a href="{{ page.links.previous }}" class="pager__link">
         ← <span>Prev.</span>
       </a>
-    {% else %}
-      ◇ Start
     {% endif %}
   </section>
 
-  <section class="pager__all">
+  <section class="pager__all{% if page.links.summary == nil %} pager__all--empty{% endif %}">
     {% if page.links.summary %}
       <a href="{{ page.links.summary | remove: 'index.html' }}"  class="pager__link">
         Summary
@@ -23,8 +21,6 @@
       <a href="{{ page.links.next }}" class="pager__link">
         <span>Next</span> →
       </a>
-    {% else %}
-      End ◆
     {% endif %}
   </section>
 
