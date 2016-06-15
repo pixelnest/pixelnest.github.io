@@ -1,131 +1,125 @@
-<!DOCTYPE html>
-<html class="tutorial">
-<head>
-  {% include meta.html %}
-  {% include css.html %}
+---
+layout: base
+class: tutorial
+---
 
-  <style>body { background-color: #fbfbfb; }</style>
-</head>
-<body>
-  <div class="page" id="page">
-    <!-- start promotion header -->
-    {% include components/promotion-header.html %}
-    <!-- end promotion header -->
+<div class="page" id="page">
+  {% include components/tutorial/promotion-header.html %}
 
-    <!-- reduced header -->
-    <header class="page-header">
-      <nav>
-        <!-- menu -->
-        <section class"page-back">
-          <a href="/">◇ Back to Pixelnest</a>
-        </section>
+  <header class="page-header">
+    <nav>
+      <!-- menu -->
+      <section class"page-back">
+        <a href="/">◇ Back to Pixelnest</a>
+      </section>
 
-        <section class="page-ref">
-          {% if page.tutorial.link and page.tutorial.name %}
-            {% if page.tutorial.show_label == nil or page.tutorial.show_label == true %}
-              Tutorial: <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
-            {% else %}
-              <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
-            {% endif %}
+      <section class="page-ref">
+        {% if page.tutorial.link and page.tutorial.name %}
+          {% if page.tutorial.show_label == nil or page.tutorial.show_label == true %}
+            Tutorial: <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
+          {% else %}
+            <a href="{{ page.tutorial.link }}">{{ page.tutorial.name }}</a>
           {% endif %}
-        </section>
-
-        <!-- twitter -->
-        <section class="page-link">
-          <a href="http://twitter.com/pixelnest">follow us on twitter</a>
-        </section>
-      </nav>
-    </header>
-
-    <div class="page-content">
-
-      <!-- start pagination -->
-      {% if !page.links %}
-      <div class="pager pager--top-separator pager--em">
-        <section class="pager__older">
-        {% if page.links.previous %}
-          <a href="{{ page.links.previous }}" title="Previous chapter">← Prev.</a>
         {% endif %}
-        </section>
+      </section>
 
-        {% if page.links.summary %}
-        <section class="pager__ref">
-          <a href="{{ page.links.summary | remove: 'index.html' }}" title="Summary">Summary</a>
-        </section>
-        {% endif %}
+      <!-- twitter -->
+      <section class="page-link">
+        <a href="http://twitter.com/pixelnest">follow us on twitter</a>
+      </section>
+    </nav>
+  </header>
 
-        <section class="pager__newer">
-        {% if page.links.next %}
-          <a href="{{ page.links.next }}" title="Next chapter">Next →</a>
-        {% endif %}
-        </section>
-      </div>
+  <div class="page-content">
+
+    {% if !page.links %}
+    <div class="pager">
+      <section class="pager__previous">
+      {% if page.links.previous %}
+        <a href="{{ page.links.previous }}" class="pager__link">
+          ← <span>Prev.</span>
+        </a>
+      {% else %}
+        ◇ Start
       {% endif %}
-      <!-- end pagination -->
+      </section>
 
-      <!-- post layout -->
-      <article class="entry">
-        <h2 class="entry__title">
-          <a href="{{ page.url | remove: 'index.html' }}" title="{{ page.title }}">{{ page.title }}</a>
-        </h2>
-
-        {% if page.subtitle %}
-        <h3 class="entry__subtitle">
-          {{ page.subtitle }}
-        </h3>
-        {% endif %}
-
-        {% if page.show_metadata == nil or page.show_metadata == true %}
-        <aside class="entry__metadata">
-          {% include components/author.html %}
-
-          <section class="entry__infos">
-            <p>
-              {{ page.date | date: "%d %b. %Y" | downcase }}
-            </p>
-          </section>
-        </aside>
-        {% endif %}
-
-        <section class="entry__content">
-          {{ content }}
-        </section>
-      </article>
-      <!-- end post layout -->
-
-      <!-- start pagination -->
-      <div class="pager pager--bottom-separator pager--em">
-        <section class="pager__older">
-        {% if page.links.previous %}
-          <a href="{{ page.links.previous }}" title="Previous chapter">← Prev.</a>
-        {% endif %}
-        </section>
-
+      <section class="pager__all">
         {% if page.links.summary %}
-        <section class="pager__ref">
-          <a href="{{ page.links.summary | remove: 'index.html' }}" title="Summary">Summary</a>
-        </section>
+          <a href="{{ page.links.summary | remove: 'index.html' }}"  class="pager__link">
+            Summary
+          </a>
         {% endif %}
+      </section>
 
-        <section class="pager__newer">
+      <section class="pager__next">
         {% if page.links.next %}
-          <a href="{{ page.links.next }}" title="Next chapter">Next →</a>
+          <a href="{{ page.links.next }}" class="pager__link">
+            <span>Next</span> →
+          </a>
+        {% else %}
+          End ◆
         {% endif %}
-        </section>
-      </div>
-      <!-- end pagination -->
+      </section>
+    </div>
+    {% endif %}
 
-      <!-- start promotion -->
-      {% include components/promotion.html %}
-      <!-- end promotion -->
+    <!-- post layout -->
+    <article class="entry">
+      <h2 class="entry__title">
+        <a href="{{ page.url | remove: 'index.html' }}" title="{{ page.title }}">{{ page.title }}</a>
+      </h2>
+
+      {% if page.subtitle %}
+      <h3 class="entry__subtitle">
+        {{ page.subtitle }}
+      </h3>
+      {% endif %}
+
+      {% if page.show_metadata == nil or page.show_metadata == true %}
+      <aside class="entry__metadata">
+        {% include components/author.html %}
+
+        <section class="entry__infos">
+          <p>
+            {{ page.date | date: "%d %b. %Y" | downcase }}
+          </p>
+        </section>
+      </aside>
+      {% endif %}
+
+      <section class="entry__content">
+        {{ content }}
+      </section>
+    </article>
+    <!-- end post layout -->
+
+    <div class="pager pager--bottom-separator pager--em">
+      <section class="pager__older">
+      {% if page.links.previous %}
+        <a href="{{ page.links.previous }}" title="Previous chapter">← Prev.</a>
+      {% endif %}
+      </section>
+
+      {% if page.links.summary %}
+      <section class="pager__ref">
+        <a href="{{ page.links.summary | remove: 'index.html' }}" title="Summary">Summary</a>
+      </section>
+      {% endif %}
+
+      <section class="pager__newer">
+      {% if page.links.next %}
+        <a href="{{ page.links.next }}" title="Next chapter">Next →</a>
+      {% endif %}
+      </section>
     </div>
 
-    <!-- reduced footer -->
-    <footer class="page-footer">
-      <p class="credits__desc">© 2013 pixelnest.io - we craft <strong>games</strong> and <strong>apps</strong></p>
-    </footer>
+    {% include components/tutorial/promotion.html %}
   </div>
 
-  {% include js.html %}
-</body>
-</html>
+  <footer class="page-footer">
+    <p class="credits__desc">
+      © 2016 pixelnest.io - we craft <strong>games</strong> and <strong>apps</strong>
+    </p>
+  </footer>
+</div>
