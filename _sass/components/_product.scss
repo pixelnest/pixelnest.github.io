@@ -123,3 +123,21 @@
 
   font-size: 1.6rem !important;
 }
+
+.product-item__link {
+  @include font-title;
+  @extend %link;
+
+  display: block;
+
+  padding-right: 20px;
+
+  background-image: url("/static/images/icons/product-more.png");
+  background-repeat: no-repeat;
+  background-position: right 2px;
+  background-size: 20px;
+
+  font-size: 2.4rem;
+
+  text-align: right;
+}
