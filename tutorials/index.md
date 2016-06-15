@@ -1,8 +1,8 @@
 ---
-layout: block
-
 title: Tutorials
 subtitle: we like to help!
+
+mixed_data: true
 ---
 
 Here is a list of all the tutorials and articles we made.

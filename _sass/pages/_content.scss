@@ -10,3 +10,7 @@
   margin: 0 auto;
   padding: 80px 0;
 }
+
+.mixed-data {
+  @include mixed-data;
+}

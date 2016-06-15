@@ -3,7 +3,7 @@ layout: base
 ---
 
 <div class="page" id="page">
-  <div class="page-content">
+  <div class="page-content {% if page.mixed_data %}mixed-data{% endif %}">
     {{ content }}
   </div>
 </div>

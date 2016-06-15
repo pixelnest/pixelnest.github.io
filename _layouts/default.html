@@ -5,7 +5,7 @@ layout: base
 <div class="page" id="page">
   {% include header.html %}
 
-  <div class="page-content">
+  <div class="page-content {% if page.mixed_data %}mixed-data{% endif %}">
     {{ content }}
   </div>
 
