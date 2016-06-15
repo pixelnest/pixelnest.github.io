@@ -13,7 +13,11 @@
 }
 
 .product-hero__image {
-  width: 100%;
+  display: block;
+
+  max-width: 100%;
+  max-height: 350px;
+  margin: 0 auto;
 
   border-radius: 2px;
   box-shadow: 0 0 8px rgba(black, 0.25);
