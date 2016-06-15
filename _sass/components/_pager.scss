@@ -49,6 +49,10 @@
   border-left: 1px solid $burger-dark;
 }
 
+.pager__all--empty {
+  border: none;
+}
+
 // Link.
 
 .pager__link {
