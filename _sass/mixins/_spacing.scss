@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Default spacings.
+//
+// Add the line-height as a the default spacing if nothing
+// is specified during the inclusion.
+// -------------------------------------------------------
+
+@mixin spacing($val: $default-spacing) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hgroup,
+  ul,
+  ol,
+  dd,
+  p,
+  figure,
+  pre,
+  table,
+  fieldset,
+  hr {
+    margin-bottom: $val;
+  }
+}
