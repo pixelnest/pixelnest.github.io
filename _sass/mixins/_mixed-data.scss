@@ -81,6 +81,45 @@
     @extend %link;
   }
 
+  // Code.
+
+  // Block code.
+  .highlight {
+    margin-left: -$default-spacing;
+    margin-right: -$default-spacing;
+    padding: 16px;
+
+    background: darken($dragon, 9%);
+    border-radius: 2px;
+
+    font-size: 1.4rem;
+    line-height: 1.3;
+
+    // Restore the defaults.
+    // The .highlight will take care of that.
+    code {
+      padding: 0;
+
+      background: none;
+      border: none;
+
+      font-size: 1.4rem;
+    }
+  }
+
+  // Inline code.
+  code {
+    padding: 4px;
+
+    color: #d45034;
+    background: #f0f0f0;
+    border: 1px solid $pxn-light;
+    border-radius: 2px;
+
+    font-family: $font-code;
+    font-size: 1.3rem;
+  }
+
   // Misc.
 
   hr {
