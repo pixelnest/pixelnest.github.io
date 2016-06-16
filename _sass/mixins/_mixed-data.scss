@@ -81,6 +81,41 @@
     @extend %link;
   }
 
+  // Table.
+
+  table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    tr:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+
+    th,
+    td {
+      height: 40px;
+
+      text-align: center;
+    }
+
+    th {
+      @include font-title;
+
+      color: white;
+      background-color: $pizza;
+      border: 1px solid darken($pizza, 2%);
+
+      font-weight: bold;
+    }
+
+    td {
+      border: 1px solid $pxn-white;
+
+      font-size: 1.8rem;
+    }
+  }
+
   // Code.
 
   // Block code.
