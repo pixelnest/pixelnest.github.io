@@ -1,7 +1,7 @@
 ---
 title: Creating a 2D game with Unity
 type: [tutorial]
-cover: /static/images/products/creating-game-unity/cover.jpg
+assets: /static/images/products/creating-game-unity/
 date: 2013-11-18
 
 links:

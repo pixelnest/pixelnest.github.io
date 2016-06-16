@@ -2,7 +2,7 @@
 title: George
 subtitle: Le Pirate
 type: [game]
-cover: /static/images/products/george/cover.jpg
+assets: /static/images/products/george/
 date: 2013-05-11
 
 excerpt: "_George_ is a short game created to illustrate the use of the LeapMotion and presented at the Stunfest 2013 (an event at Rennes, France)."

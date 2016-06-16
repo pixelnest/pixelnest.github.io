@@ -1,7 +1,7 @@
 ---
 title: Koikoukesse
 type: [game]
-cover: /static/images/products/koikoukesse/cover.jpg
+assets: /static/images/products/koikoukesse/
 date: 2013-09-26
 
 excerpt: "A quizz about video games for iOS devices."
