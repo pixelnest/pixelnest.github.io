@@ -130,6 +130,8 @@
     font-size: 1.4rem;
     line-height: 1.3;
 
+    white-space: pre-wrap;
+
     // Restore the defaults.
     // The .highlight will take care of that.
     code {
