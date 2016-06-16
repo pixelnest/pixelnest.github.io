@@ -18,7 +18,7 @@ redirect_from: /work/
   <h1 class="block__title">Products and services</h1>
 
   {% for product in products %}
-    {% if product.state == nil %}
+    {% if product.state == nil or product.state == "hero" %}
       {% include components/product/item.html data=product %}
     {% endif %}
   {% endfor %}
