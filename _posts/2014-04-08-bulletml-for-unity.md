@@ -10,9 +10,9 @@ Our first package for Unity—_BulletML for Unity_—has been accepted! Great! B
 From our [documentation][bulletml]:
 
 > _BulletML for Unity_ is a **simple and powerful wrapper around BulletML**, for Unity 4.3 or higher.
-
+>
 > It allows you to design some very complex bullet patterns with a simple XML file. It’s especially useful in _“Shoot’Em Up”_ (shmup) games to create memorable boss fights or enemies.
-
+>
 > Although BulletML for Unity is intended to be used in _shmups_, it is NOT limited to this genre. _You can use it in any game you want._
 
 The plugin costs 20$ on the Asset Store.
