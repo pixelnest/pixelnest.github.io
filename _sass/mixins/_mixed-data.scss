@@ -159,6 +159,17 @@
 
   // Misc.
 
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 16px;
+
+    color: $pxn-medium;
+    border-left: 8px solid $pxn-white;
+
+    font-style: italic;
+  }
+
   hr {
     width: 50%;
     margin-bottom: $default-spacing * 2;
