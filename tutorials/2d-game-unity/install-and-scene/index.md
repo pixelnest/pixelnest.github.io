@@ -37,14 +37,14 @@ Unity is bundled with MonoDevelop (4.0.1 as of today) to edit code.
 
 If you are on Windows you can (and should) use an alternative:
 
-* [Visual Studio 2013 Desktop (C#)][vs_download_link] for Windows
+* [Visual Studio Community 2013][vs_download_link] for Windows
 
 Likewise: download and install, it's simple as everything is bundled, though it might take a little time. Then, in the Unity preferences, change your default editor to Visual Studio.
 
 [ ![Change the preferences][unity_prefs_vs_url] ][unity_prefs_vs_url]
 
 <md-warning>
-_Good to know_: It's not possible to use the Visual Studio 2013 Express debugger with Unity. You need to have a _Pro_ version of Visual Studio AND to buy the plugin [UnityVS][unityvs_link]. With the Express version, you will have a better code editor, but the lack of a debugger may be critical.
+_Good to know_: It's possible to use the Visual Studio 2013 debugger with Unity. You need to download and install the [UnityVS][unityvs_link] plugin. Simply follow their [documentation][unityvs_doc] to add the UnityVS to your Unity project (you need to do this for every project).
 </md-warning>
 
 ### Mac OS X
@@ -71,15 +71,17 @@ Here are some other resources that we find interesting and that should complete 
 
 # The first scene
 
+Let's start Unity. The first thing you will see is the project manager dialog.
+
 ## Create a new project
 
-Go to file, then create a new project. Do not check any standard package for now. You can re-import them later if you want, but at first it will just confuse you.
+Create a new project with the name and location you wish.
 
 [ ![Create a new Unity project][unity_create_project] ][unity_create_project]
 
-Select the **2D** settings. Like before, you can change this flag in the project settings later.
+Select the **2D** settings. You can change this flag in the project settings later.
 
-_Do not worry about the name_. The product name is defined in the options and changing the whole project name only consists in renaming the folder.
+_Do not worry about the name_. The final product name is defined in the options ("Player Settings").
 
 ## Prepare the project
 
@@ -131,11 +133,9 @@ I guess it's pretty clear. See if you want to split musics in another folder.
 
 All the code goes here. We use this folder as the equivalent of a root folder in a C# project.
 
-### Textures
+### Sprites
 
-Textures are sprites and images of your game. In a 2D project, you could rename this folder to "Sprites".
-
-It doesn't really matter in a 2D project, but by keeping the name "Textures", Unity will recognize it and automate some tasks. If you want some informations about this topic, you can read [this](http://answers.unity3d.com/questions/172384/importing-models.html) or [this](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
+Sprites are the images of your game. In a 2D project, sprites are textures that can be used by the 2D tools.
 
 <br />
 <md-note>
@@ -173,14 +173,13 @@ By default, a new scene is created with a default ``Main Camera``. Keep it.
 For the moment, you will need to create these empty objects :
 
 - ``Scripts``: We will add our global scripts here. We use this object to attach the scripts that are not related to an object. For example, we will have a "Game" manager script attached to it.
-- ``Render``: Move the camera here. We also put the lights objects inside this one.
 - ``Level``
 
 In the ``Level`` object, add three empty children :
 
-- ``0 - Background``
-- ``1 - Middleground``
-- ``2 - Foreground``
+- ``Background``
+- ``Middleground``
+- ``Foreground``
 
 Save the scene in the "Scenes" folder. Call it how you want (what about "Stage1"?).
 
@@ -189,7 +188,7 @@ You should have:
 [ ![Your first scene][unity_first_scene] ][unity_first_scene]
 
 <md-tip>
-_Tip_: By default, a game object is bounded to its parent position. <br /><br />This behavior creates a nice side-effect for a camera game object: if a camera is the child of an object, it will track its parent position automatically. If the camera is at the root of the scene or inside an empty game object, the view is fixed. However, if you put the camera inside a moving game object, the camera will follow this object on the scene. <br /><br />Nonetheless, for our game, we want to keep the camera fixed and this is why we put it inside a `Render` empty game object. But remember this property of a camera object, it can be handy. <br />We will cover this topic a bit longer in the "Parallax Scrolling" chapter.
+_Tip_: a game object is bounded to its parent position. <br /><br />This behavior creates a nice side-effect for a camera game object: if a camera is the child of an object, it will track its parent position automatically. If the camera is at the root of the scene or inside an empty game object, the view is fixed. However, if you put the camera inside a moving game object, the camera will follow this object on the scene. <br />This is a simple way to have the camera following the player, for example.
 </md-tip>
 
 # Next step
@@ -208,11 +207,12 @@ We have just created the basic structure of our game. In the next step we will s
 [unity_create_empty]: ./-img/unity_create_empty.png
 [unity_first_scene]: ./-img/first_scene.png
 
-[unity_download_link]: http://unity3d.com/unity/download "Download Unity"
-[vs_download_link]: http://www.microsoft.com/visualstudio/eng/downloads#d-2013-express "Download Visual Studio"
+[unity_download_link]: http://unity3d.com/get-unity/download?ref=personal "Download Unity"
+[vs_download_link]: https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx "Download Visual Studio"
 [md_link]: http://monodevelop.com/ "MonoDevelop"
 [xs_link]: http://xamarin.com/studio "Xamarin Studio"
 [unityvs_link]: http://unityvs.com/
+[unityvs_doc]: https://msdn.microsoft.com/en-us/library/dn940025(v=vs.120).aspx
 
 [unity_videos_link]: http://unity3d.com/learn/tutorials/modules/beginner/editor "Unity Editor Tutorials"
 [unitypatterns_link]: http://unitypatterns.com/ "Unity Patterns"

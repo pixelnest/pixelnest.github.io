@@ -31,7 +31,7 @@ _(Right click to save the image)_
 
 If you are as lazy as I am, duplicate the "PlayerShot" prefab, rename it to "EnemyShot1" and change the sprite with the new one above.
 
-To duplicate, you can create an instance by doing a drag and drop on the scene, renaming the created game object and finally saving it as a `Prefab.
+To duplicate, you can create an instance by doing a drag and drop on the scene, renaming the created game object and finally saving it as a `Prefab`.
 
 <md-tip>
 Or you could simply duplicate the `Prefab` directly inside the folder with the `cmd+D` (OS X) or `ctrl+D` (Windows) shortcuts. <br />If you like to do it the hard way, you could also recreate a whole new sprite, rigibody, collider with trigger, etc.
@@ -117,10 +117,10 @@ The trick is to create an empty game object as a child of the enemy `Prefab`.
 
 We need to:
 
-1. Create an "Empty Game Object". Call it "WeaponObject".
+1. Create an "Empty Game Object". Call it "Weapon".
 2. Delete the "WeaponScript" attached to your enemy prefab.
-3. Add a "WeaponScript" to the "WeaponObject" and set the shot prefab property like you did before.
-4. Rotate the "WeaponObject" to `(0, 0, 180)`.
+3. Add a "WeaponScript" to the "Weapon" object and set the shot prefab property like you did before.
+4. Rotate the "Weapon" to `(0, 0, 180)`.
 
 If you did the process on the game object (and not the `Prefab`), do not forget to "Apply" the changes.
 
@@ -173,7 +173,7 @@ public class EnemyScript : MonoBehaviour
 }
 ```
 
-Finally, update the shot speed by tweaking the public property of the "MoveScript" of the "EnemyShot1" `Prefab`. It should move faster than the Poulpi speed:
+Finally, update the shot speed by tweaking the public property of the "MoveScript" of the "enemyShot1" `Prefab`. It should move faster than the Poulpi speed:
 
 [![Super dangerous Poulpi][shoot_ok]][shoot_ok]
 
@@ -183,8 +183,8 @@ Great, we have a super dangerous Poulpi now.
 
 Firing in two directions is just a few clicks and a duplication in the editor. It doesn't involve any script:
 
-1. Add another weapon to the enemy (by duplicating the first "WeaponObject").
-2. Change the rotation of the second "WeaponObject".
+1. Add another weapon to the enemy (by duplicating the first "Weapon").
+2. Change the rotation of the second "Weapon".
 
 The enemy should fire in two directions now.
 

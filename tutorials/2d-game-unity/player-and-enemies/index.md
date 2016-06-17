@@ -35,15 +35,17 @@ _(Right click to save the image)_
 
 1. Copy the player image to the "Textures" folder.
 
-2. Create a new ``Sprite``. Name it "Player".
+2. Create a new `Sprite`. Name it "Player".
 
 3. Select the sprite to display in the "Sprite" property of the "Sprite Renderer" component.
 
   If you have any trouble, refer to the previous part. We did exactly the same procedure for the background and _props_.
 
-4. Place the player in the "2 - Foreground" layer.
+4. Select the "Player" sprite layer.
 
-5. Change its scale. ``(0.2, 0.2, 1)`` should be fine.
+5. Place the player in the "Foreground" object.
+
+6. Change its scale. `(0.2, 0.2, 1)` should be fine.
 
 ## A word about components
 
@@ -78,11 +80,11 @@ This will represent the player [_hitbox_][hitbox_link].
 You can see the collider in the editor "Scene" view and tweak its size in the "Inspector" with the "Size" property.
 
 <md-tip>
-_Tip_: There is another way to edit a box collider. Select a game object with a box collider and maintain the ``shift`` key of your keyboard. You can observe that the box collider (_the green rectangle_) is now showing four small handles onto. Drag one of them to change the shape of the box.
-Be careful, the _blue rectangle represents the_ ``Transform`` component of your game object, not the collider.
+_Tip_: There is another way to edit a box collider. Select a game object with a box collider and enable the "Edit Collider" toggle in the component. You can observe that the box collider (_the green rectangle_) is now showing four small handles onto. Drag one of them to change the shape of the box.
+Be careful, the _blue rectangle represents the_ `Transform` component of your game object, not the collider.
 </md-tip>
 
-We will set the size of the collider to ``(10, 10)``.
+We will set the size of the collider to `(10, 10)`.
 
 It's way too large for a real _shmup_ but it's still smaller than the sprite:
 
@@ -102,17 +104,13 @@ Save the player game object to a prefab. You now have a basic player entity!
 
 If you want a super precise and custom shaped hitbox, Unity offers a "Polygon Collider 2D" component. It's less efficient but allows you to set the shape exactly like you want.
 
-<md-tip>
-_Tip_: The "Polygon Collider 2D" is like the other colliders: you can modify the shape with your mouse in the "Scene" view. By holding ``cmd`` or ``ctrl``, you can remove a point, and with ``shift`` you can adjust a point or add one onto the collider shape.
-</md-tip>
-
 ## The Rigidbody magic
 
 There is one last component to add on our player: a "Rigidbody 2D".
 
 This will tell to the physics engine how to handle the game object. Furthermore, it will also allow collision events to be raised in scripts.
 
-1. Select your ``Player`` game object in the "Hierarchy".
+1. Select your `Player` game object in the "Hierarchy".
 2. Add a "Rigidbody 2D" component.
 
 Now, hit play and observe:
@@ -126,7 +124,7 @@ Say hello to our beloved _gravity_. :)
 As new scenes come with a default gravity and rigidbodies add a mass to an object, the ship is now attracted to the bottom.
 
 <md-info>
-The default gravity of Unity is ``9.81``, i.e. the earth gravity.
+The default gravity of Unity is `9.81`, i.e. the earth gravity.
 </md-info>
 
 Gravity can be used in some kind of games, but we don't want to have to handle it here. Fortunately, it is simple to disable gravity on a rigidbody. Just set "Gravity Scale" to 0. _That's it, the ship is flying again_.
@@ -159,18 +157,18 @@ You can define some methods (called "Message" as we are not using C# inheritance
 
 Default scripts come with the **Start** and **Update** methods. Here is a short list of the most used "Message" functions:
 
-- ``Awake()`` is called once when the object is created. See it as replacement of a classic constructor method.
-- ``Start()`` is executed after ``Awake()``. The difference is that the ``Start()`` method is not called if the script is not enabled (remember the checkbox on a component in the "Inspector").
-- ``Update()`` is executed for each frame in the main game loop.
-- ``FixedUpdate()`` is called at every fixed framerate frame. You should use this method over ``Update()`` when dealing with physics ("RigidBody" and forces).
-- ``Destroy()`` is invoked when the object is destroyed. It's your last chance to clean or execute some code.
+- `Awake()` is called once when the object is created. See it as replacement of a classic constructor method.
+- `Start()` is executed after `Awake()`. The difference is that the `Start()` method is not called if the script is not enabled (remember the checkbox on a component in the "Inspector").
+- `Update()` is executed for each frame in the main game loop.
+- `FixedUpdate()` is called at every fixed framerate frame. You should use this method over `Update()` when dealing with physics ("RigidBody" and forces).
+- `Destroy()` is invoked when the object is destroyed. It's your last chance to clean or execute some code.
 
 You also have some functions for the collisions :
 
-- ``OnCollisionEnter2D(CollisionInfo2D info)`` is invoked when another collider is touching this object collider.
-- ``OnCollisionExit2D(CollisionInfo2D info)`` is invoked when another collider is not touching this object collider anymore.
-- ``OnTriggerEnter2D(Collider2D otherCollider)`` is invoked when another collider marked as a "Trigger" is touching this object collider.
-- ``OnTriggerExit2D(Collider2D otherCollider)`` is invoked when another collider marked as a "Trigger" is not touching this object collider anymore.
+- `OnCollisionEnter2D(CollisionInfo2D info)` is invoked when another collider is touching this object collider.
+- `OnCollisionExit2D(CollisionInfo2D info)` is invoked when another collider is not touching this object collider anymore.
+- `OnTriggerEnter2D(Collider2D otherCollider)` is invoked when another collider marked as a "Trigger" is touching this object collider.
+- `OnTriggerExit2D(Collider2D otherCollider)` is invoked when another collider marked as a "Trigger" is not touching this object collider anymore.
 
 Fiou... This explanation was a bit boring, but unavoidable. Sorry for _that_.
 
@@ -190,48 +188,53 @@ using UnityEngine;
 /// </summary>
 public class PlayerScript : MonoBehaviour
 {
-  /// <summary>
-  /// 1 - The speed of the ship
-  /// </summary>
-  public Vector2 speed = new Vector2(50, 50);
+    /// <summary>
+    /// 1 - The speed of the ship
+    /// </summary>
+    public Vector2 speed = new Vector2(50, 50);
 
-  // 2 - Store the movement
-  private Vector2 movement;
+    // 2 - Store the movement and the component
+    private Vector2 movement;
+    private Rigidbody2D rigidbodyComponent;
 
-  void Update()
-  {
-    // 3 - Retrieve axis information
-    float inputX = Input.GetAxis("Horizontal");
-    float inputY = Input.GetAxis("Vertical");
+    void Update()
+    {
+        // 3 - Retrieve axis information
+        float inputX = Input.GetAxis("Horizontal");
+        float inputY = Input.GetAxis("Vertical");
 
-    // 4 - Movement per direction
-    movement = new Vector2(
-      speed.x * inputX,
-      speed.y * inputY);
+        // 4 - Movement per direction
+        movement = new Vector2(
+          speed.x * inputX,
+          speed.y * inputY);
 
-  }
+    }
 
-  void FixedUpdate()
-  {
-    // 5 - Move the game object
-    rigidbody2D.velocity = movement;
-  }
+    void FixedUpdate()
+    {
+        // 5 - Get the component and store the reference
+        if (rigidbodyComponent == null) rigidbodyComponent = GetComponent<Rigidbody2D>();
+
+        // 6 - Move the game object
+        rigidbodyComponent.velocity = movement;
+    }
 }
 ```
 
 _(The numbers in the comments refer to the explanations below)_
 
 <md-note>
-_Note about C# conventions_: Look at the ``speed`` member visibility: it's public. In C#, a member variable should be private in order to keep the internal representation of the class private. <br />But exposing it as a public variable allows you to modify it in Unity through the "Inspector" pane, even during the game execution. This is a _powerful_ feature of Unity, letting you tweaks the gameplay without coding. <br />Remember that we are doing scripting here, not classic C# programming. This implies to break some rules and conventions.
+_Note about C# conventions_: Look at the `speed` member visibility: it's public. In C#, a member variable should be private in order to keep the internal representation of the class private. <br />But exposing it as a public variable allows you to modify it in Unity through the "Inspector" pane, even during the game execution. This is a _powerful_ feature of Unity, letting you tweaks the gameplay without coding. <br />Remember that we are doing scripting here, not classic C# programming. This implies to break some rules and conventions.
 </md-note>
 
 ### Explanations
 
 1. We first define a public variable that will appear in the "Inspector" view of Unity. This is the speed applied to the ship.
-2. We store the movement for each frame.
+2. The fields we need.
 3. We use the default axis that can be redefined in ["Edit" -> "Project Settings" -> "Input"][unity_axis_link]. This will return a value between `[-1, 1]`, `0` being the idle state, 1 the right, -1 the left.
 4. We multiply the direction by the speed.
-5. We change the rigidbody velocity. This will tell the physic engine to move the game object. We do that in `FixedUpdate()` as it is recommended to do everything that is physics-related in there.
+5. We need to access the rigidbody component, but we can avoid to do it every frame by storing a reference.
+6. We change the rigidbody velocity. This will tell the physic engine to move the game object. We do that in `FixedUpdate()` as it is recommended to do everything that is physics-related in there.
 
 <md-info>
 _Tutorial update_: If you have read this tutorial before, you may remember that we were using `transform.Translate` directly. This was working because translations were slow, but it is not recommended since it can mess up the physics (for the physic engine, a translation is like a teleportation, so there is no collision).
@@ -272,11 +275,12 @@ _(Right click to save the image)_
 
 Time to create a new sprite! Again:
 
-1. Copy the image to the "Textures" folder.
-2. Create a new ``Sprite`` using this image.
-3. Change the "Scale" property of the ``Transform`` to ``(0.4, 0.4, 1)``.
-4. Add a "Box Collider 2D" with a size of ``(4, 4)``.
-5. Add a "Rigidbody 2D" with a "Gravity Scale" of ``0`` and "Fixed Angles" ticked.
+1. Copy the image to the "sprites" folder.
+2. Create a new `Sprite` using this image.
+3. Set the sprite layer to "Enemies"
+4. Change the "Scale" property of the `Transform` to `(0.3, 0.3, 1)`.
+5. Add a "Box Collider 2D" with a size of `(4, 4)`.
+6. Add a "Rigidbody 2D" with a "Gravity Scale" of `0` and "Fixed Angles" ticked.
 
 Save the prefab... and that's it!
 
@@ -304,33 +308,36 @@ using UnityEngine;
 /// </summary>
 public class MoveScript : MonoBehaviour
 {
-  // 1 - Designer variables
+    // 1 - Designer variables
 
-  /// <summary>
-  /// Object speed
-  /// </summary>
-  public Vector2 speed = new Vector2(10, 10);
+    /// <summary>
+    /// Object speed
+    /// </summary>
+    public Vector2 speed = new Vector2(10, 10);
 
-  /// <summary>
-  /// Moving direction
-  /// </summary>
-  public Vector2 direction = new Vector2(-1, 0);
+    /// <summary>
+    /// Moving direction
+    /// </summary>
+    public Vector2 direction = new Vector2(-1, 0);
 
-  private Vector2 movement;
+    private Vector2 movement;
+    private Rigidbody2D rigidbodyComponent;
 
-  void Update()
-  {
-    // 2 - Movement
-    movement = new Vector2(
-      speed.x * direction.x,
-      speed.y * direction.y);
-  }
+    void Update()
+    {
+        // 2 - Movement
+        movement = new Vector2(
+          speed.x * direction.x,
+          speed.y * direction.y);
+    }
 
-  void FixedUpdate()
-  {
-    // Apply movement to the rigidbody
-    rigidbody2D.velocity = movement;
-  }
+    void FixedUpdate()
+    {
+        if (rigidbodyComponent == null) rigidbodyComponent = GetComponent<Rigidbody2D>();
+
+        // Apply movement to the rigidbody
+        rigidbodyComponent.velocity = movement;
+    }
 }
 ```
 

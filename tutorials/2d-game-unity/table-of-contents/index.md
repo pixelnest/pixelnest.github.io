@@ -18,6 +18,10 @@ We recommend that you read the chapters in the order below. By doing so, you wil
 
 You can use the navigation above and below each chapter to move between them.
 
+<md-note>
+_Note_: this tutorial has been updated for **Unity 5**.
+</md-note>
+
 # Chapters
 
 - [Install Unity and create your first scene](../install-and-scene)

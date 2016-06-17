@@ -25,6 +25,10 @@ An "Animator" is a component that you put on an object, which itself references 
 
 In this chapter, we are going to add the "Boss" object into the scene and animate it. By doing so, we will learn how to use the "Animator". Plus, we will have some scripts to add in order to have a proper behavior for this special character: stop the level, create a pattern for the shots and trigger the animations.
 
+<md-warning>
+_Warning_: This part of the tutorial has not been updated to Unity 5.
+</md-warning>
+
 # Animator
 
 You may have seen that your "Boss" object you were working on had automatically received a new component: an "Animator".

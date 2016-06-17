@@ -13,7 +13,7 @@ links:
   next: ./table-of-contents
 ---
 
-Using the brand new **Unity** native 2D tools, you will learn how to make a small "Shoot'Em Up" (abbreviated to _shmup_ thereafter) with this tutorial.
+Using the **Unity** native 2D tools, you will learn how to make a small "Shoot'Em Up" (abbreviated to _shmup_ thereafter) with this tutorial.
 
 The result will be a lot like this demo:
 
@@ -31,11 +31,9 @@ The assets, gameplay and original idea come from the game [The Great Paper Adven
 
 [Unity3D][unity_link] is a popular and complete solution to create multiplatform video games. This tutorial assumes that you are _at least a bit familiar_ with a programming language. Knowing the tools and the engine is a _plus_, but is not necessary.
 
+This tutorial is made with the Unity 5 **Personal Edition** (free) version.
+
 [ ![Unity][unity_logo_url] ][unity_download_link]
-
-This tutorial is made with the Unity 4.3 **FREE** version.
-
-**If you are using Unity 5, please note that this tutorial has NOT been updated yet. But the [source code repository][github_repo_link] has been updated for Unity 5 and the new Unity UI system.**
 
 # Video version
 

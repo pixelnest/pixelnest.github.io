@@ -40,6 +40,11 @@ This is the first and simplest way to distribute your game. You just have to hos
 
 [ ![The web version][web_result] ][web_result]
 
+<md-warning>
+_Warning_: The Web player is **obsolete**. But at this time, the WebGL player is not ready ("preview"). So you can use it for your prototypes but it may not work for a full game.<br />
+However, make sure to use the WebGL player and not the old Web player once it will be released.
+</md-warning>
+
 # Player Settings
 
 You may need to adjust some settings (like the resolution, the game name or some resources) for a specific platform.
