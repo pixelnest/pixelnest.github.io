@@ -192,11 +192,11 @@
 
   // Custom tags.
 
-  md-info,
-  md-tip,
-  md-note,
-  md-warning,
-  md-danger {
+  [data-block*="info"],
+  [data-block*="tip"],
+  [data-block*="note"],
+  [data-block*="warning"],
+  [data-block*="danger"] {
     display: block;
 
     margin-bottom: $default-spacing;
@@ -208,25 +208,29 @@
     border-radius: 2px;
 
     font-size: 1.6rem;
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  md-info {
+  [data-block*="info"] {
     background-color: #d8d8d8;
   }
 
-  md-tip {
+  [data-block*="tip"] {
     background-color: #8bd259;
   }
 
-  md-note {
+  [data-block*="note"] {
     background-color: #73c1ec;
   }
 
-  md-warning {
+  [data-block*="warning"] {
     background-color: #f5d87d;
   }
 
-  md-danger {
+  [data-block*="danger"] {
     background-color: #f67b64;
   }
 }
