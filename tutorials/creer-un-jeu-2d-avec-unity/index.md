@@ -15,6 +15,16 @@ links:
 lang: fr
 ---
 
+**Ce tutorial (dans sa version française) n'a jamais été officiellement terminé.** Il est disponible si vous trouvez l'URL ou via Google, **mais nous ne l'avons jamais complètement relu, corrigé, nettoyé et mis à jour avec les nouvelles versions d'Unity** (c'est pourquoi ce tutorial n'est pas sur notre site). Nous le laissons en ligne uniquement parce que nous savons que certaines personnes l'utilisent et l'ont apprécié malgré tout. Il y aura probablement des bugs d'affichage, des erreurs et des coquilles.
+
+Cependant, nous n'avons clairement pas le temps de terminer et maintenir cette traduction. **Nous ne répondrons pas à des demandes de support concernant cette traduction.**
+
+[Si vous comprenez l'anglais, lisez plutôt la version originale, qui est à jour, propre et relue. ;)](/tutorials/2d-game-unity/)
+
+<br /><br /><br />
+
+---
+
 En utilisant les nouveaux outils 2D intégrés à **Unity** avec la version 4.3, vous allez apprendre avec ce tutoriel à faire un petit jeu de type "Shoot'em up" (abrégé en _shmup_ par la suite).
 
 Le résultat sera très similaire à cette démo :
@@ -24,7 +34,11 @@ Le résultat sera très similaire à cette démo :
 _(Cliquez sur l'image pour jouer)_
 
 <div data-block="danger">
-_Attention_: ce didacticiel en _version française n'a pas été entièrement relu et corrigé_. <br /><br />Il est complet et couvre l'ensemble des étapes de la création d'un jeu vidéo. Cependant, par manque de temps, nous n'avons pas pu le peaufiner davantage : vous risquez donc de tomber sur des coquilles et des fautes. <br /><br />Désolé ! Nous essayons de corriger ça dès que possible. En attendant, bonne lecture.
+  **Attention**: ce didacticiel en _version française n'a pas été entièrement relu, nettoyé, corrigé et maintenu à jour_ (et ne le sera jamais).
+
+  Par manque de temps, nous n'avons pas pu le peaufiner davantage : vous risquez donc de tomber sur des coquilles et des fautes. **Nous ne répondrons pas à des demandes de support concernant cette traduction.**
+
+  Il est cependant complet et couvre l'ensemble des étapes de la création d'un jeu vidéo pour **la version 4.3 de Unity**. Vous rencontrerez des erreurs si vous utilisez une version plus récente de Unity. Dans ce cas, [lisez la version anglaise qui est à jour et terminée](/tutorials/2d-game-unity/).
 </div>
 
 Nous nous focaliserons sur les _shmup_ à scrolling horizontaux (de gauche à droite), mais si ce didacticiel  fait bien son travail, vous n'aurez pas de mal à explorer d'autres types de scrolling et d'autres genres de jeu.
