@@ -45,6 +45,8 @@ defaults:
 
 kramdown:
   input: GFM
+  parse_block_html: true
+  parse_span_html: true
 
 # -------------------------------------------------------
 # Code.
