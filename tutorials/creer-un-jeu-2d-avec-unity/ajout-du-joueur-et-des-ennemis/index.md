@@ -59,9 +59,9 @@ Vous pouvez ajouter autant de composants différents que vous le souhaitez. Vous
 
 _(Vous pouvez cliquer sur la checkbox pour le désactiver. Un clic droit vous donnera d'autres options selon le type de composant)_
 
-<md-note>
+<div data-block="note">
 _Note_ : Les composants peuvent interagir entre eux. Si vous prévoyez par exemple dans un script d'utiliser le "Collider 2D" d'un objet, vous pourrez directement les lier entre eux par un simple drag'n'drop, comme nous le ferons plus tard. Si vous passez un _game objet_ et que Unity attend un composant, il fera lui-même la recherche du composant du type souhaité dans l'objet passé en paramètre.
-</md-note>
+</div>
 
 Le composant "Sprite Renderer" permet d'afficher un sprite à l'écran.
 
@@ -75,9 +75,9 @@ Cela va représenter la [_hitbox_][hitbox_link] de notre joueur, c'est à dire l
 
 Vous pouvez voir le _collider_ dans l'éditeur (onglet "Scene") et vous pouvez modifier sa taille et sa forme directement depuis cet onglet, plutôt que de modifier les valeurs du champ "Size" "au pif" dans l'_Inspector_.
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Pour éditer un _box collider_ depuis l'éditeur, sélectionnez tout d'abord votre objet dans la scène. Maintenez le bouton ``maj``, vous devriez voir apparaître des points sur les côtés du rectangles. Tirez ces points pour modifier la taille du rectangle. Attention, votre _collider_ est la rectangle vert, le bleu représente le sprite.
-</md-tip>
+</div>
 
 La taille que nous voulons obtenir ici est de ``(10, 10)``.
 
@@ -87,9 +87,9 @@ C'est beaucoup trop gros pour un vrai _shmup_ mais c'est plus petit que le sprit
 
 Cela nous conviendra pour le moment.
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Si vous souhaitez vraiment faire un _shmup_, prenez tout votre temps pour définir les hitboxes de vos sprites. En général, celle du joueur doit être petite et doit s'adapter à un élément du sprite. Ici cela pourrait être un cercle autour du hublot central, donc un _Circle Collider 2D_. L'avantage est que peu importe le type de _collider_, Unity les gère de manière uniforme.
-</md-tip>
+</div>
 
 Sauvez ce nouvel objet comme un prefab. Vous avez maintenant un début de joueur !
 
@@ -99,9 +99,9 @@ Sauvez ce nouvel objet comme un prefab. Vous avez maintenant un début de joueur
 
 Si vous voulez une hitbox ultra précise et adaptée à une forme complexe, Unity propose désormais le "Polygon Collider 2D". Il est moins performant mais est incontournable dans certaines situations (terrains en pente par exemple).
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Le "Polygon Collider 2D" est comme les autres _colliders_, il peut se modifier à la souris depuis l'onglet "Scene". C'est d'ailleurs là qu'il prend tout son sens : en restant appuyé sur  ``cmd`` ou ``ctrl``, vous pouvez supprimer un point du polygone, et avec ``maj`` vous pouvez ajouter ou modifier un point.
-</md-tip>
+</div>
 
 ## Le rigidbody qui aurait réjoui Newton.
 
@@ -122,9 +122,9 @@ Dites bonjour à notre chère gravité :).
 
 Avec Unity, toutes les scènes sont créés avec une gravité par défaut. Les _rigidbodies_ sont créés avec une masse par défaut. Le poids attire donc notre joueur vers le sol... sauf qu'il n'y a pas de sol.
 
-<md-info>
+<div data-block="info">
 La gravité par défaut dans Unity est de ``y = - 9.81``, pour imiter celle de la Terre.
-</md-info>
+</div>
 
 La gravité et le moteur physique peuvent être utilisés dans certains types de jeu, voir même dans un shmup pour certains éléments, mais pas pour notre joueur volant.
 
@@ -142,15 +142,15 @@ C'est l'heure de rentrer dans le code ! Pour le moment nous n'avions pas écrit 
 
 Depuis l'onglet "Proejcts", créez un nouveau script C# dans le dossier "Scripts". Appelons-le "PlayerScript".
 
-<md-info>
+<div data-block="info">
 _Remarque_ : vous pouvez tout à fait créer un script JavaScript à la place. Nous ne vous fournissons que le code en C# mais la traduction est assez simple.
-</md-info>
+</div>
 
 Ouvrez votre éditeur de code préféré en passant par le sous-menu "Sync MonoDevelop Project" du menu "Assets".
 
-<md-note>
+<div data-block="note">
 _"Sync MonoDevelop Project"_ : Ce sous-menu est bien mal nommé, surtout qu'il ne s'adapte pas à l'éditeur lié à Unity.<br /> Nous vous recommandons de toujours passer par ce sous-menu pour que Unity créer une solution et un projet Visual Studio, avec les bonnes librairies liées.<br /> Cela vous permettre d'avoir l'auto-complétion et la reconnaissance des erreurs. Si vous ouvrez simplement le script sans ce contexte, vous ne bénéficierez plus que de la coloration syntaxique.
-</md-note>
+</div>
 
 Si vous avez déjà utilisé XNA, vous ne serez pas perdus.
 
@@ -173,13 +173,13 @@ Puis nous avons une collection de méthodes pour les collisions :
 
 Pfiou... C'était un peu barbant, mais avec cela vous êtes parés pour 90% de vos scripts.
 
-<md-note>
+<div data-block="note">
 _Note sur le suffixe "2D"_ : Vous aurez peut-être remarqués que de nombreux éléments que nous utilisons ont un nom qui fini par "2D":  "Box Collider 2D", "Rigidbody 2D", "OnCollisionEnter2D" ou encore "OnTriggerEnter2D", etc.
 <br />
 _C'est une nouveauté de Unity 4.3 !_
 <br />
 Ce suffixe vous indique que l'élément est destiné au moteur physique **2D** embarqué dans Unity, actuellement Box2D, et non 3D (PhysX). Même si les deux partagent la même logique dans Unity, nous vous recommandons de ne pas les mélanger pour moins d'ennuis et plus de performances. Nous n'utiliserons dans ce didacticiel que des éléments 2D.
-</md-note>
+</div>
 
 Nous reviendrons en détails sur chaque méthode au moment de l'utiliser.
 
@@ -224,10 +224,10 @@ public class PlayerScript : MonoBehaviour
 
 _(Les numéros font références aux explications ci-dessous)_
 
-<md-note>
+<div data-block="note">
 _Note sur les conventions_ C# : Si vous regardez la variable ``speed``, vous verrez qu'elle est publique et sans accesseur (et ne commence pas par une majuscule, puisque c'est un membre de la classe, pas une propriété). <br />Bien que cela soit contraire aux conventions habituelles, cela permet d'exposer cette variable à l'_Inspector_ de Unity et donc de pouvoir la modifier à tout moment sans toucher au code.
 <br />Nous sommes bien dans du script plus que dans une application C# pure et dure, et cela se traduit par quelques différences dans l'utilisation du langage et de ses conventions.
-</md-note>
+</div>
 
 ### Explications du script
 
@@ -239,9 +239,9 @@ _Note sur les conventions_ C# : Si vous regardez la variable ``speed``, vous ver
 
 Ajoutez ce script à notre objet joueur.
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Vous pouvez ajoutez un script par un simple drag'n'drop, en sélectionnant le script depuis l'onglet "Project" et en le déposant sur votre objet. Vous pouvez aussi cliquer sur "Add Component" et le rechercher manuellement.
-</md-tip>
+</div>
 
 Lancez le jeu, le vaisseau doit bouger ! Félicitations, vous venez de faire une sorte de ["Hello, World!"][helloworld_link] du jeu vidéo ;).
 
@@ -251,10 +251,10 @@ Essayez de modifier la vitesse : sélectionnez le joueur et modifier la valeur "
 
 [![The inspector for a script][player_value_tweak]][player_value_tweak]
 
-<md-danger>
+<div data-block="danger">
 _Attention !_ : Les modifications faites pendant l’exécution (bouton "Play" enfoncé) sont perdus lorsque le jeu s'arrête ! C'est l'outil parfait pour essayer des valeurs mais penser à les noter sur un coin de table pour ne pas les perdre.
 <br /> L'autre avantage est de pouvoir détruire entièrement le jeu pendant l’exécution et de le voir remis à neuf à chaque fois, sans conséquence sur le projet.
-</md-danger>
+</div>
 
 C'est le premier signe de vie dans notre projet, nous allons en ajouter d'autres.
 
@@ -290,9 +290,9 @@ Créez un nouveau script "MoveScript".
 
 Nous aurions pu l'appeler "EnemyScript" mais un nom plus générique nous permettra de le réutiliser dans un autre contexte plus tard.
 
-<md-note>
+<div data-block="note">
 _Note_ : Le système de composant particulièrement modulaire de Unity permet de découper facilement les scripts par fonctionnalité. Après, rien ne vous empêche de ne faire qu'un énorme script maître du monde avec de très nombreux paramètres, c'est votre choix, mais nous vous recommandons plutôt le découpage au maximum.
-</md-note>
+</div>
 
 Nous allons copier une partie du code du "PlayerScript" mais en ajoutant une nouvelle variable pour la direction :
 

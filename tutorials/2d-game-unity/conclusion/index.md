@@ -29,9 +29,9 @@ The last steps?
 
 And the rest is all yours...
 
-<md-tip>
+<div data-block="tip">
 _A last tip?_ Use a version control system (Git, Mercurial or SVN), even if you are alone. You won't regret it.
-</md-tip>
+</div>
 
 
 <br />If you liked this tutorial, you might want to:

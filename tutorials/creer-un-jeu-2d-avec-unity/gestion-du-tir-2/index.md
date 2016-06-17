@@ -33,13 +33,13 @@ Ou si vous aussi aussi fainéant que moi, dupliquez le prefab "PlayerShot" en "E
 
 	"La paresse est moteur de progrès." X. Le Guillou.
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Deux techniques pour la duplication.
 <br />
 1. Instancier le prefab, renommer l'objet créé, sauver cet objet comme un nouveau préfab (drag'n'drop dans l'onglet _Projects_).
 <br />
 2. Utilisez les raccourcis claviers dans  l'onglet _Projects_ sur le prefab : `cmd+D` (OS X) ou `ctrl+D` (Windows)
-</md-tip>
+</div>
 
 Pensez à utiliser notre nouvelle image. La bonne échelle est `(0.35, 0.35, 1)`.
 
@@ -132,9 +132,9 @@ En l'état actuel des choses, ce script utilise `GetComponent<WeaponScript>()` q
 
 Mais heureusement, il suffit de remplacer par `GetComponentInChildren<WeaponScript>()` pour rechercher cette fois dans toute la hiérarchie de l'objet.
 
-<md-note>
+<div data-block="note">
 _Note_ : Comme pour `GetComponent<>()`, `GetComponentInChildren<>()` se décline au pluriel (remarquez le `s` après "Component").
-</md-note>
+</div>
 
 Et juste pour le plaisir, nous avons ajouté la gestion de plusieurs armes pour chaque ennemi (il nous suffit de garder une liste d'arme plutôt qu'une seule).
 
@@ -220,9 +220,9 @@ Nous n'allons pas le faire ici mais nous eu l'occasion de l'utiliser pour un [sc
 
 Vous pouvez aussi juste réduire la durée de vie d'un projectile pour qu'il disparaisse rapidement, le risque étant qu'il n'ait pas le temps de toucher sa cible.
 
-<md-warning>
+<div data-block="warning">
 _Attention_ : Dans tous les cas, rappelez-vous que la méthode `Instantiate` est très coûteuse en performance. Le _pool_ peut aussi permettre de créer des objets prêts à être utilisés.
-</md-warning>
+</div>
 
 ## Tirs différés
 

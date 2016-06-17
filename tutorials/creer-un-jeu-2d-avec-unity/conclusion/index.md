@@ -28,9 +28,9 @@ Les dernières étapes pour cela ?
 
 Et la suite ne dépend que de vous… :)
 
-<md-tip>
+<div data-block="tip">
 _Une dernière astuce ?_ Utilisez un outil de versionnement pour votre projet et votre code source (Git, Mercurial ou SVN), _même_ si vous travaillez seul. Vous ne le regretterez pas.
-</md-tip>
+</div>
 
 <br />
 

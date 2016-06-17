@@ -34,20 +34,20 @@ Ou le plaisir coupable de Damien :
 
 - Créer des sons chiptunes (8-bit) en utilisant [BFXR](http://www.bfxr.net/) (basé sur [SFXR](http://drpetter.se/project_sfxr.html) mais en version web bien plus pratique)
 
-<md-info>
+<div data-block="info">
 _Matthieu_ : J'ai eu l'occasion de créer des sons et des musiques pour le projet d'un ami. A lépoque, j'étais batteur mais pas du tout compositeur.
 <br />Avec l'aide de [Freesound](http://www.freesound.org/), un peu d'inventivité  et plusieurs douzaines d'heures (sans connaître aucun outil, mais cela m'a permis d'apprendre à utiliser [Audacity](http://audacity.sourceforge.net/) sur le tas), j'ai réussi à faire une bande son complète pour le jeu.
 <br /><br />
 Je ne vous conseillerai de le faire pour la musique (trouvez plutôt un musicien qui accepte de le faire), mais avec un peu de temps et les bons outils, vous pouvez vraiment créer de chouettes effets sonores. C'est à votre portée, soyez créatifs.
-</md-info>
+</div>
 
 Pour la musique, tout dépend de ce que vous recherchez :
 - [Jamendo](http://www.jamendo.com/) recense un paquet d'artistes, mais faites attention aux licences souvent payants pour un usage commercial.
 - - [Bosca Ceoil](http://distractionware.com/blog/2013/08/bosca-ceoil/) de Terry Cavanagh est un logiciel simple et efficace pour faire de la musique.
 
-<md-info>
+<div data-block="info">
 _Damien_ : C'est par Jamendo que j'ai vu rencontré [Spintronic](http://spintronic.fr/ticket/listbyartist/1). Comme j'adorais sa musique (et j'adore toujours), je l'ai contacté directement pour savoir si je pouvais utiliser sa musique dans le jeu _The Great Paper Adventure_. Il a adoré  l'idée et a même nommé une chanson au nom du jeu ! Donc n'hésitez pas à contacter les artistes qui vous plaisent : les licences CC-BY-NC ne prévalent plus si l'artiste vous donne l'accord d'utiliser ses œuvres.
-</md-info>
+</div>
 
 ## Ressources sonores pour le tutoriel
 
@@ -156,9 +156,9 @@ Puis, ajoutez :
 
 Démarrez le jeu et écoutez. On a du son et de la musique !
 
-<md-note>
+<div data-block="note">
 _Note_ : Cette technique est acceptable pour un petit projet mais si vous avez plusieurs centaines de sons, il vous faudra probablement réfléchir à un autre système.
-</md-note>
+</div>
 
 # Prochaine étape
 

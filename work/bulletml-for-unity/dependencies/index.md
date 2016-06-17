@@ -24,9 +24,9 @@ In addition to Unity 4.3 or higher, the plugin requires two extra libraries (bun
 
   We have mainly modified and updated the library to make it work on the Unity 4.3 framework.
 
-<md-info>
+<div data-block="info">
 The fork is based on the work of [Dan Manning](https://twitter.com/DannobotGames) with [this repository](https://github.com/dmanning23/BulletMLLib).
-</md-info>
+</div>
 
 * **Equationator.dll**: an [open-source library](https://github.com/dmanning23/Equationator) to compute an equation from a `String`.
 

@@ -36,9 +36,9 @@ You can also find some well-know patterns written in BulletML on Internet. We ha
 
 Remember that they may not work nicely altogether: they were written for different types of games, scales and orientations. It's still a good start to create your own.
 
-<md-warning>
+<div data-block="warning">
 *Caution*: Some patterns need to handle more than 3500 bullets on the screen. It requires some performance optimizations that are _NOT_ covered by this plugin.
-</md-warning>
+</div>
 
 # Framerate
 

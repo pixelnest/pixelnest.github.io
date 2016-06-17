@@ -25,9 +25,9 @@ An "Animator" is a component that you put on an object, which itself references 
 
 In this chapter, we are going to add the "Boss" object into the scene and animate it. By doing so, we will learn how to use the "Animator". Plus, we will have some scripts to add in order to have a proper behavior for this special character: stop the level, create a pattern for the shots and trigger the animations.
 
-<md-warning>
+<div data-block="warning">
 _Warning_: This part of the tutorial has not been updated to Unity 5.
-</md-warning>
+</div>
 
 # Animator
 
@@ -49,9 +49,9 @@ Basically, the "Animator" component is simply a link between an object and an "A
 
 If your "Boss" prefab has no "Animator" component, add it manually and drag the "Boss" controller inside the property.
 
-<md-note>
+<div data-block="note">
 _Options_: The "Animator" component has some other options. The "Apply Root Motion" should probably be disabled when using the animations the way we do in this tutorial. Yet, it doesn't matter here because we have a very simple object with no gravity.
-</md-note>
+</div>
 
 ## Inside an animator
 
@@ -194,9 +194,9 @@ You can select the transition by clicking on the link. The "Inspector" will reve
 
 [ ![Transition parameters][transition_3]][transition_3]
 
-<md-note>
+<div data-block="note">
 _Exit Time_: The "Exit Time" condition is the default condition for a transition. It means that the transition is valid (and can be executed) when the source animation is over.
-</md-note>
+</div>
 
 This is what we will edit. Change "Exit Time" for the "Attack" parameter that we have defined earlier.
 
@@ -227,9 +227,9 @@ If the trigger "Hit" is set, we play the animation "Hit" once and go back to "Id
 
 "Any State" is useful here because `Hit` can be triggered when the "Boss" is "Idle" or in an "Attack". Instead of defining two relations, we just use "Any State".
 
-<md-info>
+<div data-block="info">
 _Trigger_: As you can see, when you use a trigger, you don't have to specify a value. Indeed, a trigger is just a way to tell to the state machine "If `valid` Then transition".
-</md-info>
+</div>
 
 ### Final graph
 
@@ -239,11 +239,11 @@ Our animator graph should now look like that:
 
 The last thing we need is some code to make it react in-game (the parameters are never triggered currently, so the animator will stay on "Idle").
 
-<md-note>
+<div data-block="note">
 _Animator graph_: Creating a graph in the animator is not an exact science. Depending on your code implementation, what you want to achieve or a precise sequence of actions, you may want to proceed differently. For example, in our case, we could also transition the "Attack" from the "Any State" state. But with only three short animations, it don't make a difference to be honest.
 <br /><br />
 When your graph will grow, you will have to make some choices that will impact your game.
-</md-note>
+</div>
 
 # Who's the Boss?
 
@@ -482,10 +482,10 @@ public class BossScript : MonoBehaviour
 
 _Don't forget to assign the script to the "Boss" object!_
 
-<md-note>
+<div data-block="note">
 _Note_: This script shares a lot of code with "EnemyScript". Well, it's because it's a copy. We could have refactored "EnemyScript" and make "BossScript" inherits from it, but we wanted to stay simple and avoid to have to come back on a previous script here.
 <br /><br />Remember: we're here for the animations. ;)
-</md-note>
+</div>
 
 ### 1. Explanations: Animation
 
@@ -533,11 +533,11 @@ For the movement part, the boss randomly takes a visible point in the camera and
 
 [ ![Boss target position][draw_gizmos] ][draw_gizmos]
 
-<md-tip>
+<div data-block="tip">
 _Tip_: `OnDrawGizmos` is a very useful method to display debug informations in the scene from a script, by using the `Gizmos` class.
 <br />
 Here, we display the position where the boss is going as a sphere. You can see this sphere in the editor pane or in the "Game" view (if you enable "Gizmos").
-</md-tip>
+</div>
 
 We alternate between these two phases with a simple timer (`aiCooldown`). When it reaches 0, we permute the phases and set a new random cooldown.
 

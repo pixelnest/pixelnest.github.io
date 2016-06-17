@@ -76,12 +76,12 @@ Tout d'abord, sélectionnez "iOS" dans la fenêtre "Build Settings" :
 
 Puis allez dans les "Player Settings" pour mettre à jour certains paramètres (version du SDK, icône, etc.).
 
-<md-note>
+<div data-block="note">
 _Astuce_ : Si vous voulez tester sur le simulateur, il y a une option un peu cachée. Dans les "Player Settings" pour iOS, cherchez le champ "SDK version". Indiquez la valeur "Simulator SDK":
 <br/><br />
 [ ![ios_simulator][ios_simulator_mini] ][ios_simulator]
 <br />
-</md-note>
+</div>
 
 Lancez un nouveau "Build" du projet. Unity vous demandera de choisir une destination :
 

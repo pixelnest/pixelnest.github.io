@@ -45,7 +45,7 @@ Si ce n'est pas le cas, voici comment faire. Allez dans l'"Inspector" de ce "New
 
 _(Il faut cliquer sur la petite icône ronde à droite du champ "Select Sprite")_
 
-<md-note>
+<div data-block="note">
 _"Je ne vois pas mon sprite dans la fenêtre de sélection ?"_ : La première chose à faire est de vérifier que vous êtes bien dans l'onglet "Assets" de la fenêtre "Select Sprite". Des lecteurs nous ont signalé que dans certains projets (et même avec des projets créés grâce aux outils 2D), les images étaient importées en tant que "Texture" au lieu de "Sprite".
 <br /><br />
 Sélectionnez votre image dans le menu "Project" et, dans l'"Inspector", changez le "Texture Type" en "Sprite" :
@@ -53,7 +53,7 @@ Sélectionnez votre image dans le menu "Project" et, dans l'"Inspector", changez
 [ ![Sprite mode][sprite] ][sprite]
 <br />
 Nous ne savons pas pourquoi le comportement par défaut n'est pas le même pour tous.
-</md-note>
+</div>
 
 Vous devriez voir le ciel nuageux s'afficher dans la scène. Faisons un peu de rangement.
 
@@ -67,9 +67,9 @@ Exercice expresse : agrandissez l'arrière-plan pour plus tard en dupliquant ce 
 
 [  ![Background2 in place][background2_in_place]  ][background2_in_place]
 
-<md-tip>
+<div data-block="tip">
 _Astuce_: Vous pouvez dupliquer un objet avec les raccourcis `cmd + D` (OS X) ou `ctrl + D` (Windows).
-</md-tip>
+</div>
 
 # Ajouter des éléments
 
@@ -128,9 +128,9 @@ Cela va créer un ``Prefab`` ayant exactement les mêmes propriétés que l'obje
 
 [ ![Prefab connection][prefab_link] ][prefab_link]
 
-<md-note>
+<div data-block="note">
 _Note sur les boutons des Prefabs _: si vous modifiez cet objet dans la scène plus tard, vous pouvez appliquer ("Apply") ces changements au prefab et ainsi modifier directement tous les objets liés. Vous pouvez aussi annulez ("Revert") vos changements ou voir avec quel fichier est lié("Select") l'objet.
-</md-note>
+</div>
 
 Maintenant vous pouvez facilement créer des nouvelles plateformes en faisant un drag'n'drop du prefab vers la scène. Essayez !
 
@@ -160,9 +160,9 @@ Bon. Dans l'ancienne version de ce tutoriel, nous avions une page entière consa
 
 La bonne nouvelle, c'est qu'avec Unity 4.3 et un projet 2D, il n'y a tout simplement plus rien à faire, les paramètres par défaut sont plus que satisfaisant.
 
-<md-info>
+<div data-block="info">
 _Pour information_ : Si vous sélectionnez l'objet``Main Camera``, vous verrez un paramètre "Projection". La valeur est sur "Orthographic" (2D), et non pas sur "Perspective" (3D). Une caméra orthographique affiche tous les objets à la même profondeur, on perd la notion de... perspective, même si c'est toujours le moteur 3D de Unity qui est utilisé pour le rendu. Le Gif ci-dessus le montre plutôt bien.
-</md-info>
+</div>
 
 # Prêt pour la suite
 

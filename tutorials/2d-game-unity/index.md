@@ -39,9 +39,9 @@ This tutorial is made with the Unity 5 **Personal Edition** (free) version.
 
 If you'd rather **watch** this tutorial than **read** it, then have a look at [Jay Jennings's work from Game Dev Nation](http://gamedevnation.com/creating-a-2d-game-with-unity/).
 
-<md-note>
+<div data-block="note">
 _Notice_: The "Making animations with Unity 2D" chapters have not been converted yet.
-</md-note>
+</div>
 
 # Translations
 

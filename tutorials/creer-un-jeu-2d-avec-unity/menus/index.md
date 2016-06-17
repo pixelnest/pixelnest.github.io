@@ -19,14 +19,14 @@ Nous avons terminé notre premier niveau avec un gameplay de base (certe il manq
 
 Mais quand le joueur meurt, le jeu continue d'avancer dans le vide et il n'est pas possible de recommencer. Il nous faut ajouter un moyen de relancer une partie perdue.
 
-<md-info>
+<div data-block="info">
 _Damien_ : Pour être honnête, je trouve que les menus et l'interface dans un jeu en général c'est une vraie plaie. Il faut souvent utiliser un framework bancal voir inexistant (coucou XNA), et en tant que joueur j'estime que les menus sont fait pour être passés rapidement.
-</md-info>
+</div>
 
-<md-info>
+<div data-block="info">
 _Matthieu_ : A l'inverse de pas mal de développeur de jeux, je ne suis pas d'accord. Créer une _bonne_ interface pour un jeu n'est pas chose facile mais c'est en revanche intéressant et gratifiant. Cependant, cela nécessite de bons outils et une certaine connaissance du design (comme pour une application).
 <br /><br /> Mais c'est vrai qu'un _bon_ menu doit être invisible, pour qu'au final les joueurs le remarquent à peine.
-</md-info>
+</div>
 
 Malheureusement, Unity n'offre pas vraiment de quoi faire de superbes menus facilement à moins d'y consacrer beaucoup de temps pour d'utiliser un plugin.
 
@@ -56,9 +56,9 @@ Pour les boutons, nous utiliserons les horribles boutons de base.
 
 Presque tous les jeux ont un écran d'accueil, qui s'affiche une fois les divers splashscreens passés.
 
-<md-info>
+<div data-block="info">
 _Damien_ : Certains écrans titres sont mémorables : Megaman, Metal Slug... (je suis fan des écrans titres).
-</md-info>
+</div>
 
 Ce que nous allons faire sera, disons... plus sobre ! Mais libre à vous de vous amusez ;).
 
@@ -69,9 +69,9 @@ Créez une nouvelle scène :
 1. "File" -> "New scene".
 2. Sauvez la dans le dossier "Scenes" sous le nom de "Menu".
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Vous pouvez aussi utilisez les raccourcis `cmd+N` (OS X) ou `ctrl+N` (Windows).
-</md-tip>
+</div>
 
 Notre écran titre sera composé de :
 
@@ -138,16 +138,16 @@ public class MenuScript : MonoBehaviour
 }
 ```
 
-<md-info>
+<div data-block="info">
 _A propos de la syntaxe_ : oui, elle est [vraiment étrange](http://docs.unity3d.com/Documentation/ScriptReference/GUI.Button.html).
-</md-info>
+</div>
 
 Nous affichons juste un bouton qui charge la scène "Stage1" quand l'utilisateur clique dessus.
 
-<md-note>
+<div data-block="note">
 _Note_: La méthode `OnGUI` est appelée à chaque frame et est destinée à afficher tous les éléments d'interface : barres de vies, compteurs, menus, etc.
 <br />L'objet `GUI` permet de créer rapidement dans le code des composants d'interface, comme la méthode `GUI.Button` par exemple.
-</md-note>
+</div>
 
 Lancez le jeu et admirez notre menu :
 
@@ -173,10 +173,10 @@ Relancez le jeu, cliquez et... c'est parti !
 
 [ ![Start game][start]][start]
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : La méthode `Application.LoadLevel()` est radicale : elle instancie la nouvelle scène et supprime l'ancienne. Vous aurez parfois envie qu'un objet transite d'une scène à l'autre, une musique par exemple.
 <br /><br />Unity a une méthode pour cela, `DontDestroyOnLoad(aGameObject)`. Il suffit de l'appeler sur l'objet que l'on veut conserver et il ne disparaîtra pas pendant le chargement. D'ailleurs il ne disparaîtra plus jamais à moins de le supprimer manuellement.
-</md-tip>
+</div>
 
 # Mort du joueur et nouvelle partie
 
@@ -283,10 +283,10 @@ Depuis l'_Inspector_, vous pourrez modifiez l'apparence de tous les contrôles d
 
 Assurez-vous de sauvegardez ce fichier "GUISkin" dans le dossier "Resources".
 
-<md-note>
+<div data-block="note">
 _Note_ : le dossier "Resources" est spécial pour Unity. Tout ce qui s'y trouve sera embarqué avec le jeu et peut être chargé depuis un script en utilisant la méthode `Resources.Load()`.
 <br />Vous pouvez donc charger des objets extérieurs pendant l'exécution... cela ne vous rappelle pas le principe des _mods_ ?
-</md-note>
+</div>
 
 Mais votre nouvelle skin pour interface n'est pas encore appliquée.
 
@@ -331,9 +331,9 @@ public class MenuScript : MonoBehaviour
 
 Comme vous le voyez, c'est pas mal de boulot pour un simple bout de menu.
 
-<md-note>
+<div data-block="note">
 _Note_ : Si vousavez un peu d'argent à investir et que vous avez besoins de menus et/ou d'afficher du texte, jetez un œil au [plugin NGUI][ngui_link]. Il vaut le coup._ Vraiment_.
-</md-note>
+</div>
 
 # Prochaine étape
 

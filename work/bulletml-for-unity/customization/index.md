@@ -20,9 +20,9 @@ All we did before didn't require any scripting from your side.
 
 However, we let you the possibility to change any behavior explained before.
 
-<md-note>
+<div data-block="note">
 _Pool_: A concrete example would be to handle properly the instantiation and destruction of the bullets with a pool of pre-instantiated objects.
-</md-note>
+</div>
 
 # Bullet states
 
@@ -91,9 +91,9 @@ This is the most interesting event. This is where you should instantiate a Game 
 - `bullet` is the engine object containing all the bullet properties (xml, tasks, name, etc)
 - `bulletName` is a quick access to the bullet's label as defined in your pattern file
 
-<md-note>
+<div data-block="note">
 _Spawn_: If you redefine `OnBulletSpawned`, you can safely leave the `Bullet Bank` field (of `BulletManagerScript`) empty.
-</md-note>
+</div>
 
 ## Destroyed
 
@@ -146,15 +146,15 @@ void Awake()
 
 Another use case is when you have two players and want the enemies to target one or the other but not always the same.
 
-<md-warning>
+<div data-block="warning">
 **Breaking change:** the `source` parameter was introduced in the version **1.2** of the plugin.
-</md-warning>
+</div>
 
 # Trigger
 
-<md-warning>
+<div data-block="warning">
 **Note:** the `<trigger>` tag was introduced in the version **1.3** of the plugin.
-</md-warning>
+</div>
 
 A trigger is a simple way to tell Unity to execute some code from a BulletML file.
 
@@ -168,9 +168,9 @@ In your XML pattern, add the new instruction:
 
 `beforefire` is a simple string, you can replace it by any string you want.
 
-<md-warning>
+<div data-block="warning">
 **Note:** You can't use a NUMBER expression here.
-</md-warning>
+</div>
 
 You can know that a Bullet source has raised the evend ``beforefire`` by adding a delegate to ``OnTrigger``
 

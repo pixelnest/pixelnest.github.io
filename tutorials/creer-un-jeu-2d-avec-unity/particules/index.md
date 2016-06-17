@@ -36,11 +36,11 @@ Une explosion se décompose en général en deux morceaux dans un jeu : de la fu
 
 Créez un nouveau "Particle System" ("Game Object" -> "Create Other" -> "Particle System").
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Nous vous recommandons de travailler sur une partie vide de la scène (ou sur une scène vide) pour bien voir ce que vous faites.
 <br /><br />
 Pour faire un focus sur un objet dans la scène, vous pouvez faire un `double-click` sur lui depuis l'onglet _Inspector_ ou appuyer sur `F` depuis l'onglet _Scene_.
-</md-tip>
+</div>
 
 On vous approchant de votre nouveau système de particule, vous verrez jaillir un flot d'étincelles :
 
@@ -50,9 +50,9 @@ Vous constaterez l'apparition d'une nouvelle petite fenêtre (avec les boutons "
 
 _Et c'est ça que c'est bon !_
 
-<md-note>
+<div data-block="note">
 _Note_ : Quand votre _particle system_ est sélectionné dans l'onglet _Hierarchy_, l'animation se lance. Elle s'arrête quand l'objet n'est plus sélectionné. C'est très pratique pour régler l'animation et l'effet des particules.
-</md-note>
+</div>
 
 Nous utiliserons ce sprite très cartoon pour notre effet de fumée :
 
@@ -60,17 +60,17 @@ Nous utiliserons ce sprite très cartoon pour notre effet de fumée :
 
 _(Clic droit pour sauver l'image sur votre disque)_
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : si vous avez un problème de transparence avec votre propre image, vérifiez vos pixels transparents : ils doivent êtres noirs purs. Même si ces pixels sont invisibles et ont une valeur alpha à `0`, ils ont quand même une couleur, qui sera ici utilisée.
-</md-tip>
+</div>
 
 Qopiez l'image dans le dossier "Textures". Petite nouveauté : changez le paramètre "Texture Type" en "Texture" et activez "Alpha Is Transparent". Vous devriez avoir :
 
 [![Cloud settings][cloud_settings]][cloud_settings]
 
-<md-note>
+<div data-block="note">
 _Note_ : nous utilisons ici une fonctionnalité de Unity 3D, et non une spécifique 2D. Mais cela n'a pas d'importance, les outils 2D ne sont finalement qu'un sous-ensemble des outils d'Unity et le reste ne demande qu'à être utilisé si besoin.
-</md-note>
+</div>
 
 Assignez la texture aux particules :
 
@@ -233,15 +233,15 @@ public class SpecialEffectsHelper : MonoBehaviour
 }
 ```
 
-<md-note>
+<div data-block="note">
 _Note_ : Comme nous aurons plusieurs fois le même type de particules en même temps dans la scène, nous créons un nouvel effet à chaque fois. Dans d'autres cas, il peut être intéressant de garder la référence de l'effet pour le rejouer plutôt que de le recréer à chaque fois.
-</md-note>
+</div>
 
 Nous utilisons un singleton pour pouvoir l'appeler facilement de n'importe quel autre script grâce au membre `SpecialEffectsHelper.Instance`.
 
-<md-info>
+<div data-block="info">
 _Singleton_ : Un singleton est un _design pattern_ qui permet de s'assurer que l'objet n'est instancié qu'une seule fois. Ici nous utilisons une propriété qui en découle en rendant accessible cette instance de n'importe où, mais le principe reste le même.
-</md-info>
+</div>
 
 1. Attachez ce script à notre objet "Scripts" dans la _Hierrachy_.
 2. Sélectionnez le et remplissez les champs dans l'_Inspector_ en utilisant les prefabs des effets.

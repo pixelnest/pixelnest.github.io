@@ -36,9 +36,9 @@ An explosion is usually made of two things: fire and smoke.
 
 Create a new "Particle System" ("Game Object" -> "Create Other" -> "Particle System").
 
-<md-tip>
+<div data-block="tip">
 _Tip_: We recommend that you work on an empty part of the scene (or in an empty scene) so you can clearly see what is happening. <br /><br />If you want to focus on an object in the "Scene" view, you can `double-click` on it in the "Hierarchy", or press `F` inside the "Scene" view.
-</md-tip>
+</div>
 
 By zooming on your particle system, you will see a continuous flow of sparks emitted by the particles game object:
 
@@ -48,9 +48,9 @@ Observe the new window (with "Pause" and "Stop") in the "Scene" view, or the "In
 
 _And that's where all the fun lie!_
 
-<md-note>
+<div data-block="note">
 _Note_: When you select a particle system in the "Hierarchy", it starts simulating the system. If you unselect it, it stops. It's really practical to see what the system does in real (and instantly) when you conceive it.
-</md-note>
+</div>
 
 We will use this sprite for the smoke particles:
 
@@ -58,17 +58,17 @@ We will use this sprite for the smoke particles:
 
 _(Right click to save the image)_
 
-<md-tip>
+<div data-block="tip">
 _Tip_: If you have an issue with the transparency when using your own asset, be sure that transparent pixels are black ones with `0` alpha. Indeed, even if a pixel is not visible, it still has a value. Which is used by the computer.
-</md-tip>
+</div>
 
 Copy the image in the "Textures" folder. Change the "Texture Type" to "Texture", and set "Alpha Is Transparent". You should have:
 
 [![Cloud settings][cloud_settings]][cloud_settings]
 
-<md-note>
+<div data-block="note">
 _Note_: We are using a Unity 3D feature, not a "2D one". In fact, it doesn't matter. When you use the "2D" tools, you are only using a subset of Unity. But the full power of Unity is still there, ready to be used.
-</md-note>
+</div>
 
 Assign the texture to the particle:
 
@@ -233,15 +233,15 @@ public class SpecialEffectsHelper : MonoBehaviour
 }
 ```
 
-<md-note>
+<div data-block="note">
 _Note_: Because we can have multiple particles in the scene at the same time, we are forced to create a new prefab each time. If we were sure that only one system was used at a time, we would have kept the reference and use the same everytime.
-</md-note>
+</div>
 
 We created a singleton that you can access from everywhere using the `SpecialEffectsHelper.Instance` member.
 
-<md-info>
+<div data-block="info">
 _Singleton_: A singleton is a design pattern that is used to guarantee that an object is only instanciated once. We have diverged a bit from the classic implementation in our script: the principle remains, however.
-</md-info>
+</div>
 
 1. Assign the script to the "Scripts" game object in the "Hierarchy".
 2. Inspect it, and fill the fields with the correct prefabs.

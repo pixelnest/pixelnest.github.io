@@ -45,7 +45,7 @@ Pour obtenir cet effet nous pouvons mélanger un peu les deux solutions et avoir
 - Le joueur et la caméra bouge
 - Le décor avance dans la direction opposé à des vitesses différentes (en plus du mouvement intrinsèque de la caméra)
 
-<md-note>
+<div data-block="note">
 _Note_ : Vous vous dites peut-être "Mais pourquoi on n'attache pas simplement la caméra à l'objet joueur ?". En faisant cela avec Unity, lobjet enfant sera déplacé en même temps que son parent. Donc la caméra aura toujours la même position par rapport au joueur. Cela ne colle pas avec notre gameplay.
 <br/><br/> Dans un _shmup_, la caméra restreint les mouvements du joueur dans une zone limitée.
 <br/><br/> Plus généralement, il vaut mieux séparer la gestion de la caméra de son joueur dans un jeu 2D. Même sur un platformer, la caméra n'est pas directement liée à lui. Un excellent exemple est la caméra de Super Mario World, [nous vous invitons à en voir un peu plus][smw_camera].
@@ -64,9 +64,9 @@ L'idée ici est d'utiliser l'éditeur de Unity pour placer les ennemis. Et mine 
 
 [Mais encore une fois c'est un choix nous vous proposons][stackgamedev_link]. ;)
 
-<md-note>
+<div data-block="note">
 _Note_ : nous pensons vraiment qu'utiliser l'éditeur de Unity comme éditeur de niveau est un grand plus. Après, si vous avez du temps, du budget, et des designers qui ont besoin d'outils spécifiques, c'est discutable.
-</md-note>
+</div>
 
 ## Plans
 
@@ -85,26 +85,26 @@ Ajoutez un nouveau plan pour les éléments du décor. Nous aurons comme plans :
 
 Il pourrait aussi y avoir un plan devant le joueur et les ennemis. L'important c'est d'avoir une position ``z`` comprise entre ``0`` et ``10``, car c'est ce que permet la caméra par défaut.
 
-<md-warning>
+<div data-block="warning">
 _Attention_ avec les éléments en premier plan, cela peut gâcher la visibilité du jeu, chose cruciale dans un _shmup_.
-</md-warning>
+</div>
 
 # Partie pratique : en route pour le code
 
 Vous l'aurez compris, un scrolling impacte notre jeu.
 
-<md-info>
+<div data-block="info">
 _Le saviez-vous_ "Scrolling shooters" est un nom de sous-genre du Shoot them up.
-</md-info>
+</div>
 
 Assez parlé !
 
 Unity fourni désormais des scripts tout prêt pour du parallax, notamment dans son exemple de plateformer 2D disponible sur l'Asset Store. I lest sûrement très bien, mais nous préférons vous montrer comment cela fonctionne en le faisant nous-mêmes.
 
-<md-warning>
+<div data-block="warning">
 _Standard packages_: utiliser les paquets standards proposés par Unity n'est pas toujours une bonne idée, surtout pour les textures et modèles. Cela se verra immédiatement et donnera un côté "encore un jeu fait avec Unity" qui vous empêchera de vous faire remarquer.
 <br />Ces assets sont par contre assez pratiques pour prototyper rapidement.
-</md-warning>
+</div>
 
 ## Scrolling simple
 
@@ -172,9 +172,9 @@ Pour améliorer le  résultat, ajoutez quelques éléments à la scène :
 - Des plateformes dans le plan `2 - Middleground`.
 - Des ennemis à droite du joueur dans le plan  `3 - Foreground` en dehors de la caméra
 
-<md-note>
+<div data-block="note">
 _Note_ : N'hésitez pas à utiliser vos propres valeurs :)
-</md-note>
+</div>
 
 Vous obtiendrez :
 
@@ -196,16 +196,16 @@ Pour un effet crédible, il vous faudra de quoi couvrir la caméra entièrement 
 
 Ici, nous allons appliquer cette vérification aux enfants de l'objet plan. Cette vérification se fera sur leur composant _renderer_.
 
-<md-note>
+<div data-block="note">
 _A propose du _renderer_ : Ce qui va suivre ne marche donc que pour des objets visibles. Cela ne pourrait pas fonctionner pour des objets "vides" comme "Scripts" portent simplement les scripts. Mais en même temps, ils n'ont logiquement pas besoin de suivre le décor pour s'exécuter correctement.
-</md-note>
+</div>
 
 Nous utiliserons une méthode bien pratique pour savoir si un renderer est visible ou non par une caméra (donc s'il est affiché). Ce bout de code vient du [wiki communautaire][community_post_link]. Ce n'est ni une classe, ni un script, c'est une [extension][extension_link].
 
-<md-tip>
+<div data-block="tip">
 _Extension_ : il est possible d'ajouter des méthodes à une classe en C# sans en modifier son code source (et surtout, sans y avoir accès !).
 <br />Il faut pour cela créer une classe statique, et dans cette classe une méthode statique avec un premier paramètre comme ceci : `this Type currentInstance`. La classe `Type` aura maintenant une nouvelle méthode. <br />
-</md-tip>
+</div>
 
 ## L'extension "RendererExtensions"
 
@@ -226,10 +226,10 @@ public static class RendererExtensions
 
 Facile non ?
 
-<md-danger>
+<div data-block="danger">
 _Namespaces_ : Si vous êtes un développeur C#, vous aurez peut-être noté l’absence de namespaces avec Unity. Mais en fait, Unity supporte assez bien ces derniers, c'est juste qu'il n'en met pas par défaut. Assez bien car il y a un bug connu avec les valeurs par défauts pour des paramètres.
  <br /><br />Dans un vrai projet, nous vous recommandons d'ajouter votre namespace pour éviter les conflits avec le moteur et d'éventuelles librairies ou plugins (comme _NGUI_).
-</md-danger>
+</div>
 
 Nous allons utiliser cette nouvelle méthode pour vérifier si un objet est sorti de la caméra ou non.
 
@@ -375,10 +375,10 @@ _(Cliquez pour voir l'animation)_
 
 Et voilà ! Nous avons une implémentation fonctionnelle de scrolling différentiel ! (et voilà pourquoi on garde le terme anglais...)
 
-<md-note>
+<div data-block="note">
 _Note :_ Pourquoi ne pas simplement utiliser les méthodes  ``OnBecameVisible`` et ``OnBecameInvisible`` ? _Parce qu'elles sont inutilisables._ <br /><br />L'idée est bonne : vous ajoutez cette fonction dans votre script (comme vous ajoutez ``Start`` ou ``Update``) et le code est exécuté quand l'objet est affiché (ou l'inverse).
 <br /><br />SAUF QUE que ces méthodes sont aussi appelées quand c'est la fenêtre "Scene" (l'éditeur) qui affiche l'objet ! Si nous plaçons les ennemis plus loins dans la scène comme nous le faisons jusqu'ici, la méthode est appelée différemment dans l'éditeur et dans l'exécutable final. C'est absurde et propice aux erreurs. _Nous vous recommandons de ne pas les utiliser._
-</md-note>
+</div>
 
 # Bonus : Amélioration des scripts précédents
 

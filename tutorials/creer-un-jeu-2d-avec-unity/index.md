@@ -23,9 +23,9 @@ Le résultat sera très similaire à cette démo :
 
 _(Cliquez sur l'image pour jouer)_
 
-<md-danger>
+<div data-block="danger">
 _Attention_: ce didacticiel en _version française n'a pas été entièrement relu et corrigé_. <br /><br />Il est complet et couvre l'ensemble des étapes de la création d'un jeu vidéo. Cependant, par manque de temps, nous n'avons pas pu le peaufiner davantage : vous risquez donc de tomber sur des coquilles et des fautes. <br /><br />Désolé ! Nous essayons de corriger ça dès que possible. En attendant, bonne lecture.
-</md-danger>
+</div>
 
 Nous nous focaliserons sur les _shmup_ à scrolling horizontaux (de gauche à droite), mais si ce didacticiel  fait bien son travail, vous n'aurez pas de mal à explorer d'autres types de scrolling et d'autres genres de jeu.
 

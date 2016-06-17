@@ -63,9 +63,9 @@ You can add as many components as you want on an object. A script is added as a 
 
 _(You can click on the checkbox to disabled it. You can right-click on a component to reset it, remove it, etc.)_
 
-<md-note>
+<div data-block="note">
 _Note_: Components can interact with other components. If an object has a component that requires another component of an object to work with, you can just drag the whole object inside this component and it will find the correct one in the object.
-</md-note>
+</div>
 
 A "Sprite Renderer" is a component that is able to display a sprite texture.
 
@@ -79,10 +79,10 @@ This will represent the player [_hitbox_][hitbox_link].
 
 You can see the collider in the editor "Scene" view and tweak its size in the "Inspector" with the "Size" property.
 
-<md-tip>
+<div data-block="tip">
 _Tip_: There is another way to edit a box collider. Select a game object with a box collider and enable the "Edit Collider" toggle in the component. You can observe that the box collider (_the green rectangle_) is now showing four small handles onto. Drag one of them to change the shape of the box.
 Be careful, the _blue rectangle represents the_ `Transform` component of your game object, not the collider.
-</md-tip>
+</div>
 
 We will set the size of the collider to `(10, 10)`.
 
@@ -92,9 +92,9 @@ It's way too large for a real _shmup_ but it's still smaller than the sprite:
 
 For the time being, it will be enough.
 
-<md-tip>
+<div data-block="tip">
 _Tip_: If you plan to make a _shmup_, spend a lot of time tweaking your hitboxes. In general, it should fit perfectly a small element inside the player sprite. What about the ship window here? You could also change the collider shape — with a "Circle Collider 2D" for example. It changes nothing to the behavior thanks to Unity, but it will slightly improve the gameplay.
-</md-tip>
+</div>
 
 Save the player game object to a prefab. You now have a basic player entity!
 
@@ -123,9 +123,9 @@ Say hello to our beloved _gravity_. :)
 
 As new scenes come with a default gravity and rigidbodies add a mass to an object, the ship is now attracted to the bottom.
 
-<md-info>
+<div data-block="info">
 The default gravity of Unity is `9.81`, i.e. the earth gravity.
-</md-info>
+</div>
 
 Gravity can be used in some kind of games, but we don't want to have to handle it here. Fortunately, it is simple to disable gravity on a rigidbody. Just set "Gravity Scale" to 0. _That's it, the ship is flying again_.
 
@@ -141,15 +141,15 @@ Time for some scripting! So far, we didn't code anything. That's the power of (l
 
 Inside Unity, create a new C# script in your "Scripts" folder. Call it "PlayerScript".
 
-<md-info>
+<div data-block="info">
 _Remark_: You can do it in JavaScript too. As we said before, code snippets will be in C#, but it is quite easy to translate the code from a language to another.
-</md-info>
+</div>
 
 Open your favorite editor or use the "Sync" submenu (Click on "Assets" in the menubar, then on "Sync MonoDevelop Project") to edit the script.
 
-<md-note>
+<div data-block="note">
 _"Sync MonoDevelop Project"_: This submenu is a bit weird. First, the name does not change, even if you have set up another editor. <br />We also recommend to use this menu the first time you have to script, because Unity will create the solutions and link the Unity libraries in them (for Visual Studio, Xamarin Studio or MonoDevelop). <br />If you simply open the script instead, the compiler of your IDE will likely catch some errors because it won't know Unity. <br />It doesn't matter because you will never compile directly with it, but it is nice to have the autocompletion on the Unity objects and a first pass on errors.
-</md-note>
+</div>
 
 If you come from XNA, you won't be lost.
 
@@ -172,9 +172,9 @@ You also have some functions for the collisions :
 
 Fiou... This explanation was a bit boring, but unavoidable. Sorry for _that_.
 
-<md-note>
+<div data-block="note">
 _Note about the 2D suffix_: You should have observed now that almost anything we talked about was suffixed with "2D". A "Box Collider 2D", a "Rigidbody 2D", the "OnCollisionEnter2D" or "OnTriggerEnter2D" methods, etc. _These new components or methods have appeared with Unity 4.3._ <br />By using them, you are adopting the new physics engine integrated in Unity 4.3 for 2D games (based on Box2D) instead of the one for 3D games (PhysX). The two engines are sharing similar concepts and objects, but they don't work exactly the same. If you start to work with one (favor Box2D for 2D games), stick to it. This is why we use all the objects or methods with a "2D" suffix.
-</md-note>
+</div>
 
 We will get back on some of them in details when we will be using them.
 
@@ -223,9 +223,9 @@ public class PlayerScript : MonoBehaviour
 
 _(The numbers in the comments refer to the explanations below)_
 
-<md-note>
+<div data-block="note">
 _Note about C# conventions_: Look at the `speed` member visibility: it's public. In C#, a member variable should be private in order to keep the internal representation of the class private. <br />But exposing it as a public variable allows you to modify it in Unity through the "Inspector" pane, even during the game execution. This is a _powerful_ feature of Unity, letting you tweaks the gameplay without coding. <br />Remember that we are doing scripting here, not classic C# programming. This implies to break some rules and conventions.
-</md-note>
+</div>
 
 ### Explanations
 
@@ -236,16 +236,16 @@ _Note about C# conventions_: Look at the `speed` member visibility: it's public.
 5. We need to access the rigidbody component, but we can avoid to do it every frame by storing a reference.
 6. We change the rigidbody velocity. This will tell the physic engine to move the game object. We do that in `FixedUpdate()` as it is recommended to do everything that is physics-related in there.
 
-<md-info>
+<div data-block="info">
 _Tutorial update_: If you have read this tutorial before, you may remember that we were using `transform.Translate` directly. This was working because translations were slow, but it is not recommended since it can mess up the physics (for the physic engine, a translation is like a teleportation, so there is no collision).
 <br />Thanks to your feedback, we updated the scripts to help people learn the good practices of game object movement.
-</md-info>
+</div>
 
 Now, attach the script to the game object.
 
-<md-tip>
+<div data-block="tip">
 _Tip_: You can attach a script to a game object by dragging the script from the "Project" view on the game object in the "Hierarchy". You can also click on "Add Component" and find it manually.
-</md-tip>
+</div>
 
 Hit the "Play" button in top of the editor. The ship is moving and your game is running! Congratulations, you have just made the equivalent of a ["Hello, World!"][helloworld_link] for a game :)
 
@@ -255,9 +255,9 @@ Try to tweak the speed: click on the player, modify the speed values in the "Ins
 
 [![The inspector for a script][player_value_tweak]][player_value_tweak]
 
-<md-danger>
+<div data-block="danger">
 _Be careful_: Modifications when the game is executed (or played) are lost when you stop it! It's a great tool for tweaking the gameplay, but remember what you are doing if you want to keep the changes. <br />However, this effect is also handy: you can destroy your game completely during the execution to test something new, without being afraid of breaking your real project.
-</md-danger>
+</div>
 
 This was the first sign of life in our game! Let's add more!
 
@@ -294,9 +294,9 @@ Create a new script "MoveScript".
 
 We could call it "EnemyScript" but we plan to reuse it later in another context.
 
-<md-note>
+<div data-block="note">
 _Note_: The modularity provided by Unity's component-based system offers a great way to separate scripts with different features. Of course, you can still have one giant script doing everything with a lot of parameters. It's your choice, but we highly recommend against doing that.
-</md-note>
+</div>
 
 We will copy some parts of what we have already written in the "PlayerScript" for movement. We will add another designer (a public member you can alter in the "Inspector") variable for the direction:
 

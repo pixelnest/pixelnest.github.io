@@ -43,9 +43,9 @@ Encore une fois, téléchargez et installez : tout est prêt à l'emploi. Change
 
 [ ![Préferences][unity_prefs_vs_url] ][unity_prefs_vs_url]
 
-<md-warning>
+<div data-block="warning">
 _A savoir_ : Il n'est pas possible de déboguer un projet Unity simplement avec Visual Studio 2013 Express. Il faut pour cela avoir au moins une version pro de Visual Studio et acheter le plugin [UnityVS][unityvs_link]. Vous aurez donc un meilleur éditeur pour le code mais l’absence de fonctionnalités de deboguage peut être critique dans certains cas.
-</md-warning>
+</div>
 
 ### Mac OS X
 
@@ -102,9 +102,9 @@ Prenez un peu de temps pour adapter l'interface à vos besoins et à votre écra
 
 Nous vous conseillons de créer dans l'onglet "Project" de Unity des dossiers pour ranger vos différents objets et éléments. Ces dossiers et fichiers sont en réalité stockés dans le dossier _Assets_ de votre projet.
 
-<md-note>
+<div data-block="note">
 _Note :_ Le dossier "Assets" est le dossier racine des projets Unity pour tout ce qui touche aux contenus. Vous ne le voyez _peut-être_ pas dans le logiciel — selon la disposition utilisée dans l'onglet "Projects" ("One-column" ou "Two-columns") —, mais vous pouvez le voir dans tous les cas dans votre explorateur de fichiers.
-</md-note>
+</div>
 
 [ ![Dossiers][unity_folders] ][unity_folders]
 
@@ -142,10 +142,10 @@ On désigne par "Texture" toutes les images et les _sprites_ de notre jeu. Si vo
 
 En revanche, et en 3D, cela permet l'automatisation par Unity de certaines tâches. [Plus d'informations ici (EN)](http://answers.unity3d.com/questions/172384/importing-models.html) ou [ici (EN)](http://docs.unity3d.com/Documentation/Components/class-Mesh.html).
 
-<md-note>
+<div data-block="note">
 _Dossier Resources_ : Si vous avez déjà utilisé Unity, vous connaissez peut-être le dossier `Resources`. Ce dernier est spécial : il permet de charger un fichier ou un objet qui se trouve à l'intérieur à partir d'un script (en utilisant la classe statique `Resources`).
 <br />Comme nous ne l'utiliserons pas avant la fin du projet (chapitre sur les menus), nous avons préféré ne pas le créer pour le moment pour simplifier la structure du jeu.
-</md-note>
+</div>
 
 ## Notre première scène
 
@@ -165,9 +165,9 @@ Une petite astuce pour rester organisé est d'utiliser des nouveaux objets vides
 
 **Vérifiez bien que la position de chacun de ces "objet-dossiers" est `(0, 0, 0)`. Puisque qu'ils n'utilisent pas cette information, autant ne pas s'en servir. De plus, cela permet de les avoir tous à la même place dans la scène.**
 
-<md-note>
+<div data-block="note">
 _Note_ : Changer la position d'un objet affectera tous ses enfants car ceux-ci sont liés. C'est le principe du "graphe de scène".
-</md-note>
+</div>
 
 Ces objets vides peuvent être vus comme purement logique et sans rapport avec le _gameplay_.
 
@@ -195,9 +195,9 @@ Vous devriez avoir :
 
 [ ![Première scène][unity_first_scene] ][unity_first_scene]
 
-<md-tip>
+<div data-block="tip">
 _Astuce_ : Par défaut, un "game object" est lié à la position de ses parents.<br />Donc si le parent se déplace, tourne ou change de taille, tous ses enfant subiront également ces transformations proportionnellement à leurs propres propriétés.
-</md-tip>
+</div>
 
 # Prochaine étape
 

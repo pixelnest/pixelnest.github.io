@@ -69,9 +69,9 @@ For your bullet prefab(s), you have the choice between two ways:
 * One prefab for every bullet: the sprite will be affected by the `BulletBank` object at runtime.
 * One prefab for each bullet: the sprite is pre-affected by the prefab.
 
-<md-tip>
+<div data-block="tip">
 _Tip_: In fact, you can have both at the same time. For your standard enemies, you can use a prefab with a pre-affected sprite. However, for a boss, you can use the other way to have a common script for all its bullets AND different sprites, for example. It's up to you to use the best option for your game.
-</md-tip>
+</div>
 
 In either case, the prefab:
 
@@ -102,9 +102,9 @@ You can define as many bullets as you want. A definition is:
 
 * `Time To Live In Seconds` — bullets are automatically destroyed after a duration time defined here. If your bullets are very fast, you should have a low time to live value.
 
-<md-note>
+<div data-block="note">
 _Turn off_: If you wish to _turn off_ this feature and handle the destruction yourself, set the `Time To Live` value to `0`. This is especially useful when integrating with another plugin that manages bullets spawn and de-spawn.
-</md-note>
+</div>
 
 * `Destroy When Out Of Screen` — if ticked, the bullets are automatically removed when they are not visible anymore. It is a simple way to avoid a too large number of bullets in the scene at a given time.
 
