@@ -29,7 +29,7 @@ In Unity, animations are made of a few things:
 To lighten things a bit, we have separated this tutorial in two parts as there are many topics to cover.
 
 <div data-block="warning">
-_Warning_: This part of the tutorial has not been updated to Unity 5. There are some differences, especially about components access, but the features are the same.
+  **Warning**: this part of the tutorial has not been updated to Unity 5. There are some differences, especially about components access, but the features are the same.
 </div>
 
 # The new sprite
@@ -83,10 +83,9 @@ For example, the left eye game object has been positioned with the mouse in the 
 [ ![Boss eye][boss_part2]][boss_part2]
 
 <div data-block="note">
-_Tip_: We only have one sprite for the eyes. We simply flip the other sprite to mirror the image.
-<br />
-To do that in Unity, set the scale to its opposite value. For example, here, we set the right eye scale to `(-1, 1, 1)`.
-You can reuse this simple tip everywhere and even on the `y` property (mirror vertically).
+  **Tip**: we only have one sprite for the eyes. We simply flip the other sprite to mirror the image.
+
+  To do that in Unity, set the scale to its opposite value. For example, here, we set the right eye scale to `(-1, 1, 1)`. You can reuse this simple tip everywhere and even on the `y` property (mirror vertically).
 </div>
 
 Set the body object a bit deeper than the rest, to `(0, 0, 1)`.
@@ -100,7 +99,7 @@ By using an object with multiple sub-sprites, we will be able to manipulate them
 Save the "Boss" object as a prefab. We are now ready to animate it!
 
 <div data-block="info">
-The old-school manner to animate an object is to have a single spritesheet and change the whole image position every "n" seconds. It also works in Unity, but this is not the aim of this chapter.
+  The old-school manner to animate an object is to have a single spritesheet and change the whole image position every "n" seconds. It also works in Unity, but this is not the aim of this chapter.
 </div>
 
 # Animation clips
@@ -116,9 +115,9 @@ For this tutorial, we will describe the first animation with as many details as 
 And of course, you are encouraged to make them better. :)
 
 <div data-block="tip">
-_Tip_: When you are working on an animation, you should do it in an empty scene. This way, you can clearly see what is happening and you don't need to run the whole game to work (faster: no music and no scripts).
-<br />
-Here we will work in a scene called ``TestAnimations``. This scene is just for designers and should never be included or launched in the final project.
+  **Tip**: when you are working on an animation, you should do it in an empty scene. This way, you can clearly see what is happening and you don't need to run the whole game to work (faster: no music and no scripts).
+
+  Here we will work in a scene called ``TestAnimations``. This scene is just for designers and should never be included or launched in the final project.
 </div>
 
 ## Idle animation
@@ -142,11 +141,11 @@ Now, create a new clip. The option is available in the animation list:
 Create an "Animations" folder, and save the new clip as "Boss\_Idle". The clip is now selected in the animation pane.
 
 <div data-block="note">
-_New clip_: In fact, by using the "Create New Clip" button in the animation view, Unity do three things.
-<br />
-First, it creates an "Animator Controller" for the selected game object (the boss here). Then it adds an "Animation" on this animator. An "Animator" is also added to the game object as a component (the "Animator" component references an "Animator Controller"). If the game object already has an "Animator", it simply adds the animation to it.
-<br /><br />
-Look in your "Animations" folder: there's also a "Boss" animator near your "Boss\_Idle" animation. We will talk about that in the next chapter. For the moment, don't touch it.
+  **New clip**: in fact, by using the "Create New Clip" button in the animation view, Unity do three things.
+
+  First, it creates an "Animator Controller" for the selected game object (the boss here). Then it adds an "Animation" on this animator. An "Animator" is also added to the game object as a component (the "Animator" component references an "Animator Controller"). If the game object already has an "Animator", it simply adds the animation to it.
+
+  Look in your "Animations" folder: there's also a "Boss" animator near your "Boss\_Idle" animation. We will talk about that in the next chapter. For the moment, don't touch it.
 </div>
 
 ### Adding keyframes
@@ -154,9 +153,9 @@ Look in your "Animations" folder: there's also a "Boss" animator near your "Boss
 To start working on the clip, click on the "Record" button (the red dot) in the top left corner of the "Animation" view. Now, everything you will do in the scene for this object (the boss) will be recorded as a keyframe on the animation.
 
 <div data-block="warning">
-_Attention_: Clicking on the timeline or on the time ruler will also trigger the "Record" button. Be careful!
-<br />
-This behavior is handy when you want to work quickly: just click on a time and do your changes (the record starts when the red line marker appears on the time).
+  **Attention**: clicking on the timeline or on the time ruler will also trigger the "Record" button. Be careful!
+
+  This behavior is handy when you want to work quickly: just click on a time and do your changes (the record starts when the red line marker appears on the time).
 </div>
 
 A *keyframe* is a *set of values* for a precise *time* moment.
@@ -171,9 +170,9 @@ To add a keyframe:
 Select the "Boss" object in your scene. At `0:30` change its rotation to `(0, 0, 30)`.
 
 <div data-block="tip">
-_Rotation_: In your "Scene" view, if you put your mouse near an handle of an object, you will see that the mouse pointer change. By holding and dragging the mouse, you can alter the rotation of the selected object.
-<br /><br />
-[ ![Rotation pointer][pointer] ][pointer]
+  **Rotation**: in your "Scene" view, if you put your mouse near an handle of an object, you will see that the mouse pointer change. By holding and dragging the mouse, you can alter the rotation of the selected object.
+
+  [ ![Rotation pointer][pointer] ][pointer]
 </div>
 
 You can see that a keyframe has been created:
@@ -181,7 +180,7 @@ You can see that a keyframe has been created:
 [ ![Animation keyframe][keyframes]][keyframes]
 
 <div data-block="tip">
-_Hotkeys_: The `alt` key can be used to move the timeline. Your mouse wheel can be used to zoom in or out where your pointer is.
+  **Hotkeys**: the `alt` key can be used to move the timeline. Your mouse wheel can be used to zoom in or out where your pointer is.
 </div>
 
 If you press the "Play" button of the "Animation" view, you will see the animation in the "Game" or "Editor" pane:
@@ -202,12 +201,13 @@ In the editor, if you click on a value of a keyframe, Unity will activate the re
 [ ![Idle animation editor][keyframe_editor]][keyframe_editor]
 
 <div data-block="danger">
-_Changing a property of the "Boss" object_: If you change a property of the parent object (the "Boss" object here), be extremely vigilant, especially with the "Position".
-<br /><br />For instance, if you change the "Position" of the "Boss" object in an animation, its real position in the scene is going to be changed for the one in the animation each time it is played. It can block an object.
-<br /><br />
-Most of the time, you want to change the children properties and not the container.
-<br /><br />
-Here we are working on the parent because we want everything to rotate together, but maybe we should have add an empty parent object on top of everything that is never animated.
+  **Changing a property of the "Boss" object**: if you change a property of the parent object (the "Boss" object here), be extremely vigilant, especially with the "Position".
+
+  For instance, if you change the "Position" of the "Boss" object in an animation, its real position in the scene is going to be changed for the one in the animation each time it is played. It can block an object.
+
+  Most of the time, you want to change the children properties and not the container.
+
+  Here we are working on the parent because we want everything to rotate together, but maybe we should have add an empty parent object on top of everything that is never animated.
 </div>
 
 ### Playing with curves
@@ -307,7 +307,7 @@ We have learned how to create some animation clips for an object. Now, we need t
 In the next chapter, we will see how to combine the different animations and call them with our scripts. To do that, we will use the other animation view: the "Animator", which represents the "Animator Controller" states machine of an object.
 
 <div data-block="info">
-_Mecanim_: The 2D animation tool is based on the already existing _Mecanim_ system.
+  **Mecanim**: the 2D animation tool is based on the already existing _Mecanim_ system.
 </div>
 
 [tutorial]: ../

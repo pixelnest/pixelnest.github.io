@@ -22,7 +22,7 @@ You can download the [full project on GitHub][sourcecode].
 This is an advanced chapter. If you are new to Unity, we recommend you to follow our [beginner's tutorial first][tutorial].
 
 <div data-block="warning">
-_Warning_: This tutorial has not been updated to Unity 5.
+  **Warning**: this tutorial has not been updated to Unity 5.
 </div>
 
 # Disclaimer
@@ -58,7 +58,7 @@ Using the app, the touch screen becomes a usable interface with a degraded live 
 This is the good way to debug touch controls, but you still need to fully deploy to really test the app on a device.
 
 <div data-block="note">
-_Note_: the iOS app only works with a Mac.
+  **Note**: the iOS app only works with a Mac.
 </div>
 
 ## Windows Phone
@@ -315,7 +315,7 @@ We look at every finger registered in the `Input` class and if a finger has just
 This would work with less code, but this way we make sure it's not another sort of gesture (which comes next).
 
 <div data-block="note">
-_Note_: ``touch.position`` is a screen location and not a world one. That's why we must use ``Camera.main.ScreenToWorldPoint`` to get the location in the world coordinates.
+  **Note**: `touch.position` is a screen location and not a world one. That's why we must use `Camera.main.ScreenToWorldPoint` to get the location in the world coordinates.
 </div>
 
 The result:

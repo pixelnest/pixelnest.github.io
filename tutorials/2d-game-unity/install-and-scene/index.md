@@ -44,7 +44,7 @@ Likewise: download and install, it's simple as everything is bundled, though it 
 [ ![Change the preferences][unity_prefs_vs_url] ][unity_prefs_vs_url]
 
 <div data-block="warning">
-_Good to know_: It's possible to use the Visual Studio 2013 debugger with Unity. You need to download and install the [UnityVS][unityvs_link] plugin. Simply follow their [documentation][unityvs_doc] to add the UnityVS to your Unity project (you need to do this for every project).
+  **Good to know**: it's possible to use the Visual Studio 2013 debugger with Unity. You need to download and install the [UnityVS][unityvs_link] plugin. Simply follow their [documentation][unityvs_doc] to add the UnityVS to your Unity project (you need to do this for every project).
 </div>
 
 ### Mac OS X
@@ -100,7 +100,7 @@ Before jumping into the game creation, take a few minutes to organize your proje
 We advise to create folders in the Unity "Project" pane to organize your stuffs. These folders will technically be created in the _Assets_ folder  of your project.
 
 <div data-block="note">
-_Note_: The "Assets" folder is the superfolder containing everything you add in the "Project" pane. It _may_ not be visible inside Unity, depending on the selected layout for the pane (One-column or Two-columns), but if you open your file explorer, you will be able to see it.
+  **Note**: the "Assets" folder is the superfolder containing everything you add in the "Project" pane. It _may_ not be visible inside Unity, depending on the selected layout for the pane (One-column or Two-columns), but if you open your file explorer, you will be able to see it.
 </div>
 
 [ ![Folders][unity_folders] ][unity_folders]
@@ -137,9 +137,10 @@ All the code goes here. We use this folder as the equivalent of a root folder in
 
 Sprites are the images of your game. In a 2D project, sprites are textures that can be used by the 2D tools.
 
-<br />
 <div data-block="note">
-_Note about the "Resources" folder_: If you have already tried Unity before, you may know that "Resources" is a useful and unique folder. It allows you to load an object or a file inside a script (using the static `Resources` class). <br />We will not be using it until... nearly the end (in the chapter about menus). So, to simplify, we decided to not include it for now.
+  **Note about the "Resources" folder**: if you have already tried Unity before, you may know that "Resources" is a useful and unique folder. It allows you to load an object or a file inside a script (using the static `Resources` class).
+
+  We will not be using it until... nearly the end (in the chapter about menus). So, to simplify, we decided to not include it for now.
 </div>
 
 ## Our first game scene
@@ -161,7 +162,7 @@ A trick in Unity is to create an empty game object and use it as a "folder" for 
 **Make sure they all are at the ``(0, 0, 0)`` position so you can track them easily! The position is not important as these empty objects are not using it.**
 
 <div data-block="note">
-_Note_: Changing the position will affect the children relative position. We will not speak about this topic in this tutorial, so let the position of the empty objects to ``(0, 0, 0)`` for the moment.
+  **Note**: changing the position will affect the children relative position. We will not speak about this topic in this tutorial, so let the position of the empty objects to ``(0, 0, 0)`` for the moment.
 </div>
 
 See those empty objects as purely logical ones.
@@ -188,7 +189,11 @@ You should have:
 [ ![Your first scene][unity_first_scene] ][unity_first_scene]
 
 <div data-block="tip">
-_Tip_: a game object is bounded to its parent position. <br /><br />This behavior creates a nice side-effect for a camera game object: if a camera is the child of an object, it will track its parent position automatically. If the camera is at the root of the scene or inside an empty game object, the view is fixed. However, if you put the camera inside a moving game object, the camera will follow this object on the scene. <br />This is a simple way to have the camera following the player, for example.
+  **Tip**: a game object is bounded to its parent position.
+
+  This behavior creates a nice side-effect for a camera game object: if a camera is the child of an object, it will track its parent position automatically. If the camera is at the root of the scene or inside an empty game object, the view is fixed. However, if you put the camera inside a moving game object, the camera will follow this object on the scene.
+
+  This is a simple way to have the camera following the player, for example.
 </div>
 
 # Next step

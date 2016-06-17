@@ -59,10 +59,9 @@ We can take advantage of this file to make sure we are writing a valid pattern.
 All you need to do is to add the `DOCTYPE` tag with a path to the DTD (here, `./bulletml.dtd`) at the top your document.
 
 <div data-block="note">
-_Note_: Some developer tools, like Visual Studio, will take profit of the DTD file to update their auto-completion list.
-<br /><br />
-This way, the editor will always suggest you a valid tag, attribute or value at a given location.
-This is a great help and you should see if you can enable that feature in your favorite XML editor.
+  **Note**: some developer tools, like Visual Studio, will take profit of the DTD file to update their auto-completion list.
+
+  This way, the editor will always suggest you a valid tag, attribute or value at a given location. This is a great help and you should see if you can enable that feature in your favorite XML editor.
 </div>
 
 The pattern above does... nothing but is valid nonetheless.
@@ -137,7 +136,7 @@ Sometimes, we will use the `NUMBER` value.
 Later, we will also introduce two new variables, `$rank` and `$rand`, that can be used dynamically in those operations.
 
 <div data-block="info">
-_Note_: `NUMBER` is computed by [Equationator](https://github.com/dmanning23/Equationator), an open-source C# lib.
+  **Note**: `NUMBER` is computed by [Equationator](https://github.com/dmanning23/Equationator), an open-source C# lib.
 </div>
 
 # Bullet tag
@@ -172,7 +171,7 @@ BulletML is about... bullets. The projectiles shot by something usually evil tha
 Notice that `<bullet />` is valid. Everything else is optional.
 
 <div data-block="note">
-_Empty bullet_: Using an empty `<bullet />` will create a simple no-name bullet with a constant behavior defined by its parent.
+  **Empty bullet**: using an empty `<bullet />` will create a simple no-name bullet with a constant behavior defined by its parent.
 </div>
 
 # Action tag
@@ -375,7 +374,7 @@ You can even pass some parameters. This is very interesting to reuse a fire acti
 ```
 
 <div data-block="note">
-_$1_: Name of the first parameter.
+  **$1**: name of the first parameter.
 </div>
 
 The result:
@@ -477,7 +476,7 @@ Speed the bullet.
 You can specify the amount with the `<horizontal />` and `<vertical />` tags.
 
 <div data-block="note">
-_Accel_: Similar to `<changeSpeed />`, but it is a more precise way to tweak the movement.
+  **Accel**: similar to `<changeSpeed />`, but it is a more precise way to tweak the movement.
 </div>
 
 # Global variables

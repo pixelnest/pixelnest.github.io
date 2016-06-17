@@ -19,7 +19,7 @@ We recommend that you read the chapters in the order below. By doing so, you wil
 You can use the navigation above and below each chapter to move between them.
 
 <div data-block="note">
-_Note_: this tutorial has been updated for **Unity 5**.
+  **Note**: this tutorial has been updated for **Unity 5**.
 </div>
 
 # Chapters
@@ -53,5 +53,5 @@ More to come, stay tuned!
 [Watch the tutorial](http://gamedevnation.com/creating-a-2d-game-with-unity/), thanks to Jay Jennings's work from Game Dev Nation.
 
 <div data-block="note">
-_Notice_: The "Making animations with Unity 2D" chapters have not been converted to video yet.
+  **Notice**: the "Making animations with Unity 2D" chapters have not been converted to video yet.
 </div>

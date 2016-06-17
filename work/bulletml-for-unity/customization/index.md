@@ -21,7 +21,7 @@ All we did before didn't require any scripting from your side.
 However, we let you the possibility to change any behavior explained before.
 
 <div data-block="note">
-_Pool_: A concrete example would be to handle properly the instantiation and destruction of the bullets with a pool of pre-instantiated objects.
+  **Pool**: a concrete example would be to handle properly the instantiation and destruction of the bullets with a pool of pre-instantiated objects.
 </div>
 
 # Bullet states
@@ -80,7 +80,7 @@ private BulletScript HandleBulletSpawn(BulletObjectbullet, string bulletName)
 {
   Debug.Log("Create Bullet's game object, sprite, etc.");
   GameObject gameObject = new GameObject("Test");
-  
+
   // Return the BulletScript that should be attached to the game object
   return gameObject.AddComponent<BulletScript>();
 }
@@ -92,7 +92,7 @@ This is the most interesting event. This is where you should instantiate a Game 
 - `bulletName` is a quick access to the bullet's label as defined in your pattern file
 
 <div data-block="note">
-_Spawn_: If you redefine `OnBulletSpawned`, you can safely leave the `Bullet Bank` field (of `BulletManagerScript`) empty.
+  **Spawn**: if you redefine `OnBulletSpawned`, you can safely leave the `Bullet Bank` field (of `BulletManagerScript`) empty.
 </div>
 
 ## Destroyed
@@ -147,13 +147,13 @@ void Awake()
 Another use case is when you have two players and want the enemies to target one or the other but not always the same.
 
 <div data-block="warning">
-**Breaking change:** the `source` parameter was introduced in the version **1.2** of the plugin.
+  **Breaking change**: the `source` parameter was introduced in the version **1.2** of the plugin.
 </div>
 
 # Trigger
 
 <div data-block="warning">
-**Note:** the `<trigger>` tag was introduced in the version **1.3** of the plugin.
+  **Note**: the `<trigger>` tag was introduced in the version **1.3** of the plugin.
 </div>
 
 A trigger is a simple way to tell Unity to execute some code from a BulletML file.
@@ -169,10 +169,10 @@ In your XML pattern, add the new instruction:
 `beforefire` is a simple string, you can replace it by any string you want.
 
 <div data-block="warning">
-**Note:** You can't use a NUMBER expression here.
+  **Note**: you can't use a NUMBER expression here.
 </div>
 
-You can know that a Bullet source has raised the evend ``beforefire`` by adding a delegate to ``OnTrigger``
+You can know that a Bullet source has raised the evend `beforefire` by adding a delegate to `OnTrigger`
 
 ```csharp
 var bulletManager = FindObjectOfType<BulletManagerScript>();

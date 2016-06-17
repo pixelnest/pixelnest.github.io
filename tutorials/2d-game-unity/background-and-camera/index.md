@@ -48,12 +48,15 @@ _(You have to click on the small round icon at the right of the input box to sho
 You can see that some other sprites are there. Those are the default images used by uGUI (the Unity UI system).
 
 <div data-block="note">
-_"My sprite doesn't show up in the dialog?"_: First, make sure you are in the "Assets" tab of the "Select Sprite" dialog. <br />Some readers have reported that, in their project, this dialog was empty. The reason is that for some Unity installations, even with a fresh new 2D project, images are imported as "Texture" and not "Sprite".
-<br /><br />To fix this, you need to select the image in the "Project" pane, and in the "Inspector", change the "Texture Type" property to "Sprite":
-<br /><br />
-[ ![Sprite mode][sprite] ][sprite]
-<br />
-We don't know why everybody doesn't seem to have the same behavior.
+  **"My sprite doesn't show up in the dialog?"**: first, make sure you are in the "Assets" tab of the "Select Sprite" dialog.
+
+  Some readers have reported that, in their project, this dialog was empty. The reason is that for some Unity installations, even with a fresh new 2D project, images are imported as "Texture" and not "Sprite".
+
+  To fix this, you need to select the image in the "Project" pane, and in the "Inspector", change the "Texture Type" property to "Sprite":
+
+  [ ![Sprite mode][sprite] ][sprite]
+
+  We don't know why everybody doesn't seem to have the same behavior.
 </div>
 
 Well, we have set a simple sprite displaying a cloudy sky background. You can think it was a bit complicated just for that. In fact, we could have dragged the sprite from the "Project" tab directly right into the "Scene".
@@ -69,7 +72,7 @@ Then move the object to where it belongs: `Level -> Background`. Change its posi
 A quick exercise: duplicate the background and place it at `(20, 0, 0)`. It should fit perfectly with the first part.
 
 <div data-block="tip">
-_Tip_: You can duplicate an objet with the `cmd + D` (OS X) or `ctrl + D` (Windows) shortcuts.
+  **Tip**: you can duplicate an objet with the `cmd + D` (OS X) or `ctrl + D` (Windows) shortcuts.
 </div>
 
 [ ![Background2 in place][background2_in_place] ][background2_in_place]
@@ -101,11 +104,11 @@ Apply the `Background` layer to our background sprite:
 [ ![Set sorting layer][sorting_layers_set] ] [sorting_layers_set]
 
 <div data-block="tip">
-_Tip_: the settings "Order in Layer" is a way to limit sub-layers. Sprites with lower numbers are rendered **before** sprites with greater numbers.
+  **Tip**: the settings "Order in Layer" is a way to limit sub-layers. Sprites with lower numbers are rendered **before** sprites with greater numbers.
 </div>
 
 <div data-block="note">
-_Note_: the "Default" layer cannot be removed, because this is the layer used by 3D elements. You can have 3D objects in your 2D game. Particles are considered as 3D objects by Unity, so they will be rendered on this layer.
+  **Note**: the "Default" layer cannot be removed, because this is the layer used by 3D elements. You can have 3D objects in your 2D game. Particles are considered as 3D objects by Unity, so they will be rendered on this layer.
 </div>
 
 # Adding background elements
@@ -136,9 +139,9 @@ In the new window ("Sprite Editor"), you can draw rectangles around each platfor
 Call the platforms "platform1" and "platform2".
 
 <div data-block="tip">
-_Tip_: the top-left button "Slice" allows you to quickly and automatically make this tedious task.<br />
-<br />
-Unity will find the objects inside the image and will slice them automatically. You can specify the default pivot point, or set a minimum size for a slice. For a simple image without artifacts, it's really efficient. However, if you use this tool, _be careful and check the result_ to be sure to get what you want.
+  **Tip**: the top-left button "Slice" allows you to quickly and automatically make this tedious task.
+
+  Unity will find the objects inside the image and will slice them automatically. You can specify the default pivot point, or set a minimum size for a slice. For a simple image without artifacts, it's really efficient. However, if you use this tool, _be careful and check the result_ to be sure to get what you want.
 </div>
 
 Now, under the image file, you should see the two sprites separately:
@@ -168,7 +171,7 @@ By doing so, you will create a `Prefab` based exactly on the original game objec
 [ ![Prefab connection][prefab_link] ][prefab_link]
 
 <div data-block="note">
-_Note on the "Prefab" buttons_: If you modify the game object later, you can "Apply" its changes to the `Prefab` or "Revert" it to the `Prefab` properties (canceling any change you've made on the game object). The "Select" button move your selection directly to the `Prefab` asset in the "Project" view (it will be highlighted).
+  **Note on the "Prefab" buttons**: if you modify the game object later, you can "Apply" its changes to the `Prefab` or "Revert" it to the `Prefab` properties (canceling any change you've made on the game object). The "Select" button move your selection directly to the `Prefab` asset in the "Project" view (it will be highlighted).
 </div>
 
 Creating prefabs with the platform objects will make them easier to reuse later. Simply drag the `Prefab` into the scene to add a copy. Try to add another platform that way.
@@ -190,7 +193,7 @@ Well. In the previous version of this tutorial (for Unity 4.2), we had a long an
 The good news is that it's completely useless now. You have nothing to do. It just works™.
 
 <div data-block="info">
-_Aside_: If you click on the `Main Camera` game object, you can see that it has a "Projection" flag set to "Orthographic". This is the setting that allows the camera to render a 2D game without taking the 3D into account. Keep in mind that even if you are working with 2D objects, Unity is still using its 3D engine to render the scene. The gif above shows this well.
+  **Aside**: if you click on the `Main Camera` game object, you can see that it has a "Projection" flag set to "Orthographic". This is the setting that allows the camera to render a 2D game without taking the 3D into account. Keep in mind that even if you are working with 2D objects, Unity is still using its 3D engine to render the scene. The gif above shows this well.
 </div>
 
 # Next step

@@ -20,7 +20,7 @@ Now that we have improved our game visually, with particles, we will add some so
 You will learn where to find sounds and music, pick some, and play them in our game via a script.
 
 <div data-block="note">
-_Note_: Unity 5 has been released with a lot of new Audio tools. However, we will not cover the new features in this tutorial.
+  **Note**: Unity 5 has been released with a lot of new Audio tools. However, we will not cover the new features in this tutorial.
 </div>
 
 # Finding sounds and musics
@@ -39,7 +39,11 @@ Or Damien's favorite:
 - Create chiptune (8-bit) sounds using [BFXR](http://www.bfxr.net/) (based on [SFXR](http://drpetter.se/project_sfxr.html) but with a web version that is very useful)
 
 <div data-block="info">
-_Matthieu_: I have created some sounds and songs for a short school project made by a friend. I was a drummer at the time, but absolutely not a composer. <br />However, with the help of [Freesound](http://www.freesound.org/), a bit of inventiveness and a dozen of hours (without knowing any tool — so I just learned how to use [Audacity](http://audacity.sourceforge.net/) the quick way), I successfully did a (cheap) soundtrack for the whole game. <br /><br />I wouldn't recommend that for a song (find a musician and make a deal, it's way better), but with enough time and a good tool, you could defintely create cool sound effects. _It's feasible: be creative_.
+  **Matthieu**: I have created some sounds and songs for a short school project made by a friend. I was a drummer at the time, but absolutely not a composer.
+
+  However, with the help of [Freesound](http://www.freesound.org/), a bit of inventiveness and a dozen of hours (without knowing any tool — so I just learned how to use [Audacity](http://audacity.sourceforge.net/) the quick way), I successfully did a (cheap) soundtrack for the whole game.
+
+  I wouldn't recommend that for a song (find a musician and make a deal, it's way better), but with enough time and a good tool, you could definitely create cool sound effects. _It's feasible: be creative_.
 </div>
 
 For musics, it depends of what you want:
@@ -47,7 +51,7 @@ For musics, it depends of what you want:
 - [Bosca Ceoil](http://distractionware.com/blog/2013/08/bosca-ceoil/) is a simple software from Terry Cavanagh to make musics
 
 <div data-block="info">
-_Damien_: This is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1). I really loved his music. He kindly authorized me to use them in _The Great Paper Adventure_ game.
+  **Damien**: this is how I met (your mother) the artist [Spintronic](http://spintronic.fr/ticket/listbyartist/1). I really loved his music. He kindly authorized me to use them in _The Great Paper Adventure_ game.
 </div>
 
 ## Assets for the tutorial
@@ -153,7 +157,7 @@ Then, do:
 Start the game and listen. Yeah, we have a music and sounds now!
 
 <div data-block="note">
-_Note_: This method is enough for the tutorial or for small projects. For a bigger game, it's probably too light, as you won't be able to easily manage hundreds of sounds.
+  **Note**: this method is enough for the tutorial or for small projects. For a bigger game, it's probably too light, as you won't be able to easily manage hundreds of sounds.
 </div>
 
 # Next Step

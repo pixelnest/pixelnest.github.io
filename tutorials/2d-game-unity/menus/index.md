@@ -20,11 +20,15 @@ We have finished our first level with a basic gameplay, some sounds, graphics an
 However, when the player dies, the game continues to run and it's impossible to start again. Moreover, when you launch it, you start directly. We are clearly in a situation where we need some menus to control the game.
 
 <div data-block="info">
-_Damien_: Let's say it immediately: menus and GUI are no fun in a game. You usually have to use a very basic GUI framework (or no framework at all). <br />It takes a lot of time and the result is just... menus that players will skip as fast as possible.
+  **Damien**: let's say it immediately: menus and GUI are no fun in a game. You usually have to use a very basic GUI framework (or no framework at all).
+
+  It takes a lot of time and the result is just… menus that players will skip as fast as possible.
 </div>
 
 <div data-block="info">
-_Matthieu_: Unlike many game developers, I disagree with the previous statement. Creating a _good_ game GUI is not an easy task, but it can be rewarding and interesting. However, creating menus requires good tools and some sensible design decisions (like for an app interface). <br /><br />But yeah; a _good_ menu must be invisible and the players should not even notice it exists.
+  **Matthieu**: unlike many game developers, I disagree with the previous statement. Creating a _good_ game GUI is not an easy task, but it can be rewarding and interesting. However, creating menus requires good tools and some sensible design decisions (like for an app interface).
+
+  But yeah; a _good_ menu must be invisible and the players should not even notice it exists.
 </div>
 
 Since Unity 4.6, the UI tools (aka "uGUI") has been updated and are now quite good to make fancy menus.
@@ -54,7 +58,7 @@ For the buttons, we will use the standard ones.
 Nearly all games have a title screen. It's where the player lands when starting the game.
 
 <div data-block="info">
-_Damien_: Some are just awesomes and memorables: Megaman, Metal Slug... (I'm a big fan of title screens).
+  **Damien**: some are just awesome and memorable: Megaman, Metal Slug... (I'm a big fan of title screens).
 </div>
 
 What we are going to create will not be that awesome, but... simple!
@@ -67,7 +71,7 @@ First, create a new scene:
 2. Save it in the "Scenes" folder as "Menu".
 
 <div data-block="tip">
-_Tip_: You could also press the `cmd+N` (OS X) or `ctrl+N` (Windows) shortcuts.
+  **Tip**: you could also press the `cmd+N` (OS X) or `ctrl+N` (Windows) shortcuts.
 </div>
 
 Our title screen will be made of:
@@ -164,7 +168,9 @@ Back to the menu. Click and... Play!
 [ ![Start game][start]][start]
 
 <div data-block="tip">
-_Tip_: The `Application.LoadLevel()` method job is to clear the current scene and to instantiate all the game objects of the new one. Sometimes, you want to keep a game object of a first scene into a second (e.g., to have a continuous music between two menus). <br /><br />Unity provides a `DontDestroyOnLoad(aGameObject)` method for these cases. Just call it on a game object and it won't be cleared when a new scene is loaded. In fact, it won't be cleared at all. So if you want to remove it in a further scene, you have to manually destroy it.
+  **Tip**: the `Application.LoadLevel()` method job is to clear the current scene and to instantiate all the game objects of the new one. Sometimes, you want to keep a game object of a first scene into a second (e.g., to have a continuous music between two menus).
+
+  Unity provides a `DontDestroyOnLoad(aGameObject)` method for these cases. Just call it on a game object and it won't be cleared when a new scene is loaded. In fact, it won't be cleared at all. So if you want to remove it in a further scene, you have to manually destroy it.
 </div>
 
 # Deaths and restarts

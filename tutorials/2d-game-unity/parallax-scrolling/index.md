@@ -43,7 +43,9 @@ The first choice is a no-brainer if you have a `Perspective` camera. The paralla
 But in a standard 2D game in Unity, we use an `Orthographic` camera. We don't have depth at render.
 
 <div data-block="note">
-_About the camera_: Remember the "Projection" property of your camera game object. It's set to `Orthographic` in our game. <br />`Perspective` means that the camera is a classic 3D camera, with depth management. `Orthographic` is a camera that renders everything at the same depth. It's particularly useful for a GUI or a 2D game.
+  **About the camera**: remember the "Projection" property of your camera game object. It's set to `Orthographic` in our game.
+
+  `Perspective` means that the camera is a classic 3D camera, with depth management. `Orthographic` is a camera that renders everything at the same depth. It's particularly useful for a GUI or a 2D game.
 </div>
 
 In order to add the parallax scrolling effect to our game, the solution is to mix both choices. We will have two scrollings:
@@ -52,9 +54,11 @@ In order to add the parallax scrolling effect to our game, the solution is to mi
 - Background elements are moving at different speeds (in addition to the camera movement).
 
 <div data-block="note">
-_Note_: You may ask: "Why don't we just set the camera as a child of the player object?". Indeed, in Unity, if you _set an object (camera or not) as a sub-child of a game object, this object will maintain its relative position_ to its parent. So if the camera is a child of the player and is centered on him, it will stay that way and will follow him exactly. It could be a solution, but this would not fit with our gameplay.
-<br/><br/>In a _shmup_, the camera _restricts_ the player movement. If the camera moves along with the player for both horizontal and vertical axis, then the player is free to go where he wants. We _DO_ want to keep the player inside a restricted area.
-<br/><br/>We would also recommend to always keep the camera independent in a 2D game. Even in a platformer, the camera isn't strictly linked to the player: it follows him under some restrictions. Super Mario World has probably one the best camera possible for a platformer. [You may have a look at how it is done][smw_camera].
+  **Note**: you may ask: "Why don't we just set the camera as a child of the player object?". Indeed, in Unity, if you _set an object (camera or not) as a sub-child of a game object, this object will maintain its relative position_ to its parent. So if the camera is a child of the player and is centered on him, it will stay that way and will follow him exactly. It could be a solution, but this would not fit with our gameplay.
+
+  In a _shmup_, the camera _restricts_ the player movement. If the camera moves along with the player for both horizontal and vertical axis, then the player is free to go where he wants. We _DO_ want to keep the player inside a restricted area.
+
+  We would also recommend to always keep the camera independent in a 2D game. Even in a platformer, the camera isn't strictly linked to the player: it follows him under some restrictions. Super Mario World has probably one the best camera possible for a platformer. [You may have a look at how it is done][smw_camera].
 </div>
 
 ## Spawning enemies
@@ -72,7 +76,7 @@ The nice idea here is that you can use the Unity editor to set the enemies. You 
 [Once again, it's a choice, not science][stackgamedev_link]. ;)
 
 <div data-block="note">
-_Note_: On a bigger project, you may need a dedicated level editor such as "Tiled" or a custom one you made. Your levels can be text files (plain text, XML, JSON, etc.) that you read in Unity for example.
+  **Note**: on a bigger project, you may need a dedicated level editor such as "Tiled" or a custom one you made. Your levels can be text files (plain text, XML, JSON, etc.) that you read in Unity for example.
 </div>
 
 ## Planes
@@ -95,7 +99,7 @@ We are going to have:
 We could add as many layers of background objects as we want.
 
 <div data-block="warning">
-_Careful with that axe, Eugene_: If you add layers ahead of the foreground layer, be careful with the visibility. Many games do not use this technique because it reduces the clearness of the game, especially in a shmup where the gameplay elements need to be clearly visible.
+  **Careful with that axe, Eugene**: if you add layers ahead of the foreground layer, be careful with the visibility. Many games do not use this technique because it reduces the clearness of the game, especially in a shmup where the gameplay elements need to be clearly visible.
 </div>
 
 # _Practice_: Diving into the code
@@ -103,7 +107,7 @@ _Careful with that axe, Eugene_: If you add layers ahead of the foreground layer
 Okay, we saw how implementing a parallax scrolling affects our game.
 
 <div data-block="info">
-_Did you know?_ "Scrolling shooters" is another name used for the _shmups_.
+  **Did you know?** "Scrolling shooters" is another name used for the _shmups_.
 </div>
 
 But enough thoughts, time to practice!
@@ -111,7 +115,9 @@ But enough thoughts, time to practice!
 Unity has some parallax scrolling scripts in its standard packages (take a look at the 2D platformer demo on the Asset Store). You can of course use them, but we found it would be interesting to build one from scratch the first time.
 
 <div data-block="warning">
-_Standard packages_: These are practicals, but be careful to not abuse of them. Using standard packages can block your thoughts and will not make your game stand out of the crowd. They give a _Unity_ feel to your gameplay. <br />Remember all the flash game clones?
+  **Standard packages**: these are practicals, but be careful to not abuse of them. Using standard packages can block your thoughts and will not make your game stand out of the crowd. They give a _Unity_ feel to your gameplay.
+
+  Remember all the flash game clones?
 </div>
 
 ## Simple scrolling
@@ -190,7 +196,7 @@ Not bad! But we can see that enemies move and shoot when they are out of the cam
 Moreover, they are never recycled when they pass the player (zoom out in the "Scene" view, and look at the left of the scene: the Poulpies are still moving).
 
 <div data-block="note">
-_Note_: Experiment with the values. :)
+  **Note**: experiment with the values. :)
 </div>
 
 We'll fix these problems later. First, we need to manage the infinite background (the sky).
@@ -210,13 +216,17 @@ _Find the correct balance between resource consumption and flexibility for your 
 In our case, the idea is that we will get all the children on the layer and check their renderer.
 
 <div data-block="note">
-_A note about using the renderer component_: This method won't work with invisible objects (e.g., the ones handling scripts). However, a use case when you need to do this on invisible objects is unlikely.
+  **A note about using the renderer component**: This method won't work with invisible objects (e.g., the ones handling scripts). However, a use case when you need to do this on invisible objects is unlikely.
 </div>
 
 We will use an handy method to check whether an object's renderer is visible by the camera. We've found it on [the community wiki][community_post_link]. It's neither a class nor a script, but a C# class [extension][extension_link].
 
 <div data-block="tip">
-_Extension_: The C# language allows you to extend a class with extensions, without needing the base source code of the class. <br />Create a static method starting with a first parameter which looks like this: `this Type currentInstance`. The `Type` class will now have a new method available everywhere your own class is available. <br />Inside the extension method, you can refer to the current instance calling the method by using the `currentInstance` parameter instead of `this`.
+  **Extension**: the C# language allows you to extend a class with extensions, without needing the base source code of the class.
+
+  Create a static method starting with a first parameter which looks like this: `this Type currentInstance`. The `Type` class will now have a new method available everywhere your own class is available.
+
+  Inside the extension method, you can refer to the current instance calling the method by using the `currentInstance` parameter instead of `this`.
 </div>
 
 ## The "RendererExtensions" script
@@ -239,7 +249,11 @@ public static class RendererExtensions
 Simple, isn't it?
 
 <div data-block="danger">
-_Namespaces_: You might have already noted that Unity doesn't add a namespace around a `MonoBehaviour` script when you create it from the "Project" view. And yet Unity _does_ handle namespaces… <br /><br />In this tutorial, we are not using namespaces at all. However, in your real project, you might consider to use them. If not, prefix your classes and behaviours to avoid a collision with a third-party library (like _NGUI_).
+  **Namespaces**: you might have already noted that Unity doesn't add a namespace around a `MonoBehaviour` script when you create it from the "Project" view. And yet Unity _does_ handle namespaces…
+
+  In this tutorial, we are not using namespaces at all. However, in your real project, you might consider to use them. If not, prefix your classes and behaviors to avoid a collision with a third-party library (like _NGUI_).
+
+  The real reason behind not using namespaces was that during the Unity 4 days (this tutorial was originally written for Unity 4.3), a namespace would prevent the use of default parameters. It's not a problem anymore, so: **use** namespace!
 </div>
 
 We will call this method on the leftmost object of the infinite layer.
@@ -393,8 +407,11 @@ _(Click on the image to see the animation)_
 Yes! We finally have a functional "parallax scrolling" implementation.
 
 <div data-block="note">
-_Note:_ Why don't we use the `OnBecameVisible()` and `OnBecameInvisible()` methods? _Because they are broken._ <br /><br />The basic idea of these methods is to execute a fragment of code when the object is rendered (or vice-versa). They work like the `Start()` or `Stop()` methods (if you need one, simply add the method in the `MonoBehaviour` and Unity will use it).
-<br /><br />The problem is that these methods are also called when rendered by the "Scene" view of the Unity editor. This means that we will not get the same behavior in the Unity editor and in a build (whatever the platform is). This is dangerous and absurd. _We highly recommend to avoid these methods._
+  **Note**: why don't we use the `OnBecameVisible()` and `OnBecameInvisible()` methods? _Because they are broken._
+
+  The basic idea of these methods is to execute a fragment of code when the object is rendered (or vice-versa). They work like the `Start()` or `Stop()` methods (if you need one, simply add the method in the `MonoBehaviour` and Unity will use it).
+
+  The problem is that these methods are also called when rendered by the "Scene" view of the Unity editor. This means that we will not get the same behavior in the Unity editor and in a build (whatever the platform is). This is dangerous and absurd. _We highly recommend to avoid these methods._
 </div>
 
 # Bonus: Enhancing existing scripts

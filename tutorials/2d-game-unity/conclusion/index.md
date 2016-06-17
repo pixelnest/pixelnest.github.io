@@ -30,7 +30,7 @@ The last steps?
 And the rest is all yours...
 
 <div data-block="tip">
-_A last tip?_ Use a version control system (Git, Mercurial or SVN), even if you are alone. You won't regret it.
+  **A last tip?** Use a version control system (Git, Mercurial or SVN), even if you are alone. You won't regret it.
 </div>
 
 

@@ -20,7 +20,7 @@ links:
 It allows you to design some very complex bullet patterns with a simple XML file. It’s especially useful in “Shoot’Em Up” (_shmup_) games to create memorable boss fights or enemies.
 
 <div data-block="info">
-_Game_: Although _BulletML for Unity_ is intended to be used in shmups, it is NOT limited to this genre. _You can use it in any game you want_.
+  **Game**: although _BulletML for Unity_ is intended to be used in shmups, it is NOT limited to this genre. _You can use it in any game you want_.
 </div>
 
 [ ![Screenshot2][screenshot2] ][screenshot2]

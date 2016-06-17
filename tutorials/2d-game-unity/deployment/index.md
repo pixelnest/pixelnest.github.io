@@ -41,8 +41,9 @@ This is the first and simplest way to distribute your game. You just have to hos
 [ ![The web version][web_result] ][web_result]
 
 <div data-block="warning">
-_Warning_: The Web player is **obsolete**. But at this time, the WebGL player is not ready ("preview"). So you can use it for your prototypes but it may not work for a full game.<br />
-However, make sure to use the WebGL player and not the old Web player once it will be released.
+  **Warning**: the Web player is **obsolete**. But at this time, the WebGL player is not ready ("preview"). So you can use it for your prototypes but it may not work for a full game.
+
+  However, make sure to use the WebGL player and not the old Web player once it will be released.
 </div>
 
 # Player Settings
@@ -84,10 +85,9 @@ First, select "iOS" in the build window:
 Open the "Player settings" view to change a few parameters (minimum SDK, icon, etc.).
 
 <div data-block="note">
-_Tip_: If you want to test on a simulator, there's a trick. In the iOS "Player Settings", find the "SDK version" field. Then choose "Simulator SDK":
-<br/><br />
-[ ![ios_simulator][ios_simulator_mini] ][ios_simulator]
-<br />
+  **Tip**: if you want to test on a simulator, there's a trick. In the iOS "Player Settings", find the "SDK version" field. Then choose "Simulator SDK":
+
+  [ ![ios_simulator][ios_simulator_mini] ][ios_simulator]
 </div>
 
 Build the project. Unity will prompt you to choose a location:

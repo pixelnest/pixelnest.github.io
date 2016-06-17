@@ -34,7 +34,9 @@ If you are as lazy as I am, duplicate the "PlayerShot" prefab, rename it to "Ene
 To duplicate, you can create an instance by doing a drag and drop on the scene, renaming the created game object and finally saving it as a `Prefab`.
 
 <div data-block="tip">
-Or you could simply duplicate the `Prefab` directly inside the folder with the `cmd+D` (OS X) or `ctrl+D` (Windows) shortcuts. <br />If you like to do it the hard way, you could also recreate a whole new sprite, rigibody, collider with trigger, etc.
+  Or you could simply duplicate the `Prefab` directly inside the folder with the `cmd+D` (OS X) or `ctrl+D` (Windows) shortcuts.
+
+  If you like to do it the hard way, you could also recreate a whole new sprite, rigibody, collider with trigger, etc.
 </div>
 
 The right scale is `(0.35, 0.35, 1)`.
@@ -94,7 +96,7 @@ You should have this (observe the slight increase of the shooting rate to `0.75`
 [ ![Poulpi configuration with weapon][enemy_config] ][enemy_config]
 
 <div data-block="note">
-_Remark_: If you are modifying the game object in the scene, remember to save all the changes to the `Prefab` using the "Apply" button on the top right of the "Inspector".
+  **Remark**: if you are modifying the game object in the scene, remember to save all the changes to the `Prefab` using the "Apply" button on the top right of the "Inspector".
 </div>
 
 Try to play and look!
@@ -135,7 +137,7 @@ In its current state, the "EnemyScript" call to `GetComponent<WeaponScript>()` i
 Fortunately, Unity provides a method that can also look in the children hierarchy of the game object calling it: the `GetComponentInChildren<Type>()` method.
 
 <div data-block="note">
-_Note_: Like for `GetComponent<>()`, `GetComponentInChildren<>()` also exists in a plural form : `GetComponentsInChildren<Type>()`. Notice the `s` after "Component". This method returns a list instead of the first corresponding component.
+  **Note**: like for `GetComponent<>()`, `GetComponentInChildren<>()` also exists in a plural form : `GetComponentsInChildren<Type>()`. Notice the `s` after "Component". This method returns a list instead of the first corresponding component.
 </div>
 
 In fact, just for fun, we have also added a way to manage multiple weapons. We are just manipulating a list instead of a single instance of the component.
@@ -261,7 +263,7 @@ We won't implement one here but it is quite simple. We used [the same technique 
 You could also reduce the time to live of a bullet so it will disappear more quickly.
 
 <div data-block="warning">
-_Attention_: Keep in mind that using the `Instantiate` method heavily has a cost. _You need to use it carefully_.
+  **Attention**: keep in mind that using the `Instantiate` method heavily has a cost. _You need to use it carefully_.
 </div>
 
 ## Bullet behavior

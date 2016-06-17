@@ -161,13 +161,17 @@ public class HealthScript : MonoBehaviour
 Attach this "HealthScript" on the Poulpi `Prefab`.
 
 <div data-block="warning">
-_Attention_: It's better to work on the `Prefab` directly. <br />By doing so, every instantiated enemy in the scene is going to be modified to reflect the `Prefab`. It is particularly important here because we will have a lot of enemies in the scene. <br />If you have worked on a game object instance instead of the `Prefab`, don't be scared: you can click on the "Apply" button at the top of the "Inspector" to add the changes to the `Prefab`.
+  **Attention**: it's better to work on the `Prefab` directly.
+
+  By doing so, every instantiated enemy in the scene is going to be modified to reflect the `Prefab`. It is particularly important here because we will have a lot of enemies in the scene.
+
+  If you have worked on a game object instance instead of the `Prefab`, don't be scared: you can click on the "Apply" button at the top of the "Inspector" to add the changes to the `Prefab`.
 </div>
 
 Make sure the shot and the Poulpi are on the same line to test the collision.
 
 <div data-block="note">
-_Note_: The 2D physics engine, Box2D, doesn't use the Z position. Colliders 2D will always be in the same plane even if your game objects are not.
+  **Note**: the 2D physics engine, Box2D, doesn't use the Z position. Colliders 2D will always be in the same plane even if your game objects are not.
 </div>
 
 Now play the scene and observe:
@@ -299,7 +303,9 @@ Unity will automatically fill the script with this information. Easy, right?
 The `shootingRate` variable has a default value set in the code. We will not change it for the moment. But you can start the game and experiment with it to test what it does.
 
 <div data-block="warning">
-_Be careful_: Changing a variable value in the Unity "Inspector" does not apply the change to the default value of the script. If you add the script onto another object, the default value will be the one from the script. <br />It's logical, but you need to be careful. If you want to keep the tweaked value definitively, you have to open your code editor and backport the change yourself.
+  **Be careful**: changing a variable value in the Unity "Inspector" does not apply the change to the default value of the script. If you add the script onto another object, the default value will be the one from the script.
+
+  It's logical, but you need to be careful. If you want to keep the tweaked value definitively, you have to open your code editor and backport the change yourself.
 </div>
 
 ### 2. Cooldown
@@ -315,7 +321,9 @@ This is the main purpose of this script: being called from another one. This is 
 Once the projectile is instantiated, we retrieve the scripts of the shot object and override some variables.
 
 <div data-block="note">
-_Note_: The `GetComponent<TypeOfComponent>()` method allows you to get a precise component (and thus a script, because a script is a component after all) from an object. The generic (`<TypeOfComponent>`) is used to indicate the exact component that you want. <br />There is also a `GetComponents<TypeOfComponent>()` that gets an array instead of the first one, etc.
+  **Note**: the `GetComponent<TypeOfComponent>()` method allows you to get a precise component (and thus a script, because a script is a component after all) from an object. The generic (`<TypeOfComponent>`) is used to indicate the exact component that you want.
+
+  There is also a `GetComponents<TypeOfComponent>()` that gets an array instead of the first one, etc.
 </div>
 
 # Using the weapon with the player entity
@@ -361,7 +369,9 @@ What did we do ?
 3. We call `Attack(false)`.
 
 <div data-block="info">
-_Button down_: You can notice that we use the `GetButtonDown()` method to get an input. The "Down" at the end allows us to get the input when the button has been pressed once and _only_ once. `GetButton()` returns `true` at each frame until the button is released. In our case, we clearly want the behavior of the `GetButtonDown()` method. <br />Try to use `GetButton()` instead, and observe the difference.
+  **Button down**: you can notice that we use the `GetButtonDown()` method to get an input. The "Down" at the end allows us to get the input when the button has been pressed once and _only_ once. `GetButton()` returns `true` at each frame until the button is released. In our case, we clearly want the behavior of the `GetButtonDown()` method.
+
+  Try to use `GetButton()` instead, and observe the difference.
 </div>
 
 Launch the game with the "Play" button. You should get this:
