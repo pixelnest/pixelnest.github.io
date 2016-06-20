@@ -11,17 +11,17 @@ layout: base
 
     <article class="entry">
       <header class="entry__header">
-        <h1 class="entry__title">
-          <a href="{{ page.url | remove: 'index.html' }}">
-            {{ page.title }}
-          </a>
-        </h1>
-
         {% if page.subtitle %}
           <h2 class="entry__subtitle">
             {{ page.subtitle }}
           </h2>
         {% endif %}
+
+        <h1 class="entry__title">
+          <a href="{{ page.url | remove: 'index.html' }}">
+            {{ page.title }}
+          </a>
+        </h1>
       </header>
 
       {% if page.show_metadata == nil or page.show_metadata == true %}
