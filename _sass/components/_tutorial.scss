@@ -4,11 +4,20 @@
 // Global.
 // -------------------------------------------------------
 
+.tutorial .page-content {
+  // Slightly bigger by default in tutorial pages.
+  max-width: 650px;
+}
+
 .tutorial .entry__header {
   margin-bottom: $default-spacing;
   padding-bottom: 8px;
 
   border-bottom: 1px solid rgba($pizza, 0.2);
+}
+
+.tutorial .entry__title {
+  font-size: 4rem;
 }
 
 .tutorial .entry__content {
