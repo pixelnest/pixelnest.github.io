@@ -49,7 +49,13 @@ Likewise: download and install, it's simple as everything is bundled, though it 
 
 ### Mac OS X
 
-[MonoDevelop 4][md_link] is very similar to [Xamarin Studio][xs_link]. Which means that it is way better than the old MonoDevelop 2 of the previous releases of Unity. It is far from perfect, but if you are on a Mac, it's still the best option that you've got.
+[MonoDevelop][monodevelop] (or its cousin [Xamarin Studio][xamarin]) is packaged with your Unity installation, and is the default option. It's a full blown IDE like Visual Studio or Xcode. Well, it tries, at least.
+
+<div data-block="note">
+  **Matthieu**: to be honest, MonoDevelop is not great. I didn't try the few last versions so I might be wrong, but you will be probably better with something else. See below.
+</div>
+
+If you are ready to tinker a bit, use [Sublime Text][subl] with [Omnisharp][omnisharp] or the new [Visual Studio Code][vscode].
 
 ### Which language ?
 
@@ -214,8 +220,11 @@ We have just created the basic structure of our game. In the next step we will s
 
 [unity_download_link]: http://unity3d.com/get-unity/download?ref=personal "Download Unity"
 [vs_download_link]: https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx "Download Visual Studio"
-[md_link]: http://monodevelop.com/ "MonoDevelop"
-[xs_link]: http://xamarin.com/studio "Xamarin Studio"
+[monodevelop]: http://monodevelop.com/ "MonoDevelop"
+[xamarin]: http://xamarin.com/studio "Xamarin Studio"
+[subl]: https://www.sublimetext.com/
+[omnisharp]: http://www.omnisharp.net/
+[vscode]: https://code.visualstudio.com/
 [unityvs_link]: http://unityvs.com/
 [unityvs_doc]: https://msdn.microsoft.com/en-us/library/dn940025(v=vs.120).aspx
 
