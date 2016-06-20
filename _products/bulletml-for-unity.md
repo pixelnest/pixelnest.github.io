@@ -5,12 +5,14 @@ assets: /static/images/products/bulletml-for-unity/
 date: 2014-04-08
 
 links:
-  - name: Read the docs
+  - name: Download
+    url: http://bulletml-for-unity.pixelnest.io/#download
+  - name: Documentation
     url: /work/bulletml-for-unity/
   - name: Press Page
     url: /presskit/bulletml_for_unity.html
-  - name: Get the plugin
-    url: http://bulletml-for-unity.pixelnest.io/
 ---
 
-_BulletML for Unity_ is a simple and powerful wrapper around BulletML which allows you to design bullet patterns in your Unity game.
+_BulletML for Unity_ is a **simple** and **powerful** wrapper around BulletML which allows you to **design bullet patterns** in your Unity game.
+
+It’s especially useful in “Shoot’Em Up” (shmup) games to create memorable boss fights or enemies.

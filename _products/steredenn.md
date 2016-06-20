@@ -10,16 +10,16 @@ excerpt: "_Steredenn_ is a frenetic and chaotic space shooter, carved in big bea
 state: hero
 
 links:
-  - name: Go to website
+  - name: Official Website
     url: http://steredenn.pixelnest.io
-  - name: Watch the trailer
+  - name: Watch trailer
     url: https://youtu.be/EtXajayBLzw
   - name: Press Page
     url: /presskit/steredenn.html
 ---
 
-Steredenn is a **roguelike-shmup** video game for **PC/Mac/Linux**, **Xbox One** and **PlayStation 4** made by Pixelnest Studio.
+_Steredenn_ is a **roguelike-shmup** video game for **PC/Mac/Linux**, **Xbox One** and **PlayStation 4**.
 
-Steredenn is a **frenetic and chaotic space shooter**, carved in **big beautiful pixels**, with **insane boss battles**. Embark in your ship and engage the fight against dreadful space pirates in a never-ending combat for your survival.
+_Steredenn_ is a **frenetic and chaotic space shooter**, carved in **big beautiful pixels**, with **insane boss battles**. Embark in your ship and engage the fight against dreadful space pirates in a never-ending combat for your survival.
 
 _The game is fast, addictive, hard and action-packed._
