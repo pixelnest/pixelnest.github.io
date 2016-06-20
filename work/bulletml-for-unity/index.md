@@ -41,13 +41,9 @@ Have a look at our [plugin demo][demo] to see what is possible (hint: a lot). Th
 
 Can't wait? Go get it here:
 
-<a href="http://bulletml-for-unity.pixelnest.io/">
-  <img
-    src="./-img/buy.png"
-    class="intent-button intent-button--bulletml"
-    alt="Buy BulletML for Unity"
-    title="Buy BulletML for Unity"
-  />
+<a href="http://bulletml-for-unity.pixelnest.io/" class="intent-button intent-button--bulletml">
+  <strong>Buy BulletML for Unity</strong>
+  Only on the Unity Asset Store
 </a>
 
 For more information, click on **"Next"**.

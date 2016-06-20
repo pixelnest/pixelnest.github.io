@@ -192,13 +192,9 @@ bulletManager.OnTrigger += (source, name) =>
 
 Convinced? Then, get the plugin here:
 
-<a href="http://bulletml-for-unity.pixelnest.io/">
-  <img
-    src="../-img/buy.png"
-    class="intent-button intent-button--bulletml"
-    alt="Buy BulletML for Unity"
-    title="Buy BulletML for Unity"
-  />
+<a href="http://bulletml-for-unity.pixelnest.io/" class="intent-button intent-button--bulletml">
+  <strong>Buy BulletML for Unity</strong>
+  Only on the Unity Asset Store
 </a>
 
 <br />In the next section, you will learn how to create your patterns.

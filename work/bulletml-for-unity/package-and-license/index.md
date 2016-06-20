@@ -24,13 +24,9 @@ _BulletML for Unity_ is available for **20$** (normal price), only on the Unity 
 
 Unfortunately, _you cannot ask for a refund_. By buying this product, you gain full access to the source code and examples and we cannot take it back. _Think about it a second before proceeding._
 
-<a href="http://bulletml-for-unity.pixelnest.io/">
-  <img
-    src="../-img/buy.png"
-    class="intent-button intent-button--bulletml"
-    alt="Buy BulletML for Unity"
-    title="Buy BulletML for Unity"
-  />
+<a href="http://bulletml-for-unity.pixelnest.io/" class="intent-button intent-button--bulletml">
+  <strong>Buy BulletML for Unity</strong>
+  Only on the Unity Asset Store
 </a>
 
 20$ is just the price of a few hours of work. We think that our plugin will save you much more time than that. ;)
