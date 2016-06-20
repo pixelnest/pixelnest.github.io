@@ -655,7 +655,7 @@ This tutorial was redacted by [Damien][dam_twitter_link], and edited by [Matthie
 [trail_gif]: ./-img/trails.gif
 [tap_gif]: ./-img/taps.gif
 
-[deployment]: http://pixelnest.io/tutorials/2d-game-unity/deployment/
+[deployment]: /tutorials/2d-game-unity/deployment/
 
 [pxn_twitter_link]: http://twitter.com/pixelnest "Pixelnest Studio Twitter"
 [dam_twitter_link]: http://twitter.com/valryon "Damien Mayance Twitter"

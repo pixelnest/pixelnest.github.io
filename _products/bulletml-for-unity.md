@@ -6,9 +6,9 @@ date: 2014-04-08
 
 links:
   - name: Read the docs
-    url: http://pixelnest.io/work/bulletml-for-unity/
+    url: /work/bulletml-for-unity/
   - name: Press Page
-    url: http://pixelnest.io/presskit/bulletml_for_unity.html
+    url: /presskit/bulletml_for_unity.html
   - name: Get the plugin
     url: http://bulletml-for-unity.pixelnest.io/
 ---
