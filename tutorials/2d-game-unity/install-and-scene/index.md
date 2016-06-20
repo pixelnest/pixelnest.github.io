@@ -47,7 +47,7 @@ Likewise: download and install, it's simple as everything is bundled, though it 
   **Good to know**: it's possible to use the Visual Studio 2013 debugger with Unity. You need to download and install the [UnityVS][unityvs_link] plugin. Simply follow their [documentation][unityvs_doc] to add the UnityVS to your Unity project (you need to do this for every project).
 </div>
 
-### Mac OS X
+### macOS
 
 [MonoDevelop][monodevelop] (or its cousin [Xamarin Studio][xamarin]) is packaged with your Unity installation, and is the default option. It's a full blown IDE like Visual Studio or Xcode. Well, it tries, at least.
 
