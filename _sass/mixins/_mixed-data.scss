@@ -146,11 +146,11 @@
 
   // Inline code.
   code {
-    padding: 4px;
+    padding: 3px;
 
     color: $pizza-dark;
-    background: #f0f0f0;
-    border: 1px solid $pxn-light;
+    background: rgba(#f0f0f0, 0.4);
+    border: 1px solid rgba($pxn-light, 0.4);
     border-radius: 2px;
 
     font-family: $font-code;
@@ -211,6 +211,12 @@
 
     > p:last-child {
       margin-bottom: 0;
+    }
+
+    code {
+      padding: 2px 3px;
+
+      font-size: 1.2rem;
     }
   }
 
