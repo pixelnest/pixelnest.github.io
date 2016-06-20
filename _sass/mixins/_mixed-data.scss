@@ -180,6 +180,14 @@
     border-top: 1px solid $pxn-white;
   }
 
+  figure figcaption {
+    padding-top: $default-spacing;
+
+    font-style: italic;
+
+    text-align: center;
+  }
+
   // Objects.
 
   iframe {
