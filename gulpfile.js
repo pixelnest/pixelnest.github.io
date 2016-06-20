@@ -42,7 +42,7 @@ var IGNORED_FILES = [
 gulp.task('default', ['build:sass:prod', 'build:jekyll:prod'])
 
 // Serve jekyll in dev mode (watch files, build and use browser sync).
-gulp.task('dev', ['watch'], () => gulp.start('sync'))
+gulp.task('dev', ['clean:jekyll', 'watch'], () => gulp.start('sync'))
 
 // Serve jekyll in production.
 gulp.task('prod', ['build:sass:prod'], done => {
@@ -80,6 +80,10 @@ gulp.task('build:sass:prod', () => {
 // -------------------------------------------------------
 // Jekyll.
 // -------------------------------------------------------
+
+gulp.task('clean:jekyll', done => {
+  return cp.spawn('jekyll', ['clean'], { stdio: 'inherit' }).on('close', done)
+})
 
 gulp.task('build:jekyll:dev', done => {
   return cp.spawn('jekyll', ['build', '--incremental'], { stdio: 'inherit' })
