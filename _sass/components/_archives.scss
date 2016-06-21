@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// Archives.
+// -------------------------------------------------------
+
+.archives {
+  margin-bottom: $default-spacing;
+}
+
+.archives__item {
+  margin-bottom: 4px;
+}
+
+.archives__link {
+  @extend %link;
+
+  display: inline-block;
+
+  font-size: 2.2rem;
+}
+
+.archives__date {
+  display: inline-block;
+
+  width: 104px;
+
+  font-family: $font-code;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  letter-spacing: -1px;
+  word-spacing: -1px;
+}

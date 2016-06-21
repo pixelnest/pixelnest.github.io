@@ -5,11 +5,21 @@ subtitle: not so <em>news</em>
 permalink: /journal/archives/
 ---
 
-<ul class="archives">
-{% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}" title="{{ post.title }}" class="archives__link">{{ post.title }}</a>
-    <span class="archives__date">{{ post.date | date: "%d %b. %Y" | downcase }}</span>
-  </li>
-{% endfor %}
-</ul>
+<section class="block">
+  <h1 class="block__title">Archives</h1>
+
+  <ul class="archives">
+    {% for post in site.posts %}
+      <li class="archives__item">
+        <span class="archives__date">{{ post.date | date: "%d %b %Y" | upcase }}</span>
+        <a href="{{ post.url }}" class="archives__link">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="block__content">
+    <p style="text-align: right;">
+      <a href="/journal/">Back to Journal</a>
+    </p>
+  </div>
+</section>
