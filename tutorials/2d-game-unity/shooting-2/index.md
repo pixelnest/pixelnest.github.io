@@ -315,5 +315,5 @@ In the next chapter, we will learn how to enhance the background and the scene t
 
 [danmaku_link]: http://en.wikipedia.org/wiki/Shoot_%27em_up#Bullet_hell "Danmaku shmup"
 
-[bulletml_for_unity_img]: /work/bulletml-for-unity/-img/screenshot2.png
-[bulletml_for_unity]:     /work/bulletml-for-unity/
+[bulletml_for_unity_img]: /static/images/products/bulletml-for-unity/docs/screenshot-02.png
+[bulletml_for_unity]:     /docs/bulletml-for-unity/

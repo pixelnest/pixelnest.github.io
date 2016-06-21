@@ -27,7 +27,7 @@ All the [sprites][shmupfest] have been drawn by the [Ulule's backers][ulule], ma
 [stunfest]:  http://stunfest.fr/
 [shmupfest]: http://shmupfest.stunfest.fr/
 [ulule]:     http://fr.ulule.com/stunfest-2014/
-[bulletml]:  /work/bulletml-for-unity/
+[bulletml]:  /docs/bulletml-for-unity/
 [screen1]:   /static/images/products/shmupfest/screen-01.png
 [screen2]:   /static/images/products/shmupfest/screen-02.png
 [screen3]:   /static/images/products/shmupfest/screen-03.png

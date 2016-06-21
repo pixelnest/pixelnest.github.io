@@ -41,8 +41,8 @@ This plugin is NOT the BulletML library (but it includes it).
 It's a wrapper around it to make it work on Unity effortlessly. We are not the provider and main developer behind the official library or format.
 
 
-[bulletml]: /work/bulletml-for-unity/
-[bulletml_license]: /work/bulletml-for-unity/package-and-license/
+[bulletml]:         /docs/bulletml-for-unity/
+[bulletml_license]: /docs/bulletml-for-unity/package-and-license/
 [bulletml_support]: mailto:bulletml-unity@pixelnest.io
 
 [buy]: http://bulletml-for-unity.pixelnest.io/

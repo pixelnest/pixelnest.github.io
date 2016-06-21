@@ -8,7 +8,7 @@ links:
   - name: Download
     url: http://bulletml-for-unity.pixelnest.io/#download
   - name: Documentation
-    url: /work/bulletml-for-unity/
+    url: /docs/bulletml-for-unity/
   - name: Press Page
     url: /presskit/bulletml_for_unity.html
 ---
