@@ -21,5 +21,5 @@ Thanks.
 
 
 
-[egx]: /work/steredenn/medias/egx01.png
-[poster]: /work/steredenn/medias/poster.png
+[egx]:    /static/images/posts/egx-rezzed/rezzed.png
+[poster]: /static/images/posts/egx-rezzed/poster.png

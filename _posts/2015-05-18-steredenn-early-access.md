@@ -19,6 +19,9 @@ What else can you do? Write a review on Steam. That would be great! :)
 
 Finally, do not hesitate to participate in the Steam forums: we need **your** feedback to make the _best game we can_.
 
-![ Steredenn ](/work/steredenn/medias/early-access.png)
+![ Steredenn ][early_access]
 
 Enjoy!
+
+
+[early_access]: /static/images/posts/steredenn-early-access/poster.png

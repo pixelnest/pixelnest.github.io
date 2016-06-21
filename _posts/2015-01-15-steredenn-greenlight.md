@@ -30,4 +30,4 @@ If you like Steredenn — we sure hope so —, [help us getting greenlit](http:/
 Thanks for your support. :)
 
 
-[greenlight_avatar]: /work/steredenn/medias/greenlight.gif
+[greenlight_avatar]: /static/images/posts/steredenn-greenlight/greenlight.gif
