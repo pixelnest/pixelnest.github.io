@@ -4,15 +4,11 @@ title: STEREDENN on Xbox One
 subtitle: April 1st, 2016
 ---
 
-### A mass arrival of bullets is coming this April on the Xbox One with the chaotic space shooter STEREDENN!
+<div data-block="info">
+  **March 21, 2016 – Rennes, France**: A mass arrival of bullets is coming this April on the Xbox One with the chaotic space shooter STEREDENN!
 
-<div style="font-size: 0.8em;">
-  The unique space roguelike-shooter will hit the Xbox One on April 1st.
-
-  _March 21, 2016 - Rennes, France._
+  The **unique space roguelike-shooter** will hit the **Xbox One on April 1st**.
 </div>
-
----
 
 Pixelnest Studio is happy to announce the **upcoming release of STEREDENN on the Xbox One the first of April**.
 
@@ -28,7 +24,7 @@ The game offers around twenty beautiful pixel-art backgrounds, a dozen of terrif
 
 The game has been awarded the prestigious title of "Best Shoot'em Up of the year 2015 on PC" by the well-known french website jeuxvideo.com. It received 90% of positive reviews on Steam, and an average score of 85% in many magazines and websites.
 
-STEREDENN is fast, hard, addictive and action-packed.
+_STEREDENN is fast, hard, addictive and action-packed._
 
 ---
 
