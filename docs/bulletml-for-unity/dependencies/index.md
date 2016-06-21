@@ -11,9 +11,11 @@ tutorial:
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../about
-  next: ../how-to-use
+  summary: ../table-of-contents/
+  previous: ../about/
+  next: ../how-to-use/
+
+redirect_from: /work/bulletml-for-unity/dependencies/
 ---
 
 In addition to Unity 4.3 or higher, the plugin requires two extra libraries (bundled with the package in the `/Plugins` folder):

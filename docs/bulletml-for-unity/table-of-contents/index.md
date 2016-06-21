@@ -12,7 +12,9 @@ tutorial:
 
 links:
   previous: ../
-  next: ../demo
+  next: ../demo/
+
+redirect_from: /work/bulletml-for-unity/table-of-contents/
 ---
 
 This documentation presents our license and BulletML quickly. Then, we will dive deeper into the plugin usage. Don't be afraid, it's really quick and easy. ;)
@@ -22,11 +24,11 @@ You can use the navigation above and below each part to move between them.
 # Documentation
 
 * [Demo](../demo/)
-* [Package and license](../package-and-license)
-* [About BulletML](../about)
-* [Documentation: Dependencies](../dependencies)
-* [Documentation: How to use](../how-to-use)
-* [Documentation: Customization](../customization)
-* [Documentation: Pattern file](../pattern-file)
-* [Documentation: Integration with a pooling system](../pooling)
-* [Support request](../support)
+* [Package and license](../package-and-license/)
+* [About BulletML](../about/)
+* [Documentation: Dependencies](../dependencies/)
+* [Documentation: How to use](../how-to-use/)
+* [Documentation: Customization](../customization/)
+* [Documentation: Pattern file](../pattern-file/)
+* [Documentation: Integration with a pooling system](../pooling/)
+* [Support request](../support/)

@@ -11,9 +11,11 @@ tutorial:
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../package-and-license
-  next: ../dependencies
+  summary: ../table-of-contents/
+  previous: ../package-and-license/
+  next: ../dependencies/
+
+redirect_from: /work/bulletml-for-unity/about/
 ---
 
 [BulletML](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/index_e.html), for _Bullet Markup Language_, is an XML format designed by Kenta Cho to create bullet patterns in "Shoot'Em Up" games.

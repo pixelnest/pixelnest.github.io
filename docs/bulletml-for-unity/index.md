@@ -10,12 +10,14 @@ tutorial:
   link: ./
 
 links:
-  next: ./table-of-contents
+  next: ./table-of-contents/
+
+redirect_from: /work/bulletml-for-unity/
 ---
 
 *BulletML for Unity* is a **simple** and **powerful** wrapper around [BulletML](http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/index_e.html) (originally created by Kenta Cho), for Unity 4.3 or higher, made by [Pixelnest Studio](http://pixelnest.io).
 
-[ ![Screenshot1][screenshot1] ][screenshot1]
+[ ![Screenshot][screenshot1] ][screenshot1]
 
 It allows you to design some very complex bullet patterns with a simple XML file. It’s especially useful in “Shoot’Em Up” (_shmup_) games to create memorable boss fights or enemies.
 
@@ -23,11 +25,11 @@ It allows you to design some very complex bullet patterns with a simple XML file
   **Game**: although _BulletML for Unity_ is intended to be used in shmups, it is NOT limited to this genre. _You can use it in any game you want_.
 </div>
 
-[ ![Screenshot2][screenshot2] ][screenshot2]
+[ ![Screenshot][screenshot2] ][screenshot2]
 
-[ ![Screenshot3][screenshot3] ][screenshot3]
+[ ![Screenshot][screenshot3] ][screenshot3]
 
-[ ![Screenshot4][screenshot4] ][screenshot4]
+[ ![Screenshot][screenshot4] ][screenshot4]
 
 # Main features
 
@@ -55,10 +57,10 @@ Please feel free to contact us for any question, feedback or support request rel
 Have a look at [the support page][support] to find all the information you need in order to reach us.
 
 
-[demo]:    /work/bulletml-for-unity/demo/
-[support]: /work/bulletml-for-unity/support/
+[demo]:    /docs/bulletml-for-unity/demo/
+[support]: /docs/bulletml-for-unity/support/
 
-[screenshot1]: ./-img/screenshot1.png
-[screenshot2]: ./-img/screenshot2.png
-[screenshot3]: ./-img/screenshot3.png
-[screenshot4]: ./-img/screenshot4.png
+[screenshot1]: /static/images/products/bulletml-for-unity/docs/screenshot-01.png
+[screenshot2]: /static/images/products/bulletml-for-unity/docs/screenshot-02.png
+[screenshot3]: /static/images/products/bulletml-for-unity/docs/screenshot-03.png
+[screenshot4]: /static/images/products/bulletml-for-unity/docs/screenshot-04.png

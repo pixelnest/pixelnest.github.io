@@ -11,9 +11,11 @@ tutorial:
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../how-to-use
-  next: ../pattern-file
+  summary: ../table-of-contents/
+  previous: ../how-to-use/
+  next: ../pattern-file/
+
+redirect_from: /work/bulletml-for-unity/customization/
 ---
 
 All we did before didn't require any scripting from your side.
@@ -178,9 +180,9 @@ You can know that a Bullet source has raised the evend `beforefire` by adding a 
 var bulletManager = FindObjectOfType<BulletManagerScript>();
 
 bulletManager.OnTrigger += (source, name) =>
-      {
-        Debug.Log("Trigger " + name + " received from " + source);
-      };
+  {
+    Debug.Log("Trigger " + name + " received from " + source);
+  };
 ```
 
 - ``source`` is the GameObject sending the trigger (usually a GameObject with a BulletScript or BulletSourceScript)

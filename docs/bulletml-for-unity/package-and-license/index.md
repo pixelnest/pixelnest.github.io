@@ -11,9 +11,11 @@ tutorial:
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../demo
-  next: ../about
+  summary: ../table-of-contents/
+  previous: ../demo/
+  next: ../about/
+
+redirect_from: /work/bulletml-for-unity/package-and-license/
 ---
 
 _BulletML for Unity_ is available for **20$** (normal price), only on the Unity Asset Store. It's:

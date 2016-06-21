@@ -11,8 +11,10 @@ tutorial:
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../pooling
+  summary: ../table-of-contents/
+  previous: ../pooling/
+
+redirect_from: /work/bulletml-for-unity/support/
 ---
 
 If you have any trouble with the plugin, please send us a support request via e-mail at [bulletml-unity@pixelnest.io](mailto:bulletml-unity@pixelnest.io).

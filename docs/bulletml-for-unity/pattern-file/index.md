@@ -11,9 +11,11 @@ tutorial:
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../customization
-  next: ../pooling
+  summary: ../table-of-contents/
+  previous: ../customization/
+  next: ../pooling/
+
+redirect_from: /work/bulletml-for-unity/pattern-file/
 ---
 
 For the moment, you have tried some examples (maybe some new ones you've find on the web), but you still don't know how to write your own BulletML file.
@@ -542,10 +544,11 @@ We invite you to try the pattern after changing the game difficulty to also unde
 
 Need support or information? Read the following section.
 
-[fire]: ./-img/fire.gif
-[repeat]: ./-img/repeat.gif
-[repeat_hierarchy]: ./-img/repeat_hierarchy.png
-[wait]: ./-img/wait.gif
-[actionRef]: ./-img/actionRef.gif
-[changeSpeed]: ./-img/changeSpeed.gif
-[rand]: ./-img/rand.gif
+
+[fire]:             /static/images/products/bulletml-for-unity/docs/pattern-file/fire.gif
+[repeat]:           /static/images/products/bulletml-for-unity/docs/pattern-file/repeat.gif
+[repeat_hierarchy]: /static/images/products/bulletml-for-unity/docs/pattern-file/repeat-hierarchy.png
+[wait]:             /static/images/products/bulletml-for-unity/docs/pattern-file/wait.gif
+[actionRef]:        /static/images/products/bulletml-for-unity/docs/pattern-file/action-ref.gif
+[changeSpeed]:      /static/images/products/bulletml-for-unity/docs/pattern-file/change-speed.gif
+[rand]:             /static/images/products/bulletml-for-unity/docs/pattern-file/rand.gif

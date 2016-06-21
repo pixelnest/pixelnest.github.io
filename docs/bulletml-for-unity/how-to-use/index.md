@@ -11,9 +11,11 @@ tutorial:
   link: ../
 
 links:
-  summary: ../table-of-contents
-  previous: ../dependencies
-  next: ../customization
+  summary: ../table-of-contents/
+  previous: ../dependencies/
+  next: ../customization/
+
+redirect_from: /work/bulletml-for-unity/how-to-use/
 ---
 
 # 1. Import the Unity package
@@ -219,9 +221,9 @@ If you start the game, you will see the pattern being played:
 <br />And this is all you need to know to use _BulletML for Unity_. In the next section, we will learn a bit more about creating a BulletML pattern file.
 
 
-[demo_scene_script]: ../-img/demo_scene_script.png
-[bulletml_menu]:     ../-img/bulletml_menu.png
-[bullet_prefab]:     ../-img/bullet_prefab.png
-[bulletbank]:        ../-img/bulletbank.png
-[bulletSource]:           ../-img/bulletSource.png
-[gif_circle]:        ../-img/gif_circle.gif
+[demo_scene_script]: /static/images/products/bulletml-for-unity/docs/how-to-use/demo-script.png
+[bulletml_menu]:     /static/images/products/bulletml-for-unity/docs/how-to-use/menu.png
+[bullet_prefab]:     /static/images/products/bulletml-for-unity/docs/how-to-use/bullet-prefab.png
+[bulletbank]:        /static/images/products/bulletml-for-unity/docs/how-to-use/bullet-bank.png
+[bulletSource]:      /static/images/products/bulletml-for-unity/docs/how-to-use/bullet-source.png
+[gif_circle]:        /static/images/products/bulletml-for-unity/docs/how-to-use/circle.gif
