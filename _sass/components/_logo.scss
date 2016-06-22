@@ -66,3 +66,20 @@
 .logo--home .logo__name {
   margin-bottom: 16px;
 }
+
+
+// -------------------------------------------------------
+// Responsive.
+// -------------------------------------------------------
+
+@media only screen and (max-height: 900px) {
+  .logo--home {
+    .logo__name {
+      font-size: 3.2rem;
+    }
+
+    .logo__image img {
+      width: 140px;
+    }
+  }
+}

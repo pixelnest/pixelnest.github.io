@@ -54,7 +54,7 @@
 // Responsive.
 // -------------------------------------------------------
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: $vp-small) {
   .navbar {
     padding: 8px 0;
 

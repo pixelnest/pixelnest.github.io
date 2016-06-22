@@ -103,3 +103,36 @@
     background-image: url("/static/images/products/bulletml-for-unity/card.jpg");
   }
 }
+
+// -------------------------------------------------------
+// Responsive.
+// -------------------------------------------------------
+
+@media only screen and (max-width: $vp-large) and (max-height: 776px) {
+  .home-card {
+    width: 138px;
+    height: 256px;
+  }
+
+  .home-card__text {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-height: $vp-large) {
+  .home-card {
+    width: 172px;
+    height: 400px;
+  }
+
+  .home-card__text {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-height: 1200px) {
+  .home-card {
+    width: 188px;
+    height: 440px;
+  }
+}

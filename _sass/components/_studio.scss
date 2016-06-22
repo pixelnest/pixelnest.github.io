@@ -26,7 +26,7 @@
 // Responsive.
 // -------------------------------------------------------
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: $vp-small) {
   .studio__members .col {
     width: 100%;
     margin-bottom: 32px;
