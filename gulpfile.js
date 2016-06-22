@@ -42,7 +42,10 @@ var IGNORED_FILES = [
 gulp.task('default', ['build:sass:prod', 'build:jekyll:prod'])
 
 // Serve jekyll in dev mode (watch files, build and use browser sync).
-gulp.task('dev', ['clean:jekyll', 'watch'], () => gulp.start('sync'))
+gulp.task('dev', ['clean:jekyll'], () => {
+  gulp.start('watch')
+  gulp.start('sync')
+})
 
 // Serve jekyll in production.
 gulp.task('prod', ['build:sass:prod'], done => {
