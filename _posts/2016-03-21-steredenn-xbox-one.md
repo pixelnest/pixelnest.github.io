@@ -1,5 +1,4 @@
 ---
-layout: post
 title: STEREDENN on Xbox One
 subtitle: April 1st, 2016
 ---
