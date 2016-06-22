@@ -18,5 +18,17 @@
   text-align: center;
 }
 
-.studio__members {
+.studio__members .col {
+  width: 50%;
+}
+
+// -------------------------------------------------------
+// Responsive.
+// -------------------------------------------------------
+
+@media only screen and (max-width: 512px) {
+  .studio__members .col {
+    width: 100%;
+    margin-bottom: 32px;
+  }
 }
