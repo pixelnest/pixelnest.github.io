@@ -9,7 +9,7 @@
 
   display: block;
 
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 24px;
 
@@ -43,10 +43,39 @@
   }
 }
 
+// -------------------------------------------------------
+// Variants.
+// -------------------------------------------------------
+
+.intent-button--small {
+  max-width: 50%;
+  padding: 12px 16px;
+
+  font-size: 2rem;
+
+  strong,
+  em {
+    font-size: 2.6rem;
+  }
+}
+
+
+// -------------------------------------------------------
+// Colors.
+// -------------------------------------------------------
+
 .intent-button--bulletml {
   background: #00a7e6;
 }
 
 .intent-button--greenlight {
   background: darken(#d8e800, 4%); // #d8e800
+}
+
+.intent-button--services {
+  background: $pizza-light;
+}
+
+.intent-button--talks {
+  background: $burger;
 }

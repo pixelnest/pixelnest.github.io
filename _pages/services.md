@@ -16,11 +16,26 @@ You have a special need? A custom work to do? We're available.
 
 We can help you specify your need, but in the end, we will not work for you without a precise overview of what you want. Then, we can provide a quote for the project.
 
-If you are ok with that, [send us a mail](mailto:services@pixelnest.io).
+If you are ok with that:
+
+{::nomarkdown}
+  <a href="mailto:services@pixelnest.io"
+     class="intent-button intent-button--small intent-button--services">
+    Custom work? Special need?
+    <strong>Send us a mail</strong>
+  </a>
+{:/}
 
 # Talks
 
-You organize a conference, a workshop, or a show and you want us to speak about a specific topic? [Contact us](mailto:talks@pixelnest.io).
+You organize a conference, a workshop, or a show and you want us to speak about a specific topic?
+
+{::nomarkdown}
+  <a href="mailto:talks@pixelnest.io"
+     class="intent-button intent-button--small intent-button--talks">
+    <strong>Contact Us</strong>
+  </a>
+{:/}
 
 # Skills
 
