@@ -123,3 +123,75 @@
     height: auto;
   }
 }
+
+// -------------------------------------------------------
+// Responsive.
+// -------------------------------------------------------
+
+// Small size.
+@media only screen and (max-width: 840px) {
+  .entry__header {
+    margin-bottom: $default-spacing;
+  }
+
+  .entry__metadata {
+    position: static;
+
+    width: auto;
+    margin-bottom: 24px;
+    padding: 8px 0;
+
+    border-top: 1px solid $pxn-white;
+    border-bottom: 1px solid $pxn-white;
+
+    text-align: left;
+
+    &:after {
+      display: table;
+      clear: both;
+
+      content: "";
+    }
+  }
+
+  .entry__author {
+    img {
+      float: left;
+
+      width: 40px;
+      margin: 0;
+      margin-right: $default-spacing;
+    }
+
+    figcaption {
+      font-size: 2.1rem;
+    }
+  }
+
+  .entry__date {
+    font-size: 1.6rem;
+  }
+}
+
+// Big size.
+@media only screen and (min-width: $vp-large) {
+  .entry__metadata {
+    left: -200px;
+
+    width: 200px;
+  }
+
+  .entry__author {
+    img {
+      width: 88px;
+    }
+
+    figcaption {
+      font-size: 2.2rem;
+    }
+  }
+
+  .entry__date {
+    font-size: 1.8rem;
+  }
+}
