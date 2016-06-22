@@ -14,3 +14,13 @@
 .mixed-data {
   @include mixed-data;
 }
+
+// -------------------------------------------------------
+// Responsive.
+// -------------------------------------------------------
+
+@media only screen and (max-width: 640px) {
+  .page-content {
+    padding: 32px $default-spacing 40px $default-spacing;
+  }
+}
