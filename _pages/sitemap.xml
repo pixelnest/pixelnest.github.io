@@ -22,9 +22,17 @@ permalink: /sitemap.xml
     <priority>0.8</priority>
   </url>
 
-  <!-- work -->
+  <!-- portfolio -->
   <url>
-    <loc>http://pixelnest.io/work/</loc>
+    <loc>http://pixelnest.io/portfolio/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- services -->
+  <url>
+    <loc>http://pixelnest.io/services/</loc>
     <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -69,5 +77,20 @@ permalink: /sitemap.xml
 	      <priority>0.5</priority>
       </url>
      {% endunless %}
+  {% endfor %}
+
+  <!-- products -->
+  {% for product in site.products %}
+    <url>
+      <loc>http://pixelnest.io{{ product.url }}</loc>
+
+      {% if product.lastmod %}
+        <lastmod>{{ product.lastmod | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ product.date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
   {% endfor %}
 </urlset>
