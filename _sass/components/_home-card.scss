@@ -9,8 +9,10 @@
 
   width: 160px;
   height: 320px;
+}
 
-  cursor: pointer;
+.home-card__link {
+  display: block;
 }
 
 // Diffuse drop shadow, not a basic drop shadow on the box.
@@ -26,9 +28,9 @@
 // In the implementation, each variant will apply the correct tint. See at the end of file.
 .home-card__shadow {
   position: absolute;
-  right: 10%;
   bottom: 2%;
   left: 10%;
+  right: 10%;
 
   height: 85%;
 
@@ -64,9 +66,9 @@
   @include font-title(false);
 
   position: absolute;
-  right: 8px;
   bottom: 16px;
   left: 0;
+  right: 8px;
 
   box-sizing: border-box;
   padding-left: 8px;
