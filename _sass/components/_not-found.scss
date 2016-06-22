@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// -------------------------------------------------------
+// 404.
+// -------------------------------------------------------
+
+.not-found {
+  color: white;
+
+  font-size: 4rem;
+
+  text-align: center;
+}
+
+.not-found__title {
+  padding-top: 40px;
+}
+
+.not-found__content {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+
+  font-size: 3rem;
+
+  text-align: center;
+
+  a {
+    @extend %link;
+  }
+}
