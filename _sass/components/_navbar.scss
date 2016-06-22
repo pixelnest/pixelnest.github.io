@@ -48,3 +48,24 @@
 
   background: rgba(black, 0.1);
 }
+
+
+// -------------------------------------------------------
+// Responsive.
+// -------------------------------------------------------
+
+@media only screen and (max-width: 512px) {
+  .navbar {
+    padding: 8px 0;
+
+    font-size: 1.6rem;
+  }
+
+  .navbar--home {
+    padding: 5px 0;
+  }
+
+  .navbar__item {
+    padding: 0 4px;
+  }
+}
