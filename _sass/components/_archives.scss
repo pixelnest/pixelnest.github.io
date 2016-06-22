@@ -32,3 +32,19 @@
   letter-spacing: -1px;
   word-spacing: -1px;
 }
+
+// -------------------------------------------------------
+// Responsive.
+// -------------------------------------------------------
+
+@media only screen and (max-width: $vp-page) {
+  .archives__item {
+    margin-bottom: $default-spacing;
+  }
+
+  .archives__date {
+    display: block;
+
+    width: auto;
+  }
+}
