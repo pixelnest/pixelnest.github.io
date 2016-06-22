@@ -6,7 +6,7 @@
 
 .tutorial .page-content {
   // Slightly bigger by default in tutorial pages.
-  max-width: 650px;
+  max-width: 640px;
 }
 
 .tutorial .entry__header {
@@ -46,15 +46,24 @@
   border-bottom: 1px solid #e5e5e5;
 
   font-size: 1.8rem;
+
+  @media only screen and (max-width: $vp-page) {
+    font-size: 1.6rem;
+  }
 }
 
 .tutorial-header__back {
+  width: 25%;
 }
 
 .tutorial-header__reference {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 0 8px;
 }
 
 .tutorial-header__social {
+  width: 25%;
 }
 
 // -------------------------------------------------------
