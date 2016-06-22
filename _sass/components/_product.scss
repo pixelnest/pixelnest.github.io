@@ -39,6 +39,21 @@
 
 .product-hero__title {
   font-size: 4.8rem;
+
+  a {
+    display: block;
+
+    color: $pizza;
+    background: white;
+    border-radius: 2px;
+
+    transition: all 200ms ease-in;
+  }
+
+  a:hover {
+    color: white;
+    background: $pizza;
+  }
 }
 
 .product-hero__subtitle {

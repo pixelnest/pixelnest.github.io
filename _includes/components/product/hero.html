@@ -10,7 +10,11 @@
 
   <section class="product-hero__body">
     <header class="product-hero__header">
-      <h1 class="product-hero__title">{{ hero.title }}</h1>
+      <h1 class="product-hero__title">
+        <a href="{{ hero.url }}">
+          {{ hero.title }}
+        </a>
+      </h1>
 
       {% if hero.subtitle %}
         <h2 class="product-hero__subtitle">{{ hero.subtitle }}</h2>
