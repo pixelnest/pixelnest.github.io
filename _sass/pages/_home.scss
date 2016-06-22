@@ -7,6 +7,8 @@
 .home {
   @include font-title;
 
+  height: 100%;
+
   background: url("/static/images/header/home.jpg") no-repeat center center fixed;
   background-color: $dragon;
   background-size: cover;
