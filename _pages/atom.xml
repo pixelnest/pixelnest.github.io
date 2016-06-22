@@ -33,7 +33,7 @@ permalink: /atom.xml
   {% for post in site.posts %}
     <entry>
       <title>{{ post.title }}</title>
-      <link href="http://pixelnest.io{{ post.url }}/" />
+      <link href="http://pixelnest.io{{ post.url }}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>http://pixelnest.io{{ post.id }}/</id>
       <content type="html">
