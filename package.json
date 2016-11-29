@@ -13,13 +13,13 @@
   },
   "homepage": "https://github.com/pixelnest/pixelnest.github.io#readme",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "del": "^2.2.0",
+    "browser-sync": "^2.18.2",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.0.6"
+    "gulp-ruby-sass": "^2.1.1"
   },
   "jshintConfig": {
     "asi": true,
