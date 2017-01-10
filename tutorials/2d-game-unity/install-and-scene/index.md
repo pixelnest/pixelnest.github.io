@@ -73,8 +73,6 @@ Here are some other resources that we find interesting and that should complete 
 
 - [Official Unity editor tutorials][unity_videos_link]: The official videos are great. You should take an afternoon to watch them all — we guarantee you that you will not lose your time.
 
-- [Unity Patterns][unitypatterns_link]: A fresh new site with great articles and tools. The tutorials about coroutines is a must-read if you are not familiar with the concept.
-
 # The first scene
 
 Let's start Unity. The first thing you will see is the project manager dialog.
@@ -229,6 +227,5 @@ We have just created the basic structure of our game. In the next step we will s
 [unityvs_doc]: https://msdn.microsoft.com/en-us/library/dn940025(v=vs.120).aspx
 
 [unity_videos_link]: http://unity3d.com/learn/tutorials/modules/beginner/editor "Unity Editor Tutorials"
-[unitypatterns_link]: http://unitypatterns.com/ "Unity Patterns"
 
 [dam_versionning_tutorial]: http://dmayance.com/git-and-unity-projects/
