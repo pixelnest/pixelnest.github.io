@@ -67,8 +67,6 @@ Voici d'autres ressources qui pourront vous aider à vous familiariser avec l'ou
 
 - [Vidéos Unity officielles][unity_videos_link]: Très bien réalisées et très complètes, ces vidéos sont une ressource essentielle pour découvrir et apprendre Unity.
 
-- [Unity Patterns][unitypatterns_link]: Un nouveau site qui parle de techniques plus ou moins avancées liées à Unity, comme les co-routines, par exemple.
-
 # La première scène
 
 ## Création d'un nouveau projet
@@ -222,6 +220,5 @@ Mais nous avons maintenant une base propre pour la suite. Les choses sérieuses 
 [unityvs_link]: http://unityvs.com/
 
 [unity_videos_link]: http://unity3d.com/learn/tutorials/modules/beginner/editor "Unity Editor Tutorials"
-[unitypatterns_link]: http://unitypatterns.com/ "Unity Patterns"
 
 [dam_versionning_tutorial]: http://dmayance.com/git-and-unity-projects/
