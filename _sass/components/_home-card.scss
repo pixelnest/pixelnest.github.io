@@ -106,6 +106,16 @@
   }
 }
 
+.home-card--services {
+  .home-card__shadow {
+    color: rgba(black, 0.25);
+  }
+
+  .home-card__image {
+    background-image: url("/static/images/products/services/card.jpg");
+  }
+}
+
 // -------------------------------------------------------
 // Responsive.
 // -------------------------------------------------------
