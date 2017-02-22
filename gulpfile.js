@@ -44,7 +44,7 @@ gulp.task('dev', ['clean:jekyll'], () => {
 // Serve jekyll in production.
 gulp.task('prod', ['build:sass:prod'], done => {
   var env = process.env
-  env.JEKYLL_ENV = "production"
+  env.JEKYLL_ENV = 'production'
 
   return cp.spawn('jekyll', ['serve'], { env, stdio: 'inherit' }).on('close', done)
 })
@@ -91,7 +91,7 @@ gulp.task('build:jekyll:prod', done => {
   // Add the production flag for jekyll.
   // We need to re-use process.env or node will throw an error.
   var env = process.env
-  env.JEKYLL_ENV = "production"
+  env.JEKYLL_ENV = 'production'
 
   return cp.spawn('jekyll', ['build'], { env, stdio: 'inherit' })
            .on('close', done)
