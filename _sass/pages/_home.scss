@@ -48,7 +48,7 @@
   padding-top: 64px;
   padding-bottom: 24px;
 
-  @media only screen and (min-height: 680px) {
+  @media (min-height: 680px) and (min-width: 600px) {
     position: fixed;
     bottom: 0;
 
@@ -70,7 +70,7 @@
 // Responsive.
 // -------------------------------------------------------
 
-@media only screen and (max-height: 800px) {
+@media (max-height: 800px) {
   .home__content {
     padding-top: 16px;
   }
