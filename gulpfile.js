@@ -4,17 +4,11 @@
 // Imports.
 // -------------------------------------------------------
 
-const gulp         = require('gulp')
-
-  // SASS+CSS.
-  , sass           = require('gulp-ruby-sass')
-  , autoprefixer   = require('gulp-autoprefixer')
-  , minifycss      = require('gulp-minify-css')
-
-  // Utils.
-  , rename         = require('gulp-rename')
-  , del            = require('del')
-
+const gulp = require('gulp')
+const sass = require('gulp-ruby-sass')
+const autoprefixer = require('gulp-autoprefixer')
+const minifycss = require('gulp-minify-css')
+const rename = require('gulp-rename')
 
 const cp = require('child_process')
 const browserSync = require('browser-sync').create()
