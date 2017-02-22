@@ -46,7 +46,7 @@ gulp.task('prod', ['build:sass:prod'], done => {
   var env = process.env
   env.JEKYLL_ENV = 'production'
 
-  return cp.spawn('jekyll', ['serve'], { env, stdio: 'inherit' }).on('close', done)
+  return cp.spawn('bundle', ['exec', 'jekyll', 'serve'], { env, stdio: 'inherit' }).on('close', done)
 })
 
 // -------------------------------------------------------
@@ -79,11 +79,11 @@ gulp.task('build:sass:prod', () => {
 // -------------------------------------------------------
 
 gulp.task('clean:jekyll', done => {
-  return cp.spawn('jekyll', ['clean'], { stdio: 'inherit' }).on('close', done)
+  return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], { stdio: 'inherit' }).on('close', done)
 })
 
 gulp.task('build:jekyll:dev', done => {
-  return cp.spawn('jekyll', ['build', '--incremental'], { stdio: 'inherit' })
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--incremental'], { stdio: 'inherit' })
            .on('close', done)
 })
 
@@ -93,7 +93,7 @@ gulp.task('build:jekyll:prod', done => {
   var env = process.env
   env.JEKYLL_ENV = 'production'
 
-  return cp.spawn('jekyll', ['build'], { env, stdio: 'inherit' })
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build'], { env, stdio: 'inherit' })
            .on('close', done)
 })
 
