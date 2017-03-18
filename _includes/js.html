@@ -1,4 +1,10 @@
 {% if jekyll.environment == "production" %}
+  <script src="/static/assets/bundle.js"></script>
+{% else %}
+  <script src="/static/bundle.js"></script>
+{% endif %}
+
+{% if jekyll.environment == "production" %}
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-40226469-1']);

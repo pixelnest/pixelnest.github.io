@@ -2,27 +2,38 @@
   "name": "pixelnest.github.io",
   "version": "2.0.0",
   "description": "Pixelnest Studio — we craft games and apps.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pixelnest/pixelnest.github.io.git"
-  },
-  "author": "Pixelnest Studio",
   "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/pixelnest/pixelnest.github.io/issues"
+  "private": true,
+  "repository": "pixelnest/pixelnest.github.io",
+  "author": {
+    "user": "Pixelnest Studio",
+    "url": "pixelnest.io"
   },
-  "homepage": "https://github.com/pixelnest/pixelnest.github.io#readme",
+  "homepage": "http://pixelnest.io/",
+  "scripts": {
+    "start": "bundle exec jekyll build --watch & webpack --watch",
+    "build": "yarn run build:webpack && yarn run build:jekyll",
+    "build:webpack": "webpack -p --env.production",
+    "build:jekyll": "bundle exec jekyll clean && JEKYLL_ENV=production bundle exec jekyll build",
+    "test": "standard | snazzy"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  },
   "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.1.1"
-  },
-  "jshintConfig": {
-    "asi": true,
-    "laxcomma": true
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.0",
+    "postcss-loader": "^1.3.1",
+    "sass-loader": "^6.0.1",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0",
+    "webpack": "^2.2.1"
   }
 }

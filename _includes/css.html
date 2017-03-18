@@ -1,12 +1,8 @@
-<!-- Fonts. -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,800,800italic,900,900italic" />
 <link rel="stylesheet" type="text/css" href="/static/fonts/bebas-neue/font.css" />
 
-<!-- CSS. -->
-<link rel="stylesheet" type="text/css" href="/static/vendor/css/normalize.css" />
-
 {% if jekyll.environment == "production" %}
-  <link rel="stylesheet" type="text/css" href="/static/css/pixelnest.min.css" />
+  <link rel="stylesheet" href="/static/assets/bundle.css">
 {% else %}
-  <link rel="stylesheet" type="text/css" href="/static/css/pixelnest.css" />
+  <link rel="stylesheet" href="/static/bundle.css">
 {% endif %}

@@ -9,7 +9,23 @@ show_drafts: nil
 permalink: /:categories/:year/:month/:title/
 
 include: ['_pages']
-exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock']
+
+exclude:
+  - 'README.md'
+  - 'LICENSE'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'package.json'
+  - 'webpack.config.js'
+  - 'yarn.lock'
+  - 'node_modules'
+  - 'src'
+
+keep_files:
+  - static/bundle.css
+  - static/bundle.css.map
+  - static/bundle.js
+  - static/bundle.js.map
 
 # -------------------------------------------------------
 # Collections.
