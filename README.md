@@ -1,4 +1,4 @@
-# Pixelnest Studio
+# ![Pixelnest Studio](static/images/logo/logo_github.png)
 
 We craft games and apps.
 
