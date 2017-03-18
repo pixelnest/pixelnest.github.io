@@ -189,7 +189,7 @@ bulletManager.OnTrigger += (source, name) =>
 - ``name`` is the string written in the XML file. In our example, it would be ``beforefire``.
 
 
-<br />And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
+<br>And that's it. All you need to know to use _BulletML for Unity_ at its full potential have been learned. Happy hacking.
  :)
 
 Convinced? Then, get the plugin here:
@@ -199,4 +199,4 @@ Convinced? Then, get the plugin here:
   Only on the Unity Asset Store
 </a>
 
-<br />In the next section, you will learn how to create your patterns.
+<br>In the next section, you will learn how to create your patterns.

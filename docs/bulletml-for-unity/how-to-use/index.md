@@ -218,7 +218,7 @@ If you start the game, you will see the pattern being played:
 [ ![Pattern in motion][gif_circle]][gif_circle]
 
 
-<br />And this is all you need to know to use _BulletML for Unity_. In the next section, we will learn a bit more about creating a BulletML pattern file.
+<br>And this is all you need to know to use _BulletML for Unity_. In the next section, we will learn a bit more about creating a BulletML pattern file.
 
 
 [demo_scene_script]: /static/images/products/bulletml-for-unity/docs/how-to-use/demo-script.png

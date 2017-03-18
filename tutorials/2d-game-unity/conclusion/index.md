@@ -34,7 +34,7 @@ And the rest is all yours...
 </div>
 
 
-<br />If you liked this tutorial, you might want to:
+<br>If you liked this tutorial, you might want to:
 
 * Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio).
 * Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).

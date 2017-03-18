@@ -38,7 +38,7 @@ Créez un nouveau "Particle System" ("Game Object" -> "Create Other" -> "Particl
 
 <div data-block="tip">
 _Astuce_ : Nous vous recommandons de travailler sur une partie vide de la scène (ou sur une scène vide) pour bien voir ce que vous faites.
-<br /><br />
+<br><br>
 Pour faire un focus sur un objet dans la scène, vous pouvez faire un `double-click` sur lui depuis l'onglet _Inspector_ ou appuyer sur `F` depuis l'onglet _Scene_.
 </div>
 
@@ -108,7 +108,7 @@ Choisissez une courbe descendante ou faites-la vous-même.
 
 [![Curve editor][decreasing_curve]][decreasing_curve]
 
-<br />Vous devriez obtenir :
+<br>Vous devriez obtenir :
 
 [![Full settings][smoke_settings]][smoke_settings]
 
@@ -151,7 +151,7 @@ Faisons un petit dégradé du jaune au rouge transparent ne passant par l'orange
 
 [![Fire gradient][fire_gradient]][fire_gradient]
 
-<br />L'effet à obtenir :
+<br>L'effet à obtenir :
 
 [![Fire effect][fire_effect]][fire_effect]
 

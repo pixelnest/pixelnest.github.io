@@ -108,7 +108,7 @@ Choose a decreasing curve:
 
 [![Curve editor][decreasing_curve]][decreasing_curve]
 
-<br />You should have:
+<br>You should have:
 
 [![Full settings][smoke_settings]][smoke_settings]
 
@@ -151,7 +151,7 @@ Create a nice gradient from yellow to orange, with a fade out in the end:
 
 [![Fire gradient][fire_gradient]][fire_gradient]
 
-<br />And you should get:
+<br>And you should get:
 
 [![Fire effect][fire_effect]][fire_effect]
 

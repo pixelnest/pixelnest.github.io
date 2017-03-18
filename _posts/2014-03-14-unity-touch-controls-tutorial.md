@@ -14,4 +14,4 @@ Enough talking: [here is the tutorial](/tutorials/unity-touch-controls/).
 Enjoy!
 
 
-<br />As always, feel free to to send us your feedback or the mistakes you find. We are very open to discussion and we will try to fix our errors quickly. You can reach us using our [contact page](/contact).
+<br>As always, feel free to to send us your feedback or the mistakes you find. We are very open to discussion and we will try to fix our errors quickly. You can reach us using our [contact page](/contact).

@@ -21,7 +21,7 @@ Cependant, nous n'avons clairement pas le temps de terminer et maintenir cette t
 
 [Si vous comprenez l'anglais, lisez plutôt la version originale, qui est à jour, propre et relue. ;)](/tutorials/2d-game-unity/)
 
-<br /><br /><br />
+<br><br><br>
 
 ---
 
@@ -75,7 +75,7 @@ Ce tutoriel a été rédigé par [Damien][dam_twitter_link] et [Matthieu][mog_tw
 
 Nous vous souhaitons une bonne lecture. :)
 
-<br />
+<br>
 
 Allez, découvrons ce que Unity a à nous offrir pour faire un jeu 2D.
 

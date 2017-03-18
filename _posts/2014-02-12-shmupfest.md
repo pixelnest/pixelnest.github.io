@@ -24,24 +24,24 @@ Un petit résumé :
 1. Je donne quelques deniers au festival sur Ulule :
 
 	[ ![Ulule][ulule] ][ulule]
-	<br />
+	<br>
 
 2. Je recevrai bientôt un lien pour me connecter à l'interface de création de mon _sprite_ :
 
 	[ ![éditeur de sprite][editor] ][editor]
 
-	<center>*(WIP - Image non-définitive)*</center><br />
+	<center>*(WIP - Image non-définitive)*</center><br>
 
 3. Le jour du festival, je retrouve ma création avec celles des autres *backers* directement dans le jeu. Du coup je me fais un plaisir de faire le meilleur score pour marquer le coup :
 
 	[ ![le jeu][game] ][game]
 
-	<center>*(WIP - Image non-définitive)*</center><br />
+	<center>*(WIP - Image non-définitive)*</center><br>
 
 4.  Je trône fièrement dans le **Hall of Fame** du jeu et des milliers de gens voient ma création :
 
 	[ ![le hall of fame][credits]][credits]
-	<center>*(WIP - Image non-définitive)*</center><br />
+	<center>*(WIP - Image non-définitive)*</center><br>
 
 Suivez toutes les avancées du développement sur notre [twitter (@pixelnest)](https://twitter.com/pixelnest) ou sur [Facebook](https://www.facebook.com/pixelneststudio).
 

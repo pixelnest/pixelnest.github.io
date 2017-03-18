@@ -149,7 +149,7 @@ _Remarque_ : vous pouvez tout à fait créer un script JavaScript à la place. N
 Ouvrez votre éditeur de code préféré en passant par le sous-menu "Sync MonoDevelop Project" du menu "Assets".
 
 <div data-block="note">
-_"Sync MonoDevelop Project"_ : Ce sous-menu est bien mal nommé, surtout qu'il ne s'adapte pas à l'éditeur lié à Unity.<br /> Nous vous recommandons de toujours passer par ce sous-menu pour que Unity créer une solution et un projet Visual Studio, avec les bonnes librairies liées.<br /> Cela vous permettre d'avoir l'auto-complétion et la reconnaissance des erreurs. Si vous ouvrez simplement le script sans ce contexte, vous ne bénéficierez plus que de la coloration syntaxique.
+_"Sync MonoDevelop Project"_ : Ce sous-menu est bien mal nommé, surtout qu'il ne s'adapte pas à l'éditeur lié à Unity.<br> Nous vous recommandons de toujours passer par ce sous-menu pour que Unity créer une solution et un projet Visual Studio, avec les bonnes librairies liées.<br> Cela vous permettre d'avoir l'auto-complétion et la reconnaissance des erreurs. Si vous ouvrez simplement le script sans ce contexte, vous ne bénéficierez plus que de la coloration syntaxique.
 </div>
 
 Si vous avez déjà utilisé XNA, vous ne serez pas perdus.
@@ -175,9 +175,9 @@ Pfiou... C'était un peu barbant, mais avec cela vous êtes parés pour 90% de v
 
 <div data-block="note">
 _Note sur le suffixe "2D"_ : Vous aurez peut-être remarqués que de nombreux éléments que nous utilisons ont un nom qui fini par "2D":  "Box Collider 2D", "Rigidbody 2D", "OnCollisionEnter2D" ou encore "OnTriggerEnter2D", etc.
-<br />
+<br>
 _C'est une nouveauté de Unity 4.3 !_
-<br />
+<br>
 Ce suffixe vous indique que l'élément est destiné au moteur physique **2D** embarqué dans Unity, actuellement Box2D, et non 3D (PhysX). Même si les deux partagent la même logique dans Unity, nous vous recommandons de ne pas les mélanger pour moins d'ennuis et plus de performances. Nous n'utiliserons dans ce didacticiel que des éléments 2D.
 </div>
 
@@ -225,8 +225,8 @@ public class PlayerScript : MonoBehaviour
 _(Les numéros font références aux explications ci-dessous)_
 
 <div data-block="note">
-_Note sur les conventions_ C# : Si vous regardez la variable ``speed``, vous verrez qu'elle est publique et sans accesseur (et ne commence pas par une majuscule, puisque c'est un membre de la classe, pas une propriété). <br />Bien que cela soit contraire aux conventions habituelles, cela permet d'exposer cette variable à l'_Inspector_ de Unity et donc de pouvoir la modifier à tout moment sans toucher au code.
-<br />Nous sommes bien dans du script plus que dans une application C# pure et dure, et cela se traduit par quelques différences dans l'utilisation du langage et de ses conventions.
+_Note sur les conventions_ C# : Si vous regardez la variable ``speed``, vous verrez qu'elle est publique et sans accesseur (et ne commence pas par une majuscule, puisque c'est un membre de la classe, pas une propriété). <br>Bien que cela soit contraire aux conventions habituelles, cela permet d'exposer cette variable à l'_Inspector_ de Unity et donc de pouvoir la modifier à tout moment sans toucher au code.
+<br>Nous sommes bien dans du script plus que dans une application C# pure et dure, et cela se traduit par quelques différences dans l'utilisation du langage et de ses conventions.
 </div>
 
 ### Explications du script
@@ -253,7 +253,7 @@ Essayez de modifier la vitesse : sélectionnez le joueur et modifier la valeur "
 
 <div data-block="danger">
 _Attention !_ : Les modifications faites pendant l’exécution (bouton "Play" enfoncé) sont perdus lorsque le jeu s'arrête ! C'est l'outil parfait pour essayer des valeurs mais penser à les noter sur un coin de table pour ne pas les perdre.
-<br /> L'autre avantage est de pouvoir détruire entièrement le jeu pendant l’exécution et de le voir remis à neuf à chaque fois, sans conséquence sur le projet.
+<br> L'autre avantage est de pouvoir détruire entièrement le jeu pendant l’exécution et de le voir remis à neuf à chaque fois, sans conséquence sur le projet.
 </div>
 
 C'est le premier signe de vie dans notre projet, nous allons en ajouter d'autres.

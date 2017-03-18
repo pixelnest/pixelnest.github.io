@@ -35,9 +35,9 @@ Ou si vous aussi aussi fainéant que moi, dupliquez le prefab "PlayerShot" en "E
 
 <div data-block="tip">
 _Astuce_ : Deux techniques pour la duplication.
-<br />
+<br>
 1. Instancier le prefab, renommer l'objet créé, sauver cet objet comme un nouveau préfab (drag'n'drop dans l'onglet _Projects_).
-<br />
+<br>
 2. Utilisez les raccourcis claviers dans  l'onglet _Projects_ sur le prefab : `cmd+D` (OS X) ou `ctrl+D` (Windows)
 </div>
 

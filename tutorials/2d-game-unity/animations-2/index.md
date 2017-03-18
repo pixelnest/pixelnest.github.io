@@ -73,7 +73,7 @@ Click on each state of the animator and rename them to remove the "Boss_" prefix
 
 [ ![Rename the states][rename] ][rename]
 
-<br />An "Animator Controller" is a _state machine_. Each state **can** be an animation, and you can define transitions between them.
+<br>An "Animator Controller" is a _state machine_. Each state **can** be an animation, and you can define transitions between them.
 
 A transition tells to Unity when and why it should move from a state to another.
 
@@ -129,17 +129,17 @@ The _gray states_ are the normal ones, holding zero or one animation.
 
 [ ![State][state_normal] ][state_normal]
 
-<br /><br />On the bottom left corner of the "Animator" view, you can find a parameters list. These parameters are used for the conditions of the transitions. More on that below.
+<br><br>On the bottom left corner of the "Animator" view, you can find a parameters list. These parameters are used for the conditions of the transitions. More on that below.
 
 [ ![Parameters][parameters] ][parameters]
 
 _(Contrary to the image above, it should be empty currently)_
 
-<br />On the top left, you can see the layers. This is a way to have multiple state machines for one object. We will not use this feature in this tutorial.
+<br>On the top left, you can see the layers. This is a way to have multiple state machines for one object. We will not use this feature in this tutorial.
 
 [ ![Layers][layers] ][layers]
 
-<br />And finally, the button "Auto live Link" on the top right is a cool Unity feature which allows you to see in real-time which state is currently played. Leave it enabled.
+<br>And finally, the button "Auto live Link" on the top right is a cool Unity feature which allows you to see in real-time which state is currently played. Leave it enabled.
 
 [ ![Auto Live Link][auto_live] ][auto_live]
 
@@ -520,7 +520,7 @@ Let's focus on a few points:
   animator.SetTrigger("Hit");
   ```
 
-<br />Yes, you've read right: using an animator is _that_ simple. :)
+<br>Yes, you've read right: using an animator is _that_ simple. :)
 
 ### 2. Explanations: Boss AI
 
@@ -563,7 +563,7 @@ And now, you have a really nice-looking boss (with animations) to defeat!
 _(Click to see the animation)_
 
 
-<br />If you select the game object in the "Hierarchy" and open the "Animator" window, you can see the "Animator Controller" in action:
+<br>If you select the game object in the "Hierarchy" and open the "Animator" window, you can see the "Animator Controller" in action:
 
 [ ![Boss controller in action][boss_final_animator] ][boss_final_animator]
 
@@ -640,7 +640,7 @@ Here we are: we know how to create animation clips and use them in an animator!
 
 This bonus chapter about animations is over!
 
-<br />If you liked this advanced tutorial, you might want to:
+<br>If you liked this advanced tutorial, you might want to:
 
 * Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio).
 * Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).

@@ -398,7 +398,7 @@ _(The numbers in the comments refer to the explanations below)_
 
 Indeed, the `backgroundPart` is the exact representation of what is happening in the scene.
 
-<br />Remember to enable the "Is Looping" property of the "ScrollingScript" for the `0 - Background` in the "Inspector" pane. Otherwise, it will (predictably enough) not work.
+<br>Remember to enable the "Is Looping" property of the "ScrollingScript" for the `0 - Background` in the "Inspector" pane. Otherwise, it will (predictably enough) not work.
 
 [![Infinite scrolling][infinite_scrolling]][infinite_scrolling_gif]
 

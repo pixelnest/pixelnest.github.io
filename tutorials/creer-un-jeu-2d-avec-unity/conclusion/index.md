@@ -32,7 +32,7 @@ Et la suite ne dépend que de vous… :)
 _Une dernière astuce ?_ Utilisez un outil de versionnement pour votre projet et votre code source (Git, Mercurial ou SVN), _même_ si vous travaillez seul. Vous ne le regretterez pas.
 </div>
 
-<br />
+<br>
 
 Si vous avez aimé ce tutoriel, vous pouvez :
 

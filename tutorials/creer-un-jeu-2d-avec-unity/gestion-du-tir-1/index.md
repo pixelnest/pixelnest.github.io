@@ -156,7 +156,7 @@ public class HealthScript : MonoBehaviour
 Attachez ce "HealthScript" au `Prefab` du Poulpi.
 
 <div data-block="warning">
-_Attention_ : Il vaut mieux travailler directement sur les `Prefab` quand ils ont été créés. <br />Ainsi, les modifications seront répercutées sur toutes les instances du `Prefab`. C'est très pratique pour modifier des dizaines d'objets directement, comme tous les ennemis d'un même type. <br />Si vous travaillez sur une instance plutôt que sur le `Prefab`, pas de panique, pensez juste à appuyer sur le bouton "Apply" en haut de l'onglet _Inspector_ pour répercuter les changements.
+_Attention_ : Il vaut mieux travailler directement sur les `Prefab` quand ils ont été créés. <br>Ainsi, les modifications seront répercutées sur toutes les instances du `Prefab`. C'est très pratique pour modifier des dizaines d'objets directement, comme tous les ennemis d'un même type. <br>Si vous travaillez sur une instance plutôt que sur le `Prefab`, pas de panique, pensez juste à appuyer sur le bouton "Apply" en haut de l'onglet _Inspector_ pour répercuter les changements.
 </div>
 
 Alignez le Poulpi et le tir pour tester la collision.
@@ -294,7 +294,7 @@ Désormais Unity affectera automatiquement cette valeur au script. Facile non ?
 La deuxième variable, `shootingRate`, définie la vitesse de tir du joueur. Elle a déjà une valeur que nous définies dans le script, qui est modifiable mais suffisante pour le moment.
 
 <div data-block="warning">
-_Faites attention_ : Modifier une valeur dans Unity via l'_Inspector_ ne mettra pas à jour la valeur par défaut dans votre script. Donc si vous réutilisez ce script, il aura l'ancienne valeur, pas la nouvelle. <br />C'est logique mais il faut donc penser à reporter manuellement ces changements une fois que l'on a trouvé les bonnes valeurs.
+_Faites attention_ : Modifier une valeur dans Unity via l'_Inspector_ ne mettra pas à jour la valeur par défaut dans votre script. Donc si vous réutilisez ce script, il aura l'ancienne valeur, pas la nouvelle. <br>C'est logique mais il faut donc penser à reporter manuellement ces changements une fois que l'on a trouvé les bonnes valeurs.
 </div>
 
 ### 2. Vitesse de tir
@@ -310,7 +310,7 @@ La méthode ``Attack(bool)`` est la raison d'être de ce script d'arme : créer 
 Une fois le projectile instancié, nous le paramétrons  avec les bonnes valeurs.
 
 <div data-block="note">
-_Note_ : La méthode `GetComponent<TypeOfComponent>()` permet de récupérer un composant précis sur l'objet courant, notamment un script à partir de sa classe. Cela est possible grâce à la généricité (`<TypeOfComponent>`).<br /> Il existe aussi la même méthode au pluriel, `GetComponents<TypeOfComponent>()`, pour récupérer une liste de composant du même type si vous savez que vous en avez plusieurs.
+_Note_ : La méthode `GetComponent<TypeOfComponent>()` permet de récupérer un composant précis sur l'objet courant, notamment un script à partir de sa classe. Cela est possible grâce à la généricité (`<TypeOfComponent>`).<br> Il existe aussi la même méthode au pluriel, `GetComponents<TypeOfComponent>()`, pour récupérer une liste de composant du même type si vous savez que vous en avez plusieurs.
 </div>
 
 # Utilisez l'arme à partir du joueur
@@ -354,7 +354,7 @@ Mais qu'avons-nous fait ?
 3. Et on appelle `Attack(false)`
 
 <div data-block="info">
-_Button down_: Nous utilisons `GetButtonDown()` pour récupérer la valeur d'une entrée. Le "Down" correspond à l'état "vient juste d'être appuyé". Cet état n'est valable qu'une frame, lorsque le bouton est enfoncé et ne l'était pas l'instant d'avant.<br /> Nous pouvons aussi utiliser `GetButton()` qui indique si le bouton est enfoncé, cela permettrait de tirer en continu en restant appuyé.
+_Button down_: Nous utilisons `GetButtonDown()` pour récupérer la valeur d'une entrée. Le "Down" correspond à l'état "vient juste d'être appuyé". Cet état n'est valable qu'une frame, lorsque le bouton est enfoncé et ne l'était pas l'instant d'avant.<br> Nous pouvons aussi utiliser `GetButton()` qui indique si le bouton est enfoncé, cela permettrait de tirer en continu en restant appuyé.
 </div>
 
 Démarrez le jeu, vous devriez pouvoir tirer :

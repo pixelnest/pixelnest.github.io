@@ -49,7 +49,7 @@ _(Right click to save the image)_
 
 _(Right click to save the image)_
 
-<br />Import those assets in the project. You can put them in a "Menu" subfolder of "sprites". Otherwise "background" will erase the previous game file.
+<br>Import those assets in the project. You can put them in a "Menu" subfolder of "sprites". Otherwise "background" will erase the previous game file.
 
 For the buttons, we will use the standard ones.
 

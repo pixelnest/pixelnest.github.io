@@ -32,4 +32,4 @@ In addition to Unity 4.3 or higher, the plugin requires two extra libraries (bun
 
 * **Equationator.dll**: an [open-source library](https://github.com/dmanning23/Equationator) to compute an equation from a `String`.
 
-<br />Both libraries are licensed under the [MIT License](http://choosealicense.com/licenses/mit/).
+<br>Both libraries are licensed under the [MIT License](http://choosealicense.com/licenses/mit/).

@@ -47,8 +47,8 @@ Pour obtenir cet effet nous pouvons mélanger un peu les deux solutions et avoir
 
 <div data-block="note">
 _Note_ : Vous vous dites peut-être "Mais pourquoi on n'attache pas simplement la caméra à l'objet joueur ?". En faisant cela avec Unity, lobjet enfant sera déplacé en même temps que son parent. Donc la caméra aura toujours la même position par rapport au joueur. Cela ne colle pas avec notre gameplay.
-<br/><br/> Dans un _shmup_, la caméra restreint les mouvements du joueur dans une zone limitée.
-<br/><br/> Plus généralement, il vaut mieux séparer la gestion de la caméra de son joueur dans un jeu 2D. Même sur un platformer, la caméra n'est pas directement liée à lui. Un excellent exemple est la caméra de Super Mario World, [nous vous invitons à en voir un peu plus][smw_camera].
+<br><br> Dans un _shmup_, la caméra restreint les mouvements du joueur dans une zone limitée.
+<br><br> Plus généralement, il vaut mieux séparer la gestion de la caméra de son joueur dans un jeu 2D. Même sur un platformer, la caméra n'est pas directement liée à lui. Un excellent exemple est la caméra de Super Mario World, [nous vous invitons à en voir un peu plus][smw_camera].
 
 ## Apparition des ennemis
 
@@ -103,7 +103,7 @@ Unity fourni désormais des scripts tout prêt pour du parallax, notamment dans 
 
 <div data-block="warning">
 _Standard packages_: utiliser les paquets standards proposés par Unity n'est pas toujours une bonne idée, surtout pour les textures et modèles. Cela se verra immédiatement et donnera un côté "encore un jeu fait avec Unity" qui vous empêchera de vous faire remarquer.
-<br />Ces assets sont par contre assez pratiques pour prototyper rapidement.
+<br>Ces assets sont par contre assez pratiques pour prototyper rapidement.
 </div>
 
 ## Scrolling simple
@@ -204,7 +204,7 @@ Nous utiliserons une méthode bien pratique pour savoir si un renderer est visib
 
 <div data-block="tip">
 _Extension_ : il est possible d'ajouter des méthodes à une classe en C# sans en modifier son code source (et surtout, sans y avoir accès !).
-<br />Il faut pour cela créer une classe statique, et dans cette classe une méthode statique avec un premier paramètre comme ceci : `this Type currentInstance`. La classe `Type` aura maintenant une nouvelle méthode. <br />
+<br>Il faut pour cela créer une classe statique, et dans cette classe une méthode statique avec un premier paramètre comme ceci : `this Type currentInstance`. La classe `Type` aura maintenant une nouvelle méthode. <br>
 </div>
 
 ## L'extension "RendererExtensions"
@@ -228,7 +228,7 @@ Facile non ?
 
 <div data-block="danger">
 _Namespaces_ : Si vous êtes un développeur C#, vous aurez peut-être noté l’absence de namespaces avec Unity. Mais en fait, Unity supporte assez bien ces derniers, c'est juste qu'il n'en met pas par défaut. Assez bien car il y a un bug connu avec les valeurs par défauts pour des paramètres.
- <br /><br />Dans un vrai projet, nous vous recommandons d'ajouter votre namespace pour éviter les conflits avec le moteur et d'éventuelles librairies ou plugins (comme _NGUI_).
+ <br><br>Dans un vrai projet, nous vous recommandons d'ajouter votre namespace pour éviter les conflits avec le moteur et d'éventuelles librairies ou plugins (comme _NGUI_).
 </div>
 
 Nous allons utiliser cette nouvelle méthode pour vérifier si un objet est sorti de la caméra ou non.
@@ -376,8 +376,8 @@ _(Cliquez pour voir l'animation)_
 Et voilà ! Nous avons une implémentation fonctionnelle de scrolling différentiel ! (et voilà pourquoi on garde le terme anglais...)
 
 <div data-block="note">
-_Note :_ Pourquoi ne pas simplement utiliser les méthodes  ``OnBecameVisible`` et ``OnBecameInvisible`` ? _Parce qu'elles sont inutilisables._ <br /><br />L'idée est bonne : vous ajoutez cette fonction dans votre script (comme vous ajoutez ``Start`` ou ``Update``) et le code est exécuté quand l'objet est affiché (ou l'inverse).
-<br /><br />SAUF QUE que ces méthodes sont aussi appelées quand c'est la fenêtre "Scene" (l'éditeur) qui affiche l'objet ! Si nous plaçons les ennemis plus loins dans la scène comme nous le faisons jusqu'ici, la méthode est appelée différemment dans l'éditeur et dans l'exécutable final. C'est absurde et propice aux erreurs. _Nous vous recommandons de ne pas les utiliser._
+_Note :_ Pourquoi ne pas simplement utiliser les méthodes  ``OnBecameVisible`` et ``OnBecameInvisible`` ? _Parce qu'elles sont inutilisables._ <br><br>L'idée est bonne : vous ajoutez cette fonction dans votre script (comme vous ajoutez ``Start`` ou ``Update``) et le code est exécuté quand l'objet est affiché (ou l'inverse).
+<br><br>SAUF QUE que ces méthodes sont aussi appelées quand c'est la fenêtre "Scene" (l'éditeur) qui affiche l'objet ! Si nous plaçons les ennemis plus loins dans la scène comme nous le faisons jusqu'ici, la méthode est appelée différemment dans l'éditeur et dans l'exécutable final. C'est absurde et propice aux erreurs. _Nous vous recommandons de ne pas les utiliser._
 </div>
 
 # Bonus : Amélioration des scripts précédents

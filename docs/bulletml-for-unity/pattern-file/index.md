@@ -232,7 +232,7 @@ Like for `<direction />`, `<speed />` comes with a `type` attribute which has ne
 2. `relative` — `NUMBER` is a `speed` which depends on all other speeds.
 3. `sequence` — Each frame, `NUMBER` is added to the previous direction result.
 
-<br />Here's a simple example of a bullet shot that moves toward the player at a low speed:
+<br>Here's a simple example of a bullet shot that moves toward the player at a low speed:
 
 ```xml
 <?xml version="1.0" ?>
@@ -511,7 +511,7 @@ This equation will give a random value between 0° and 360° degrees (direction)
 
 You can use these variables in place of `NUMBER`.
 
-<br />Here's a complete example:
+<br>Here's a complete example:
 
 ```xml
 <?xml version="1.0" ?>
@@ -540,7 +540,7 @@ The image below shows the random effect:
 
 We invite you to try the pattern after changing the game difficulty to also understand the effect of the `$rank` variable on it.
 
-<br />And that's it. We have almost covered all the aspects of BulletML. You are ready to create some wonderful patterns for your _shmup_ with Unity and BulletML!
+<br>And that's it. We have almost covered all the aspects of BulletML. You are ready to create some wonderful patterns for your _shmup_ with Unity and BulletML!
 
 Need support or information? Read the following section.
 

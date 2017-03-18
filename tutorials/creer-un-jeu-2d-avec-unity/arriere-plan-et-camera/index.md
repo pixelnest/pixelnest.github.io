@@ -47,11 +47,11 @@ _(Il faut cliquer sur la petite icône ronde à droite du champ "Select Sprite")
 
 <div data-block="note">
 _"Je ne vois pas mon sprite dans la fenêtre de sélection ?"_ : La première chose à faire est de vérifier que vous êtes bien dans l'onglet "Assets" de la fenêtre "Select Sprite". Des lecteurs nous ont signalé que dans certains projets (et même avec des projets créés grâce aux outils 2D), les images étaient importées en tant que "Texture" au lieu de "Sprite".
-<br /><br />
+<br><br>
 Sélectionnez votre image dans le menu "Project" et, dans l'"Inspector", changez le "Texture Type" en "Sprite" :
-<br />
+<br>
 [ ![Sprite mode][sprite] ][sprite]
-<br />
+<br>
 Nous ne savons pas pourquoi le comportement par défaut n'est pas le même pour tous.
 </div>
 

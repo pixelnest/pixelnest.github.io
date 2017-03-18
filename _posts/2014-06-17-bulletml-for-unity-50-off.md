@@ -11,7 +11,7 @@ For 7 days, _BulletML for Unity_ is **50% off** (only **10$**!).
 
 You don't know what's _BulletML for Unity_? [Discover this awesome plugin on our product page](/docs/bulletml-for-unity/).
 
-<br />[Go get it now!](http://bulletml-for-unity.pixelnest.io)
+<br>[Go get it now!](http://bulletml-for-unity.pixelnest.io)
 
 You can spread the word on [twitter][tweet] too. :)
 

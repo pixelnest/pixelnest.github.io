@@ -142,7 +142,7 @@ En revanche, et en 3D, cela permet l'automatisation par Unity de certaines tâch
 
 <div data-block="note">
 _Dossier Resources_ : Si vous avez déjà utilisé Unity, vous connaissez peut-être le dossier `Resources`. Ce dernier est spécial : il permet de charger un fichier ou un objet qui se trouve à l'intérieur à partir d'un script (en utilisant la classe statique `Resources`).
-<br />Comme nous ne l'utiliserons pas avant la fin du projet (chapitre sur les menus), nous avons préféré ne pas le créer pour le moment pour simplifier la structure du jeu.
+<br>Comme nous ne l'utiliserons pas avant la fin du projet (chapitre sur les menus), nous avons préféré ne pas le créer pour le moment pour simplifier la structure du jeu.
 </div>
 
 ## Notre première scène
@@ -194,7 +194,7 @@ Vous devriez avoir :
 [ ![Première scène][unity_first_scene] ][unity_first_scene]
 
 <div data-block="tip">
-_Astuce_ : Par défaut, un "game object" est lié à la position de ses parents.<br />Donc si le parent se déplace, tourne ou change de taille, tous ses enfant subiront également ces transformations proportionnellement à leurs propres propriétés.
+_Astuce_ : Par défaut, un "game object" est lié à la position de ses parents.<br>Donc si le parent se déplace, tourne ou change de taille, tous ses enfant subiront également ces transformations proportionnellement à leurs propres propriétés.
 </div>
 
 # Prochaine étape

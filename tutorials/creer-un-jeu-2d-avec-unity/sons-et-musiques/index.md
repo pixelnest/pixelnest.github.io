@@ -36,8 +36,8 @@ Ou le plaisir coupable de Damien :
 
 <div data-block="info">
 _Matthieu_ : J'ai eu l'occasion de créer des sons et des musiques pour le projet d'un ami. A lépoque, j'étais batteur mais pas du tout compositeur.
-<br />Avec l'aide de [Freesound](http://www.freesound.org/), un peu d'inventivité  et plusieurs douzaines d'heures (sans connaître aucun outil, mais cela m'a permis d'apprendre à utiliser [Audacity](http://audacity.sourceforge.net/) sur le tas), j'ai réussi à faire une bande son complète pour le jeu.
-<br /><br />
+<br>Avec l'aide de [Freesound](http://www.freesound.org/), un peu d'inventivité  et plusieurs douzaines d'heures (sans connaître aucun outil, mais cela m'a permis d'apprendre à utiliser [Audacity](http://audacity.sourceforge.net/) sur le tas), j'ai réussi à faire une bande son complète pour le jeu.
+<br><br>
 Je ne vous conseillerai de le faire pour la musique (trouvez plutôt un musicien qui accepte de le faire), mais avec un peu de temps et les bons outils, vous pouvez vraiment créer de chouettes effets sonores. C'est à votre portée, soyez créatifs.
 </div>
 

@@ -21,7 +21,7 @@ If you have any trouble with the plugin, please send us a support request via e-
 
 You can also reach us on Twitter: [@pixelnest][twitter].
 
-<br />Finally, if you like the plugin, we would really love if you could drop a [review on the Asset Store](https://www.assetstore.unity3d.com/#/content/16206#reviewBox). :)
+<br>Finally, if you like the plugin, we would really love if you could drop a [review on the Asset Store](https://www.assetstore.unity3d.com/#/content/16206#reviewBox). :)
 
 # More
 

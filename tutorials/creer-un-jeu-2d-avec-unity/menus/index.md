@@ -25,7 +25,7 @@ _Damien_ : Pour être honnête, je trouve que les menus et l'interface dans un j
 
 <div data-block="info">
 _Matthieu_ : A l'inverse de pas mal de développeur de jeux, je ne suis pas d'accord. Créer une _bonne_ interface pour un jeu n'est pas chose facile mais c'est en revanche intéressant et gratifiant. Cependant, cela nécessite de bons outils et une certaine connaissance du design (comme pour une application).
-<br /><br /> Mais c'est vrai qu'un _bon_ menu doit être invisible, pour qu'au final les joueurs le remarquent à peine.
+<br><br> Mais c'est vrai qu'un _bon_ menu doit être invisible, pour qu'au final les joueurs le remarquent à peine.
 </div>
 
 Malheureusement, Unity n'offre pas vraiment de quoi faire de superbes menus facilement à moins d'y consacrer beaucoup de temps pour d'utiliser un plugin.
@@ -146,7 +146,7 @@ Nous affichons juste un bouton qui charge la scène "Stage1" quand l'utilisateur
 
 <div data-block="note">
 _Note_: La méthode `OnGUI` est appelée à chaque frame et est destinée à afficher tous les éléments d'interface : barres de vies, compteurs, menus, etc.
-<br />L'objet `GUI` permet de créer rapidement dans le code des composants d'interface, comme la méthode `GUI.Button` par exemple.
+<br>L'objet `GUI` permet de créer rapidement dans le code des composants d'interface, comme la méthode `GUI.Button` par exemple.
 </div>
 
 Lancez le jeu et admirez notre menu :
@@ -175,7 +175,7 @@ Relancez le jeu, cliquez et... c'est parti !
 
 <div data-block="tip">
 _Astuce_ : La méthode `Application.LoadLevel()` est radicale : elle instancie la nouvelle scène et supprime l'ancienne. Vous aurez parfois envie qu'un objet transite d'une scène à l'autre, une musique par exemple.
-<br /><br />Unity a une méthode pour cela, `DontDestroyOnLoad(aGameObject)`. Il suffit de l'appeler sur l'objet que l'on veut conserver et il ne disparaîtra pas pendant le chargement. D'ailleurs il ne disparaîtra plus jamais à moins de le supprimer manuellement.
+<br><br>Unity a une méthode pour cela, `DontDestroyOnLoad(aGameObject)`. Il suffit de l'appeler sur l'objet que l'on veut conserver et il ne disparaîtra pas pendant le chargement. D'ailleurs il ne disparaîtra plus jamais à moins de le supprimer manuellement.
 </div>
 
 # Mort du joueur et nouvelle partie
@@ -285,7 +285,7 @@ Assurez-vous de sauvegardez ce fichier "GUISkin" dans le dossier "Resources".
 
 <div data-block="note">
 _Note_ : le dossier "Resources" est spécial pour Unity. Tout ce qui s'y trouve sera embarqué avec le jeu et peut être chargé depuis un script en utilisant la méthode `Resources.Load()`.
-<br />Vous pouvez donc charger des objets extérieurs pendant l'exécution... cela ne vous rappelle pas le principe des _mods_ ?
+<br>Vous pouvez donc charger des objets extérieurs pendant l'exécution... cela ne vous rappelle pas le principe des _mods_ ?
 </div>
 
 Mais votre nouvelle skin pour interface n'est pas encore appliquée.

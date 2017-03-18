@@ -11,6 +11,6 @@ The Stunfest 2014 is really close now... and we have released a trailer for the 
 
 As you can see, the Shmupfest integrates our _[BulletML for Unity](/docs/bulletml-for-unity/)_ plugin to create those awesome patterns.
 
-<br />Have fun!
+<br>Have fun!
 
 You can also follow the [Shmupfest](https://twitter.com/hashtag/shmupfest) and [Pixelnest](https://twitter.com/pixelnest) on twitter.
