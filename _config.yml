@@ -1,4 +1,9 @@
-name: Pixelnest Studio
+title: "Pixelnest Studio"
+description: "Pixelnest Studio — we craft games and apps."
+keywords: "pixelnest, studio, damien, mayance, matthieu, oger, games, apps, development, mobile, web, steredenn"
+
+google_tracking_code: "UA-40226469-1"
+
 repository: "pixelnest/pixelnest.github.io"
 
 # -------------------------------------------------------

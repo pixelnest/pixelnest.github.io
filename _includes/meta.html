@@ -1,10 +1,10 @@
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% if page.url == '/' or page.url == '/index.html' %}
-<title>Pixelnest Studio</title>
+  <title>{{ site.title | escape }}</title>
 {% else %}
-<title>{{ page.title }} — Pixelnest Studio</title>
+  <title>{{ page.title | escape }} — {{ site.title | escape }}</title>
 {% endif %}
 
 <!-- Misc. -->
@@ -12,9 +12,9 @@
 <link rel="alternate" type="application/atom+xml" title="Pixelnest Studio" href="http://feedpress.me/pixelnest">
 
 <!-- Description. -->
-<meta name="author" content="Pixelnest Studio">
-<meta name="description" content="Pixelnest Studio — we craft games and apps.">
-<meta name="keywords" content="pixelnest, studio, damien, mayance, matthieu, oger, games, apps, development, mobile, web, steredenn">
+<meta name="author" content="{{ site.title | escape }}">
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+<meta name="keywords" content="{{ site.keywords | escape }}">
 
 <!-- Social. -->
 <link rel="author" href="http://pixelnest.io/about/">
