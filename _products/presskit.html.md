@@ -16,6 +16,8 @@ links:
 
 **presskit.html** is a tool to create a presskit for your company, products or games.
 
+The goal of **presskit.html** is to generate only static HTML pages — no PHP required at all. Just fill some XML data files, add some images, execute a command, and boom. It's done.
+
 This is a complete re-implementation, with a permissive MIT license, of [presskit()][dopresskit], which was originally created by [Rami Ismail](https://twitter.com/tha_rami) of [Vlambeer](http://www.vlambeer.com).
 
 To quote the original [presskit()][dopresskit]:
@@ -30,12 +32,11 @@ And even if [presskit()][dopresskit] was conceived with videogames in mind, we t
 
 Examples:
 
-* [Pixelnest Studio](http://pixelnest.io/presskit/)
+* [Pixelnest Studio](http://pixelnest.io/presskit/) (built with **presskit.html**)
+* [Pizza Burger Studio](http://pixelnest.io/presskit.html/example/) (fake presskit - built with **presskit.html**)
 * [Vlambeer](http://www.vlambeer.com/press/)
 * [Flying Oak Games](http://www.flying-oak.com/presskit/index.php)
 * [Chucklefish](http://chucklefish.org/cf-presskit/index.php)
-
-The goal of **presskit.html** is to generate only static HTML pages — no PHP required at all. Just fill some XML data files, add some images, execute a command, and boom. It's done.
 
 [Ready? Start your presskit now!](https://github.com/pixelnest/presskit.html)
 
