@@ -15,7 +15,7 @@ links:
   - name: Watch trailer
     url: https://youtu.be/EtXajayBLzw
   - name: Press Page
-    url: /presskit/steredenn.html
+    url: /presskit/steredenn/
 ---
 
 _Steredenn_ is a **roguelike-shmup** video game for **PC/Mac/Linux**, **Xbox One**, **PlayStation 4** and **iPhone/iPad**.
