@@ -1,0 +1,38 @@
+---
+layout: null
+permalink: /feed.json
+---
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "{{ site.title | strip_html | normalize_whitespace | escape }}",
+  "description": "{{ site.description | strip_html | normalize_whitespace | escape }}",
+  "icon": "http://pixelnest.io/apple-touch-icon.png",
+  "favicon": "http://pixelnest.io/static/images/favicon.ico",
+  "home_page_url": "http://pixelnest.io/",
+  "feed_url": "http://pixelnest.io/feed.json",
+  "items": [
+    {% for post in site.posts %}
+    {
+      "id": "http://pixelnest.io{{ post.url }}",
+      "url": "http://pixelnest.io{{ post.url }}",
+      "title": {{ post.title | jsonify }},
+      "content_html": {{ post.content | jsonify }},
+      "author": {
+        {% if post.author %}
+          {% if post.author contains 'damien' or post.author contains 'Damien' %}
+        "name": "Damien Mayance",
+        "url": "http://dmayance.com/"
+          {% elsif post.author contains 'matthieu' or post.author contains 'Matthieu' %}
+        "name": "Matthieu Oger",
+        "url": "http://solarsailer.net/"
+          {% endif %}
+        {% else %}
+        "name": "Pixelnest Studio",
+        "url": "http://pixelnest.io/"
+        {% endif %}
+      },
+      "date_published": "{{ post.date }}"
+    }{% unless forloop.last == true %},{% endunless %}
+    {% endfor %}
+  ]
+}
