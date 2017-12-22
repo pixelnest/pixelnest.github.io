@@ -4,7 +4,8 @@
 {% if page.url == '/' or page.url == '/index.html' %}
   <title>{{ site.title | escape }}</title>
 {% else %}
-  <title>{{ page.title | escape }} — {{ site.title | escape }}</title>
+  {% capture page_title %}{{ page.title }}{% endcapture %}
+  <title>{{ page_title | escape }} — {{ site.title | escape }}</title>
 {% endif %}
 
 <!-- Misc. -->
