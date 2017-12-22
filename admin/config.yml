@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: pixelnest/pixelnest.github.io
+
+media_folder: "static/images/uploads"
+publish_mode: editorial_workflow
+
+collections:
+  - name: "journal"
+    label: "Journal"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # YYYY-MM-DD-title.md
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "subtitle", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Author", name: "author", widget: "string", required: "false"}
