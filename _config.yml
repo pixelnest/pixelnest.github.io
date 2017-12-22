@@ -87,6 +87,6 @@ paginate: 4
 # Plugins.
 # -------------------------------------------------------
 
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-redirect-from
