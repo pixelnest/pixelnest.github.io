@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: pixelnest/pixelnest.github.io
+  site_domain: pixelnest.io
 
 media_folder: "static/images/uploads"
 publish_mode: editorial_workflow
