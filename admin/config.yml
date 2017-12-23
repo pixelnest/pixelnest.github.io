@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: pixelnest/pixelnest.github.io
+  base_url: http://netlifycms-github-auth.pxn.io/
 
 media_folder: "static/images/uploads"
 publish_mode: editorial_workflow
