@@ -16,4 +16,4 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subtitle", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Author", name: "author", widget: "string", required: "false"}
+      - {label: "Author", name: "author", widget: "string", required: false}
