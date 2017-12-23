@@ -1,6 +1,6 @@
 ---
 title: Unity 2D tutorial
-subtitle: learn how to make a little game from installation to deployment
+subtitle: Learn how to make a little game from installation to deployment
 ---
 
 Fellow game developers,
