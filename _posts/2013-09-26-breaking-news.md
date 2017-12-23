@@ -1,7 +1,7 @@
 ---
 title: Breaking news!
 subtitle: 'The website, the products and the company'
-author: pixelnest
+author: ''
 ---
 
 Dear reader, today we have a lot of things to announce!
