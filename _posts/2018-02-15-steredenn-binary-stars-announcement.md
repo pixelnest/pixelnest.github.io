@@ -79,7 +79,7 @@ We do too. We are still thinking that the core experience of Steredenn is exactl
 And that's why this expansion is "additive". The game is still the same in the end, but with many many more layers _on top_, making it bigger, richer, and ultimately, better.
 
 
-<br><br>If you have any other questions, ask us on Twitter or Facebook. ;)
+<br><br>If you have any other questions, ask us on [Twitter](https://twitter.com/pixelnest/) or [Facebook](https://facebook.com/pixelneststudio). ;)
 
 [![Announcement Teaser](/static/images/uploads/steredenn_teaser_small.gif)](/static/images/uploads/steredenn_teaser_big.gif)
 
