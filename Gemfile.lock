@@ -55,7 +55,7 @@ DEPENDENCIES
   jekyll-redirect-from (= 0.12.1)
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.4.2p198
 
 BUNDLED WITH
    1.16.0
