@@ -15,6 +15,7 @@
     "build": "yarn run build:webpack && yarn run build:jekyll",
     "build:webpack": "webpack -p --env.production",
     "build:jekyll": "bundle exec jekyll clean && JEKYLL_ENV=production bundle exec jekyll build",
+    "presskit": "./update_presskit",
     "test": "standard | snazzy"
   },
   "dependencies": {
