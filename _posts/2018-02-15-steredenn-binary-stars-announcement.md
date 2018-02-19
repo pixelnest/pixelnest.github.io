@@ -1,6 +1,7 @@
 ---
 title: 'Steredenn: Binary Stars announcement'
 subtitle: 'Coming to Nintendo Switch on March 8th, 2018'
+excerpt: "Announcing Steredenn: Binary Stars, the ultimate Steredenn experience. Read the FAQ and find out more about Steredenn: Binary Stars."
 ---
 After a year of almost complete silence from our part, we are proud to announce **Steredenn: Binary Stars**, a hugely expanded and massively improved version of **Steredenn[^classic]**.
 
