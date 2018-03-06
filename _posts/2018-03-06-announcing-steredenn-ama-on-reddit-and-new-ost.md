@@ -10,7 +10,7 @@ To not let you down for the last few days, we have some small treats for you.
 
 We will do an AMA on the [Nintendo Switch subreddit][subreddit] on March 8th, the same day as the release. Thanks to the `/r/NintendoSwitch` team for planning and hosting this. 😊
 
-![[Banner Reddit AMA][banner]][banner]
+[ ![Banner Reddit AMA][banner] ][banner]
 
 It will be at:
 
