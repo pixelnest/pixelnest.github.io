@@ -27,7 +27,7 @@ Meet us there on March 8th, and feel free to ask any question. 🙂
 
 Finally, the new OST is out! You can listen to it on [Bandcamp][sbsost] right now.
 
-It's still the awesome work from the fabulous [Zander Noriega][zander], the original compositor behind the [Steredenn soundtrack][sost].
+It's still the awesome work from the fabulous [Zander Noriega][zander], the original composer behind the [Steredenn soundtrack][sost].
 
 This version includes all the original tracks, as well as 3 new tracks for Binary Stars version:
 
@@ -49,6 +49,6 @@ You can listen for free on Bandcamp, or buy it for a cheap $3. Anyways, it's a s
 
 [sbsost]: https://zandernoriega.bandcamp.com/album/steredenn-binary-stars-original-game-soundtrack
 [sost]: https://zandernoriega.bandcamp.com/album/steredenn-original-soundtrack
-[zander]: http://lambdatoast.com
+[zander]: http://soundcloud.com/zander-noriega
 
 [eshop]: https://www.nintendo.com/games/detail/steredenn-binary-stars-switch
