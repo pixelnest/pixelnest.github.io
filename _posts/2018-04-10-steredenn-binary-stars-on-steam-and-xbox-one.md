@@ -8,16 +8,18 @@ Watch the trailer:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iBG9yqcXB-4" frameborder="0" allowfullscreen></iframe>
 
-## Steam
-
-It's bundled as a free DLC, automatically included with your **Steredenn** purchase. Restart Steam, and you should see a new update available. You'll get the [2.0.0][u200], [2.1.0][u210] and [2.1.1][u211] in one package.
-
 To recap quickly what **Steredenn: Binary Stars** is:
 
 - Local co-op;
 - New playable ships;
 - Boss rush;
 - [Tons of new content (music, bosses, waves, weapons, upgrades)][changelog].
+
+[Youn can read the FAQ about our thought-process and decisions behind the update for more information.][faq]
+
+## Steam
+
+It's bundled as a free DLC, automatically included with your **Steredenn** purchase. Restart Steam, and you should see a new update available. You'll get the [2.0.0][u200], [2.1.0][u210] and [2.1.1][u211] updates in one package.
 
 The leaderboards are also new. You can still check the old ones, but **Steredenn: Binary Stars** is a fresh start for everyone.
 
@@ -29,14 +31,13 @@ Obviously, there isn't many reasons to play **Steredenn: Classic** instead of **
 
 ## Xbox One
 
-The update should be available in a few hours. The game will be automatically updated as soon as the update is live.
+The update should be available in a few hours. The game will be automatically updated as soon as the update is live. You'll get the same updates as the Steam version, meaning the [2.0.0][u200], [2.1.0][u210] and [2.1.1][u211].
 
 <br /><br />Have fun with **Steredenn: Binary Stars**!
 
 - [Check the official website.][website]
 - [Listen to the new soundtrack.][soundtrack]
 - [Read the detailed changelog of Steredenn: Binary Stars (spoilers inside).][changelog]
-- [Read the FAQ about our thought-process and decisions behind the update.][faq]
 
 Enjoy!
 
