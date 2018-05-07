@@ -2,13 +2,13 @@
 
 We craft games and apps.
 
-[pixelnest.io](http://pixelnest.io)
+[pixelnest.io](https://pixelnest.io)
 
 ## Publish a post
 
 Create a new file in the `_posts` folder, and use a correct filename (`YYYY-MM-DD-name-of-slug.md`). Commit, push. That's all.
 
-You can also use the online admin. Go to the [admin](http://pixelnest.io/admin/).
+You can also use the online admin. Go to the [admin](https://pixelnest.io/admin/).
 
 ## Update or create a page
 

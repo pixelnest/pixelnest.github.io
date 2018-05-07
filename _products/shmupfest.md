@@ -9,7 +9,7 @@ excerpt: "The _Shmupfest_ is an _infinite retro 2D shmup_ we made for the Stunfe
 
 links:
   - name: Play for free
-    url: http://pixelnest.io/shmupfest/play/#download
+    url: https://pixelnest.io/shmupfest/play/#download
   - name: Watch trailer
     url: https://www.youtube.com/watch?v=N4cRAA7Q-p4
   - name: Press Page
@@ -23,7 +23,7 @@ It's an **infinite retro 2D Shoot'Em Up**, created with Unity. Bullets patterns 
 All the [sprites][shmupfest] have been drawn by the [Ulule's backers][ulule], making the game **truly unique** and **personalized** for the festival.
 
 
-[play]:      http://pixelnest.io/shmupfest/play/
+[play]:      https://pixelnest.io/shmupfest/play/
 [stunfest]:  http://stunfest.fr/
 [shmupfest]: http://shmupfest.stunfest.fr/
 [ulule]:     http://fr.ulule.com/stunfest-2014/

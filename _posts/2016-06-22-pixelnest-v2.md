@@ -14,7 +14,7 @@ For the occasion, we revamped the whole website as well. If you find any problem
 
 ![Pixelnest Studio][logo]
 
-Our old identity wasn't representative of us anymore. The pirate (George) meant nothing to many of our followers, and the website seriously started to feel dated. It was time to do something. And now that most of the work on [Steredenn](http://pixelnest.io/products/steredenn/) is over, we could really take the time to reimagine ourselves for the years to come.
+Our old identity wasn't representative of us anymore. The pirate (George) meant nothing to many of our followers, and the website seriously started to feel dated. It was time to do something. And now that most of the work on [Steredenn](https://pixelnest.io/products/steredenn/) is over, we could really take the time to reimagine ourselves for the years to come.
 
 I will probably write something about the process behind the redesign, but now is not the day.
 

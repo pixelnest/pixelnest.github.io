@@ -17,6 +17,6 @@ The game is made in collaboration with this awesome illustrator and friend of ou
 
 _We are thrilled to present this new game_. It's coming really soon and we will post a lot of updates on our [twitter](https://twitter.com/pixelnest), the [game devblog](http://steredenn-game.tumblr.com) and the [newsletter](http://pixelnest.us3.list-manage1.com/subscribe?u=cb1093a5798d3677ea320108b&id=55e71ae780).
 
-We've also updated our press kit. [It's available here](http://pixelnest.io/presskit).
+We've also updated our press kit. [It's available here](https://pixelnest.io/presskit).
 
 Have fun awaiting Steredenn.

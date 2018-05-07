@@ -6,15 +6,15 @@ permalink: /feed.json
   "version": "https://jsonfeed.org/version/1",
   "title": "{{ site.title | strip_html | normalize_whitespace | escape }}",
   "description": "{{ site.description | strip_html | normalize_whitespace | escape }}",
-  "icon": "http://pixelnest.io/apple-touch-icon.png",
-  "favicon": "http://pixelnest.io/static/images/favicon.ico",
-  "home_page_url": "http://pixelnest.io/",
-  "feed_url": "http://pixelnest.io/feed.json",
+  "icon": "https://pixelnest.io/apple-touch-icon.png",
+  "favicon": "https://pixelnest.io/static/images/favicon.ico",
+  "home_page_url": "https://pixelnest.io/",
+  "feed_url": "https://pixelnest.io/feed.json",
   "items": [
     {% for post in site.posts %}
     {
-      "id": "http://pixelnest.io{{ post.url }}",
-      "url": "http://pixelnest.io{{ post.url }}",
+      "id": "https://pixelnest.io{{ post.url }}",
+      "url": "https://pixelnest.io{{ post.url }}",
       "title": {{ post.title | jsonify }},
       "content_html": {{ post.content | jsonify }},
       "author": {
@@ -28,7 +28,7 @@ permalink: /feed.json
           {% endif %}
         {% else %}
         "name": "Pixelnest Studio",
-        "url": "http://pixelnest.io/"
+        "url": "https://pixelnest.io/"
         {% endif %}
       },
       "date_published": "{{ post.date }}"

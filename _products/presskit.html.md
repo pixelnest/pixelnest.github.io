@@ -11,7 +11,7 @@ links:
   - name: Project Page On GitHub
     url: https://github.com/pixelnest/presskit.html
   - name: Pixelnest Studio Presskit
-    url: http://pixelnest.io/presskit/
+    url: https://pixelnest.io/presskit/
 ---
 
 **presskit.html** is a tool to create a presskit for your company, products or games.
@@ -32,8 +32,8 @@ And even if [presskit()][dopresskit] was conceived with videogames in mind, we t
 
 Examples:
 
-* [Pixelnest Studio](http://pixelnest.io/presskit/) (built with **presskit.html**)
-* [Pizza Burger Studio](http://pixelnest.io/presskit.html/example/) (fake presskit - built with **presskit.html**)
+* [Pixelnest Studio](https://pixelnest.io/presskit/) (built with **presskit.html**)
+* [Pizza Burger Studio](https://pixelnest.io/presskit.html/example/) (fake presskit - built with **presskit.html**)
 * [Vlambeer](http://www.vlambeer.com/press/)
 * [Flying Oak Games](http://www.flying-oak.com/presskit/index.php)
 * [Chucklefish](http://chucklefish.org/cf-presskit/index.php)

@@ -29,7 +29,7 @@ And [read the quickstart][quickstart] for existing presskit() users. 😉
 
 There's a complete documentation and introduction to the project on the [GitHub page][presskithtml]. It's available through [npm](https://www.npmjs.com/package/presskit).
 
-**A fair bit of warning: it's still a beta and can/will have bugs.** However, it's completely capable of re-creating an existing presskit() ([see ours](/presskit/) or the [example](http://pixelnest.io/presskit.html/example/)). We have some small additions to make before considering it an 1.0.0 project, including a visual application for non-developers. _As it stands today, the project requires some basic command-line knowledge, which might restrict non-technical users._
+**A fair bit of warning: it's still a beta and can/will have bugs.** However, it's completely capable of re-creating an existing presskit() ([see ours](/presskit/) or the [example](https://pixelnest.io/presskit.html/example/)). We have some small additions to make before considering it an 1.0.0 project, including a visual application for non-developers. _As it stands today, the project requires some basic command-line knowledge, which might restrict non-technical users._
 
 **So, ready? Go check [presskit.html][presskithtml]!**
 

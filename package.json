@@ -9,7 +9,7 @@
     "user": "Pixelnest Studio",
     "url": "pixelnest.io"
   },
-  "homepage": "http://pixelnest.io/",
+  "homepage": "https://pixelnest.io/",
   "scripts": {
     "start": "bundle exec jekyll build --watch & webpack --watch",
     "build": "yarn run build:webpack && yarn run build:jekyll",
