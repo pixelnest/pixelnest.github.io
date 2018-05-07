@@ -36,7 +36,7 @@ _Une dernière astuce ?_ Utilisez un outil de versionnement pour votre projet et
 
 Si vous avez aimé ce tutoriel, vous pouvez :
 
-* Nous suivre sur [Twitter](https://twitter.com/pixelnest) ou [Facebook](https://www.facebook.com/pixelneststudio).
+* Nous suivre sur [Twitter](https://twitter.com/pixelnest) ou [Facebook](https://facebook.com/pixelneststudio).
 * Suivre les auteurs, [Damien](https://twitter.com/valryon) et [Matthieu](https://twitter.com/solarsailer).
 * Vous abonnez à notre [flux RSS](http://feedpress.me/pixelnest).
 * Le partager à vos collègues et à vos amis.

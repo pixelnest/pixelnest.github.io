@@ -43,7 +43,7 @@ Un petit résumé :
 	[ ![le hall of fame][credits]][credits]
 	<center>*(WIP - Image non-définitive)*</center><br>
 
-Suivez toutes les avancées du développement sur notre [twitter (@pixelnest)](https://twitter.com/pixelnest) ou sur [Facebook](https://www.facebook.com/pixelneststudio).
+Suivez toutes les avancées du développement sur notre [twitter (@pixelnest)](https://twitter.com/pixelnest) ou sur [Facebook](https://facebook.com/pixelneststudio).
 
 ---
 
@@ -59,7 +59,7 @@ We provide the editor interface and we ensure that the sprites are in the final 
 
 During the festival, people will be able to shoot at the creations and see their own one in the **Hall of Fame**!
 
-You can follow the development through our [twitter (@pixelnest)](https://twitter.com/pixelnest) or our [Facebook](https://www.facebook.com/pixelneststudio).
+You can follow the development through our [twitter (@pixelnest)](https://twitter.com/pixelnest) or our [Facebook](https://facebook.com/pixelneststudio).
 
 
 [ulule]:   /static/images/posts/shmupfest/ulule.png

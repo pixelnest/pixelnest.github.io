@@ -14,7 +14,7 @@ links:
   previous: ../animations-2
 ---
 
-Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://www.facebook.com/pixelneststudio) or via [our blog feed](http://feedpress.me/pixelnest) to be notified when new chapters are available.
+Stay tuned, follow us on [Twitter](http://twitter.com/pixelnest), [Facebook](https://facebook.com/pixelneststudio) or via [our blog feed](http://feedpress.me/pixelnest) to be notified when new chapters are available.
 
 <!--
 # Rough values to get the same game as in the demo

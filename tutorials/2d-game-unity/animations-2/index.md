@@ -642,7 +642,7 @@ This bonus chapter about animations is over!
 
 <br>If you liked this advanced tutorial, you might want to:
 
-* Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://www.facebook.com/pixelneststudio).
+* Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://facebook.com/pixelneststudio).
 * Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).
 * Subscribe to our [RSS feed](http://feedpress.me/pixelnest).
 * Give your impressions? :)

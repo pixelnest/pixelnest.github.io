@@ -31,5 +31,5 @@ If you appreciate what we do and/or want to be informed by our future releases, 
 
 
 [twitter]: https://twitter.com/pixelnest
-[facebook]: https://www.facebook.com/pixelneststudio
+[facebook]: https://facebook.com/pixelneststudio
 [feed]: http://feedpress.me/pixelnest

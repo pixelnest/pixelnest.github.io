@@ -15,7 +15,7 @@ permalink: /contact/
 You can contact us on:
 
 * [Twitter](https://twitter.com/pixelnest/)
-* [Facebook](https://www.facebook.com/pixelneststudio/)
+* [Facebook](https://facebook.com/pixelneststudio/)
 * [Mail](mailto:site@pixelnest.io)
 
 For a quick answer, send us a tweet. You can also stay in touch with Pixelnest by subscribing to our [RSS feed](http://feedpress.me/pixelnest).
