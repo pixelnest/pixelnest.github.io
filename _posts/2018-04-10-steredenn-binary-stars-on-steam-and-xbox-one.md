@@ -2,6 +2,7 @@
 title: 'Steredenn: Binary Stars on Steam and Xbox One'
 subtitle: 'April 10th, 2018'
 ---
+
 About a month after the Nintendo Switch, **Steredenn: Binary Stars** is available on Steam and Xbox One!
 
 Watch the trailer:
