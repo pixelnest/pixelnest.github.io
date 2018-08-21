@@ -17,7 +17,9 @@ It doesn't look like much, but this can be super useful on mobile phones to get 
 
 Cloudy Build does not store anything and the code is [open-source](https://github.com/solarsailer/cloudy-build).
 
-## `presskit.html` `0.12.1` (from `0.7.0`)
+## presskit.html 0.12.1 
+
+_(From `0.7.0` to `0.12.1`)_
 
 We did a bit of work on [`presskit.html`](https://github.com/pixelnest/presskit.html) recently.
 
