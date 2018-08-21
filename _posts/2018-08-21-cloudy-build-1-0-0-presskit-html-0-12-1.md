@@ -3,7 +3,7 @@ title: Cloudy Build 1.0.0 & presskit.html 0.12.1
 subtitle: New tool and new release
 author: Matthieu
 ---
-## Cloudy Build
+## Cloudy Build 1.0.0
 
 Last week, we released a small tool called Cloudy Build. 
 
