@@ -1,11 +1,11 @@
 ---
-title: Cloudy Build 1.0.0 & presskit.html 0.12.1
+title: Cloudy Build 1.0.0 &amp; presskit.html 0.12.1
 subtitle: New tool and new release
 author: Matthieu
 ---
 ## Cloudy Build 1.0.0
 
-Last week, we released a small tool called Cloudy Build. 
+Last week, we released a small tool called Cloudy Build.
 
 [Try Cloudy Build.](https://cloudy-build.pxn.io/)
 
@@ -17,7 +17,7 @@ It doesn't look like much, but this can be super useful on mobile phones to get 
 
 Cloudy Build does not store anything and the code is [open-source](https://github.com/solarsailer/cloudy-build).
 
-## presskit.html 0.12.1 
+## presskit.html 0.12.1
 
 _(From `0.7.0` to `0.12.1`)_
 
