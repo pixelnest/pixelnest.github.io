@@ -38,7 +38,7 @@ And the rest is all yours...
 
 * Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://facebook.com/pixelneststudio).
 * Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).
-* Subscribe to our [RSS feed](http://feedpress.me/pixelnest).
+* Subscribe to our [RSS feed](https://pixelnest.io/atom.xml).
 * Give your impressions? :)
 
 Thanks for reading us! We hope you have enjoyed this tutorial and that it will give you a solid foundation to build some great games!

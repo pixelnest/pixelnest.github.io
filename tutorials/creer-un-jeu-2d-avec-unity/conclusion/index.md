@@ -38,7 +38,7 @@ Si vous avez aimé ce tutoriel, vous pouvez :
 
 * Nous suivre sur [Twitter](https://twitter.com/pixelnest) ou [Facebook](https://facebook.com/pixelneststudio).
 * Suivre les auteurs, [Damien](https://twitter.com/valryon) et [Matthieu](https://twitter.com/solarsailer).
-* Vous abonnez à notre [flux RSS](http://feedpress.me/pixelnest).
+* Vous abonnez à notre [flux RSS](https://pixelnest.io/atom.xml).
 * Le partager à vos collègues et à vos amis.
 * Nous donner votre avis :)
 

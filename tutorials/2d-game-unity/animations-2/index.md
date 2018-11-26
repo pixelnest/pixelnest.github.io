@@ -644,7 +644,7 @@ This bonus chapter about animations is over!
 
 * Follow us on [Twitter](https://twitter.com/pixelnest) or [Facebook](https://facebook.com/pixelneststudio).
 * Follow the authors: [Damien](https://twitter.com/valryon) and [Matthieu](https://twitter.com/solarsailer).
-* Subscribe to our [RSS feed](http://feedpress.me/pixelnest).
+* Subscribe to our [RSS feed](https://pixelnest.io/atom.xml).
 * Give your impressions? :)
 
 

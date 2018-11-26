@@ -71,7 +71,7 @@ Well, we have plans. But that's another story!
 
 As you can see, we are pretty busy. Stay tuned!
 
-Follow us on [Twitter](http://twitter.com/pixelnest) or through our [RSS feed](http://feedpress.me/pixelnest) if you want the hottest news. :)
+Follow us on [Twitter](http://twitter.com/pixelnest) or through our [RSS feed](https://pixelnest.io/atom.xml) if you want the hottest news. :)
 
 1. A cool and useless technology. Sorry!
 
