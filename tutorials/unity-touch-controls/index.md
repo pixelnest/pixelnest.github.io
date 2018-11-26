@@ -622,7 +622,7 @@ To test on a device, see our [deployment chapter][deployment] in our previous tu
 
 # Contact and feedback
 
-If you find a typo, a mistake or a misspelling, let us know on our [twitter](https://www.twitter.com/pixelnest). You can also contact us by [mail](mailto:site@pixelnest.io).
+If you find a typo, a mistake or a misspelling, let us know on our [twitter](https://www.twitter.com/pixelnest). You can also contact us by [mail](mailto:contact@pixelnest.io).
 
 If you want further informations about a specific topic, or a clarification on this tutorial, we would be happy to hear you too.
 

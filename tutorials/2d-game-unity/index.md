@@ -77,7 +77,7 @@ So, are you ready? Let's dive into Unity!
 [steredenn]: http://steredenn.pixelnest.io
 [demo_link]: ./-demo/demo.html "Play the demo"
 
-[pxn_mailto]: mailto:site@pixelnest.io "Pixelnest Mail"
+[pxn_mailto]: mailto:contact@pixelnest.io "Pixelnest Mail"
 
 [unity_link]: http://unity3d.com/ "Unity3D"
 [xna_link]: http://en.wikipedia.org/wiki/Microsoft_XNA "Microsoft XNA"
