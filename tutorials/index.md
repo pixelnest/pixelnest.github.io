@@ -30,3 +30,9 @@ Here is a list of all the tutorials and articles we made.
 * [2D water line in Unity 4.3](http://dmayance.com/water-line-2d-unity/)
 * [Unity - Paint and blood splatters, Pt. 1](http://dmayance.com/unity-paint-and-blood-splatters-tests/)
 * [Unity - Paint and blood splatters, Pt. 2](http://dmayance.com/unity-paint-part-2/)
+
+# Made by Matthieu
+
+[Matthieu](https://matthieuoger.com/) has also written on his own blog:
+
+* [Unity And iPhone X's Home Indicator](https://matthieuoger.com/2018/10/unity-iphone-x-home-indicator/)

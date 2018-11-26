@@ -14,12 +14,9 @@ permalink: /contact/
 
 You can contact us on:
 
-* [Twitter](https://twitter.com/pixelnest/)
+* [Twitter](https://twitter.com/pixelnest/) (recommended!)
 * [Facebook](https://facebook.com/pixelneststudio/)
 * [Mail](mailto:site@pixelnest.io)
+* Or subscribe to our [RSS feed](http://feedpress.me/pixelnest)
 
-For a quick answer, send us a tweet. You can also stay in touch with Pixelnest by subscribing to our [RSS feed](http://feedpress.me/pixelnest).
-
-# You have a professional need?
-
-Great! If you want to hire us for a mission or a custom need, read our [Services page](/services/).
+Note that [Pixelnest Studio is not our main activity anymore](https://pixelnest.io/2018/11/the-beginning-and-the-end/). Don't expect a quick answer. 😉
