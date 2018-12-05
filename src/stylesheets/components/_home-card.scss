@@ -34,7 +34,8 @@
 
   height: 85%;
 
-  box-shadow: 0 5px 40px rgba(0,0,0, 0.5), 0 5px 40px;  // See $1.
+  color: rgba(black, 0.25);
+  box-shadow: 0 5px 40px rgba(black, 0.5), 0 5px 40px;  // See $1.
 }
 
 .home-card__image {
@@ -79,8 +80,17 @@
   background: linear-gradient(to right, rgba($pxn-black, 0.5) 0%, rgba($pxn-black, 0) 100%);
 
   font-size: 2.0rem;
+  font-weight: bold;
 
   text-align: left;
+}
+
+.home-card__text .home-card__text-above {
+  display: block;
+
+  margin-bottom: -10px;
+
+  font-weight: normal;
 }
 
 // -------------------------------------------------------
@@ -88,29 +98,30 @@
 // -------------------------------------------------------
 
 .home-card--steredenn {
-  .home-card__shadow {
-    color: rgba(black, 0.25); // Tint the shadow.
-  }
   .home-card__image {
     background-image: url("/static/images/products/steredenn/card.jpg");
   }
 }
 
-.home-card--bulletml {
-  .home-card__shadow {
-    color: rgba(black, 0.25); // Tint the shadow.
+.home-card--steredenn-binary-stars {
+  .home-card__image {
+    background-image: url("/static/images/products/steredenn-binary-stars/card.jpg");
   }
+}
 
+.home-card--presskit-html {
+  .home-card__image {
+    background-image: url("/static/images/products/presskit.html/card.jpg");
+  }
+}
+
+.home-card--bulletml {
   .home-card__image {
     background-image: url("/static/images/products/bulletml-for-unity/card.jpg");
   }
 }
 
 .home-card--services {
-  .home-card__shadow {
-    color: rgba(black, 0.25);
-  }
-
   .home-card__image {
     background-image: url("/static/images/products/services/card.jpg");
   }
@@ -120,7 +131,7 @@
 // Responsive.
 // -------------------------------------------------------
 
-@media only screen and (max-height: 740px) {
+@media (max-height: 850px) {
   .home-card {
     width: 138px;
     height: 256px;
@@ -131,7 +142,7 @@
   }
 }
 
-@media only screen and (min-height: $vp-large) {
+@media (min-height: $vp-large) {
   .home-card {
     width: 172px;
     height: 400px;
@@ -142,9 +153,16 @@
   }
 }
 
-@media only screen and (min-height: 1200px) {
+@media (min-height: 1200px) {
   .home-card {
     width: 188px;
     height: 440px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-card {
+    width: 200px;
+    height: 200px;
   }
 }

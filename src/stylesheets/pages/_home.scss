@@ -28,6 +28,50 @@
 
 .home__content {
   padding-top: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.home__notice a {
+  display: block;
+
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  padding: 12px;
+
+  opacity: 0.9;
+  color: white;
+  background: rgba($pizza-light, 0.5);
+  border: 1px solid rgba($pizza-dark, 0.75);
+
+  font-size: 2.25rem;
+
+  transition: all 0.2s ease-in;
+  text-align: center;
+
+  strong:last-of-type {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    opacity: 0.95;
+    background: rgba($pizza, 0.75);
+    border-color: 1px solid $pizza-dark;
+    box-shadow: 0 2px 20px rgba($pizza-light, 0.4);
+  }
+
+  @media (max-height: 1100px) {
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
+  }
 }
 
 .home__list {
@@ -48,7 +92,7 @@
   padding-top: 64px;
   padding-bottom: 24px;
 
-  @media (min-height: 680px) and (min-width: 600px) {
+  @media (min-height: 750px) and (min-width: 885px) {
     position: fixed;
     bottom: 0;
 
