@@ -1,6 +1,6 @@
 ---
 title: Cloudy Build
-subtitle: Fast UI for Unity Cloud Build.
+subtitle: Fast UI for Unity Cloud Build
 type: [web, tool, open source]
 assets: /static/images/products/cloudy-build/
 date: 2018-08-21
