@@ -26,7 +26,7 @@ To quote the original [presskit()][dopresskit]:
 
 > **presskit()** (pronounced _'do presskit'_) is the solution. Free for everyone, open and easy-to-use for both developers & press. Developers only have to spend an hour or so creating well-laid out press pages with everything the press needs to write to their hearts desire. Everybody wins.
 
-It uses an **almost-identical format and output** as its precursor. The goal is to be compatible, as much as possible.
+It uses an _almost-identical format and output_ as its precursor. The goal is to be compatible, as much as possible.
 
 And even if [presskit()][dopresskit] was conceived with videogames in mind, we think that you can use it for any kind of product.
 

@@ -13,6 +13,6 @@ links:
     url: /presskit/bulletml_for_unity.html
 ---
 
-_BulletML for Unity_ is a **simple** and **powerful** wrapper around BulletML which allows you to **design bullet patterns** in your Unity game.
+**BulletML for Unity** is a _simple_ and _powerful_ wrapper around BulletML which allows you to _design bullet patterns_ in your Unity game.
 
 It’s especially useful in “Shoot’Em Up” (shmup) games to create memorable boss fights or enemies.

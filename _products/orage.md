@@ -17,7 +17,7 @@ links:
 ---
 
 
-Orage is a pixel-art science-fantasy tactical, set in the universe of [Steredenn](/products/steredenn/).
+**Orage** is a pixel-art science-fantasy tactical, set in the universe of [Steredenn](/products/steredenn/).
 
 Art by [Simon Coroller](http://pluspixels.tumblr.com/), the pixel-artist of Steredenn.
 

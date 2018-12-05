@@ -5,7 +5,7 @@ type: [game, service]
 assets: /static/images/products/shmupfest/
 date: 2014-04-23
 
-excerpt: "The _Shmupfest_ is an _infinite retro 2D shmup_ we made for the Stunfest 2014 festival."
+excerpt: "The **Shmupfest** is an _infinite retro 2D shmup_ we made for the Stunfest 2014 festival."
 
 links:
   - name: Play for free
@@ -16,11 +16,11 @@ links:
     url: /presskit/shmupfest.html
 ---
 
-The _Shmupfest_ is a game we made for the [Stunfest 2014][stunfest], a french video game festival based in Rennes.
+The **Shmupfest** is a game we made for the [Stunfest 2014][stunfest], a french video game festival based in Rennes.
 
 It's an **infinite retro 2D Shoot'Em Up**, created with Unity. Bullets patterns are designed and implemented with our own library, _[BulletML for Unity][bulletml]_.
 
-All the [sprites][shmupfest] have been drawn by the [Ulule's backers][ulule], making the game **truly unique** and **personalized** for the festival.
+All the [sprites][shmupfest] have been drawn by the [Ulule's backers][ulule], making the game _truly unique_ and _personalized_ for the festival.
 
 
 [play]:      https://pixelnest.io/shmupfest/play/

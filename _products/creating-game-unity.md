@@ -11,4 +11,4 @@ links:
     url: /2013/11/unity-2D-tutorial/
 ---
 
-This tutorial covers the creation of a very small 2D game, **from start to finish**, using the Unity 4.3 native 2D tools.
+This tutorial covers the creation of a very small 2D game, _from start to finish_, using the Unity 4.3 native 2D tools.

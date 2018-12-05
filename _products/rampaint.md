@@ -12,7 +12,7 @@ links:
     url: https://www.youtube.com/watch?v=Wee-F32Zcp0
 ---
 
-_RAMPAINT_ is a multiplayer-platformer-fighter game for your couch, friends and TV.
+**RAMPAINT** is a multiplayer-platformer-fighter game for your couch, friends and TV.
 
 **This project has been discontinued on 13 aug. 2014. See [this Journal post](/2014/08/pixelnest-overview/) to know why.**
 

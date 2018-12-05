@@ -1,13 +1,11 @@
 ---
-title: Steredenn
-subtitle: An Endless Chaotic Space Shooter
+title: "Steredenn"
+subtitle: "An Endless Chaotic Space Shooter"
 type: [game]
 assets: /static/images/products/steredenn/
 date: 2015-10-01
 
-excerpt: "_Steredenn_ is a frenetic and chaotic space shooter, carved in big beautiful pixels."
-
-state: hero
+excerpt: "**STEREDENN** is a frenetic and chaotic space shooter, carved in big beautiful pixels."
 
 links:
   - name: Official Website
@@ -18,8 +16,10 @@ links:
     url: /presskit/steredenn/
 ---
 
-_Steredenn_ is a **roguelike-shmup** video game for **PC/Mac/Linux**, **Xbox One**, **PlayStation 4** and **iPhone/iPad**.
+**STEREDENN** is a _roguelike-shmup_ video game for _Steam_, _Xbox One_, _PlayStation 4_ and _iOS_.
 
-_Steredenn_ is a **frenetic and chaotic space shooter**, carved in **big beautiful pixels**, with **insane boss battles**. Embark in your ship and engage the fight against dreadful space pirates in a never-ending combat for your survival.
+**STEREDENN** is a _frenetic and chaotic space shooter_, carved in _big beautiful pixels_, with _insane boss battles_. Embark in your ship and engage the fight against dreadful space pirates in a never-ending combat for your survival.
+
+[**STEREDENN** was updated in 2018 with its massive expansion **STEREDENN: BINARY STARS**](/products/steredenn-binary-stars/).
 
 _The game is fast, addictive, hard and action-packed._
