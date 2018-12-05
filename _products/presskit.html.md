@@ -8,7 +8,7 @@ date: 2017-03-17
 excerpt: "**presskit.html** is re-implementation of presskit() as a static site generator, with a permissive MIT license."
 
 links:
-  - name: Project Page On GitHub
+  - name: GitHub
     url: https://github.com/pixelnest/presskit.html
   - name: Pixelnest Studio Presskit
     url: https://pixelnest.io/presskit/
