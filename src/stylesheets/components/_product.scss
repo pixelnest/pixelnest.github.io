@@ -81,14 +81,14 @@
   text-align: right;
 
   a {
-    @extend %link;
-
     padding-right: 28px;
 
     background-image: url("/static/images/icons/product-website.png");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 20px;
+
+    @extend %link;
   }
 
   a[href*="youtu"] {
@@ -147,7 +147,15 @@
 }
 
 .product-item__type {
-  color: $pxn-medium;
+  position: relative;
+  top: -3px;
+
+  margin-left: 6px;
+  padding: 2px 4px 1px;
+
+  color: white;
+  background: $burger;
+  border-radius: 2px;
 
   font-size: 1.4rem;
 }
@@ -160,7 +168,6 @@
 
 .product-item__link {
   @include font-title;
-  @extend %link;
 
   display: block;
 
@@ -174,4 +181,6 @@
   font-size: 2.4rem;
 
   text-align: right;
+
+  @extend %link;
 }
