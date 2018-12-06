@@ -11,7 +11,9 @@
   <section class="product-item__body">
     <h1 class="product-item__title">
       {{ item.title }}
-      <span class="product-item__type">{{ item.type | join: ", " }}</span>
+      {% for t in item.type %}
+      <span class="product-item__type">{{ t }}</span>
+      {% endfor %}
     </h1>
 
     <div class="product-item__content">
