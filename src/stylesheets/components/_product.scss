@@ -188,3 +188,44 @@
 
   @extend %link;
 }
+
+@media (max-width: 450px) {
+  .product-item {
+    margin-bottom: 64px;
+
+    text-align: center;
+  }
+
+  .product-item__image-wrapper {
+    float: none;
+
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+
+  .product-item__image {
+    display: inline-block;
+  }
+
+  .product-item__link {
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 6px;
+
+    color: white;
+    background: $pizza;
+    border-radius: 2px;
+
+    font-size: 2rem;
+
+    transition: background 200ms ease-out;
+    text-align: center;
+
+    &:hover {
+      color: white;
+      background: $pizza-dark;
+
+      text-decoration: none;
+    }
+  }
+}
