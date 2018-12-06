@@ -1,7 +1,7 @@
 ---
 title: presskit.html
 subtitle: Re-implementation of presskit()
-type: [web, tool, open source]
+type: [web, tool, open&nbsp;source]
 assets: /static/images/products/presskit.html/
 date: 2017-03-17
 
