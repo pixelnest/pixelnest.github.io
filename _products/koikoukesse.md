@@ -1,6 +1,6 @@
 ---
 title: Koikoukesse
-type: [game]
+type: [app, game]
 assets: /static/images/products/koikoukesse/
 date: 2013-09-26
 
