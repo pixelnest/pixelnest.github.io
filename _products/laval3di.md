@@ -1,7 +1,7 @@
 ---
 title: Laval 3Di
 subtitle: "Programming Teacher"
-type: [teaching]
+type: [teaching, game]
 assets: /static/images/products/laval3di/
 date: 2016-09-15
 

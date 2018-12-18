@@ -1,6 +1,6 @@
 ---
 title: BulletML for Unity
-type: [library]
+type: [library, tool]
 assets: /static/images/products/bulletml-for-unity/
 date: 2014-04-08
 

@@ -1,7 +1,7 @@
 ---
 title: Shmupfest
 subtitle: Stunfest 2014 Game
-type: [game, service]
+type: [service, game]
 assets: /static/images/products/shmupfest/
 date: 2014-04-23
 

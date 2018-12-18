@@ -1,7 +1,7 @@
 ---
 title: Solvay
 subtitle: "Design Thinking Workshop"
-type: [service]
+type: [service, design]
 assets: /static/images/products/solvay/
 date: 2018-04-16
 

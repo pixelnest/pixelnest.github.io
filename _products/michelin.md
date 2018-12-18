@@ -1,7 +1,7 @@
 ---
 title: Michelin
 subtitle: "Web Development"
-type: [service]
+type: [service, web]
 assets: /static/images/products/michelin/
 date: 2016-05-31
 

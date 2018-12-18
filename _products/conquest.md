@@ -1,6 +1,6 @@
 ---
 title: Conquest
-type: [service]
+type: [service, game, design]
 assets: /static/images/products/conquest/
 date: 2016-03-01
 

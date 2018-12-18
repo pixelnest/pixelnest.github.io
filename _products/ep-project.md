@@ -1,6 +1,6 @@
 ---
 title: EP Project
-type: [service]
+type: [service, design]
 assets: /static/images/products/ep-project/
 date: 2016-04-11
 

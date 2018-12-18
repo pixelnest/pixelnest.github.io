@@ -1,7 +1,7 @@
 ---
 title: WebForce3
 subtitle: "Front-end Web Development Teacher"
-type: [teaching]
+type: [teaching, web]
 assets: /static/images/products/wf3/
 date: 2016-11-18
 
