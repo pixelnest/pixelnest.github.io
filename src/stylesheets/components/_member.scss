@@ -25,6 +25,8 @@
 .member__title {
   @include font-title;
 
+  margin-bottom: 8px;
+
   font-size: 3.2rem;
 }
 
@@ -36,8 +38,11 @@
 // Images.
 // -------------------------------------------------------
 
-.member__site a,
-.member__twitter a {
+.member__item {
+  margin-bottom: 2px;
+}
+
+.member__item a {
   padding-left: 20px + 8px;
 
   background-repeat: no-repeat;
@@ -45,10 +50,17 @@
   background-size: 20px;
 }
 
-.member__site a {
+.member__item--site a {
   background-image: url("/static/images/icons/member-site.png");
 }
 
-.member__twitter a {
+.member__item--twitter a {
   background-image: url("/static/images/icons/member-twitter.png");
+}
+
+.member__item--linkedin a {
+  padding-left: 24px;
+
+  background-image: url("/static/images/icons/member-linkedin.png");
+  background-position: left top;
 }

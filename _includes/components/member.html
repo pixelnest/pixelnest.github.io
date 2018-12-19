@@ -6,6 +6,7 @@
   - member_avatar
   - member_site
   - member_twitter
+  - member_linkedin
 {% endcomment %}
 
 <div class="member">
@@ -17,14 +18,19 @@
   <h1 class="member__title" id="{{ member_id }}">{{ member_name }}</h1>
 
   <ul class="member__social">
-    <li class="member__site">
+    <li class="member__item member__item--site">
       <a href="{{ member_site }}/">
         {{ member_site | remove: 'http://' | remove: 'https://' }}
       </a>
     </li>
-    <li class="member__twitter">
+    <li class="member__item member__item--twitter">
       <a href="https://twitter.com/{{ member_twitter }}/">
         @{{ member_twitter }}
+      </a>
+    </li>
+    <li class="member__item member__item--linkedin">
+      <a href="https://linkedin.com/in/{{ member_linkedin }}/">
+        linkedin.com/{{ member_linkedin }}
       </a>
     </li>
   </ul>
