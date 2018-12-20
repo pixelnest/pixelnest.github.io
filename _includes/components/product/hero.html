@@ -21,6 +21,12 @@
       {% endif %}
     </header>
 
+    {% if hero.type contains 'service' %}
+    <div class="product-hero__service">
+      Client Work
+    </div>
+    {% endif %}
+
     <div class="product-hero__content">
       {{ hero.content | markdownify }}
     </div>
@@ -38,5 +44,16 @@
         </ul>
       {% endif %}
     </aside>
+
+    <div class="product-hero__types">
+      {% assign sorted = hero.type | sort %}
+      {% for type in sorted %}
+        {% if type == 'service' %}
+        <span class="product-hero__type product-hero__type--service">Client Work</span>
+        {% else %}
+        <span class="product-hero__type">{{ type }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
   </section>
 </article>

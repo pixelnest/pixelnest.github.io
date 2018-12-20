@@ -11,8 +11,13 @@
   <section class="product-item__body">
     <h1 class="product-item__title">
       {{ item.title }}
-      {% for t in item.type %}
-      <span class="product-item__type">{{ t }}</span>
+      {% assign sorted = item.type | sort %}
+      {% for t in sorted %}
+        {% if t == 'service' %}
+        <span class="product-item__type product-item__type--service">Client Work</span>
+        {% else %}
+        <span class="product-item__type">{{ t }}</span>
+        {% endif %}
       {% endfor %}
     </h1>
 
