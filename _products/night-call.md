@@ -4,6 +4,7 @@ subtitle: "A game by Monkey Moon"
 type: [service, game, dev]
 assets: /static/images/products/night-call/
 date: 2018-09-17
+service: true
 
 excerpt: "Night Call is a new kind of narrative and noire game where the investigation takes place in a real city."
 

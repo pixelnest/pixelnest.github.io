@@ -3,6 +3,7 @@ title: EP Project
 type: [service, design]
 assets: /static/images/products/ep-project/
 date: 2016-04-11
+service: true
 
 links:
   - name: Digital Skin

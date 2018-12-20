@@ -4,6 +4,7 @@ subtitle: "Branding"
 type: [service, design]
 assets: /static/images/products/tribefoundry/
 date: 2017-01-31
+service: true
 
 links:
   - name: LinkedIn

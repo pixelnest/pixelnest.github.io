@@ -4,6 +4,7 @@ subtitle: "Design Thinking Workshop"
 type: [service, design]
 assets: /static/images/products/solvay/
 date: 2018-04-16
+service: true
 
 excerpt: "Design thinking workshop and interactive mockups creation."
 

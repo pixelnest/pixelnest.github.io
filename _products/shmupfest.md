@@ -4,6 +4,7 @@ subtitle: Stunfest 2014 Game
 type: [service, game, dev, design]
 assets: /static/images/products/shmupfest/
 date: 2014-04-23
+service: true
 
 excerpt: "The **Shmupfest** is an _infinite retro 2D shmup_ we made for the Stunfest 2014 festival."
 

@@ -4,6 +4,7 @@ subtitle: "Web Development"
 type: [service, web, dev]
 assets: /static/images/products/loreal/
 date: 2018-03-15
+service: true
 
 excerpt: "Front-end and back-end web development."
 

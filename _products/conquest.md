@@ -3,6 +3,7 @@ title: Conquest
 type: [service, game, dev, design]
 assets: /static/images/products/conquest/
 date: 2016-03-01
+service: true
 
 links:
   - name: Digital Skin
