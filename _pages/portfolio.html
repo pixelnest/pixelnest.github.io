@@ -15,17 +15,31 @@ redirect_from: /work/
 {% endfor %}
 
 <section class="block">
-  <h1 class="block__title">Products and services</h1>
+  <h1 class="block__title">Products</h1>
 
   {% for product in products %}
     {% if product.state == nil or product.state == "hero" %}
-      {% include components/product/item.html data=product %}
+      {% unless product.service %}
+        {% include components/product/item.html data=product %}
+      {% endunless %}
     {% endif %}
   {% endfor %}
 </section>
 
 <section class="block">
-  <h1 class="block__title">Abandoned</h1>
+  <h1 class="block__title">Client Work</h1>
+
+  {% for product in products %}
+    {% if product.state == nil or product.state == "hero" %}
+      {% if product.service %}
+        {% include components/product/item.html data=product %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</section>
+
+<section class="block">
+  <h1 class="block__title">Abandoned Products</h1>
 
   {% for product in products %}
     {% if product.state == "dead" %}
