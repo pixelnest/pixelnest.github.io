@@ -5,6 +5,8 @@ assets: /static/images/products/conquest/
 date: 2016-03-01
 service: true
 
+excerpt: "Development and design of a serious game."
+
 links:
   - name: Digital Skin
     url: http://digital-skin.net/conquest/

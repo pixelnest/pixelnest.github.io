@@ -5,6 +5,8 @@ type: [web, open&nbsp;source]
 assets: /static/images/products/cloudy-build/
 date: 2018-08-21
 
+excerpt: "Fast UI wrapper for Unity Cloud Build."
+
 links:
   - name: Use
     url: https://cloudy-build.pxn.io/

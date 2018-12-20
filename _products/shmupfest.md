@@ -6,7 +6,7 @@ assets: /static/images/products/shmupfest/
 date: 2014-04-23
 service: true
 
-excerpt: "The **Shmupfest** is an _infinite retro 2D shmup_ we made for the Stunfest 2014 festival."
+excerpt: "Development and design of the **Shmupfest**, an _infinite retro 2D shmup_ made for the Stunfest 2014 festival."
 
 links:
   - name: Play for free

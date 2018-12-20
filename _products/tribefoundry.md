@@ -11,6 +11,6 @@ links:
     url: https://www.linkedin.com/company/tribe-foundry/
 ---
 
-Branding and logos for TribeFoundry and its KiteSurf website.
+Branding and logos for **TribeFoundry** and the **KiteSurf** website.
 
 **Tasks**: UI design.

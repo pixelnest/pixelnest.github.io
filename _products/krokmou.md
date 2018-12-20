@@ -8,7 +8,7 @@ date: 2014-01-31
 excerpt: "Google Sheet-powered chatbot for Slack."
 ---
 
-Krokmou is our Google Sheet-powered chatbot for Slack (and previously Flowdock).
+**Krokmou** is our Google Sheet-powered chatbot for Slack (and previously Flowdock).
 
 Has no purpose, but is highly entertaining.
 

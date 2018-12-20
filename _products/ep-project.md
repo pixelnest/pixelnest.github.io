@@ -5,6 +5,8 @@ assets: /static/images/products/ep-project/
 date: 2016-04-11
 service: true
 
+excerpt: "UI and UX design of an OS concept for a simulator."
+
 links:
   - name: Digital Skin
     url: http://digital-skin.net/
