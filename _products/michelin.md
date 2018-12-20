@@ -1,13 +1,15 @@
 ---
 title: Michelin
 subtitle: "Web Development"
-type: [service, web]
+type: [service, web, dev]
 assets: /static/images/products/michelin/
 date: 2016-05-31
+
+excerpt: "Front-end and back-end web development."
 
 links:
   - name: michelin.com
     url: https://www.michelin.com/
 ---
 
-Front-end and back-end web development.
+**Tasks**: front-end and back-end web development.

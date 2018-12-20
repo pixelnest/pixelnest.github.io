@@ -1,7 +1,7 @@
 ---
 title: Krokmou
 subtitle: "Self-conscious useless chatbot"
-type: [web, tool, chatbot]
+type: [web, chatbot]
 assets: /static/images/products/krokmou/
 date: 2014-01-31
 

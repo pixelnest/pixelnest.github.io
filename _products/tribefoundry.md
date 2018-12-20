@@ -11,3 +11,5 @@ links:
 ---
 
 Branding and logos for TribeFoundry and its KiteSurf website.
+
+**Tasks**: UI design.

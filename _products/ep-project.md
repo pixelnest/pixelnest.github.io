@@ -14,3 +14,5 @@ links:
 This is used by a training software which simulates a desktop OS to give affordances to the user while they are doing their training. Notifications can pop, showing hints, while the user is able to open documents and mails, reacting to what's happening on the screen and the instructions they are given.
 
 We worked with them on the _user interface design_ and _user experience_.
+
+**Tasks**: UI and UX design.
