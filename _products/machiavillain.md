@@ -17,4 +17,4 @@ links:
 
 **MachiaVillain** is an horror mansion management game, where you're the villain!
 
-**Tasks**: Unity3D and C# additional development.
+**Tasks**: Unity3D and C# post-launch debugging and support.
