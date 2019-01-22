@@ -10,7 +10,9 @@
 
   <section class="product-item__body">
     <h1 class="product-item__title">
-      {{ item.title }}
+      <a href="{{ product.url }}">
+        {{ item.title }}
+      </a>
       {% assign sorted = item.type | sort %}
       {% for t in sorted %}
         {% if t == 'service' %}

@@ -187,6 +187,16 @@
   margin-bottom: 12px;
 
   font-size: 2.4rem;
+
+  a {
+    color: inherit;
+
+    transition: all 250ms ease-out;
+  }
+
+  a:hover {
+    color: $pizza;
+  }
 }
 
 .product-item__type {
