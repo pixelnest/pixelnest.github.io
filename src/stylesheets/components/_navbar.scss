@@ -8,8 +8,8 @@
   @include font-title(false);
 
   box-sizing: border-box;
-  height: 40px;
-  padding: 6px 0;
+  min-height: 40px;
+  padding: 6px 1rem 5px;
 
   background: $dragon;
 
@@ -28,9 +28,9 @@
 }
 
 .navbar__item a {
-  @extend %link;
-
   color: white;
+
+  @extend %link;
 }
 
 .navbar__item a.is-active {
@@ -54,7 +54,7 @@
 // Responsive.
 // -------------------------------------------------------
 
-@media only screen and (max-width: $vp-small) {
+@media (max-width: $vp-small) {
   .navbar {
     padding: 8px 0;
 
