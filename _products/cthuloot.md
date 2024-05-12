@@ -3,7 +3,7 @@ title: "CTHULOOT"
 subtitle: "Arcade coop game"
 type: [game]
 assets: /static/images/products/cthuloot/
-date: TBA
+date: 2023-05-13
 
 excerpt: "**CTHULOOT** is a coop arcade game for up to 4 players." 
 
@@ -17,7 +17,7 @@ links:
 ---
 
 
-**CTHULOOT** is a coop arcade game for up to 4 players
+**CTHULOOT** is a coop arcade game for up to 4 players planned for PC and consoles.
 
 Play as looters in search of mythical relics around the world, but beware of the traps and other dangers that await in the shadows… and in other dimensions?! 
 
@@ -27,4 +27,4 @@ Play as looters in search of mythical relics around the world, but beware of the
 - FAMILY FRIENDLY: no violence, no combat, light horror theme
 - PULP CTHULHU: a light and fun take on the Lovecraft's lore
 
-**CTHULOOT** is a coproduction Pixelnest Studio  x   Headbang Club 
+**CTHULOOT** is a coproduction Pixelnest Studio x Headbang Club 
