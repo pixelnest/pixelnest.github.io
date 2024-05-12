@@ -3,7 +3,7 @@
 
 .home-card--cthuloot .home-card__image {
     background-image: url("/static/images/products/cthuloot/card.jpg");
-  }
-  .home-card--flipon .home-card__image {
-    background-image: url("/static/images/products/flipon/card.jpg");
-  }
+}
+.home-card--flipon .home-card__image {
+  background-image: url("/static/images/products/flipon/card.jpg");
+}
