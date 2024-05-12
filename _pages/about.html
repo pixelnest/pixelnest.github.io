@@ -21,6 +21,24 @@ permalink: /about/
     </div>
 
     <div class="col">
+      {% assign member_name     = "Eddy Margueron" %}
+      {% assign member_id       = "eddy" %}
+      {% assign member_avatar   = "https://cdna.artstation.com/p/users/avatars/000/110/972/large/70f0885b2c9cf33a4e850c1414900999.jpg?1677262505" %}
+      {% assign member_site     = "https://skia.artstation.com/" %}
+      {% assign member_twitter  = "skia" %}
+      {% assign member_linkedin = "eddy-margueron/" %}
+
+      {% include components/member.html %}
+    </div>
+  </div>
+</section>
+
+
+<section class="studio basic-grid">
+  <p class="studio__description">Previous members</p>
+
+  <div class="studio__members row">
+    <div class="col">
       {% assign member_name     = "Matthieu Oger" %}
       {% assign member_id       = "matthieu" %}
       {% assign member_avatar   = "/static/images/team/moger.jpg" %}
