@@ -97,6 +97,12 @@
 // Implementations.
 // -------------------------------------------------------
 
+.home-card--cosmo-cargo {
+  .home-card__image {
+    background-image: url("/static/images/products/cosmo-cargo/card.jpg");
+  }
+}
+
 .home-card--cthuloot {
   .home-card__image {
     background-image: url("/static/images/products/cthuloot/card.jpg");

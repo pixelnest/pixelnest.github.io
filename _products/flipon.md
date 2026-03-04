@@ -11,7 +11,7 @@ state: hero
 
 links:
   - name: Official Website
-    url: http://cthuloot.games/
+    url: http://flipon.net
   - name: Steam
     url: https://store.steampowered.com/app/1285020/Flipon
   - name: Nintendo Switch
