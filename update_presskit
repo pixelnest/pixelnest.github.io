@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-# If it doesn't work the first time, it means that you have a freshly created repo.
-# The presskit uses the build branch for its published version. We need to be on that branch in `presskit/`.
-# Do that:
-#
-#   cd presskit/ # This is not a folder, but a reference to a remote commit.
-#   git submodule update --remote
-#   git checkout build
+# The presskit uses the build branch for its published version (see .gitmodules).
+# Make sure the submodule is checked out before touching it.
+git submodule update --init presskit
 
 # Update.
 cd presskit/
 git checkout build
-git pull --rebase=preserve
+git pull --rebase=merges
 
 # Commit.
 cd ..
