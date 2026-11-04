@@ -1196,16 +1196,6 @@ sup { top: -0.5em; }
   }
 }
 
-.offer__links {
-  margin-top: 10px;
-  font-size: 1.5rem;
-  text-align: center;
-
-  & a { color: var(--pxn-medium); }
-  & a:hover { color: var(--pizza); }
-  & a + a { margin-left: 12px; }
-}
-
 .projects-year + .projects-year { margin-top: 12px; }
 
 .projects-year__title {
