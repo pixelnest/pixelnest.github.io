@@ -1,6 +1,6 @@
 # ![Pixelnest Studio](static/images/logo/logo_github.png)
 
-We craft games and apps.
+Games crafter since 2014.
 
 [pixelnest.io](https://pixelnest.io)
 
@@ -14,26 +14,27 @@ You can also use the online admin. Go to the [admin](https://pixelnest.io/admin/
 
 Create the page. Commit, push. That's all.
 
-## Update JS and CSS
+## Local server
 
-Add some changes. When it's done, run:
+Requires Ruby and Bundler.
 
 ```
-yarn build
+bundle install
+npm run serve
 ```
 
-You will likely see some diff for `bundle.css`, `bundle.css.map`, `bundle.js`, `bundle.js.map`.
+The site runs on [localhost:4000](http://localhost:4000) and reloads automatically on changes.
 
-Commit those and push.
+## Update CSS
 
-NB: this is a manual process because of the current build pipeline with Webpack. When you change the styles and scripts, you **need** to publish the modifications yourself. Indeed, the assets are not handled by Jekyll, so a Github Pages rebuild will not affect them.
+All styles live in a single plain CSS file: `static/css/main.css`. Edit it directly, there is no build step. Colors and fonts are CSS custom properties defined in `:root` at the top of the file.
 
 ## Update the presskit
 
 Run:
 
 ```
-yarn run presskit
+npm run presskit
 ```
 
 It will update the presskit to its latest version. Warning: this script also commits the changes automatically (but only those concerning the presskit, obviously).

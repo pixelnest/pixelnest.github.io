@@ -1,41 +1,14 @@
 {
   "name": "pixelnest.github.io",
-  "version": "2.1.0",
-  "description": "Pixelnest Studio — we craft games and apps.",
-  "license": "UNLICENSED",
+  "version": "3.0.0",
+  "description": "Pixelnest Studio — Games crafter since 2014.",
   "private": true,
   "repository": "pixelnest/pixelnest.github.io",
-  "author": {
-    "user": "Pixelnest Studio",
-    "url": "pixelnest.io"
-  },
   "homepage": "https://pixelnest.io/",
   "scripts": {
     "serve": "bundle exec jekyll serve --livereload",
-    "start": "bundle exec jekyll build --watch & webpack --watch",
-    "build": "yarn run build:webpack && yarn run build:jekyll",
-    "build:webpack": "webpack -p --env.production",
-    "build:jekyll": "bundle exec jekyll clean && JEKYLL_ENV=production bundle exec jekyll build",
-    "presskit": "./update_presskit",
-    "test": "standard | snazzy"
-  },
-  "dependencies": {
-    "normalize.css": "5.0.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "browser-sync": "^2.21.0",
-    "browser-sync-webpack-plugin": "^1.2.0",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.7.2",
-    "postcss-loader": "^2.0.9",
-    "sass-loader": "^6.0.6",
-    "snazzy": "^7.0.0",
-    "standard": "^10.0.3",
-    "webpack": "^3.10.0"
+    "build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "clean": "bundle exec jekyll clean",
+    "presskit": "./update_presskit"
   }
 }

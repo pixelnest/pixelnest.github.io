@@ -21,16 +21,9 @@ exclude:
   - 'Gemfile'
   - 'Gemfile.lock'
   - 'package.json'
-  - 'webpack.config.js'
-  - 'yarn.lock'
+  - 'package-lock.json'
   - 'node_modules'
-  - 'src'
-
-keep_files:
-  - static/bundle.css
-  - static/bundle.css.map
-  - static/bundle.js
-  - static/bundle.js.map
+  - 'update_presskit'
 
 # -------------------------------------------------------
 # Collections.
