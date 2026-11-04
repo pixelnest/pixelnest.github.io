@@ -2,6 +2,7 @@
 title: "Steredenn: Binary&nbsp;Stars"
 subtitle: "The Ultimate Steredenn Edition"
 type: [game]
+section: games
 assets: /static/images/products/steredenn-binary-stars/
 date: 2018-03-08
 

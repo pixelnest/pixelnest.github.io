@@ -2,6 +2,7 @@
 title: "CTHULOOT"
 subtitle: "Arcade coop game"
 type: [game]
+section: games
 assets: /static/images/products/cthuloot/
 date: 2023-05-13
 

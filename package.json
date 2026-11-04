@@ -11,6 +11,7 @@
   },
   "homepage": "https://pixelnest.io/",
   "scripts": {
+    "serve": "bundle exec jekyll serve --livereload",
     "start": "bundle exec jekyll build --watch & webpack --watch",
     "build": "yarn run build:webpack && yarn run build:jekyll",
     "build:webpack": "webpack -p --env.production",

@@ -10,7 +10,7 @@
 
   <section class="product-item__body">
     <h1 class="product-item__title">
-      <a href="{{ product.url }}">
+      <a href="{{ item.url }}">
         {{ item.title }}
       </a>
       {% assign sorted = item.type | sort %}
@@ -27,7 +27,7 @@
       {{ item.excerpt | markdownify }}
     </div>
 
-    <a class="product-item__link" href="{{ product.url }}">
+    <a class="product-item__link" href="{{ item.url }}">
       Read more
     </a>
   </section>

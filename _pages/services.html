@@ -1,0 +1,59 @@
+---
+title: Services
+subtitle: Freelance &amp; contract work
+
+permalink: /services/
+---
+
+{% assign products = site.products | sort: 'date' | reverse %}
+
+<section class="block">
+  <h1 class="block__title">Services</h1>
+
+{% capture intro %}
+We are open to freelancing and contract work.
+
+## Damien Mayance
+
+Senior gameplay/tool developer + consoles ports.
+
+* [Website](https://dmayance.com/)
+* [LinkedIn](https://linkedin.com/in/damienmayance)
+* [Twitter](http://twitter.com/Valryon)
+* [GitHub](http://github.com/Valryon)
+
+## Eddy Margueron
+
+3D artist, tech artist.
+
+* [Artstation](https://skia.artstation.com/)
+* [LinkedIn](https://linkedin.com/in/eddy-margueron/)
+* [Twitter](https://twitter.com/skia_ura/)
+{% endcapture %}
+
+  <div class="block__content">
+    {{ intro | markdownify }}
+  </div>
+</section>
+
+<section class="block">
+  <h1 class="block__title">Client Work</h1>
+
+  {% for product in products %}
+    {% if product.section == nil and product.state != "dead" and product.service %}
+      {% include components/product/item.html data=product %}
+    {% endif %}
+  {% endfor %}
+</section>
+
+<section class="block">
+  <h1 class="block__title">Other Projects</h1>
+
+  {% for product in products %}
+    {% if product.section == nil and product.state != "dead" %}
+      {% unless product.service %}
+        {% include components/product/item.html data=product %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+</section>

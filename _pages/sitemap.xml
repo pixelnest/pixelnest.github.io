@@ -21,9 +21,9 @@ permalink: /sitemap.xml
     <priority>0.8</priority>
   </url>
 
-  <!-- portfolio -->
+  <!-- games -->
   <url>
-    <loc>https://pixelnest.io/portfolio/</loc>
+    <loc>https://pixelnest.io/games/</loc>
     <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

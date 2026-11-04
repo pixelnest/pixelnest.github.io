@@ -2,10 +2,13 @@
 title: "Steredenn"
 subtitle: "An Endless Chaotic Space Shooter"
 type: [game]
+section: games
 assets: /static/images/products/steredenn/
 date: 2015-10-01
 
 excerpt: "**STEREDENN** is a frenetic and chaotic space shooter, carved in big beautiful pixels."
+
+state: hero
 
 links:
   - name: Official Website

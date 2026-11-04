@@ -2,6 +2,7 @@
 title: "Cosmo Cargo"
 subtitle: "Inventory autobattler roguelite PvE"
 type: [game]
+section: games
 assets: /static/images/products/cosmo-cargo/
 date: 2026-03-04
 

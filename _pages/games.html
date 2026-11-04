@@ -1,0 +1,27 @@
+---
+title: Games
+subtitle: Our games
+
+permalink: /games/
+redirect_from:
+  - /portfolio/
+  - /work/
+---
+
+{% assign products = site.products | sort: 'date' | reverse %}
+
+{% for product in products %}
+  {% if product.section == "games" and product.state == "hero" %}
+    {% include components/product/hero.html data=product %}
+  {% endif %}
+{% endfor %}
+
+<section class="block">
+  <h1 class="block__title">Other Products</h1>
+
+  {% for product in products %}
+    {% if product.section == "annex" and product.state != "dead" %}
+      {% include components/product/item.html data=product %}
+    {% endif %}
+  {% endfor %}
+</section>
