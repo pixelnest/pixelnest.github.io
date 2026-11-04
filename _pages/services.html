@@ -3,55 +3,101 @@ title: Services
 subtitle: Freelance &amp; contract work
 
 permalink: /services/
+redirect_from:
+  - /products/daring-discoverers/
+  - /products/flat-eye/
+  - /products/laval3di/
+  - /products/loreal/
+  - /products/machiavillain/
+  - /products/michelin/
+  - /products/night-call/
+  - /products/shmupfest/
 ---
-
-{% assign products = site.services | sort: 'date' | reverse %}
 
 <section class="block">
   <h1 class="block__title">Services</h1>
 
-{% capture intro %}
-We are open to freelancing and contract work.
+  <p class="offers__intro">
+    We are open to freelancing and contract work. Two people, two skill sets:
+    pick one of us, or both.
+  </p>
 
-## Damien Mayance
+  <div class="offers">
+    <article class="offer">
+      <header class="offer__header">
+        <h2 class="offer__name">Damien Mayance</h2>
+        <p class="offer__role">Programming</p>
+      </header>
 
-Senior gameplay/tool developer + consoles ports.
+      <ul class="offer__skills">
+        <li>Unity</li>
+        <li>Gameplay</li>
+        <li>Tooling</li>
+        <li>UI</li>
+        <li>XR</li>
+        <li>Web</li>
+        <li>Software</li>
+      </ul>
 
-* [Website](https://dmayance.com/)
-* [LinkedIn](https://linkedin.com/in/damienmayance)
-* [Twitter](http://twitter.com/Valryon)
-* [GitHub](http://github.com/Valryon)
+      <a class="offer__portfolio" href="https://dmayance.com/" target="_blank" rel="noopener">
+        Portfolio <span>dmayance.com &rarr;</span>
+      </a>
 
-## Eddy Margueron
+      <p class="offer__links">
+        <a href="https://linkedin.com/in/damienmayance" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Valryon" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </article>
 
-3D artist, tech artist.
+    <article class="offer">
+      <header class="offer__header">
+        <h2 class="offer__name">Eddy Margueron</h2>
+        <p class="offer__role">3D &amp; Tech Art</p>
+      </header>
 
-* [Artstation](https://skia.artstation.com/)
-* [LinkedIn](https://linkedin.com/in/eddy-margueron/)
-* [Twitter](https://twitter.com/skia_ura/)
-{% endcapture %}
+      <ul class="offer__skills">
+        <li>3D</li>
+        <li>Tech art</li>
+        <li>VFX</li>
+        <li>Videos</li>
+      </ul>
 
-  <div class="block__content mixed-data">
-    {{ intro | markdownify }}
+      <a class="offer__portfolio" href="https://www.artstation.com/skia/" target="_blank" rel="noopener">
+        Portfolio <span>artstation.com/skia &rarr;</span>
+      </a>
+
+      <p class="offer__links">
+        <a href="https://linkedin.com/in/eddy-margueron/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </article>
   </div>
 </section>
 
-<section class="block">
-  <h1 class="block__title">Client Work</h1>
+<section class="block contact-cta">
+  <div class="contact-cta__text">
+    <h2 class="contact-cta__title">Have a project in mind?</h2>
+    <p class="contact-cta__subtitle">Tell us about it. We usually answer within a couple of days.</p>
+  </div>
 
-  {% for product in products %}
-    {% if product.service %}
-      {% include components/product/item.html data=product %}
-    {% endif %}
-  {% endfor %}
+  <a class="contact-cta__button" href="mailto:contact@pixelnest.io?subject=Project%20inquiry">
+    Contact us
+    <span>contact@pixelnest.io</span>
+  </a>
 </section>
 
-<section class="block">
-  <h1 class="block__title">Other Projects</h1>
+{% assign years =site.services | group_by_exp: "p", "p.date | date: '%Y'" | sort: "name" | reverse %}
 
-  {% for product in products %}
-    {% unless product.service %}
-      {% include components/product/item.html data=product %}
-    {% endunless %}
+<section class="block">
+  <h1 class="block__title block__title--plain">Projects</h1>
+
+  {% for year in years %}
+    <section class="projects-year">
+      <h2 class="projects-year__title">{{ year.name }}</h2>
+
+      {% assign projects = year.items | sort: "date" | reverse %}
+      {% for project in projects %}
+        {% include components/service/item.html data=project %}
+      {% endfor %}
+    </section>
   {% endfor %}
 </section>

@@ -1,0 +1,38 @@
+{% assign item = include.data %}
+{% assign link = item.links | first %}
+
+{% if link %}
+<a class="project project--link" href="{{ link.url }}" target="_blank" rel="noopener">
+{% else %}
+<div class="project">
+{% endif %}
+  <img class="project__image"
+       src="{{ item.assets }}cover.jpg"
+       alt="{{ item.title }}"
+       loading="lazy">
+
+  <div class="project__body">
+    <div class="project__head">
+      <h3 class="project__title">{{ item.title }}</h3>
+      {% if link %}
+        <span class="project__link">{{ link.name }} <span class="project__arrow">&rarr;</span></span>
+      {% endif %}
+    </div>
+
+    {% if item.subtitle %}
+      <p class="project__subtitle">{{ item.subtitle }}</p>
+    {% endif %}
+
+    <div class="project__text">
+      {{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+    </div>
+
+    <p class="project__types">
+      {% for t in item.type %}<span class="project__type">{{ t }}</span>{% endfor %}
+    </p>
+  </div>
+{% if link %}
+</a>
+{% else %}
+</div>
+{% endif %}

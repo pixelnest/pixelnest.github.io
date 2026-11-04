@@ -1,17 +1,12 @@
 ---
-redirect_from: /products/michelin/
-title: Michelin
-subtitle: "Web Development"
+title: "Michelin"
+subtitle: "Web development"
 type: [web, dev]
 assets: /static/images/products/michelin/
 date: 2016-05-31
-service: true
 
-excerpt: "Front-end and back-end web development."
-
+text: "Front-end and back-end web development."
 links:
-  - name: michelin.com
+  - name: "michelin.com"
     url: https://www.michelin.com/
 ---
-
-**Tasks**: front-end and back-end web development.

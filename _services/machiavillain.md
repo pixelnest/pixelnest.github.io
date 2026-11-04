@@ -1,21 +1,12 @@
 ---
-redirect_from: /products/machiavillain/
-title: MachiaVillain
+title: "MachiaVillain"
 subtitle: "A game by Wild Factor"
 type: [game, dev]
 assets: /static/images/products/machiavillain/
 date: 2018-06-24
-service: true
 
-excerpt: "Additional development for **MachiaVillain**, an horror mansion management game."
-
+text: "Post-launch Unity development and support for **MachiaVillain**, a horror mansion management game."
 links:
-  - name: MachiaVillain
+  - name: "machiavillain.com"
     url: http://www.machiavillain.com/
-  - name: Wild Factor
-    url: http://www.wildfactor.net/
 ---
-
-**MachiaVillain** is an horror mansion management game, where you're the villain!
-
-**Tasks**: Unity3D and C# post-launch debugging and support.

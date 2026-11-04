@@ -78,8 +78,8 @@ permalink: /sitemap.xml
      {% endunless %}
   {% endfor %}
 
-  <!-- games & services -->
-  {% assign products = site.games | concat: site.services %}
+  <!-- games -->
+  {% assign products = site.games %}
   {% for product in products %}
     <url>
       <loc>https://pixelnest.io{{ product.url }}</loc>
