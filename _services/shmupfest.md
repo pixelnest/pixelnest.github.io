@@ -2,7 +2,7 @@
 redirect_from: /products/shmupfest/
 title: Shmupfest
 subtitle: Stunfest 2014 Game
-type: [service, game, dev, design]
+type: [game, dev, design]
 assets: /static/images/products/shmupfest/
 date: 2014-04-23
 service: true

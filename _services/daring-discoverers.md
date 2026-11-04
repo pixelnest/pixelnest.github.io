@@ -2,7 +2,7 @@
 redirect_from: /products/daring-discoverers/
 title: Daring Discoverers
 subtitle: "A game by Triskell Interactive"
-type: [service, game, dev]
+type: [game, dev]
 assets: /static/images/products/daring-discoverers/
 date: 2017-06-15
 service: true

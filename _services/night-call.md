@@ -2,7 +2,7 @@
 redirect_from: /products/night-call/
 title: Night Call
 subtitle: "A game by Monkey Moon"
-type: [service, game, dev]
+type: [game, dev]
 assets: /static/images/products/night-call/
 date: 2018-09-17
 service: true

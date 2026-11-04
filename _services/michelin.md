@@ -2,7 +2,7 @@
 redirect_from: /products/michelin/
 title: Michelin
 subtitle: "Web Development"
-type: [service, web, dev]
+type: [web, dev]
 assets: /static/images/products/michelin/
 date: 2016-05-31
 service: true

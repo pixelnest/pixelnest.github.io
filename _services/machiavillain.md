@@ -2,7 +2,7 @@
 redirect_from: /products/machiavillain/
 title: MachiaVillain
 subtitle: "A game by Wild Factor"
-type: [service, game, dev]
+type: [game, dev]
 assets: /static/images/products/machiavillain/
 date: 2018-06-24
 service: true

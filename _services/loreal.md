@@ -2,7 +2,7 @@
 redirect_from: /products/loreal/
 title: L'Oréal
 subtitle: "Web Development"
-type: [service, web, dev]
+type: [web, dev]
 assets: /static/images/products/loreal/
 date: 2018-03-15
 service: true

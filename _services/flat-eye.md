@@ -2,7 +2,7 @@
 redirect_from: /products/flat-eye/
 title: Flat Eye
 subtitle: "A game by Monkey Moon"
-type: [service, game, dev]
+type: [game, dev]
 assets: /static/images/products/flat-eye/
 date: 2018-09-17
 service: true
