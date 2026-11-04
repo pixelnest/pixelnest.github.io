@@ -4,8 +4,8 @@ permalink: /feed.json
 ---
 {
   "version": "https://jsonfeed.org/version/1",
-  "title": "{{ site.title | strip_html | normalize_whitespace | escape }}",
-  "description": "{{ site.description | strip_html | normalize_whitespace | escape }}",
+  "title": {{ site.title | strip_html | normalize_whitespace | jsonify }},
+  "description": {{ site.description | strip_html | normalize_whitespace | jsonify }},
   "icon": "https://pixelnest.io/apple-touch-icon.png",
   "favicon": "https://pixelnest.io/static/images/favicon.ico",
   "home_page_url": "https://pixelnest.io/",
@@ -31,7 +31,7 @@ permalink: /feed.json
         "url": "https://pixelnest.io/"
         {% endif %}
       },
-      "date_published": "{{ post.date }}"
+      "date_published": "{{ post.date | date_to_xmlschema }}"
     }{% unless forloop.last == true %},{% endunless %}
     {% endfor %}
   ]

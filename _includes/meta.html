@@ -2,11 +2,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% if page.url == '/' or page.url == '/index.html' %}
-  <title>{{ site.title | escape }}</title>
+  {% assign full_title = site.title %}
 {% else %}
-  {% capture page_title %}{{ page.title }}{% endcapture %}
-  <title>{{ page_title | escape }} — {{ site.title | escape }}</title>
+  {% assign full_title = page.seo_title | default: page.title | append: ' — ' | append: site.title %}
 {% endif %}
+{% assign full_title = full_title | strip_html | normalize_whitespace | escape %}
+{% assign meta_description = page.description | default: page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | replace: '&amp;', '&' | truncate: 200 | escape %}
+{% assign canonical_url = page.url | replace: 'index.html', '' | prepend: 'https://pixelnest.io' %}
+{% if page.collection == 'games' and page.assets %}
+  {% assign share_image = page.assets | append: 'hero.jpg' | prepend: 'https://pixelnest.io' %}
+{% else %}
+  {% assign share_image = 'https://pixelnest.io/static/images/card.jpg' %}
+{% endif %}
+
+<title>{{ full_title }}</title>
+<link rel="canonical" href="{{ canonical_url }}">
 
 <!-- Misc. -->
 <link rel="shortcut icon" href="/static/images/favicon.ico?v=0002">
@@ -15,39 +25,51 @@
 
 <!-- Description. -->
 <meta name="author" content="{{ site.title | escape }}">
-<meta name="description" content="{{ page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | truncate: 200 | escape }}">
-<meta name="keywords" content="{{ site.keywords | escape }}">
+<meta name="description" content="{{ meta_description }}">
 
 <!-- Social. -->
-<link rel="author" href="https://pixelnest.io/about/">
-<link rel="publisher" href="https://plus.google.com/+PixelnestStudio">
+<link rel="author" href="https://pixelnest.io/team/">
 
 <!-- Twitter. -->
-{% if page.url == '/' %}
-<meta name="twitter:title"       content="Pixelnest Studio">
-{% else %}
-<meta name="twitter:title"       content="{{ page.title | append: ' — Pixelnest Studio' | default: site.title | strip_html | normalize_whitespace | escape }}">
-{% endif %}
-<meta name="twitter:description" content="{{ page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape }}">
-<meta name="twitter:card"        content="summary">
+<meta name="twitter:title"       content="{{ full_title }}">
+<meta name="twitter:description" content="{{ meta_description }}">
+<meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:site"        content="@pixelnest">
 <meta name="twitter:creator"     content="@pixelnest">
-<meta name="twitter:url"         content="https://pixelnest.io/">
-<meta name="twitter:image"       content="https://pixelnest.io/static/images/card.jpg">
-<meta name="twitter:image:alt"   content="Pixelnest Studio — Games crafter since 2014.">
+<meta name="twitter:url"         content="{{ canonical_url }}">
+<meta name="twitter:image"       content="{{ share_image }}">
+<meta name="twitter:image:alt"   content="{{ page.title | default: site.title | strip_html | escape }}">
 
 <!-- OpenGraph. -->
-{% if page.url == '/' %}
-<meta property="og:title"        content="Pixelnest Studio">
-{% else %}
-<meta property="og:title"        content="{{ page.title | append: ' — Pixelnest Studio' | default: site.title | strip_html | normalize_whitespace | escape }}">
-{% endif %}
-<meta property="og:description"  content="{{ page.excerpt | default: site.description | markdownify | strip_html | normalize_whitespace | escape }}">
-<meta property="og:locale"       content="en">
-<meta property="og:url"          content="https://pixelnest.io">
-<meta property="og:image"        content="https://pixelnest.io/static/images/card.jpg">
-<meta property="og:image:height" content="1920">
-<meta property="og:image:width"  content="1080">
-<meta property="og:image:type"   content="image/jpg">
+<meta property="og:title"        content="{{ full_title }}">
+<meta property="og:description"  content="{{ meta_description }}">
+<meta property="og:locale"       content="en_US">
+<meta property="og:url"          content="{{ canonical_url }}">
+<meta property="og:image"        content="{{ share_image }}">
+<meta property="og:image:type"   content="image/jpeg">
 <meta property="og:site_name"    content="Pixelnest Studio">
+{% if page.collection == 'posts' %}
+<meta property="og:type"         content="article">
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% else %}
 <meta property="og:type"         content="website">
+{% endif %}
+
+{% if page.url == '/' or page.url == '/index.html' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ site.title | jsonify }},
+  "url": "https://pixelnest.io/",
+  "logo": "https://pixelnest.io/apple-touch-icon.png",
+  "email": "contact@pixelnest.io",
+  "description": {{ site.description | jsonify }},
+  "foundingDate": "2014",
+  "founder": [
+    { "@type": "Person", "name": "Damien Mayance", "url": "https://dmayance.com/" },
+    { "@type": "Person", "name": "Eddy Margueron", "url": "https://www.artstation.com/skia/" }
+  ]
+}
+</script>
+{% endif %}

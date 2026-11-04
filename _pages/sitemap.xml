@@ -13,14 +13,6 @@ permalink: /sitemap.xml
     <priority>1.0</priority>
   </url>
 
-    <!-- rss -->
-  <url>
-    <loc>https://pixelnest.io/atom.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <!-- games -->
   <url>
     <loc>https://pixelnest.io/games/</loc>
@@ -53,9 +45,9 @@ permalink: /sitemap.xml
     <priority>0.7</priority>
   </url>
 
-  <!-- about -->
+  <!-- team -->
   <url>
-    <loc>https://pixelnest.io/about/</loc>
+    <loc>https://pixelnest.io/team/</loc>
     <lastmod>{{ site.time | date_to_xmlschema}}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

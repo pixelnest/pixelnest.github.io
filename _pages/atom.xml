@@ -16,7 +16,7 @@ permalink: /atom.xml
   <!-- authors -->
   <author>
     <name>Pixelnest Studio</name>
-    <uri>https://pixelnest.io/about/</uri>
+    <uri>https://pixelnest.io/team/</uri>
   </author>
   <author>
     <name>Damien Mayance</name>
@@ -30,7 +30,7 @@ permalink: /atom.xml
   <!-- posts -->
   {% for post in site.posts %}
     <entry>
-      <title>{{ post.title }}</title>
+      <title>{{ post.title | xml_escape }}</title>
       <link href="https://pixelnest.io{{ post.url }}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>https://pixelnest.io{{ post.id }}/</id>
@@ -41,7 +41,7 @@ permalink: /atom.xml
       <!-- author -->
       <author>
         {% if post.author %}
-        <name>{{ post.author }}</name>
+        <name>{{ post.author | xml_escape }}</name>
         {% else %}
         <name>Pixelnest Studio</name>
         {% endif %}
@@ -51,7 +51,7 @@ permalink: /atom.xml
         {% elsif post.author contains 'matthieu' or post.author contains 'Matthieu' %}
         <uri>https://matthieuoger.com/</uri>
         {% else %}
-        <uri>https://pixelnest.io/about/</uri>
+        <uri>https://pixelnest.io/team/</uri>
         {% endif %}
       </author>
     </entry>

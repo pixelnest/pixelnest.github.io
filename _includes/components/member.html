@@ -5,7 +5,6 @@
   - member_id
   - member_avatar
   - member_site
-  - member_twitter
   - member_linkedin
 {% endcomment %}
 
@@ -21,11 +20,6 @@
     <li class="member__item member__item--site">
       <a href="{{ member_site }}/">
         {{ member_site | remove: 'http://' | remove: 'https://' }}
-      </a>
-    </li>
-    <li class="member__item member__item--twitter">
-      <a href="https://twitter.com/{{ member_twitter }}/">
-        @{{ member_twitter }}
       </a>
     </li>
     <li class="member__item member__item--linkedin">

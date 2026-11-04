@@ -5,7 +5,7 @@ subtitle: new tutorial
 
 Hello fellows,
 
-[Damien](/about/#damien) has cooked a new tutorial for you. The subject? Using touch gestures in your Unity project.
+[Damien](/team/#damien) has cooked a new tutorial for you. The subject? Using touch gestures in your Unity project.
 
 What's better than using your phone or tablet with Unity? Making explosions by touching it, of course!
 
