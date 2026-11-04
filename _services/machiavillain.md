@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/machiavillain/
 title: MachiaVillain
 subtitle: "A game by Wild Factor"
 type: [service, game, dev]

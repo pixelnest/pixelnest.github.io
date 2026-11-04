@@ -8,10 +8,10 @@ redirect_from:
   - /work/
 ---
 
-{% assign products = site.products | sort: 'date' | reverse %}
+{% assign products = site.games | sort: 'date' | reverse %}
 
 {% for product in products %}
-  {% if product.section == "games" and product.state == "hero" %}
+  {% if product.state == "hero" %}
     {% include components/product/hero.html data=product %}
   {% endif %}
 {% endfor %}

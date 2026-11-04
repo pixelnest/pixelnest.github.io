@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/flat-eye/
 title: Flat Eye
 subtitle: "A game by Monkey Moon"
 type: [service, game, dev]

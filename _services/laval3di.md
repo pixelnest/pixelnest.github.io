@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/laval3di/
 title: Laval 3Di
 subtitle: "Programming Teacher"
 type: [teaching, game]

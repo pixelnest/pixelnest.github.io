@@ -1,8 +1,8 @@
 ---
+redirect_from: /products/steredenn/
 title: "Steredenn"
 subtitle: "An Endless Chaotic Space Shooter"
 type: [game]
-section: games
 assets: /static/images/products/steredenn/
 date: 2015-10-01
 
@@ -23,6 +23,6 @@ links:
 
 **STEREDENN** is a _frenetic and chaotic space shooter_, carved in _big beautiful pixels_, with _insane boss battles_. Embark in your ship and engage the fight against dreadful space pirates in a never-ending combat for your survival.
 
-[**STEREDENN** was updated in 2018 with its massive expansion **STEREDENN: BINARY STARS**](/products/steredenn-binary-stars/).
+[**STEREDENN** was updated in 2018 with its massive expansion **STEREDENN: BINARY STARS**](/games/steredenn-binary-stars/).
 
 _The game is fast, addictive, hard and action-packed._

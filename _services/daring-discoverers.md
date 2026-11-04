@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/daring-discoverers/
 title: Daring Discoverers
 subtitle: "A game by Triskell Interactive"
 type: [service, game, dev]

@@ -30,8 +30,12 @@ exclude:
 # -------------------------------------------------------
 
 collections:
-  products:
+  games:
     output: true
+    permalink: /games/:path/
+  services:
+    output: true
+    permalink: /services/:path/
 
 # -------------------------------------------------------
 # Defaults.
@@ -50,7 +54,12 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "products"
+      type: "games"
+    values:
+      layout: "product"
+  - scope:
+      path: ""
+      type: "services"
     values:
       layout: "product"
 

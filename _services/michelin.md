@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/michelin/
 title: Michelin
 subtitle: "Web Development"
 type: [service, web, dev]

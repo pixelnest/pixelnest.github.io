@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/presskit.html/
 title: presskit.html
 subtitle: Re-implementation of presskit()
 type: [web, open&nbsp;source]

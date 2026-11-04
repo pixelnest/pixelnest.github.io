@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/bulletml-for-unity/
 title: BulletML for Unity
 type: [library]
 section: annex

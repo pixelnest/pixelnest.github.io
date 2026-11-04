@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/shmupfest/
 title: Shmupfest
 subtitle: Stunfest 2014 Game
 type: [service, game, dev, design]

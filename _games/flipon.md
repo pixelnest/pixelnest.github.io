@@ -1,8 +1,8 @@
 ---
+redirect_from: /products/flipon/
 title: "Flipon"
 subtitle: "Puzzle arcae match-3"
 type: [game]
-section: games
 assets: /static/images/products/flipon/
 date: 2020-10-20
 

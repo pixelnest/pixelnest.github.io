@@ -5,7 +5,7 @@ subtitle: Freelance &amp; contract work
 permalink: /services/
 ---
 
-{% assign products = site.products | sort: 'date' | reverse %}
+{% assign products = site.services | sort: 'date' | reverse %}
 
 <section class="block">
   <h1 class="block__title">Services</h1>
@@ -40,7 +40,7 @@ Senior gameplay/tool developer + consoles ports.
   <h1 class="block__title">Client Work</h1>
 
   {% for product in products %}
-    {% if product.section == nil and product.state != "dead" and product.service %}
+    {% if product.service %}
       {% include components/product/item.html data=product %}
     {% endif %}
   {% endfor %}
@@ -50,10 +50,8 @@ Senior gameplay/tool developer + consoles ports.
   <h1 class="block__title">Other Projects</h1>
 
   {% for product in products %}
-    {% if product.section == nil and product.state != "dead" %}
-      {% unless product.service %}
-        {% include components/product/item.html data=product %}
-      {% endunless %}
-    {% endif %}
+    {% unless product.service %}
+      {% include components/product/item.html data=product %}
+    {% endunless %}
   {% endfor %}
 </section>

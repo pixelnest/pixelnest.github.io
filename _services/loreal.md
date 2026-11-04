@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/loreal/
 title: L'Oréal
 subtitle: "Web Development"
 type: [service, web, dev]

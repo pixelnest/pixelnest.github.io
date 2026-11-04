@@ -1,8 +1,8 @@
 ---
+redirect_from: /products/steredenn-binary-stars/
 title: "Steredenn: Binary&nbsp;Stars"
 subtitle: "The Ultimate Steredenn Edition"
 type: [game]
-section: games
 assets: /static/images/products/steredenn-binary-stars/
 date: 2018-03-08
 
@@ -19,7 +19,7 @@ links:
     url: /presskit/steredenn-binary-stars/
 ---
 
-**STEREDENN: BINARY&nbsp;STARS** is the hugely improved and massively expanded version of the [original **STEREDENN**](/products/steredenn/).
+**STEREDENN: BINARY&nbsp;STARS** is the hugely improved and massively expanded version of the [original **STEREDENN**](/games/steredenn/).
 
 **STEREDENN: BINARY&nbsp;STARS** is an award-winning mashup of a classic _shmup_ and a _rogue-like_, carved in big beautiful pixels, with insane boss battles. Fly solo or co-op with a friend, fighting off the worst scourges of space in a never-ending struggle for survival.
 

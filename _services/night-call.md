@@ -1,4 +1,5 @@
 ---
+redirect_from: /products/night-call/
 title: Night Call
 subtitle: "A game by Monkey Moon"
 type: [service, game, dev]
