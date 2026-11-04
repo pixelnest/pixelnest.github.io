@@ -1,7 +1,7 @@
 ---
 title: "Daring Discoverers"
 subtitle: "A game by Triskell Interactive"
-type: [game, dev]
+type: [game, unity, dev]
 assets: /static/images/products/daring-discoverers/
 date: 2017-06-15
 

@@ -1112,21 +1112,29 @@ sup { top: -0.5em; }
   gap: 16px;
 }
 
+/* Each card has its own accent: pizza for the first, burger for the second. */
 .offer {
+  --accent: var(--pizza);
+  --accent-text: var(--pizza);
+  --accent-tint: #fff4ee;
+
   display: flex;
   flex-direction: column;
   padding: 20px;
   border: 1px solid var(--pxn-white);
-  border-top: 6px solid var(--pizza);
+  border-top: 6px solid var(--accent);
   border-radius: 2px;
 }
 
-.offer + .offer { border-top-color: var(--burger); }
+.offer + .offer {
+  --accent: var(--burger);
+  --accent-text: var(--burger-dark);
+  --accent-tint: #fff7ee;
+}
 
-.offer__header { margin-bottom: 12px; }
+.offer__header { margin-bottom: 14px; }
 
 .offer__name,
-.offer__role,
 .projects-year__title,
 .project__title {
   font-family: var(--font-title);
@@ -1137,8 +1145,10 @@ sup { top: -0.5em; }
 .offer__name { font-size: 3.2rem; }
 
 .offer__role {
-  color: var(--pxn-medium);
-  font-size: 2rem;
+  color: var(--pxn-dark);
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 .offer__skills {
@@ -1159,11 +1169,8 @@ sup { top: -0.5em; }
 
 .offer__portfolio {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0 8px;
-  white-space: nowrap;
+  align-items: center;
+  gap: 10px;
   margin-top: auto;
   padding: 10px 14px;
   color: var(--pxn-black);
@@ -1173,26 +1180,36 @@ sup { top: -0.5em; }
   font-weight: bold;
   transition: color 150ms ease-out, background 150ms ease-out, border-color 150ms ease-out;
 
-  & span {
-    color: var(--pizza);
-    font-size: 1.5rem;
-    font-weight: bold;
+  & svg {
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
-  &:hover {
-    color: var(--pizza);
-    background: #fff4ee;
-    border-color: var(--pizza);
+  & .offer__portfolio-icon { color: var(--accent-text); }
+
+  & .offer__portfolio-arrow {
+    margin-left: auto;
+    color: var(--pxn-light);
+    transition: color 150ms ease-out, transform 150ms ease-out;
   }
-}
 
-.offer + .offer .offer__portfolio {
-  & span { color: var(--burger-dark); }
+  &:hover,
+  &:focus-visible {
+    color: var(--accent-text);
+    background: var(--accent-tint);
+    border-color: var(--accent-text);
+  }
 
-  &:hover {
-    color: var(--burger-dark);
-    background: #fff7ee;
-    border-color: var(--burger-dark);
+  &:hover .offer__portfolio-arrow,
+  &:focus-visible .offer__portfolio-arrow {
+    color: var(--accent-text);
+    transform: translate(2px, -2px);
   }
 }
 

@@ -1,7 +1,7 @@
 ---
 title: "Spirit Sling"
 subtitle: "A game by Novelab, produced with Meta"
-type: [game, dev, xr]
+type: [game, unity, dev, XR, network]
 assets: /static/images/products/spirit-sling/
 date: 2024-10-01
 

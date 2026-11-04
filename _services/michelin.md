@@ -1,7 +1,7 @@
 ---
 title: "Michelin"
 subtitle: "Web development"
-type: [web, dev]
+type: [web, dev, phaser.js]
 assets: /static/images/products/michelin/
 date: 2016-05-31
 

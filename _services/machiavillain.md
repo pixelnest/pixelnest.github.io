@@ -1,7 +1,7 @@
 ---
 title: "MachiaVillain"
 subtitle: "A game by Wild Factor"
-type: [game, dev]
+type: [game, unity, dev]
 assets: /static/images/products/machiavillain/
 date: 2018-06-24
 

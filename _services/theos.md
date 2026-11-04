@@ -1,7 +1,7 @@
 ---
 title: "Theos: Cities of Myth"
 subtitle: "A game by Triskell Interactive"
-type: [game, techart, vfx]
+type: [game, unity, techart, vfx]
 assets: /static/images/products/theos/
 date: 2026-02-15
 

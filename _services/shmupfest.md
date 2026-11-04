@@ -1,7 +1,7 @@
 ---
 title: "Shmupfest"
 subtitle: "Stunfest 2014 game"
-type: [game, dev, design]
+type: [game, unity, dev, design]
 assets: /static/images/products/shmupfest/
 date: 2014-04-23
 

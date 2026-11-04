@@ -1,7 +1,7 @@
 ---
 title: "Back2Back"
 subtitle: "A game by Two Frogs"
-type: [game, techart, vfx]
+type: [game, unity, techart, vfx]
 assets: /static/images/products/two-frogs/
 date: 2025-06-01
 

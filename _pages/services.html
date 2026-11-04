@@ -17,11 +17,12 @@ redirect_from:
 ---
 
 <section class="block">
-  <h1 class="block__title">Services</h1>
+  <h1 class="block__title">What we do</h1>
 
   <p class="offers__intro">
-    We are open to freelancing and contract work. Two people, two skill sets:
-    pick one of us, or both.
+    We are open to freelancing and contract work.
+  <br />
+    Depending on your needs, we work alone or in duo.
   </p>
 
   <div class="offers">
@@ -41,9 +42,7 @@ redirect_from:
         <li>Software</li>
       </ul>
 
-      <a class="offer__portfolio" href="https://dmayance.com/" target="_blank" rel="noopener">
-        Portfolio <span>dmayance.com &rarr;</span>
-      </a>
+      {% include components/service/portfolio.html url="https://dmayance.com/" name="Damien Mayance" %}
     </article>
 
     <article class="offer">
@@ -59,20 +58,18 @@ redirect_from:
         <li>Videos</li>
       </ul>
 
-      <a class="offer__portfolio" href="https://www.artstation.com/skia/" target="_blank" rel="noopener">
-        Portfolio <span>artstation.com/skia &rarr;</span>
-      </a>
+      {% include components/service/portfolio.html url="https://www.artstation.com/skia/" name="Eddy Margueron" %}
     </article>
   </div>
 </section>
 
 <section class="block contact-cta">
   <div class="contact-cta__text">
-    <h2 class="contact-cta__title">Have a project in mind?</h2>
-    <p class="contact-cta__subtitle">Tell us about it. We usually answer within a couple of working days.</p>
+    <h2 class="contact-cta__title">Need our services?</h2>
+    <p class="contact-cta__subtitle">Send us a message, we usually answer within a couple of working days.</p>
   </div>
 
-  <a class="contact-cta__button" href="mailto:contact@pixelnest.io?subject=Project%20inquiry">
+  <a class="contact-cta__button" href="mailto:contact@pixelnest.io">
     Contact us
     <span>contact@pixelnest.io</span>
   </a>
@@ -81,7 +78,7 @@ redirect_from:
 {% assign years =site.services | group_by_exp: "p", "p.date | date: '%Y'" | sort: "name" | reverse %}
 
 <section class="block">
-  <h1 class="block__title block__title--plain">Projects</h1>
+  <h1 class="block__title block__title--plain">Client Work</h1>
 
   {% for year in years %}
     <section class="projects-year">

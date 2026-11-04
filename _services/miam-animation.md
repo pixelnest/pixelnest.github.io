@@ -1,7 +1,7 @@
 ---
 title: "MIAM! Animation"
 subtitle: "Edmond et Lucy"
-type: [animation, techart]
+type: [unity, animation, techart]
 assets: /static/images/products/miam-animation/
 date: 2025-06-01
 

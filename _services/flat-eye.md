@@ -1,7 +1,7 @@
 ---
 title: "Flat Eye"
 subtitle: "A game by Monkey Moon"
-type: [game, dev]
+type: [game, lead, unity, dev]
 assets: /static/images/products/flat-eye/
 date: 2018-09-17
 

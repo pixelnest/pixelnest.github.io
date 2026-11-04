@@ -1,7 +1,7 @@
 ---
 title: "L'Oréal"
 subtitle: "Web development"
-type: [web, dev]
+type: [web, asp.net mvc]
 assets: /static/images/products/loreal/
 date: 2018-03-15
 
